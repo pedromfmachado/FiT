@@ -6003,3 +6003,10 @@ Started GET "/" for 127.0.0.1 at Mon Oct 24 19:59:43 +0100 2011
   [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
 Rendered planos/index.html.erb within layouts/application (25.9ms)
 Completed 200 OK in 49ms (Views: 31.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 24 21:00:17 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.8ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (29.2ms)
+Completed 200 OK in 57ms (Views: 36.0ms | ActiveRecord: 0.8ms)
