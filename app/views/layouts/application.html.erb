@@ -3,7 +3,7 @@
 <head>
   <title>Fit</title>
   <%= stylesheet_link_tag "style" %>
-  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag :defaults, "jquery", "menu" %>
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -23,6 +23,18 @@
 		        <li> News </li>
 		        <li> Ginásios </li>
 		        <li> Aulas
+		        	<ul>
+		            	<li> <%= link_to "Horários", root_path %> </li>
+		            	<li> <%= link_to "Modalidades", root_path %> </li>
+		            </ul>
+		        </li>
+		        <li> Conta Pessoal
+		        	<ul>
+		            	<li> <%= link_to "Perfil", root_path %> </li>
+		            	<li> <%= link_to "Plano Treino", root_path %> </li>
+		            </ul>
+		        </li>
+		        <li> Administração </li> 
            	</ul>
 	</div>
 
@@ -34,16 +46,16 @@
 <div id="footer">
 	<div id="footer-info">
 		<ul>
-			<li> <a href="home.html"> About </a> </li>
-			<li> <a href="home.html"> FAQ </a> </li>
-			<li> <a href="home.html"> Terms of Use </a> </li>
-			<li> <a href="home.html"> Help </a> </li>
+			<li> <%= link_to "About", root_path %> </li>
+			<li> <%= link_to "FAQ", root_path %> </li>
+			<li> <%= link_to "Terms of Use", root_path %> </li>
+			<li> <%= link_to "Help", root_path %> </li>
 		</ul>
 	</div>
 	<div id="footer-social">
 		<ul>	
-			<li> <a href="home.html"> Facebook </a> </li>
-			<li> <a href="home.html"> Twitter </a> </li>
+			<li> <%= link_to "Facebook", root_path %> </li>
+			<li> <%= link_to "Twitter", root_path %> </li>
 		</ul>
 	</div>
 </div>

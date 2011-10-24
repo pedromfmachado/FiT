@@ -23,6 +23,11 @@
     <%= f.label :peso %><br />
     <%= f.text_field :peso %>
   </div>
+
+  <div class="field">
+    <%= collection_select(:exercicio, :exercicio_id, Exercicio.all, :id, :nome) %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

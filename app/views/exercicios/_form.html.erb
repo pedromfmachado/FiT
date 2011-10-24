@@ -21,9 +21,9 @@
   </div>
   <div class="field">
     <%= f.label :tipo %><br />
-    <%= f.text_field :tipo %>
+    <%= f.select(:tipo, options_for_select([['Aeróbico'],['Musculação']])) %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <p /><%= f.submit %>
   </div>
 <% end %>
