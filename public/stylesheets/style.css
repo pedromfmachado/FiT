@@ -1,0 +1,101 @@
+body {
+	background-color: #DDDDDD;
+	margin:0px;
+	text-align:justify;
+}
+
+#header{
+	background-color: #FFFFFF;
+}
+
+#header-top{
+	width: 72%;
+	height: 197px;
+	margin-left: 10%;
+	background-color: red;
+}
+
+#header-bar {
+	width: 100%;
+	height: 40px;
+    	float: left;
+	background: url(../images/menu-grad.png);
+	background-repeat:x-repeat;
+}
+
+#navigation {
+	margin-left: 10%;
+	heigth: auto;
+	
+}
+
+#sidebar {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#EFEFEF;
+	
+	
+	width: 19%;
+	float: left;
+	background-color: #245678
+}
+
+#sidebar li {
+	list-style:none;
+}
+
+#sidebar a {
+	font-weight:bold;
+	color:#EFEFEF;
+	text-decoration:none;
+}
+
+#sidebar a:hover {
+
+}
+
+#content {
+	width: 62%;
+	float: left;
+	padding:2%;
+	background-color: #FFFFFF;
+}
+
+#footer {
+	width: 100%;
+	background-color: #AAAAAA;
+	overflow:hidden;
+}
+
+#footer-info {
+	float: left;
+	margin-left: 12%;
+}
+
+#footer-social {
+	float: right;
+	margin-right: 13%;
+}
+
+#footer li {
+	display: inline;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+table
+{
+border-collapse:collapse;
+}
+
+th{
+border-left: 1px solid black;
+border-right: 1px solid black;
+border-bottom: 1px solid black;
+height: 50px;
+width: 100px;
+}
+td {
+border-left: 1px solid black;
+border-right: 1px solid black;
+}

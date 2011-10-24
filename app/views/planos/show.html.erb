@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data:</b>
+  <%= @plano.data %>
+</p>
+
+<p>
+  <b>Altura:</b>
+  <%= @plano.altura %>
+</p>
+
+<p>
+  <b>Peso:</b>
+  <%= @plano.peso %>
+</p>
+
+<p>
+  <b> Nr de Exercicios: </b>
+  <%= @plano.exercicios.count %>
+</p>
+
+<%= link_to 'Edit', edit_plano_path(@plano) %> |
+<%= link_to 'Back', planos_path %>

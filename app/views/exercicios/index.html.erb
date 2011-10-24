@@ -1,0 +1,27 @@
+<h1>Listing exercicios</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Maquina</th>
+    <th>Tipo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @exercicios.each do |exercicio| %>
+  <tr>
+    <td><%= exercicio.nome %></td>
+    <td><%= exercicio.maquina %></td>
+    <td><%= exercicio.tipo %></td>
+    <td><%= link_to 'Show', exercicio %></td>
+    <td><%= link_to 'Edit', edit_exercicio_path(exercicio) %></td>
+    <td><%= link_to 'Destroy', exercicio, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Exercicio', new_exercicio_path %>

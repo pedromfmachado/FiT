@@ -1,0 +1,29 @@
+<%= form_for(@plano) do |f| %>
+  <% if @plano.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@plano.errors.count, "error") %> prohibited this plano from being saved:</h2>
+
+      <ul>
+      <% @plano.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :data %><br />
+    <%= f.text_field :data %>
+  </div>
+  <div class="field">
+    <%= f.label :altura %><br />
+    <%= f.text_field :altura %>
+  </div>
+  <div class="field">
+    <%= f.label :peso %><br />
+    <%= f.text_field :peso %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

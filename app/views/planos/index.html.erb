@@ -1,0 +1,27 @@
+<h1>Listing planos</h1>
+
+<table>
+  <tr>
+    <th>Data</th>
+    <th>Altura</th>
+    <th>Peso</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @planos.each do |plano| %>
+  <tr>
+    <td><%= plano.data %></td>
+    <td><%= plano.altura %></td>
+    <td><%= plano.peso %></td>
+    <td><%= link_to 'Show', plano %></td>
+    <td><%= link_to 'Edit', edit_plano_path(plano) %></td>
+    <td><%= link_to 'Destroy', plano, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Plano', new_plano_path %>

@@ -1,0 +1,2201 @@
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  select sqlite_version(*)
+  [1m[36mSQL (123.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (58.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+Migrating to CreatePlanos (20111022144440)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "planos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "data" varchar(255), "altura" integer, "peso" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111022144440')
+Migrating to CreateExercicios (20111022144451)
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE TABLE "exercicios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "maquina" varchar(255), "tipo" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111022144451')
+Migrating to CreateExerciciosPlanos (20111022144502)
+  [1m[36mSQL (0.6ms)[0m  [1mCREATE TABLE "exercicios_planos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "plano_id" integer, "exercicio_id" integer, "peso" integer, "series" integer, "repeticoes" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20111022144502')
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("exercicios")
+  [1m[36mSQL (0.1ms)[0m  [1mPRAGMA index_list("exercicios_planos")[0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("planos")
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "exercicios_planos" ("created_at", "exercicio_id", "peso", "plano_id", "repeticoes", "series", "updated_at") VALUES ('2011-10-22 14:47:57.140824', 1, 9, 1, NULL, 30, '2011-10-22 14:47:57.140824')[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPlano Load (0.3ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1[0m
+  [1m[36mSQL (1.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mPlano Load (0.2ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+  [1m[35mExercicio Load (0.5ms)[0m  SELECT "exercicios".* FROM "exercicios"
+  [1m[36mPlano Load (0.3ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1[0m
+  [1m[36mSQL (0.8ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlano Load (0.3ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1
+  [1m[36mExercicio Load (0.4ms)[0m  [1mSELECT "exercicios".* FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))[0m
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:16:11 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mSQL (18.0ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlano Load (0.3ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 240ms (Views: 28.4ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:16:36 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.4ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 43ms (Views: 24.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:27:45 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (78.3ms)
+Completed 200 OK in 103ms (Views: 84.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:27:45 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:27:46 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 41ms (Views: 23.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:27:46 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:29:48 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (83.8ms)
+Completed 200 OK in 108ms (Views: 89.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:29:48 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:29:49 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 43ms (Views: 24.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:29:49 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:30:27 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (80.9ms)
+Completed 200 OK in 103ms (Views: 86.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:30:27 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:30:28 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 42ms (Views: 24.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:30:28 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:39:41 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (80.4ms)
+Completed 200 OK in 103ms (Views: 86.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:39:42 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:39:47 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 45ms (Views: 24.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:39:47 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/home.html" for 127.0.0.1 at Sat Oct 22 20:39:54 +0100 2011
+
+ActionController::RoutingError (No route matches "/home.html"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:40:24 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (1.0ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (27.8ms)
+Completed 200 OK in 148ms (Views: 37.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:40:25 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:40:49 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 42ms (Views: 24.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:40:49 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:40:50 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 111ms (Views: 26.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:40:50 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:41:11 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 42ms (Views: 24.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:41:11 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:41:11 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 107ms (Views: 24.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:41:12 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:41:15 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 41ms (Views: 23.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:41:15 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:41:16 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.8ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 108ms (Views: 25.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:41:16 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:41:39 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 45ms (Views: 25.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:41:40 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.1ms)
+
+
+Started GET "/planos/new" for 127.0.0.1 at Sat Oct 22 20:41:45 +0100 2011
+  Processing by PlanosController#new as HTML
+Rendered planos/_form.html.erb (76.1ms)
+Rendered planos/new.html.erb within layouts/application (83.0ms)
+Completed 200 OK in 168ms (Views: 89.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:41:45 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:41:47 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 42ms (Views: 24.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:41:47 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:43:13 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 107ms (Views: 26.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:43:14 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:43:14 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 41ms (Views: 23.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:43:14 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:43:15 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 112ms (Views: 27.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/img/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:43:15 +0100 2011
+
+ActionController::RoutingError (No route matches "/img/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:43:51 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.9ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (25.9ms)
+Completed 200 OK in 92ms (Views: 46.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/public/image/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:43:52 +0100 2011
+
+ActionController::RoutingError (No route matches "/public/image/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:43:52 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 112ms (Views: 27.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/public/image/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:43:52 +0100 2011
+
+ActionController::RoutingError (No route matches "/public/image/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:43:58 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 41ms (Views: 24.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/image/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:43:58 +0100 2011
+
+ActionController::RoutingError (No route matches "/image/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:43:59 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 119ms (Views: 28.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/image/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:43:59 +0100 2011
+
+ActionController::RoutingError (No route matches "/image/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:44:05 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 41ms (Views: 22.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/image/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:44:05 +0100 2011
+
+ActionController::RoutingError (No route matches "/image/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:44:05 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 111ms (Views: 25.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:44:06 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 46ms (Views: 28.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/image/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:44:06 +0100 2011
+
+ActionController::RoutingError (No route matches "/image/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:44:54 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (80.7ms)
+Completed 200 OK in 103ms (Views: 86.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/image/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:44:54 +0100 2011
+
+ActionController::RoutingError (No route matches "/image/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:44:55 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 42ms (Views: 25.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/image/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:44:55 +0100 2011
+
+ActionController::RoutingError (No route matches "/image/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:46:00 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 102ms (Views: 27.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:46:00 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:46:01 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 41ms (Views: 24.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:46:01 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:46:20 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 108ms (Views: 25.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/images/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:46:21 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/images/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:46:30 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (1.0ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 46ms (Views: 26.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:46:31 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (89.8ms)
+Completed 200 OK in 115ms (Views: 96.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:46:36 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 41ms (Views: 23.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/public/images/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:46:36 +0100 2011
+
+ActionController::RoutingError (No route matches "/public/images/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:46:37 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (85.3ms)
+Completed 200 OK in 109ms (Views: 91.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/public/images/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:46:37 +0100 2011
+
+ActionController::RoutingError (No route matches "/public/images/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:46:47 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 42ms (Views: 24.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/public/images/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:46:47 +0100 2011
+
+ActionController::RoutingError (No route matches "/public/images/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.1ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:47:21 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (90.4ms)
+Completed 200 OK in 114ms (Views: 96.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/public/images/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:47:21 +0100 2011
+
+ActionController::RoutingError (No route matches "/public/images/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.1ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:47:22 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 43ms (Views: 24.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/public/images/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:47:22 +0100 2011
+
+ActionController::RoutingError (No route matches "/public/images/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:47:38 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (94.3ms)
+Completed 200 OK in 119ms (Views: 100.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/public/images/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:47:39 +0100 2011
+
+ActionController::RoutingError (No route matches "/public/images/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:47:57 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 45ms (Views: 25.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/fit/public/images/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:47:57 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/fit/public/images/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:47:58 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.8ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (90.1ms)
+Completed 200 OK in 116ms (Views: 96.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/fit/public/images/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:47:58 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/fit/public/images/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:48:14 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 47ms (Views: 27.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:48:14 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 41ms (Views: 23.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:48:15 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (1.0ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 41ms (Views: 23.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:48:15 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 41ms (Views: 23.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:48:15 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 42ms (Views: 24.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:48:15 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 40ms (Views: 23.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:48:16 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 46ms (Views: 28.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:48:17 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 41ms (Views: 24.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:48:34 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.8ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 47ms (Views: 26.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:48:34 +0100 2011
+
+ActionController::RoutingError (No route matches "/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:48:34 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 45ms (Views: 27.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:48:35 +0100 2011
+
+ActionController::RoutingError (No route matches "/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:48:45 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 43ms (Views: 24.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:48:52 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 42ms (Views: 24.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:48:52 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (1.0ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 43ms (Views: 23.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:49:09 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 42ms (Views: 23.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:49:09 +0100 2011
+
+ActionController::RoutingError (No route matches "/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:49:09 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 46ms (Views: 25.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:49:10 +0100 2011
+
+ActionController::RoutingError (No route matches "/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:49:17 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 41ms (Views: 23.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:49:17 +0100 2011
+
+ActionController::RoutingError (No route matches "/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:49:17 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 45ms (Views: 25.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:49:18 +0100 2011
+
+ActionController::RoutingError (No route matches "/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:49:32 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 41ms (Views: 23.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:49:33 +0100 2011
+
+ActionController::RoutingError (No route matches "/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:49:33 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.8ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 44ms (Views: 25.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/menu-grad.png" for 127.0.0.1 at Sat Oct 22 20:49:33 +0100 2011
+
+ActionController::RoutingError (No route matches "/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:50:30 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 41ms (Views: 23.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:50:30 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 45ms (Views: 25.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:51:23 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 43ms (Views: 23.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 20:51:24 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 108ms (Views: 25.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:33:24 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlano Load (0.3ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 245ms (Views: 41.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stylesheets/images/menu-grad.png" for 127.0.0.1 at Sat Oct 22 21:33:25 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/images/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:33:27 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (1.0ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 42ms (Views: 24.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/stylesheets/images/menu-grad.png" for 127.0.0.1 at Sat Oct 22 21:33:28 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/images/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:33:28 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.8ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 107ms (Views: 26.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/images/menu-grad.png" for 127.0.0.1 at Sat Oct 22 21:33:28 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/images/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:33:36 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.9ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (30.8ms)
+Completed 200 OK in 80ms (Views: 49.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stylesheets/images/menu-grad.png" for 127.0.0.1 at Sat Oct 22 21:33:36 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/images/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:33:40 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 113ms (Views: 26.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:33:40 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.9ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 52ms (Views: 24.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:33:45 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 102ms (Views: 24.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/images/menu-grad.png" for 127.0.0.1 at Sat Oct 22 21:33:45 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/images/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:33:45 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.8ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 44ms (Views: 24.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/images/menu-grad.png" for 127.0.0.1 at Sat Oct 22 21:33:46 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/images/menu-grad.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:33:48 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 123ms (Views: 30.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:33:48 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.9ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (29.1ms)
+Completed 200 OK in 85ms (Views: 38.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:34:17 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (83.7ms)
+Completed 200 OK in 108ms (Views: 89.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:34:47 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 42ms (Views: 24.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:34:47 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 40ms (Views: 23.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:34:52 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 43ms (Views: 24.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/images/logo.png" for 127.0.0.1 at Sat Oct 22 21:34:52 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/images/logo.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:34:52 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 44ms (Views: 25.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/images/logo.png" for 127.0.0.1 at Sat Oct 22 21:34:53 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/images/logo.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:34:56 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.8ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 46ms (Views: 26.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/stylesheets/images/logo.png" for 127.0.0.1 at Sat Oct 22 21:34:57 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/images/logo.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:34:57 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 43ms (Views: 25.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/images/logo.png" for 127.0.0.1 at Sat Oct 22 21:34:57 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/images/logo.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:34:57 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 42ms (Views: 24.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/images/logo.png" for 127.0.0.1 at Sat Oct 22 21:34:58 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/images/logo.png"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:35:15 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 41ms (Views: 23.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:35:15 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 41ms (Views: 24.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:35:19 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 42ms (Views: 25.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:35:20 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (1.0ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 60ms (Views: 34.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:35:20 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 41ms (Views: 23.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:35:20 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 58ms (Views: 32.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:35:20 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.9ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 45ms (Views: 24.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:35:58 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 41ms (Views: 23.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:35:59 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 41ms (Views: 23.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:36:06 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 41ms (Views: 24.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:36:06 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 41ms (Views: 24.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:36:18 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 42ms (Views: 23.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:36:19 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 42ms (Views: 24.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:36:26 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 41ms (Views: 23.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:36:34 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.8ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 42ms (Views: 24.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:36:35 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 41ms (Views: 24.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:36:57 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 43ms (Views: 23.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:36:58 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 41ms (Views: 23.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:37:04 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 46ms (Views: 24.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:37:04 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 41ms (Views: 24.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:37:09 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 106ms (Views: 24.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:37:10 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 42ms (Views: 24.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:37:23 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (79.5ms)
+Completed 200 OK in 103ms (Views: 85.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:37:24 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 44ms (Views: 24.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:38:35 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 40ms (Views: 22.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:38:36 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 43ms (Views: 24.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:39:34 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 43ms (Views: 26.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:39:35 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 42ms (Views: 24.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:39:36 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 40ms (Views: 23.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:39:36 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (1.1ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 60ms (Views: 37.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:39:37 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 41ms (Views: 23.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:39:37 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 103ms (Views: 25.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:39:54 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 42ms (Views: 25.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos/new" for 127.0.0.1 at Sat Oct 22 21:39:58 +0100 2011
+  Processing by PlanosController#new as HTML
+Rendered planos/_form.html.erb (63.1ms)
+Rendered planos/new.html.erb within layouts/application (70.9ms)
+Completed 200 OK in 168ms (Views: 91.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:40:02 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.7ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 60ms (Views: 33.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/home.html" for 127.0.0.1 at Sat Oct 22 21:40:29 +0100 2011
+
+ActionController::RoutingError (No route matches "/home.html"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:42:31 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (79.5ms)
+Completed 200 OK in 103ms (Views: 85.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:42:32 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 41ms (Views: 23.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:42:33 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 42ms (Views: 25.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:42:36 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (1.0ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 43ms (Views: 24.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:42:37 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 42ms (Views: 24.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:42:41 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 41ms (Views: 24.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:42:41 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 47ms (Views: 30.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:42:45 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 42ms (Views: 24.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:42:49 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 42ms (Views: 24.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:42:58 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 42ms (Views: 24.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:42:58 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 40ms (Views: 23.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos/1" for 127.0.0.1 at Sat Oct 22 21:44:08 +0100 2011
+  Processing by PlanosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlano Load (0.3ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))
+Rendered planos/show.html.erb within layouts/application (84.8ms)
+Completed 200 OK in 117ms (Views: 98.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:44:11 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 42ms (Views: 23.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos/1" for 127.0.0.1 at Sat Oct 22 21:44:13 +0100 2011
+  Processing by PlanosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlano Load (0.3ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))[0m
+Rendered planos/show.html.erb within layouts/application (50.4ms)
+Completed 200 OK in 75ms (Views: 56.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:44:16 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (75.6ms)
+Completed 200 OK in 99ms (Views: 81.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:48:41 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 39ms (Views: 22.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:49:08 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 39ms (Views: 21.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:50:03 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.9ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 39ms (Views: 20.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:50:08 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.8ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 102ms (Views: 56.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:50:09 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 40ms (Views: 20.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:50:14 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.9ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 42ms (Views: 24.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:50:22 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 42ms (Views: 24.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:50:26 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.7ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 51ms (Views: 33.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:50:27 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.9ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 90ms (Views: 48.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:50:34 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.8ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 38ms (Views: 21.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:50:48 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.7ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 111ms (Views: 24.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:51:03 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 39ms (Views: 21.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:51:04 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (78.8ms)
+Completed 200 OK in 102ms (Views: 84.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:51:09 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 39ms (Views: 22.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:51:17 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 41ms (Views: 23.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:51:23 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 39ms (Views: 21.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:52:52 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 39ms (Views: 21.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 21:53:11 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.9ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 45ms (Views: 23.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 21:53:26 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 41ms (Views: 23.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos/new" for 127.0.0.1 at Sat Oct 22 22:02:28 +0100 2011
+  Processing by PlanosController#new as HTML
+Rendered planos/_form.html.erb (15.0ms)
+Rendered planos/new.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 43ms (Views: 27.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:02:35 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 39ms (Views: 22.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:10:30 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.7ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 108ms (Views: 25.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:10:36 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 40ms (Views: 22.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:10:54 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.7ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (84.6ms)
+Completed 200 OK in 108ms (Views: 90.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:10:55 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 40ms (Views: 22.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:11:02 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 41ms (Views: 22.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:15:03 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 40ms (Views: 22.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:15:04 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 39ms (Views: 21.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:15:18 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 41ms (Views: 22.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:15:19 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.9ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 39ms (Views: 21.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:15:27 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 40ms (Views: 22.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:15:28 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.7ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (14.4ms)
+Completed 200 OK in 38ms (Views: 21.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:15:32 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.7ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 41ms (Views: 21.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:15:32 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.8ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (24.5ms)
+Completed 200 OK in 68ms (Views: 39.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:16:22 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 105ms (Views: 22.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:17:46 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.9ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 39ms (Views: 20.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:17:47 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.9ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 41ms (Views: 21.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:17:47 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.8ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 47ms (Views: 26.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:17:47 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 41ms (Views: 22.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:17:56 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 40ms (Views: 22.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:17:57 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 40ms (Views: 21.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:17:58 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 41ms (Views: 22.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:20:34 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.9ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 41ms (Views: 24.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:20:45 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.9ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 46ms (Views: 23.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:20:46 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 41ms (Views: 23.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:20:52 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.9ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 111ms (Views: 32.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:20:57 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 39ms (Views: 22.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:21:01 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.7ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 38ms (Views: 21.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:21:08 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 40ms (Views: 22.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:21:12 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 39ms (Views: 21.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:21:12 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 44ms (Views: 23.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:21:16 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 40ms (Views: 22.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:23:14 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.8ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 44ms (Views: 24.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:23:24 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 40ms (Views: 21.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:23:25 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (1.0ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 42ms (Views: 22.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:23:29 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.7ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 39ms (Views: 22.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:23:41 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.7ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 116ms (Views: 25.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:23:49 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 39ms (Views: 22.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:23:53 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 42ms (Views: 23.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:24:05 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 44ms (Views: 24.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:24:08 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 39ms (Views: 21.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:24:11 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 39ms (Views: 22.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:24:23 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered exercicios/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 45ms (Views: 25.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Sat Oct 22 22:24:27 +0100 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.8ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered exercicios/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 44ms (Views: 22.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/Planos" for 127.0.0.1 at Sat Oct 22 22:24:41 +0100 2011
+
+ActionController::RoutingError (No route matches "/Planos"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.1ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:24:45 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 42ms (Views: 24.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:25:50 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 46ms (Views: 25.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:25:51 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 42ms (Views: 25.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:26:21 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.8ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (48.6ms)
+Completed 200 OK in 151ms (Views: 59.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:26:42 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.4ms)
+Completed 200 OK in 43ms (Views: 24.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:26:50 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.8ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (88.6ms)
+Completed 200 OK in 112ms (Views: 94.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:27:05 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 42ms (Views: 24.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:27:09 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (1.0ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 43ms (Views: 24.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:29:07 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.8ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 42ms (Views: 24.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:29:37 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 46ms (Views: 27.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:29:41 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 45ms (Views: 26.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos/2/edit" for 127.0.0.1 at Sat Oct 22 22:29:56 +0100 2011
+  Processing by PlanosController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlano Load (0.5ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 2) LIMIT 1[0m
+Rendered planos/_form.html.erb (16.4ms)
+Rendered planos/edit.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 48ms (Views: 29.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:29:58 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 44ms (Views: 25.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:32:15 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (22.0ms)
+Completed 200 OK in 49ms (Views: 29.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:32:29 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (1.0ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 128ms (Views: 31.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:32:30 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (1.0ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 45ms (Views: 25.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:32:43 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 114ms (Views: 97.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:32:44 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 45ms (Views: 25.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:32:49 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 43ms (Views: 25.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:32:49 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 46ms (Views: 25.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos/1" for 127.0.0.1 at Sat Oct 22 22:33:10 +0100 2011
+  Processing by PlanosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlano Load (0.3ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))[0m
+Rendered planos/show.html.erb within layouts/application (118.0ms)
+Completed 200 OK in 144ms (Views: 123.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos/1" for 127.0.0.1 at Sat Oct 22 22:33:10 +0100 2011
+  Processing by PlanosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlano Load (0.3ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1
+  [1m[36mSQL (1.0ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))[0m
+Rendered planos/show.html.erb within layouts/application (52.9ms)
+Completed 200 OK in 85ms (Views: 62.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:33:12 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 49ms (Views: 27.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos/2" for 127.0.0.1 at Sat Oct 22 22:33:14 +0100 2011
+  Processing by PlanosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlano Load (0.3ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 2) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 2))
+Rendered planos/show.html.erb within layouts/application (49.4ms)
+Completed 200 OK in 75ms (Views: 55.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:33:15 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.8ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 47ms (Views: 26.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:34:08 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 42ms (Views: 24.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sat Oct 22 22:34:43 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 108ms (Views: 26.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Sun Oct 23 14:00:55 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mSQL (14.1ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlano Load (0.3ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 289ms (Views: 51.2ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Mon Oct 24 15:35:32 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mSQL (17.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mPlano Load (0.3ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 207ms (Views: 28.8ms | ActiveRecord: 17.9ms)
+
+
+Started GET "/planos/1" for 127.0.0.1 at Mon Oct 24 15:35:38 +0100 2011
+  Processing by PlanosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlano Load (0.3ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))
+Rendered planos/show.html.erb within layouts/application (103.9ms)
+Completed 200 OK in 128ms (Views: 109.4ms | ActiveRecord: 0.6ms)

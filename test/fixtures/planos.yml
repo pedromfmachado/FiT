@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  data: MyString
+  altura: 1
+  peso: 1
+
+two:
+  data: MyString
+  altura: 1
+  peso: 1

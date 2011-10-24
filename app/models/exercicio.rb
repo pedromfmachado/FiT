@@ -1,0 +1,6 @@
+class Exercicio < ActiveRecord::Base
+
+	has_many :exercicios_planoss
+	has_many :planos, :through => :exercicios_planoss
+
+end
