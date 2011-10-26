@@ -19,8 +19,8 @@ class PlanosController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @plano.exercicios }
-      format.json  { render :json => @plano.exercicios }
+      format.xml  { render :xml => @plano.to_xml(:include => :exercicios) }
+      format.json  { render :json => @plano.to_json(:include => :exercicios }
     end
   end
 
