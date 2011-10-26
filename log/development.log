@@ -12031,3 +12031,172 @@ Started GET "/planos" for 127.0.0.1 at Wed Oct 26 13:02:36 +0100 2011
   [1m[35mPlano Load (1.0ms)[0m  SELECT "planos".* FROM "planos"
 Rendered planos/index.html.erb within layouts/application (26.8ms)
 Completed 200 OK in 53ms (Views: 33.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Wed Oct 26 13:11:41 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (109.9ms)
+Completed 200 OK in 133ms (Views: 116.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Wed Oct 26 13:11:46 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 51ms (Views: 32.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos/1/edit" for 127.0.0.1 at Wed Oct 26 13:11:50 +0100 2011
+  Processing by PlanosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlano Load (0.3ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1[0m
+  [1m[35mExercicio Load (0.7ms)[0m  SELECT "exercicios".* FROM "exercicios"
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))[0m
+Rendered planos/_form.html.erb (69.8ms)
+Rendered planos/edit.html.erb within layouts/application (85.7ms)
+Completed 200 OK in 114ms (Views: 91.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/planos/1/edit" for 127.0.0.1 at Wed Oct 26 13:12:15 +0100 2011
+  Processing by PlanosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlano Load (0.5ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1
+  [1m[36mExercicio Load (0.5ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))
+Rendered planos/_form.html.erb (153.9ms)
+Rendered planos/edit.html.erb within layouts/application (169.3ms)
+Completed 200 OK in 198ms (Views: 175.6ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/planos/1/edit" for 127.0.0.1 at Wed Oct 26 13:12:48 +0100 2011
+  Processing by PlanosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlano Load (0.3ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1[0m
+  [1m[35mExercicio Load (0.4ms)[0m  SELECT "exercicios".* FROM "exercicios"
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))[0m
+Rendered planos/_form.html.erb (143.5ms)
+Rendered planos/edit.html.erb within layouts/application (161.8ms)
+Completed 200 OK in 187ms (Views: 167.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Wed Oct 26 13:12:50 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (28.5ms)
+Completed 200 OK in 53ms (Views: 34.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos/1" for 127.0.0.1 at Wed Oct 26 13:12:51 +0100 2011
+  Processing by PlanosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlano Load (0.3ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))
+Rendered planos/show.html.erb within layouts/application (58.1ms)
+Completed 200 OK in 162ms (Views: 65.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/planos/1" for 127.0.0.1 at Wed Oct 26 13:13:03 +0100 2011
+  Processing by PlanosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlano Load (0.4ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))
+Rendered planos/show.html.erb within layouts/application (54.5ms)
+Completed 200 OK in 81ms (Views: 60.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Wed Oct 26 13:13:04 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 52ms (Views: 32.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos/2" for 127.0.0.1 at Wed Oct 26 13:13:05 +0100 2011
+  Processing by PlanosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlano Load (0.3ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos"."id" = 2) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 2))[0m
+Rendered planos/show.html.erb within layouts/application (61.9ms)
+Completed 200 OK in 153ms (Views: 68.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Wed Oct 26 13:13:28 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 49ms (Views: 32.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos/1" for 127.0.0.1 at Wed Oct 26 13:13:29 +0100 2011
+  Processing by PlanosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlano Load (0.3ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT COUNT(*) AS count_id FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))
+Rendered planos/show.html.erb within layouts/application (56.3ms)
+Completed 200 OK in 84ms (Views: 62.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Wed Oct 26 13:13:45 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.7ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 50ms (Views: 32.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos/1" for 127.0.0.1 at Wed Oct 26 13:13:46 +0100 2011
+  Processing by PlanosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlano Load (0.3ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))[0m
+Rendered planos/show.html.erb within layouts/application (58.5ms)
+Completed 200 OK in 85ms (Views: 64.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Wed Oct 26 13:13:48 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (25.3ms)
+Completed 200 OK in 53ms (Views: 33.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Wed Oct 26 13:14:07 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (1.0ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered planos/index.html.erb within layouts/application (38.8ms)
+Completed 200 OK in 67ms (Views: 46.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/planos/2/edit" for 127.0.0.1 at Wed Oct 26 13:14:11 +0100 2011
+  Processing by PlanosController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlano Load (0.3ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos"."id" = 2) LIMIT 1
+  [1m[36mExercicio Load (0.5ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+  [1m[35mExercicio Load (0.3ms)[0m  SELECT "exercicios".* FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 2))
+Rendered planos/_form.html.erb (66.3ms)
+Rendered planos/edit.html.erb within layouts/application (82.8ms)
+Completed 200 OK in 109ms (Views: 88.0ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/planos/2" for 127.0.0.1 at Wed Oct 26 13:14:14 +0100 2011
+  Processing by PlanosController#update as HTML
+  Parameters: {"commit"=>"Update Plano", "authenticity_token"=>"UfeYX/eXxw07IPkSgMXz/sAjv297sGIzbpek1D4G8LA=", "utf8"=>"\342\234\223", "id"=>"2", "plano"=>{"selected_exercicios"=>"", "data"=>"2011-20-09", "altura"=>"165", "peso"=>"70"}, "exercicios_listbox"=>["1"]}
+  [1m[36mPlano Load (0.3ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 2) LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/planos/2
+Completed 302 Found in 101ms
+
+
+Started GET "/planos/2" for 127.0.0.1 at Wed Oct 26 13:14:14 +0100 2011
+  Processing by PlanosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPlano Load (0.3ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos"."id" = 2) LIMIT 1
+  [1m[36mSQL (0.5ms)[0m  [1mSELECT COUNT(*) AS count_id FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 2))[0m
+Rendered planos/show.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 89ms (Views: 67.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Wed Oct 26 13:14:15 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.9ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 53ms (Views: 33.4ms | ActiveRecord: 0.9ms)
