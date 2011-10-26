@@ -12013,3 +12013,21 @@ Started GET "/planos" for 127.0.0.1 at Wed Oct 26 12:59:20 +0100 2011
   [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
 Rendered planos/index.html.erb within layouts/application (26.9ms)
 Completed 200 OK in 52ms (Views: 33.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos/1/edit" for 127.0.0.1 at Wed Oct 26 13:02:33 +0100 2011
+  Processing by PlanosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlano Load (0.3ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1[0m
+  [1m[35mExercicio Load (0.6ms)[0m  SELECT "exercicios".* FROM "exercicios"
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))[0m
+Rendered planos/_form.html.erb (135.7ms)
+Rendered planos/edit.html.erb within layouts/application (153.5ms)
+Completed 200 OK in 179ms (Views: 158.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Wed Oct 26 13:02:36 +0100 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (1.0ms)[0m  SELECT "planos".* FROM "planos"
+Rendered planos/index.html.erb within layouts/application (26.8ms)
+Completed 200 OK in 53ms (Views: 33.2ms | ActiveRecord: 1.0ms)
