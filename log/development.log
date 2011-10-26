@@ -11769,3 +11769,14 @@ Started GET "/planos.json" for 127.0.0.1 at Wed Oct 26 12:38:18 +0100 2011
   Processing by PlanosController#index as JSON
   [1m[35mPlano Load (0.7ms)[0m  SELECT "planos".* FROM "planos"
 Completed 200 OK in 30ms (Views: 11.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/planos/1/edit" for 127.0.0.1 at Wed Oct 26 12:42:13 +0100 2011
+  Processing by PlanosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlano Load (0.3ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1[0m
+  [1m[35mExercicio Load (0.4ms)[0m  SELECT "exercicios".* FROM "exercicios"
+  [1m[36mExercicio Load (0.6ms)[0m  [1mSELECT "exercicios".* FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))[0m
+Rendered planos/_form.html.erb (139.3ms)
+Rendered planos/edit.html.erb within layouts/application (158.5ms)
+Completed 200 OK in 183ms (Views: 163.5ms | ActiveRecord: 1.3ms)
