@@ -25,8 +25,19 @@
   </div>
 
   <div class="field">
-    <%= collection_select(:exercicio, :exercicio_id, Exercicio.all, :id, :nome) %>
+    <%= collection_select("exercicios_listbox", nil, Exercicio.all, :id, :nome) %>
+    <%= link_to_function "Associar exercicio", "adicionaExercicio()", :class => "nav_link"%>
   </div>
+
+  <div id="dados">
+  </div>
+  <div id="exercicios">
+	<% @plano.exercicios.each do |exercicio| %>
+		<%= exercicio.nome %> - <%= exercicio.maquina %><br />
+	<% end %>
+  </div>
+
+  <%= hidden_field_tag "plano[selected_exercicios]", "", id => "selected_exercicios" %>
 
   <div class="actions">
     <%= f.submit %>

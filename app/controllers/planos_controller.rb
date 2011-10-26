@@ -7,6 +7,8 @@ class PlanosController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @planos }
+      format.json  { render :json => @planos }
+
     end
   end
 
@@ -18,6 +20,7 @@ class PlanosController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @plano }
+      format.json  { render :json => @planos }
     end
   end
 
@@ -29,6 +32,7 @@ class PlanosController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @plano }
+      format.json  { render :json => @planos }
     end
   end
 
@@ -57,9 +61,16 @@ class PlanosController < ApplicationController
   # PUT /planos/1.xml
   def update
     @plano = Plano.find(params[:id])
+    @exercicios = params[:plano][:selected_exercicios].split(",")
+
+    @exercicios.each do |ex_id|
+
+	ExerciciosPlanos.create(:plano_id => params[:id], :exercicio_id => ex_id);
+
+    end
 
     respond_to do |format|
-      if @plano.update_attributes(params[:plano])
+      if @plano.update_attributes(:data => params[:plano][:data], :altura => params[:plano][:altura], :peso => params[:plano][:peso])
         format.html { redirect_to(@plano, :notice => 'Plano was successfully updated.') }
         format.xml  { head :ok }
       else

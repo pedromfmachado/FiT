@@ -7,6 +7,8 @@ class ExerciciosController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @exercicios }
+      format.json  { render :json => @exercicios }
+
     end
   end
 
@@ -18,6 +20,7 @@ class ExerciciosController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @exercicio }
+      format.json  { render :json => @exercicios }
     end
   end
 
@@ -29,6 +32,7 @@ class ExerciciosController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @exercicio }
+      format.json  { render :json => @exercicios }
     end
   end
 

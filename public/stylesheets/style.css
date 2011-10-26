@@ -20,12 +20,12 @@ body {
 	height: 40px;
     	float: left;
 	background: url(../images/menu-grad.png);
-	background-repeat:x-repeat;
+	background-repeat: repeat-x;
 }
 
 #navigation {
 	margin-left: 10%;
-	heigth: auto;
+	height: auto;
 	
 }
 
