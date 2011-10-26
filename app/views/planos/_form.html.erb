@@ -24,18 +24,26 @@
     <%= f.text_field :peso %>
   </div>
 
-  <div class="field">
-    <%= collection_select("exercicios_listbox", nil, Exercicio.all, :id, :nome) %>
-    <%= link_to_function "Associar exercicio", "adicionaExercicio()", :class => "nav_link"%>
-  </div>
-
-  <div id="dados">
-  </div>
   <div id="exercicios">
 	<% @plano.exercicios.each do |exercicio| %>
 		<%= exercicio.nome %> - <%= exercicio.maquina %><br />
 	<% end %>
   </div>
+  <div id="dados">
+  </div>
+
+  <div class="field">
+    <%= label(:exercicio,:exercicio) %><br />
+    <%= collection_select("exercicios_listbox", nil, Exercicio.all, :id, :nome) %>
+    <%= link_to_function "Associar exercicio", "adicionaExercicio(#{@plano.exercicios.to_json})", :class => "nav_link"%><br />
+    <%= label(:exercicio,:peso) %><br />
+    <%= text_field(:exercicio,:peso) %><br />
+    <%= label(:exercicio,:series) %><br />
+    <%= text_field(:exercicio,:series) %><br />
+    <%= label(:exercicio,:repeticoes) %><br />
+    <%= text_field(:exercicio,:repeticoes) %><br />
+  </div>
+  
 
   <%= hidden_field_tag "plano[selected_exercicios]", "" %>
 

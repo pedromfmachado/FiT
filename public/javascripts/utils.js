@@ -1,23 +1,21 @@
 // JavaScript Document
 
+function adicionaExercicio(exercicios_arr){
 
+	var ids_exercicios = new Array;
 
-function adicionaExercicio(){
+	for(i = 0; i < exercicios_arr.length; i++)
+		ids_exercicios.push(exercicios_arr[i].exercicio.id.toString());
+	
 
-
-
-
-	var val = $("#exercicios_listbox_").val();
-
+	var valor_ex = $("#exercicios_listbox_").val();
 	var ids_array = $("#plano_selected_exercicios").val().split(",");
-	$("#dados").text("tamanho do array: " + ids_array.length + " tem elemento? " + $.inArray(val,ids_array));
-	if($.inArray(val,ids_array) != -1){
-		$("#exercicios").text("tem, nao adiciona");
-		
-	}
-	else{
-		$("#exercicios").text("nao tem, adiciona");
-		$("#plano_selected_exercicios").val($("#plano_selected_exercicios").val() + val + ",");
+	//$("#dados").text("tamanho do array: " + ids_exercicios.length + " tem elemento? " + $.inArray(valor_ex,ids_exercicios));
+
+
+	if($.inArray(valor_ex,ids_exercicios) == -1 && $.inArray(valor_ex,ids_array) == -1){
+
+		$("#plano_selected_exercicios").val($("#plano_selected_exercicios").val() + valor_ex + ",");
 	}
 
 	$("#exercicios").text($("#plano_selected_exercicios").val());
