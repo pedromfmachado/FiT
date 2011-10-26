@@ -19,8 +19,8 @@ class PlanosController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.xml  { render :xml => @plano }
-      format.json  { render :json => @planos }
+      format.xml  { render :xml => @plano.exercicios }
+      format.json  { render :json => @plano.exercicios }
     end
   end
 
@@ -31,8 +31,6 @@ class PlanosController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @plano }
-      format.json  { render :json => @planos }
     end
   end
 
@@ -44,7 +42,9 @@ class PlanosController < ApplicationController
   # POST /planos
   # POST /planos.xml
   def create
-    @plano = Plano.new(params[:plano])
+    @exercicios = params[:plano][:selected_exercicios].split(",")
+    @plano = Plano.new(:data => params[:plano][:data], :altura => params[:plano][:altura], :peso => params[:plano][:peso])
+    
 
     respond_to do |format|
       if @plano.save
@@ -55,6 +55,11 @@ class PlanosController < ApplicationController
         format.xml  { render :xml => @plano.errors, :status => :unprocessable_entity }
       end
     end
+    
+    @exercicios.each do |ex_id|
+	ExerciciosPlanos.create(:plano_id => @plano.id, :exercicio_id => ex_id);
+    end
+
   end
 
   # PUT /planos/1
@@ -64,9 +69,7 @@ class PlanosController < ApplicationController
     @exercicios = params[:plano][:selected_exercicios].split(",")
 
     @exercicios.each do |ex_id|
-
 	ExerciciosPlanos.create(:plano_id => params[:id], :exercicio_id => ex_id);
-
     end
 
     respond_to do |format|
