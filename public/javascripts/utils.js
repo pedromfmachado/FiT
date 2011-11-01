@@ -7,18 +7,15 @@ function adicionaExercicio(exercicios_arr){
 	for(i = 0; i < exercicios_arr.length; i++)
 		ids_exercicios.push(exercicios_arr[i].exercicio.id.toString());
 	
-
+    // valor do exercicio escolhido
 	var valor_ex = $("#exercicios_listbox_").val();
 	var ids_array = $("#plano_selected_exercicios").val().split(",");
-	//$("#dados").text("tamanho do array: " + ids_exercicios.length + " tem elemento? " + $.inArray(valor_ex,ids_exercicios));
 
-
-	if($.inArray(valor_ex,ids_exercicios) == -1 && $.inArray(valor_ex,ids_array) == -1){
-
+    // se o exercicio ainda nao estiver associado ao plano ou se nao estiver ja escrito na hidden tag
+	if(valor_ex && $.inArray(valor_ex,ids_exercicios) == -1 && $.inArray(valor_ex,ids_array) == -1){
+        // escreve na hidden tag o id do exercicio escolhido
 		$("#plano_selected_exercicios").val($("#plano_selected_exercicios").val() + valor_ex + ",");
 	}
-
-	$("#exercicios").text($("#plano_selected_exercicios").val());
 
 }
 

@@ -33107,3 +33107,955 @@ ActionController::RoutingError (No route matches "/javascripts/efects.js"):
   
 
 Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+  [1m[36mSQL (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35mSQL (0.2ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (168.7ms)[0m  [1mCREATE TABLE "admins" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (125.0ms)[0m  [1mCREATE TABLE "exercicios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "maquina" varchar(255), "tipo" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (138.0ms)[0m  [1mCREATE TABLE "exercicios_planos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "plano_id" integer, "exercicio_id" integer, "peso" integer, "series" integer, "repeticoes" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (111.2ms)[0m  [1mCREATE TABLE "planos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "altura" integer, "peso" integer, "created_at" datetime, "updated_at" datetime, "user_id" integer, "admin_id" integer, "data" date) [0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (128.6ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password_hash" varchar(255), "password_salt" varchar(255), "nome" varchar(255), "datanascimento" varchar(255), "telefone" varchar(255), "morada" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (122.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  PRAGMA index_list("schema_migrations")
+  [1m[36mSQL (88.1ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35mSQL (131.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111101173433')
+  [1m[36mSQL (77.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111101130429')[0m
+  [1m[35mSQL (99.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111022144451')
+  [1m[36mSQL (66.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111022144502')[0m
+  [1m[35mSQL (77.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20111022144440')
+  [1m[36mSQL (66.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111101122156')[0m
+  [1m[35mSQL (0.4ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mSQL (0.3ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations"
+
+
+Started GET "/planos" for 127.0.0.1 at Tue Nov 01 17:46:42 +0000 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.4ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered sessions/_form.html.erb (1.3ms)
+Rendered planos/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 22ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 17:46:42 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 17:46:42 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 17:46:42 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/planos/new" for 127.0.0.1 at Tue Nov 01 17:58:36 +0000 2011
+  Processing by PlanosController#new as HTML
+  [1m[35mExercicio Load (0.2ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered planos/_form.html.erb (31.7ms)
+Rendered sessions/_form.html.erb (1.5ms)
+Rendered planos/new.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 53ms (Views: 44.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 17:58:36 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 17:58:36 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 17:58:36 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/planos" for 127.0.0.1 at Tue Nov 01 17:58:46 +0000 2011
+  Processing by PlanosController#create as HTML
+  Parameters: {"commit"=>"Create Plano", "authenticity_token"=>"6/YNeimpfQd8MtxVFU0L1g2ss1u3Sljii0CnuGYhp5A=", "utf8"=>"\342\234\223", "exercicio"=>{"repeticoes"=>"", "series"=>"", "peso"=>""}, "plano"=>{"selected_exercicios"=>"", "data"=>"22-10-2011", "altura"=>"185", "peso"=>"80"}}
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "planos" ("admin_id", "altura", "created_at", "data", "peso", "updated_at", "user_id") VALUES (NULL, 185, '2011-11-01 17:58:46.714612', '2011-10-22', 80, '2011-11-01 17:58:46.714612', NULL)[0m
+Redirected to http://127.0.0.1:3000/planos/1
+Completed 302 Found in 125ms
+
+
+Started GET "/planos/1" for 127.0.0.1 at Tue Nov 01 17:58:46 +0000 2011
+  Processing by PlanosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlano Load (0.3ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1
+  [1m[36mExercicio Load (0.3ms)[0m  [1mSELECT "exercicios".* FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))[0m
+Rendered sessions/_form.html.erb (1.4ms)
+Rendered planos/show.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 47ms (Views: 35.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 17:58:46 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 17:58:46 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 17:58:47 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Tue Nov 01 17:58:49 +0000 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.5ms)[0m  SELECT "planos".* FROM "planos"
+Rendered sessions/_form.html.erb (1.3ms)
+Rendered planos/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 29ms (Views: 19.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 17:58:49 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 17:58:49 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 17:58:49 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/planos/1/edit" for 127.0.0.1 at Tue Nov 01 18:15:34 +0000 2011
+  Processing by PlanosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlano Load (0.2ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1[0m
+  [1m[35mExercicio Load (0.2ms)[0m  SELECT "exercicios".* FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))
+  [1m[36mExercicio Load (0.1ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered planos/_form.html.erb (31.0ms)
+Rendered sessions/_form.html.erb (1.2ms)
+Rendered planos/edit.html.erb within layouts/application (40.7ms)
+Completed 200 OK in 55ms (Views: 43.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:15:34 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:15:34 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:15:35 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/planos/1/edit" for 127.0.0.1 at Tue Nov 01 18:15:41 +0000 2011
+  Processing by PlanosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlano Load (0.2ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1
+  [1m[36mExercicio Load (0.2ms)[0m  [1mSELECT "exercicios".* FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))[0m
+  [1m[35mExercicio Load (0.1ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered planos/_form.html.erb (31.8ms)
+Rendered sessions/_form.html.erb (1.2ms)
+Rendered planos/edit.html.erb within layouts/application (41.6ms)
+Completed 200 OK in 56ms (Views: 44.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:15:41 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:15:41 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:15:41 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/planos/1/edit" for 127.0.0.1 at Tue Nov 01 18:15:42 +0000 2011
+  Processing by PlanosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlano Load (0.2ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1[0m
+  [1m[35mExercicio Load (0.2ms)[0m  SELECT "exercicios".* FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))
+  [1m[36mExercicio Load (0.1ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered planos/_form.html.erb (33.5ms)
+Rendered sessions/_form.html.erb (1.3ms)
+Rendered planos/edit.html.erb within layouts/application (44.0ms)
+Completed 200 OK in 60ms (Views: 46.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:15:43 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:15:43 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/planos/1/edit" for 127.0.0.1 at Tue Nov 01 18:15:46 +0000 2011
+  Processing by PlanosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlano Load (0.2ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1
+  [1m[36mExercicio Load (0.2ms)[0m  [1mSELECT "exercicios".* FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))[0m
+  [1m[35mExercicio Load (0.1ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered planos/_form.html.erb (32.1ms)
+Rendered sessions/_form.html.erb (1.2ms)
+Rendered planos/edit.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 57ms (Views: 44.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:15:46 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:15:46 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:15:46 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/planos/1" for 127.0.0.1 at Tue Nov 01 18:27:28 +0000 2011
+  Processing by PlanosController#update as HTML
+  Parameters: {"commit"=>"Update Plano", "authenticity_token"=>"6/YNeimpfQd8MtxVFU0L1g2ss1u3Sljii0CnuGYhp5A=", "utf8"=>"\342\234\223", "exercicio"=>{"repeticoes"=>"", "series"=>""}, "id"=>"1", "peso"=>{"peso"=>""}, "plano"=>{"selected_exercicios"=>"", "data"=>"2011-10-22", "altura"=>"185", "peso"=>"80"}}
+  [1m[36mPlano Load (0.2ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1[0m
+Redirected to http://127.0.0.1:3000/planos/1
+Completed 302 Found in 29ms
+
+
+Started GET "/planos/1" for 127.0.0.1 at Tue Nov 01 18:27:28 +0000 2011
+  Processing by PlanosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlano Load (0.3ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1
+  [1m[36mExercicio Load (0.2ms)[0m  [1mSELECT "exercicios".* FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))[0m
+Rendered sessions/_form.html.erb (1.4ms)
+Rendered planos/show.html.erb within layouts/application (39.2ms)
+Completed 200 OK in 54ms (Views: 42.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:27:28 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:27:28 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:27:28 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Tue Nov 01 18:27:30 +0000 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.4ms)[0m  SELECT "planos".* FROM "planos"
+Rendered sessions/_form.html.erb (2.4ms)
+Rendered planos/index.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 34ms (Views: 23.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:27:30 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:27:30 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:27:30 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Tue Nov 01 18:27:35 +0000 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.4ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered sessions/_form.html.erb (1.4ms)
+Rendered exercicios/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 73ms (Views: 13.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:27:35 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:27:35 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/exercicios/new" for 127.0.0.1 at Tue Nov 01 18:27:37 +0000 2011
+  Processing by ExerciciosController#new as HTML
+Rendered exercicios/_form.html.erb (9.8ms)
+Rendered sessions/_form.html.erb (1.3ms)
+Rendered exercicios/new.html.erb within layouts/application (21.7ms)
+Completed 200 OK in 33ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:27:37 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:27:37 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/exercicios" for 127.0.0.1 at Tue Nov 01 18:27:49 +0000 2011
+  Processing by ExerciciosController#create as HTML
+  Parameters: {"commit"=>"Create Exercicio", "authenticity_token"=>"6/YNeimpfQd8MtxVFU0L1g2ss1u3Sljii0CnuGYhp5A=", "utf8"=>"\342\234\223", "exercicio"=>{"tipo"=>"Musculação", "nome"=>"Abdominais", "maquina"=>"Colchão"}}
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "exercicios" ("created_at", "maquina", "nome", "tipo", "updated_at") VALUES ('2011-11-01 18:27:49.999839', 'Colchão', 'Abdominais', 'Musculação', '2011-11-01 18:27:49.999839')
+Redirected to http://127.0.0.1:3000/exercicios/1
+Completed 302 Found in 114ms
+
+
+Started GET "/exercicios/1" for 127.0.0.1 at Tue Nov 01 18:27:50 +0000 2011
+  Processing by ExerciciosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mExercicio Load (0.1ms)[0m  [1mSELECT "exercicios".* FROM "exercicios" WHERE ("exercicios"."id" = 1) LIMIT 1[0m
+Rendered sessions/_form.html.erb (1.2ms)
+Rendered exercicios/show.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 43ms (Views: 18.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:27:50 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:27:50 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:27:50 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Tue Nov 01 18:27:52 +0000 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.4ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered sessions/_form.html.erb (1.3ms)
+Rendered exercicios/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 30ms (Views: 17.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:27:52 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:27:52 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:27:52 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/exercicios/new" for 127.0.0.1 at Tue Nov 01 18:27:53 +0000 2011
+  Processing by ExerciciosController#new as HTML
+Rendered exercicios/_form.html.erb (11.0ms)
+Rendered sessions/_form.html.erb (1.3ms)
+Rendered exercicios/new.html.erb within layouts/application (21.4ms)
+Completed 200 OK in 34ms (Views: 24.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:27:53 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:27:53 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:27:53 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (4.4ms)
+
+
+Started POST "/exercicios" for 127.0.0.1 at Tue Nov 01 18:27:58 +0000 2011
+  Processing by ExerciciosController#create as HTML
+  Parameters: {"commit"=>"Create Exercicio", "authenticity_token"=>"6/YNeimpfQd8MtxVFU0L1g2ss1u3Sljii0CnuGYhp5A=", "utf8"=>"\342\234\223", "exercicio"=>{"tipo"=>"Aeróbico", "nome"=>"Bicicleta", "maquina"=>"Bicicleta"}}
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "exercicios" ("created_at", "maquina", "nome", "tipo", "updated_at") VALUES ('2011-11-01 18:27:58.853942', 'Bicicleta', 'Bicicleta', 'Aeróbico', '2011-11-01 18:27:58.853942')[0m
+Redirected to http://127.0.0.1:3000/exercicios/2
+Completed 302 Found in 105ms
+
+
+Started GET "/exercicios/2" for 127.0.0.1 at Tue Nov 01 18:27:58 +0000 2011
+  Processing by ExerciciosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mExercicio Load (0.2ms)[0m  SELECT "exercicios".* FROM "exercicios" WHERE ("exercicios"."id" = 2) LIMIT 1
+Rendered sessions/_form.html.erb (1.3ms)
+Rendered exercicios/show.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 30ms (Views: 16.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:27:59 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:27:59 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Tue Nov 01 18:28:00 +0000 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.5ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered sessions/_form.html.erb (1.3ms)
+Rendered exercicios/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 30ms (Views: 18.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:28:00 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:28:00 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:28:00 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/exercicios/new" for 127.0.0.1 at Tue Nov 01 18:28:01 +0000 2011
+  Processing by ExerciciosController#new as HTML
+Rendered exercicios/_form.html.erb (8.6ms)
+Rendered sessions/_form.html.erb (1.2ms)
+Rendered exercicios/new.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 31ms (Views: 22.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:28:01 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:28:01 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/exercicios" for 127.0.0.1 at Tue Nov 01 18:28:06 +0000 2011
+  Processing by ExerciciosController#create as HTML
+  Parameters: {"commit"=>"Create Exercicio", "authenticity_token"=>"6/YNeimpfQd8MtxVFU0L1g2ss1u3Sljii0CnuGYhp5A=", "utf8"=>"\342\234\223", "exercicio"=>{"tipo"=>"Aeróbico", "nome"=>"Corrida", "maquina"=>"Passadeira"}}
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "exercicios" ("created_at", "maquina", "nome", "tipo", "updated_at") VALUES ('2011-11-01 18:28:06.777169', 'Passadeira', 'Corrida', 'Aeróbico', '2011-11-01 18:28:06.777169')
+Redirected to http://127.0.0.1:3000/exercicios/3
+Completed 302 Found in 125ms
+
+
+Started GET "/exercicios/3" for 127.0.0.1 at Tue Nov 01 18:28:06 +0000 2011
+  Processing by ExerciciosController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mExercicio Load (0.1ms)[0m  [1mSELECT "exercicios".* FROM "exercicios" WHERE ("exercicios"."id" = 3) LIMIT 1[0m
+Rendered sessions/_form.html.erb (1.3ms)
+Rendered exercicios/show.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 26ms (Views: 15.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:28:07 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:28:07 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:28:07 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Tue Nov 01 18:28:09 +0000 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mExercicio Load (0.5ms)[0m  SELECT "exercicios".* FROM "exercicios"
+Rendered sessions/_form.html.erb (1.3ms)
+Rendered exercicios/index.html.erb within layouts/application (17.8ms)
+Completed 200 OK in 32ms (Views: 20.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:28:09 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:28:09 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/exercicios/new" for 127.0.0.1 at Tue Nov 01 18:28:19 +0000 2011
+  Processing by ExerciciosController#new as HTML
+Rendered exercicios/_form.html.erb (7.9ms)
+Rendered sessions/_form.html.erb (1.5ms)
+Rendered exercicios/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 79ms (Views: 23.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:28:19 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:28:19 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/exercicios" for 127.0.0.1 at Tue Nov 01 18:28:26 +0000 2011
+  Processing by ExerciciosController#create as HTML
+  Parameters: {"commit"=>"Create Exercicio", "authenticity_token"=>"6/YNeimpfQd8MtxVFU0L1g2ss1u3Sljii0CnuGYhp5A=", "utf8"=>"\342\234\223", "exercicio"=>{"tipo"=>"Musculação", "nome"=>"Prensa", "maquina"=>"Prensa"}}
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "exercicios" ("created_at", "maquina", "nome", "tipo", "updated_at") VALUES ('2011-11-01 18:28:26.746540', 'Prensa', 'Prensa', 'Musculação', '2011-11-01 18:28:26.746540')[0m
+Redirected to http://127.0.0.1:3000/exercicios/4
+Completed 302 Found in 111ms
+
+
+Started GET "/exercicios/4" for 127.0.0.1 at Tue Nov 01 18:28:26 +0000 2011
+  Processing by ExerciciosController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mExercicio Load (0.1ms)[0m  SELECT "exercicios".* FROM "exercicios" WHERE ("exercicios"."id" = 4) LIMIT 1
+Rendered sessions/_form.html.erb (1.4ms)
+Rendered exercicios/show.html.erb within layouts/application (57.7ms)
+Completed 200 OK in 74ms (Views: 60.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:28:26 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:28:26 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:28:27 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Tue Nov 01 18:28:28 +0000 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mExercicio Load (0.5ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered sessions/_form.html.erb (1.3ms)
+Rendered exercicios/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 31ms (Views: 20.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:28:28 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:28:28 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Tue Nov 01 18:28:31 +0000 2011
+  Processing by PlanosController#index as HTML
+  [1m[35mPlano Load (0.4ms)[0m  SELECT "planos".* FROM "planos"
+Rendered sessions/_form.html.erb (1.3ms)
+Rendered planos/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 36ms (Views: 18.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:28:31 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:28:31 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/planos/1/edit" for 127.0.0.1 at Tue Nov 01 18:28:33 +0000 2011
+  Processing by PlanosController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlano Load (0.2ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1[0m
+  [1m[35mExercicio Load (0.2ms)[0m  SELECT "exercicios".* FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))
+  [1m[36mExercicio Load (0.2ms)[0m  [1mSELECT "exercicios".* FROM "exercicios"[0m
+Rendered planos/_form.html.erb (41.5ms)
+Rendered sessions/_form.html.erb (1.5ms)
+Rendered planos/edit.html.erb within layouts/application (52.5ms)
+Completed 200 OK in 68ms (Views: 55.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:28:34 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:28:34 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/planos/1" for 127.0.0.1 at Tue Nov 01 18:28:43 +0000 2011
+  Processing by PlanosController#update as HTML
+  Parameters: {"commit"=>"Update Plano", "authenticity_token"=>"6/YNeimpfQd8MtxVFU0L1g2ss1u3Sljii0CnuGYhp5A=", "utf8"=>"\342\234\223", "exercicio"=>{"repeticoes"=>"", "series"=>"", "peso"=>""}, "id"=>"1", "plano"=>{"selected_exercicios"=>"1,2,", "data"=>"2011-10-22", "altura"=>"185", "peso"=>"80"}, "exercicios_listbox"=>["2"]}
+  [1m[35mPlano Load (0.2ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "exercicios_planos" ("created_at", "exercicio_id", "peso", "plano_id", "repeticoes", "series", "updated_at") VALUES ('2011-11-01 18:28:43.481832', 1, NULL, 1, NULL, NULL, '2011-11-01 18:28:43.481832')[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "exercicios_planos" ("created_at", "exercicio_id", "peso", "plano_id", "repeticoes", "series", "updated_at") VALUES ('2011-11-01 18:28:43.570351', 2, NULL, 1, NULL, NULL, '2011-11-01 18:28:43.570351')
+Redirected to http://127.0.0.1:3000/planos/1
+Completed 302 Found in 210ms
+
+
+Started GET "/planos/1" for 127.0.0.1 at Tue Nov 01 18:28:43 +0000 2011
+  Processing by PlanosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlano Load (0.3ms)[0m  [1mSELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1[0m
+  [1m[35mExercicio Load (0.3ms)[0m  SELECT "exercicios".* FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))
+Rendered sessions/_form.html.erb (1.5ms)
+Rendered planos/show.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 54ms (Views: 40.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:28:43 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:28:43 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:28:43 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Tue Nov 01 18:28:48 +0000 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mPlano Load (0.4ms)[0m  [1mSELECT "planos".* FROM "planos"[0m
+Rendered sessions/_form.html.erb (1.3ms)
+Rendered planos/index.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 31ms (Views: 18.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:28:49 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:28:49 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:28:49 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/planos/1" for 127.0.0.1 at Tue Nov 01 18:28:50 +0000 2011
+  Processing by PlanosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlano Load (0.2ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1
+  [1m[36mExercicio Load (0.3ms)[0m  [1mSELECT "exercicios".* FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))[0m
+Rendered sessions/_form.html.erb (1.3ms)
+Rendered planos/show.html.erb within layouts/application (42.3ms)
+Completed 200 OK in 56ms (Views: 45.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Tue Nov 01 18:28:51 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Tue Nov 01 18:28:51 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/planos/1.xml" for 127.0.0.1 at Tue Nov 01 18:28:52 +0000 2011
+  Processing by PlanosController#show as XML
+  Parameters: {"id"=>"1"}
+  [1m[35mPlano Load (0.2ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos"."id" = 1) LIMIT 1
+  [1m[36mExercicio Load (0.3ms)[0m  [1mSELECT "exercicios".* FROM "exercicios" INNER JOIN "exercicios_planos" ON "exercicios".id = "exercicios_planos".exercicio_id WHERE (("exercicios_planos".plano_id = 1))[0m
+Completed 200 OK in 100ms (Views: 1.2ms | ActiveRecord: 0.7ms)
