@@ -10,7 +10,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111022144502) do
+ActiveRecord::Schema.define(:version => 20111101130429) do
+
+  create_table "admins", :force => true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "exercicios", :force => true do |t|
     t.string   "nome"
@@ -34,6 +40,18 @@ ActiveRecord::Schema.define(:version => 20111022144502) do
     t.string   "data"
     t.integer  "altura"
     t.integer  "peso"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.string   "password_hash"
+    t.string   "password_salt"
+    t.string   "nome"
+    t.string   "datanascimento"
+    t.string   "telefone"
+    t.string   "morada"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
