@@ -1,9 +1,10 @@
 class CreatePlanos < ActiveRecord::Migration
-  def self.up
-    create_table :planos do |t|
+  def up
+    change_table :planos do |t|
       t.string :data
       t.integer :altura
       t.integer :peso
+
 
       t.timestamps
     end

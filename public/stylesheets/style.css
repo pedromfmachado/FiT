@@ -15,10 +15,16 @@ body {
 	background-color: red;
 }
 
+#login{
+    float: right;
+    margin-right:5%;
+
+}
+
 #header-bar {
 	width: 100%;
 	height: 40px;
-    	float: left;
+    float: left;
 	background: url(../images/menu-grad.png);
 	background-repeat: repeat-x;
 }

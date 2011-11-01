@@ -16,8 +16,10 @@
 </p>
 
 <p>
-  <b> Nr de Exercicios: </b>
-  <%= @plano.exercicios.count %>
+  <b> Exercicios: </b><br />
+  <% @plano.exercicios.each do |ex| %>
+    <%= ex.nome %> - <%= ex.maquina %><br />
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_plano_path(@plano) %> |
