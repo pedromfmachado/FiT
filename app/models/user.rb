@@ -42,7 +42,7 @@ class User < ActiveRecord::Base
   end
 
   def normal?
-    !admin? && !staff?  
+    !admin? && !staff? && id != nil
   end
 
 end

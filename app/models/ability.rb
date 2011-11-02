@@ -5,7 +5,6 @@ class Ability
     
     user ||= User.new
 
-
     if user.admin?
       can :manage, :all
     elsif user.staff?
