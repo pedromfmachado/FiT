@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @user.nome %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Data de Nascimento:</b>
+  <%= @user.datanascimento %>
+</p>
+
+<p>
+  <b>Telefone:</b>
+  <%= @user.telefone %>
+</p>
+
+<p>
+  <b>Morada:</b>
+  <%= @user.morada %>
+</p>
+
+
+<%= link_to 'Edit', edit_plano_path(@plano) %> |
+<%= link_to 'Back', planos_path %>

@@ -14,6 +14,7 @@ class Ability
       can :manage, User
     elsif user.normal?
       can :read, Plano, :user_id => user.id
+      can :read, User, :id => user.id
     end
     
 

@@ -16,7 +16,8 @@
       <% if current_user.admin? %>
       <%= link_to "Sign up", sign_up_path %> or
       <% end %>
-    <%= link_to "Log out", log_out_path %>
+    <%= link_to "Log out", log_out_path %> or
+    <%= link_to "View Profile", perfil_path(current_user.id) %>
     <% else %>
       Welcome to FiT.
       <%= link_to "Log in", log_in_path %>
