@@ -2,10 +2,21 @@
 
 $(document).ready(function() {
 	
-	$("ul li ul").hide();
+	$("ul ul").hide();
 	
-	$("ul li").click(function(e) {
-		$("ul li ul:visible").slideToggle("slow");
-		$(this).children().slideToggle("slow");
+	$("ul a").click(function(e) {		
+		
+		if(!$(this).next().is('ul:visible'))
+			$("ul ul:visible").slideToggle("slow");
+		
+		$('ul a li.current').removeClass().addClass("parent");
+		$(this).children().removeClass().addClass("current");
+		
+		if($(this).next().is('ul'))
+		{
+			$(this).next().slideToggle("slow");
+			return false;
+		}
     });
+	
 });

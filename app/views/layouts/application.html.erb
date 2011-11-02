@@ -2,84 +2,99 @@
 <html>
 <head>
   <title>Fit</title>
-  <%= stylesheet_link_tag "style" %>
+  <%= stylesheet_link_tag "screen" %>
   <%= javascript_include_tag "aplication.js", "controls.js", "dragdrop.js", "efects.js", "prototype.js", "jquery.js", "rails.js", "utils.js", "menu.js", "jquery.js" %>
   <%= csrf_meta_tag %>
 </head>
 <body>
+<div id="content">
 
-<div id="header">
-	<div id="header-top">
-		<%= image_tag "logo.png" %>
+  <p id="top"> 
+
+    <% if current_user %>
+    Logged in as <%= current_user.nome %>.
+      <% if is_admin? %>
+      <%= link_to "Sign up", sign_up_path %> or
+      <% end %>
+    <%= link_to "Log out", log_out_path %>
+    <% else %>
+      Welcome to FiT.
+      <%= link_to "Log in", log_in_path %>
+    <% end %>
+
+    <% flash.each do |name, msg| %>
+    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
+
+  </p>
+
+
+  <div id="logo"><%= image_tag "logo.png" %> <%= render :partial => '/sessions/form' unless current_user %></div>
+
+  
+
+
+  <div class="line"></div>
+  <div id="pitch">
+		<h1>We provide turnkey, high-quality<br />solutions regardless of the project size.</h1>
+		<h2>We're a professional, full service web development company that creates elegant website designs and build innovative web applications.</h2>
+	</div>
+
+   
+    <ul id="menu">
+			<a href="#"><li class="current">Home</li></a>
+			<a href="#"><li class="parent">News</li></a>
+			<a href="#"><li class="parent">Ginásios</li></a>
+			<a href="#"><li class="parent">Aulas</li></a>
+			<ul>
+                <li class="child"><a href="">Horários</a></li>
+                <li class="child"><a href="">Modalidades</a></li>
+			</ul>
+			<a href="#"><li class="parent">Conta Pessoal</li></a>
+			<ul>
+				<li class="child"><a href="">Perfil</a></li>
+                <li class="child"><a href="">Plano Treino</a></li>
+                <li class="child"><a href="">Plano Alimentar</a></li>
+			</ul>
+			<a href="#"><li class="parent">Administração</li></a>
+		</ul>
 	
+      <div id="content-text">
+		  <%= yield %>
+      </div>
 
-    <div id="login"> 
+      <div class="line"></div>
 
-      <% if current_user %>
-        Logged in as <%= current_user.nome %>.
-        <% if is_admin? %>
-          <%= link_to "Sign up", sign_up_path %> or
-        <% end %>
-        <%= link_to "Log out", log_out_path %>
-      <% end %>
-
-      <% flash.each do |name, msg| %>
-        <%= content_tag :div, msg, :id => "flash_#{name}" %>
-      <% end %>
-
-      <%= render :partial => '/sessions/form' unless current_user %>
-
-    </div>
+      <div class="left">
+			<h4>Join the Movement</h4>
+			<p><em>Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</em></p>
+		</div>
+		<div class="right">
+			<h3>12 / 2009</h3>
+			<p>Duis rutrum dapibus diam. Sed turpis sem, suscipit et, ullamcorper vel, aliquam in, tellus. Phasellus interdum. Sed pede. Fusce semper tellus quis sapien.</p>
+			<br />
+			<h3>12 / 2009</h3>
+			<p>Duis rutrum dapibus diam. Sed turpis sem, suscipit et, ullamcorper vel, aliquam in, tellus. Phasellus interdum. Sed pede. Fusce semper tellus quis sapien.</p>
+		</div>
   </div>
 
-	<div id="header-bar"></div>
+  <div id="footer">
+	  <div id="footer-info">
+		  <ul>
+			  <li> <%= link_to "About", root_path %> </li>
+			  <li> <%= link_to "FAQ", root_path %> </li>
+			  <li> <%= link_to "Terms of Use", root_path %> </li>
+			  <li> <%= link_to "Help", root_path %> </li>
+		  </ul>
+	  </div>
+	  <div id="footer-social">
+		  <ul>	
+			  <li> <%= link_to "Facebook", root_path %> </li>
+			  <li> <%= link_to "Twitter", root_path %> </li>
+		  </ul>
+	  </div>
+  </div>
 
-</div>
-
-<div id="navigation">
-        
-        <div id="sidebar">     
-        	<ul>
-		        <li> Home </li>
-		        <li> News </li>
-		        <li> Ginásios </li>
-		        <li> Aulas
-		        	<ul>
-		            	<li> <%= link_to "Horários", root_path %> </li>
-		            	<li> <%= link_to "Modalidades", root_path %> </li>
-		            </ul>
-		        </li>
-		        <li> Conta Pessoal
-		        	<ul>
-		            	<li> <%= link_to "Perfil", root_path %> </li>
-		            	<li> <%= link_to "Plano Treino", root_path %> </li>
-		            </ul>
-		        </li>
-		        <li> Administração </li> 
-           	</ul>
-	</div>
-
-	<div id="content">
-		<%= yield %>
-	</div>
-</div>
-
-<div id="footer">
-	<div id="footer-info">
-		<ul>
-			<li> <%= link_to "About", root_path %> </li>
-			<li> <%= link_to "FAQ", root_path %> </li>
-			<li> <%= link_to "Terms of Use", root_path %> </li>
-			<li> <%= link_to "Help", root_path %> </li>
-		</ul>
-	</div>
-	<div id="footer-social">
-		<ul>	
-			<li> <%= link_to "Facebook", root_path %> </li>
-			<li> <%= link_to "Twitter", root_path %> </li>
-		</ul>
-	</div>
-</div>
 
 </body>
 </html>
