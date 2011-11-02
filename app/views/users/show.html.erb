@@ -25,6 +25,7 @@
   <%= @user.morada %>
 </p>
 
-
-<%= link_to 'Edit', edit_plano_path(@plano) %> |
-<%= link_to 'Back', planos_path %>
+<%if current_user.admin? && current_user.id != @user.id %>
+<%= link_to "Promote", :controller => "users", :action => "promote", :id => @user %> |
+<%= link_to "Demote", :controller => "users", :action => "demote", :id => @user %>
+<% end %>

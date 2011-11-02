@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   
   has_many :admins
+  has_many :staffs
   attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento
 
   attr_accessor :password
@@ -25,11 +26,19 @@ class User < ActiveRecord::Base
   end
 
   def admin?
-    Admin.find_by_user_id(id)
+    if(Admin.find_by_user_id(id) != nil) 
+      return true
+    else
+      return false
+    end
   end
   
   def staff?
-    Staff.find_by_user_id(id)  
+    if(Staff.find_by_user_id(id) != nil) 
+      return true
+    else
+      return false
+    end  
   end
 
   def normal?
