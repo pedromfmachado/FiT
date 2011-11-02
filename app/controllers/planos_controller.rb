@@ -1,4 +1,6 @@
 class PlanosController < ApplicationController
+  load_and_authorize_resource
+
   # GET /planos
   # GET /planos.xml
   def index
@@ -15,6 +17,7 @@ class PlanosController < ApplicationController
   # GET /planos/1
   # GET /planos/1.xml
   def show
+    @user = current_user
     @plano = Plano.find(params[:id])
 
     respond_to do |format|

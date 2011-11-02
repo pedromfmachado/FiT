@@ -1,4 +1,6 @@
 class ExerciciosController < ApplicationController
+  load_and_authorize_resource  
+
   # GET /exercicios
   # GET /exercicios.xml
   def index

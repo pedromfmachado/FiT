@@ -5,9 +5,7 @@
     <th>Data</th>
     <th>Altura</th>
     <th>Peso</th>
-    <th></th>
-    <th></th>
-    <th></th>
+
   </tr>
 
 <% @planos.each do |plano| %>
@@ -16,12 +14,17 @@
     <td><%= plano.altura %></td>
     <td><%= plano.peso %></td>
     <td><%= link_to 'Show', plano %></td>
+    <% if can? :update, Plano %>
     <td><%= link_to 'Edit', edit_plano_path(plano) %></td>
+    <%end%>
+    <% if can? :destroy, Plano %>
     <td><%= link_to 'Destroy', plano, :confirm => 'Are you sure?', :method => :delete %></td>
+    <%end%>
   </tr>
 <% end %>
 </table>
 
 <br />
-
+<% if can? :create, Plano %>
 <%= link_to 'New Plano', new_plano_path %>
+<% end %>

@@ -24,6 +24,16 @@ class User < ActiveRecord::Base
     end
   end
 
+  def admin?
+    Admin.find_by_user_id(id)
+  end
+  
+  def staff?
+    Staff.find_by_user_id(id)  
+  end
 
+  def normal?
+    !admin? && !staff?  
+  end
 
 end
