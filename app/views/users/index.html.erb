@@ -1,0 +1,33 @@
+<% if current_user && @users.count > 0 %>
+
+<h1>Listing users</h1>
+
+
+<table>
+  <tr>
+    <th>Nr.</th>
+    <th>Nome</th>
+
+  </tr>
+
+<% @users.each do |user| %>
+  <% if user.id == current_user.id || (can? :manage, user) %>
+  <tr>
+    <td><%= user.id %></td>
+    <td><%= user.nome %></td>
+    <td><%= link_to 'Show', user %></td>
+    <% if can? :destroy, User %>
+    <td><%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+    <%end%>
+  </tr>
+  <% end %>
+<% end %>
+</table>
+<% else %>
+  Não existem users para listar
+<% end %>
+
+<br />
+<% if can? :create, User %>
+<%= link_to 'New user', new_user_path %>
+<% end %>
