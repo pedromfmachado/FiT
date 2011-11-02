@@ -1,4 +1,7 @@
+<% if current_user && @planos.count > 0 %>
+
 <h1>Listing planos</h1>
+
 
 <table>
   <tr>
@@ -9,6 +12,7 @@
   </tr>
 
 <% @planos.each do |plano| %>
+  <% if plano.user_id == current_user.id || (can? :manage, Plano) %>
   <tr>
     <td><%= plano.data %></td>
     <td><%= plano.altura %></td>
@@ -21,8 +25,12 @@
     <td><%= link_to 'Destroy', plano, :confirm => 'Are you sure?', :method => :delete %></td>
     <%end%>
   </tr>
+  <% end %>
 <% end %>
 </table>
+<% else %>
+  Não existem planos para listar
+<% end %>
 
 <br />
 <% if can? :create, Plano %>

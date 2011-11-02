@@ -9,28 +9,32 @@
 <body>
 <div id="content">
 
-  <p id="top"> 
+  <div id="top"> 
 
     <% if current_user %>
     Logged in as <%= current_user.nome %>.
       <% if current_user.admin? %>
-      <%= link_to "Sign up", sign_up_path %> or
+      <%= link_to "Register Member", sign_up_path %> or
       <% end %>
-    <%= link_to "Log out", log_out_path %> or
-    <%= link_to "View Profile", perfil_path(current_user.id) %>
+    <%= link_to "View Profile", perfil_path(current_user.id) %> or
+    <%= link_to "Log out", log_out_path %>.
+    
     <% else %>
-      Welcome to FiT.
-      <%= link_to "Log in", log_in_path %>
+      <div id='login'><%= render :partial => '/sessions/form' %></div>
     <% end %>
 
+    
+
+  </div>
+  
+
+
+  <div id="logo"> 
+    <%= image_tag "logo.png" %>
     <% flash.each do |name, msg| %>
-    <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
     <% end %>
-
-  </p>
-
-
-  <div id="logo"><%= image_tag "logo.png" %> <%= render :partial => '/sessions/form' unless current_user %></div>
+  </div>
 
   
 

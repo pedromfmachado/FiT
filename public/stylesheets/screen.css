@@ -149,5 +149,10 @@ table, tr, td{
     border-collapse:collapse;
 }
 
+#flash_notice{
+    color:green;
+}
 
-
+#flash_alert{
+    color:red;
+}

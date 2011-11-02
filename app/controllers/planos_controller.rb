@@ -45,8 +45,8 @@ class PlanosController < ApplicationController
   # POST /planos
   # POST /planos.xml
   def create
-    @exercicios = params[:plano][:selected_exercicios].split(",")
-    @plano = Plano.new(:data => params[:plano][:data], :altura => params[:plano][:altura], :peso => params[:plano][:peso])
+    @exercicios = params[:selected_exercicios].split(",")
+    @plano = Plano.new(params[:plano])
     
 
     respond_to do |format|
@@ -69,14 +69,14 @@ class PlanosController < ApplicationController
   # PUT /planos/1.xml
   def update
     @plano = Plano.find(params[:id])
-    @exercicios = params[:plano][:selected_exercicios].split(",")
+    @exercicios = params[:selected_exercicios].split(",")
 
     @exercicios.each do |ex_id|
 	ExerciciosPlanos.create(:plano_id => params[:id], :exercicio_id => ex_id);
     end
 
     respond_to do |format|
-      if @plano.update_attributes(:data => params[:plano][:data], :altura => params[:plano][:altura], :peso => params[:plano][:peso])
+      if @plano.update_attributes(params[:plano])
         format.html { redirect_to(@plano, :notice => 'Plano was successfully updated.') }
         format.xml  { head :ok }
       else

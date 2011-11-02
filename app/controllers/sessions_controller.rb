@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
+
   def new
+    User.new
   end
 
   def create
@@ -9,7 +11,7 @@ class SessionsController < ApplicationController
       redirect_to root_url, :notice => "Logged in!"
     else
       flash.now.alert = "Invalid email or password"
-      render "new"
+      redirect_to root_url, :alert => "Invalid email or password"
     end
   end
 
