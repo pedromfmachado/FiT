@@ -76381,3 +76381,17 @@ Started POST "/sessions.xml" for 127.0.0.1 at Thu Nov 03 15:04:57 +0000 2011
   Parameters: {"password"=>"[FILTERED]", "email"=>"ei08106@fe.up.pt"}
   [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'ei08106@fe.up.pt') LIMIT 1[0m
 Completed 200 OK in 187ms (Views: 3.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions.xml" for 127.0.0.1 at Thu Nov 03 15:26:57 +0000 2011
+  Processing by SessionsController#create as XML
+  Parameters: {"password"=>"[FILTERED]", "email"=>"ei08106@fe.up.pt"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'ei08106@fe.up.pt') LIMIT 1
+Completed 200 OK in 140ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/sessions.xml" for 127.0.0.1 at Thu Nov 03 15:31:14 +0000 2011
+  Processing by SessionsController#create as XML
+  Parameters: {"password"=>"[FILTERED]", "email"=>"ei08106@fe.up.pt"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."email" = 'ei08106@fe.up.pt') LIMIT 1[0m
+Completed 200 OK in 145ms (Views: 1.6ms | ActiveRecord: 0.2ms)

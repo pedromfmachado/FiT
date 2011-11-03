@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       respond_to do |format|
         format.html {redirect_to(root_url, :notice => "Logged in!")}
-        format.xml { render :xml => user}
+        format.xml { render :xml => session}
       end
     else
       respond_to do |format|
@@ -26,6 +26,7 @@ class SessionsController < ApplicationController
     redirect_to root_url, :notice => "Logged out!"
   end
 
+    skip_before_filter :verify_authenticity_token
 
   def edit
   end
