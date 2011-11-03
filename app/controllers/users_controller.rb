@@ -26,6 +26,30 @@ class UsersController < ApplicationController
     end
   end
 
+  # GET /planos/1
+  # GET /planos/1.xml
+  def show_planos
+    @plano = Plano.find(params[:id])
+
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @plano.to_xml(:include => :exercicios) }
+      format.json  { render :json => @plano.to_json(:include => :exercicios) }
+    end
+  end
+
+  # DELETE /exercicios/1
+  # DELETE /exercicios/1.xml
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(users_url) }
+      format.xml  { head :ok }
+    end
+  end
+
   def promote
     @user = User.find(params[:id])
 

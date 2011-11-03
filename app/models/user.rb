@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
   
   has_many :admins
   has_many :staffs
+  has_many :planos
   attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento
 
   attr_accessor :password
