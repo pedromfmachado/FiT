@@ -10,6 +10,11 @@ Fit::Application.routes.draw do
   resources :exercicios
   resources :planos
 
+  namespace :api do
+    resources :planos
+    resources :exercicios  
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

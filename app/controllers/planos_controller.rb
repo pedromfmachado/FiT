@@ -1,5 +1,4 @@
 class PlanosController < ApplicationController
-  load_and_authorize_resource
 
   # GET /planos
   # GET /planos.xml
@@ -46,7 +45,7 @@ class PlanosController < ApplicationController
   # POST /planos.xml
   def create
     @exercicios = params[:selected_exercicios].split(",")
-    @plano = Plano.new(:peso => params[:peso])
+    @plano = Plano.new(params[:plano])
     
 
     respond_to do |format|
