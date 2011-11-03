@@ -44,8 +44,8 @@ class PlanosController < ApplicationController
   # POST /planos
   # POST /planos.xml
   def create
-    @exercicios = params[:selected_exercicios].split(",")
-    @plano = Plano.new(params[:plano])
+    #@exercicios = params[:selected_exercicios].split(",")
+    @plano = Plano.new(:peso => params[:peso])
     
 
     respond_to do |format|
