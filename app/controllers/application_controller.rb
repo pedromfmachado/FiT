@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   rescue_from CanCan::AccessDenied do |exception|
     respond_to do |format|
       format.html {redirect_to( root_url, :alert => exception.message) }
-      format.xml  { render :xml => { :error => 'ok' }, :status =>  422 }
+      format.xml  { render :xml => { :error => 'fail' }, :status =>  422 }
     end
   end
   
