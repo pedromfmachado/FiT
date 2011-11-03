@@ -11,7 +11,7 @@
   </tr>
 
 <% @users.each do |user| %>
-  <% if user.id == current_user.id || (can? :manage, user) %>
+  <% if user.id == current_user.id || (can? :manage, User) %>
   <tr>
     <td><%= user.id %></td>
     <td><%= user.nome %></td>
