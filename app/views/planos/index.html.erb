@@ -12,27 +12,25 @@
   </tr>
 
 <% @planos.each do |plano| %>
-  <% if plano.user_id == current_user.id || (can? :manage, Plano) %>
+  
   <tr>
     <td><%= plano.data %></td>
     <td><%= plano.altura %></td>
     <td><%= plano.peso %></td>
-    <td><%= link_to 'Show', plano %></td>
+    <td><%= link_to 'Show', user_plano_path(params[:user_id],plano) %></td>
     <% if can? :update, Plano %>
-    <td><%= link_to 'Edit', edit_plano_path(plano) %></td>
+    <td><%= link_to 'Edit', edit_user_plano_path(params[:user_id],plano) %></td>
     <%end%>
     <% if can? :destroy, Plano %>
-    <td><%= link_to 'Destroy', plano, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Destroy', user_plano_path(params[:user_id],plano),:confirm => 'Are you sure?', :method => :delete %></td>
     <%end%>
   </tr>
   <% end %>
 <% end %>
 </table>
-<% else %>
-  Não existem planos para listar
-<% end %>
+
 
 <br />
 <% if can? :create, Plano %>
-<%= link_to 'New Plano', new_plano_path %>
+<%= link_to 'New Plano', new_user_plano_path(params[:user_id]) %>
 <% end %>

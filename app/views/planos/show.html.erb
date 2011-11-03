@@ -22,5 +22,5 @@
   <% end %>
 </p>
 
-<%= link_to 'Edit', edit_plano_path(@plano) %> |
-<%= link_to 'Back', planos_path %>
+<%= link_to 'Edit', edit_user_plano_path(params[:user_id],@plano) %> |
+<%= link_to 'Back', user_planos_path(params[:user_id]) %>

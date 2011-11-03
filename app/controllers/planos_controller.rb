@@ -4,7 +4,11 @@ class PlanosController < ApplicationController
   # GET /planos
   # GET /planos.xml
   def index
-    @planos = Plano.all
+    if(params[:user_id])
+      @planos = Plano.where(:user_id => params[:user_id])
+    else
+      @planos = Plano.all
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -30,7 +34,7 @@ class PlanosController < ApplicationController
   # GET /planos/new
   # GET /planos/new.xml
   def new
-    @plano = Plano.new
+    @plano = Plano.new(:user_id => params[:user_id])
 
     respond_to do |format|
       format.html # new.html.erb
@@ -93,7 +97,7 @@ class PlanosController < ApplicationController
     @plano.destroy
 
     respond_to do |format|
-      format.html { redirect_to(planos_url) }
+      format.html { redirect_to(user_planos_url(params[:user_id])) }
       format.xml  { head :ok }
     end
   end

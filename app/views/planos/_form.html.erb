@@ -23,7 +23,6 @@
     <%= f.label :peso %><br />
     <%= f.text_field :peso %>
   </div>
-
   <div id="exercicios">
 	<% @plano.exercicios.each do |exercicio| %>
 		<%= exercicio.nome %> - <%= exercicio.maquina %><br />
@@ -44,8 +43,10 @@
     <%= text_field(:exercicio,:repeticoes) %><br />
   </div>
   
-
+ 
   <%= hidden_field_tag "selected_exercicios", "" %>
+  <%= f.hidden_field :user_id %>
+  <%= f.hidden_field :admin_id, :value => current_user.id %>
 
   <div class="actions">
     <%= f.submit %>
