@@ -11,12 +11,12 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       respond_to do |format|
         format.html {redirect_to(root_url, :notice => "Logged in!")}
-        format.xml {header :ok}
+        format.xml { render :xml => user}
       end
     else
       respond_to do |format|
         format.html {redirect_to(root_url, :notice => 'Invalid email or password')}
-        format.xml  { render :xml => { :error => 'fail' }, :status =>  300 }
+        format.xml  { render :xml }
       end
     end
   end
@@ -28,4 +28,12 @@ class SessionsController < ApplicationController
 
     skip_before_filter :verify_authenticity_token
 
+  def edit
+  end
+  
+  def update
+  end
+
+  def index
+  end
 end

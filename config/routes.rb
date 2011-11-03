@@ -6,14 +6,9 @@ Fit::Application.routes.draw do
   match 'demote' => 'users#demote', :as => "demote"
   match 'show_planos' => 'users#show_planos', :as => "show_planos"
   resources :users
-  resources :sessions
   resources :exercicios
   resources :planos
-
-  namespace :api do
-    resources :planos
-    resources :exercicios  
-  end
+  resources :sessions
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
