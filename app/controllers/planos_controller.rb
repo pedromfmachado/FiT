@@ -1,4 +1,5 @@
 class PlanosController < ApplicationController
+  load_and_authorize_resource  
 
   # GET /planos
   # GET /planos.xml
@@ -96,4 +97,6 @@ class PlanosController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  skip_before_filter :verify_authenticity_token
 end
