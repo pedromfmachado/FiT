@@ -1,5 +1,4 @@
-class PlanosController < ApplicationController
-  load_and_authorize_resource  
+class PlanosController < ApplicationController  
 
   # GET /planos
   # GET /planos.xml
