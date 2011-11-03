@@ -10,7 +10,10 @@ class ApplicationController < ActionController::Base
   end
 
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_url, :alert => exception.message
+    respond_to do |format|
+      format.html {redirect_to( root_url, :alert => exception.message) }
+      format.xml  { render :xml => { :error => 'Not found' } }
+    end
   end
   
 end
