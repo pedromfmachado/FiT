@@ -73614,3 +73614,322 @@ ActionView::MissingTemplate (Missing template sessions/index with {:handlers=>[:
   
 
 Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/sessions.xml" for 127.0.0.1 at Thu Nov 03 11:33:43 +0000 2011
+  Processing by SessionsController#index as XML
+Completed   in 2ms
+
+ActionView::MissingTemplate (Missing template sessions/index with {:handlers=>[:builder, :rjs, :rhtml, :erb, :rxml], :locale=>[:en, :en], :formats=>[:xml]} in view paths "/home/pedro/ldso/fit/app/views"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/sessions" for 127.0.0.1 at Thu Nov 03 11:33:46 +0000 2011
+  Processing by SessionsController#index as HTML
+Completed   in 3ms
+
+ActionView::MissingTemplate (Missing template sessions/index with {:handlers=>[:builder, :rjs, :rhtml, :erb, :rxml], :locale=>[:en, :en], :formats=>[:html]} in view paths "/home/pedro/ldso/fit/app/views"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.5ms)
+
+
+Started GET "/planos.xml" for 127.0.0.1 at Thu Nov 03 11:34:00 +0000 2011
+  Processing by PlanosController#index as XML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1[0m
+  [1m[35mPlano Load (0.2ms)[0m  SELECT "planos".* FROM "planos"
+Completed 200 OK in 41ms (Views: 9.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Nov 03 11:34:09 +0000 2011
+  Processing by SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1
+Rendered sessions/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 30ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Thu Nov 03 11:34:09 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 11:34:09 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 11:34:09 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at Thu Nov 03 11:34:10 +0000 2011
+  Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at Thu Nov 03 11:34:10 +0000 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/_form.html.erb (1.1ms)
+Rendered sessions/_form.html.erb (1.0ms)
+Rendered sessions/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 18ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Thu Nov 03 11:34:10 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 11:34:10 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 11:34:10 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/planos.xml" for 127.0.0.1 at Thu Nov 03 11:34:14 +0000 2011
+  Processing by PlanosController#index as XML
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+Completed   in 76ms
+
+
+Started GET "/planos.xml" for 127.0.0.1 at Thu Nov 03 11:34:23 +0000 2011
+  Processing by PlanosController#index as XML
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+Completed   in 79ms
+
+
+Started GET "/planos.xml" for 127.0.0.1 at Thu Nov 03 11:34:23 +0000 2011
+  Processing by PlanosController#index as XML
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+Completed   in 36ms
+
+
+Started GET "/planos.xml" for 127.0.0.1 at Thu Nov 03 11:34:24 +0000 2011
+  Processing by PlanosController#index as XML
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+Completed   in 86ms
+
+
+Started GET "/planos.xml" for 127.0.0.1 at Thu Nov 03 11:34:24 +0000 2011
+  Processing by PlanosController#index as XML
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+Completed   in 35ms
+
+
+Started GET "/planos.xml" for 127.0.0.1 at Thu Nov 03 11:34:24 +0000 2011
+  Processing by PlanosController#index as XML
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+Completed   in 82ms
+
+
+Started GET "/planos.xml" for 127.0.0.1 at Thu Nov 03 11:34:36 +0000 2011
+  Processing by PlanosController#index as XML
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+Completed   in 42ms
+
+
+Started GET "/planos.xml" for 127.0.0.1 at Thu Nov 03 11:34:36 +0000 2011
+  Processing by PlanosController#index as XML
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+Completed   in 34ms
+
+
+Started GET "/planos.xml" for 127.0.0.1 at Thu Nov 03 11:34:37 +0000 2011
+  Processing by PlanosController#index as XML
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+Completed   in 41ms
+
+
+Started GET "/planos.xml" for 127.0.0.1 at Thu Nov 03 11:34:37 +0000 2011
+  Processing by PlanosController#index as XML
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mStaff Load (0.2ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+Completed   in 43ms
+
+
+Started GET "/planos.xml" for 127.0.0.1 at Thu Nov 03 11:34:38 +0000 2011
+  Processing by PlanosController#index as XML
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+Completed   in 85ms
+
+
+Started GET "/planos.xml" for 127.0.0.1 at Thu Nov 03 11:34:39 +0000 2011
+  Processing by PlanosController#index as XML
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+Completed   in 36ms
+
+
+Started GET "/planos.xml" for 127.0.0.1 at Thu Nov 03 11:34:41 +0000 2011
+  Processing by PlanosController#index as XML
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+Completed   in 81ms
+
+
+Started GET "/planos" for 127.0.0.1 at Thu Nov 03 11:34:49 +0000 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mStaff Load (0.2ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+Completed   in 39ms
+Rendered sessions/_form.html.erb (1.1ms)
+Rendered planos/index.html.erb within layouts/application (6.0ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Thu Nov 03 11:34:49 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 11:34:49 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Thu Nov 03 11:34:50 +0000 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+Completed   in 36ms
+Rendered sessions/_form.html.erb (1.1ms)
+Rendered planos/index.html.erb within layouts/application (6.5ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Thu Nov 03 11:34:51 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 11:34:51 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 11:34:51 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (43.0ms)
+
+
+Started GET "/planos" for 127.0.0.1 at Thu Nov 03 11:34:59 +0000 2011
+  Processing by PlanosController#index as HTML
+  [1m[36mAdmin Load (0.1ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" IS NULL) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" IS NULL) LIMIT 1
+Completed   in 37ms
+Redirected to http://127.0.0.1:3000/
+
+
+Started GET "/" for 127.0.0.1 at Thu Nov 03 11:34:59 +0000 2011
+  Processing by SessionsController#new as HTML
+Rendered sessions/_form.html.erb (1.1ms)
+Rendered sessions/_form.html.erb (1.2ms)
+Rendered sessions/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 19ms (Views: 10.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Thu Nov 03 11:34:59 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 11:34:59 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 11:34:59 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
