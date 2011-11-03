@@ -26,17 +26,6 @@ class UsersController < ApplicationController
     end
   end
 
-  # GET /planos/1
-  # GET /planos/1.xml
-  def show_planos
-    @plano = Plano.where(:user_id => params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @plano.to_xml(:include => :exercicios) }
-      format.json  { render :json => @plano.to_json(:include => :exercicios) }
-    end
-  end
 
   # DELETE /exercicios/1
   # DELETE /exercicios/1.xml

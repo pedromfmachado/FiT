@@ -4,7 +4,6 @@ Fit::Application.routes.draw do
   get "perfil/:id" => "users#show", :as => "perfil"
   match 'promote' => 'users#promote', :as => "promote"
   match 'demote' => 'users#demote', :as => "demote"
-  match 'show_planos' => 'users#show_planos', :as => "show_planos"
   resources :users
   resources :exercicios
   resources :planos
