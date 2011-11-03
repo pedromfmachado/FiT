@@ -48,14 +48,14 @@ class PlanosController < ApplicationController
     @plano = Plano.new(:peso => params[:peso])
     
 
-    respond_to do |format|
-      if @plano.save
-        format.html { redirect_to(@plano, :notice => 'Plano was successfully created.') }
-        format.xml  { header :ok}
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @plano.errors, :status => :unprocessable_entity }
-      end
+    #respond_to do |format|
+     # if @plano.save
+      #  format.html { redirect_to(@plano, :notice => 'Plano was successfully created.') }
+       # format.xml  { header :ok }
+      #else
+       # format.html { render :action => "new" }
+       # format.xml  { render :xml => @plano.errors, :status => :unprocessable_entity }
+      #end
     end
     
     @exercicios.each do |ex_id|
