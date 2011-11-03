@@ -27,10 +27,10 @@
 
 <% if current_user.admin? && current_user.id != @user.id %>
 <%= link_to "Promover", :controller => "users", :action => "promote", :id => @user %> |
-<%= link_to "Despromover", :controller => "users", :action => "demote", :id => @user %> |
+<%= link_to "Despromover", :controller => "users", :action => "demote", :id => @user %>
 <% end %>
 
 
 <% if @user.normal? %>
-<%= link_to "Planos", :controller => "users", :action => "show_planos", :id => @user %>
+| <%= link_to "Planos", :controller => "users", :action => "show_planos", :id => @user %>
 <%end%>

@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   # GET /planos/1
   # GET /planos/1.xml
   def show_planos
-    @plano = Plano.find(params[:id])
+    @plano = Plano.where(:user_id => params[:id])
 
     respond_to do |format|
       format.html # show.html.erb

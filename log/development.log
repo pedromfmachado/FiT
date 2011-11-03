@@ -76565,3 +76565,376 @@ ActionController::RoutingError (No route matches "/javascripts/efects.js"):
   
 
 Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Nov 03 17:46:22 +0000 2011
+  Processing by SessionsController#new as HTML
+  [1m[36mSQL (0.4ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1[0m
+Rendered sessions/new.html.erb within layouts/application (116.8ms)
+Completed 200 OK in 236ms (Views: 143.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Thu Nov 03 17:46:22 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.3ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 17:46:22 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Nov 03 17:46:28 +0000 2011
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1[0m
+Rendered sessions/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 30ms (Views: 20.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Thu Nov 03 17:46:28 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 17:46:28 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 17:46:28 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/exercicios" for 127.0.0.1 at Thu Nov 03 17:46:39 +0000 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1[0m
+  [1m[35mExercicio Load (0.2ms)[0m  SELECT "exercicios".* FROM "exercicios"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1[0m
+Rendered exercicios/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 134ms (Views: 21.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Thu Nov 03 17:46:39 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 17:46:40 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Nov 03 17:46:42 +0000 2011
+  Processing by SessionsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1[0m
+Rendered sessions/new.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 71ms (Views: 22.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Thu Nov 03 17:46:42 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 17:46:42 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/perfil/1" for 127.0.0.1 at Thu Nov 03 17:48:34 +0000 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1
+Rendered users/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 73ms (Views: 48.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Thu Nov 03 17:48:34 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 17:48:34 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 17:48:34 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/perfil/2" for 127.0.0.1 at Thu Nov 03 17:48:39 +0000 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1[0m
+  [1m[35mAdmin Load (0.1ms)[0m  SELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 2) LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE ("staffs"."user_id" = 2) LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1
+Rendered users/show.html.erb within layouts/application (55.4ms)
+Completed 200 OK in 84ms (Views: 58.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Thu Nov 03 17:48:39 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 17:48:40 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 17:48:40 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/show_planos?id=2" for 127.0.0.1 at Thu Nov 03 17:48:42 +0000 2011
+  Processing by UsersController#show_planos as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1[0m
+  [1m[35mPlano Load (0.2ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos"."id" = 2) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "planos" WHERE ("planos".user_id = 2)) AS subquery[0m
+  [1m[35mPlano Load (0.2ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos".user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1[0m
+Rendered users/show_planos.html.erb within layouts/application (55.9ms)
+Completed 200 OK in 92ms (Views: 58.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Thu Nov 03 17:48:42 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 17:48:42 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/show_planos" for 127.0.0.1 at Thu Nov 03 17:48:58 +0000 2011
+  Processing by UsersController#show_planos as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1[0m
+Completed   in 30ms
+
+ActiveRecord::RecordNotFound (Couldn't find Plano without an ID):
+  app/controllers/users_controller.rb:32:in `show_planos'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users"
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (47.6ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (55.5ms)
+
+
+Started GET "/show_planos?id=2" for 127.0.0.1 at Thu Nov 03 17:49:02 +0000 2011
+  Processing by UsersController#show_planos as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1[0m
+  [1m[35mPlano Load (0.2ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos"."id" = 2) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "planos" WHERE ("planos".user_id = 2)) AS subquery[0m
+  [1m[35mPlano Load (0.1ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos".user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1[0m
+Rendered users/show_planos.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 50ms (Views: 16.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Thu Nov 03 17:49:02 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 17:49:02 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/show_planos?id=2" for 127.0.0.1 at Thu Nov 03 17:50:30 +0000 2011
+  Processing by UsersController#show_planos as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mAdmin Load (0.1ms)[0m  SELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "planos" WHERE ("planos".user_id = 2)) AS subquery[0m
+  [1m[35mPlano Load (0.1ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos".user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1[0m
+Rendered users/show_planos.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 50ms (Views: 17.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Thu Nov 03 17:50:30 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 17:50:30 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 17:50:30 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/show_planos?id=2" for 127.0.0.1 at Thu Nov 03 17:50:31 +0000 2011
+  Processing by UsersController#show_planos as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "planos" WHERE ("planos".user_id = 2)) AS subquery[0m
+  [1m[35mPlano Load (0.1ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos".user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1[0m
+Rendered users/show_planos.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 49ms (Views: 16.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Thu Nov 03 17:50:31 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 17:50:31 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 17:50:31 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/show_planos?id=2" for 127.0.0.1 at Thu Nov 03 17:50:37 +0000 2011
+  Processing by UsersController#show_planos as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 2) LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mAdmin Load (0.1ms)[0m  SELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) AS count_id FROM (SELECT 1 FROM "planos" WHERE ("planos".user_id = 2)) AS subquery[0m
+  [1m[35mPlano Load (0.1ms)[0m  SELECT "planos".* FROM "planos" WHERE ("planos".user_id = 2)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE ("admins"."user_id" = 1) LIMIT 1[0m
+Rendered users/show_planos.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 50ms (Views: 16.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/javascripts/aplication.js" for 127.0.0.1 at Thu Nov 03 17:50:37 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/aplication.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 17:50:37 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/javascripts/efects.js" for 127.0.0.1 at Thu Nov 03 17:50:37 +0000 2011
+
+ActionController::RoutingError (No route matches "/javascripts/efects.js"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
