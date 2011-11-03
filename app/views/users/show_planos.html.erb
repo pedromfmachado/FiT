@@ -1,0 +1,35 @@
+<%if @user.planos.count > 0 %>
+
+<h1>Listing planos</h1>
+
+
+<table>
+  <tr>
+    <th>Data</th>
+    <th>Altura</th>
+    <th>Peso</th>
+
+  </tr>
+
+<% @user.planos.each do |plano| %>
+  <% if plano.user_id == @user.id || (can? :read, Plano) %>
+  <tr>
+    <td><%= plano.data %></td>
+    <td><%= plano.altura %></td>
+    <td><%= plano.peso %></td>
+    <td><%= link_to 'Show', plano %></td>
+    <% if can? :destroy, Plano %>
+    <td><%= link_to 'Destroy', plano, :confirm => 'Are you sure?', :method => :delete %></td>
+    <%end%>
+  </tr>
+  <% end %>
+<% end %>
+</table>
+<% else %>
+  Não existem planos para listar
+<% end %>
+
+<br />
+<% if can? :create, Plano %>
+<%= link_to 'New plano', new_plano_path %>
+<% end %>

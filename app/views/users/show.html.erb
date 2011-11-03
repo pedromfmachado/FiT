@@ -30,4 +30,4 @@
 <%= link_to "Despromover", :controller => "users", :action => "demote", :id => @user %> |
 <% end %>
 
-<%= link_to "Planos", planos_path %>
+<%= link_to "Planos", :controller => "users", :action => "show_planos", :id => @user %>

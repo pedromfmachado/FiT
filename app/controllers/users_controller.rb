@@ -25,7 +25,17 @@ class UsersController < ApplicationController
       format.json  { render :json => @user }
     end
   end
+  
 
+  def show_planos
+    @user = User.find(params[:id])
+
+    respond_to do |format|
+      format.html # show_planos.html.erb
+      format.xml  { render :xml => @user.planos.to_xml(:include => :exercicios) }
+      format.json  { render :json => @user.planos.to_json(:include => :exercicios) }
+    end
+  end
 
   # DELETE /exercicios/1
   # DELETE /exercicios/1.xml
