@@ -44,23 +44,23 @@ class PlanosController < ApplicationController
   # POST /planos
   # POST /planos.xml
   def create
-    #@exercicios = params[:selected_exercicios].split(",")
-    @plano = Plano.new(:admin_id => 1, :user_id => 1, :altura => params[:altura], :data => params[:data], :peso => params[:peso])
+    @exercicios = params[:selected_exercicios].split(",")
+    @plano = Plano.new(params[:plano])
     
 
     respond_to do |format|
       if @plano.save
         format.html { redirect_to(@plano, :notice => 'Plano was successfully created.') }
-        format.xml  { render :xml => @plano, :status => :ok}
+        format.xml  { render :xml => @plano, :status => :created, :location => @plano }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @plano.errors, :status => :unprocessable_entity }
       end
     end
     
-    #@exercicios.each do |ex_id|
-	#ExerciciosPlanos.create(:plano_id => @plano.id, :exercicio_id => ex_id);
-   # end
+    @exercicios.each do |ex_id|
+	ExerciciosPlanos.create(:plano_id => @plano.id, :exercicio_id => ex_id);
+    end
 
   end
 
@@ -96,6 +96,4 @@ class PlanosController < ApplicationController
       format.xml  { head :ok }
     end
   end
-
-  skip_before_filter :verify_authenticity_token
 end
