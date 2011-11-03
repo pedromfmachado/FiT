@@ -1,0 +1,281 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Action Controller: Exception caught</title>
+  <style>
+    body { background-color: #fff; color: #333; }
+
+    body, p, ol, ul, td {
+      font-family: verdana, arial, helvetica, sans-serif;
+      font-size:   13px;
+      line-height: 18px;
+    }
+
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      font-size: 11px;
+    }
+
+    a { color: #000; }
+    a:visited { color: #666; }
+    a:hover { color: #fff; background-color:#000; }
+  </style>
+</head>
+<body>
+
+<h1>
+  NameError
+    in SessionsController#create
+</h1>
+<pre>undefined local variable or method `authenticity_token' for #&lt;SessionsController:0xb6d38270&gt;</pre>
+
+
+<p><code>Rails.root: /home/pedro/ldso/fit</code></p>
+
+<div id="traces">
+    <a href="#" onclick="document.getElementById('Framework-Trace').style.display='none';document.getElementById('Full-Trace').style.display='none';document.getElementById('Application-Trace').style.display='block';; return false;">Application Trace</a> |
+    <a href="#" onclick="document.getElementById('Application-Trace').style.display='none';document.getElementById('Full-Trace').style.display='none';document.getElementById('Framework-Trace').style.display='block';; return false;">Framework Trace</a> |
+    <a href="#" onclick="document.getElementById('Application-Trace').style.display='none';document.getElementById('Framework-Trace').style.display='none';document.getElementById('Full-Trace').style.display='block';; return false;">Full Trace</a> 
+
+    <div id="Application-Trace" style="display: block;">
+      <pre><code>app/controllers/sessions_controller.rb:14:in `create'
+app/controllers/sessions_controller.rb:12:in `create'</code></pre>
+    </div>
+    <div id="Framework-Trace" style="display: none;">
+      <pre><code>actionpack (3.0.0) lib/action_controller/metal/mime_responds.rb:192:in `call'
+actionpack (3.0.0) lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+actionpack (3.0.0) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+actionpack (3.0.0) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+actionpack (3.0.0) lib/abstract_controller/base.rb:150:in `process_action'
+actionpack (3.0.0) lib/action_controller/metal/rendering.rb:11:in `process_action'
+actionpack (3.0.0) lib/abstract_controller/callbacks.rb:18:in `process_action'
+activesupport (3.0.0) lib/active_support/callbacks.rb:430:in `_run__117499033__process_action__524098549__callbacks'
+activesupport (3.0.0) lib/active_support/callbacks.rb:409:in `send'
+activesupport (3.0.0) lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+activesupport (3.0.0) lib/active_support/callbacks.rb:93:in `send'
+activesupport (3.0.0) lib/active_support/callbacks.rb:93:in `run_callbacks'
+actionpack (3.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+actionpack (3.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+activesupport (3.0.0) lib/active_support/notifications.rb:52:in `instrument'
+activesupport (3.0.0) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (3.0.0) lib/active_support/notifications.rb:52:in `instrument'
+actionpack (3.0.0) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+actionpack (3.0.0) lib/action_controller/metal/rescue.rb:17:in `process_action'
+actionpack (3.0.0) lib/abstract_controller/base.rb:119:in `process'
+actionpack (3.0.0) lib/abstract_controller/rendering.rb:40:in `process'
+actionpack (3.0.0) lib/action_controller/metal.rb:133:in `dispatch'
+actionpack (3.0.0) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+actionpack (3.0.0) lib/action_controller/metal.rb:173:in `action'
+actionpack (3.0.0) lib/action_dispatch/routing/route_set.rb:62:in `call'
+actionpack (3.0.0) lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+actionpack (3.0.0) lib/action_dispatch/routing/route_set.rb:27:in `call'
+rack-mount (0.6.14) lib/rack/mount/route_set.rb:148:in `call'
+rack-mount (0.6.14) lib/rack/mount/code_generation.rb:93:in `recognize'
+rack-mount (0.6.14) lib/rack/mount/code_generation.rb:75:in `optimized_each'
+rack-mount (0.6.14) lib/rack/mount/code_generation.rb:92:in `recognize'
+rack-mount (0.6.14) lib/rack/mount/route_set.rb:139:in `call'
+actionpack (3.0.0) lib/action_dispatch/routing/route_set.rb:492:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/head.rb:14:in `call'
+rack (1.2.4) lib/rack/methodoverride.rb:24:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/flash.rb:182:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/cookies.rb:287:in `call'
+activerecord (3.0.0) lib/active_record/query_cache.rb:32:in `call'
+activerecord (3.0.0) lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+activerecord (3.0.0) lib/active_record/query_cache.rb:12:in `cache'
+activerecord (3.0.0) lib/active_record/query_cache.rb:31:in `call'
+activerecord (3.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+activesupport (3.0.0) lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+actionpack (3.0.0) lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+rack (1.2.4) lib/rack/sendfile.rb:106:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+railties (3.0.0) lib/rails/rack/logger.rb:13:in `call'
+rack (1.2.4) lib/rack/runtime.rb:17:in `call'
+activesupport (3.0.0) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+rack (1.2.4) lib/rack/lock.rb:11:in `call'
+rack (1.2.4) lib/rack/lock.rb:11:in `synchronize'
+rack (1.2.4) lib/rack/lock.rb:11:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/static.rb:30:in `call'
+railties (3.0.0) lib/rails/application.rb:168:in `call'
+railties (3.0.0) lib/rails/application.rb:77:in `send'
+railties (3.0.0) lib/rails/application.rb:77:in `method_missing'
+railties (3.0.0) lib/rails/rack/log_tailer.rb:14:in `call'
+rack (1.2.4) lib/rack/content_length.rb:13:in `call'
+rack (1.2.4) lib/rack/handler/webrick.rb:52:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+rack (1.2.4) lib/rack/handler/webrick.rb:13:in `run'
+rack (1.2.4) lib/rack/server.rb:217:in `start'
+railties (3.0.0) lib/rails/commands/server.rb:65:in `start'
+railties (3.0.0) lib/rails/commands.rb:30
+railties (3.0.0) lib/rails/commands.rb:27:in `tap'
+railties (3.0.0) lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6</code></pre>
+    </div>
+    <div id="Full-Trace" style="display: none;">
+      <pre><code>app/controllers/sessions_controller.rb:14:in `create'
+actionpack (3.0.0) lib/action_controller/metal/mime_responds.rb:192:in `call'
+actionpack (3.0.0) lib/action_controller/metal/mime_responds.rb:192:in `respond_to'
+app/controllers/sessions_controller.rb:12:in `create'
+actionpack (3.0.0) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+actionpack (3.0.0) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+actionpack (3.0.0) lib/abstract_controller/base.rb:150:in `process_action'
+actionpack (3.0.0) lib/action_controller/metal/rendering.rb:11:in `process_action'
+actionpack (3.0.0) lib/abstract_controller/callbacks.rb:18:in `process_action'
+activesupport (3.0.0) lib/active_support/callbacks.rb:430:in `_run__117499033__process_action__524098549__callbacks'
+activesupport (3.0.0) lib/active_support/callbacks.rb:409:in `send'
+activesupport (3.0.0) lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+activesupport (3.0.0) lib/active_support/callbacks.rb:93:in `send'
+activesupport (3.0.0) lib/active_support/callbacks.rb:93:in `run_callbacks'
+actionpack (3.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+actionpack (3.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+activesupport (3.0.0) lib/active_support/notifications.rb:52:in `instrument'
+activesupport (3.0.0) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (3.0.0) lib/active_support/notifications.rb:52:in `instrument'
+actionpack (3.0.0) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+actionpack (3.0.0) lib/action_controller/metal/rescue.rb:17:in `process_action'
+actionpack (3.0.0) lib/abstract_controller/base.rb:119:in `process'
+actionpack (3.0.0) lib/abstract_controller/rendering.rb:40:in `process'
+actionpack (3.0.0) lib/action_controller/metal.rb:133:in `dispatch'
+actionpack (3.0.0) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+actionpack (3.0.0) lib/action_controller/metal.rb:173:in `action'
+actionpack (3.0.0) lib/action_dispatch/routing/route_set.rb:62:in `call'
+actionpack (3.0.0) lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+actionpack (3.0.0) lib/action_dispatch/routing/route_set.rb:27:in `call'
+rack-mount (0.6.14) lib/rack/mount/route_set.rb:148:in `call'
+rack-mount (0.6.14) lib/rack/mount/code_generation.rb:93:in `recognize'
+rack-mount (0.6.14) lib/rack/mount/code_generation.rb:75:in `optimized_each'
+rack-mount (0.6.14) lib/rack/mount/code_generation.rb:92:in `recognize'
+rack-mount (0.6.14) lib/rack/mount/route_set.rb:139:in `call'
+actionpack (3.0.0) lib/action_dispatch/routing/route_set.rb:492:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/head.rb:14:in `call'
+rack (1.2.4) lib/rack/methodoverride.rb:24:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/flash.rb:182:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/cookies.rb:287:in `call'
+activerecord (3.0.0) lib/active_record/query_cache.rb:32:in `call'
+activerecord (3.0.0) lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+activerecord (3.0.0) lib/active_record/query_cache.rb:12:in `cache'
+activerecord (3.0.0) lib/active_record/query_cache.rb:31:in `call'
+activerecord (3.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:355:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+activesupport (3.0.0) lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+actionpack (3.0.0) lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+rack (1.2.4) lib/rack/sendfile.rb:106:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/show_exceptions.rb:46:in `call'
+railties (3.0.0) lib/rails/rack/logger.rb:13:in `call'
+rack (1.2.4) lib/rack/runtime.rb:17:in `call'
+activesupport (3.0.0) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+rack (1.2.4) lib/rack/lock.rb:11:in `call'
+rack (1.2.4) lib/rack/lock.rb:11:in `synchronize'
+rack (1.2.4) lib/rack/lock.rb:11:in `call'
+actionpack (3.0.0) lib/action_dispatch/middleware/static.rb:30:in `call'
+railties (3.0.0) lib/rails/application.rb:168:in `call'
+railties (3.0.0) lib/rails/application.rb:77:in `send'
+railties (3.0.0) lib/rails/application.rb:77:in `method_missing'
+railties (3.0.0) lib/rails/rack/log_tailer.rb:14:in `call'
+rack (1.2.4) lib/rack/content_length.rb:13:in `call'
+rack (1.2.4) lib/rack/handler/webrick.rb:52:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+rack (1.2.4) lib/rack/handler/webrick.rb:13:in `run'
+rack (1.2.4) lib/rack/server.rb:217:in `start'
+railties (3.0.0) lib/rails/commands/server.rb:65:in `start'
+railties (3.0.0) lib/rails/commands.rb:30
+railties (3.0.0) lib/rails/commands.rb:27:in `tap'
+railties (3.0.0) lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6</code></pre>
+    </div>
+</div>
+
+
+
+<h2 style="margin-top: 30px">Request</h2>
+<p><b>Parameters</b>: <pre>{&quot;format&quot;=&gt;&quot;xml&quot;,
+ &quot;password&quot;=&gt;&quot;[FILTERED]&quot;,
+ &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}</pre></p>
+
+<p><a href="#" onclick="document.getElementById('session_dump').style.display='block'; return false;">Show session dump</a></p>
+<div id="session_dump" style="display:none"><pre>session_id: &quot;4b7eed76d16dbe4056cbfb37bf8d301d&quot;
+user_id: 2</pre></div>
+
+<p><a href="#" onclick="document.getElementById('env_dump').style.display='block'; return false;">Show env dump</a></p>
+<div id="env_dump" style="display:none"><pre>CONTENT_LENGTH: &quot;35&quot;
+CONTENT_TYPE: &quot;application/x-www-form-urlencoded&quot;
+GATEWAY_INTERFACE: &quot;CGI/1.1&quot;
+HTTP_ACCEPT: &quot;*/*&quot;
+HTTP_HOST: &quot;127.0.0.1:3000&quot;
+HTTP_USER_AGENT: &quot;curl/7.21.0 (i686-pc-linux-gnu) libcurl/7.21.0 OpenSSL/0.9.8o zlib/1.2.3.4 libidn/1.18&quot;
+HTTP_VERSION: &quot;HTTP/1.1&quot;
+PATH_INFO: &quot;/sessions.xml&quot;
+QUERY_STRING: &quot;&quot;
+REMOTE_ADDR: &quot;127.0.0.1&quot;
+REMOTE_HOST: &quot;localhost.localdomain&quot;
+REQUEST_METHOD: &quot;POST&quot;
+REQUEST_PATH: &quot;/&quot;
+REQUEST_URI: &quot;http://127.0.0.1:3000/sessions.xml&quot;
+SCRIPT_NAME: &quot;&quot;
+SERVER_NAME: &quot;127.0.0.1&quot;
+SERVER_PORT: &quot;3000&quot;
+SERVER_PROTOCOL: &quot;HTTP/1.1&quot;
+SERVER_SOFTWARE: &quot;WEBrick/1.3.1 (Ruby/1.8.7/2010-06-23)&quot;
+action_controller.instance: #&lt;SessionsController:0xb6d38270 @_headers={&quot;Content-Type&quot;=&gt;&quot;text/html&quot;}, @lookup_context=#&lt;ActionView::LookupContext:0xb6d37ff0 @view_paths=[#&lt;ActionView::FileSystemResolver:0xb71ccac0 @path=&quot;/home/pedro/ldso/fit/app/views&quot;, @caching=false, @cached={}&gt;], @details_key=nil, @skip_default_locale=false, @details={:handlers=&gt;[:builder, :rjs, :rhtml, :erb, :rxml], :locale=&gt;[:en, :en], :formats=&gt;[:xml]}, @frozen_formats=true&gt;, @_request=#&lt;ActionDispatch::Request:0xb6d3820c @method=&quot;POST&quot;, @filtered_parameters={&quot;format&quot;=&gt;&quot;xml&quot;, &quot;action&quot;=&gt;&quot;create&quot;, &quot;controller&quot;=&gt;&quot;sessions&quot;, &quot;password&quot;=&gt;&quot;[FILTERED]&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}, @fullpath=&quot;/sessions.xml&quot;, @env={&quot;action_dispatch.request.formats&quot;=&gt;[#&lt;Mime::Type:0xb7458f78 @synonyms=[&quot;text/xml&quot;, &quot;application/x-xml&quot;], @symbol=:xml, @string=&quot;application/xml&quot;&gt;], &quot;action_dispatch.request.parameters&quot;=&gt;{&quot;format&quot;=&gt;&quot;xml&quot;, &quot;action&quot;=&gt;&quot;create&quot;, &quot;controller&quot;=&gt;&quot;sessions&quot;, &quot;password&quot;=&gt;&quot;123&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}, &quot;rack.session&quot;=&gt;{&quot;session_id&quot;=&gt;&quot;4b7eed76d16dbe4056cbfb37bf8d301d&quot;, &quot;user_id&quot;=&gt;2}, &quot;HTTP_HOST&quot;=&gt;&quot;127.0.0.1:3000&quot;, &quot;HTTP_ACCEPT&quot;=&gt;&quot;*/*&quot;, &quot;SERVER_NAME&quot;=&gt;&quot;127.0.0.1&quot;, &quot;action_dispatch.remote_ip&quot;=&gt;#&lt;ActionDispatch::RemoteIp::RemoteIpGetter:0xb6d6f950 @check_ip_spoofing=true, @env={...}, @trusted_proxies=/(^127\.0\.0\.1$|^(10|172\.(1[6-9]|2[0-9]|30|31)|192\.168)\.)/i&gt;, &quot;REQUEST_PATH&quot;=&gt;&quot;/&quot;, &quot;rack.url_scheme&quot;=&gt;&quot;http&quot;, &quot;HTTP_USER_AGENT&quot;=&gt;&quot;curl/7.21.0 (i686-pc-linux-gnu) libcurl/7.21.0 OpenSSL/0.9.8o zlib/1.2.3.4 libidn/1.18&quot;, &quot;REMOTE_HOST&quot;=&gt;&quot;localhost.localdomain&quot;, &quot;CONTENT_LENGTH&quot;=&gt;&quot;35&quot;, &quot;action_dispatch.request.query_parameters&quot;=&gt;{}, &quot;action_dispatch.request.unsigned_session_cookie&quot;=&gt;{&quot;session_id&quot;=&gt;&quot;4b7eed76d16dbe4056cbfb37bf8d301d&quot;}, &quot;rack.errors&quot;=&gt;#&lt;IO:0xb781d550&gt;, &quot;SERVER_PROTOCOL&quot;=&gt;&quot;HTTP/1.1&quot;, &quot;CONTENT_TYPE&quot;=&gt;&quot;application/x-www-form-urlencoded&quot;, &quot;action_dispatch.secret_token&quot;=&gt;&quot;4adba89e021653633f045e73628a7459eeea54e4706006515bda4bd52321b2981f934ab92887e6cdac59abf06fc9a603c0d78031a9a1bc3eaa77bc4379c910c7&quot;, &quot;rack.version&quot;=&gt;[1, 1], &quot;rack.run_once&quot;=&gt;false, &quot;SERVER_SOFTWARE&quot;=&gt;&quot;WEBrick/1.3.1 (Ruby/1.8.7/2010-06-23)&quot;, &quot;REMOTE_ADDR&quot;=&gt;&quot;127.0.0.1&quot;, &quot;PATH_INFO&quot;=&gt;&quot;/sessions.xml&quot;, &quot;action_dispatch.request.path_parameters&quot;=&gt;{:action=&gt;&quot;create&quot;, :format=&gt;&quot;xml&quot;, :controller=&gt;&quot;sessions&quot;}, &quot;SCRIPT_NAME&quot;=&gt;&quot;&quot;, &quot;action_dispatch.parameter_filter&quot;=&gt;[:password], &quot;HTTP_VERSION&quot;=&gt;&quot;HTTP/1.1&quot;, &quot;rack.multithread&quot;=&gt;false, &quot;action_dispatch.request.request_parameters&quot;=&gt;{&quot;password&quot;=&gt;&quot;123&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}, &quot;rack.request.form_vars&quot;=&gt;&quot;email=ei08106@fe.up.pt&amp;password=123&quot;, &quot;action_dispatch.cookies&quot;=&gt;{}, &quot;rack.multiprocess&quot;=&gt;false, &quot;REQUEST_URI&quot;=&gt;&quot;http://127.0.0.1:3000/sessions.xml&quot;, &quot;rack.request.query_hash&quot;=&gt;{}, &quot;rack.request.form_input&quot;=&gt;#&lt;StringIO:0xb6d6fe3c&gt;, &quot;SERVER_PORT&quot;=&gt;&quot;3000&quot;, &quot;action_controller.instance&quot;=&gt;#&lt;SessionsController:0xb6d38270 ...&gt;, &quot;rack.session.options&quot;=&gt;{:secure=&gt;false, :expire_after=&gt;nil, :domain=&gt;nil, :httponly=&gt;true, :id=&gt;&quot;4b7eed76d16dbe4056cbfb37bf8d301d&quot;, :path=&gt;&quot;/&quot;}, &quot;REQUEST_METHOD&quot;=&gt;&quot;POST&quot;, &quot;rack.request.query_string&quot;=&gt;&quot;&quot;, &quot;rack.request.form_hash&quot;=&gt;{&quot;password&quot;=&gt;&quot;123&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}, &quot;action_dispatch.request.content_type&quot;=&gt;#&lt;Mime::Type:0xb74588d4 @synonyms=[], @symbol=:url_encoded_form, @string=&quot;application/x-www-form-urlencoded&quot;&gt;, &quot;rack.input&quot;=&gt;#&lt;StringIO:0xb6d6fe3c&gt;, &quot;QUERY_STRING&quot;=&gt;&quot;&quot;, &quot;GATEWAY_INTERFACE&quot;=&gt;&quot;CGI/1.1&quot;}&gt;, @action_has_layout=true, @_action_name=&quot;create&quot;, @_env={&quot;action_dispatch.request.formats&quot;=&gt;[#&lt;Mime::Type:0xb7458f78 @synonyms=[&quot;text/xml&quot;, &quot;application/x-xml&quot;], @symbol=:xml, @string=&quot;application/xml&quot;&gt;], &quot;action_dispatch.request.parameters&quot;=&gt;{&quot;format&quot;=&gt;&quot;xml&quot;, &quot;action&quot;=&gt;&quot;create&quot;, &quot;controller&quot;=&gt;&quot;sessions&quot;, &quot;password&quot;=&gt;&quot;123&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}, &quot;rack.session&quot;=&gt;{&quot;session_id&quot;=&gt;&quot;4b7eed76d16dbe4056cbfb37bf8d301d&quot;, &quot;user_id&quot;=&gt;2}, &quot;HTTP_HOST&quot;=&gt;&quot;127.0.0.1:3000&quot;, &quot;HTTP_ACCEPT&quot;=&gt;&quot;*/*&quot;, &quot;SERVER_NAME&quot;=&gt;&quot;127.0.0.1&quot;, &quot;action_dispatch.remote_ip&quot;=&gt;#&lt;ActionDispatch::RemoteIp::RemoteIpGetter:0xb6d6f950 @check_ip_spoofing=true, @env={...}, @trusted_proxies=/(^127\.0\.0\.1$|^(10|172\.(1[6-9]|2[0-9]|30|31)|192\.168)\.)/i&gt;, &quot;REQUEST_PATH&quot;=&gt;&quot;/&quot;, &quot;rack.url_scheme&quot;=&gt;&quot;http&quot;, &quot;HTTP_USER_AGENT&quot;=&gt;&quot;curl/7.21.0 (i686-pc-linux-gnu) libcurl/7.21.0 OpenSSL/0.9.8o zlib/1.2.3.4 libidn/1.18&quot;, &quot;REMOTE_HOST&quot;=&gt;&quot;localhost.localdomain&quot;, &quot;CONTENT_LENGTH&quot;=&gt;&quot;35&quot;, &quot;action_dispatch.request.query_parameters&quot;=&gt;{}, &quot;action_dispatch.request.unsigned_session_cookie&quot;=&gt;{&quot;session_id&quot;=&gt;&quot;4b7eed76d16dbe4056cbfb37bf8d301d&quot;}, &quot;rack.errors&quot;=&gt;#&lt;IO:0xb781d550&gt;, &quot;SERVER_PROTOCOL&quot;=&gt;&quot;HTTP/1.1&quot;, &quot;CONTENT_TYPE&quot;=&gt;&quot;application/x-www-form-urlencoded&quot;, &quot;action_dispatch.secret_token&quot;=&gt;&quot;4adba89e021653633f045e73628a7459eeea54e4706006515bda4bd52321b2981f934ab92887e6cdac59abf06fc9a603c0d78031a9a1bc3eaa77bc4379c910c7&quot;, &quot;rack.version&quot;=&gt;[1, 1], &quot;rack.run_once&quot;=&gt;false, &quot;SERVER_SOFTWARE&quot;=&gt;&quot;WEBrick/1.3.1 (Ruby/1.8.7/2010-06-23)&quot;, &quot;REMOTE_ADDR&quot;=&gt;&quot;127.0.0.1&quot;, &quot;PATH_INFO&quot;=&gt;&quot;/sessions.xml&quot;, &quot;action_dispatch.request.path_parameters&quot;=&gt;{:action=&gt;&quot;create&quot;, :format=&gt;&quot;xml&quot;, :controller=&gt;&quot;sessions&quot;}, &quot;SCRIPT_NAME&quot;=&gt;&quot;&quot;, &quot;action_dispatch.parameter_filter&quot;=&gt;[:password], &quot;HTTP_VERSION&quot;=&gt;&quot;HTTP/1.1&quot;, &quot;rack.multithread&quot;=&gt;false, &quot;action_dispatch.request.request_parameters&quot;=&gt;{&quot;password&quot;=&gt;&quot;123&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}, &quot;rack.request.form_vars&quot;=&gt;&quot;email=ei08106@fe.up.pt&amp;password=123&quot;, &quot;action_dispatch.cookies&quot;=&gt;{}, &quot;rack.multiprocess&quot;=&gt;false, &quot;REQUEST_URI&quot;=&gt;&quot;http://127.0.0.1:3000/sessions.xml&quot;, &quot;rack.request.query_hash&quot;=&gt;{}, &quot;rack.request.form_input&quot;=&gt;#&lt;StringIO:0xb6d6fe3c&gt;, &quot;SERVER_PORT&quot;=&gt;&quot;3000&quot;, &quot;action_controller.instance&quot;=&gt;#&lt;SessionsController:0xb6d38270 ...&gt;, &quot;rack.session.options&quot;=&gt;{:secure=&gt;false, :expire_after=&gt;nil, :domain=&gt;nil, :httponly=&gt;true, :id=&gt;&quot;4b7eed76d16dbe4056cbfb37bf8d301d&quot;, :path=&gt;&quot;/&quot;}, &quot;REQUEST_METHOD&quot;=&gt;&quot;POST&quot;, &quot;rack.request.query_string&quot;=&gt;&quot;&quot;, &quot;rack.request.form_hash&quot;=&gt;{&quot;password&quot;=&gt;&quot;123&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}, &quot;action_dispatch.request.content_type&quot;=&gt;#&lt;Mime::Type:0xb74588d4 @synonyms=[], @symbol=:url_encoded_form, @string=&quot;application/x-www-form-urlencoded&quot;&gt;, &quot;rack.input&quot;=&gt;#&lt;StringIO:0xb6d6fe3c&gt;, &quot;QUERY_STRING&quot;=&gt;&quot;&quot;, &quot;GATEWAY_INTERFACE&quot;=&gt;&quot;CGI/1.1&quot;}, @view_context_class=nil, @_params={&quot;format&quot;=&gt;&quot;xml&quot;, &quot;action&quot;=&gt;&quot;create&quot;, &quot;controller&quot;=&gt;&quot;sessions&quot;, &quot;password&quot;=&gt;&quot;123&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}, @_response_body=nil, @_response=#&lt;ActionDispatch::Response:0xb6d381a8 @body=[], @header={}, @length=0, @content_type=&quot;application/xml&quot;, @block=nil, @writer=#&lt;Proc:0xb75b7108@/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/http/response.rb:44&gt;, @etag=nil, @sending_file=false, @status=200, @cache_control={}, @cookie=[], @request=#&lt;ActionDispatch::Request:0xb6d3820c @method=&quot;POST&quot;, @filtered_parameters={&quot;format&quot;=&gt;&quot;xml&quot;, &quot;action&quot;=&gt;&quot;create&quot;, &quot;controller&quot;=&gt;&quot;sessions&quot;, &quot;password&quot;=&gt;&quot;[FILTERED]&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}, @fullpath=&quot;/sessions.xml&quot;, @env={&quot;action_dispatch.request.formats&quot;=&gt;[#&lt;Mime::Type:0xb7458f78 @synonyms=[&quot;text/xml&quot;, &quot;application/x-xml&quot;], @symbol=:xml, @string=&quot;application/xml&quot;&gt;], &quot;action_dispatch.request.parameters&quot;=&gt;{&quot;format&quot;=&gt;&quot;xml&quot;, &quot;action&quot;=&gt;&quot;create&quot;, &quot;controller&quot;=&gt;&quot;sessions&quot;, &quot;password&quot;=&gt;&quot;123&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}, &quot;rack.session&quot;=&gt;{&quot;session_id&quot;=&gt;&quot;4b7eed76d16dbe4056cbfb37bf8d301d&quot;, &quot;user_id&quot;=&gt;2}, &quot;HTTP_HOST&quot;=&gt;&quot;127.0.0.1:3000&quot;, &quot;HTTP_ACCEPT&quot;=&gt;&quot;*/*&quot;, &quot;SERVER_NAME&quot;=&gt;&quot;127.0.0.1&quot;, &quot;action_dispatch.remote_ip&quot;=&gt;#&lt;ActionDispatch::RemoteIp::RemoteIpGetter:0xb6d6f950 @check_ip_spoofing=true, @env={...}, @trusted_proxies=/(^127\.0\.0\.1$|^(10|172\.(1[6-9]|2[0-9]|30|31)|192\.168)\.)/i&gt;, &quot;REQUEST_PATH&quot;=&gt;&quot;/&quot;, &quot;rack.url_scheme&quot;=&gt;&quot;http&quot;, &quot;HTTP_USER_AGENT&quot;=&gt;&quot;curl/7.21.0 (i686-pc-linux-gnu) libcurl/7.21.0 OpenSSL/0.9.8o zlib/1.2.3.4 libidn/1.18&quot;, &quot;REMOTE_HOST&quot;=&gt;&quot;localhost.localdomain&quot;, &quot;CONTENT_LENGTH&quot;=&gt;&quot;35&quot;, &quot;action_dispatch.request.query_parameters&quot;=&gt;{}, &quot;action_dispatch.request.unsigned_session_cookie&quot;=&gt;{&quot;session_id&quot;=&gt;&quot;4b7eed76d16dbe4056cbfb37bf8d301d&quot;}, &quot;rack.errors&quot;=&gt;#&lt;IO:0xb781d550&gt;, &quot;SERVER_PROTOCOL&quot;=&gt;&quot;HTTP/1.1&quot;, &quot;CONTENT_TYPE&quot;=&gt;&quot;application/x-www-form-urlencoded&quot;, &quot;action_dispatch.secret_token&quot;=&gt;&quot;4adba89e021653633f045e73628a7459eeea54e4706006515bda4bd52321b2981f934ab92887e6cdac59abf06fc9a603c0d78031a9a1bc3eaa77bc4379c910c7&quot;, &quot;rack.version&quot;=&gt;[1, 1], &quot;rack.run_once&quot;=&gt;false, &quot;SERVER_SOFTWARE&quot;=&gt;&quot;WEBrick/1.3.1 (Ruby/1.8.7/2010-06-23)&quot;, &quot;REMOTE_ADDR&quot;=&gt;&quot;127.0.0.1&quot;, &quot;PATH_INFO&quot;=&gt;&quot;/sessions.xml&quot;, &quot;action_dispatch.request.path_parameters&quot;=&gt;{:action=&gt;&quot;create&quot;, :format=&gt;&quot;xml&quot;, :controller=&gt;&quot;sessions&quot;}, &quot;SCRIPT_NAME&quot;=&gt;&quot;&quot;, &quot;action_dispatch.parameter_filter&quot;=&gt;[:password], &quot;HTTP_VERSION&quot;=&gt;&quot;HTTP/1.1&quot;, &quot;rack.multithread&quot;=&gt;false, &quot;action_dispatch.request.request_parameters&quot;=&gt;{&quot;password&quot;=&gt;&quot;123&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}, &quot;rack.request.form_vars&quot;=&gt;&quot;email=ei08106@fe.up.pt&amp;password=123&quot;, &quot;action_dispatch.cookies&quot;=&gt;{}, &quot;rack.multiprocess&quot;=&gt;false, &quot;REQUEST_URI&quot;=&gt;&quot;http://127.0.0.1:3000/sessions.xml&quot;, &quot;rack.request.query_hash&quot;=&gt;{}, &quot;rack.request.form_input&quot;=&gt;#&lt;StringIO:0xb6d6fe3c&gt;, &quot;SERVER_PORT&quot;=&gt;&quot;3000&quot;, &quot;action_controller.instance&quot;=&gt;#&lt;SessionsController:0xb6d38270 ...&gt;, &quot;rack.session.options&quot;=&gt;{:secure=&gt;false, :expire_after=&gt;nil, :domain=&gt;nil, :httponly=&gt;true, :id=&gt;&quot;4b7eed76d16dbe4056cbfb37bf8d301d&quot;, :path=&gt;&quot;/&quot;}, &quot;REQUEST_METHOD&quot;=&gt;&quot;POST&quot;, &quot;rack.request.query_string&quot;=&gt;&quot;&quot;, &quot;rack.request.form_hash&quot;=&gt;{&quot;password&quot;=&gt;&quot;123&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}, &quot;action_dispatch.request.content_type&quot;=&gt;#&lt;Mime::Type:0xb74588d4 @synonyms=[], @symbol=:url_encoded_form, @string=&quot;application/x-www-form-urlencoded&quot;&gt;, &quot;rack.input&quot;=&gt;#&lt;StringIO:0xb6d6fe3c&gt;, &quot;QUERY_STRING&quot;=&gt;&quot;&quot;, &quot;GATEWAY_INTERFACE&quot;=&gt;&quot;CGI/1.1&quot;}&gt;, @blank=false&gt;, @_status=200&gt;
+action_dispatch.cookies: {}
+action_dispatch.parameter_filter: [:password]
+action_dispatch.remote_ip: #&lt;ActionDispatch::RemoteIp::RemoteIpGetter:0xb6d6f950 @check_ip_spoofing=true, @env={&quot;action_dispatch.request.formats&quot;=&gt;[#&lt;Mime::Type:0xb7458f78 @synonyms=[&quot;text/xml&quot;, &quot;application/x-xml&quot;], @symbol=:xml, @string=&quot;application/xml&quot;&gt;], &quot;action_dispatch.request.parameters&quot;=&gt;{&quot;format&quot;=&gt;&quot;xml&quot;, &quot;action&quot;=&gt;&quot;create&quot;, &quot;controller&quot;=&gt;&quot;sessions&quot;, &quot;password&quot;=&gt;&quot;123&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}, &quot;rack.session&quot;=&gt;{&quot;session_id&quot;=&gt;&quot;4b7eed76d16dbe4056cbfb37bf8d301d&quot;, &quot;user_id&quot;=&gt;2}, &quot;HTTP_HOST&quot;=&gt;&quot;127.0.0.1:3000&quot;, &quot;HTTP_ACCEPT&quot;=&gt;&quot;*/*&quot;, &quot;SERVER_NAME&quot;=&gt;&quot;127.0.0.1&quot;, &quot;action_dispatch.remote_ip&quot;=&gt;#&lt;ActionDispatch::RemoteIp::RemoteIpGetter:0xb6d6f950 ...&gt;, &quot;REQUEST_PATH&quot;=&gt;&quot;/&quot;, &quot;rack.url_scheme&quot;=&gt;&quot;http&quot;, &quot;HTTP_USER_AGENT&quot;=&gt;&quot;curl/7.21.0 (i686-pc-linux-gnu) libcurl/7.21.0 OpenSSL/0.9.8o zlib/1.2.3.4 libidn/1.18&quot;, &quot;REMOTE_HOST&quot;=&gt;&quot;localhost.localdomain&quot;, &quot;CONTENT_LENGTH&quot;=&gt;&quot;35&quot;, &quot;action_dispatch.request.query_parameters&quot;=&gt;{}, &quot;action_dispatch.request.unsigned_session_cookie&quot;=&gt;{&quot;session_id&quot;=&gt;&quot;4b7eed76d16dbe4056cbfb37bf8d301d&quot;}, &quot;rack.errors&quot;=&gt;#&lt;IO:0xb781d550&gt;, &quot;SERVER_PROTOCOL&quot;=&gt;&quot;HTTP/1.1&quot;, &quot;CONTENT_TYPE&quot;=&gt;&quot;application/x-www-form-urlencoded&quot;, &quot;action_dispatch.secret_token&quot;=&gt;&quot;4adba89e021653633f045e73628a7459eeea54e4706006515bda4bd52321b2981f934ab92887e6cdac59abf06fc9a603c0d78031a9a1bc3eaa77bc4379c910c7&quot;, &quot;rack.version&quot;=&gt;[1, 1], &quot;rack.run_once&quot;=&gt;false, &quot;SERVER_SOFTWARE&quot;=&gt;&quot;WEBrick/1.3.1 (Ruby/1.8.7/2010-06-23)&quot;, &quot;REMOTE_ADDR&quot;=&gt;&quot;127.0.0.1&quot;, &quot;PATH_INFO&quot;=&gt;&quot;/sessions.xml&quot;, &quot;action_dispatch.request.path_parameters&quot;=&gt;{:action=&gt;&quot;create&quot;, :format=&gt;&quot;xml&quot;, :controller=&gt;&quot;sessions&quot;}, &quot;SCRIPT_NAME&quot;=&gt;&quot;&quot;, &quot;action_dispatch.parameter_filter&quot;=&gt;[:password], &quot;HTTP_VERSION&quot;=&gt;&quot;HTTP/1.1&quot;, &quot;rack.multithread&quot;=&gt;false, &quot;action_dispatch.request.request_parameters&quot;=&gt;{&quot;password&quot;=&gt;&quot;123&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}, &quot;rack.request.form_vars&quot;=&gt;&quot;email=ei08106@fe.up.pt&amp;password=123&quot;, &quot;action_dispatch.cookies&quot;=&gt;{}, &quot;rack.multiprocess&quot;=&gt;false, &quot;REQUEST_URI&quot;=&gt;&quot;http://127.0.0.1:3000/sessions.xml&quot;, &quot;rack.request.query_hash&quot;=&gt;{}, &quot;rack.request.form_input&quot;=&gt;#&lt;StringIO:0xb6d6fe3c&gt;, &quot;SERVER_PORT&quot;=&gt;&quot;3000&quot;, &quot;action_controller.instance&quot;=&gt;#&lt;SessionsController:0xb6d38270 @_headers={&quot;Content-Type&quot;=&gt;&quot;text/html&quot;}, @lookup_context=#&lt;ActionView::LookupContext:0xb6d37ff0 @view_paths=[#&lt;ActionView::FileSystemResolver:0xb71ccac0 @path=&quot;/home/pedro/ldso/fit/app/views&quot;, @caching=false, @cached={}&gt;], @details_key=nil, @skip_default_locale=false, @details={:handlers=&gt;[:builder, :rjs, :rhtml, :erb, :rxml], :locale=&gt;[:en, :en], :formats=&gt;[:xml]}, @frozen_formats=true&gt;, @_request=#&lt;ActionDispatch::Request:0xb6d3820c @method=&quot;POST&quot;, @filtered_parameters={&quot;format&quot;=&gt;&quot;xml&quot;, &quot;action&quot;=&gt;&quot;create&quot;, &quot;controller&quot;=&gt;&quot;sessions&quot;, &quot;password&quot;=&gt;&quot;[FILTERED]&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}, @fullpath=&quot;/sessions.xml&quot;, @env={...}&gt;, @action_has_layout=true, @_action_name=&quot;create&quot;, @_env={...}, @view_context_class=nil, @_params={&quot;format&quot;=&gt;&quot;xml&quot;, &quot;action&quot;=&gt;&quot;create&quot;, &quot;controller&quot;=&gt;&quot;sessions&quot;, &quot;password&quot;=&gt;&quot;123&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}, @_response_body=nil, @_response=#&lt;ActionDispatch::Response:0xb6d381a8 @body=[], @header={}, @length=0, @content_type=&quot;application/xml&quot;, @block=nil, @writer=#&lt;Proc:0xb75b7108@/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/http/response.rb:44&gt;, @etag=nil, @sending_file=false, @status=200, @cache_control={}, @cookie=[], @request=#&lt;ActionDispatch::Request:0xb6d3820c @method=&quot;POST&quot;, @filtered_parameters={&quot;format&quot;=&gt;&quot;xml&quot;, &quot;action&quot;=&gt;&quot;create&quot;, &quot;controller&quot;=&gt;&quot;sessions&quot;, &quot;password&quot;=&gt;&quot;[FILTERED]&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}, @fullpath=&quot;/sessions.xml&quot;, @env={...}&gt;, @blank=false&gt;, @_status=200&gt;, &quot;rack.session.options&quot;=&gt;{:secure=&gt;false, :expire_after=&gt;nil, :domain=&gt;nil, :httponly=&gt;true, :id=&gt;&quot;4b7eed76d16dbe4056cbfb37bf8d301d&quot;, :path=&gt;&quot;/&quot;}, &quot;REQUEST_METHOD&quot;=&gt;&quot;POST&quot;, &quot;rack.request.query_string&quot;=&gt;&quot;&quot;, &quot;rack.request.form_hash&quot;=&gt;{&quot;password&quot;=&gt;&quot;123&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}, &quot;action_dispatch.request.content_type&quot;=&gt;#&lt;Mime::Type:0xb74588d4 @synonyms=[], @symbol=:url_encoded_form, @string=&quot;application/x-www-form-urlencoded&quot;&gt;, &quot;rack.input&quot;=&gt;#&lt;StringIO:0xb6d6fe3c&gt;, &quot;QUERY_STRING&quot;=&gt;&quot;&quot;, &quot;GATEWAY_INTERFACE&quot;=&gt;&quot;CGI/1.1&quot;}, @trusted_proxies=/(^127\.0\.0\.1$|^(10|172\.(1[6-9]|2[0-9]|30|31)|192\.168)\.)/i&gt;
+action_dispatch.request.content_type: #&lt;Mime::Type:0xb74588d4 @synonyms=[], @symbol=:url_encoded_form, @string=&quot;application/x-www-form-urlencoded&quot;&gt;
+action_dispatch.request.formats: [#&lt;Mime::Type:0xb7458f78 @synonyms=[&quot;text/xml&quot;, &quot;application/x-xml&quot;], @symbol=:xml, @string=&quot;application/xml&quot;&gt;]
+action_dispatch.request.parameters: {&quot;format&quot;=&gt;&quot;xml&quot;, &quot;action&quot;=&gt;&quot;create&quot;, &quot;controller&quot;=&gt;&quot;sessions&quot;, &quot;password&quot;=&gt;&quot;123&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}
+action_dispatch.request.path_parameters: {:action=&gt;&quot;create&quot;, :format=&gt;&quot;xml&quot;, :controller=&gt;&quot;sessions&quot;}
+action_dispatch.request.query_parameters: {}
+action_dispatch.request.request_parameters: {&quot;password&quot;=&gt;&quot;123&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}
+action_dispatch.request.unsigned_session_cookie: {&quot;session_id&quot;=&gt;&quot;4b7eed76d16dbe4056cbfb37bf8d301d&quot;}
+action_dispatch.secret_token: &quot;4adba89e021653633f045e73628a7459eeea54e4706006515bda4bd52321b2981f934ab92887e6cdac59abf06fc9a603c0d78031a9a1bc3eaa77bc4379c910c7&quot;
+rack.errors: #&lt;IO:0xb781d550&gt;
+rack.input: #&lt;StringIO:0xb6d6fe3c&gt;
+rack.multiprocess: false
+rack.multithread: false
+rack.request.form_hash: {&quot;password&quot;=&gt;&quot;123&quot;, &quot;email&quot;=&gt;&quot;ei08106@fe.up.pt&quot;}
+rack.request.form_input: #&lt;StringIO:0xb6d6fe3c&gt;
+rack.request.form_vars: &quot;email=ei08106@fe.up.pt&amp;password=123&quot;
+rack.request.query_hash: {}
+rack.request.query_string: &quot;&quot;
+rack.run_once: false
+rack.session: {&quot;session_id&quot;=&gt;&quot;4b7eed76d16dbe4056cbfb37bf8d301d&quot;, &quot;user_id&quot;=&gt;2}
+rack.session.options: {:secure=&gt;false, :expire_after=&gt;nil, :domain=&gt;nil, :httponly=&gt;true, :id=&gt;&quot;4b7eed76d16dbe4056cbfb37bf8d301d&quot;, :path=&gt;&quot;/&quot;}
+rack.url_scheme: &quot;http&quot;
+rack.version: [1, 1]</pre></div>
+
+
+<h2 style="margin-top: 30px">Response</h2>
+<p><b>Headers</b>: <pre>None</pre></p>
+
+
+
+</body>
+</html>

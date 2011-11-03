@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       respond_to do |format|
         format.html {redirect_to(root_url, :notice => "Logged in!")}
-        format.xml { render :xml => session}
+        format.xml { authenticity_token }
       end
     else
       respond_to do |format|
