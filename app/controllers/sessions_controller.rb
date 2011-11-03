@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
     else
       respond_to do |format|
         format.html {redirect_to(root_url, :notice => 'Invalid email or password')}
-      format.xml  { render :xml => { :error => 'ok' }, :status =>  300 }
+        format.xml  { render :xml => { :error => 'ok' }, :status =>  300 }
       end
     end
   end
