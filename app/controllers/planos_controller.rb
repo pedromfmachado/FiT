@@ -51,7 +51,7 @@ class PlanosController < ApplicationController
     respond_to do |format|
       if @plano.save
         format.html { redirect_to(@plano, :notice => 'Plano was successfully created.') }
-        format.xml  { render :xml => @plano, :status => :created, :location => @plano }
+        format.xml  { render :xml => @plano, :status => 200}
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @plano.errors, :status => :unprocessable_entity }
