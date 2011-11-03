@@ -45,7 +45,7 @@ class PlanosController < ApplicationController
   # POST /planos.xml
   def create
     #@exercicios = params[:selected_exercicios].split(",")
-    @plano = Plano.new(:altura => params[:altura], :data => params[:data], :peso => params[:peso])
+    @plano = Plano.new(:admin_id => 1, :user_id => 1, :altura => params[:altura], :data => params[:data], :peso => params[:peso])
     
 
     respond_to do |format|
@@ -58,9 +58,9 @@ class PlanosController < ApplicationController
       end
     end
     
-    @exercicios.each do |ex_id|
-	ExerciciosPlanos.create(:plano_id => @plano.id, :exercicio_id => ex_id);
-    end
+    #@exercicios.each do |ex_id|
+	#ExerciciosPlanos.create(:plano_id => @plano.id, :exercicio_id => ex_id);
+   # end
 
   end
 
