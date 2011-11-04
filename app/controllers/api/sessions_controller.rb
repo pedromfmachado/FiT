@@ -7,6 +7,7 @@ class Api::SessionsController < ApiController
 
   def create
     user = User.authenticate(params[:email], params[:password])
+    respond_with user
   end
 
   def destroy

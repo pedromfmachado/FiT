@@ -16,6 +16,8 @@ class Ability
     elsif user.normal?
       can :read, Plano, :user_id => user.id
       can :show, User, :id => user.id
+    else
+      can :manage, Session    
     end
   end
 end
