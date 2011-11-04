@@ -45,6 +45,7 @@ class PlanosController < ApplicationController
   # GET /planos/1/edit
   def edit
     @plano = Plano.find(params[:id])
+    @user = User.find(@plano.user_id)
   end
 
   # POST /planos

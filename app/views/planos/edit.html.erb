@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', user_plano_path(params[:user_id],@plano) %> |
-<%= link_to 'Back', user_planos_path(params[:user_id]) %>
+<%= link_to 'Show', user_plano_path(@user,@plano) %> |
+<%= link_to 'Back', user_planos_path(@user) %>
