@@ -5,7 +5,8 @@ class Api::PlanosController < ApiController
   end
 
   def show
-    respond_with Plano.find(params[:id])  
+    @plano = Plano.find(params[:id])
+    render :xml => @plano.to_xml(:include => :exercicios)
   end
 end
 

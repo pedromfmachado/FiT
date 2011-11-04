@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :data %><br />
-    <%= f.text_field :data %>
+    <%= f.text_field :data, :value => @plano.data, :disabled => true %>
   </div>
   <div class="field">
     <%= f.label :altura %><br />

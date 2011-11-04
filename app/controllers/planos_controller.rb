@@ -35,7 +35,7 @@ class PlanosController < ApplicationController
   # GET /planos/new
   # GET /planos/new.xml
   def new
-    @plano = Plano.new(:user_id => params[:user_id])
+    @plano = Plano.new(:user_id => params[:user_id], :data => Date.today)
     @user = User.find(params[:user_id])
     respond_to do |format|
       format.html # new.html.erb
@@ -52,6 +52,7 @@ class PlanosController < ApplicationController
   # POST /planos.xml
   def create
     @exercicios = params[:selected_exercicios].split(",")
+    params[:plano][:data] = Date.today
     @plano = Plano.new(params[:plano])
     @user = User.find(@plano.user_id)
     
