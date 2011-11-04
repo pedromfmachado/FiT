@@ -6,6 +6,7 @@ class PlanosController < ApplicationController
   def index
     if(params[:user_id])
       @planos = Plano.where(:user_id => params[:user_id])
+      @user = User.find(params[:user_id])
     else
       @planos = Plano.all
     end
@@ -35,7 +36,7 @@ class PlanosController < ApplicationController
   # GET /planos/new.xml
   def new
     @plano = Plano.new(:user_id => params[:user_id])
-
+    @user = User.find(params[:user_id])
     respond_to do |format|
       format.html # new.html.erb
     end
@@ -51,11 +52,12 @@ class PlanosController < ApplicationController
   def create
     @exercicios = params[:selected_exercicios].split(",")
     @plano = Plano.new(params[:plano])
+    @user = User.find(@plano.user_id)
     
 
     respond_to do |format|
       if @plano.save
-        format.html { redirect_to(@plano, :notice => 'Plano was successfully created.') }
+        format.html { redirect_to(user_planos_path(@user), :notice => 'Plano was successfully created.') }
         format.xml  { render :xml => @plano, :status => :created, :location => @plano }
       else
         format.html { render :action => "new" }
@@ -74,14 +76,15 @@ class PlanosController < ApplicationController
   def update
     @plano = Plano.find(params[:id])
     @exercicios = params[:selected_exercicios].split(",")
+    @user = User.find(@plano.user_id)
 
     @exercicios.each do |ex_id|
-	ExerciciosPlanos.create(:plano_id => params[:id], :exercicio_id => ex_id);
+	    ExerciciosPlanos.create(:plano_id => params[:id], :exercicio_id => ex_id);
     end
 
     respond_to do |format|
       if @plano.update_attributes(params[:plano])
-        format.html { redirect_to(@plano, :notice => 'Plano was successfully updated.') }
+        format.html { redirect_to(user_planos_path(@user), :notice => 'Plano was successfully updated.') }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -94,10 +97,11 @@ class PlanosController < ApplicationController
   # DELETE /planos/1.xml
   def destroy
     @plano = Plano.find(params[:id])
+    @user = User.find(@plano.user_id)
     @plano.destroy
 
     respond_to do |format|
-      format.html { redirect_to(user_planos_url(params[:user_id])) }
+      format.html { redirect_to(user_planos_url(@user)) }
       format.xml  { head :ok }
     end
   end

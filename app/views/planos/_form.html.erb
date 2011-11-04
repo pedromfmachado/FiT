@@ -1,4 +1,4 @@
-<%= form_for(@plano) do |f| %>
+<%= form_for([@user,@plano]) do |f| %>
   <% if @plano.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@plano.errors.count, "error") %> prohibited this plano from being saved:</h2>

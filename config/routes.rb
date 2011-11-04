@@ -10,7 +10,6 @@ Fit::Application.routes.draw do
   end
   resources :exercicios
   resources :sessions
-  resources :planos
 
   namespace :api do
     resources :users do
@@ -18,6 +17,8 @@ Fit::Application.routes.draw do
     end
     resources :exercicios
     resources :sessions
+
+    match "users" => "users#index", :defaults => { :format => "xml" }
   end
 
   #rotas da api
