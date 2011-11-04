@@ -1,6 +1,11 @@
 class UsersController < ApplicationController
   load_and_authorize_resource
 
+  def index
+    @users = User.all
+  end
+
+
   def new
     @user = User.new
   end
@@ -23,17 +28,6 @@ class UsersController < ApplicationController
       format.html # show.html.erb
       format.xml  { render :xml => @user }
       format.json  { render :json => @user }
-    end
-  end
-  
-
-  def show_planos
-    @user = User.find(params[:id])
-
-    respond_to do |format|
-      format.html # show_planos.html.erb
-      format.xml  { render :xml => @user.planos.to_xml(:include => :exercicios) }
-      format.json  { render :json => @user.planos.to_json(:include => :exercicios) }
     end
   end
 
