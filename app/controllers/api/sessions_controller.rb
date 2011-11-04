@@ -7,7 +7,12 @@ class Api::SessionsController < ApiController
 
   def create
     user = User.authenticate(params[:email], params[:password])
-    respond_with user
+    if user
+      session[:user_id] = user.id
+      render :xml => session
+    else
+      render :xml => { :error => 'User not autenticated' }, :status =>  149
+    end
   end
 
   def destroy
