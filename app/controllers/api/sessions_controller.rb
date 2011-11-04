@@ -24,16 +24,6 @@ class Api::SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     redirect_to root_url, :notice => "Logged out!"
-  end
-
-  def edit
-  end
-  
-  def update
-  end
-
-  def index
-  end
 
   skip_before_filter :verify_authenticity_token
 end
