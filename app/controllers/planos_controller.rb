@@ -66,8 +66,9 @@ class PlanosController < ApplicationController
       end
     end
     
-    @exercicios.each do |ex_id|
-	ExerciciosPlanos.create(:plano_id => @plano.id, :exercicio_id => ex_id);
+    @exercicios.each do |ex|
+	    @ex_splited = ex.split("|")
+	    ExerciciosPlanos.create(:plano_id => @plano.id, :exercicio_id => @ex_splited[0], :peso => @ex_splited[1], :series => @ex_splited[2], :repeticoes => @ex_splited[3]);
     end
 
   end
@@ -79,8 +80,9 @@ class PlanosController < ApplicationController
     @exercicios = params[:selected_exercicios].split(",")
     @user = User.find(@plano.user_id)
 
-    @exercicios.each do |ex_id|
-	    ExerciciosPlanos.create(:plano_id => params[:id], :exercicio_id => ex_id);
+    @exercicios.each do |ex|
+      @ex_splited = ex.split("|")
+	    ExerciciosPlanos.create(:plano_id => @plano.id, :exercicio_id => @ex_splited[0], :peso => @ex_splited[1], :series => @ex_splited[2], :repeticoes => @ex_splited[3]);
     end
 
     respond_to do |format|

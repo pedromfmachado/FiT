@@ -1,6 +1,20 @@
 // JavaScript Document
 
-function adicionaExercicio(exercicios_arr){
+function getObjects(obj, key, val) {
+    var objects = [];
+    for (var i in obj) {
+        if (!obj.hasOwnProperty(i)) continue;
+        if (typeof obj[i] == 'object') {
+            objects = objects.concat(getObjects(obj[i], key, val));
+        } else if (i == key && obj[key] == val) {
+            objects.push(obj);
+        }
+    }
+    return objects;
+}
+
+
+function adicionaExercicio(exercicios_arr, all_arr){
 
 	var ids_exercicios = new Array;
 
@@ -14,11 +28,14 @@ function adicionaExercicio(exercicios_arr){
     // se o exercicio ainda nao estiver associado ao plano ou se nao estiver ja escrito na hidden tag
 	if(valor_ex && $.inArray(valor_ex,ids_exercicios) == -1 && $.inArray(valor_ex,ids_array) == -1){
         // escreve na hidden tag o id do exercicio escolhido
-		$("#selected_exercicios").val($("#selected_exercicios").val() + valor_ex + ",");
+		$("#selected_exercicios").val($("#selected_exercicios").val() + valor_ex + "|" + $('#exercicio_peso').val() +
+            '|' + $('#exercicio_series').val() + '|' + $('#exercicio_repeticoes').val() + ",");
+        var exercicio = getObjects(all_arr,'id',valor_ex);
+        $("#exercicios").append(exercicio[0]['nome']+ " - " + exercicio[0]['maquina']);
+        console.log($('#selected_exercicios').val());
 	}
 
-    console.log(exercicios_arr)
-
 }
+
 
 

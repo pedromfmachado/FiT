@@ -32,15 +32,15 @@
   </div>
 
   <div class="field">
-    <%= label(:exercicio,:exercicio) %><br />
+    <%= label_tag('exercicio') %><br />
     <%= collection_select("exercicios_listbox", nil, Exercicio.all, :id, :nome) %>
-    <%= link_to_function "Associar exercicio", "adicionaExercicio(#{@plano.exercicios.to_json})", :class => "nav_link"%><br />
-    <%= label(:exercicio,:peso) %><br />
-    <%= text_field(:exercicio,:peso) %><br />
-    <%= label(:exercicio,:series) %><br />
-    <%= text_field(:exercicio,:series) %><br />
-    <%= label(:exercicio,:repeticoes) %><br />
-    <%= text_field(:exercicio,:repeticoes) %><br />
+    <%= link_to_function "Associar exercicio", "adicionaExercicio(#{@plano.exercicios.to_json}, #{Exercicio.all.to_json})", :class => "nav_link"%><br />
+    <%= label_tag('Peso') %><br />
+    <%= text_field_tag('exercicio_peso') %><br />
+    <%= label_tag('series') %><br />
+    <%= text_field_tag('exercicio_series') %><br />
+    <%= label_tag('repetições') %><br />
+    <%= text_field_tag('exercicio_repeticoes') %><br />
   </div>
   
  
