@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Fit</title>
-  <%= stylesheet_link_tag "screen" if !mobile_device? %>
+  <%= stylesheet_link_tag "screen" %>
   <%= stylesheet_link_tag "mobile" if mobile_device? %>
   <%= javascript_include_tag "aplication.js", "controls.js", "dragdrop.js", "efects.js", "prototype.js", "jquery.js", "rails.js", "utils.js", "menu.js", "jquery.js" %>
   <%= csrf_meta_tag %>
@@ -15,9 +15,9 @@
     <% if current_user %>
     Logged in as <%= current_user.nome %>.
       <% if current_user.admin? %>
-      <%= link_to "Register Member", sign_up_path %> or
+      <%= link_to "Registar membro", sign_up_path %> or
       <% end %>
-    <%= link_to "View Profile", perfil_path(current_user.id) %> or
+    <%= link_to "Ver perfil", perfil_path(current_user.id) %> or
     <%= link_to "Log out", log_out_path %>.
     
     <% else %>
@@ -51,7 +51,7 @@
    
     <ul id="menu">
 			<%= link_to root_url do %><li class="parent">Home</li><%end%>
-			<a href="#"><li class="parent">News</li></a>
+			<a href="#"><li class="parent">Notícias</li></a>
 			<a href="#"><li class="parent">Ginásios</li></a>
 			<a href="#"><li class="parent">Aulas</li></a>
 			<ul>
@@ -60,7 +60,7 @@
 			</ul>
 			<a href="#"><li class="parent">Conta Pessoal</li></a>
 			<ul>
-				<li class="child"><a href="">Perfil</a></li>
+				<li class="child"><%= link_to "Perfil", current_user%></li>
         <li class="child"><a href="">Plano Treino</a></li>
 			</ul>
       <% if current_user && (current_user.admin? || current_user.staff?) %>

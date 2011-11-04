@@ -23,13 +23,16 @@
         <%- end -%>
         </div>
       <% end %>
-    
-      <%= yield %>
+      <% if !current_user || (current_user && current_user.normal?) %>
+        <%= yield %>
+      <% else %>
+        A versão movél do site está apenas disponível para utilizadores não administrativos!
+      <% end %>
+      <% if current_user %>
       <ul>
-        <% if current_user %>
         <li><%= link_to "Log out", log_out_path, :rel => "external" %></li>
-        <% end %>
       </ul>
+      <% end %>
     </div>
   </body>
 </html>
