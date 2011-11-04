@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<ul class ="rounded">
+
+<li><p class="normal">
+  <b>Data:</b>
+  <%= @plano.data %>
+</p></li>
+
+<li><p class="normal">
+  <b>Altura:</b>
+  <%= @plano.altura %>
+</p></li>
+
+<li><p class="normal">
+  <b>Peso:</b>
+  <%= @plano.peso %>
+</p></li>
+
+</ul>
+
+
+<b> Exercicios: </b><br />
+<ul class="rounded">
+<% @plano.exercicios.each do |ex| %>
+  <li><p class="normal"><%= ex.nome %> - <%= ex.maquina %> - <%= ex.tipo %></p></li>
+<% end %>
+</ul>

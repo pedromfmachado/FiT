@@ -1,0 +1,9 @@
+<h1>Listing planos</h1>
+
+<ul>
+<% @planos.each do |plano| %>
+    <li class="arrow"><%= link_to plano.data, user_plano_path(@user,plano) %></li>
+<% end %>
+</ul>
+
+

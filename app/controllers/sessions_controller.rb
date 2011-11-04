@@ -11,10 +11,12 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       respond_to do |format|
         format.html {redirect_to(root_url, :notice => "Logged in!")}
+        format.mobile {redirect_to(root_url, :notice => "Logged in!")}
       end
     else
       respond_to do |format|
         format.html {redirect_to(root_url, :notice => 'Invalid email or password')}
+        format.mobile {redirect_to(root_url, :notice => 'Invalid email or password')}
       end
     end
   end

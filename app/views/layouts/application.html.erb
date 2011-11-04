@@ -3,6 +3,7 @@
 <head>
   <title>Fit</title>
   <%= stylesheet_link_tag "screen" %>
+  <%= stylesheet_link_tag "mobile" if mobile_device? %>
   <%= javascript_include_tag "aplication.js", "controls.js", "dragdrop.js", "efects.js", "prototype.js", "jquery.js", "rails.js", "utils.js", "menu.js", "jquery.js" %>
   <%= csrf_meta_tag %>
 </head>
@@ -22,6 +23,8 @@
     <% else %>
       <div id='login'><%= render :partial => '/sessions/form' %></div>
     <% end %>
+</p>
+
 
     
 
@@ -95,6 +98,9 @@
 			  <li> <%= link_to "FAQ", root_path %> </li>
 			  <li> <%= link_to "Terms of Use", root_path %> </li>
 			  <li> <%= link_to "Help", root_path %> </li>
+        <% if !mobile_device? %>
+           <li ><%= link_to "Mobile Site", :mobile => 1 %></li>
+        <% end %>
 		  </ul>
 	  </div>
 	  <div id="footer-social">
@@ -104,7 +110,6 @@
 		  </ul>
 	  </div>
   </div>
-
 
 </body>
 </html>

@@ -1,0 +1,12 @@
+<% if !current_user %>
+  <h1>Login</h1>
+
+
+  <%= render 'form' %>
+<% else %>
+
+  <ul>
+    <li class ="arrow"><%= link_to "Ver Perfil", user_path(current_user)%> </li>
+  </ul>
+
+<% end %>
