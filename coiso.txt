@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <hash>
-  <session-id>05d19d5e1ad999bc9b08f0b7c6416770</session-id>
+  <session-id>fd2293444a1a28d4409d611edbaf6bf6</session-id>
   <user-id type="integer">2</user-id>
 </hash>
