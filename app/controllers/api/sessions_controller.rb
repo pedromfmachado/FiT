@@ -25,5 +25,4 @@ class Api::SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to root_url, :notice => "Logged out!"
   end
-  skip_before_filter :verify_authenticity_token
 end
