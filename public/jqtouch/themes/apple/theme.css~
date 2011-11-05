@@ -155,7 +155,7 @@ ul li {
     border-top: 1px solid #B4B4B4;
     padding: 10px 10px 10px 10px;
     color: #777;
-    width: 30%;
+    width: 95%;
     margin-left:10px;
     -webkit-appearance: textarea;
 }
