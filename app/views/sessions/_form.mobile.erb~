@@ -7,5 +7,5 @@
     <%= label_tag :password %><br />
     <%= password_field_tag :password %>
   </div>
-    <%= submit_tag "Log in" %>
+    <%= submit_tag "Log in", :class => "submit"%>
 <% end %>
