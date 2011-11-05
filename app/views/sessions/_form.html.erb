@@ -1,7 +1,9 @@
-<%= form_tag sessions_path do %>
-    <%= label_tag :email %>
-    <%= text_field_tag :email, params[:email] %>
-    <%= label_tag :password %>
-    <%= password_field_tag :password %>
-    <%= submit_tag "Log in" %>
+<%= form_tag sessions_path, :id => "login-panel" do %>
+      <div id="form-item">
+        <%= label_tag :email %><%= text_field_tag :email, params[:email] %>
+      <div>
+      <div id="form-item">
+        <%= label_tag :password %><%= password_field_tag :password %>
+      </div>
+      <%= submit_tag "Log in" %>
 <% end %>

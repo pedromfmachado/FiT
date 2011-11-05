@@ -1,0 +1,31 @@
+<div id="profile">
+<h1>Plano</h1>
+<div id="info">
+  <b>Data:</b>
+  <%= @plano.data %><br />
+
+  <b>Altura:</b>
+  <%= @plano.altura %><br />
+
+  <b>Peso:</b>
+  <%= @plano.peso %><br />
+
+  <b> Exercicios: </b><br />
+  <table>
+    <tr>
+      <th>Nome</th>
+      <th>Máquina</th>
+      <th>Tipo</th>
+    </tr>
+  <% @plano.exercicios.each do |ex| %>
+    <tr>
+      <td><%= ex.nome %></td> <td><%= ex.maquina %></td> <td><%= ex.tipo %></td><br />
+    </tr>
+  <% end %>
+  </table>
+
+
+<%= link_to 'Edit', edit_user_plano_path(params[:user_id],@plano) %> |
+<%= link_to 'Back', user_planos_path(params[:user_id]) %>
+</div>
+</div>

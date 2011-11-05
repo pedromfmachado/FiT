@@ -10,18 +10,22 @@
 <body>
 <div id="page">
 
-  <div id="top"> 
-
-    <% if current_user %>
-    Logged in as <%= current_user.nome %>.
-      <% if current_user.admin? %>
-      <%= link_to "Registar membro", sign_up_path %> or
-      <% end %>
-    <%= link_to "Ver perfil", current_user %> or
-    <%= link_to "Log out", log_out_path %>.
+  <div id="login"> 
     
-    <% else %>
-      <div id='login'><%= render :partial => '/sessions/form' %></div>
+    
+    <% if current_user %>
+      <p id="top">
+      Logged in as <%= current_user.nome %>.
+        <% if current_user.admin? %>
+        <%= link_to "Registar membro", sign_up_path %> or
+        <% end %>
+      <%= link_to "Ver perfil", current_user %> or
+      <%= link_to "Log out", log_out_path %>.
+      </p>
+    
+    <% else %> 
+      <p id="top"> <a id="login-text">Log in</a> </p>
+      <%= render :partial => '/sessions/form' %>
     <% end %>
 </p>
 
@@ -50,7 +54,7 @@
 
    <div id="content">
     <ul id="menu">
-				<div><a href="#"><li class="parent">Home</li></a></div>
+				<div><%= link_to root_url do %><li class="parent">Home</li><%end%></div>
 				<div><a href="#"><li class="parent">News</li></a></div>
 				<div><a href="#"><li class="parent">Ginásios</li></a></div>
 				<div> <a href="www.google.pt"><li class="parent">Aulas</li></a>
@@ -61,12 +65,21 @@
 				</div>
 				<div><a href="#"><li class="current">Conta Pessoal</li>
 					<ul>
-						<li class="child"><a href="">Perfil</a></li>
-						<li class="child"><a href="">Plano Treino</a></li>
-						<li class="child"><a href="">Plano Alimentar</a></li>
+						<li class="child"><%= link_to "Perfil", current_user %></li>
+            <%if current_user && current_user.normal? %>
+						<li class="child"><%= link_to "Planos de treinos", user_planos_path(current_user) %></li>
+            <% end %>
 					</ul></a></div>
-				<div><a href="#"><li class="parent">Administração</li></a></div>
+        <%if current_user && current_user.admin?%>
+				<div><a href="#"><li class="current">Administração</li>
+					<ul>
+						<li class="child"><%= link_to "Utilizadores", users_path %></li>
+						<li class="child"><%= link_to "Exercícios", exercicios_path %></li>
+					</ul></a></div>
+        <% end %>
 			</ul>
+
+
 	
       
 		  <%= yield %>
