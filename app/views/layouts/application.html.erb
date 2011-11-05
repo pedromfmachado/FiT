@@ -48,31 +48,27 @@
 		<h2>We're a professional, full service web development company that creates elegant website designs and build innovative web applications.</h2>
 	</div>
 
-   
+   <div id="content">
     <ul id="menu">
-			<%= link_to root_url do %><li class="parent">Home</li><%end%>
-			<a href="#"><li class="parent">Notícias</li></a>
-			<a href="#"><li class="parent">Ginásios</li></a>
-			<a href="#"><li class="parent">Aulas</li></a>
-			<ul>
-        <li class="child"><a href="">Horários</a></li>
-        <li class="child"><a href="">Modalidades</a></li>
+				<div><a href="#"><li class="parent">Home</li></a></div>
+				<div><a href="#"><li class="parent">News</li></a></div>
+				<div><a href="#"><li class="parent">Ginásios</li></a></div>
+				<div> <a href="www.google.pt"><li class="parent">Aulas</li></a>
+					<ul>
+						<li class="child"><a href="">Horários</a></li>
+						<li class="child"><a href="">Modalidades</a></li>
+					</ul>
+				</div>
+				<div><a href="#"><li class="current">Conta Pessoal</li>
+					<ul>
+						<li class="child"><a href="">Perfil</a></li>
+						<li class="child"><a href="">Plano Treino</a></li>
+						<li class="child"><a href="">Plano Alimentar</a></li>
+					</ul></a></div>
+				<div><a href="#"><li class="parent">Administração</li></a></div>
 			</ul>
-			<a href="#"><li class="parent">Conta Pessoal</li></a>
-			<ul>
-				<li class="child"><%= link_to "Perfil", current_user%></li>
-        <li class="child"><a href="">Plano Treino</a></li>
-			</ul>
-      <% if current_user && (current_user.admin? || current_user.staff?) %>
-			<a href="#"><li class="parent">Administração</li></a>
-      <ul>
-				<li class="child"><%= link_to "Utilizadores", users_path %></li>
-				<li class="child"><%= link_to "Exercicios", exercicios_path %></li>
-			</ul>
-      <% end %>
-		</ul>
 	
-      <div id="content">
+      
 		  <%= yield %>
       </div>
 

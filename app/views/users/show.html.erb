@@ -1,29 +1,21 @@
 <p id="notice"><%= notice %></p>
-
-<p>
+<div id="profile">
+<h1>Perfil</h1>
+<div id="info">
   <b>Nome:</b>
-  <%= @user.nome %>
-</p>
+  <%= @user.nome %><br />
 
-<p>
   <b>Email:</b>
-  <%= @user.email %>
-</p>
+  <%= @user.email %><br />
 
-<p>
   <b>Data de Nascimento:</b>
-  <%= @user.datanascimento %>
-</p>
+  <%= @user.datanascimento %><br />
 
-<p>
   <b>Telefone:</b>
-  <%= @user.telefone %>
-</p>
+  <%= @user.telefone %><br />
 
-<p>
   <b>Morada:</b>
-  <%= @user.morada %>
-</p>
+  <%= @user.morada %><br />
 
 <% if current_user.admin? && current_user.id != @user.id %>
 <%= link_to "Promover", :controller => "users", :action => "promote", :id => @user %> |
@@ -33,4 +25,6 @@
 <% if @user.normal? %>
 <%= link_to "Planos", user_planos_path(@user) %> |
 <% end %>
+</div>
+</div>
 
