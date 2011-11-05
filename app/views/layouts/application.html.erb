@@ -4,7 +4,7 @@
   <title>Fit</title>
   <%= stylesheet_link_tag "screen" %>
   <%= stylesheet_link_tag "mobile" if mobile_device? %>
-  <%= javascript_include_tag "aplication.js", "controls.js", "dragdrop.js", "efects.js", "prototype.js", "jquery.js", "rails.js", "utils.js", "menu.js", "jquery.js" %>
+  <%= javascript_include_tag "aplication.js", "controls.js", "dragdrop.js", "efects.js", "prototype.js", "jquery.js", "rails.js", "utils.js", "menu.js", "login.js", "jquery.js" %>
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -24,13 +24,9 @@
       </p>
     
     <% else %> 
-      <p id="top"> <a id="login-text">Log in</a> </p>
+      <p id="top"> <a id="login_txt" href="#">Log in</a> </p>
       <%= render :partial => '/sessions/form' %>
-    <% end %>
-</p>
-
-
-    
+    <% end %>    
 
   </div>
   
