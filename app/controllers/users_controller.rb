@@ -11,6 +11,7 @@ class UsersController < ApplicationController
   end
 
   def create
+    params[:user][:email] = params[:user][:email].downcase
     @user = User.new(params[:user])
     if @user.save
       redirect_to root_url, :notice => "Utilizador Registado"
