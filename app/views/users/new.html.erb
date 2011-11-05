@@ -1,44 +1,5 @@
-<%= form_for @user do |f| %>
+<h1>Novo Utilizador</h1>
 
-  <% if @user.errors.any? %>
-    <div class="error_messages">
-      <h2>Form is invalid</h2>
-      <ul>
-        <% for message in @user.errors.full_messages %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <div class="field">
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
-  </div>
-  <div class="field">
-    <%= f.label :datanascimento, "Data de Nascimento" %><br />
-    <%= f.text_field :datanascimento %>
-  </div>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :telefone %><br />
-    <%= f.text_field :telefone %>
-  </div>
-  <div class="field">
-    <%= f.label :morada %><br />
-    <%= f.text_field :morada %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </div>
+<%= render 'form' %>
 
-  <div class="actions"><%= f.submit %></div>
-<% end %>
-
+<%= link_to 'Listar Utilizadores', users_path %>

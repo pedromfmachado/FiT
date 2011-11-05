@@ -1,0 +1,5 @@
+<h1>Novo Utilizador</h1>
+
+<%= render 'form' %>
+
+<%= link_to 'Listar Utilizadores', exercicios_path %>

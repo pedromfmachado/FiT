@@ -5,7 +5,7 @@ class PlanosController < ApplicationController
   # GET /planos.xml
   def index
     if(params[:user_id])
-      @planos = Plano.where(:user_id => params[:user_id]).order(:data)
+      @planos = Plano.where(:user_id => params[:user_id]).order('data DESC')
       @user = User.find(params[:user_id])
     else
       @planos = Plano.all

@@ -1,6 +1,6 @@
 <% if current_user && @planos.count > 0 %>
 
-<h1>Listing planos</h1>
+<h1>Planos</h1>
 
 
 <table>
@@ -17,12 +17,12 @@
     <td><%= plano.data %></td>
     <td><%= plano.altura %></td>
     <td><%= plano.peso %></td>
-    <td><%= link_to 'Show', user_plano_path(@user,plano) %></td>
+    <td><%= link_to 'Ver', user_plano_path(@user,plano) %></td>
     <% if can? :update, Plano %>
-    <td><%= link_to 'Edit', edit_user_plano_path(@user,plano) %></td>
+    <td><%= link_to 'Editar', edit_user_plano_path(@user,plano) %></td>
     <%end%>
     <% if can? :destroy, Plano %>
-    <td><%= link_to 'Destroy', user_plano_path(@user,plano),:confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Apagar', user_plano_path(@user,plano),:confirm => 'Are you sure?', :method => :delete %></td>
     <%end%>
   </tr>
   <% end %>
@@ -32,5 +32,5 @@
 
 <br />
 <% if can? :create, Plano %>
-<%= link_to 'New Plano', new_user_plano_path(params[:user_id]) %>
+<%= link_to 'Novo Plano', new_user_plano_path(params[:user_id]) %>
 <% end %>

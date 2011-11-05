@@ -33,7 +33,7 @@
 
 
   <div id="logo"> 
-    <%link_to image_tag("logo5.png"), root_url %>
+    <%= link_to image_tag("logo5.png"), root_url %>
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, :id => "flash_#{name}" %>
     <% end %>
@@ -52,38 +52,34 @@
    <div id="content">
     <%if current_user %>
     <ul id="menu">
-				<div><%= link_to root_url do %><li class="parent">Home</li><%end%></div>
-				<div><a href="#"><li class="parent">News</li></a></div>
-				<div><a href="#"><li class="parent">Ginásios</li></a></div>
-				<div> <a href="www.google.pt"><li class="parent">Aulas</li></a>
-					<ul>
-						<li class="child"><a href="">Horários</a></li>
-						<li class="child"><a href="">Modalidades</a></li>
-					</ul>
-				</div>
-				<div><a href="#"><li class="current">Conta Pessoal</li>
-					<ul>
-            <%if current_user %>
-						<li class="child"><%= link_to "Perfil", current_user %></li>
-            <% end %>
-            <%if current_user && current_user.normal? %>
-						<li class="child"><%= link_to "Planos de treinos", user_planos_path(current_user) %></li>
-            <% end %>
-					</ul></a></div>
-        <%if current_user && current_user.admin?%>
-				<div><a href="#"><li class="current">Administração</li>
-					<ul>
-						<li class="child"><%= link_to "Utilizadores", users_path %></li>
-						<li class="child"><%= link_to "Exercícios", exercicios_path %></li>
-					</ul></a></div>
+        <%= link_to root_url do %><li class="parent">Home</li><%end%>
+        <a href="#"><li class="parent">Notícias</li></a>
+        <a href="#"><li class="parent">Ginásios</li></a>
+        <a href="#"><li class="parent">Aulas</li></a>
+          <ul>
+            <li class="child"><a href="">Horários</a></li>
+            <li class="child"><a href="">Modalidades</a></li>
+          </ul>
+        <a href="#"><li class="parent">Conta Pessoal</li></a>
+        <ul>
+          <%if current_user %>
+		        <li class="child"><%= link_to "Perfil", current_user %></li>
+          <% end %>
+          <%if current_user && current_user.normal? %>
+		        <li class="child"><%= link_to "Planos de treinos", user_planos_path(current_user) %></li>
+          <% end %>
+        </ul>
+        <% if current_user && (current_user.admin? || current_user.staff?) %>
+        <a href="#"><li class="parent">Administração</li></a>
+          <ul>
+          <li class="child"><%= link_to "Utilizadores", users_path %></li>
+          <li class="child"><%= link_to "Exercicios", exercicios_path %></li>
+          </ul>
         <% end %>
-		</ul>
+      </ul>
     <% end %>
 
-
-	
-      
-		  <%= yield %>
+		  <div id="content-text"><%= yield %></div>
       </div>
 
       <div class="line"></div>

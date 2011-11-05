@@ -1,0 +1,29 @@
+<% if current_user && @users.count > 0 %>
+
+<h1>Utilizadores</h1>
+
+
+<table>
+  <tr>
+    <th>Nr.</th>
+    <th>Nome</th>
+
+  </tr>
+
+<% @users.each do |user| %>
+  <tr>
+    <td><%= user.id %></td>
+    <td><%= user.nome %></td>
+    <td><%= link_to 'Show', user %></td>
+    <% if can? :destroy, User %>
+    <td><%= link_to 'Apagar', user, :confirm => 'Are you sure?', :method => :delete %></td>
+    <%end%>
+  </tr>
+  <% end %>
+<% end %>
+</table>
+
+<br />
+<% if can? :create, User %>
+<%= link_to 'New user', new_user_path %>
+<% end %>

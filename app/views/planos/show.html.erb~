@@ -10,7 +10,7 @@
   <b>Peso:</b>
   <%= @plano.peso %><br />
 
-  <b> Exercicios: </b><br />
+  <b> Exercicios: </b>
   <table>
     <tr>
       <th>Nome</th>
@@ -25,7 +25,7 @@
   </table>
 
 
-<%= link_to 'Edit', edit_user_plano_path(params[:user_id],@plano) %> |
-<%= link_to 'Back', user_planos_path(params[:user_id]) %>
+<%= link_to 'Editar', edit_user_plano_path(params[:user_id],@plano) %> |
+<%= link_to 'Listar Planos', user_planos_path(params[:user_id]) %>
 </div>
 </div>

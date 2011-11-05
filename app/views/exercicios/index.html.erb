@@ -15,13 +15,13 @@
     <td><%= exercicio.nome %></td>
     <td><%= exercicio.maquina %></td>
     <td><%= exercicio.tipo %></td>
-    <td><%= link_to 'Show', exercicio %></td>
-    <td><%= link_to 'Edit', edit_exercicio_path(exercicio) %></td>
-    <td><%= link_to 'Destroy', exercicio, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Ver', exercicio %></td>
+    <td><%= link_to 'Editar', edit_exercicio_path(exercicio) %></td>
+    <td><%= link_to 'Apagar', exercicio, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Exercicio', new_exercicio_path %>
+<%= link_to 'Novo Exercício', new_exercicio_path %>
