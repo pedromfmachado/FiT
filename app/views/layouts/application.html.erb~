@@ -24,7 +24,7 @@
       </p>
     
     <% else %> 
-      <p id="top"> <a id="login_txt" href="#">Login</a> </p>
+      <p id="top"> <a id="login_txt" href="#">Log in</a> </p>
       <%= render :partial => '/sessions/form' %>
     <% end %>    
 
@@ -33,7 +33,7 @@
 
 
   <div id="logo"> 
-    <%= image_tag "logo.png" %>
+    <%= image_tag "logo5.png" %>
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, :id => "flash_#{name}" %>
     <% end %>
@@ -43,10 +43,7 @@
 
 
   <div class="line"></div>
-  <div id="pitch">
-		<h1>We provide turnkey, high-quality<br />solutions regardless of the project size.</h1>
-		<h2>We're a professional, full service web development company that creates elegant website designs and build innovative web applications.</h2>
-	</div>
+
 
    <div id="content">
     <ul id="menu">

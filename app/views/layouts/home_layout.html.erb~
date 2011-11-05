@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fit</title>
+  <%= stylesheet_link_tag "screen" %>
+  <%= stylesheet_link_tag "mobile" if mobile_device? %>
+  <%= javascript_include_tag "aplication.js", "controls.js", "dragdrop.js", "efects.js", "prototype.js", "jquery.js", "rails.js", "utils.js", "menu.js", "login.js", "jquery.js" %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<div id="page">
+
+  <div id="login"> 
+    
+    
+    <% if current_user %>
+      <p id="top">
+      Logged in as <%= current_user.nome %>.
+        <% if current_user.admin? %>
+        <%= link_to "Registar membro", sign_up_path %> or
+        <% end %>
+      <%= link_to "Ver perfil", current_user %> or
+      <%= link_to "Log out", log_out_path %>.
+      </p>
+    
+    <% else %> 
+      <p id="top"> <a id="login_txt" href="#">Log in</a> </p>
+      <%= render :partial => '/sessions/form' %>
+    <% end %>    
+
+  </div>
+  
+
+
+  <div id="logo"> 
+    <%= image_tag "logo5.png" %>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
+  </div>
+
+  
+
+  
+  <div class="line"></div>
+  <div id="pitch">
+	<h1>We provide turnkey, high-quality<br />solutions regardless of the project size.</h1>
+	<h2>We're a professional, full service web development company that creates elegant website designs and build innovative web applications.</h2>
+</div>
+
+
+
+   <div id="content">
+    <ul id="menu">
+				<div><%= link_to root_url do %><li class="parent">Home</li><%end%></div>
+				<div><a href="#"><li class="parent">News</li></a></div>
+				<div><a href="#"><li class="parent">Ginásios</li></a></div>
+				<div> <a href="www.google.pt"><li class="parent">Aulas</li></a>
+					<ul>
+						<li class="child"><a href="">Horários</a></li>
+						<li class="child"><a href="">Modalidades</a></li>
+					</ul>
+				</div>
+				<div><a href="#"><li class="current">Conta Pessoal</li>
+					<ul>
+						<li class="child"><%= link_to "Perfil", current_user %></li>
+            <%if current_user && current_user.normal? %>
+						<li class="child"><%= link_to "Planos de treinos", user_planos_path(current_user) %></li>
+            <% end %>
+					</ul></a></div>
+        <%if current_user && current_user.admin?%>
+				<div><a href="#"><li class="current">Administração</li>
+					<ul>
+						<li class="child"><%= link_to "Utilizadores", users_path %></li>
+						<li class="child"><%= link_to "Exercícios", exercicios_path %></li>
+					</ul></a></div>
+        <% end %>
+			</ul>
+
+
+	
+      
+		  <%= yield %>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="left">
+			<h4>Join the Movement</h4>
+			<p><em>Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</em></p>
+		</div>
+		<div class="right">
+			<h3>12 / 2009</h3>
+			<p>Duis rutrum dapibus diam. Sed turpis sem, suscipit et, ullamcorper vel, aliquam in, tellus. Phasellus interdum. Sed pede. Fusce semper tellus quis sapien.</p>
+			<br />
+			<h3>12 / 2009</h3>
+			<p>Duis rutrum dapibus diam. Sed turpis sem, suscipit et, ullamcorper vel, aliquam in, tellus. Phasellus interdum. Sed pede. Fusce semper tellus quis sapien.</p>
+		</div>
+  </div>
+
+  <div id="footer">
+	  <div id="footer-info">
+		  <ul>
+			  <li> <%= link_to "About", root_path %> </li>
+			  <li> <%= link_to "FAQ", root_path %> </li>
+			  <li> <%= link_to "Terms of Use", root_path %> </li>
+			  <li> <%= link_to "Help", root_path %> </li>
+        <% if !mobile_device? %>
+           <li ><%= link_to "Mobile Site", :mobile => 1 %></li>
+        <% end %>
+		  </ul>
+	  </div>
+	  <div id="footer-social">
+		  <ul>	
+			  <li> <%= link_to "Facebook", root_path %> </li>
+			  <li> <%= link_to "Twitter", root_path %> </li>
+		  </ul>
+	  </div>
+  </div>
+
+</body>
+</html>
