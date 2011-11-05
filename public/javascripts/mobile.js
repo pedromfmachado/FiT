@@ -1,1 +1,4 @@
-$.jQTouch({});
+$.jQTouch({
+  statusBar: 'black'
+
+});
