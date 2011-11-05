@@ -44,13 +44,13 @@
   
   <div class="line"></div>
   <div id="pitch">
-	<h1>We provide turnkey, high-quality<br />solutions regardless of the project size.</h1>
-	<h2>We're a professional, full service web development company that creates elegant website designs and build innovative web applications.</h2>
-</div>
-
+	  <h1>We provide turnkey, high-quality<br />solutions regardless of the project size.</h1>
+	  <h2>We're a professional, full service web development company that creates elegant website designs and build innovative web applications.</h2>
+  </div>
 
 
    <div id="content">
+    <%if current_user %>
     <ul id="menu">
 				<div><%= link_to root_url do %><li class="parent">Home</li><%end%></div>
 				<div><a href="#"><li class="parent">News</li></a></div>
@@ -63,7 +63,9 @@
 				</div>
 				<div><a href="#"><li class="current">Conta Pessoal</li>
 					<ul>
+            <%if current_user %>
 						<li class="child"><%= link_to "Perfil", current_user %></li>
+            <% end %>
             <%if current_user && current_user.normal? %>
 						<li class="child"><%= link_to "Planos de treinos", user_planos_path(current_user) %></li>
             <% end %>
@@ -75,7 +77,8 @@
 						<li class="child"><%= link_to "Exercícios", exercicios_path %></li>
 					</ul></a></div>
         <% end %>
-			</ul>
+		</ul>
+    <% end %>
 
 
 	
