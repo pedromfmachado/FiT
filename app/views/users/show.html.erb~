@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div id="profile">
-Perfil
+<h1>Perfil</h1>
 <div id="info">
   <b>Nome:</b>
   <%= @user.nome %><br />

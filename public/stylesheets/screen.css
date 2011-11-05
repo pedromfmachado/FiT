@@ -22,7 +22,10 @@ p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 .line { clear: both; border-bottom: 1px solid #ddd; margin: 0 0 45px; }
 .clear { clear: both; }
 
-#page { width: 970px; margin: 0 auto; }
+#page {
+	width: 970px;
+	margin: 0 auto;
+}
 
 #login {
 	float:right;
@@ -122,11 +125,6 @@ p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 	background: #000
 }
 
-p.title {
-	font:"Arial Black", Gadget, sans-serif;
-	font-size:24px;
-}
-
 #content{
 	margin: 0 0px 30px 0px;
 	line-height: 1.64em;
@@ -147,17 +145,18 @@ width: 750px;
 
 #info{
 	float: left;
-	margin-top: 20px;
+	margin-top: 10px;
 	line-height: 2.5em;
 }
 
 #profile h1{
 	font-size: 2.6em;
 	color: #000;
-	margin: 0 0 10px;
+	margin: 0 0 20px;
 	padding-bottom: 5px;
 	color:#777;
 	font-weight: bold;
+	
 	/*border-bottom: 1px solid #ddd;
 	width: 500px;*/
 }
@@ -180,7 +179,7 @@ width: 750px;
 		
 #footer {
 	width: 100%;
-	background-color: AAAAAA;
+	background-color: #AAAAAA;
 	overflow:hidden;
 	padding: 20px 0 20px 0;
 }
@@ -217,4 +216,33 @@ width: 750px;
 	text-decoration:none;
 	text-shadow: 1px 1px 0px #808080;
 	
+}
+
+table, tr, td{
+	border: none;
+    border-collapse:collapse;
+}
+
+tr.header td{
+	background: #B00A0A url(../images/redbg.gif) repeat-x left bottom;
+	color: #fff;
+}
+
+td {
+    border-bottom:1px #AAA solid;
+	border-top:1px #AAA solid;
+	padding: 5px 20px;
+	margin-right: 10px;
+}
+
+tr.header {
+	color: #B00A0A;
+}
+
+#flash_notice{
+    color:green;
+}
+
+#flash_alert{
+    color:red;
 }
