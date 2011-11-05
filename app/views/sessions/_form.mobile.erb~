@@ -1,9 +1,6 @@
 <%= form_tag sessions_path, :class => "form" do %>
-<ul class ="rounded">
-    <li><%= text_field_tag :email, params[:email] %></li>
-    <li><%= password_field_tag :password %></li>
-</ul>
-
-    <%= submit_tag "Log in", :class => "submit"%>
+<%= text_field_tag :email, params[:email] %><br />
+<%= password_field_tag :password %><br />
+<%= submit_tag "Log in", :class => "submit"%>
 
 <% end %>
