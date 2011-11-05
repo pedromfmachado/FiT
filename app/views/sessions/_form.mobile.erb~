@@ -2,8 +2,8 @@
 <ul class ="rounded">
     <li><%= text_field_tag :email, params[:email] %></li>
     <li><%= password_field_tag :password %></li>
-
-
-    <%= submit_tag "Log in", :class => "button"%>
 </ul>
+
+    <%= submit_tag "Log in", :class => "greenButton"%>
+
 <% end %>
