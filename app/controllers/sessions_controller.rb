@@ -16,7 +16,7 @@ class SessionsController < ApplicationController
     else
       respond_to do |format|
         format.html {redirect_to(root_url, :notice => 'Invalid email or password')}
-        format.mobile {redirect_to(new_sessions_path, :notice => 'Invalid email or password')}
+        format.mobile {redirect_to(new_session_path, :notice => 'Invalid email or password')}
       end
     end
   end
