@@ -33,7 +33,7 @@
 
 
   <div id="logo"> 
-    <%= image_tag "logo5.png" %>
+    <% =link_to image_tag("logo5.png"), root_url %>
     <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, :id => "flash_#{name}" %>
     <% end %>
