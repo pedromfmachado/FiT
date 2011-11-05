@@ -24,7 +24,7 @@
       </p>
     
     <% else %> 
-      <p id="top"> <a id="login_txt" href="#">Log in</a> </p>
+      <p id="top">Welcome! Please <a id="login_txt" href="#">log in here</a>. </p>
       <%= render :partial => '/sessions/form' %>
     <% end %>    
 
@@ -77,9 +77,11 @@
           </ul>
         <% end %>
       </ul>
-    <% end %>
+    
 
-		  <div id="content-text"><%= yield %></div>
+		  <div id="content-text">
+      <% end %>
+        <%= yield %></div>
       </div>
 
       <div class="line"></div>
