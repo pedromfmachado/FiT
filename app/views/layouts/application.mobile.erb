@@ -11,7 +11,7 @@
     <div class="current">
       <div class="toolbar">
         <%= link_to "Back", nil, :class => "back" unless current_page? root_path %>
-        <h1>FiT!</h1>
+        <h1><%=h yield(:title) %></h1>
         <%= link_to "Full Site", root_url(:mobile => 0), :class => "button", :rel => "external" %>
         <%= yield(:toolbar) %>
       </div>
@@ -24,7 +24,6 @@
         </div>
       <% end %>
       <% if !current_user || (current_user && current_user.normal?) %>
-        <%= image_tag "logo3.png" %>
         <%= yield %>
       <% else %>
         A versão movél do site está apenas disponível para utilizadores não administrativos!
