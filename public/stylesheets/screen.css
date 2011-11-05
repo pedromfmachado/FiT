@@ -4,8 +4,8 @@
 
 body {
 	font: .8em Arial, Tahoma, Verdana;
-	background: #fff url(../images/bg.gif)
-	repeat-x; color: #777;
+	background: #fff url(../images/bg.gif) repeat-x;
+	color: #777;
 }
 
 a {
@@ -20,26 +20,71 @@ h3 { font-size: 1.2em; background: #B00A0A url(../images/redbg.gif) repeat-x lef
 h4 { margin: 0 0 15px; color: #555; font-weight: normal; font-size: 1.6em; font-weight: normal; }
 p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 .line { clear: both; border-bottom: 1px solid #ddd; margin: 0 0 45px; }
-.vline { clear: both; border-right: 10px solid #ddd; margin: 0 0 45px; }
 .clear { clear: both; }
 
-#content {
-	width: 970px;
-	margin: 0 auto;
+#page { width: 970px; margin: 0 auto; }
+
+#login {
+	float:right;
 }
 
 #top {
 	color: #ccc;
-	padding: 6px 20px 0px;
 	font-size: 12px;
 	font-weight: bold;
 	text-align: right;
+	margin: 0 0 0 0;
+	padding: 5px 0px 5px 0px;
+}
+
+#login-panel {
+	/*background: #DDD;*/
+	padding: 10px 0px 10px 0px;
+	height: 105px;
+}
+
+.form-item {
+	margin: 5px 0 5px 0;
+	height: 30px;
+}
+
+.form-item label {
+	float: left;
+	width: 65 px;
+	text-align: right;
+	font-weight: bold;
+	font-size: 12px;
+	margin: 0 5px 0 0;
+	padding-top: 6px;
+}
+
+.form-item input{
+	float: right;
+	padding: 4px 5px;
+}
+
+#remember {
+	float: left;
+	padding: 5px 10px 5px 10px;
+	margin: 5px 0 0 0;
+}
+
+#login_btn{
+	background: #B00A0A url(../images/redbg.gif) repeat-x left bottom;
+	color: #FFF;
+	padding: 5px 10px 5px 10px;
+	margin: 5px 0 0 0;
+	border: none;
+	font-weight: bold;
+	float: right;
+	font-size:11px;
+	
 }
 
 #logo {
 	float: left;
 	padding: 20px 5px 15px;
-	margin: 20px 0 20px;
+	margin: 60px 0 20px;
 }
 
 #menu {
@@ -74,15 +119,48 @@ p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 }
 
 #menu a li.parent:hover, #menu a li.current, #menu a li.parent:focus {
-	/*border-bottom: 1px solid #ddd;*/
 	background: #000
 }
 
-#content-text {
-	margin: 0 0px 30px 220px;
-	line-height: 1.64em;
+p.title {
+	font:"Arial Black", Gadget, sans-serif;
+	font-size:24px;
 }
 
+#content{
+	margin: 0 0px 30px 0px;
+	line-height: 1.64em;
+	text-align: justify;
+}
+
+#profile{
+float: right;
+width: 750px;
+}
+
+#profile img{
+	height: 220;
+	width: 190;
+	float: right;
+	margin-bottom: 20px;
+}
+
+#info{
+	float: left;
+	margin-top: 20px;
+	line-height: 2.5em;
+}
+
+#profile h1{
+	font-size: 2.6em;
+	color: #000;
+	margin: 0 0 10px;
+	padding-bottom: 5px;
+	color:#777;
+	font-weight: bold;
+	/*border-bottom: 1px solid #ddd;
+	width: 500px;*/
+}
 
 #pitch {
 	background: url(../images/photo1.jpg) no-repeat right top;
@@ -97,12 +175,12 @@ p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 	.left { float: left; width: 250px; }	
 	.right { float: right; width: 630px; margin: 0 0 20px; }
 		.right h3 { background: #808080; font-size: .84em; }
-	.third { float: left; width: 296px; margin: 0 40px 20px 0; }
+	.third { float: left; width: 296px;; margin: 0 40px 20px 0; }
 		.last { margin-right: 0; }
-
+		
 #footer {
 	width: 100%;
-	background-color: #AAAAAA;
+	background-color: AAAAAA;
 	overflow:hidden;
 	padding: 20px 0 20px 0;
 }
@@ -139,20 +217,4 @@ p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 	text-decoration:none;
 	text-shadow: 1px 1px 0px #808080;
 	
-}
-
-table, tr, td{
-
-    border:1px black solid;
-    padding-left:20px;
-    padding-right:20px;
-    border-collapse:collapse;
-}
-
-#flash_notice{
-    color:green;
-}
-
-#flash_alert{
-    color:red;
 }

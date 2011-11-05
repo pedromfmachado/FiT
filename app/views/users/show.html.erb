@@ -30,5 +30,7 @@
 <%= link_to "Despromover", :controller => "users", :action => "demote", :id => @user %> |
 <% end %>
 
+<% if @user.normal? %>
 <%= link_to "Planos", user_planos_path(@user) %> |
+<% end %>
 

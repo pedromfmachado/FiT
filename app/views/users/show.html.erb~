@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @user.nome %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Data de Nascimento:</b>
+  <%= @user.datanascimento %>
+</p>
+
+<p>
+  <b>Telefone:</b>
+  <%= @user.telefone %>
+</p>
+
+<p>
+  <b>Morada:</b>
+  <%= @user.morada %>
+</p>
+
+<% if current_user.admin? && current_user.id != @user.id %>
+<%= link_to "Promover", :controller => "users", :action => "promote", :id => @user %> |
+<%= link_to "Despromover", :controller => "users", :action => "demote", :id => @user %> |
+<% end %>
+
+<% if @user.normal? %>
+<%= link_to "Planos", user_planos_path(@user) %> |
+<% end %>
+
