@@ -4,6 +4,6 @@
     <li><%= password_field_tag :password %></li>
 </ul>
 
-    <%= submit_tag "Log in", :class => "blueButton"%>
+    <%= submit_tag "Log in", :style => "margin-left:45%", :class => "whiteButton"%>
 
 <% end %>
