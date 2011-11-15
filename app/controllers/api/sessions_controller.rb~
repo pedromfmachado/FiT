@@ -9,7 +9,7 @@ class Api::SessionsController < ApiController
     user = User.authenticate(params[:email], params[:password])
     if user
       session[:user_id] = user.id
-      render :xml => user.token
+      render :xml => User.
     else
       render :xml => { :error => 'User not autenticated' }, :status =>  149
     end
