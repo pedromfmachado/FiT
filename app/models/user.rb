@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  
+    
   has_many :admins
   has_many :staffs
   has_many :planos
@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
 
   attr_accessor :password
   before_save :encrypt_password
+  before_create :set_token
+  before_update :set_token
 
   validates_confirmation_of :password
   validates :password, :presence => true, :length => { :in => 6..20 }
@@ -30,6 +32,10 @@ class User < ActiveRecord::Base
       self.password_salt = BCrypt::Engine.generate_salt
       self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
     end
+  end
+
+  def set_token
+    self.token = UUIDTools::UUID.timestamp_create
   end
 
   def admin?

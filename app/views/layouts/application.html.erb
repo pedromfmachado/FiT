@@ -15,16 +15,16 @@
     
     <% if current_user %>
       <p id="top">
-      Logged in as <%= current_user.nome %>.
+      Ligado como <%= current_user.nome %>.
         <% if current_user.admin? %>
-        <%= link_to "Registar membro", sign_up_path %> or
+        <%= link_to "Registar membro", sign_up_path %> ou
         <% end %>
-      <%= link_to "Ver perfil", current_user %> or
+      <%= link_to "Ver perfil", current_user %> ou
       <%= link_to "Log out", log_out_path %>.
       </p>
     
     <% else %> 
-      <p id="top">Welcome! Please <a id="login_txt" href="#">log in here</a>. </p>
+      <p id="top">Olá! Faça <a id="login_txt" href="#">log in aqui</a>. </p>
       <%= render :partial => '/sessions/form' %>
     <% end %>    
 

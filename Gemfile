@@ -11,6 +11,8 @@ gem "bcrypt-ruby", :require => "bcrypt"
 
 gem "cancan"
 
+gem "uuidtools"
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
