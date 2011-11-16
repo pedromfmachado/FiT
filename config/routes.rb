@@ -13,9 +13,8 @@ Fit::Application.routes.draw do
   resources :sessions
 
   namespace :api do
-    resources :users do
-      resources :planos
-    end
+    resources :users
+    resources :planos
     resources :exercicios
     resources :sessions
   end

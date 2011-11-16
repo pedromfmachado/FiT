@@ -14,7 +14,10 @@
   <tr>
     <td><%= user.id %></td>
     <td><%= user.nome %></td>
-    <td><%= link_to 'Show', user %></td>
+    <td><%= link_to 'Ver', user %></td>
+    <% if can? :edit, User %>
+    <td><%= link_to 'Editar', edit_user_path(user) %></td>
+    <%end%>
     <% if can? :destroy, User %>
     <td><%= link_to 'Apagar', user, :confirm => 'Are you sure?', :method => :delete %></td>
     <%end%>

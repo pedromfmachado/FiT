@@ -8,15 +8,14 @@ class User < ActiveRecord::Base
   attr_accessor :password
   before_save :encrypt_password
   before_create :set_token
-  before_update :set_token
 
   validates_confirmation_of :password
-  validates :password, :presence => true, :length => { :in => 6..20 }
+  validates :password, :presence => true, :length => { :in => 6..20 }, :on => :create
   validates :nome, :presence => true
   validates :datanascimento, :presence => true
   validates :morada, :presence => true
   validates :telefone, :presence => true
-  validates :email, :uniqueness => true, :presence => true
+  validates :email, :uniqueness => true, :presence => true, :on => :create
   
   def self.authenticate(email, password)
     user = find_by_email(email)
