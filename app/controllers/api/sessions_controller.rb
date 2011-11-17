@@ -11,12 +11,12 @@ class Api::SessionsController < ApiController
 		if user
 			session[:user_id] = user.id
 
-			@xml = Builder::XmlMarkup.new( :indent => 2 )
-			@xml.instruct! :xml
-			@xml.session do |x|
+			xml = Builder::XmlMarkup.new( :indent => 2 )
+			xml.instruct! :xml
+			xml.session do |x|
 				x.token user.token
 			end
-			render :xml => @xml
+			render :xml => session
 		else
 			render :xml => { :error => 'User not autenticated' }, :status =>  149
 		end
