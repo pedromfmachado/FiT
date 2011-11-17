@@ -16,7 +16,7 @@ class Api::SessionsController < ApiController
 			@xml.session do |x|
 				x.token user.token
 			end
-			render @xml
+			render :xml => @xml
 		else
 			render :xml => { :error => 'User not autenticated' }, :status =>  149
 		end
