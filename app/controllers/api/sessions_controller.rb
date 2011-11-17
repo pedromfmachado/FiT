@@ -9,13 +9,8 @@ class Api::SessionsController < ApiController
 	def create
 		user = User.authenticate(params[:email], params[:password])
 		if user
-			session[:user_id] = user.id
+			session[:token] = user.token
 
-			xml = Builder::XmlMarkup.new( :indent => 2 )
-			xml.instruct! :xml
-			xml.session do |x|
-				x.token user.token
-			end
 			render :xml => session
 		else
 			render :xml => { :error => 'User not autenticated' }, :status =>  149

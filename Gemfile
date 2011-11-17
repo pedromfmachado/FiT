@@ -13,6 +13,8 @@ gem "cancan"
 
 gem "uuidtools"
 
+gem "less-rails-bootstrap"
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
