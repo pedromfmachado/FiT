@@ -1,3 +1,12 @@
+/* nao apagar! */
+
+body {
+  padding-top: 40px; /* used to fix bootstrap topbar */
+}
+
+/* *************** */
+/* parte do miller */
+
 #page {
 	width: 970px;
 	margin: 0 auto;
@@ -14,12 +23,6 @@
 	text-align: right;
 	margin: 0 0 0 0;
 	padding: 5px 0px 5px 0px;
-}
-
-#login-panel {
-	/*background: #DDD;*/
-	padding: 10px 0px 10px 0px;
-	height: 105px;
 }
 
 #remember {
@@ -41,14 +44,14 @@
 }
 
 #logo {
-	float: left;
-	padding: 20px 5px 15px;
-	margin: 60px 0 20px;
+  width: 970px;
+  float: left;
+  padding: 20px 5px 15px;
+  margin: 0px 0 20px;
 }
 
 #menu {
 	float: left;
-	margin: 0 25px 0 0;
 }
 
 #menu li{
@@ -81,21 +84,22 @@
 	background: #000
 }
 
-#content{
-	margin: 0 0px 30px 0px;
-	line-height: 1.64em;
-	text-align: justify;
+#content {
+  width: 970px;
+  float: right;
+
+  line-height: 1.64em;
+  text-align: justify;
 }
 
-#content-text{
-
-  padding-left:30%;
-  
+#content-text {
+  float: right;
+  width: 720px;
 }
 
-#profile{
-float: right;
-width: 750px;
+#profile {
+  float: right;
+  width: 720px;
 }
 
 #profile img{
@@ -124,15 +128,21 @@ width: 750px;
 }
 
 #pitch {
-	background: url(../images/photo1.jpg) no-repeat right top;
-	padding: 30px 350px 0 0;
-	border-bottom: 1px solid #ddd;
-	height: 210px;
-	margin: 0 0 35px;
+  height: 210px;
+  float: left;
+  background: url(../images/photo1.jpg) no-repeat right top;
+  padding: 30px 350px 0 0;
+  border-bottom: 1px solid #ddd;
+  margin: 0 0 35px;
 }
 
-#pitch h1 { font-size: 2.6em; color: #000; margin: 0 0 20px; }
-#pitch h2 { line-height: 1.5em; }
+#pitch h1 {
+  font-size: 2.6em;
+  color: #000;
+  margin: 0 0 20px;
+}
+
+#pitch h2 { line-height: 1.5em; font-size: 19px;}
 	.left { float: left; width: 250px; }	
 	.right { float: right; width: 630px; margin: 0 0 20px; }
 		.right h3 { background: #808080; font-size: .84em; }

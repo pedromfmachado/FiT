@@ -2,115 +2,109 @@
 <html>
 <head>
   <title>Fit</title>
-  <%= stylesheet_link_tag "screen", "bootstrap" %>
+  <%= stylesheet_link_tag "bootstrap", "screen" %>
   <%= stylesheet_link_tag "mobile" if mobile_device? %>
   <%= javascript_include_tag "aplication.js", "controls.js", "dragdrop.js", "efects.js", "prototype.js", "jquery.js", "rails.js", "utils.js", "menu.js", "login.js", "jquery.js" %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-<div id="page">
 
-  <div id="login"> 
-    
-    
+<!-- login bar -->
+<div class="topbar">
+  <div class="fill">
+    <div class="container">
+      <a class="brand" href="#">FiT</a>
+
     <% if current_user %>
-      <p id="top">
-      Ligado como <%= current_user.nome %>.
+
+      <!-- TODO: mudar links para lista com dropdown -->
+      <p class="pull-right">Ligado como <%= current_user.nome %>.
+
         <% if current_user.admin? %>
-        <%= link_to "Registar membro", sign_up_path %> ou
+          <%= link_to "Registar membro", sign_up_path %> ou
         <% end %>
-      <%= link_to "Ver perfil", current_user %> ou
-      <%= link_to "Log out", log_out_path %>.
+
+        <%= link_to "Ver perfil", current_user %> ou
+        <%= link_to "Log out", log_out_path %>.
       </p>
-    
+
+    <!-- render <form> written in separate file -->    
     <% else %> 
-      <p id="top">Olá! Faça <a id="login_txt" href="#">log in aqui</a>. </p>
       <%= render :partial => '/sessions/form' %>
-    <% end %>    
+    <% end %> 
 
+    </div>
   </div>
-  
+</div> <!-- endof .topbar -->
 
-
+<div id="page">
   <div id="logo"> 
-    <%= link_to image_tag("logo5.png"), root_url %>
-    <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, :id => "flash_#{name}" %>
-    <% end %>
+    <!-- so faz sentido a imagem estar na pagina inicial... -->
   </div>
-
-  
-
 
   <div class="line"></div>
 
+  <div id="content">
+    <ul id="menu">
+      <%= link_to root_url do %> <li class="parent">Home</li> <%end%>
+      <a href="#"><li class="parent">Notícias</li></a>
+      <a href="#"><li class="parent">Ginásios</li></a>
+      <a href="#"><li class="parent">Aulas</li></a>
 
-   <div id="content">
-      <ul id="menu">
-        <%= link_to root_url do %><li class="parent">Home</li><%end%>
-        <a href="#"><li class="parent">Notícias</li></a>
-        <a href="#"><li class="parent">Ginásios</li></a>
-        <a href="#"><li class="parent">Aulas</li></a>
-          <ul>
-            <li class="child"><a href="">Horários</a></li>
-            <li class="child"><a href="">Modalidades</a></li>
-          </ul>
-        <a href="#"><li class="parent">Conta Pessoal</li></a>
-        <ul>
-          <%if current_user %>
-		        <li class="child"><%= link_to "Perfil", current_user %></li>
-          <% end %>
-          <%if current_user && current_user.normal? %>
-		        <li class="child"><%= link_to "Planos de treinos", user_planos_path(current_user) %></li>
-          <% end %>
-        </ul>
-        <% if current_user && (current_user.admin? || current_user.staff?) %>
-        <a href="#"><li class="parent">Administração</li></a>
-          <ul>
-          <li class="child"><%= link_to "Utilizadores", users_path %></li>
-          <li class="child"><%= link_to "Exercicios", exercicios_path %></li>
-          </ul>
+      <ul>
+        <li class="child"><a href="">Horários</a></li>
+        <li class="child"><a href="">Modalidades</a></li>
+      </ul>
+
+      <a href="#"><li class="parent">Conta Pessoal</li></a>
+
+      <ul>
+        <%if current_user %>
+        <li class="child"><%= link_to "Perfil", current_user %></li>
+        <% end %>
+
+        <%if current_user && current_user.normal? %>
+        <li class="child"><%= link_to "Planos de treinos", user_planos_path(current_user) %></li>
         <% end %>
       </ul>
-	
-      
-		  <div id="content-text"><%= yield %></div>
-      </div>
 
-      <div class="line"></div>
+      <% if current_user && (current_user.admin? || current_user.staff?) %>
+      <a href="#"><li class="parent">Administração</li></a>
+      <ul>
+        <li class="child"><%= link_to "Utilizadores", users_path %></li>
+        <li class="child"><%= link_to "Exercicios", exercicios_path %></li>
+      </ul>
+      <% end %>
+    </ul>
 
-      <div class="left">
-			<h4>Join the Movement</h4>
-			<p><em>Laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</em></p>
-		</div>
-		<div class="right">
-			<h3>12 / 2009</h3>
-			<p>Duis rutrum dapibus diam. Sed turpis sem, suscipit et, ullamcorper vel, aliquam in, tellus. Phasellus interdum. Sed pede. Fusce semper tellus quis sapien.</p>
-			<br />
-			<h3>12 / 2009</h3>
-			<p>Duis rutrum dapibus diam. Sed turpis sem, suscipit et, ullamcorper vel, aliquam in, tellus. Phasellus interdum. Sed pede. Fusce semper tellus quis sapien.</p>
-		</div>
+    <div id="content-text">
+      <%= yield %>
+    </div>
+  </div> <!-- endof #content -->
+</div> <!-- endof #page -->
+
+<div id="footer">
+  <div id="footer-info">
+    <ul>
+      <li> <%= link_to "About", root_path %> </li>
+      <li> <%= link_to "FAQ", root_path %> </li>
+      <li> <%= link_to "Terms of Use", root_path %> </li>
+      <li> <%= link_to "Help", root_path %> </li>
+
+      <% if !mobile_device? %>
+      <li ><%= link_to "Mobile Site", :mobile => 1 %></li>
+      <% end %>
+
+    </ul>
   </div>
 
-  <div id="footer">
-	  <div id="footer-info">
-		  <ul>
-			  <li> <%= link_to "About", root_path %> </li>
-			  <li> <%= link_to "FAQ", root_path %> </li>
-			  <li> <%= link_to "Terms of Use", root_path %> </li>
-			  <li> <%= link_to "Help", root_path %> </li>
-        <% if !mobile_device? %>
-           <li ><%= link_to "Mobile Site", :mobile => 1 %></li>
-        <% end %>
-		  </ul>
-	  </div>
-	  <div id="footer-social">
-		  <ul>	
-			  <li> <%= link_to "Facebook", root_path %> </li>
-			  <li> <%= link_to "Twitter", root_path %> </li>
-		  </ul>
-	  </div>
+  <div id="footer-social">
+    <ul>	
+      <li> <%= link_to "Facebook", root_path %> </li>
+      <li> <%= link_to "Twitter", root_path %> </li>
+    </ul>
   </div>
+</div> <!-- endof #footer -->
 
 </body>
 </html>

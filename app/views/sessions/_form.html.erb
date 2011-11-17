@@ -1,9 +1,8 @@
-<%= form_tag sessions_path, :id => "login-panel" do %>
-      <div class="form-item">
-        <%= label_tag :email %><%= text_field_tag :email, params[:email] %>
-      </div>
-      <div class="form-item">
-        <%= label_tag :password %><%= password_field_tag :password %>
-      </div>
-      <%= submit_tag "Log in", :id => "login_btn" %>
+<%= form_tag sessions_path, :class => "pull-right" do %>
+
+  <%= text_field_tag :email, params[:email], :class => "input-medium", :placeholder => "Email" %>
+
+  <%= password_field_tag :password, nil, :class => "input-medium", :placeholder => "Password" %>
+
+  <%= button_tag "Log in", :class => "btn" %>
 <% end %>
