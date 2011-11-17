@@ -1,29 +1,3 @@
-*= require twitter/bootstrap 
-
-
-*{margin:0;padding:0}
-:focus,:active {outline:0}img{border: 0}
-
-body {
-	font: .8em Arial, Tahoma, Verdana;
-	background: #fff url(../images/bg.gif) repeat-x;
-	color: #777;
-}
-
-a {
-	text-decoration: none;
-	color: #B20F0F;
-}
-
-h1 { font-size: 1.4em; font-weight: normal; }
-	h1 a { color: #fff; font-size: 1.6em; }
-h2 { font-size: 1.2em; }
-h3 { font-size: 1.2em; background: #B00A0A url(../images/redbg.gif) repeat-x left bottom; padding: 6px 7px; color: #fff; font-weight: normal; margin: 0 0 15px; float: left; }
-h4 { margin: 0 0 15px; color: #555; font-weight: normal; font-size: 1.6em; font-weight: normal; }
-p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
-.line { clear: both; border-bottom: 1px solid #ddd; margin: 0 0 45px; }
-.clear { clear: both; }
-
 #page {
 	width: 970px;
 	margin: 0 auto;
@@ -46,26 +20,6 @@ p { clear: both; line-height: 1.64em; margin: 0 0 15px; }
 	/*background: #DDD;*/
 	padding: 10px 0px 10px 0px;
 	height: 105px;
-}
-
-.form-item {
-	margin: 5px 0 5px 0;
-	height: 30px;
-}
-
-.form-item label {
-	float: left;
-	width: 65 px;
-	text-align: right;
-	font-weight: bold;
-	font-size: 12px;
-	margin: 0 5px 0 0;
-	padding-top: 6px;
-}
-
-.form-item input{
-	float: right;
-	padding: 4px 5px;
 }
 
 #remember {
@@ -224,27 +178,6 @@ width: 750px;
 	text-decoration:none;
 	text-shadow: 1px 1px 0px #808080;
 	
-}
-
-table, tr, td{
-	border: none;
-    border-collapse:collapse;
-}
-
-tr.header td{
-	background: #B00A0A url(../images/redbg.gif) repeat-x left bottom;
-	color: #fff;
-}
-
-td {
-    border-bottom:1px #AAA solid;
-	border-top:1px #AAA solid;
-	padding: 5px 20px;
-	margin-right: 10px;
-}
-
-tr.header {
-	color: #B00A0A;
 }
 
 #flash_notice{
