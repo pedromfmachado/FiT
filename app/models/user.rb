@@ -8,6 +8,7 @@ class User < ActiveRecord::Base
   attr_accessor :password
   before_save :encrypt_password
   before_create :set_token
+  before_update :set_token
 
   validates_confirmation_of :password
   validates :password, :presence => true, :length => { :in => 6..20 }, :on => :create
