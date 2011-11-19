@@ -4,13 +4,14 @@ class Api::UsersController < ApiController
   end
 
   def edit
-    @user = User.find_by_token(params[:token])
-    if @user.update_attributes(:nome => params[:nome], :email => params[:email], :datanascimento => params[:datanascimento], :morada => params[:morada], :telefone => params[:telefone])
-    	session[:message] = 'success'
-    else
-	session[:message] = 'error'
-    respond_with session
-    end
+    @user = User.find_by_email(params[:token])
+    render :xml => params
+    @user.update_attributes(:nome => params[:nome], :email => params[:email], :datanascimento => params[:datanascimento], :morada => params[:morada], :telefone => params[:telefone])
+    	#session[:message] = 'success'
+    #else
+	#session[:message] = 'error'
+  #  respond_with session
+  #  end
   end
 end
 

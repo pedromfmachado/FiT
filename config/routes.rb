@@ -8,6 +8,7 @@ Fit::Application.routes.draw do
   match 'promote' => 'users#promote', :as => "promote"
   match 'demote' => 'users#demote', :as => "demote"
   
+  
   resources :users do
     resources :planos
   end
@@ -21,6 +22,7 @@ Fit::Application.routes.draw do
     resources :exercicios
     resources :sessions
     resources :notificacaos
+    match 'users/edit' => 'users#edit', :as => "users/edit"
   end
 
   #rotas da api

@@ -3,10 +3,18 @@
 $(document).ready(function() {
   $(".alert-message").alert();
 
-  $("#edit_user_1").validate( {
+  validateForm("#edit_user_1");
+  validateForm("#new_user");
+});
+
+function validateForm(selector) {
+  $(selector).validate( {
     // rules for each field
     rules: {
-      name: "required",
+      name: {
+        required: true,
+        minLength: 2
+      },
       date: {
         required: true,
         date: true
@@ -14,13 +22,18 @@ $(document).ready(function() {
       email: {
         required: true,
         email: true
-      }
+      },
+      phone: "required",
+      address: "required"
     },
 
     // messages for each field
     messages: {
-      name: "Por favor escreva o seu nome",
-      email: "Por favor introduza um email válido (ex: exemplo@sapo.pt)"
+      name: "Escreva o seu nome (no mínimo 2 caracteres)",
+      date: "Introduza uma data válida",
+      email: "Introduza um email válido (ex: exemplo@sapo.pt)",
+      phone: "Introduza o seu contacto",
+      address: "Introduza uma morada válida"
     },
 
     // add/remove bootstrap error classes
@@ -32,6 +45,5 @@ $(document).ready(function() {
     },
     errorElement: 'p'
   });
-
-});
+}
 
