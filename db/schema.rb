@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111115151546) do
+ActiveRecord::Schema.define(:version => 20111119110548) do
 
   create_table "admins", :force => true do |t|
     t.integer  "user_id"
@@ -32,6 +32,15 @@ ActiveRecord::Schema.define(:version => 20111115151546) do
     t.integer  "peso"
     t.integer  "series"
     t.integer  "repeticoes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "notificacaos", :force => true do |t|
+    t.date     "data"
+    t.string   "titulo"
+    t.text     "texto"
+    t.integer  "admin_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

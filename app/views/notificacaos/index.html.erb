@@ -1,0 +1,29 @@
+<h1>Lista de notificações</h1>
+
+<table>
+  <tr>
+    <th>Data</th>
+    <th>Titulo</th>
+    <th>Texto</th>
+    <th>Admin</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @notificacaos.each do |notificacao| %>
+  <tr>
+    <td><%= notificacao.data %></td>
+    <td><%= notificacao.titulo %></td>
+    <td><%= notificacao.texto %></td>
+    <td><%= User.find(notificacao.admin_id).nome %></td>
+    <td><%= link_to 'Ver', notificacao %></td>
+    <td><%= link_to 'Editar', edit_notificacao_path(notificacao) %></td>
+    <td><%= link_to 'Apagar', notificacao, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Criar Notificação', new_notificacao_path %>

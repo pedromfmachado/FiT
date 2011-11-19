@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data:</b>
+  <%= @notificacao.data %>
+</p>
+
+<p>
+  <b>Titulo:</b>
+  <%= @notificacao.titulo %>
+</p>
+
+<p>
+  <b>Texto:</b>
+  <%= @notificacao.texto %>
+</p>
+
+<p>
+  <b>Admin:</b>
+  <%= User.find(@notificacao.admin_id).nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_notificacao_path(@notificacao) %> |
+<%= link_to 'Back', notificacaos_path %>

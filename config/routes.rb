@@ -1,4 +1,6 @@
 Fit::Application.routes.draw do
+  resources :notificacaos
+
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "sign_up" => "users#new", :as => "sign_up"
   get "perfil/:id" => "users#show", :as => "perfil"
@@ -11,6 +13,7 @@ Fit::Application.routes.draw do
   end
   resources :exercicios
   resources :sessions
+  resources :notificacaos
 
   namespace :api do
     resources :users
