@@ -65,13 +65,11 @@ class UsersController < ApplicationController
 
   def promote
     @user = User.find(params[:id])
+	@user.promote
 
-    if @user.normal?
-      Staff.create(:user_id => @user.id)
+    if @user.staff?
       redirect_to @user, :notice => "User promoted to staff"
-    elsif @user.staff?
-      Admin.create(:user_id => @user.id)
-      Staff.find_by_user_id(@user.id).destroy
+    elsif @user.admin?
       redirect_to @user, :notice => "User promoted to administrator"
     end
      
@@ -79,13 +77,11 @@ class UsersController < ApplicationController
 
   def demote
     @user = User.find(params[:id])
+	@user.demote
 
-    if @user.admin?
-      Staff.create(:user_id => @user.id)
-      Admin.find_by_user_id(@user.id).destroy
+    if @user.staff?
       redirect_to @user, :notice => "User demoted to Staff"
-    elsif @user.staff?
-      Staff.find_by_user_id(@user.id).destroy
+    elsif @user.normal?
       redirect_to @user, :notice => "User demoted to normal"
     end
   end

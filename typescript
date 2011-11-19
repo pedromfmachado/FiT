@@ -1,0 +1,244 @@
+Script started on Sat 19 Nov 2011 03:09:37 PM WET
+root@fit:~/fit# script [K/generate
+bash: script/generate: No such file or directory
+root@fit:~/fit# s[K./script/generate
+bash: ./script/generate: No such file or directory
+root@fit:~/fit# gem install pe[Kaperclip
+Fetching: activesupport-3.1.2.gemFetching: activesupport-3.1.2.gem (  1%)Fetching: activesupport-3.1.2.gem (  2%)Fetching: activesupport-3.1.2.gem (  3%)Fetching: activesupport-3.1.2.gem (  5%)Fetching: activesupport-3.1.2.gem (  7%)Fetching: activesupport-3.1.2.gem ( 12%)Fetching: activesupport-3.1.2.gem ( 14%)Fetching: activesupport-3.1.2.gem ( 20%)Fetching: activesupport-3.1.2.gem ( 25%)Fetching: activesupport-3.1.2.gem ( 26%)Fetching: activesupport-3.1.2.gem ( 28%)Fetching: activesupport-3.1.2.gem ( 33%)Fetching: activesupport-3.1.2.gem ( 39%)Fetching: activesupport-3.1.2.gem ( 42%)Fetching: activesupport-3.1.2.gem ( 48%)Fetching: activesupport-3.1.2.gem ( 53%)Fetching: activesupport-3.1.2.gem ( 54%)Fetching: activesupport-3.1.2.gem ( 56%)Fetching: activesupport-3.1.2.gem ( 61%)Fetching: activesupport-3.1.2.gem ( 66%)Fetching: activesupport-3.1.2.gem ( 70%)Fetching: activesupport-3.1.2.gem ( 75%)Fetching: activesupport-3.1.2.gem ( 79%)Fetching: activesupport-3.1.2.gem ( 80%)Fetching: activesupport-3.1.2.gem ( 85%)Fetching: activesupport-3.1.2.gem ( 90%)Fetching: activesupport-3.1.2.gem ( 91%)Fetching: activesupport-3.1.2.gem ( 97%)Fetching: activesupport-3.1.2.gem ( 99%)Fetching: activesupport-3.1.2.gem (100%)Fetching: activesupport-3.1.2.gem (100%)
+Fetching: cocaine-0.2.0.gemFetching: cocaine-0.2.0.gem (100%)Fetching: cocaine-0.2.0.gem (100%)
+Fetching: paperclip-2.4.5.gemFetching: paperclip-2.4.5.gem ( 15%)Fetching: paperclip-2.4.5.gem ( 16%)Fetching: paperclip-2.4.5.gem ( 29%)Fetching: paperclip-2.4.5.gem ( 44%)Fetching: paperclip-2.4.5.gem ( 59%)Fetching: paperclip-2.4.5.gem ( 75%)Fetching: paperclip-2.4.5.gem ( 90%)Fetching: paperclip-2.4.5.gem ( 91%)Fetching: paperclip-2.4.5.gem ( 94%)Fetching: paperclip-2.4.5.gem (100%)Fetching: paperclip-2.4.5.gem (100%)
+Fetching: activemodel-3.1.2.gemFetching: activemodel-3.1.2.gem ( 38%)Fetching: activemodel-3.1.2.gem ( 55%)Fetching: activemodel-3.1.2.gem ( 62%)Fetching: activemodel-3.1.2.gem (100%)Fetching: activemodel-3.1.2.gem (100%)
+Successfully installed activesupport-3.1.2
+Successfully installed cocaine-0.2.0
+Successfully installed paperclip-2.4.5
+Successfully installed activemodel-3.1.2
+4 gems installed
+Installing ri documentation for activesupport-3.1.2...
+Installing ri documentation for cocaine-0.2.0...
+Installing ri documentation for paperclip-2.4.5...
+Installing ri documentation for activemodel-3.1.2...
+Installing RDoc documentation for activesupport-3.1.2...
+Installing RDoc documentation for cocaine-0.2.0...
+Installing RDoc documentation for paperclip-2.4.5...
+Installing RDoc documentation for activemodel-3.1.2...
+root@fit:~/fit# bn[Kundle install
+Using rake (0.9.2.2) 
+Using multi_json (1.0.3) 
+Using activesupport (3.1.1) 
+Using builder (3.0.0) 
+Using i18n (0.6.0) 
+Using activemodel (3.1.1) 
+Using erubis (2.7.0) 
+Using rack (1.3.5) 
+Using rack-cache (1.1) 
+Using rack-mount (0.8.3) 
+Using rack-test (0.6.1) 
+Using hike (1.2.1) 
+Using tilt (1.3.3) 
+Using sprockets (2.0.3) 
+Using actionpack (3.1.1) 
+Using mime-types (1.17.2) 
+Using polyglot (0.3.3) 
+Using treetop (1.4.10) 
+Using mail (2.3.0) 
+Using actionmailer (3.1.1) 
+Using arel (2.2.1) 
+Using tzinfo (0.3.31) 
+Using activerecord (3.1.1) 
+Using activeresource (3.1.1) 
+Using bcrypt-ruby (3.0.1) 
+Using bundler (1.0.21) 
+Using cancan (1.6.7) 
+Using cocaine (0.2.0) 
+Using json (1.6.1) 
+Using paperclip (2.4.5) 
+Using rack-ssl (1.3.2) 
+Using rdoc (3.11) 
+Using thor (0.14.6) 
+Using railties (3.1.1) 
+Using rails (3.1.1) 
+Using sqlite3 (1.3.4) 
+Using sqlite3-ruby (1.3.3) 
+Using uuidtools (2.1.2) 
+[32mYour bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.[0m
+root@fit:~/fit# paperclip
+bash: paperclip: command not found
+root@fit:~/fit# generate migration User avatar_file_name:string avatar_[K[K[K[K[K[K[K[K[Kg [K[C[1P avatar_file_name:string[1P avatar_file_name:string[1P avatar_file_name:string[1P avatar_file_name:stringa avatar_file_name:stringd avatar_file_name:stringd avatar_file_name:stringA avatar_file_name:stringv avatar_file_name:stringa avatar_file_name:stringt avatar_file_name:stringa avatar_file_name:stringr avatar_file_name:stringT avatar_file_name:stringo avatar_file_name:stringU avatar_file_name:strings avatar_file_name:stringe avatar_file_name:stringr avatar_file_name:string
+bash: generate: command not found
+root@fit:~/fit# ra[K[Kgenerate migration addAvatarToUser avatar_file_name:string[1@r[1@a[1@i[1@l[1@s generate migration addAvatarToUser avatar_file_name:string [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20111119152120_add_avatar_to_user.rb
+root@fit:~/fit# rake db:migrate
+==  AddAvatarToUser: migrating ================================================
+-- add_column(:users, :avatar_file_name, :string)
+   -> 0.0008s
+==  AddAvatarToUser: migrated (0.0008s) =======================================
+
+root@fit:~/fit# rake db:migrate
+root@fit:~/fit# rails console
+Loading development environment (Rails 3.1.1)
+irb(main):001:0> User
+=> User(id: integer, email: string, password_hash: string, password_salt: string, nome: string, datanascimento: string, telefone: string, morada: string, created_at: datetime, updated_at: datetime, token: string, avatar_file_name: string)
+irb(main):002:0> exit
+root@fit:~/fit# rails consoleke db:migrateils generate migration addAvatarToUser avatar_file_name:string [A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[K[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kavatar_content_type[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K [Kr avatar_content_type:str ing avatar_file_size integer avatar_updated_at:datetime
+Missing type for attribute 'avatar_file_size'.
+Example: 'avatar_file_size:string' where string is the type.
+root@fit:~/fit# rails generate migration addAvatarToUser avatar_content_type:striing avatar_file_size integer avatar_updated_at:datetime[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+Missing type for attribute 'avatar_file_size'.
+Example: 'avatar_file_size:string' where string is the type.
+root@fit:~/fit# rails generate migration addAvatarToUser avatar_content_type:striing avatar_file_size integer avatar_updated_at:datetime[C[C[C[C[C[C[C[1P[1@:
+[1m[37m      invoke[0m  active_record
+Another migration is already named add_avatar_to_user: /root/fit/db/migrate/20111119152120_add_avatar_to_user.rb
+root@fit:~/fit# rake db:migrate
+root@fit:~/fit# rake db:migrateils generate migration addAvatarToUser avatar_content_type:striing avatar_file_size:integer avatar_updated_at:datetime
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20111119153716_add_avatar_to_user.rb
+root@fit:~/fit# rake db:migrate
+==  AddAvatarToUser: migrating ================================================
+-- add_column(:users, :avatar_content_type, :string)
+   -> 0.0008s
+-- add_column(:users, :avatar_file_size, :integer)
+   -> 0.0004s
+-- add_column(:users, :avatar_updated_at, :datetime)
+   -> 0.0003s
+==  AddAvatarToUser: migrated (0.0017s) =======================================
+
+root@fit:~/fit# rails cos[Knsole
+Loading development environment (Rails 3.1.1)
+irb(main):001:0> User
+=> User(id: integer, email: string, password_hash: string, password_salt: string, nome: string, datanascimento: string, telefone: string, morada: string, created_at: datetime, updated_at: datetime, token: string, avatar_file_name: string, avatar_content_type: string, avatar_file_size: integer, avatar_updated_at: datetime)
+irb(main):002:0> Users.[K[K.find_by_name(António[K[K[K[K[K[K[K'António Gambuzino')
+NoMethodError: undefined method `find_by_name' for #<Class:0x7f3fe5334c40>
+	from /usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/base.rb:1054:in `method_missing'
+	from (irb):2
+	from :0
+irb(main):003:0> User.find_by_name('António Gambuzino')[1P[1@o
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."nome" = 'António Gambuzino' LIMIT 1[0m
+=> #<User id: 6, email: "lololol@gmail.com", password_hash: "$2a$10$kW.rz5bt3jTt.BZ/1Aj9Gu6Y2QxCF9YbdD/PfPOpIk/E...", password_salt: "$2a$10$kW.rz5bt3jTt.BZ/1Aj9Gu", nome: "António Gambuzino", datanascimento: "11/11/2011", telefone: "988888888", morada: "Rua do LOL", created_at: "2011-11-17 11:22:01", updated_at: "2011-11-19 15:41:46", token: "--- !ruby/object:UUIDTools::UUID \nclock_seq_hi_and_...", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil>
+irb(main):004:0> User.find_bay_[K[K[Ky_nome('Jose[Ké Penedos')
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."nome" = 'José Penedos' LIMIT 1
+=> #<User id: 5, email: "jpenedos@gmail.com", password_hash: "$2a$10$XxiBqVECJG10JHE8muvw2eJqDtbTwoAkQCRjxnsAHbIQ...", password_salt: "$2a$10$XxiBqVECJG10JHE8muvw2e", nome: "José Penedos", datanascimento: "1900-01-01", telefone: "917777777", morada: "Pedrouços", created_at: "2011-11-15 15:38:48", updated_at: "2011-11-19 15:27:04", token: "--- !ruby/object:UUIDTools::UUID \nclock_seq_hi_and_...", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil>
+irb(main):005:0> exit
+root@fit:~/fit# rails [1P[1P[1P[1P[1P [Kbundle install --without prodution
+Fetching source index for http://rubygems.org/
+^C^[[A[31m
+Quitting...[0m
+root@fit:~/fit# bundle install --without prodution[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[21Prails consoleke db:migrate[2Pils consolebundle install --without prodution[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cction
+Using rake (0.9.2.2) 
+Using multi_json (1.0.3) 
+Using activesupport (3.1.1) 
+Using builder (3.0.0) 
+Using i18n (0.6.0) 
+Using activemodel (3.1.1) 
+Using erubis (2.7.0) 
+Using rack (1.3.5) 
+Using rack-cache (1.1) 
+Using rack-mount (0.8.3) 
+Using rack-test (0.6.1) 
+Using hike (1.2.1) 
+Using tilt (1.3.3) 
+Using sprockets (2.0.3) 
+Using actionpack (3.1.1) 
+Using mime-types (1.17.2) 
+Using polyglot (0.3.3) 
+Using treetop (1.4.10) 
+ino' LIMIT 1[0m
+=> #<User id: 6, email: "lololol@gmail.com", password_hash: "$2a$10$kW.rz5bt3jTt.BZ/1Aj9Gu6Y2QxCF9YbdD/PfPOpIk/E...", password_salt: "$2a$10$kW.rz5bt3jTt.BZ/1Aj9Gu", nome: "António Gambuzino", datanascimento: "11/11/2011", telefone: "988888888", morada: "Rua do LOL", created_at: "2011-11-17 11:22:01", updated_at: "2011-11-19 15:41:46", token: "--- !ruby/object:UUIDTools::UUID \nclock_seq_hi_and_...", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil>
+irb(main):004:0> User.find_bay_[K[K[Ky_nome('Jose[Ké Penedos')
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."nome" = 'José Penedos' LIMIT 1
+=> #<User id: 5, email: "jpenedos@gmail.com", password_hash: "$2a$10$XxiBqVECJG10JHE8muvw2eJqDtbTwoAkQCRjxnsAHbIQ...", password_salt: "$2a$10$XxiBqVECJG10JHE8muvw2e", nome: "José Penedos", datanascimento: "1900-01-01", telefone: "917777777", morada: "Pedrouços", created_at: "2011-11-15 15:38:48", updated_at: "2011-11-19 15:27:04", token: "--- !ruby/object:UUIDTools::UUID \nclock_seq_hi_and_...", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil>
+irb(main):005:0> exit
+root@fit:~/fit# rails [1P[1P[1P[1P[1P [Kbundle install --without prodution
+Fetching source index for http://rubygems.org/
+^C^[[A[31m
+Quitting...[0m
+root@fit:~/fit# bundle install --without prodution[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[21Prails consoleke db:migrate[2Pils consolebundle install --without prodution[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cction
+Using rake (0.9.2.2) 
+Using multi_json (1.0.3) 
+Using activesupport (3.1.1) 
+Using builder (3.0.0) 
+Using i18n (0.6.0) 
+Using activemodel (3.1.1) 
+Using erubis (2.7.0) 
+Using rack (1.3.5) 
+Using rack-cache (1.1) 
+Using rack-mount (0.8.3) 
+Using rack-test (0.6.1) 
+Using hike (1.2.1) 
+Using tilt (1.3.3) 
+Using sprockets (2.0.3) 
+Using actionpack (3.1.1) 
+Using mime-types (1.17.2) 
+Using polyglot (0.3.3) 
+Using treetop (1.4.10) 
+Using mail (2.3.0) 
+Using actionmailer (3.1.1) 
+Using arel (2.2.1) 
+Using tzinfo (0.3.31) 
+Using activerecord (3.1.1) 
+Using activeresource (3.1.1) 
+Using bcrypt-ruby (3.0.1) 
+Using bundler (1.0.21) 
+Using cancan (1.6.7) 
+Using cocaine (0.2.0) 
+Using json (1.6.1) 
+Using paperclip (2.4.5) 
+Using rack-ssl (1.3.2) 
+Using rdoc (3.11) 
+Using thor (0.14.6) 
+Using railties (3.1.1) 
+Using rails (3.1.1) 
+Using sqlite3 (1.3.4) 
+Using sqlite3-ruby (1.3.3) 
+Using uuidtools (2.1.2) 
+[32mYour bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.[0m
+root@fit:~/fit# bundle update
+Fetching source index for http://rubygems.org/
+Using rake (0.9.2.2) 
+Using multi_json (1.0.3) 
+Using activesupport (3.1.1) 
+Using builder (3.0.0) 
+Using i18n (0.6.0) 
+Using activemodel (3.1.1) 
+Using erubis (2.7.0) 
+Using rack (1.3.5) 
+Using rack-cache (1.1) 
+Using rack-mount (0.8.3) 
+Using rack-test (0.6.1) 
+Using hike (1.2.1) 
+Using tilt (1.3.3) 
+Using sprockets (2.0.3) 
+Using actionpack (3.1.1) 
+Using mime-types (1.17.2) 
+Using polyglot (0.3.3) 
+Using treetop (1.4.10) 
+Using mail (2.3.0) 
+Using actionmailer (3.1.1) 
+Using arel (2.2.1) 
+Using tzinfo (0.3.31) 
+Using activerecord (3.1.1) 
+Using activeresource (3.1.1) 
+Using bcrypt-ruby (3.0.1) 
+Using bundler (1.0.21) 
+Using cancan (1.6.7) 
+Using cocaine (0.2.0) 
+Using json (1.6.1) 
+Using paperclip (2.4.5) 
+Using rack-ssl (1.3.2) 
+Using rdoc (3.11) 
+Using thor (0.14.6) 
+Using railties (3.1.1) 
+Using rails (3.1.1) 
+Using sqlite3 (1.3.4) 
+Using sqlite3-ruby (1.3.3) 
+Using uuidtools (2.1.2) 
+[32mYour bundle is updated! Use `bundle show [gemname]` to see where a bundled gem is installed.[0m
+root@fit:~/fit# bundle install
+Using rake (0.9.2.2) 
+Using multi_json (1.0.3) 
+Using activesupport (3.1.1) 
+Using builder (3.0.0) 
+Using i18n (0.6.0) 

@@ -1,4 +1,4 @@
-<%= form_for @user do |f| %>
+<%= form_for @user, :html => { :multipart => true } do |f| %>
 
   <% if @user.errors.any? %>
     <div class="error_messages">
@@ -10,24 +10,47 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
-  </div>
-  <div class="field">
-    <%= f.label :datanascimento, "Data de Nascimento" %><br />
-    <%= f.text_field :datanascimento %>
-  </div>
-  <div class="field">
-    <%= f.label :telefone %><br />
-    <%= f.text_field :telefone %>
-  </div>
-  <div class="field">
-    <%= f.label :morada %><br />
-    <%= f.text_field :morada %>
+
+  <div class="clearfix">
+    <%= f.label :nome %>
+    <div class="input">
+      <%= f.text_field :nome, :class => "span7" %>
+    </div>
   </div>
 
+  <div class="clearfix">
+    <%= f.label :datanascimento, "Data de Nascimento" %>
+    <div class="input">
+      <%= f.text_field :datanascimento, :class => "span2" %>
+    </div>
+  </div>
 
-  <div class="actions"><%= f.submit %></div>
+  <div class="clearfix">
+    <%= f.label :telefone %>
+    <div class="input">
+      <%= f.text_field :telefone, :class => "span2" %>
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <%= f.label :morada %>
+    <div class="input">
+      <%= f.text_field :morada, :class => "span7" %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= f.label :foto %>
+    <div class="input">
+      <%= f.file_field :avatar %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit :class => "btn success" %>
+    <!-- <%= link_to 'Listar Utilizadores', users_path %> -->
+    <!-- <a href="#" class="btn large success">Update User</a> -->
+    <%= link_to 'Cancelar', users_path, :class => "btn danger" %>
+  </div>
 <% end %>
 

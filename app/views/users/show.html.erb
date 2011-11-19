@@ -2,6 +2,8 @@
 <div id="profile">
 <h1>Perfil</h1>
 <div id="info">
+
+  <%= image_tag @user.avatar.url(:small) %>
   <b>Nome:</b>
   <%= @user.nome %><br />
 
@@ -18,8 +20,8 @@
   <%= @user.morada %><br />
 
 <% if current_user.admin? && current_user.id != @user.id %>
-<%= link_to "Promover", :controller => "users", :action => "promote", :id => @user %> |
-<%= link_to "Despromover", :controller => "users", :action => "demote", :id => @user %> |
+<% if !@user.admin? %> <%= link_to "Promover", :controller => "users", :action => "promote", :id => @user %> | <%end%>
+<% if !@user.normal? %><%= link_to "Despromover", :controller => "users", :action => "demote", :id => @user %> | <%end%>
 <% end %>
 
 <% if @user.normal? %>

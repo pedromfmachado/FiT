@@ -1,9 +1,12 @@
 class User < ActiveRecord::Base
-    
+  include Paperclip::Glue   
+
   has_many :admins
   has_many :staffs
   has_many :planos
-  attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento
+  has_attached_file :avatar, :styles => {:small => "150.150>"}
+
+  attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento, :avatar
 
   attr_accessor :password
   before_save :encrypt_password
@@ -17,6 +20,7 @@ class User < ActiveRecord::Base
   validates :morada, :presence => true
   validates :telefone, :presence => true
   validates :email, :uniqueness => true, :presence => true, :on => :create
+  validates_attachment_presence :avatar, :notice => "Deve fazer upload de uma imagem"
   
   def self.authenticate(email, password)
     user = find_by_email(email)
@@ -56,6 +60,27 @@ class User < ActiveRecord::Base
 
   def normal?
     !admin? && !staff? && id != nil
+  end
+
+  def promote
+
+    if normal?
+      Staff.create(:user_id => id)
+    elsif staff?
+      Admin.create(:user_id => id)
+      Staff.find_by_user_id(id).destroy
+    end
+     
+  end
+
+  def demote
+
+    if admin?
+      Staff.create(:user_id => id)
+      Admin.find_by_user_id(id).destroy
+    elsif staff?
+      Staff.find_by_user_id(id).destroy
+    end
   end
 
 end

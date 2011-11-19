@@ -4,7 +4,8 @@
   <title>Fit</title>
   <%= stylesheet_link_tag "bootstrap", "screen" %>
   <%= stylesheet_link_tag "mobile" if mobile_device? %>
-  <%= javascript_include_tag "aplication.js", "controls.js", "dragdrop.js", "efects.js", "prototype.js", "jquery.js", "rails.js", "utils.js", "menu.js", "login.js", "jquery.js" %>
+  <%= javascript_include_tag "application.js", "controls.js", "dragdrop.js", "effects.js", "prototype.js", "jquery.js", "rails.js", "utils.js", "menu.js", "login.js" %>
+  <%= javascript_include_tag "bootstrap-dropdown.js" %>
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -14,23 +15,28 @@
   <div class="fill">
     <div class="container">
       <a class="brand" href="#">FiT</a>
-    <% if current_user %>
 
-      <!-- TODO: mudar links para lista com dropdown -->
-      <p class="pull-right">Ligado como <%= current_user.nome %>.
+      <% if current_user %>
+        <ul class="nav secondary-nav">
+          <li class="menu">
+            <a href="#" class="menu">Ligado como <%= current_user.nome %>.</a>
+            <ul class="menu-dropdown">
 
-        <% if current_user.admin? %>
-          <%= link_to "Registar membro", sign_up_path %> ou
-        <% end %>
+              <% if current_user.admin? %>
+              <li><%= link_to "Registar membro", sign_up_path %></li>
+              <li class="divider"></li>
+              <% end %>
 
-        <%= link_to "Ver perfil", current_user %> ou
-        <%= link_to "Log out", log_out_path %>.
-      </p>
+              <li><%= link_to "Ver perfil", current_user %></li>
+              <li><%= link_to "Log out", log_out_path %></li>
+            </ul>
+          </li>
+        </ul>
 
-    <!-- render <form> written in separate file -->    
-    <% else %> 
-      <%= render :partial => '/sessions/form' %>
-    <% end %> 
+        <!-- render <form> written in separate file -->    
+      <% else %> 
+        <%= render :partial => '/sessions/form' %>
+      <% end %> 
 
     </div>
   </div>

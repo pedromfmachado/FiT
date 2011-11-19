@@ -2,39 +2,44 @@
 
 <h1>Utilizadores</h1>
 
-
 <table>
   <tr>
     <th>Nr.</th>
     <th>Nome</th>
     <th>Tipo</th>
-
   </tr>
 
 <% @users.each do |user| %>
   <tr>
     <td><%= user.id %></td>
     <td><%= user.nome %></td>
+
     <% if user.admin? %>
-	<td> Administrador </td>
+      <td> Administrador </td>
     <% elsif user.staff? %>
-	<td> Staff </td>
+      <td> Staff </td>
     <% else %>
-	<td> Normal </td>
+      <td> Normal </td>
     <% end %>
+
     <td><%= link_to 'Ver', user %></td>
+
     <% if can? :edit, User %>
     <td><%= link_to 'Editar', edit_user_path(user) %></td>
-    <%end%>
-    <td><% if (can? :destroy, User) && user.id != current_user.id %>
-    <%= link_to 'Apagar', user, :confirm => 'Are you sure?', :method => :delete %>
-    <%end%></td>
+    <% end %>
+
+    <td>
+      <% if (can? :destroy, User) && user.id != current_user.id %>
+      <%= link_to 'Apagar', user, :confirm => 'Are you sure?', :method => :delete %>
+      <%end%>
+    </td>
   </tr>
-  <% end %>
+<% end %>
 <% end %>
 </table>
 
-<br />
 <% if can? :create, User %>
-<%= link_to 'Registar Utilizador', new_user_path %>
+<div class="actions">
+<%= link_to 'Registar Utilizador', new_user_path, :class => "btn primary" %>
+</div>
 <% end %>

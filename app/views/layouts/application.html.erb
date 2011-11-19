@@ -4,7 +4,8 @@
   <title>Fit</title>
   <%= stylesheet_link_tag "bootstrap", "screen" %>
   <%= stylesheet_link_tag "mobile" if mobile_device? %>
-  <%= javascript_include_tag "aplication.js", "controls.js", "dragdrop.js", "efects.js", "prototype.js", "jquery.js", "rails.js", "utils.js", "menu.js", "login.js", "jquery.js" %>
+  <%= javascript_include_tag "application.js", "controls.js", "dragdrop.js", "effects.js", "prototype.js", "jquery.js", "rails.js", "utils.js", "menu.js", "login.js" %>
+  <%= javascript_include_tag "bootstrap-dropdown.js", "bootstrap-alerts.js" %>
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -15,31 +16,41 @@
     <div class="container">
       <a class="brand" href="#">FiT</a>
 
-    <% if current_user %>
+      <% if current_user %>
+        <ul class="nav secondary-nav">
+          <li class="menu">
+            <a href="#" class="menu">Ligado como <%= current_user.nome %>.</a>
+            <ul class="menu-dropdown">
 
-      <!-- TODO: mudar links para lista com dropdown -->
-      <p class="pull-right">Ligado como <%= current_user.nome %>.
+              <% if current_user.admin? %>
+              <li><%= link_to "Registar membro", sign_up_path %></li>
+              <li class="divider"></li>
+              <% end %>
 
-        <% if current_user.admin? %>
-          <%= link_to "Registar membro", sign_up_path %> ou
-        <% end %>
+              <li><%= link_to "Ver perfil", current_user %></li>
+              <li><%= link_to "Log out", log_out_path %></li>
+            </ul>
+          </li>
+        </ul>
 
-        <%= link_to "Ver perfil", current_user %> ou
-        <%= link_to "Log out", log_out_path %>.
-      </p>
-
-    <!-- render <form> written in separate file -->    
-    <% else %> 
-      <%= render :partial => '/sessions/form' %>
-    <% end %> 
+      <!-- render <form> written in separate file -->    
+      <% else %> 
+        <%= render :partial => '/sessions/form' %>
+      <% end %> 
 
     </div>
   </div>
 </div> <!-- endof .topbar -->
 
 <div id="page">
+  <!-- Alertas (para ja ficam aqui por uma questão de feedback) -->
+  
+
   <div id="logo"> 
     <!-- so faz sentido a imagem estar na pagina inicial... -->
+     <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
   </div>
 
   <div class="line"></div>
@@ -77,9 +88,8 @@
       <% end %>
     </ul>
 
-    <div id="content-text">
-      <%= yield %>
-    </div>
+    <div id="content-text"> <%= yield %> </div>
+
   </div> <!-- endof #content -->
 </div> <!-- endof #page -->
 
