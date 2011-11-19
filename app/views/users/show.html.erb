@@ -4,18 +4,20 @@
 <div id="info">
 
   <!-- <%= image_tag @user.avatar.url(:small) %> -->
-  <div class="clearfix">
-  <p>
-    <strong>Nome: </strong>
+  <div class="profileBox">
+    <span>Nome:</span>
     <%= @user.nome %>
-  </p>
   </div>
 
-  <b>Email:</b>
-  <%= @user.email %><br />
+  <div class="profileBox">
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </div>
 
-  <b>Data de Nascimento:</b>
-  <%= @user.datanascimento %><br />
+  <p>
+    <strong>Data de Nascimento:</strong>
+    <%= @user.datanascimento %>
+  </p>
 
   <b>Telefone:</b>
   <%= @user.telefone %><br />

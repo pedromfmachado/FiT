@@ -23,6 +23,8 @@ gem "uuidtools"
 
 gem "paperclip"
 
+gem "aws-s3"
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

@@ -1,7 +1,14 @@
-/* nao apagar! */
-
 body {
   padding-top: 40px; /* used to fix bootstrap topbar */
+}
+
+.profileLine {
+  margin-bottom: 18px;
+}
+
+.profileLine span {
+  padding-top: 6px;
+  font-size: 13px;
 }
 
 /* *************** */

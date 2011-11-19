@@ -30,6 +30,10 @@ GEM
     activesupport (3.1.1)
       multi_json (~> 1.0)
     arel (2.2.1)
+    aws-s3 (0.6.2)
+      builder
+      mime-types
+      xml-simple
     bcrypt-ruby (3.0.1)
     builder (3.0.0)
     cancan (1.6.7)
@@ -92,11 +96,13 @@ GEM
       polyglot (>= 0.3.1)
     tzinfo (0.3.31)
     uuidtools (2.1.2)
+    xml-simple (1.1.1)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  aws-s3
   bcrypt-ruby
   cancan
   paperclip
