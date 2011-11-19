@@ -14,6 +14,7 @@ class Ability
       can :manage, User
       cannot :create, Plano, :user_id => user.id
     elsif user.normal?
+      can :read, Notificacao
       can :read, Plano, :user_id => user.id
       can :show, User, :id => user.id
       can :edit, User, :id => user.id

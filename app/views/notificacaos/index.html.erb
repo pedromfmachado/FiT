@@ -5,7 +5,7 @@
     <th>Data</th>
     <th>Titulo</th>
     <th>Texto</th>
-    <th>Admin</th>
+    <th>Criado por</th>
     <th></th>
     <th></th>
     <th></th>
@@ -18,8 +18,10 @@
     <td><%= notificacao.texto %></td>
     <td><%= User.find(notificacao.admin_id).nome %></td>
     <td><%= link_to 'Ver', notificacao %></td>
+    <% if current_user.admin? %>
     <td><%= link_to 'Editar', edit_notificacao_path(notificacao) %></td>
     <td><%= link_to 'Apagar', notificacao, :confirm => 'Are you sure?', :method => :delete %></td>
+	<% end %>
   </tr>
 <% end %>
 </table>
