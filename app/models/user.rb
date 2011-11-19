@@ -4,11 +4,11 @@ class User < ActiveRecord::Base
   has_many :admins
   has_many :staffs
   has_many :planos
-  #has_attached_file :avatar, :styles => {:small => "150.150>"}
+  has_attached_file :avatar, :styles => {:small => "150.150>"}
 
-  attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento #:avatar
+  attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento, :avatar
 
-  attr_accessor :password  
+  attr_accessor :password,  
   before_save :encrypt_password
   before_create :set_token
 
@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   validates :morada, :presence => true
   validates :telefone, :presence => true
   validates :email, :uniqueness => true, :presence => true, :on => :create
-  #validates_attachment_presence :avatar
+  validates_attachment_presence :avatar
   
   def self.authenticate(email, password)
     user = find_by_email(email)
