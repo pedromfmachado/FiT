@@ -540,17 +540,172 @@ root@fit:~/fit# heroku logs
 [36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:414:in `eager_load!'
 [36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/application/finisher.rb:51:in `block in <module:Finisher>'
 [36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:30:in `instance_exec'
-[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:30:in `run'
-[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:55:in `block in run_initializers'
-[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:54:in `each'
-[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:54:in `run_initializers'
-[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/application.rb:96:in `initialize!'
-[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/railtie/configurable.rb:30:in `method_missing'
-[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/config/environment.rb:5:in `<top (required)>'
-[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from <internal:lib/rubygems/custom_require>:29:in `require'
-[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from <internal:lib/rubygems/custom_require>:29:in `require'
-[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from config.ru:3:in `block (3 levels) in <main>'
-[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:23:in `eval'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initialice_eval'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `initialize'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:11:in `block in <main>'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:11:in `new'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `instance_eval'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `initialize'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:1:in `new'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:1:in `<main>'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/rack/adapter/loader.rb:36:in `eval'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/rack/adapter/loader.rb:36:in `load'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/thin/runner.rb:143:in `run!'
+[36m2011-11-19T16:26:01+00:00 heroku[web.1]:[0m Process exited
+[36m2011-11-19T16:26:02+00:00 heroku[web.1]:[0m State changed from starting to crashed
+[32m2011-11-19T16:26:03+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:26:03 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+root@fit:~/fit# heroku ge[K[Kbundl[Kle install
+ !   bundle is not a heroku command. See 'heroku help'.
+root@fit:~/fit# heroku[K[K[K[K[K[Kheroku help
+Usage: heroku COMMAND [--app APP] [command-specific-options]
+
+Primary help topics, type "heroku help TOPIC" for more details:
+
+  auth      # authentication (login, logout)
+  apps      # manage apps (create, destroy)
+  ps        # manage processes (dynos, workers)
+  run       # run one-off commands (console, rake)
+  addons    # manage addon resources
+  config    # manage app config vars
+  releases  # view release history of an app
+  domains   # manage custom domains
+  logs      # display logs for an app
+  sharing   # manage collaborators on an app
+
+Additional topics:
+
+  account      # manage heroku account options
+  db           # manage the database for an app
+  drains       # display syslog drains for an app
+  help         # list commands and display help
+  keys         # manage authentication keys
+  maintenance  # toggle maintenance mode
+  pg           # manage heroku postgresql databases
+  pgbackups    # manage backups of heroku postgresql databases
+  plugins      # manage plugins to the heroku gem
+  ssl          # manage ssl certificates for an app
+  stack        # manage the stack for an app
+  update       # update the heroku client
+  version      # display version
+
+root@fit:~/fit# heroku update
+-----> Updating to latest client... done
+root@fit:~/fit# git add -A
+root@fit:~/fit# git commit -m ' c[K[Kcorrigido erro no controlador de tu[K[Kutilizadores da api'
+[master bc55c3a] corrigido erro no controlador de utilizadores da api
+ Committer: root <root@fit.fe.up.pt>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+If the identity used for this commit is wrong, you can fix it with:
+
+    git commit --amend --author='Your Name <you@example.com>'
+
+ 6 files changed, 616 insertions(+), 24 deletions(-)
+root@fit:~/fit# git push heroku
+Counting objects: 31, done.
+Compressing objects:   6% (1/16)   Compressing objects:  12% (2/16)   Compressing objects:  18% (3/16)   Compressing objects:  25% (4/16)   Compressing objects:  31% (5/16)   Compressing objects:  37% (6/16)   Compressing objects:  43% (7/16)   Compressing objects:  50% (8/16)   Compressing objects:  56% (9/16)   Compressing objects:  62% (10/16)   Compressing objects:  68% (11/16)   Compressing objects:  75% (12/16)   Compressing objects:  81% (13/16)   Compressing objects:  87% (14/16)   Compressing objects:  93% (15/16)   Compressing objects: 100% (16/16)   Compressing objects: 100% (16/16), done.
+Writing objects:   6% (1/16)   Writing objects:  12% (2/16)   Writing objects:  18% (3/16)   Writing objects:  25% (4/16)   Writing objects:  31% (5/16)   Writing objects:  37% (6/16)   Writing objects:  43% (7/16)   Writing objects:  50% (8/16)   Writing objects:  56% (9/16)   Writing objects:  62% (10/16)   Writing objects:  68% (11/16)   Writing objects:  75% (12/16)   Writing objects:  81% (13/16)   Writing objects:  87% (14/16)   Writing objects:  93% (15/16)   Writing objects: 100% (16/16)   Writing objects: 100% (16/16), 8.20 KiB, done.
+Total 16 (delta 13), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Ruby/Rails app detected
+-----> Detected Rails is not set to serve static_assets
+       Installing rails3_serve_static_assets... done
+-----> Configure Rails 3 to disable x-sendfile
+       Installing rails3_disable_x_sendfile... done
+-----> Configure Rails to log to stdout
+       Installing rails_log_stdout... done
+-----> Gemfile detected, running Bundler version 1.0.7
+       All dependencies are satisfied
+-----> Compiled slug size is 6.4MB
+-----> Launching... done, v130
+       http://fitec.heroku.com deployed to Heroku
+
+To git@heroku.com:fitec.git
+   8a8ea37..bc55c3a  master -> master
+root@fit:~/fit# heroku ligs[K[K[Kogs
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `initialize'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:11:in `new'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:11:in `block in <main>'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `instance_eval'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `initialize'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:1:in `new'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:1:in `<main>'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/rack/adapter/loader.rb:36:in `eval'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/rack/adapter/loader.rb:36:in `load'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/thin/controllers/controller.rb:175:in `load_rackup_config'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/thin/controllers/controller.rb:65:in `start'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/thin/runner.rb:177:in `run_command'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/bin/thin:6:in `<top (required)>'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-
+[33m[0m
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/bin/thin:19:in `load'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/bin/thin:19:in `<main>'
+[36m2011-11-19T16:24:05+00:00 heroku[web.1]:[0m Process exited
+[36m2011-11-19T16:24:08+00:00 heroku[web.1]:[0m State changed from starting to crashed
+[32m2011-11-19T16:24:09+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[35m2011-11-19T16:24:09+00:00 heroku[nginx]:[0m 193.136.33.146 -1-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:11:in `new'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:11:in `block in <main>'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `instance_eval'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `initialize'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:1:in `new'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:1:in `<main>'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/rack/adapter/loader.rb:36:in `eval'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/rack/adapter/loader.rb:36:in `load'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/thin/controllers/controller.rb:175:in `load_rackup_config'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/thin/controllers/controller.rb:65:in `start'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/thin/runner.rb:177:in `run_command'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/bin/thin:6:in `<top (required)>'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-
+[33m[0m
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/bin/thin:19:in `load'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/bin/thin:19:in `<main>'
+[36m2011-11-19T16:24:05+00:00 heroku[web.1]:[0m Process exited
+[36m2011-11-19T16:24:08+00:00 heroku[web.1]:[0m State changed from starting to crashed
+[32m2011-11-19T16:24:09+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[35m2011-11-19T16:24:09+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:09 -0800] "GET / HTTP/1.1" 499 0 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[32m2011-11-19T16:24:09+00:00 heroku[router]:[0m Error H10 (App crashed) -> POST fitec.heroku.com/api/sessions.xml dyno= queue= wait= service= status=503 bytes=
+[35m2011-11-19T16:24:09+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:24:09 -0800] "POST /api/sessions.xml?email=jpenedos@gmail.com&password=123456 HTTP/1.1" 503 607 "-" "Dalvik/1.4.0 (Linux; U; Android 2.3.3; sdk Build/GRI34)" fitec.heroku.com
+[32m2011-11-19T16:24:09+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[32m2011-11-19T16:24:10+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/users/1 dyno= queue= wait= service= status=503 bytes=
+[32m2011-11-19T16:24:10+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[32m2011-11-19T16:24:10+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[35m2011-11-19T16:24:10+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:10 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[32m2011-11-19T16:24:11+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/users dyno= queue= wait= service= status=503 bytes=
+[32m2011-11-19T16:24:11+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[35m2011-11-19T16:24:11+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:11 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[32m2011-11-19T16:24:13+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[35m2011-11-19T16:24:13+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:13 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[32m2011-11-19T16:24:37+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[35m2011-11-19T16:24:37+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:37 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[35m2011-11-19T16:24:39+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:39 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[32m2011-11-19T16:24:41+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[35m2011-11-19T16:24:41+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:41 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[31m2011-11-19T16:25:38+00:00 heroku[rake.2]:[0m State changed from created to starting
+[31m2011-11-19T16:25:41+00:00 app[rake.2]:[0m Starting process with command `bundle exec rake db:migrate`
+[31m2011-11-19T16:25:41+00:00 heroku[rake.2]:[0m State changed from starting to up
+[31m2011-11-19T16:25:45+00:00 heroku[rake.2]:[0m Process exited
+[31m2011-11-19T16:25:46+00:00 heroku[rake.2]:[0m State changed from up to complete
+[32m2011-11-19T16:25:50+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[33m[0m
+[32mroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[36m2011-11-19T16:25:55+00:00 heroku[web.1]:[0m State changed from crashed to created
+[36m2011-11-19T16:25:55+00:00 heroku[web.1]:[0m State changed from created to starting
+[36m2011-11-19T16:25:58+00:00 heroku[web.1]:[0m Starting process with command `thin -p 59717 -e production -R /home/heroku_rack/heroku.ru start`
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `require': /app/app/controllers/api/users_controller.rb:15: syntax error, unexpected $end, expecting keyword_end (SyntaxError)
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `block in require'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:225:in `load_dependency'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `require'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:348:in `require_or_load'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:302:in `depend_on'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:417:in `block (2 levels) in eager_load!'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/reroku_rack/heroku.ru:23:in `eval'
 [36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:23:in `block (3 levels) in <main>'
 [36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `instance_eval'
 [36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `initialize'
@@ -570,8 +725,218 @@ root@fit:~/fit# heroku logs
 [36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/thin/runner.rb:143:in `run!'
 [36m2011-11-19T16:26:01+00:00 heroku[web.1]:[0m Process exited
 [36m2011-11-19T16:26:02+00:00 heroku[web.1]:[0m State changed from starting to crashed
-[32m2011-11-19T16:26:03+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:26:03 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
-root@fit:~/fit# heroku ge[K[Kbundl[Kle install
- !   bundle is not a heroku command. See 'heroku help'.
-root@fit:~/fit# heroku[K[K[K[K[K[Kheroku help
-Usage: heroku COMMAND [--app APP] [command-specific-options]
+[35m2011-11-19T16:26:03+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:26:03 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[36m2011-11-19T16:28:47+00:00 heroku[api]:[0m Deploy bc55c3a by machado.pedro@fe.up.pt
+[36m2011-11-19T16:28:47+00:00 heroku[api]:[0m Release v130 created by machado.pedro@fe.up.pt
+[36m2011-11-19T16:28:47+00:00 heroku[web.1]:[0m State changed from crashed to created
+[33m2011-11-19T16:28:48+00:00 heroku[slugc]:[0m Slug compilation finished
+[36m2011-11-19T16:28:57+00:00 app[web.1]:[0m >> Thin web server (v1.2.6 codename Crazy Delicious)
+[36m2011-11-19T16:28:57+00:00 app[web.1]:[0m >> Maximum connections set to 1024
+[36m2011-11-19T16:28:57+00:00 app[web.1]:[0m >> Listening on 0.0.0.0:38678, CTRL+C to stop
+[36m2011-11-19T16:28:58+00:00 heroku[web.1]:[0m State changed from starting to up
+root@fit:~/fit# heroku logs
+[36m2011-11-19T16:29:01+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:01 -0800] "GET /javascripts/rails.js?1321720115 HTTP/1.1" 200 4625 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[36m2011-11-19T16:29:01+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:01 -0800] "GET /javascripts/utils.js?1321720115 HTTP/1.1" 200 811 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[33m2011-11-19T16:29:01+00:00 app[web.1]:[0m cache: [GET /javascripts/menu.js?1321720115] miss
+[33m2011-11-19T16:29:01+00:00 app[web.1]:[0m cache: [GETloader.rb:36:in `eval'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/rack/adapter/loader.rb:36:in `load'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/thin/runner.rb:143:in `run!'
+[36m2011-11-19T16:26:01+00:00 heroku[web.1]:[0m Process exited
+[36m2011-11-19T16:26:02+00:00 heroku[web.1]:[0m State changed from starting to crashed
+[35m2011-11-19T16:26:03+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:26:03 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[36m2011-11-19T16:28:47+00:00 heroku[api]:[0m Deploy bc55c3a by machado.pedro@fe.up.pt
+[36m2011-11-19T16:28:47+00:00 heroku[api]:[0m Release v130 created by machado.pedro@fe.up.pt
+[36m2011-11-19T16:28:47+00:00 heroku[web.1]:[0m State changed from crashed to created
+[33m2011-11-19T16:28:48+00:00 heroku[slugc]:[0m Slug compilation finished
+[36m2011-11-19T16:28:57+00:00 app[web.1]:[0m >> Thin web server (v1.2.6 codename Crazy Delicious)
+[36m2011-11-19T16:28:57+00:00 app[web.1]:[0m >> Maximum connections set to 1024
+[36m2011-11-19T16:28:57+00:00 app[web.1]:[0m >> Listening on 0.0.0.0:38678, CTRL+C to stop
+[36m2011-11-19T16:28:58+00:00 heroku[web.1]:[0m State changed from starting to up
+root@fit:~/fit# heroku logs
+[36m2011-11-19T16:29:01+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:01 -0800] "GET /javascripts/rails.js?1321720115 HTTP/1.1" 200 4625 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[36m2011-11-19T16:29:01+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:01 -0800] "GET /javascripts/utils.js?1321720115 HTTP/1.1" 200 811 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[33m2011-11-19T16:29:01+00:00 app[web.1]:[0m cache: [GET /javascripts/menu.js?1321720115] miss
+[33m2011-11-19T16:29:01+00:00 app[web.1]:[0m cache: [GET /javascripts/utils.js?1321720115] miss
+[36m2011-11-19T16:29:01+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:01 -0800] "GET /javascripts/menu.js?1321720115 HTTP/1.1" 200 428 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[32m2011-11-19T16:29:01+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/utils.js dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=2023
+[33m2011-11-19T16:29:01+00:00 app[web.1]:[0m cache: [GET /javascripts/login.js?1321720115] miss
+[36m2011-11-19T16:29:01+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:01 -0800] "GET /javascripts/login.js?1321720115 HTTP/1.1" 200 207 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[32m2011-11-19T16:29:01+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/login.js dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=207
+[33m2011-11-19T16:29:01+00:00 app[web.1]:[0m cache: [GET /javascripts/bootstrap-dropdown.js?1321720115] miss
+[32m2011-11-19T16:29:01+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/bootstrap-dropdown.js dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=1690
+[36m2011-11-19T16:29:01+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:01 -0800] "GET /javascripts/bootstrap-dropdown.js?1321720115 HTTP/1.1" 200 830 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[36m2011-11-19T16:29:01+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:01 -0800] "GET /javascripts/jquery.js?1321720115 HTTP/1.1" 200 71544 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[36m2011-11-19T16:29:02+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:02 -0800] "GET /images/logo5.png?1321720115 HTTP/1.1" 200 4484 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[32m2011-11-19T16:29:02+00:00 heroku[router]:[0m GET fitec.heroku.com/images/redbg.gif dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=592
+[32m2011-11-19T16:29:02+00:00 heroku[router]:[0m GET fitec.heroku.com/images/logo5.png dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=4484
+[32m2011-11-19T16:29:02+00:00 heroku[router]:[0m GET fitec.heroku.com/images/photo1.jpg dyno=web.1 queue=0 wait=0ms service=8ms status=200 bytes=48344
+[33m2011-11-19T16:29:02+00:00 app[web.1]:[0m cache: [GET /images/photo1.jpg] miss
+[33m2011-11-19T16:29:02+00:00 app[web.1]:[0m cache: [GET /images/logo5.png?1321720115] miss
+[36m2011-11-19T16:29:02+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:02 -0800] "GET /images/photo1.jpg HTTP/1.1" 200 48344 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[36m2011-11-19T16:29:02+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:02 -0800] "GET /images/redbg.gif HTTP/1.1" 200 592 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[33m2011-11-19T16:29:08+00:00 app[web.1]:[0m 
+[33m2011-11-19T16:29:08+00:00 app[web.1]:[0m 
+[33m2011-11-19T16:29:08+00:00 app[web.1]:[0m Started GET "/users" for 193.136.33.146 at 2011-11-19 08:29:08 -0800
+[33m2011-11-19T16:29:08+00:00 app[web.1]:[0m cache: [GET /users] miss
+[32m2011-11-19T16:29:08+00:00 heroku[router]:[0m GET fitec.heroku.com/users dyno=web.1 queue=0 wait=0ms service=77ms status=200 bytes=6184
+[36m2011-11-19T16:29:08+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:08 -0800] "GET /users HTTP/1.1" 200 1525 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[36m2011-11-19T16:29:08+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:08 -0800] "GET /javascripts/bootstrap-alerts.js?1321720115 HTTP/1.1" 200 1229 "http://fitec.heroku.com/users" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[32m2011-11-19T16:29:08+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/bootstrap-alerts.js dyno=web.1 queue=0 wait=0ms service=33ms status=200 bytes=3121
+[33m2011-11-19T16:29:08+00:00 app[web.1]:[0m cache: [GET /javascripts/bootstrap-alerts.js?1321720115] miss
+[33m2011-11-19T16:29:11+00:00 app[web.1]:[0m 
+[33m2011-11-19T16:29:11+00:00 app[web.1]:[0m 
+[33m2011-11-19T16:29:11+00:00 app[web.1]:[0m Started GET "/users/4/edit" for 193.136.33.146 at 2011-11-19 08:29:11 -0800
+[33m2011-11-19T16:29:11+00:00 app[web.1]:[0m cache: [GET /users/4/edit] miss
+[32m2011-11-19T16:29:11+00:00 heroku[router]:[0m GET fitec.heroku.com/users/4/edit dyno=web.1 queue=0 wait=0ms service=210ms status=200 bytes=5550
+[36m2011-11-19T16:29:11+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:11 -0800] "GET /users/4/edit HTTP/1.1" 200 1654 "http://fitec.heroku.com/users" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[33m2011-11-19T16:29:21+00:00 app[web.1]:[0m 
+[33m2011-11-19T16:29:21+00:00 app[web.1]:[0m 
+[33m2011-11-19T16:29:21+00:00 app[web.1]:[0m Started PUT "/users/4" for 193.136.33.146 at 2011-11-19 08:29:21 -0800
+[36m2011-11-19T16:29:21+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:21 -0800] "POST /users/4 HTTP/1.1" 500 728 "http://fitec.heroku.com/users/4/edit" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/.1]:[0m cache: [GET /javascripts/controls.js?1321720115] miss
+[33m2011-11-19T16:29:37+00:00 app[web.1]:[0m cache: [GET /javascripts/application.js?1321720115] miss
+[36m2011-11-19T16:29:37+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:37 -0800] "GET /stylesheets/bootstrap.css?1321720115 HTTP/1.1" 200 10152 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[36m2011-11-19T16:29:37+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:37 -0800] "GET /javascripts/application.js?1321720115 HTTP/1.1" 200 151 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[32m2011-11-19T16:29:37+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/controls.js dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=34788
+[32m2011-11-19T16:29:37+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/application.js dyno=web.1 queue=0 wait=0ms service=1ms status=200 bytes=151
+[33m2011-11-19T16:29:37+00:00 app[web.1]:[0m cache: [GET /javascripts/dragdrop.js?1321720115] miss
+[36m2011-11-19T16:29:37+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:37 -0800] "GET /javascripts/controls.js?1321720115 HTTP/1.1" 200 9521 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[33m2011-11-19T16:29:37+00:00 app[web.1]:[0m cache: [GET /javascripts/effects.js?1321720115] miss
+[32m2011-11-19T16:29:37+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/dragdrop.js dyno=web.1 queue=0 wait=0ms service=7ms status=200 bytes=31056
+[36m2011-11-19T16:29:37+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:37 -0800] "GET /javascripts/dragdrop.js?1321720115 HTTP/1.1" 200 7892 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[36m2011-11-19T16:29:37+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:37 -0800] "GET /javascripts/effects.js?1321720115 HTTP/1.1" 200 9218 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[36m2011-11-19T16:29:37+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:37 -0800] "GET /javascripts/prototype.js?1321720115 HTTP/1.1" 200 38773 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[33m2011-11-19T16:29:38+00:00 app[web.1]:[0m cache: [GET /stylesheets/screen.css?1321720115] miss
+[32m2011-11-19T16:29:38+00:00 heroku[router]:[0m GET fitec.heroku.com/stylesheets/screen.css dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=3128
+[36m2011-11-19T16:29:38+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:38 -0800] "GET /stylesheets/screen.css?1321720115 HTTP/1.1" 200 1067 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[32m2011-11-19T16:29:38+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/utils.js dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=2023
+[33m2011-11-19T16:29:38+00:00 app[web.1]:[0m cache: [GET /javascripts/utils.js?1321720115] miss
+[36m2011-11-19T16:29:38+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:38 -0800] "GET /javascripts/utils.js?1321720115 HTTP/1.1" 200 811 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[33m2011-11-19T16:29:38+00:00 app[web.1]:[0m cache: [GET /javascripts/jquery.js?1321720115] miss
+[32m2011-11-19T16:29:38+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/jquery.js dyno=web.1 queue=0 wait=0ms service=16ms status=200 bytes=238159
+[33m2011-11-19T16:29:38+00:00 app[web.1]:[0m cache: [GET /javascripts/rails.js?1321720115] miss
+[32m2011-11-19T16:29:38+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/rails.js dyno=web.1 queue=1 wait=18ms service=7ms status=200 bytes=15110
+[36m2011-11-19T16:29:38+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:38 -0800] "GET /javascripts/rails.js?1321720115 HTTP/1.1" 200 4662 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[32m2011-11-19T16:29:38+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/menu.js dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=428
+[36m2011-11-19T16:29:38+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:38 -0800] "GET /javascripts/menu.js?1321720115 HTTP/1.1" 200 428 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[33m2011-11-19T16:29:38+00:00 app[web.1]:[0m cache: [GET /javascripts/menu.js?1321720115] miss
+[32m2011-11-19T16:29:38+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/login.js dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=207
+[36m2011-11-19T16:29:38+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:38 -0800] "GET /javascripts/login.js?1321720115 HTTP/1.1" 200 207 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[33m2011-11-19T16:29:38+00:00 app[web.1]:[0m cache: [GET /javascripts/login.js?1321720115] miss
+[33m2011-11-19T16:29:38+00:00 app[web.1]:[0m cache: [GET /javascripts/bootstrap-dropdown.js?1321720115] miss
+[32m2011-11-19T16:29:38+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/bootstrap-dropdown.js dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=1690
+[36m2011-11-19T16:29:38+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:38 -0800] "GET /javascripts/jquery.js?1321720115 HTTP/1.1" 200 71574 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[33m2011-11-19T16:29:39+00:00 app[web.1]:[0m cache: [GET /images/redbg.gif] miss
+[33m2011-11-19T16:29:39+00:00 app[web.1]:[0m cache: [GET /images/logo5.png?1321720115] miss
+[32m2011-11-19T16:29:39+00:00 heroku[router]:[0m GET fitec.heroku.com/images/logo5.png dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=4484
+[36m2011-11-19T16:29:39+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:39 -0800] "GET /images/redbg.gif HTTP/1.1" 200 592 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[36m2011-11-19T16:29:39+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:39 -0800] "GET /images/logo5.png?1321720115 HTTP/1.1" 200 4484 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[33m2011-11-19T16:29:39+00:00 app[web.1]:[0m cache: [GET /images/photo1.jpg] miss
+[36m2011-11-19T16:29:39+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:39 -0800] "GET /images/photo1.jpg HTTP/1.1" 200 48344 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+root@fit:~/fit# heroku logs
+[36m2011-11-19T16:29:01+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/bootstrap-dropdown.js dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=1690
+[33m2011-11-19T16:29:01+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:01 -0800] "GET /javascripts/bootstrap-dropdown.js?1321720115 HTTP/1.1" 200 830 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[33m2011-11-19T16:29:01+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:01 -0800] "GET /javascripts/jquery.js?1321720115 HTTP/1.1" 200 71544 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[33m2011-11-19T16:29:02+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:02 -0800] "GET /images/logo5.png?1321720115 HTTP/1.1" 200 4484 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[36m2011-11-19T16:29:02+00:00 heroku[router]:[0m GET fitec.heroku.com/images/redbg.gif dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=592
+[36m2011-11-19T16:29:02+00:00 heroku[router]:[0m GET fitec.heroku.com/images/logo5.png dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=4484
+[36m2011-11-19T16:29:02+00:00 heroku[router]:[0m GET fitec.heroku.com/images/photo1.jpg dyno=web.1 queue=0 wait=0ms service=8ms status=200 bytes=48344
+[32m2011-11-19T16:29:02+00:00 app[web.1]:[0m cache: [GET /images/photo1.jpg] miss
+[32m2011-11-19T16:29:02+00:00 app[web.1]:[0m cache: [GET /images/logo5.png?1321720115] miss
+[33m2011-11-19T16:29:02+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:02 -0800] "GET /images/photo1.jpg HTTP/1.1" 200 48344 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[33m2011-11-19T16:29:02+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:02 -0800] "GET /images/redbg.gif HTTP/1.1" 200 592 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[32m2011-11-19T16:29:08+00:00 app[web.1]:[0m 
+[32m2011-11-19T16:29:08+00:00 app[web.1]:[0m 
+[32m2011-11-19T16:29:08+00:00 app[web.1]:[0m Started GET "/users" for 193.136.33.146 at 2011-11-19 08:29:08 -0800
+[32m2011-11-19T16:29:08+00:00 app[web.1]:[0m cache: [GET /users] miss
+[36m2011-11-19T16:29:08+00:00 heroku[router]:[0m GET fitec.heroku.com/users dyno=web.1 queue=0 wait=0ms service=77ms status=200 bytes=6184
+[33m2011-11-19T16:29:08+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:08 -0800] "GET /users HTTP/1.1" 200 1525 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[33m2011-11-19T16:29:08+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:08 -0800] "GET /javascripts/bootstrap-alerts.js?1321720115 HTTP/1.1" 200 1229 "http://fitec.heroku.com/users" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[36m2011-11-19T16:29:08+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/bootstrap-alerts.js dyno=web.1 queue=0 wait=0ms service=33ms status=200 bytes=3121
+[32m2011-11-19T16:29:08+00:00 app[web.1]:[0m cache: [GET /javascripts/bootstrap-alerts.js?1321720115] miss
+[32m2011-11-19T16:29:11+00:00 app[web.1]:[0m 
+[32m2011-11-19T16:29:11+00:00 app[web.1]:[0m 
+[32m2011-11-19T16:29:11+00:00 app[web.1]:[0m Started GET "/users/4/edit" for 193.136.33.146 at 2011-11-19 08:29:11 -0800
+[32m2011-11-19T16:29:11+00:00 app[web.1]:[0m cache: [GET /users/4/edit] miss
+[36m2011-11-19T16:29:11+00:00 heroku[router]:[0m GET fitec.heroku.com/users/4/edit dyno=web.1 queue=0 wait=0ms service=210ms status=200 bytes=5550
+[33m2011-11-19T16:29:11+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:11 -0800] "GET /users/4/edit HTTP/1.1" 200 1654 "http://fitec.heroku.com/users" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[32m2011-11-19T16:29:21+00:00 app[web.1]:[0m 
+[32m2011-11-19T16:29:21+00:00 app[web.1]:[0m 
+[32m2011-11-19T16:29:21+00:00 app[web.1]:[0m Started PUT "/users/4" for 193.136.33.146 at 2011-11-100 app[web.1]:[0m 
+[32m2011-11-19T16:29:08+00:00 app[web.1]:[0m 
+[32m2011-11-19T16:29:08+00:00 app[web.1]:[0m Started GET "/users" for 193.136.33.146 at 2011-11-19 08:29:08 -0800
+[32m2011-11-19T16:29:08+00:00 app[web.1]:[0m cache: [GET /users] miss
+[36m2011-11-19T16:29:08+00:00 heroku[router]:[0m GET fitec.heroku.com/users dyno=web.1 queue=0 wait=0ms service=77ms status=200 bytes=6184
+[33m2011-11-19T16:29:08+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:08 -0800] "GET /users HTTP/1.1" 200 1525 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[33m2011-11-19T16:29:08+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:08 -0800] "GET /javascripts/bootstrap-alerts.js?1321720115 HTTP/1.1" 200 1229 "http://fitec.heroku.com/users" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[36m2011-11-19T16:29:08+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/bootstrap-alerts.js dyno=web.1 queue=0 wait=0ms service=33ms status=200 bytes=3121
+[32m2011-11-19T16:29:08+00:00 app[web.1]:[0m cache: [GET /javascripts/bootstrap-alerts.js?1321720115] miss
+[32m2011-11-19T16:29:11+00:00 app[web.1]:[0m 
+[32m2011-11-19T16:29:11+00:00 app[web.1]:[0m 
+[32m2011-11-19T16:29:11+00:00 app[web.1]:[0m Started GET "/users/4/edit" for 193.136.33.146 at 2011-11-19 08:29:11 -0800
+[32m2011-11-19T16:29:11+00:00 app[web.1]:[0m cache: [GET /users/4/edit] miss
+[36m2011-11-19T16:29:11+00:00 heroku[router]:[0m GET fitec.heroku.com/users/4/edit dyno=web.1 queue=0 wait=0ms service=210ms status=200 bytes=5550
+[33m2011-11-19T16:29:11+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:11 -0800] "GET /users/4/edit HTTP/1.1" 200 1654 "http://fitec.heroku.com/users" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[32m2011-11-19T16:29:21+00:00 app[web.1]:[0m 
+[32m2011-11-19T16:29:21+00:00 app[web.1]:[0m 
+[32m2011-11-19T16:29:21+00:00 app[web.1]:[0m Started PUT "/users/4" for 193.136.33.146 at 2011-11-19 08:29:21 -0800
+[33m2011-11-19T16:29:21+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:21 -0800] "POST /users/4 HTTP/1.1" 500 728 "http://fitec.heroku.com/users/4/edit" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[32m2011-11-19T16:29:21+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:29:21+00:00 heroku[router]:[0m POST fitec.heroku.com/users/4 dyno=web.1 queue=0 wait=0ms service=67ms status=500 bytes=728
+[32m2011-11-19T16:29:21+00:00 app[web.1]:[0m Paperclip::PaperclipError (User model missing required attr_accessor for 'avatar_file_name'):
+[32m2011-11-19T16:29:21+00:00 app[web.1]:[0m   app/controllers/users_controller.rb:32:in `block in update'
+[32m2011-11-19T16:29:21+00:00 app[web.1]:[0m   app/controllers/users_controller.rb:31:in `update'
+[32m2011-11-19T16:29:21+00:00 app[web.1]:[0m 
+[32m2011-11-19T16:29:21+00:00 app[web.1]:[0m 
+[32m2011-11-19T16:29:21+00:00 app[web.1]:[0m cache: [POST /users/4] invalidate, pass
+[32m2011-11-19T16:29:28+00:00 app[web.1]:[0m Started GET "/users/4/edit" for 193.136.33.146 at 2011-11-19 08:29:28 -0800
+[32m2011-11-19T16:29:28+00:00 app[web.1]:[0m 
+[32m2011-11-19T16:29:28+00:00 app[web.1]:[0m 
+[32m2011-11-19T16:29:28+00:00 app[web.1]:[0m cache: [GET /users/4/edit] miss
+[33m2011-11-19T16:29:28+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:29:28 -0800] "GET /users/4/edit HTTP/1.1" 200 1654 "http://fitec.heroku.com/users" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[32m2011-11-19T16:29:37+00:00 app[web.1]:[0m 
+[32m2011-11-19T16:29:37+00:00 app[web.1]:[0m 
+[32m2011-11-19T16:29:37+00:00 app[web.1]:[0m Started GET "/" for 193.136.33.133 at 2011-11-19 08:29:37 -0800
+[32m2011-11-19T16:29:37+00:00 app[web.1]:[0m cache: [GET /] miss
+[33m2011-11-19T16:29:37+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:37 -0800] "GET / HTTP/1.1" 200 2208 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[32m2011-11-19T16:29:37+00:00 app[web.1]:[0m cache: [GET /stylesheets/bootstrap.css?1321720115] miss
+[36m2011-11-19T16:29:37+00:00 heroku[router]:[0m GET fitec.heroku.com/stylesheets/bootstrap.css dyno=web.1 queue=0 wait=0ms service=12ms status=200 bytes=56339
+[32m2011-11-19T16:29:37+00:00 app[web.1]:[0m cache: [GET /javascripts/controls.js?1321720115] miss
+[32m2011-11-19T16:29:37+00:00 app[web.1]:[0m cache: [GET /javascripts/application.js?1321720115] miss
+[33m2011-11-19T16:29:37+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:37 -0800] "GET /stylesheets/bootstrap.css?1321720115 HTTP/1.1" 200 10152 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[33m2011-11-19T16:29:37+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:37 -0800] "GET /javascripts/application.js?1321720115 HTTP/1.1" 200 151 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[36m2011-11-19T16:29:37+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/controls.js dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=34788
+[36m2011-11-19T16:29:37+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/application.js dyno=web.1 queue=0 wait=0ms service=1ms status=200 bytes=151
+[32m2011-11-19T16:29:37+00:00 app[web.1]:[0m cache: [GET /javascripts/dragdrop.js?1321720115] miss
+[33m2011-11-19T16:29:37+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:37 -0800] "GET /javascripts/controls.js?1321720115 HTTP/1.1" 200 9521 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[32m2011-11-19T16:29:37+00:00 app[web.1]:[0m cache: [GET /javascripts/effects.js?1321720115] miss
+[36m2011-11-19T16:29:37+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/dragdrop.js dyno=web.1 queue=0 wait=0ms service=7ms status=200 bytes=31056
+[33m2011-11-19T16:29:37+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:37 -0800] "GET /javascripts/dragdrop.js?1321720115 HTTP/1.1" 200 7892 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[33m2011-11-19T16:29:37+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:37 -0800] "GET /javascripts/effects.js?1321720115 HTTP/1.1" 200 9218 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[33m2011-11-19T16:29:37+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:37 -0800] "GET /javascripts/prototype.js?1321720115 HTTP/1.1" 200 38773 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[32m2011-11-19T16:29:38+00:00 app[web.1]:[0m cache: [GET /stylesheets/screen.css?1321720115] miss
+[36m2011-11-19T16:29:38+00:00 heroku[router]:[0m GET fitec.heroku.com/stylesheets/screen.css dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=3128
+[33m2011-11-19T16:29:38+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:38 -0800] "GET /stylesheets/screen.css?1321720115 HTTP/1.1" 200 1067 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[36m2011-11-19T16:29:38+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/utils.js dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=2023
+[32m2011-11-19T16:29:38+00:00 app[web.1]:[0m cache: [GET /javascripts/utils.js?1321720115] miss
+[33m2011-11-19T16:29:38+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:38 -0800] "GET /javascripts/utils.js?1321720115 HTTP/1.1" 200 811 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[32m2011-11-19T16:29:38+00:00 app[web.1]:[0m cache: [GET /javascripts/jquery.js?1321720115] miss
+[36m2011-11-19T16:29:38+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/jquery.js dyno=web.1 queue=0 wait=0ms service=16ms status=200 bytes=238159
+[32m2011-11-19T16:29:38+00:00 app[web.1]:[0m cache: [GET /javascripts/rails.js?1321720115] miss
+[36m2011-11-19T16:29:38+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/rails.js dyno=web.1 queue=1 wait=18ms service=7ms status=200 bytes=15110
+[33m2011-11-19T16:29:38+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:38 -0800] "GET /javascripts/rails.js?1321720115 HTTP/1.1" 200 4662 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[36m2011-11-19T16:29:38+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/menu.js dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=428
+[33m2011-11-19T16:29:38+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:38 -0800] "GET /javascripts/menu.js?1321720115 HTTP/1.1" 200 428 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[32m2011-11-19T16:29:38+00:00 app[web.1]:[0m cache: [GET /javascripts/menu.js?1321720115] miss
+[36m2011-11-19T16:29:38+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/login.js dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=207
+[33m2011-11-19T16:29:38+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:38 -0800] "GET /javascripts/login.js?1321720115 HTTP/1.1" 200 207 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[32m2011-11-19T16:29:38+00:00 app[web.1]:[0m cache: [GET /javascripts/login.js?1321720115] miss
+[32m2011-11-19T16:29:38+00:00 app[web.1]:[0m cache: [GET /javascripts/bootstrap-dropdown.js?1321720115] miss
+[36m2011-11-19T16:29:38+00:00 heroku[router]:[0m GET fitec.heroku.com/javascripts/bootstrap-dropdown.js dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=1690
+[33m2011-11-19T16:29:38+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:38 -0800] "GET /javascripts/jquery.js?1321720115 HTTP/1.1" 200 71574 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[32m2011-11-19T16:29:39+00:00 app[web.1]:[0m cache: [GET /images/redbg.gif] miss
+[32m2011-11-19T16:29:39+00:00 app[web.1]:[0m cache: [GET /images/logo5.png?1321720115] miss
+[36m2011-11-19T16:29:39+00:00 heroku[router]:[0m GET fitec.heroku.com/images/logo5.png dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=4484
+[33m2011-11-19T16:29:39+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:39 -0800] "GET /images/redbg.gif HTTP/1.1" 200 592 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[33m2011-11-19T16:29:39+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:39 -0800] "GET /images/logo5.png?1321720115 HTTP/1.1" 200 4484 "http://fitec.heroku.com/" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.874.120 Safari/535.2" fitec.heroku.com
+[32m2011-11-19T16:29:39+00:00 app[web.1]:[0m cache: [GET /images/photo1.jpg] miss
+[33m2011-11-19T16:29:39+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:29:39 -0800] "GET /images/photo1.jpg HTTP/1.1" 200 48344 "http://fitec.heroku.com/" "Mozilla/5.0 (Wi
