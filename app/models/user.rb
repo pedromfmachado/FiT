@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
   attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento, :avatar
 
-  attr_accessor :password,  
+  attr_accessor :password
   before_save :encrypt_password
   before_create :set_token
 
