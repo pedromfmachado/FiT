@@ -10,6 +10,7 @@ class Api::UsersController < ApiController
     else
 	session[:message] = 'error'
     respond_with session
+    end
   end
 end
 

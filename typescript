@@ -145,35 +145,6 @@ Using actionpack (3.1.1)
 Using mime-types (1.17.2) 
 Using polyglot (0.3.3) 
 Using treetop (1.4.10) 
-ino' LIMIT 1[0m
-=> #<User id: 6, email: "lololol@gmail.com", password_hash: "$2a$10$kW.rz5bt3jTt.BZ/1Aj9Gu6Y2QxCF9YbdD/PfPOpIk/E...", password_salt: "$2a$10$kW.rz5bt3jTt.BZ/1Aj9Gu", nome: "António Gambuzino", datanascimento: "11/11/2011", telefone: "988888888", morada: "Rua do LOL", created_at: "2011-11-17 11:22:01", updated_at: "2011-11-19 15:41:46", token: "--- !ruby/object:UUIDTools::UUID \nclock_seq_hi_and_...", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil>
-irb(main):004:0> User.find_bay_[K[K[Ky_nome('Jose[Ké Penedos')
-  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."nome" = 'José Penedos' LIMIT 1
-=> #<User id: 5, email: "jpenedos@gmail.com", password_hash: "$2a$10$XxiBqVECJG10JHE8muvw2eJqDtbTwoAkQCRjxnsAHbIQ...", password_salt: "$2a$10$XxiBqVECJG10JHE8muvw2e", nome: "José Penedos", datanascimento: "1900-01-01", telefone: "917777777", morada: "Pedrouços", created_at: "2011-11-15 15:38:48", updated_at: "2011-11-19 15:27:04", token: "--- !ruby/object:UUIDTools::UUID \nclock_seq_hi_and_...", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil>
-irb(main):005:0> exit
-root@fit:~/fit# rails [1P[1P[1P[1P[1P [Kbundle install --without prodution
-Fetching source index for http://rubygems.org/
-^C^[[A[31m
-Quitting...[0m
-root@fit:~/fit# bundle install --without prodution[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[21Prails consoleke db:migrate[2Pils consolebundle install --without prodution[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cction
-Using rake (0.9.2.2) 
-Using multi_json (1.0.3) 
-Using activesupport (3.1.1) 
-Using builder (3.0.0) 
-Using i18n (0.6.0) 
-Using activemodel (3.1.1) 
-Using erubis (2.7.0) 
-Using rack (1.3.5) 
-Using rack-cache (1.1) 
-Using rack-mount (0.8.3) 
-Using rack-test (0.6.1) 
-Using hike (1.2.1) 
-Using tilt (1.3.3) 
-Using sprockets (2.0.3) 
-Using actionpack (3.1.1) 
-Using mime-types (1.17.2) 
-Using polyglot (0.3.3) 
-Using treetop (1.4.10) 
 Using mail (2.3.0) 
 Using actionmailer (3.1.1) 
 Using arel (2.2.1) 
@@ -241,4 +212,366 @@ Using rake (0.9.2.2)
 Using multi_json (1.0.3) 
 Using activesupport (3.1.1) 
 Using builder (3.0.0) 
-Using i18n (0.6.0) 
+Using i18n (0.6.0) 
+Using activemodel (3.1.1) 
+Using erubis (2.7.0) 
+Using rack (1.3.5) 
+Using rack-cache (1.1) 
+Using rack-mount (0.8.3) 
+Using rack-test (0.6.1) 
+Using hike (1.2.1) 
+Using tilt (1.3.3) 
+Using sprockets (2.0.3) 
+Using actionpack (3.1.1) 
+Using mime-types (1.17.2) 
+Using polyglot (0.3.3) 
+Using treetop (1.4.10) 
+Using mail (2.3.0) 
+Using actionmailer (3.1.1) 
+Using arel (2.2.1) 
+Using tzinfo (0.3.31) 
+Using activerecord (3.1.1) 
+Using activeresource (3.1.1) 
+Using bcrypt-ruby (3.0.1) 
+Using bundler (1.0.21) 
+Using cancan (1.6.7) 
+Using cocaine (0.2.0) 
+Using json (1.6.1) 
+Using paperclip (2.4.5) 
+Using rack-ssl (1.3.2) 
+Using rdoc (3.11) 
+Using thor (0.14.6) 
+Using railties (3.1.1) 
+Using rails (3.1.1) 
+Using sqlite3 (1.3.4) 
+Using sqlite3-ruby (1.3.3) 
+Using uuidtools (2.1.2) 
+[32mYour bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.[0m
+root@fit:~/fit# bundle show paperclip
+/usr/lib/ruby/gems/1.8/gems/paperclip-2.4.5
+root@fit:~/fit# git add -A
+root@fit:~/fit# git commit -m [K 'adicionadas fotos ao perfil do tu[K[K[Ku[K utilizao[Kdor'
+[master 8a8ea37] adicionadas fotos ao perfil do utilizador
+ Committer: root <root@fit.fe.up.pt>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+If the identity used for this commit is wrong, you can fix it with:
+
+    git commit --amend --author='Your Name <you@example.com>'
+
+ 23 files changed, 12103 insertions(+), 134 deletions(-)
+ rewrite app/views/users/_form.html.erb (65%)
+ create mode 100644 db/migrate/20111119153716_add_avatar_to_user.rb
+ create mode 100644 public/javascripts/bootstrap-alerts.js
+ create mode 100644 public/javascripts/bootstrap-dropdown.js
+ create mode 100644 public/system/avatars/6/original/macaco_beijo.jpg
+ create mode 100644 public/system/avatars/6/small/macaco_beijo.jpg
+ create mode 100644 typescript
+root@fit:~/fit# git push p[Kheroku
+Counting objects: 76, done.
+Compressing objects:   2% (1/38)   Compressing objects:   5% (2/38)   Compressing objects:   7% (3/38)   Compressing objects:  10% (4/38)   Compressing objects:  13% (5/38)   Compressing objects:  15% (6/38)   Compressing objects:  18% (7/38)   Compressing objects:  21% (8/38)   Compressing objects:  23% (9/38)   Compressing objects:  26% (10/38)   Compressing objects:  28% (11/38)   Compressing objects:  31% (12/38)   Compressing objects:  34% (13/38)   Compressing objects:  36% (14/38)   Compressing objects:  39% (15/38)   Compressing objects:  42% (16/38)   Compressing objects:  44% (17/38)   Compressing objects:  47% (18/38)   Compressing objects:  50% (19/38)   Compressing objects:  52% (20/38)   Compressing objects:  55% (21/38)   Compressing objects:  57% (22/38)   Compressing objects:  60% (23/38)   Compressing objects:  63% (24/38)   Compressing objects:  65% (25/38)   Compressing objects:  68% (26/38)   Compressing objects:  71% (27/38)   Compressing objects:  73% (28/38)   Compressing objects:  76% (29/38)   Compressing objects:  78% (30/38)   Compressing objects:  81% (31/38)   Compressing objects:  84% (32/38)   Compressing objects:  86% (33/38)   Compressing objects:  89% (34/38)   Compressing objects:  92% (35/38)   Compressing objects:  94% (36/38)   Compressing objects:  97% (37/38)   Compressing objects: 100% (38/38)   Compressing objects: 100% (38/38), done.
+Writing objects:   2% (1/45)   Writing objects:   4% (2/45)   Writing objects:   6% (3/45)   Writing objects:   8% (4/45)   Writing objects:  11% (5/45)   Writing objects:  13% (6/45)   Writing objects:  15% (7/45)   Writing objects:  17% (8/45)   Writing objects:  20% (9/45)   Writing objects:  22% (10/45)   Writing objects:  24% (11/45)   Writing objects:  26% (12/45)   Writing objects:  28% (13/45)   Writing objects:  31% (14/45)   Writing objects:  33% (15/45)   Writing objects:  35% (16/45)   Writing objects:  37% (17/45)   Writing objects:  40% (18/45)   Writing objects:  44% (20/45)   Writing objects:  46% (21/45)   Writing objects:  48% (22/45)   Writing objects:  51% (23/45)   Writing objects:  53% (24/45)   Writing objects:  55% (25/45)   Writing objects:  57% (26/45)   Writing objects:  60% (27/45)   Writing objects:  62% (28/45)   Writing objects:  64% (29/45)   Writing objects:  66% (30/45)   Writing objects:  68% (31/45)   Writing objects:  71% (32/45)   Writing objects:  73% (33/45)   Writing objects:  75% (34/45)   Writing objects:  77% (35/45)   Writing objects:  80% (36/45)   Writing objects:  82% (37/45)   Writing objects:  84% (38/45)   Writing objects:  86% (39/45)   Writing objects:  88% (40/45)   Writing objects:  91% (41/45)   Writing objects:  93% (42/45)   Writing objects:  95% (43/45)   Writing objects:  97% (44/45)   Writing objects: 100% (45/45)   Writing objects: 100% (45/45), 62.43 KiB, done.
+Total 45 (delta 26), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Ruby/Rails app detected
+-----> Detected Rails is not set to serve static_assets
+       Installing rails3_serve_static_assets... done
+-----> Configure Rails 3 to disable x-sendfile
+       Installing rails3_disable_x_sendfile... done
+-----> Configure Rails to log to stdout
+       Installing rails_log_stdout... done
+-----> Gemfile detected, running Bundler version 1.0.7
+       Unresolved dependencies detected; Installing...
+       Using --without development:test
+       Fetching source index for http://rubygems.org/
+       Installing rake (0.9.2.2) 
+       Installing multi_json (1.0.3) 
+       Installing activesupport (3.1.1) 
+       Installing builder (3.0.0) 
+       Installing i18n (0.6.0) 
+       Installing activemodel (3.1.1) 
+       Installing erubis (2.7.0) 
+       Installing rack (1.3.5) 
+       Installing rack-cache (1.1) 
+       Installing rack-mount (0.8.3) 
+       Installing rack-test (0.6.1) 
+       Installing hike (1.2.1) 
+       Installing tilt (1.3.3) 
+       Installing sprockets (2.0.3) 
+       Installing actionpack (3.1.1) 
+       Installing mime-types (1.17.2) 
+       Installing polyglot (0.3.3) 
+       Installing treetop (1.4.10) 
+       Installing mail (2.3.0) 
+       Installing actionmailer (3.1.1) 
+       Installing arel (2.2.1) 
+       Installing tzinfo (0.3.31) 
+       Installing activerecord (3.1.1) 
+       Installing activeresource (3.1.1) 
+       Installing bcrypt-ruby (3.0.1) with native extensions 
+       Installing cancan (1.6.7) 
+       Installing cocaine (0.2.0) 
+       Installing json (1.6.1) with native extensions 
+       Installing paperclip (2.4.5) 
+       Installing pg (0.11.0) with native extensions 
+       Installing rack-ssl (1.3.2) 
+       Using bundler (1.0.7) 
+       Installing rdoc (3.11) 
+       Installing thor (0.14.6) 
+       Installing railties (3.1.1) 
+       Installing rails (3.1.1) 
+       Installing uuidtools (2.1.2) 
+       Your bundle is complete! It was installed into ./.bundle/gems/
+-----> Compiled slug size is 6.4MB
+-----> Launching... done, v129
+       http://fitec.heroku.com deployed to Heroku
+
+To git@heroku.com:fitec.git
+   dcb41ba..8a8ea37  master -> master
+root@fit:~/fit# fi[K[Kheroku logs
+[36m2011-11-19T16:23:52+00:00 heroku[web.1]:[0m Stopping process with SIGTERM
+[36m2011-11-19T16:23:52+00:00 app[web.1]:[0m >> Stopping ...
+[36m2011-11-19T16:23:53+00:00 heroku[web.1]:[0m Process exited
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `require': /app/app/controllers/api/users_controller.rb:15: syntax error, unexpected $end, expecting keyword_end (SyntaxError)
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `block in require'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:225:in `load_dependency'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `require'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:348:in `require_or_load'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:302:in `depend_on'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:417:in `block (2 levels) in eager_load!'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	
+[33m[0m
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:416:in `block in eager_load!'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:414:in `each'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:414:in `eager_load!'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/application/finisher.rb:51:in `block in <module:Finisher>'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:30:in `instance_exec'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:30:in `run'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:54:in `each'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:54:in `run_initializers'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/application.rb:96:in `initialize!'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/railtie/configurable.rb:30:in `method_missing'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/config/environment.rb:5:in `<top (required)>'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from <internal:lib/rubygems/custom_require>:29:in `require'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from <internal:lib/rubygems/custom_require>:29:in `require'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from config.ru:3:in `block (3 levels) in <main>'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:23:in `eval'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:23:in `block (3 levels) in <main>'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `instance_eval'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `initialize'
+[36m2011-11-19T16:23:57+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:120:in `new'
+[36m2011-11-19T16:23:57+00:00 heroku[web.1]:[0m Process exited
+[36m2011-11-19T16:23:58+00:00 heroku[web.1]:[0m State changed from created to starting
+[32m2011-11-19T16:24:00+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:00 -0800] "GET /users HTTP/1.1" 499 0 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[36m2011-11-19T16:24:01+00:00 heroku[web.1]:[0m Starting process with command `thin -p 20094 -e production -R /home/heroku_rack/heroku.ru start`
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `require': /app/app/controllers/api/users_controller.rb:15: syntax error, unexpected $end, expecting keyword_end (SyntaxError)
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `block in require'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:225:in `load_dependency'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `require'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:348:in `require_or_load'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:302:in `depend_on'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:417:in `block (2 levels) in eager_load!'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:416:in `each'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:416:in `block in eager_load!'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:414:in `each'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:414:in `eager_load!'
+[36m2011-11-19T16:24:05+00:00 app[web.1]5.1" fitec.heroku.com
+[36m2011-11-19T16:24:01+00:00 heroku[web.1]:[0m Starting process with command `thin -p 20094 -e production -R /home/heroku_rack/heroku.ru start`
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `require': /app/app/controllers/api/users_controller.rb:15: syntax error, unexpected $end, expecting keyword_end (SyntaxError)
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `block in require'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:225:in `load_dependency'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `require'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:348:in `require_or_load'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:302:in `depend_on'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:417:in `block (2 levels) in eager_load!'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:416:in `each'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:416:in `block in eager_load!'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:414:in `each'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:414:in `eager_load!'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/application/finisher.rb:51:in `block in <module:Finisher>'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:30:in `instance_exec'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:30:in `run'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:54:in `each'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/application.rb:96:in `initialize!'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:54:in `run_initializers'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/railtie/configurable.rb:30:in `method_missing'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/config/environment.rb:5:in `<top (required)>'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from <internal:lib/rubygems/custom_require>:29:in `require'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from <internal:lib/rubygems/custom_require>:29:in `require'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from config.ru:3:in `block (3 levels) in <main>'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:23:in `eval'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:23:in `block (3 levels) in <main>'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	fromin `run_command'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/bin/thin:6:in `<top (required)>'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/thin/runner.rb:143:in `run!'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/bin/thin:19:in `load'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/bin/thin:19:in `<main>'
+[36m2011-11-19T16:24:05+00:00 heroku[web.1]:[0m Process exited
+[36m2011-11-19T16:24:08+00:00 heroku[web.1]:[0m State changed from starting to crashed
+[35m2011-11-19T16:24:09+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[32m2011-11-19T16:24:09+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:09 -0800] "GET / HTTP/1.1" 499 0 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[35m2011-11-19T16:24:09+00:00 heroku[router]:[0m Error H10 (App crashed) -> POST fitec.heroku.com/api/sessions.xml dyno= queue= wait= service= status=503 bytes=
+[32m2011-11-19T16:24:09+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:24:09 -0800] "POST /api/sessions.xml?email=jpenedos@gmail.com&password=123456 HTTP/1.1" 503 607 "-" "Dalvik/1.4.0 (Linux; U; Android 2.3.3; sdk Build/GRI34)" fitec.heroku.com
+[35m2011-11-19T16:24:09+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[35m2011-11-19T16:24:10+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/users/1 dyno= queue= wait= service= status=503 bytes=
+[35m2011-11-19T16:24:10+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[35m2011-11-19T16:24:10+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[32m2011-11-19T16:24:10+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:10 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[35m2011-11-19T16:24:11+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/users dyno= queue= wait= service= status=503 bytes=
+[35m2011-11-19T16:24:11+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[32m2011-11-19T16:24:11+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:11 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[35m2011-11-19T16:24:13+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[32m2011-11-19T16:24:13+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:13 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+root@fit:~/fit# [Kroot@fit:~/fit# heroku l[K[K[K[K[K[K[K[Krake [K[K[K[K[Kheroku rake db:migrate
+==  AddAvatarToUser: migrating ================================================
+-- add_column(:users, :avatar_content_type, :string)
+   -> 0.0285s
+-- add_column(:users, :avatar_file_size, :integer)
+   -> 0.0012s
+-- add_column(:users, :avatar_updated_at, :datetime)
+   -> 0.0017s
+==  AddAvatarToUser: migrated (0.0316s) =======================================
+
+root@fit:~/fit# heroku restart
+Restarting processes... done
+root@fit:~/fit# heroku logs
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:23:in `eval'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:23:in `block (3 levels) in <main>'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0 status=503 bytes=
+[35m2011-11-19T16:24:10+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[32m2011-11-19T16:24:10+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:10 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[35m2011-11-19T16:24:11+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/users dyno= queue= wait= service= status=503 bytes=
+[35m2011-11-19T16:24:11+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[32m2011-11-19T16:24:11+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:11 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[35m2011-11-19T16:24:13+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[32m2011-11-19T16:24:13+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:13 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+root@fit:~/fit# [Kroot@fit:~/fit# heroku l[K[K[K[K[K[K[K[Krake [K[K[K[K[Kheroku rake db:migrate
+==  AddAvatarToUser: migrating ================================================
+-- add_column(:users, :avatar_content_type, :string)
+   -> 0.0285s
+-- add_column(:users, :avatar_file_size, :integer)
+   -> 0.0012s
+-- add_column(:users, :avatar_updated_at, :datetime)
+   -> 0.0017s
+==  AddAvatarToUser: migrated (0.0316s) =======================================
+
+root@fit:~/fit# heroku restart
+Restarting processes... done
+root@fit:~/fit# heroku logs
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:23:in `eval'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:23:in `block (3 levels) in <main>'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `instance_eval'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `initialize'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:120:in `new'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:120:in `map'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:18:in `block (2 levels) in <main>'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `instance_eval'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `initialize'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:11:in `new'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:11:in `block in <main>'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `instance_eval'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `initialize'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:1:in `new'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:1:in `<main>'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/rack/adapter/loader.rb:36:in `eval'
+[36m2011-11-19T16:24:05+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/rack/adapter/loader.rb:36:in `load'
+[36m2011-11-19T16:24:05+00:er]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[33m2011-11-19T16:24:10+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[32m2011-11-19T16:24:10+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:10 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[33m2011-11-19T16:24:11+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/users dyno= queue= wait= service= status=503 bytes=
+[33m2011-11-19T16:24:11+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[32m2011-11-19T16:24:11+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:11 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[33m2011-11-19T16:24:13+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[32m2011-11-19T16:24:13+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:13 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[33m2011-11-19T16:24:37+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[32m2011-11-19T16:24:37+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:37 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[32m2011-11-19T16:24:39+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:39 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/
+[35m[0m
+[33m2011-11-19T16:24:41+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[32m2011-11-19T16:24:41+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:41 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[31m2011-11-19T16:25:38+00:00 heroku[rake.2]:[0m State changed from created to starting
+[31m2011-11-19T16:25:41+00:00 app[rake.2]:[0m Starting process with command `bundle exec rake db:migrate`
+[31m2011-11-19T16:25:41+00:00 heroku[rake.2]:[0m State changed from starting to up
+[31m2011-11-19T16:25:45+00:00 heroku[rake.2]:[0m Process exited
+[31m2011-11-19T16:25:46+00:00 heroku[rake.2]:[0m State changed from up to complete
+[33m2011-11-19T16:25:50+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[33m2011-11-19T16:25:51+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[36m2011-11-19T16:25:55+00:00 heroku[web.1]:[0m State changed from crashed to created
+[36m2011-11-19T16:25:55+00:00 heroku[web.1]:[0m State changed from created to starting
+[36m2011-11-19T16:25:58+00:00 heroku[web.1]:[0m Starting process with command `thin -p 59717 -e production -R /home/heroku_rack/heroku.ru start`
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `require': /app/app/controllers/api/users_controller.rb:15: syntax error, unexpected $end, expecting keyword_end (SyntaxError)
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `block in require'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/de]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:39 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/
+[35m[0m
+[33m2011-11-19T16:24:41+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[32m2011-11-19T16:24:41+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:24:41 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[31m2011-11-19T16:25:38+00:00 heroku[rake.2]:[0m State changed from created to starting
+[31m2011-11-19T16:25:41+00:00 app[rake.2]:[0m Starting process with command `bundle exec rake db:migrate`
+[31m2011-11-19T16:25:41+00:00 heroku[rake.2]:[0m State changed from starting to up
+[31m2011-11-19T16:25:45+00:00 heroku[rake.2]:[0m Process exited
+[31m2011-11-19T16:25:46+00:00 heroku[rake.2]:[0m State changed from up to complete
+[33m2011-11-19T16:25:50+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[33m2011-11-19T16:25:51+00:00 heroku[router]:[0m Error H10 (App crashed) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[36m2011-11-19T16:25:55+00:00 heroku[web.1]:[0m State changed from crashed to created
+[36m2011-11-19T16:25:55+00:00 heroku[web.1]:[0m State changed from created to starting
+[36m2011-11-19T16:25:58+00:00 heroku[web.1]:[0m Starting process with command `thin -p 59717 -e production -R /home/heroku_rack/heroku.ru start`
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `require': /app/app/controllers/api/users_controller.rb:15: syntax error, unexpected $end, expecting keyword_end (SyntaxError)
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `block in require'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:225:in `load_dependency'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:240:in `require'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:348:in `require_or_load'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:302:in `depend_on'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:417:in `block (2 levels) in eager_load!'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:416:in `each'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:416:in `block in eager_load!'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:414:in `each'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/engine.rb:414:in `eager_load!'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/application/finisher.rb:51:in `block in <module:Finisher>'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:30:in `instance_exec'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:30:in `run'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:54:in `each'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/initializable.rb:54:in `run_initializers'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/application.rb:96:in `initialize!'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/railties-3.1.1/lib/rails/railtie/configurable.rb:30:in `method_missing'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/config/environment.rb:5:in `<top (required)>'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from <internal:lib/rubygems/custom_require>:29:in `require'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from <internal:lib/rubygems/custom_require>:29:in `require'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from config.ru:3:in `block (3 levels) in <main>'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:23:in `eval'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:23:in `block (3 levels) in <main>'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `instance_eval'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `initialize'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:120:in `new'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:120:in `map'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:18:in `block (2 levels) in <main>'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `instance_eval'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `initialize'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:11:in `block in <main>'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:11:in `new'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `instance_eval'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /app/.bundle/gems/ruby/1.9.1/gems/rack-1.3.5/lib/rack/builder.rb:51:in `initialize'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:1:in `new'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /home/heroku_rack/heroku.ru:1:in `<main>'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/rack/adapter/loader.rb:36:in `eval'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/rack/adapter/loader.rb:36:in `load'
+[36m2011-11-19T16:26:01+00:00 app[web.1]:[0m 	from /usr/ruby1.9.2/lib/ruby/gems/1.9.1/gems/thin-1.2.6/lib/thin/runner.rb:143:in `run!'
+[36m2011-11-19T16:26:01+00:00 heroku[web.1]:[0m Process exited
+[36m2011-11-19T16:26:02+00:00 heroku[web.1]:[0m State changed from starting to crashed
+[32m2011-11-19T16:26:03+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:26:03 -0800] "GET / HTTP/1.1" 503 607 "-" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+root@fit:~/fit# heroku ge[K[Kbundl[Kle install
+ !   bundle is not a heroku command. See 'heroku help'.
+root@fit:~/fit# heroku[K[K[K[K[K[Kheroku help
+Usage: heroku COMMAND [--app APP] [command-specific-options]

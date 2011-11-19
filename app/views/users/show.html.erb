@@ -3,9 +3,11 @@
 <h1>Perfil</h1>
 <div id="info">
 
-  <%= image_tag @user.avatar.url(:small) %>
-  <b>Nome:</b>
-  <%= @user.nome %><br />
+  <!-- <%= image_tag @user.avatar.url(:small) %> -->
+  <p>
+    <b>Nome:</b>
+    <%= @user.nome %>
+  </p>
 
   <b>Email:</b>
   <%= @user.email %><br />
