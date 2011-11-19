@@ -3,6 +3,7 @@
 <h1>Perfil</h1>
 <div id="info">
 
+  <%= image_tag @user.avatar.url(:small) %>
   <div class="profileField">
     <span class="fieldLabel"><strong>Nome:</strong></span>
     <span class="fieldContent"><%= @user.nome %></span>

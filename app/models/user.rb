@@ -6,12 +6,11 @@ class User < ActiveRecord::Base
   has_many :planos
   has_attached_file :avatar, :styles => {:small => "150.150>"}
 
-  attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento, :avatar
+  attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento, :avatar, :avatar_file_name
 
-  attr_accessor :password, :avatar_file_name
+  attr_accessor :password
   before_save :encrypt_password
   before_create :set_token
-  before_update :set_token
 
   validates_confirmation_of :password
   validates :password, :presence => true, :length => { :in => 6..20 }, :on => :create
@@ -20,7 +19,7 @@ class User < ActiveRecord::Base
   validates :morada, :presence => true
   validates :telefone, :presence => true
   validates :email, :uniqueness => true, :presence => true, :on => :create
-  validates_attachment_presence :avatar, :notice => "Deve fazer upload de uma imagem"
+  validates_attachment_presence :avatar
   
   def self.authenticate(email, password)
     user = find_by_email(email)
@@ -39,7 +38,7 @@ class User < ActiveRecord::Base
   end
 
   def set_token
-    self.token = UUIDTools::UUID.timestamp_create
+    self.token = UUIDTools::UUID.timestamp_create.to_s
   end
 
   def admin?
