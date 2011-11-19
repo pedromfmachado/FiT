@@ -6,9 +6,9 @@ class User < ActiveRecord::Base
   has_many :planos
   has_attached_file :avatar, :styles => {:small => "150.150>"}
 
-  attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento, :avatar, :avatar_file_name
+  attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento, :avatar
 
-  attr_accessor :password
+  attr_accessor :password, :avatar_file_name
   before_save :encrypt_password
   before_create :set_token
   before_update :set_token

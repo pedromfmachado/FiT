@@ -6,7 +6,7 @@
   <!-- <%= image_tag @user.avatar.url(:small) %> -->
   <div class="clearfix">
   <p>
-    <b>Nome:</b>
+    <strong>Nome: </strong>
     <%= @user.nome %>
   </p>
   </div>
@@ -24,13 +24,22 @@
   <%= @user.morada %><br />
 
 <% if current_user.admin? && current_user.id != @user.id %>
-<% if !@user.admin? %> <%= link_to "Promover", :controller => "users", :action => "promote", :id => @user %> | <%end%>
-<% if !@user.normal? %><%= link_to "Despromover", :controller => "users", :action => "demote", :id => @user %> | <%end%>
+  <% if !@user.admin? %>
+     <%= link_to "Promover", :controller => "users", :action => "promote", :id => @user %>
+     |
+  <% end %>
+
+<% if !@user.normal? %>
+  <%= link_to "Despromover", :controller => "users", :action => "demote", :id => @user %>
+  |
+  <% end %>
 <% end %>
 
 <% if @user.normal? %>
-<%= link_to "Planos", user_planos_path(@user) %> |
+  <%= link_to "Planos", user_planos_path(@user) %>
+  |
 <% end %>
+
 <%= link_to "Editar", edit_user_path(@user) %>
 </div>
 </div>
