@@ -9,6 +9,7 @@ class Ability
       can :manage, :all
       cannot :create, Plano, :user_id => user.id
     elsif user.staff?
+      can :read, Notificacao
       can :manage, Plano
       can :manage, Exercicio
       can :manage, User

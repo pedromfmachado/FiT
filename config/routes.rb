@@ -20,6 +20,7 @@ Fit::Application.routes.draw do
     resources :planos
     resources :exercicios
     resources :sessions
+    resources :notificacaos
   end
 
   #rotas da api

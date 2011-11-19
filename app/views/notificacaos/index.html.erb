@@ -4,7 +4,6 @@
   <tr>
     <th>Data</th>
     <th>Titulo</th>
-    <th>Texto</th>
     <th>Criado por</th>
     <th></th>
     <th></th>
@@ -15,7 +14,6 @@
   <tr>
     <td><%= notificacao.data %></td>
     <td><%= notificacao.titulo %></td>
-    <td><%= notificacao.texto %></td>
     <td><%= User.find(notificacao.admin_id).nome %></td>
     <td><%= link_to 'Ver', notificacao %></td>
     <% if current_user.admin? %>
