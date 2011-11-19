@@ -1,8 +1,13 @@
 <%= form_for @user, :html => { :multipart => true } do |f| %>
 
+  <!-- le error messages header -->
   <% if @user.errors.any? %>
+    <div class="alert-message error">
+      <a href="#" class="close">x</a>
+      <p><strong>Oh snap!</strong> Alguns campos do formulário estão incorrectos.</p>
+    </div>
+
     <div class="error_messages">
-      <h2>Form is invalid</h2>
       <ul>
         <% for message in @user.errors.full_messages %>
           <li><%= message %></li>
@@ -11,10 +16,11 @@
     </div>
   <% end %>
 
+  <!-- le form fields -->
   <div class="clearfix">
     <%= f.label :nome %>
     <div class="input">
-      <%= f.text_field :nome, :class => "span7" %>
+      <%= f.text_field :nome, :class => "span7", :name => "name" %>
     </div>
   </div>
 
@@ -46,10 +52,8 @@
     </div>
   </div>
 
-  <div class="actions">
-    <%= f.submit :class => "btn success" %>
-    <!-- <%= link_to 'Listar Utilizadores', users_path %> -->
-    <!-- <a href="#" class="btn large success">Update User</a> -->
+  <div class="actions topSpacing0">
+    <%= f.submit 'Guardar alterações', :class => "btn success" %>
     <%= link_to 'Cancelar', users_path, :class => "btn danger" %>
   </div>
 <% end %>

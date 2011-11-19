@@ -35,11 +35,12 @@
     </td>
   </tr>
 <% end %>
-<% end %>
 </table>
+<% end %>
 
 <% if can? :create, User %>
-<div class="actions">
-<%= link_to 'Registar Utilizador', new_user_path, :class => "btn primary" %>
+<div class="actions topSpacing0">
+  <%= link_to 'Registar Utilizador', new_user_path, :class => "btn primary" %>
 </div>
 <% end %>
+

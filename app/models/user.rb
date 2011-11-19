@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   has_many :admins
   has_many :staffs
   has_many :planos
-  has_attached_file :avatar, :styles => {:small => "150.150>"}, :storage => :s3, :bucket => 'mybucket', :s3_credentials => {:access_key_id => ENV['S3_KEY'],:secret_access_key => ENV['S3_SECRET']  }
+  has_attached_file :avatar, :styles => {:small => "150.150>"}
 
   attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento, :avatar
 

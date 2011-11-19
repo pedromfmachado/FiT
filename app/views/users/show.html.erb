@@ -3,46 +3,50 @@
 <h1>Perfil</h1>
 <div id="info">
 
-  <!-- <%= image_tag @user.avatar.url(:small) %> -->
-  <div class="profileBox">
-    <span>Nome:</span>
-    <%= @user.nome %>
+  <div class="profileField">
+    <span class="fieldLabel"><strong>Nome:</strong></span>
+    <span class="fieldContent"><%= @user.nome %></span>
   </div>
 
-  <div class="profileBox">
-    <strong>Email:</strong>
-    <%= @user.email %>
+  <div class="profileField">
+    <span class="fieldLabel"><strong>Email:</strong></span>
+    <span class="fieldContent"><%= @user.email %></span>
   </div>
 
-  <p>
-    <strong>Data de Nascimento:</strong>
-    <%= @user.datanascimento %>
-  </p>
+  <div class="profileField">
+    <span class="fieldLabel"><strong>Data de Nascimento:</strong></span>
+    <span class="fieldContent"><%= @user.datanascimento %></span>
+  </div>
 
-  <b>Telefone:</b>
-  <%= @user.telefone %><br />
+  <div class="profileField">
+    <span class="fieldLabel"><strong>Telefone:</strong></span>
+    <span class="fieldContent"><%= @user.telefone %></span>
+  </div>
 
-  <b>Morada:</b>
-  <%= @user.morada %><br />
+  <div class="profileField">
+    <span class="fieldLabel"><strong>Morada:</strong></span>
+    <span class="fieldContent"><%= @user.morada %></span>
+  </div>
 
-<% if current_user.admin? && current_user.id != @user.id %>
-  <% if !@user.admin? %>
-     <%= link_to "Promover", :controller => "users", :action => "promote", :id => @user %>
-     |
-  <% end %>
+  <!-- action buttons -->
+  <div class="actions topSpacing0">
+    <% if current_user.admin? && current_user.id != @user.id %>
+      <% if !@user.admin? %>
+        <%= link_to "Promover", { :controller => "users" }, :action => "promote", :id => @user, :class => "btn success" %>
+      <% end %>
 
-<% if !@user.normal? %>
-  <%= link_to "Despromover", :controller => "users", :action => "demote", :id => @user %>
-  |
-  <% end %>
-<% end %>
+      <% if !@user.normal? %>
+        <%= link_to "Despromover", { :controller => "users" }, :action => "demote", :id => @user, :class => "btn danger" %>
+      <% end %>
+    <% end %>
 
-<% if @user.normal? %>
-  <%= link_to "Planos", user_planos_path(@user) %>
-  |
-<% end %>
+    <% if @user.normal? %>
+      <%= link_to "Ver Planos", user_planos_path(@user), :class => "btn" %>
+    <% end %>
 
-<%= link_to "Editar", edit_user_path(@user) %>
+    <%= link_to "Editar Perfil", edit_user_path(@user), :class => "btn primary" %>
+    <%= link_to "Voltar", users_path, :class => "btn" %>
+  </div>
 </div>
 </div>
 

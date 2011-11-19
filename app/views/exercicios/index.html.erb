@@ -1,13 +1,10 @@
-<h1>Listing exercicios</h1>
+<h1>Exercícios</h1>
 
 <table>
   <tr>
     <th>Nome</th>
     <th>Maquina</th>
     <th>Tipo</th>
-    <th></th>
-    <th></th>
-    <th></th>
   </tr>
 
 <% @exercicios.each do |exercicio| %>
@@ -22,6 +19,6 @@
 <% end %>
 </table>
 
-<br />
-
-<%= link_to 'Novo Exercício', new_exercicio_path %>
+<div class="actions topSpacing0">
+  <%= link_to 'Novo Exercício', new_exercicio_path, :class => "btn primary" %>
+</div>

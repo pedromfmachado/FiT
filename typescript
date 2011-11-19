@@ -1542,4 +1542,423 @@ root@fit:~/fit# heroku logs
 [33m2011-11-19T16:40:26+00:00 heroku[router]:[0m GET fitec.heroku.com/api/users.xml dyno=web.1 queue=0 wait=0ms service=208ms status=200 bytes=800
 root@fit:~/fit# heroku config:add S3_KEY=8N029N81 S3_SECRET=9s83109d3+583493190[C[1P S3_SECRET=9s83109d3+583493190[1P S3_SECRET=9s83109d3+583493190[1P S3_SECRET=9s83109d3+583493190[1P S3_SECRET=9s83109d3+583493190[1P S3_SECRET=9s83109d3+583493190[1P S3_SECRET=9s83109d3+583493190[1P S3_SECRET=9s83109d3+583493190[1P S3_SECRET=9s83109d3+583493190A S3_SECRET=9s83109d3+583493190K S3_SECRET=9s83109d3+583493190I S3_SECRET=9s83109d3+583493190A S3_SECRET=9s83109d3+583493190J S3_SECRET=9s83109d3+583493190H S3_SECRET=9s83109d3+5834931907 S3_SECRET=9s83109d3+583493190K S3_SECRET=9s83109d3+583493190X S3_SECRET=9s83109d3+583493190O S3_SECRET=9s83109d3+583493190M S3_SECRET=9s83109d3+583493190R S3_SECRET=9s83109d3+583493190T S3_SECRET=9s83109d3+583493190Y S3_SECRET=9s83109d3+5834931903 S3_SECRET=9s83109d3+583493190V S3_SECRET=9s83109d3+583493190P S3_SECRET=9s83109d3+583493190B S3_SECRET=9s83109d3+583493190O S3_SECRET=9s83109d3+583493190Q S3_SECRET=9s83109d3+583493190[1P S3_SECRET=9s83109d3+583493190Q S3_SECRET=9s83109d3+583493190[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K9s83109d3+583493190
 Adding config vars and restarting app... done
-  S3_KEY    => AKIAJH
+  S3_KEY    => AKIAJH7KXOMRTY3VPBOQ
+  S3_SECRET => 9s83109d3+583493190
+root@fit:~/fit# bundle install
+Fetching source index for http://rubygems.org/
+Using rake (0.9.2.2) 
+Using multi_json (1.0.3) 
+Using activesupport (3.1.1) 
+Using builder (3.0.0) 
+Using i18n (0.6.0) 
+Using activemodel (3.1.1) 
+Using erubis (2.7.0) 
+Using rack (1.3.5) 
+Using rack-cache (1.1) 
+Using rack-mount (0.8.3) 
+Using rack-test (0.6.1) 
+Using hike (1.2.1) 
+Using tilt (1.3.3) 
+Using sprockets (2.0.3) 
+Using actionpack (3.1.1) 
+Using mime-types (1.17.2) 
+Using polyglot (0.3.3) 
+Using treetop (1.4.10) 
+Using mail (2.3.0) 
+Using actionmailer (3.1.1) 
+Using arel (2.2.1) 
+Using tzinfo (0.3.31) 
+Using activerecord (3.1.1) 
+Using activeresource (3.1.1) 
+Installing xml-simple (1.1.1) 
+Installing aws-s3 (0.6.2) 
+Using bcrypt-ruby (3.0.1) 
+Using bundler (1.0.21) 
+Using cancan (1.6.7) 
+Using cocaine (0.2.0) 
+Using json (1.6.1) 
+Using paperclip (2.4.5) 
+Using rack-ssl (1.3.2) 
+Using rdoc (3.11) 
+Using thor (0.14.6) 
+Using railties (3.1.1) 
+Using rails (3.1.1) 
+Using sqlite3 (1.3.4) 
+Using sqlite3-ruby (1.3.3) 
+Using uuidtools (2.1.2) 
+[32mYour bundle is complete! Use `bundle show [gemname]` to see where a bundled gem is installed.[0m
+root@fit:~/fit# gid a[K[K[Kt add -A
+root@fit:~/fit# git commit -m ' tentatn[K[K[K[K[K[K[K[Kta[Kentativa de fazer[K[K[K[K[Kusar aws-s3 para upload das fotos'
+[master 2492b31] tentativa de usar aws-s3 para upload das fotos
+ Committer: root <root@fit.fe.up.pt>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly:
+
+    git config --global user.name "Your Name"
+    git config --global user.email you@example.com
+
+If the identity used for this commit is wrong, you can fix it with:
+
+    git commit --amend --author='Your Name <you@example.com>'
+
+ 8 files changed, 526 insertions(+), 12 deletions(-)
+ create mode 100644 config/initializers/s3.rb
+root@fit:~/fit# git push heroku
+Counting objects: 36, done.
+Compressing objects:   5% (1/19)   Compressing objects:  10% (2/19)   Compressing objects:  15% (3/19)   Compressing objects:  21% (4/19)   Compressing objects:  26% (5/19)   Compressing objects:  31% (6/19)   Compressing objects:  36% (7/19)   Compressing objects:  42% (8/19)   Compressing objects:  47% (9/19)   Compressing objects:  52% (10/19)   Compressing objects:  57% (11/19)   Compressing objects:  63% (12/19)   Compressing objects:  68% (13/19)   Compressing objects:  73% (14/19)   Compressing objects:  78% (15/19)   Compressing objects:  84% (16/19)   Compressing objects:  89% (17/19)   Compressing objects:  94% (18/19)   Compressing objects: 100% (19/19)   Compressing objects: 100% (19/19), done.
+Writing objects:   5% (1/19)   Writing objects:  10% (2/19)   Writing objects:  15% (3/19)   Writing objects:  21% (4/19)   Writing objects:  26% (5/19)   Writing objects:  31% (6/19)   Writing objects:  36% (7/19)   Writing objects:  42% (8/19)   Writing objects:  47% (9/19)   Writing objects:  52% (10/19)   Writing objects:  57% (11/19)   Writing objects:  63% (12/19)   Writing objects:  68% (13/19)   Writing objects:  73% (14/19)   Writing objects:  78% (15/19)   Writing objects:  84% (16/19)   Writing objects:  89% (17/19)   Writing objects:  94% (18/19)   Writing objects: 100% (19/19)   Writing objects: 100% (19/19), 4.72 KiB, done.
+Total 19 (delta 16), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Ruby/Rails app detected
+-----> Detected Rails is not set to serve static_assets
+       Installing rails3_serve_static_assets... done
+-----> Configure Rails 3 to disable x-sendfile
+       Installing rails3_disable_x_sendfile... done
+-----> Configure Rails to log to stdout
+       Installing rails_log_stdout... done
+-----> Gemfile detected, running Bundler version 1.0.7
+       Unresolved dependencies detected; Installing...
+       Using --without development:test
+       Fetching source index for http://rubygems.org/
+       Installing rake (0.9.2.2) 
+       Installing multi_json (1.0.3) 
+       Installing activesupport (3.1.1) 
+       Installing builder (3.0.0) 
+       Installing i18n (0.6.0) 
+       Installing activemodel (3.1.1) 
+       Installing erubis (2.7.0) 
+       Installing rack (1.3.5) 
+       Installing rack-cache (1.1) 
+       Installing rack-mount (0.8.3) 
+       Installing rack-test (0.6.1) 
+       Installing hike (1.2.1) 
+       Installing tilt (1.3.3) 
+       Installing sprockets (2.0.3) 
+       Installing actionpack (3.1.1) 
+       Installing mime-types (1.17.2) 
+       Installing polyglot (0.3.3) 
+       Installing treetop (1.4.10) 
+       Installing mail (2.3.0) 
+       Installing actionmailer (3.1.1) 
+       Installing arel (2.2.1) 
+       Installing tzinfo (0.3.31) 
+       Installing activerecord (3.1.1) 
+       Installing activeresource (3.1.1) 
+       Installing xml-simple (1.1.1) 
+       Installing aws-s3 (0.6.2) 
+       Installing bcrypt-ruby (3.0.1) with native extensions 
+       Installing cancan (1.6.7) 
+       Installing cocaine (0.2.0) 
+       Installing json (1.6.1) with native extensions 
+       Installing paperclip (2.4.5) 
+       Installing pg (0.11.0) with native extensions 
+       Installing rack-ssl (1.3.2) 
+       Using bundler (1.0.7) 
+       Installing rdoc (3.11) 
+       Installing thor (0.14.6) 
+       Installing railties (3.1.1) 
+       Installing rails (3.1.1) 
+       Installing uuidtools (2.1.2) 
+       Your bundle is complete! It was installed into ./.bundle/gems/
+-----> Compiled slug size is 6.5MB
+-----> Launching...
+ !     Heroku push rejected due to an unrecognized error.
+ !     We've been notified, see http://support.heroku.com if the problem persists.
+
+
+To git@heroku.com:fitec.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'git@heroku.com:fitec.git'
+root@fit:~/fit# herok [Ku logs
+^C[0m
+root@fit:~/fit# heroku logs
+^C[0m
+^root@fit:~/fit# heroku restart
+Restarting processes...  !   Internal server error
+root@fit:~/fit# heroku restart
+Restarting processes... ^C
+[canceled]
+root@fit:~/fit# git c[Kpush heroku
+Counting objects: 36, done.
+Compressing objects:   5% (1/19)   Compressing objects:  10% (2/19)   Compressing objects:  15% (3/19)   Compressing objects:  21% (4/19)   Compressing objects:  26% (5/19)   Compressing objects:  31% (6/19)   Compressing objects:  36% (7/19)   Compressing objects:  42% (8/19)   Compressing objects:  47% (9/19)   Compressing objects:  52% (10/19)   Compressing objects:  57% (11/19)   Compressing objects:  63% (12/19)   Compressing objects:  68% (13/19)   Compressing objects:  73% (14/19)   Compressing objects:  78% (15/19)   Compressing objects:  84% (16/19)   Compressing objects:  89% (17/19)   Compressing objects:  94% (18/19)   Compressing objects: 100% (19/19)   Compressing objects: 100% (19/19), done.
+Writing objects:   5% (1/19)   Writing objects:  10% (2/19)   Writing objects:  15% (3/19)   Writing objects:  21% (4/19)   Writing objects:  26% (5/19)   Writing objects:  31% (6/19)   Writing objects:  36% (7/19)   Writing objects:  42% (8/19)   Writing objects:  47% (9/19)   Writing objects:  52% (10/19)   Writing objects:  57% (11/19)   Writing objects:  63% (12/19)   Writing objects:  68% (13/19)   Writing objects:  73% (14/19)   Writing objects:  78% (15/19)   Writing objects:  84% (16/19)   Writing objects:  89% (17/19)   Writing objects:  94% (18/19)   Writing objects: 100% (19/19)   Writing objects: 100% (19/19), 4.72 KiB, done.
+Total 19 (delta 16), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Ruby/Rails app detected
+-----> Detected Rails is not set to serve static_assets
+       Installing rails3_serve_static_assets... done
+-----> Configure Rails 3 to disable x-sendfile
+       Installing rails3_disable_x_sendfile... done
+-----> Configure Rails to log to stdout
+       Installing rails_log_stdout... done
+-----> Gemfile detected, running Bundler version 1.0.7
+       Unresolved dependencies detected; Installing...
+       Using --without development:test
+       Fetching source index for http://rubygems.org/
+       Installing rake (0.9.2.2) 
+       Installing multi_json (1.0.3) 
+       Installing activesupport (3.1.1) 
+       Installing builder (3.0.0) 
+       Installing i18n (0.6.0) 
+       Installing activemodel (3.1.1) 
+       Installing erubis (2.7.0) 
+       Installing rack (1.3.5) 
+       Installing rack-cache (1.1) 
+       Installing rack-mount (0.8.3) 
+       Installing rack-test (0.6.1) 
+       Installing hike (1.2.1) 
+       Installing tilt (1.3.3) 
+       Installing sprockets (2.0.3) 
+       Installing actionpack (3.1.1) 
+       Installing mime-types (1.17.2) 
+       Installing polyglot (0.3.3) 
+       Installing treetop (1.4.10) 
+       Installing mail (2.3.0) 
+       Installing actionmailer (3.1.1) 
+       Installing arel (2.2.1) 
+       Installing tzinfo (0.3.31) 
+       Installing activerecord (3.1.1) 
+       Installing activeresource (3.1.1) 
+       Installing xml-simple (1.1.1) 
+       Installing aws-s3 (0.6.2) 
+       Installing bcrypt-ruby (3.0.1) with native extensions 
+       Installing cancan (1.6.7) 
+       Installing cocaine (0.2.0) 
+       Installing json (1.6.1) with native extensions 
+       Installing paperclip (2.4.5) 
+       Installing pg (0.11.0) with native extensions 
+       Installing rack-ssl (1.3.2) 
+       Using bundler (1.0.7) 
+       Installing rdoc (3.11) 
+       Installing thor (0.14.6) 
+       Installing railties (3.1.1) 
+       Installing rails (3.1.1) 
+       Installing uuidtools (2.1.2) 
+       Your bundle is complete! It was installed into ./.bundle/gems/
+-----> Compiled slug size is 6.5MB
+-----> Launching...
+ !     Heroku push rejected due to an unrecognized error.
+ !     We've been notified, see http://support.heroku.com if the problem persists.
+
+
+To git@heroku.com:fitec.git
+ ! [remote rejected] master -> master (pre-receive hook declined)
+error: failed to push some refs to 'git@heroku.com:fitec.git'
+root@fit:~/fit# herok logs
+bash: herok: command not found
+root@fit:~/fit# heroku logs
+[36m2011-11-19T16:38:10+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:38:10+00:00 app[web.1]:[0m Started POST "/api/sessions.xml?email=jpenedos@gmail.com&password=[FILTERED]" for 193.136.33.133 at 2011-11-19 08:38:10 -0800
+[36m2011-11-19T16:38:10+00:00 app[web.1]:[0m cache: [POST /api/sessions.xml?email=jpenedos@gmail.com&password=123456] invalidate, pass
+[33m2011-11-19T16:38:10+00:00 heroku[router]:[0m POST fitec.heroku.com/api/sessions.xml dyno=web.1 queue=0 wait=0ms service=119ms status=200 bytes=168
+[32m2011-11-19T16:38:10+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:38:10 -0800] "POST /api/sessions.xml?email=jpenedos@gmail.com&password=123456 HTTP/1.1" 200 176 "-" "Dalvik/1.4.0 (Linux; U; Android 2.3.3; sdk Build/GRI34)" fitec.heroku.com
+[36m2011-11-19T16:38:14+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:38:14+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:38:14+00:00 app[web.1]:[0m Started GET "/api/users.xml?token=f2ba856e-1101-11e1-acb0-1231381b0bff" for 193.136.33.133 at 2011-11-19 08:38:14 -0800
+[36m2011-11-19T16:38:14+00:00 app[web.1]:[0m cache: [GET /api/users.xml?token=f2ba856e-1101-11e1-acb0-1231381b0bff] miss
+[33m2011-11-19T16:38:14+00:00 heroku[router]:[0m GET fitec.heroku.com/api/users.xml dyno=web.1 queue=0 wait=0ms service=195ms status=200 bytes=800
+[36m2011-11-19T16:40:23+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:40:23+00:00 app[web.1]:[0m Started POST "/api/sessions.xml?email=jpenedos@gmail.com&password=[FILTERED]" for 193.136.33.133 at 2011-11-19 08:40:23 -0800
+[36m2011-11-19T16:40:23+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:40:23+00:00 app[web.1]:[0m cache: [POST /api/sessions.xml?email=jpenedos@gmail.com&password=123456] invalidate, pass
+[36m2011-11-19T16:40:26+00:00 app[web.1]:[0m Started GET "/api/users.xml?token=f2ba856e-1101-11e1-acb0-1231381b0bff" for 193.136.33.133 at 2011-11-19 08:40:26 -0800
+[36m2011-11-19T16:40:26+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:40:26+00:00 app[web.1]:[0m 
+[33m2011-11-19T16:40:26+00:00 heroku[router]:[0m GET fitec.heroku.com/api/users.xml dyno=web.1 queue=0 wait=0ms service=208ms status=200 bytes=800
+[35m2011-11-19T16:45:34+00:00 heroku[api]:[0m Config add S3_KEY, S3_SECRET by machado.pedro@fe.up.pt
+[35m2011-11-19T16:45:34+00:00 heroku[api]:[0m Release v133 created by machado.pedro@fe.up.pt
+[36m2011-11-19T16:45:34+00:00 heroku[web.1]:[0m State changed from up to bouncing
+[36m2011-11-19T16:45:34+00:00 heroku[web.1]:[0m State changed from bouncing to created
+[36m2011-11-19T16:45:34+00:00 heroku[web.1]:[0m State changed from created to starting
+[36m2011-11-19T16:45:37+00:00 heroku[web.1]:[0m Stopping process with SIGTERM
+[36m2011-11-19T16:45:37+00:00 app[web.1]:[0m >> Stopping ...
+[36m2011-11-19T16:45:38+00:00 heroku[web.1]:[0m Process exited
+[36m2011-11-19T16:45:39+00:00 heroku[web.1]:[0m Starting process with command `thin -p 59362 -e production -R /home/heroku_rack/heroku.ru start`
+[36m2011-11-19T16:45:42+00:00 app[web.1]:[0m >> Thin web server (v1.2.6 codename Crazy Delicious)
+[36m2011-11-19T16:45:42+00:00 app[web.1]:[0m >> Maximum connections set to 1024
+[36m2011-11-19T16:45:42+00:00 app[web.1]:[0m >> Listening on 0.0.0.0:59362, CTRL+C to stop
+[36m2011-11-19T16:45:43+00:00 heroku[web.1]:[0m State changed from starting to up
+[31m2011-11-19T16:48:34+00:00 heroku[slugc]:[0m Slug compilation started
+[36m2011-11-19T16:48:58+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:48:58+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:48:58+00:00 app[web.1]:[0m Started POST "/api/sessions.xml?email=jpenedos@gmail.com&password=[FILTERED]" for 193.136.33.133 at 2011-11-19 08:48:58 -0800
+[33m2011-11-19T16:48:58+00:00 heroku[router]:[0m POST fitec.heroku.com/api/sessions.xml dyno=web.1 queue=0 wait=0ms service=492ms status=200 bytes=168
+[36m2011-11-19T16:48:58+00:00 app[web.1]:[0m cache: [POST /api/sessions.xml?email=jpenedos@gmail.com&password=123456] invalidate, pass
+[32m2011-11-19T16:48:58+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:48:58 -0800] "POST /api/sessions.xml?email=jpenedos@gmail.com&password=123456 HTTP/1.1" 200 177 "-" "Dalvik/1.4.0 (Linux; U; Android 2.3.3; sdk Build/GRI34)" fitec.heroku.com
+[36m2011-11-19T16:49:01+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:01+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:01+00:00 app[web.1]:[0m Started GET "/api/users.xml?token=f2ba856e-1101-11e1-acb0-1231381b0bff" for 193.136.33.133 at 2011-11-19 08:49:01 -0800
+[33m2011-11-19T16:49:01+00:00 heroku[router]:[0m GET fitec.heroku.com/api/users.xml dyno=web.1 queue=0 wait=0ms service=112ms status=200 bytes=800
+[36m2011-11-19T16:49:01+00:00 app[web.1]:[0m cache: [GET /api/users.xml?token=f2ba856e-1101-11e1-acb0-1231381b0bff] miss
+[32m2011-11-19T16:49:01+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:49:01 -0800] "GET /api/users.xml?token=f2ba856e-1101-11e1-acb0-1231381b0bff HTTP/1.1" 200 800 "-" "Dalvik/1.4.0 (Linux; U; Android 2.3.3; sdk Build/GRI34)" fitec.heroku.com
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m Started PUT "/users/4" for 193.136.33.146 at 2011-11-19 08:49:03 -0800
+[33m2011-11-19T16:49:03+00:00 heroku[router]:[0m POST fitec.heroku.com/users/4 dyno=web.1 queue=0 wait=0ms service=172ms status=500 bytes=728
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m Errno::EACCES (Permission denied - /app/public/system/avatars/4):
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m   app/controllers/users_controller.rb:32:in `block in update'
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m   app/controllers/users_controller.rb:31:in `update'
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m cache: [POST /users/4] invalidate, pass
+[36m2011-11-19T16:49:07+00:00 app[w=web.1 queue=0 wait=0ms service=492ms status=200 bytes=168
+[36m2011-11-19T16:48:58+00:00 app[web.1]:[0m cache: [POST /api/sessions.xml?email=jpenedos@gmail.com&password=123456] invalidate, pass
+[32m2011-11-19T16:48:58+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:48:58 -0800] "POST /api/sessions.xml?email=jpenedos@gmail.com&password=123456 HTTP/1.1" 200 177 "-" "Dalvik/1.4.0 (Linux; U; Android 2.3.3; sdk Build/GRI34)" fitec.heroku.com
+[36m2011-11-19T16:49:01+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:01+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:01+00:00 app[web.1]:[0m Started GET "/api/users.xml?token=f2ba856e-1101-11e1-acb0-1231381b0bff" for 193.136.33.133 at 2011-11-19 08:49:01 -0800
+[33m2011-11-19T16:49:01+00:00 heroku[router]:[0m GET fitec.heroku.com/api/users.xml dyno=web.1 queue=0 wait=0ms service=112ms status=200 bytes=800
+[36m2011-11-19T16:49:01+00:00 app[web.1]:[0m cache: [GET /api/users.xml?token=f2ba856e-1101-11e1-acb0-1231381b0bff] miss
+[32m2011-11-19T16:49:01+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:49:01 -0800] "GET /api/users.xml?token=f2ba856e-1101-11e1-acb0-1231381b0bff HTTP/1.1" 200 800 "-" "Dalvik/1.4.0 (Linux; U; Android 2.3.3; sdk Build/GRI34)" fitec.heroku.com
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m Started PUT "/users/4" for 193.136.33.146 at 2011-11-19 08:49:03 -0800
+[33m2011-11-19T16:49:03+00:00 heroku[router]:[0m POST fitec.heroku.com/users/4 dyno=web.1 queue=0 wait=0ms service=172ms status=500 bytes=728
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m Errno::EACCES (Permission denied - /app/public/system/avatars/4):
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m   app/controllers/users_controller.rb:32:in `block in update'
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m   app/controllers/users_controller.rb:31:in `update'
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m cache: [POST /users/4] invalidate, pass
+[36m2011-11-19T16:49:07+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:07+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:07+00:00 app[web.1]:[0m Started GET "/users/" for 193.136.33.146 at 2011-11-19 08:49:07 -0800
+[33m2011-11-19T16:49:07+00:00 heroku[router]:[0m GET fitec.heroku.com/users/ dyno=web.1 queue=0 wait=0ms service=94ms status=200 bytes=6184
+[36m2011-11-19T16:49:07+00:00 app[web.1]:[0m cache: [GET /users/] miss
+[31m2011-11-19T16:50:34+00:00 heroku[slugc]:[0m Slug compilation failed: unrecognized error
+[36m2011-11-19T16:50:49+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:50:49+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:50:49+00:00 app[web.1]:[0m Started GET "/" for 193.136.33.146 at 2011-11-19 08:50:49 -0800
+[36m2011-11-19T16:50:49+00:00 app[web.1]:[0m cache: [GET /] miss
+[33m2011-11-19T16:50:49+00:00 heroku[router]:[0m GET fitec.heroku.com/ dyno=web.1 queue=0 wait=0ms service=21ms status=200 bytes=6106
+[32m2011-11-19T16:50:49+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:50:49 -0800] "GET /images/logo5.png?1321720408 HTTP/1.1" 200 4484 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[36m2011-11-19T16:50:49+00:00 app[web.1]:[0m cache: [GET /images/logo5.png?1321720408] miss
+[33m2011-11-19T16:50:49+00:00 heroku[router]:[0m GET fitec.heroku.com/images/logo5.png dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=4484
+[36m2011-11-19T16:50:53+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:50:53+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:50:53+00:00 app[web.1]:[0m Started GET "/users" for 193.136.33.146 at 2011-11-19 08:50:53 -0800
+[32m2011-11-19T16:50:53+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:50:53 -0800] "GET /users HTTP/1.1" 200 1561 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[36m2011-11-19T16:50:55+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:50:55+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:50:55+00:00 app[web.1]:[0m Started GET "/users/4/edit" for 193.136.33.146 at 2011-11-19 08:50:55 -0800
+[36m2011-11-19T16:50:55+00:00 app[web.1]:[0m cache: [GET /users/4/edit] miss
+[32m2011-11-19T16:50:55+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:50:55 -0800] "GET /users/4/edit HTTP/1.1" 304 0 "http://fitec.heroku.com/users" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m Started PUT "/users/4" for 193.136.33.146 at 2011-11-19 08:51:05 -0800
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m Errno::EACCES (Permission denied - /app/public/system/avatars/4):
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m   app/controllers/users_controller.rb:32:in `block in update'
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m   app/controllers/users_controller.rb:31:in `update'
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m cache: [POST /users/4] invalidate, pass
+[32m2011-11-19T16:51:05+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:51:05 -0800] "POST /users/4 HTTP/1.1" 500 728 "http://fitec.heroku.com/users/4/edit" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[35m2011-11-19T16:51:45+00:00 heroku[api]:[0m Deploy 2492b31 by machado.pedro@fe.up.pt
+[35m2011-11-19T16:51:45+00:00 heroku[api]:[0m Release v134 created by machado.pedro@fe.up.pt
+[35m2011-11-19T16:52:43+00:00 heroku[api]:[0m Deploy 2492b31 by machado.pedro@fe.up.pt
+[35m2011-11-19T16:52:43+00:00 heroku[api]:[0m Release v135 created by machado.pedro@fe.up.pt
+[33m2011-11-19T16:53:17+00:00 heroku[router]:[0m Error H99 (Platform error) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[31m2011-11-19T16:53:22+00:00 heroku[slugc]:[0m Slug compilation started
+[33m2011-11-19T16:53:55+00:00 heroku[router]:[0m Error H99 (Platform error) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[33m2011-11-19T16:54:00+00:00 heroku[router]:[0m Error H99 (Platform error) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[33m2011-11-19T16:54:14+00:00 heroku[router]:[0m Error H99 (Platform error) -> GET fitec.heroku.com/ dyno= queue= wait= service= status=503 bytes=
+[35m2011-11-19T16:54:56+00:00 heroku[api]:[0m Deploy 2492b31 by machado.pedro@fe.up.pt
+[35m2011-11-19T16:54:56+00:00 heroku[api]:[0m Release v136 created by machado.pedro@fe.up.pt
+root@fit:~/fit# herok [Ku st[Kstart[K[K[K[K[K[Krestart
+Restarting processes...  !   Internal server error
+root@fit:~/fit# heroku logs
+[36m2011-11-19T16:38:10+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:38:10+00:00 app[web.1]:[0m Started POST "/api/sessions.xml?email=jpenedos@gmail.com&password=[FILTERED]" for 193.136.33.133 at 2011-11-19 08:38:10 -0800
+[36m2011-11-19T16:38:10+00:00 app[web.1]:[0m cache: [POST /api/sessions.xml?email=jpenedos@gmail.com&password=123456] invalidate, pass
+[33m2011-11-19T16:38:10+00:00 heroku[router]:[0m POST fitec.heroku.com/api/sessions.xml dyno=web.1 queue=0 wait=0ms service=119ms status=200 bytes=168
+[32m2011-11-19T16:38:10+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:38:10 -0800] "POST /api/sessions.xml?email=jpenedos@gmail.com&password=123456 HTTP/1.1" 200 176 "-" "Dalvik/1.4.0 (Linux; U; Android 2.3.3; sdk Build/GRI34)" fitec.heroku.com
+[36m2011-11-19T16:38:14+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:38:14+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:38:14+00:00 app[web.1]:[0m Started GET "/api/users.xml?token=f2ba856e-1101-11e1-acb0-1231381b0bff" for 193.136.33.133 at 2011-11-19 08:38:14 -0800
+[36m2011-11-19T16:38:14+00:00 app[web.1]:[0m cache: [GET /api/users.xml?token=f2ba856e-1101-11e1-acb0-1231381b0bff] miss
+[33m2011-11-19T16:38:14+00:00 heroku[router]:[0m GET fitec.heroku.com/api/users.xml dyno=web.1 queue=0 wait=0ms service=195ms status=200 bytes=800
+[36m2011-11-19T16:40:23+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:40:23+00:00 app[web.1]:[0m Started POST "/api/sessions.xml?email=jpenedos@gmail.com&password=[FILTERED]" for 193.136.33.133 at 2011-11-19 08:40:23 -0800
+[36m2011-11-19T16:40:23+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:40:23+00:00 app[web.1]:[0m cache: [POST /api/sessions.xml?email=jpenedos@gmail.com&password=123456] invalidate, pass
+[36m2011-11-19T16:40:26+00:00 app[web.1]:[0m Started GET "/api/users.xml?token=f2ba856e-1101-11e1-acb0-1231381b0bff" for 193.136.33.133 at 2011-11-19 08:40:26 -0800
+[36m2011-11-19T16:40:26+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:40:26+00:00 app[web.1]:[0m 
+[33m2011-11-19T16:40:26+00:00 heroku[router]:[0m GET fitec.heroku.com/api/users.xml dyno=web.1 queue=0 wait=0ms service=208ms status=200 bytes=800
+[35m2011-11-19T16:45:34+00:00 heroku[api]:[0m Config add S3_KEY, S3_SECRET by machado.pedro@fe.up.pt
+[35m2011-11-19T16:45:34+00:00 heroku[api]:[0m Release v133 created by machado.pedro@fe.up.pt
+[36m2011-11-19T16:45:34+00:00 heroku[web.1]:[0m State changed from up to bouncing
+[36m2011-11-19T16:45:34+00:00 heroku[web.1]:[0m State changed from bouncing to created
+[36m2011-11-19T16:45:34+00:00 heroku[web.1]:[0m State changed from created to starting
+[36m2011-11-19T16:45:37+00:00 heroku[web.1]:[0m Stopping process with SIGTERM
+[36m2011-11-19T16:45:37+00:00 app[web.1]:[0m >> Stopping ...
+[36m2011-11-19T16:45:38+00:00 heroku[web.1]:[0m Process exited
+[36m2011-11-19T16:45:39+00:00 heroku[web.1]:[0m Starting process with command `thin -p 59362 -e production -R /home/heroku_rack/heroku.ru start`
+[36m2011-11-19T16:45:42+00:00 app[web.1]:[0m >> Thin web server (v1.2.6 codename Crazy Delicious)
+[36m2011-11-19T16:45:42+00:00 app[web.1]:[0m >> Maximum connections set to 1024
+[36m2011-11-19T16:45:42+00:00 app[web.1]:[0m >> Listening on 0.0.0.0:59362, CTRL+C to stop
+[36m2011-11-19T16:45:43+00:00 heroku[web.1]:[0m State changed from starting to up
+[31m2011-11-19T16:48:34+00:00 heroku[slugc]:[0m Slug compilation started
+[36m2011-11-19T16:48:58+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:48:58+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:48:58+00:00 app[web.1]:[0m Started POST "/api/sessions.xml?email=jpenedos@gmail.com&password=[FILTERED]" for 193.136.33.133 at 2011-11-19 08:48:58 -0800
+[33m2011-11-19T16:48:58+00:00 heroku[router]:[0m POST fitec.heroku.com/api/sessions.xml dyno=web.1 queue=0 wait=0ms service=492ms status=200 bytes=168
+[36m2011-11-19T16:48:58+00:00 app[web.1]:[0m cache: [POST /api/sessions.xml?email=jpenedos@gmail.com&password=123456] invalidate, pass
+[32m2011-11-19T16:48:58+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:48:58 -0800] "POST /api/sessions.xml?email=jpenedos@gmail.com&password=123456 HTTP/1.1" 200 177 "-" "Dalvik/1.4.0 (Linux; U; Android 2.3.3; sdk Build/GRI34)" fitec.heroku.com
+[36m2011-11-19T16:49:01+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:01+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:01+00:00 app[web.1]:[0m Started GET "/api/users.xml?token=f2ba856e-1101-11e1-acb0-1231381b0bff" for 193.136.33.133 at 2011-11-19 08:49:01 -0800
+[33m2011-11-19T16:49:01+00:00 heroku[router]:[0m GET fitec.heroku.com/api/users.xml dyno=web.1 queue=0 wait=0ms service=112ms status=200 bytes=800
+[36m2011-11-19T16:49:01+00:00 app[web.1]:[0m cache: [GET /api/users.xml?token=f2ba856e-1101-11e1-acb0-1231381b0bff] miss
+[32m2011-11-19T16:49:01+00:00 heroku[nginx]:[0m 193.136.33.133 - - [19/Nov/2011:08:49:01 -0800] "GET /api/users.xml?token=f2ba856e-1101-11e1-acb0-1231381b0bff HTTP/1.1" 200 800 "-" "Dalvik/1.4.0 (Linux; U; Android 2.3.3; sdk Build/GRI34)" fitec.heroku.com
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m Started PUT "/users/4" for 193.136.33.146 at 2011-11-19 08:49:03 -0800
+[33m2011-11-19T16:49:03+00:00 heroku[router]:[0m POST fitec.heroku.com/users/4 dyno=web.1 queue=0 wait=0ms service=172ms status=500 bytes=728
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m Errno::EACCES (Permission denied - /app/public/system/avatars/4):
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m   app/controllers/users_controller.rb:32:in `block in update'
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m   app/controllers/users_controller.rb:31:in `update'
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:03+00:00 app[web.1]:[0m cache: [POST /users/4] invalidate, pass
+[36m2011-11-19T16:49:07+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:07+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:49:07+00:00 app[web.1]:[0m Started GET "/users/" for 193.136.33.146 at 2011-11-19 08:49:07 -0800
+[33m2011-11-19T16:49:07+00:00 heroku[router]:[0m GET fitec.heroku.com/users/ dyno=web.1 queue=0 wait=0ms service=94ms status=200 bytes=6184
+[36m2011-11-19T16:49:07+00:00 app[web.1]:[0m cache: [GET /users/] miss
+[31m2011-11-19T16:50:34+00:00 heroku[slugc]:[0m Slug compilation failed: unrecognized error
+[36m2011-11-19T16:50:49+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:50:49+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:50:49+00:00 app[web.1]:[0m Started GE
+[36m[0m
+[36m2011-11-19T16:50:49+00:00 app[web.1]:[0m cache: [GET /] miss
+[33m2011-11-19T16:50:49+00:00 heroku[router]:[0m GET fitec.heroku.com/ dyno=web.1 queue=0 wait=0ms service=21ms status=200 bytes=6106
+[32m2011-11-19T16:50:49+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:50:49 -0800] "GET /images/logo5.png?1321720408 HTTP/1.1" 200 4484 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[36m2011-11-19T16:50:49+00:00 app[web.1]:[0m cache: [GET /images/logo5.png?1321720408] miss
+[33m2011-11-19T16:50:49+00:00 heroku[router]:[0m GET fitec.heroku.com/images/logo5.png dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=4484
+[36m2011-11-19T16:50:53+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:50:53+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:50:53+00:00 app[web.1]:[0m Started GET "/users" for 193.136.33.146 at 2011-11-19 08:50:53 -0800
+[32m2011-11-19T16:50:53+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:50:53 -0800] "GET /users HTTP/1.1" 200 1561 "http://fitec.heroku.com/" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[36m2011-11-19T16:50:55+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:50:55+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:50:55+00:00 app[web.1]:[0m Started GET "/users/4/edit" for 193.136.33.146 at 2011-11-19 08:50:55 -0800
+[36m2011-11-19T16:50:55+00:00 app[web.1]:[0m cache: [GET /users/4/edit] miss
+[32m2011-11-19T16:50:55+00:00 heroku[nginx]:[0m 193.136.33.146 - - [19/Nov/2011:08:50:55 -0800] "GET /users/4/edit HTTP/1.1" 304 0 "http://fitec.heroku.com/users" "Mozilla/5.0 (X11; Linux i686) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1" fitec.heroku.com
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m Started PUT "/users/4" for 193.136.33.146 at 2011-11-19 08:51:05 -0800
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m Errno::EACCES (Permission denied - /app/public/system/avatars/4):
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m   app/controllers/users_controller.rb:32:in `block in update'
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m   app/controllers/users_controller.rb:31:in `update'
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m 
+[36m2011-11-19T16:51:05+00:00 app[web.1]:[0m 
+[36m2011-11-

@@ -2,17 +2,34 @@ body {
   padding-top: 40px; /* used to fix bootstrap topbar */
 }
 
-.profileLine {
-  margin-bottom: 18px;
+.profileField {
+
 }
 
-.profileLine span {
+.fieldLabel {
   padding-top: 6px;
   font-size: 13px;
+  line-height: 18px;
+  float: left;
+  width: 130px;
+  text-align: right;
+  color: #404040;
 }
 
-/* *************** */
-/* parte do miller */
+.fieldContent {
+  margin-left: 20px;
+  text-align: left;
+  float: none;
+  width: 390px;
+}
+
+.topSpacing0 {
+  margin-top: 100px;
+}
+
+/* ******************************************************** */
+/* parte do miller                                          */
+/* (tambem andei a alterar coisas aqui, por isso cuidado)   */
 
 #page {
 	width: 970px;
@@ -117,22 +134,12 @@ body {
 }
 
 #info{
-	float: left;
-	margin-top: 10px;
-	line-height: 2.5em;
+  float: left;
+  margin-top: 10px;
+  line-height: 2.5em;
+  width: 100%;
 }
 
-#profile h1{
-	font-size: 2.6em;
-	color: #000;
-	margin: 0 0 20px;
-	padding-bottom: 5px;
-	color:#777;
-	font-weight: bold;
-	
-	/*border-bottom: 1px solid #ddd;
-	width: 500px;*/
-}
 
 #pitch {
   height: 210px;
