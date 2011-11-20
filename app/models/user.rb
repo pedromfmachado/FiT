@@ -83,7 +83,6 @@ class User < ActiveRecord::Base
   def flickr_auth
     FlickRaw.api_key="755298909a3867da9092eb921e173531"
     FlickRaw.shared_secret="3586b0ced741121d"
-
     flickr.access_token = "72157628068928565-9a350e8521dbe649"
     flickr.access_secret = "85c3c8966a036c44"
 
@@ -101,7 +100,7 @@ class User < ActiveRecord::Base
     File.open(path, "wb") { |f| f.write(file.read) }
     
     if url_foto
-      return flickr.upload_photo path, :photo_id => url_foto
+      return flickr.replace_photo path, :photo_id => url_foto
     else
       return flickr.upload_photo path
     end
