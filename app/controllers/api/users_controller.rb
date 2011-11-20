@@ -9,7 +9,8 @@ class Api::UsersController < ApiController
     @user = User.find_by_token(params[:token])
     
 
-    if @user.update_attributes(:nome => params[:nome], :email => params[:email] )
+    if @user.update_attributes(:nome => params[:nome], :email => params[:email], :datanascimento => params[:datanascimento]
+                                :morada => params[:morada], :telefone => params[:telefone])
       
       render :xml => message("success")
     else
