@@ -79,6 +79,8 @@ class User < ActiveRecord::Base
     end
   end
 
+  
+
   require 'flickraw'
   def flickr_auth
     FlickRaw.api_key="755298909a3867da9092eb921e173531"

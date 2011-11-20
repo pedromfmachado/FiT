@@ -2,7 +2,8 @@ class Api::UsersController < ApiController
 
   require 'builder'
   def index
-    respond_with User.find_by_token(params[:token])  
+    @user =  User.find_by_token(params[:token]) 
+    render :xml => api_xml(@user)
   end
 
   def edit
@@ -24,6 +25,22 @@ class Api::UsersController < ApiController
 
     xml.edit do
         xml.message msg
+    end
+  end
+
+  require 'builder'
+  def api_xml(user)
+    xml = Builder::XmlMarkup.new(:indent=>2)
+    xml.instruct!
+
+    xml.user do
+        xml.nome user.nome
+        xml.datanascimento user.datanascimento
+        xml.telefone user.telefone
+        xml.morada user.morada
+        xml.email user.email
+        xml.token user.token
+        xml.foto user.get_foto
     end
   end
 

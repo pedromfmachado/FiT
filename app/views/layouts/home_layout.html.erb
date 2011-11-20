@@ -62,7 +62,7 @@
     <%if current_user %>
     <ul id="menu">
         <%= link_to root_url do %><li class="parent">Home</li><%end%>
-        <a href="#"><li class="parent">Notícias</li></a>
+        <%= link_to notificacaos_path do %><li class="parent">Notícias</li><%end%>
         <a href="#"><li class="parent">Ginásios</li></a>
         <a href="#"><li class="parent">Aulas</li></a>
           <ul>

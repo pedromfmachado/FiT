@@ -37,11 +37,11 @@
   <div class="actions topSpacing0">
     <% if current_user.admin? && current_user.id != @user.id %>
       <% if !@user.admin? %>
-        <%= link_to "Promover", { :controller => "users" }, :action => "promote", :id => @user, :class => "btn success" %>
+        <%= link_to "Promover", { :controller => "users" , :action => "promote", :id => @user}, :class => "btn success" %>
       <% end %>
 
       <% if !@user.normal? %>
-        <%= link_to "Despromover", { :controller => "users" }, :action => "demote", :id => @user, :class => "btn danger" %>
+        <%= link_to "Despromover", { :controller => "users" , :action => "demote", :id => @user}, :class => "btn danger" %>
       <% end %>
     <% end %>
 
