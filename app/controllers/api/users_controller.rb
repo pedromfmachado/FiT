@@ -43,7 +43,7 @@ class Api::UsersController < ApiController
         if user.url_foto
 		xml.foto user.get_foto
     	else
-		xml.foto nil
+		xml.foto "http://fitec.heroku.com/images/missing.png"
 	end
     end
    end
