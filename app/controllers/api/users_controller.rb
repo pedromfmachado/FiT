@@ -8,7 +8,7 @@ class Api::UsersController < ApiController
   def edit
     @user = User.find_by_token(params[:token])
     xml = Builder::XmlMarkup.new(:indent=>2)
-
+    xml.instruct!
 
     if @user.update_attributes(:nome => params[:nome], :email => params[:email], 
                                :datanascimento => params[:datanascimento], 
