@@ -7,22 +7,22 @@ class Api::UsersController < ApiController
 
   def edit
     @user = User.find_by_token(params[:token])
+    
+
+    if @user.update_attributes(:nome => params[:nome], :email => params[:email] )
+      
+      render :xml => message("success")
+    else
+      render :xml => message("fail")
+    end
+  end
+
+  def message(msg)
     xml = Builder::XmlMarkup.new(:indent=>2)
     xml.instruct!
 
-    if @user.update_attributes(:nome => params[:nome], :email => params[:email], 
-                               :datanascimento => params[:datanascimento], 
-                               :morada => params[:morada], :telefone => params[:telefone])
-      
-      xml.edit do
-        xml.message "success"
-      end
-    	respond_with xml
-    else
-      xml.edit do
-        xml.message "fail"
-      end
-	    respond_with xml
+    xml.edit do
+        xml.message msg
     end
   end
 
