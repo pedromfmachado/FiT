@@ -40,7 +40,7 @@ class Api::UsersController < ApiController
         xml.morada user.morada
         xml.email user.email
         xml.token user.token
-        if url_foto
+        if user.url_foto
 		xml.foto user.get_foto
     	else
 		xml.foto nil
