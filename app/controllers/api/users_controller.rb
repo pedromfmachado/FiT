@@ -40,9 +40,13 @@ class Api::UsersController < ApiController
         xml.morada user.morada
         xml.email user.email
         xml.token user.token
-        xml.foto user.get_foto
+        if url_foto
+		xml.foto user.get_foto
+    	else
+		xml.foto nil
+	end
     end
-  end
+   end
 
   skip_before_filter :verify_authenticity_token
 end
