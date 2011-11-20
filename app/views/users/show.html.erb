@@ -5,6 +5,8 @@
 
   <% if @user.url_foto %>
   <%= image_tag @user.get_foto, :width => "150", :height => "150" %>
+  <%else%>
+  <%= image_tag "missing.png", :width => "150", :height => "150" %>
   <% end %>
   <div class="profileField">
     <span class="fieldLabel"><strong>Nome:</strong></span>

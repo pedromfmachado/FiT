@@ -99,11 +99,7 @@ class User < ActiveRecord::Base
     path = File.join(directory,file.original_filename)
     File.open(path, "wb") { |f| f.write(file.read) }
     
-    if url_foto
-      return flickr.replace_photo path, :photo_id => url_foto
-    else
-      return flickr.upload_photo path
-    end
+    return flickr.upload_photo path
   end
   
   def get_foto
