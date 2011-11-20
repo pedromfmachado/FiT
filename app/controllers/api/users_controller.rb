@@ -14,10 +14,14 @@ class Api::UsersController < ApiController
                                :datanascimento => params[:datanascimento], 
                                :morada => params[:morada], :telefone => params[:telefone])
       
-      xml.message "success"
+      xml.edit do
+        xml.message "success"
+      end
     	render :xml => xml.to_xml
     else
-      xml.message "fail"
+      xml.edit do
+        xml.message "fail"
+      end
 	    render :xml => xml
     end
   end
