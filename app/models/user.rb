@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
   has_many :planos
   has_attached_file :avatar, :styles => {:small => "150.150>"}
 
-  attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento, :avatar
+  attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento, :avatar, :avatar_file_name
 
   attr_accessor :password
   before_save :encrypt_password
@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
   validates :morada, :presence => true
   validates :telefone, :presence => true
   validates :email, :uniqueness => true, :presence => true, :on => :create
-  validates_attachment_presence :avatar
+  #validates_attachment_presence :avatar
   
   def self.authenticate(email, password)
     user = find_by_email(email)
