@@ -3,8 +3,9 @@
 <h1>Perfil</h1>
 <div id="info">
 
-
-  <%= if @user.url_foto image_tag @user.get_foto, :width => "150", :height => "150" end %>
+  <% if @user.url_foto %>
+  <%= image_tag @user.get_foto, :width => "150", :height => "150" %>
+  <% end %>
   <div class="profileField">
     <span class="fieldLabel"><strong>Nome:</strong></span>
     <span class="fieldContent"><%= @user.nome %></span>
