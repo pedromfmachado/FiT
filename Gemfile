@@ -21,7 +21,8 @@ gem "cancan"
 
 gem "uuidtools"
 
-gem "paperclip"
+
+gem "flickraw"
 
 
 # Use unicorn as the web server

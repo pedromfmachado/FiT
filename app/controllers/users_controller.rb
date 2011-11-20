@@ -14,6 +14,12 @@ class UsersController < ApplicationController
     params[:user][:email] = params[:user][:email].downcase
     @user = User.new(params[:user])
     if @user.save
+
+      if params[:filename]
+        @user.flickr_auth
+        url_foto = @user.upload_foto(params[:filename])
+        @user.update_attributes(:url_foto => url_foto)
+      end 
       redirect_to root_url, :notice => "Utilizador Registado"
     else
       render "new"
@@ -27,6 +33,11 @@ class UsersController < ApplicationController
 
   def update
     @user = User.find(params[:id])
+
+    if params[:filename]
+      @user.flickr_auth
+      params[:user][:url_foto] = @user.upload_foto(params[:filename])
+    end 
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
@@ -65,7 +76,7 @@ class UsersController < ApplicationController
 
   def promote
     @user = User.find(params[:id])
-	@user.promote
+	  @user.promote
 
     if @user.staff?
       redirect_to @user, :notice => "User promoted to staff"
@@ -77,7 +88,7 @@ class UsersController < ApplicationController
 
   def demote
     @user = User.find(params[:id])
-	@user.demote
+	  @user.demote
 
     if @user.staff?
       redirect_to @user, :notice => "User demoted to Staff"

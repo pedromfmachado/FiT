@@ -1,12 +1,10 @@
 class User < ActiveRecord::Base
-  include Paperclip::Glue   
 
   has_many :admins
   has_many :staffs
   has_many :planos
-  has_attached_file :avatar, :styles => {:small => "150.150>"}
 
-  attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento, :avatar, :avatar_file_name
+  attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento, :url_foto
 
   attr_accessor :password
   before_save :encrypt_password
@@ -19,7 +17,6 @@ class User < ActiveRecord::Base
   validates :morada, :presence => true
   validates :telefone, :presence => true
   validates :email, :uniqueness => true, :presence => true, :on => :create
-  #validates_attachment_presence :avatar
   
   def self.authenticate(email, password)
     user = find_by_email(email)
@@ -80,6 +77,42 @@ class User < ActiveRecord::Base
     elsif staff?
       Staff.find_by_user_id(id).destroy
     end
+  end
+
+  require 'flickraw'
+  def flickr_auth
+    FlickRaw.api_key="755298909a3867da9092eb921e173531"
+    FlickRaw.shared_secret="3586b0ced741121d"
+
+    flickr.access_token = "72157628068928565-9a350e8521dbe649"
+    flickr.access_secret = "85c3c8966a036c44"
+
+    login = flickr.test.login
+
+  end
+
+  def upload_foto(file)
+
+
+    login = flickr.test.login
+
+    directory = "tmp"
+    path = File.join(directory,file.original_filename)
+    File.open(path, "wb") { |f| f.write(file.read) }
+    
+    if url_foto
+      return flickr.upload_photo path, :photo_id => url_foto
+    else
+      return flickr.upload_photo path
+    end
+  end
+  
+  def get_foto
+    FlickRaw.api_key="755298909a3867da9092eb921e173531"
+    FlickRaw.shared_secret="3586b0ced741121d"
+
+    info = flickr.photos.getInfo(:photo_id => url_foto)
+    return FlickRaw.url_b(info)
   end
 
 end
