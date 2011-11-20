@@ -17,12 +17,12 @@ class Api::UsersController < ApiController
       xml.edit do
         xml.message "success"
       end
-    	render :xml => xml.to_xml
+    	respond_with xml
     else
       xml.edit do
         xml.message "fail"
       end
-	    render :xml => xml
+	    respond_with xml
     end
   end
 
