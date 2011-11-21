@@ -2,25 +2,8 @@ body {
   padding-top: 40px; /* used to fix bootstrap topbar */
 }
 
-.profileField {
-
-}
-
-.fieldLabel {
-  padding-top: 6px;
-  font-size: 13px;
-  line-height: 18px;
-  float: left;
-  width: 130px;
+.right-align {
   text-align: right;
-  color: #404040;
-}
-
-.fieldContent {
-  margin-left: 20px;
-  text-align: left;
-  float: none;
-  width: 390px;
 }
 
 .topSpacing0 {

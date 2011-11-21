@@ -112,4 +112,24 @@ class User < ActiveRecord::Base
     return FlickRaw.url_b(info)
   end
 
+	require 'builder'
+	def to_xml(options ={})
+		xml = ::Builder::XmlMarkup.new(:indent=>2)
+		xml.instruct!
+
+		xml.user do
+		    xml.nome nome
+		    xml.datanascimento datanascimento
+		    xml.telefone telefone
+		    xml.morada morada
+		    xml.email email
+		    xml.token token
+		    if url_foto
+				xml.foto get_foto
+			else
+				xml.foto "http://fitec.heroku.com/images/missing.png"
+			end
+		end
+	end
+
 end

@@ -18,8 +18,9 @@
       <th>Tipo</th>
     </tr>
   <% @plano.exercicios.each do |ex| %>
+    <% @dados = ExerciciosPlanos.where(:plano_id => @plano.id, :exercicio_id => ex.id).first %>
     <tr>
-      <td><%= ex.nome %></td> <td><%= ex.maquina %></td> <td><%= ex.tipo %></td><br />
+      <td><%= ex.nome %></td> <td><%= ex.maquina %></td> <td><%= ex.tipo %></td><td><%= @dados.peso %></td><td><%= @dados.series %></td><td><%= @dados.repeticoes %></td><br />
     </tr>
   <% end %>
   </table>

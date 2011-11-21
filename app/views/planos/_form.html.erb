@@ -1,54 +1,109 @@
 <%= form_for([@user,@plano]) do |f| %>
-  <% if @plano.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@plano.errors.count, "error") %> prohibited this plano from being saved:</h2>
 
-      <ul>
-      <% @plano.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
+  <div class="row">
+    <!-- le errors header -->
+    <% if @plano.errors.any? %>
+      <div class="alert-message error">
+        <a href="#" class="close">x</a>
+        <p><strong>Oh snap!</strong> Alguns campos do formulário estão incorrectos.</p>
+      </div>
+
+      <div id="error_explanation">
+        <h2><%= pluralize(@plano.errors.count, "error") %> prohibited this plano from being saved:</h2>
+
+        <ul>
+        <% @plano.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="row">
+    <!-- le form fields -->
+    <div class="clearfix">
+      <%= f.label :data %>
+      <div class="input">
+        <%= f.text_field :data, :value => @plano.data, :disabled => true, :class => "span2" %>
+      </div>
     </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :data %><br />
-    <%= f.text_field :data, :value => @plano.data, :disabled => true %>
-  </div>
-  <div class="field">
-    <%= f.label :altura %><br />
-    <%= f.text_field :altura %>
-  </div>
-  <div class="field">
-    <%= f.label :peso %><br />
-    <%= f.text_field :peso %>
-  </div>
-  <div id="exercicios">
-	<% @plano.exercicios.each do |exercicio| %>
-		<%= exercicio.nome %> - <%= exercicio.maquina %><br />
-	<% end %>
-  </div>
-  <div id="dados">
+    <div class="clearfix">
+      <%= f.label :altura %>
+      <div class="input">
+        <%= f.text_field :altura, :class => "span1" %>
+      </div>
+    </div>
+
+    <div class="clearfix">
+      <%= f.label :peso %>
+      <div class="input">
+        <%= f.text_field :peso, :class => "span1" %>
+      </div>
+    </div>
   </div>
 
-  <div class="field">
-    <%= label_tag('exercicio') %><br />
-    <%= collection_select("exercicios_listbox", nil, Exercicio.all, :id, :nome) %>
-    <%= link_to_function "Associar exercicio", "adicionaExercicio(#{@plano.exercicios.to_json}, #{Exercicio.all.to_json})", :class => "nav_link"%><br />
-    <%= label_tag('Peso') %><br />
-    <%= text_field_tag('exercicio_peso') %><br />
-    <%= label_tag('series') %><br />
-    <%= text_field_tag('exercicio_series') %><br />
-    <%= label_tag('repetições') %><br />
-    <%= text_field_tag('exercicio_repeticoes') %><br />
-  </div>
-  
- 
-  <%= hidden_field_tag "selected_exercicios", "" %>
-  <%= f.hidden_field :user_id %>
-  <%= f.hidden_field :admin_id, :value => current_user.id %>
+  <div class="row">
+    <!-- le adicionar exercicio -->
+    <div class="span7">
+      <h3>Adicionar Exercicio</h3>
 
-  <div class="actions">
-    <%= f.submit %>
+      <div class="clearfix">
+        <%= label_tag('exercicio') %>
+        <div class="input">
+          <%= collection_select("exercicios_listbox", nil, Exercicio.all, :id, :nome) %>
+        </div>
+      </div>
+
+     <div class="clearfix">
+        <p><%= link_to_function "Associar exercicio", "adicionaExercicio(#{@plano.exercicios.to_json}, #{Exercicio.all.to_json})", :class => "nav_link"%></p>
+     </div>
+
+      <div class="clearfix">
+        <%= label_tag('Peso') %>
+        <div class="input">
+          <%= text_field_tag('exercicio_peso') %>
+        </div>
+      </div>
+
+      <div class="clearfix">
+        <%= label_tag('series') %>
+        <div class="input">
+          <%= text_field_tag('exercicio_series') %>
+        </div>
+      </div>
+
+      <div class="clearfix">
+        <%= label_tag('repetições') %>
+        <div class="input">
+          <%= text_field_tag('exercicio_repeticoes') %>
+        </div>
+      </div>
+
+      <%= hidden_field_tag "selected_exercicios", "" %>
+      <%= f.hidden_field :user_id %>
+      <%= f.hidden_field :admin_id, :value => current_user.id %>
+    </div>
+
+    <!-- le listar exercicios -->
+    <div class="span5">
+      <div id="exercicios">
+        <h3>Lista de Exercicios</h3>
+
+        <% @plano.exercicios.each do |exercicio| %>
+          <p><%= exercicio.nome %> - <%= exercicio.maquina %></p>
+        <% end %>
+      </div>
+
+      <div id="dados">
+      </div>
+    </div>
+  </div>
+
+  <div class="actions topSpacing0">
+    <%= f.submit 'Guardar alterações', :class => "btn success" %>
+    <%= link_to 'Cancelar e Mostrar Plano', user_plano_path(@user,@plano), :class => "btn danger" %>
+    <%= link_to 'Cancelar e Listar Planos', user_planos_path(@user), :class => "btn primary" %>
   </div>
 <% end %>
