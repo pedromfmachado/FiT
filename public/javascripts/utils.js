@@ -66,16 +66,16 @@ function adicionaExercicio(exercicios_arr, all_arr){
 
         // imprime o exercicio na tabela certa conforme o seu tipo
         if(exercicio[0]['tipo'] == "Aeróbico" && peso && series){
-          $("#aerobicos").append("<td>" + exercicio[0]['nome']+ "</td><td>" + exercicio[0]['maquina'] + "</td><td>" 
-                                + peso + "</td><td>" + series + "</td>");
+          $("#aerobicos").append("<tr><td>" + exercicio[0]['nome']+ "</td><td>" + exercicio[0]['maquina'] + "</td><td>" 
+                                + peso + "</td><td>" + series + "</td></tr>");
       
           // escreve na hidden tag o id do exercicio escolhido
 		      $("#selected_exercicios").val(exercicios + valor_ex + "|" + peso + '|' + series + '|' + 0 + ",");
           $("#jsalert").text("Exercício associado.");
         }
         else if(exercicio[0]['tipo'] == "Musculação" && peso && series && repeticoes){
-          $("#musculacao").append("<td>" + exercicio[0]['nome']+ "</td><td>" + exercicio[0]['maquina'] + "</td><td>" 
-                                + peso + "</td><td>" + series + "</td>" + "<td></td>" + repeticoes );
+          $("#musculacao").append("<tr><td>" + exercicio[0]['nome']+ "</td><td>" + exercicio[0]['maquina'] + "</td><td>" 
+                                + peso + "</td><td>" + series + "</td><td>" + repeticoes + "</td></tr> );
 
 
           // escreve na hidden tag o id do exercicio escolhido
