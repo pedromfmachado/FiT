@@ -75,7 +75,7 @@ function adicionaExercicio(exercicios_arr, all_arr){
         }
         else if(exercicio[0]['tipo'] == "Musculação" && peso && series && repeticoes){
           $("#musculacao").append("<tr><td>" + exercicio[0]['nome']+ "</td><td>" + exercicio[0]['maquina'] + "</td><td>" 
-                                + peso + "</td><td>" + series + "</td><td>" + repeticoes + "</td></tr> );
+                                + peso + "</td><td>" + series + "</td><td>" + repeticoes + "</td></tr>");
 
 
           // escreve na hidden tag o id do exercicio escolhido
