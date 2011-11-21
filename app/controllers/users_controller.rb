@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
 
-      if params[:filename] != ""
+      if params[:filename] && params[:filename] != ""
         @user.flickr_auth
         url_foto = @user.upload_foto(params[:filename])
         @user.update_attributes(:url_foto => url_foto)
@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
 
-    if params[:filename] != ""
+    if params[:filename] && params[:filename] != ""
       @user.flickr_auth
       params[:user][:url_foto] = @user.upload_foto(params[:filename])
     end 
