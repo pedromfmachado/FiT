@@ -34,7 +34,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
 
-    if params[:filename]
+    if params[:filename] != ""
       @user.flickr_auth
       params[:user][:url_foto] = @user.upload_foto(params[:filename])
     end 

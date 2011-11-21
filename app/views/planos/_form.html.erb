@@ -55,20 +55,21 @@
         <div class="span4">
           <div class="clearfix">
             <%= label_tag('exercicio', nil, :class => "span2") %>
-            <%= collection_select("exercicios_listbox", nil, Exercicio.all, :id, :nome, {}, { :class => "span2 small-lborder" }) %>
+            <%= collection_select("exercicios_listbox", nil, Exercicio.all, :id, :nome, {}, { 
+                      :onchange => "altera_campos(#{Exercicio.all.to_json})", :class => "span2 small-lborder" }) %>
           </div>
         </div>
 
         <div class="span2">
           <div class="clearfix">  
-            <%= label_tag('Peso', nil, :class => "span1") %>
+            <%= label_tag('Peso', nil, :id => "ex_peso", :class => "span1") %>
             <%= text_field_tag('exercicio_peso', nil, { :class => "span1 small-lborder" }) %>
           </div>
         </div>
 
         <div class="span2">
           <div class="clearfix">
-            <%= label_tag('Series', nil, :class => "span1") %>
+            <%= label_tag('Series', nil, :id => "ex_series", :class => "span1") %>
             <%= text_field_tag('exercicio_series', nil, { :class => "span1 small-lborder" }) %>
           </div>        
         </div>
@@ -84,6 +85,7 @@
      <!-- adicionar exercicio -->
      <div class="clearfix">
         <p><%= link_to_function "Associar exercicio", "adicionaExercicio(#{@plano.exercicios.to_json}, #{Exercicio.all.to_json})", :class => "btn primary"%></p>
+        <span id="jsalert"></span>
      </div>
 
       <%= hidden_field_tag "selected_exercicios", "" %>
@@ -99,7 +101,7 @@
         <h3>Lista de Exercicios</h3>
         <h4>Aeróbicos:</h4>
 
-        <table>
+        <table id="aerobicos">
 
           <th>Nome</th>
           <th>Máquina</th>
@@ -116,13 +118,13 @@
           <% end %>
         </table>
         <h4>Musculação:</h4>
-        <table>
+        <table id="musculacao">
           <th>Nome</th>
           <th>Máquina</th>
           <th>Peso</th>
           <th>Séries</th>
           <th>Repetições</th>
-          <% @plano.exercicios.where(:tipo => "Aeróbico").each do |exercicio| %>
+          <% @plano.exercicios.where(:tipo => "Musculação").each do |exercicio| %>
           <% @dados = ExerciciosPlanos.where(:plano_id => @plano.id, :exercicio_id => exercicio.id).first %>
             <tr>
               <td><%= exercicio.nome %></td>
