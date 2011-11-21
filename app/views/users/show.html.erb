@@ -3,34 +3,41 @@
 <h1>Perfil</h1>
 <div id="info">
 
-  <% if @user.url_foto %>
-  <%= image_tag @user.get_foto, :width => "150", :height => "150" %>
-  <%else%>
-  <%= image_tag "missing.png", :width => "150", :height => "150" %>
-  <% end %>
-  <div class="profileField">
-    <span class="fieldLabel"><strong>Nome:</strong></span>
-    <span class="fieldContent"><%= @user.nome %></span>
-  </div>
+  <div class="row">
+    <div class="span9">
+      <div class="row">
+        <div class="span3 right-align"><strong>Nome:</strong></div>
+	      <div class="span6"><%= @user.nome %></div>
+      </div>
+  
+      <div class="row">
+        <div class="span3 right-align"><strong>Email:</strong></div>
+	      <div class="span6"><%= @user.email %></div>
+      </div>
 
-  <div class="profileField">
-    <span class="fieldLabel"><strong>Email:</strong></span>
-    <span class="fieldContent"><%= @user.email %></span>
-  </div>
+      <div class="row">
+        <div class="span3 right-align"><strong>Data Nasc.:</strong></div>
+        <div class="span6"><%= @user.datanascimento %></div>
+      </div>
 
-  <div class="profileField">
-    <span class="fieldLabel"><strong>Data de Nascimento:</strong></span>
-    <span class="fieldContent"><%= @user.datanascimento %></span>
-  </div>
+      <div class="row">
+        <div class="span3 right-align"><strong>Telefone:</strong></div>
+        <div class="span6"><%= @user.telefone %></div>
+      </div>
 
-  <div class="profileField">
-    <span class="fieldLabel"><strong>Telefone:</strong></span>
-    <span class="fieldContent"><%= @user.telefone %></span>
-  </div>
+      <div class="row">
+        <div class="span3 right-align"><strong>Morada:</strong></div>
+        <div class="span6"><%= @user.morada %></div>
+      </div>
+    </div>
 
-  <div class="profileField">
-    <span class="fieldLabel"><strong>Morada:</strong></span>
-    <span class="fieldContent"><%= @user.morada %></span>
+    <div class="span3">
+      <% if @user.url_foto %>
+        <%= image_tag @user.get_foto, :width => "150", :height => "150" %>
+      <% else %>
+        <%= image_tag "missing.png", :width => "150", :height => "150" %>
+      <% end %>
+    </div>
   </div>
 
   <!-- action buttons -->
