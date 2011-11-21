@@ -10,19 +10,40 @@
   <b>Peso:</b>
   <%= @plano.peso %><br />
 
-  <b> Exercicios: </b>
+  <h3>Exercícios</h3>
+  <h4>Aeróbicos</h4>
   <table>
     <tr>
       <th>Nome</th>
       <th>Máquina</th>
-      <th>Tipo</th>
+      <th>Nível</th>
+      <th>Tempo</th>
     </tr>
-  <% @plano.exercicios.each do |ex| %>
-    <% @dados = ExerciciosPlanos.where(:plano_id => @plano.id, :exercicio_id => ex.id).first %>
+    <% @plano.exercicios.where(:tipo => "Aeróbico").each do |ex| %>
+      <% @dados = ExerciciosPlanos.where(:plano_id => @plano.id, :exercicio_id => ex.id).first %>
+        <tr>
+          <td><%= ex.nome %></td> <td><%= ex.maquina %></td>
+          <td><%= @dados.peso %></td><td><%= @dados.series %></td>
+        </tr>
+    <% end %>
+  </table>
+
+  <h4>Musculação</h4>
+  <table>
     <tr>
-      <td><%= ex.nome %></td> <td><%= ex.maquina %></td> <td><%= ex.tipo %></td><td><%= @dados.peso %></td><td><%= @dados.series %></td><td><%= @dados.repeticoes %></td><br />
+      <th>Nome</th>
+      <th>Máquina</th>
+      <th>Peso</th>
+      <th>Séries</th>
+      <th>Repetições</th>
     </tr>
-  <% end %>
+    <% @plano.exercicios.where(:tipo => "Musculação").each do |ex| %>
+      <% @dados = ExerciciosPlanos.where(:plano_id => @plano.id, :exercicio_id => ex.id).first %>
+        <tr>
+          <td><%= ex.nome %></td> <td><%= ex.maquina %></td>
+          <td><%= @dados.peso %></td><td><%= @dados.series %></td><td><%= @dados.repeticoes %></td>
+        </tr>
+    <% end %>
   </table>
 
 
