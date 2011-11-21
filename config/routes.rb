@@ -25,7 +25,6 @@ Fit::Application.routes.draw do
     match 'users/edit' => 'users#edit', :as => "users/edit"
   end
 
-  #rotas da api
   
   root :to => "home#show"
 
