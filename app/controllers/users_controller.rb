@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
 
-      if params[:filename]
+      if params[:filename] != ""
         @user.flickr_auth
         url_foto = @user.upload_foto(params[:filename])
         @user.update_attributes(:url_foto => url_foto)

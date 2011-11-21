@@ -10,6 +10,10 @@ body {
   margin-top: 100px;
 }
 
+input.small-lborder, select.small-lborder {
+  margin-left: 15px;
+}
+
 /* ******************************************************** */
 /* parte do miller                                          */
 /* (tambem andei a alterar coisas aqui, por isso cuidado)   */

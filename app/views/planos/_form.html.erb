@@ -1,99 +1,138 @@
 <%= form_for([@user,@plano]) do |f| %>
 
+  <!-- le errors header -->
+  <% if @plano.errors.any? %>
   <div class="row">
-    <!-- le errors header -->
-    <% if @plano.errors.any? %>
-      <div class="alert-message error">
-        <a href="#" class="close">x</a>
-        <p><strong>Oh snap!</strong> Alguns campos do formulário estão incorrectos.</p>
-      </div>
-
-      <div id="error_explanation">
-        <h2><%= pluralize(@plano.errors.count, "error") %> prohibited this plano from being saved:</h2>
-
-        <ul>
-        <% @plano.errors.full_messages.each do |msg| %>
-          <li><%= msg %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
-  </div>
-
-  <div class="row">
-    <!-- le form fields -->
-    <div class="clearfix">
-      <%= f.label :data %>
-      <div class="input">
-        <%= f.text_field :data, :value => @plano.data, :disabled => true, :class => "span2" %>
-      </div>
+    <div class="alert-message error">
+      <a href="#" class="close">x</a>
+      <p><strong>Oh snap!</strong> Alguns campos do formulário estão incorrectos.</p>
     </div>
 
-    <div class="clearfix">
-      <%= f.label :altura %>
-      <div class="input">
-        <%= f.text_field :altura, :class => "span1" %>
-      </div>
-    </div>
+    <div id="error_explanation">
+      <h2><%= pluralize(@plano.errors.count, "error") %> prohibited this plano from being saved:</h2>
 
-    <div class="clearfix">
-      <%= f.label :peso %>
-      <div class="input">
-        <%= f.text_field :peso, :class => "span1" %>
-      </div>
+      <ul>
+      <% @plano.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
     </div>
   </div>
+  <% end %>
 
+  <!-- le form fields -->
   <div class="row">
-    <!-- le adicionar exercicio -->
-    <div class="span7">
+    <div class="span4">
+      <div class="clearfix">
+        <%= f.label :data, :class => "span1" %>
+        <!-- div class="input" -->
+        <%= f.text_field :data, :value => @plano.data, :disabled => true, :class => "span2 small-lborder" %>
+      </div>
+    </div>
+
+    <div class="span2">
+      <div class="clearfix">
+        <%= f.label :altura, :class => "span1" %>
+        <%= f.text_field :altura, :class => "span1 small-lborder" %>
+      </div>
+    </div>
+
+    <div class="span3">
+      <div class="clearfix">
+        <%= f.label :peso, :class => "span1" %>
+        <%= f.text_field :peso, :class => "span1 small-lborder" %>
+      </div>
+    </div>
+  </div>
+
+  <!-- le seccao exercicios -->
+  <div class="row">
+    <!-- le adicionar exercicios -->
+    <div class="span12">
       <h3>Adicionar Exercicio</h3>
 
-      <div class="clearfix">
-        <%= label_tag('exercicio') %>
-        <div class="input">
-          <%= collection_select("exercicios_listbox", nil, Exercicio.all, :id, :nome) %>
+      <div class="row">
+        <div class="span4">
+          <div class="clearfix">
+            <%= label_tag('exercicio', nil, :class => "span2") %>
+            <%= collection_select("exercicios_listbox", nil, Exercicio.all, :id, :nome, {}, { :class => "span2 small-lborder" }) %>
+          </div>
         </div>
-      </div>
 
-     <div class="clearfix">
-        <p><%= link_to_function "Associar exercicio", "adicionaExercicio(#{@plano.exercicios.to_json}, #{Exercicio.all.to_json})", :class => "nav_link"%></p>
+        <div class="span2">
+          <div class="clearfix">  
+            <%= label_tag('Peso', nil, :class => "span1") %>
+            <%= text_field_tag('exercicio_peso', nil, { :class => "span1 small-lborder" }) %>
+          </div>
+        </div>
+
+        <div class="span2">
+          <div class="clearfix">
+            <%= label_tag('Series', nil, :class => "span1") %>
+            <%= text_field_tag('exercicio_series', nil, { :class => "span1 small-lborder" }) %>
+          </div>        
+        </div>
+
+        <div class="span3">
+          <div class="clearfix">
+            <%= label_tag('Repetições', nil, :class => "span2") %>
+            <%= text_field_tag('exercicio_repeticoes', nil, { :class => "span1 small-lborder" }) %>
+          </div>        
+        </div>
      </div>
 
-      <div class="clearfix">
-        <%= label_tag('Peso') %>
-        <div class="input">
-          <%= text_field_tag('exercicio_peso') %>
-        </div>
-      </div>
-
-      <div class="clearfix">
-        <%= label_tag('series') %>
-        <div class="input">
-          <%= text_field_tag('exercicio_series') %>
-        </div>
-      </div>
-
-      <div class="clearfix">
-        <%= label_tag('repetições') %>
-        <div class="input">
-          <%= text_field_tag('exercicio_repeticoes') %>
-        </div>
-      </div>
+     <!-- adicionar exercicio -->
+     <div class="clearfix">
+        <p><%= link_to_function "Associar exercicio", "adicionaExercicio(#{@plano.exercicios.to_json}, #{Exercicio.all.to_json})", :class => "btn primary"%></p>
+     </div>
 
       <%= hidden_field_tag "selected_exercicios", "" %>
       <%= f.hidden_field :user_id %>
       <%= f.hidden_field :admin_id, :value => current_user.id %>
     </div>
+  </div>
 
-    <!-- le listar exercicios -->
-    <div class="span5">
+  <!-- le listar exercicios -->
+  <div class="row">
+    <div class="span12">
       <div id="exercicios">
         <h3>Lista de Exercicios</h3>
+        <h4>Aeróbicos:</h4>
 
-        <% @plano.exercicios.each do |exercicio| %>
-          <p><%= exercicio.nome %> - <%= exercicio.maquina %></p>
-        <% end %>
+        <table>
+
+          <th>Nome</th>
+          <th>Máquina</th>
+          <th>Nível/Velocidade</th>
+          <th>Tempo</th>
+          <% @plano.exercicios.where(:tipo => "Aeróbico").each do |exercicio| %>
+          <% @dados = ExerciciosPlanos.where(:plano_id => @plano.id, :exercicio_id => exercicio.id).first %>
+            <tr>
+              <td><%= exercicio.nome %></td>
+              <td><%= exercicio.maquina %></td>
+              <td><%= @dados.peso %></td>
+              <td><%= @dados.series %></td>
+            </tr>
+          <% end %>
+        </table>
+        <h4>Musculação:</h4>
+        <table>
+          <th>Nome</th>
+          <th>Máquina</th>
+          <th>Peso</th>
+          <th>Séries</th>
+          <th>Repetições</th>
+          <% @plano.exercicios.where(:tipo => "Aeróbico").each do |exercicio| %>
+          <% @dados = ExerciciosPlanos.where(:plano_id => @plano.id, :exercicio_id => exercicio.id).first %>
+            <tr>
+              <td><%= exercicio.nome %></td>
+              <td><%= exercicio.maquina %></td>
+              <td><%= @dados.peso %></td>
+              <td><%= @dados.series %></td>
+              <td><%= @dados.repeticoes %></td>
+            </tr>
+          <% end %>
+        </table>
       </div>
 
       <div id="dados">
@@ -103,7 +142,6 @@
 
   <div class="actions topSpacing0">
     <%= f.submit 'Guardar alterações', :class => "btn success" %>
-    
     <%= link_to 'Cancelar e Listar Planos', user_planos_path(@user), :class => "btn primary" %>
   </div>
 <% end %>
