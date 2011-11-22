@@ -1,6 +1,8 @@
-<h1>Editing notificacao</h1>
+<h1>Editar Notificação</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @notificacao %> |
-<%= link_to 'Back', notificacaos_path %>
+  <%= link_to 'Cancelar', @notificacao, :class => "btn danger" %>
+  <%= link_to 'Ver Notificações', notificacaos_path, :class => "btn primary" %>
+
+</div>

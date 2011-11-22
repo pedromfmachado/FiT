@@ -29,7 +29,7 @@
     <% end %>
 
     <td>
-      <% if (can? :destroy, User) && user.id != current_user.id %>
+      <% if (user.admin? || user.staff?) && user.admin? %>
       <%= link_to 'Apagar', user, :confirm => 'Are you sure?', :method => :delete %>
       <%end%>
     </td>

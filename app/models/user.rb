@@ -109,7 +109,7 @@ class User < ActiveRecord::Base
     FlickRaw.shared_secret="3586b0ced741121d"
 
     info = flickr.photos.getInfo(:photo_id => url_foto)
-    return FlickRaw.url_b(info)
+    return FlickRaw.url_m(info)
   end
 
 	require 'builder'

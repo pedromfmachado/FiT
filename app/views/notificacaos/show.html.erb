@@ -1,25 +1,22 @@
-<p id="notice"><%= notice %></p>
+<h1>Notificação</h1>
 
-<p>
-  <b>Data:</b>
-  <%= @notificacao.data %>
-</p>
-
-<p>
-  <b>Titulo:</b>
+<h3>
   <%= @notificacao.titulo %>
-</p>
+</h3>
 
 <p>
-  <b>Texto:</b>
-  <%= @notificacao.texto %>
+  <% @notificacao.texto.split("\r\n").each do |line| %>
+  <%= line %> <br/>
+  <% end %>
 </p>
+
+<br/>
 
 <p>
-  <b>Criado por </b>
-  <%= User.find(@notificacao.admin_id).nome %>
+  <em>Criado por <%= User.find(@notificacao.admin_id).nome %> em <%= @notificacao.data %></em>
 </p>
 
-
-<%= link_to 'Edit', edit_notificacao_path(@notificacao) %> |
-<%= link_to 'Back', notificacaos_path %>
+<div class="actions topSpacing0">
+  <%= link_to 'Editar Notificação', edit_notificacao_path(@notificacao), :class => "btn primary" %>
+  <%= link_to 'Voltar', notificacaos_path, :class => "btn" %>
+</div>

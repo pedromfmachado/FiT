@@ -10,12 +10,20 @@ class Ability
       cannot :update, User do |u|
 	u.admin? && user.id != u.id
       end
+      cannot :destroy, User do |u|
+	u.admin?
+      end
     elsif user.staff?
       can :read, Notificacao
       can :manage, Plano
       can :manage, Exercicio
       can :manage, User
-      cannot :create, Plano, :user_id => user.id
+      cannot :update, User do |u|
+	(u.admin? || u.staff?) && user.id != u.id
+      end
+      cannot :destroy, User do |u|
+	u.admin? || u.staff?
+      end
     elsif user.normal?
       can :read, Notificacao
       can :read, Plano, :user_id => user.id

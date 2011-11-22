@@ -18,6 +18,10 @@ input.small-lborder, select.small-lborder {
   resize: none;
 }
 
+.vertical-resize {
+  resize: vertical;
+}
+
 /* ******************************************************** */
 /* parte do miller                                          */
 /* (tambem andei a alterar coisas aqui, por isso cuidado)   */
