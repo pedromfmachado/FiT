@@ -45,15 +45,11 @@
 <div id="page">
   <!-- Alertas (para ja ficam aqui por uma questão de feedback) -->
   
-
-  <div id="logo"> 
-    <!-- so faz sentido a imagem estar na pagina inicial... -->
+  <div class="row">
      <% flash.each do |name, msg| %>
       <%= content_tag :div, msg, :id => "flash_#{name}" %>
     <% end %>
   </div>
-
-  <div class="line"></div>
 
   <div id="content">
     <ul id="menu">
