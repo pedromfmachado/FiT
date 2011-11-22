@@ -14,6 +14,10 @@ input.small-lborder, select.small-lborder {
   margin-left: 15px;
 }
 
+.no-resize {
+  resize: none;
+}
+
 /* ******************************************************** */
 /* parte do miller                                          */
 /* (tambem andei a alterar coisas aqui, por isso cuidado)   */

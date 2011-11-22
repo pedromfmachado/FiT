@@ -1,10 +1,38 @@
 // JavaScript Document
 
-/*$(document).ready(function(){
-    $("form").submit(function(){
-        $("#plano_data").removeAttr("disabled");
-    });
-});*/
+$(document).ready(function(){
+    
+	
+	$("#exercicios_listbox_").change(function(){
+
+		var xml = new XMLHttpRequest();
+		xml.open("GET","/api/exercicios.xml", false);
+		xml.send();
+		exercicios = xml.responseXML.documentElement.getElementsByTagName("exercicio");
+		var valor_ex = $("#exercicios_listbox_").val();
+		for(i = 0; i < exercicios.length; i++){
+			var id = exercicios[i].getElementsByTagName("id")[0].firstChild.nodeValue;
+			if(id == valor_ex.toString()){
+				
+				var tipo = exercicios[i].getElementsByTagName("tipo")[0].firstChild.nodeValue;
+				if(tipo == "Aeróbico"){
+
+					$("#ex_peso").text("Nível");
+					$("#ex_series").text("Tempo");
+					$("#ex_repeticoes").hide();
+					$("#exercicio_repeticoes").hide();
+				}
+				else if(tipo == "Musculação"){
+
+					$("#ex_peso").text("Peso");
+					$("#ex_series").text("Series");
+					$("#ex_repeticoes").show();
+					$("#exercicio_repeticoes").show();
+				}
+			}
+		}
+	});
+});
 
 
 function getObjects(obj, key, val) {

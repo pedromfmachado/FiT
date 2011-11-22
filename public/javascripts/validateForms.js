@@ -25,40 +25,43 @@ function validateForm(selector) {
     rules: {
       "user[nome]": {
         required: true,
-        minLength: 2
+        minlength: 2
       },
       "user[datanascimento]": {
         required: true,
         dateISO: true
       },
-	  "user[email]": {
+      "user[email]": {
         required: true,
         email: true
       },
-	  "user[telefone]": {
-	    required: true,
-		digits: true,
-	    exactLength: 9
-	  },
-	  "user[morada]": "required",
-	  "user[password]": {
-	    required: true,
-		passwordValidation: true,
-		rangeLength: [8,16]
-	  },
-	  "user[password_confirmation]": {
-	    equalTo: "#user_password"
-	  }
+      "user[telefone]": {
+        required: true,
+        digits: true,
+        exactLength: 9
+      },
+      "user[morada]": {
+        required: true,
+      },
+      "user[password]": {
+         required: true,
+         passwordValidation: true,
+         rangelength: [8,16]
+      },
+      "user[password_confirmation]": {
+        required: true,
+        equalTo: "#user_password"
+      }
     },
 
     // messages for each field
     messages: {
       "user[nome]": "Escreva o seu nome (no mínimo 2 caracteres)",
-	  "user[datanascimento]": "Introduza uma data válida",
-	  "user[email]": "Introduza um email válido (ex: exemplo@sapo.pt)",
-	  "user[telefone]": "Introduza o seu contacto",
-	  "user[morada]": "Introduza uma morada válida",
-	  "user[password]": "A sua password deve ter entre 8 a 16 caracteres e incluir dígitos, minúsculas e maiúsculas",
+      "user[datanascimento]": "Introduza uma data válida",
+      "user[email]": "Introduza um email válido (ex: exemplo@sapo.pt)",
+      "user[telefone]": "Introduza o seu contacto",
+      "user[morada]": "Introduza uma morada válida",
+      "user[password]": "A sua password deve ter entre 8 a 16 caracteres e incluir dígitos, minúsculas e maiúsculas",
       "user[password_confirmation]": "Passwords não iguais: repita a password"
     },
 

@@ -23,7 +23,7 @@
             <ul class="menu-dropdown">
 
               <% if current_user.admin? %>
-              <li><%= link_to "Registar membro", sign_up_path %></li>
+              <li><%= link_to "Registar Novo Utilizador", sign_up_path %></li>
               <li class="divider"></li>
               <% end %>
 
@@ -62,7 +62,7 @@
     <%if current_user %>
     <ul id="menu">
         <%= link_to root_url do %><li class="parent">Home</li><%end%>
-        <%= link_to notificacaos_path do %><li class="parent">Notícias</li><%end%>
+        <%= link_to notificacaos_path do %><li class="parent">Notificações</li><%end%>
         <a href="#"><li class="parent">Ginásios</li></a>
         <a href="#"><li class="parent">Aulas</li></a>
           <ul>

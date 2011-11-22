@@ -55,8 +55,7 @@
         <div class="span4">
           <div class="clearfix">
             <%= label_tag('exercicio', nil, :class => "span2") %>
-            <%= collection_select("exercicios_listbox", nil, Exercicio.all, :id, :nome, {}, { 
-                      :onchange => "altera_campos(#{Exercicio.all.to_json})", :class => "span2 small-lborder" }) %>
+            <%= collection_select("exercicios_listbox", nil, Exercicio.all, :id, :nome, {}, {  :class => "span2 small-lborder" }) %>
           </div>
         </div>
 
@@ -76,7 +75,7 @@
 
         <div class="span3">
           <div class="clearfix">
-            <%= label_tag('Repetições', nil, :class => "span2") %>
+            <%= label_tag('Repetições', nil, :id => "ex_repeticoes", :class => "span2") %>
             <%= text_field_tag('exercicio_repeticoes', nil, { :class => "span1 small-lborder" }) %>
           </div>        
         </div>

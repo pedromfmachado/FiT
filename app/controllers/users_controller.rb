@@ -20,7 +20,7 @@ class UsersController < ApplicationController
         url_foto = @user.upload_foto(params[:filename])
         @user.update_attributes(:url_foto => url_foto)
       end 
-      redirect_to root_url, :notice => "Utilizador Registado"
+      redirect_to @user, :notice => "Utilizador Registado"
     else
       render "new"
     end  

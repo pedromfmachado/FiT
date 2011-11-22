@@ -9,7 +9,7 @@ class Plano < ActiveRecord::Base
 	validates :altura, :presence => true
 
 	require 'builder'
-	def to_xml(options={})
+	def xml_plano()
 		xml = ::Builder::XmlMarkup.new(:indent=>2)
 		xml.instruct!
 
