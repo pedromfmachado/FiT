@@ -3,27 +3,27 @@
 function alterar_campos(exercicios){
 	
 	var valor_ex = $("#exercicios_listbox_").val();
-		for(i = 0; i < exercicios.length; i++){
-			var id = exercicios[i].getElementsByTagName("id")[0].firstChild.nodeValue;
-			if(id == valor_ex.toString()){
-				
-				var tipo = exercicios[i].getElementsByTagName("tipo")[0].firstChild.nodeValue;
-				if(tipo == "Aeróbico"){
+	for(i = 0; i < exercicios.length; i++){
+		var id = exercicios[i].getElementsByTagName("id")[0].firstChild.nodeValue;
+		if(id == valor_ex.toString()){
+			
+			var tipo = exercicios[i].getElementsByTagName("tipo")[0].firstChild.nodeValue;
+			if(tipo == "Aeróbico"){
 
-					$("#ex_peso").text("Nível");
-					$("#ex_series").text("Tempo");
-					$("#ex_repeticoes").hide();
-					$("#exercicio_repeticoes").hide();
-				}
-				else if(tipo == "Musculação"){
+				$("#ex_peso").text("Nível");
+				$("#ex_series").text("Tempo");
+				$("#ex_repeticoes").hide();
+				$("#exercicio_repeticoes").hide();
+			}
+			else if(tipo == "Musculação"){
 
-					$("#ex_peso").text("Peso");
-					$("#ex_series").text("Series");
-					$("#ex_repeticoes").show();
-					$("#exercicio_repeticoes").show();
-				}
+				$("#ex_peso").text("Peso");
+				$("#ex_series").text("Series");
+				$("#ex_repeticoes").show();
+				$("#exercicio_repeticoes").show();
 			}
 		}
+	}
 }
 
 function imprime_exercicios(elemento,nome,maquina,peso,series,repeticoes){
@@ -38,39 +38,41 @@ function imprime_exercicios(elemento,nome,maquina,peso,series,repeticoes){
 
 $(document).ready(function(){
 	
-	var xml = new XMLHttpRequest();
-	xml.open("GET","/api/exercicios.xml", false);
-	xml.send();
-	exercicios = xml.responseXML.documentElement.getElementsByTagName("exercicio");
+	if($("#exercicios_listbox_").val() != undefined){
+		var xml = new XMLHttpRequest();
+		xml.open("GET","/api/exercicios.xml", false);
+		xml.send();
+		exercicios = xml.responseXML.documentElement.getElementsByTagName("exercicio");
 
-	alterar_campos(exercicios);
+		alterar_campos(exercicios);
 
-	var ex_associados = $("#selected_exercicios").text().split("|");
-	console.log(ex_associados);
-	for(i = 0; i < ex_associados.length;i++){
+		/*var ex_associados = $("#selected_exercicios").text().split("|");
+		console.log(ex_associados);
+		for(i = 0; i < ex_associados.length;i++){
 		
-		var ex = ex_associados[i].split(",");
-		for(j = 0; j < exercicios.length; j++){
+			var ex = ex_associados[i].split(",");
+			for(j = 0; j < exercicios.length; j++){
 			
-			if(ex[0] == exercicios[i].getElementsByTagName("id")[0].firstChild.nodeValue){
-				var tipo = exercicios[i].getElementsByTagName("tipo")[0].firstChild.nodeValue;
-				var nome = exercicios[i].getElementsByTagName("nome")[0].firstChild.nodeValue;
-				var maquina = exercicios[i].getElementsByTagName("maquina")[0].firstChild.nodeValue;
-				if(tipo == "Aeróbico"){
-					imprime_exercicios("#aerobicos",nome,maquina,ex[1],ex[2],0);
-				}
-				else if(tipo == "Musculação"){
-					imprime_exercicios("#musculacao",nome,maquina,ex[1],ex[2],ex[3]);
+				if(ex[0] == exercicios[i].getElementsByTagName("id")[0].firstChild.nodeValue){
+					var tipo = exercicios[i].getElementsByTagName("tipo")[0].firstChild.nodeValue;
+					var nome = exercicios[i].getElementsByTagName("nome")[0].firstChild.nodeValue;
+					var maquina = exercicios[i].getElementsByTagName("maquina")[0].firstChild.nodeValue;
+					if(tipo == "Aeróbico"){
+						imprime_exercicios("#aerobicos",nome,maquina,ex[1],ex[2],0);
+					}
+					else if(tipo == "Musculação"){
+						imprime_exercicios("#musculacao",nome,maquina,ex[1],ex[2],ex[3]);
+					}
 				}
 			}
-		}
-	}
+		}*/
 	
 
-	$("#exercicios_listbox_").change(function(){
+		$("#exercicios_listbox_").change(function(){
 		
-		alterar_campos(exercicios);
-	});
+			alterar_campos(exercicios);
+		});
+	}
 });
 
 
