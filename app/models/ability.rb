@@ -7,6 +7,9 @@ class Ability
 
     if user.admin?
       can :manage, :all
+      cannot :update, User do |u|
+	u.admin? && user.id != u.id
+      end
     elsif user.staff?
       can :read, Notificacao
       can :manage, Plano

@@ -1,14 +1,12 @@
 // JavaScript Document
 
 $(document).ready(function(){
-    
-	
+	var xml = new XMLHttpRequest();
+	xml.open("GET","/api/exercicios.xml", false);
+	xml.send();
+	exercicios = xml.responseXML.documentElement.getElementsByTagName("exercicio");
 	$("#exercicios_listbox_").change(function(){
-
-		var xml = new XMLHttpRequest();
-		xml.open("GET","/api/exercicios.xml", false);
-		xml.send();
-		exercicios = xml.responseXML.documentElement.getElementsByTagName("exercicio");
+		
 		var valor_ex = $("#exercicios_listbox_").val();
 		for(i = 0; i < exercicios.length; i++){
 			var id = exercicios[i].getElementsByTagName("id")[0].firstChild.nodeValue;
@@ -46,23 +44,6 @@ function getObjects(obj, key, val) {
         }
     }
     return objects;
-}
-
-function altera_campos(exercicios_array){
-  
-    var valor_ex = $("#exercicios_listbox_").val();
-    var exercicio = getObjects(exercicios_array,'id',valor_ex);
-    if(exercicio[0]['tipo'] == "Aeróbico"){
- 
-      $("#ex_peso").text("Nível");
-      $("#ex_series").text("Tempo");
-      $("#exercicio_repeticoes").attr("disabled","true");
-    }
-    else{
-      $("#ex_peso").text("Peso");
-      $("#ex_series").text("Series");
-      $("#exercicio_repeticoes").removeAttr("disabled");
-    }
 }
 
 function adicionaExercicio(exercicios_arr, all_arr){
