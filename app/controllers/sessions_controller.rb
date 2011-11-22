@@ -15,8 +15,8 @@ class SessionsController < ApplicationController
       end
     else
       respond_to do |format|
-        format.html {redirect_to(root_url, :flash => {:error => 'Email e/ou password inválidos. Tente ooutra vez'})}
-        format.mobile {redirect_to(new_session_path, :notice => 'Email e/ou password inválidos. Tente outrra vezs')}
+        format.html {redirect_to(root_url, :flash => {:error => 'Email e/ou password invalidos. Tente ooutra vez'})}
+        format.mobile {redirect_to(new_session_path, :notice => 'Email e/ou password invalidos. Tente outrra vez')}
       end
     end
   end
