@@ -15,9 +15,8 @@ Fit::Application.routes.draw do
   resources :sessions
   resources :notificacaos
   resources :ginasios do
-		resources :users
+    resources :users
   end
-  resources :notificacaos
 
 
   namespace :api do
