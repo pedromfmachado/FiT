@@ -50,7 +50,7 @@ class ExerciciosController < ApplicationController
 
     respond_to do |format|
       if @exercicio.save
-        format.html { redirect_to(@exercicio, :flash => { :success => 'Exercício criado com sucesso.' }) }
+        format.html { redirect_to(@exercicio, :flash => { :success => 'Exercicio criado com sucesso.' }) }
         format.xml  { render :xml => @exercicio, :status => :created, :location => @exercicio }
       else
         format.html { render :action => "new" }
@@ -66,7 +66,7 @@ class ExerciciosController < ApplicationController
 
     respond_to do |format|
       if @exercicio.update_attributes(params[:exercicio])
-        format.html { redirect_to(@exercicio, :flash => { :success => 'Exercício alterado com sucesso.' }) }
+        format.html { redirect_to(@exercicio, :flash => { :success => 'Exercicio alterado com sucesso.' }) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
