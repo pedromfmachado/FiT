@@ -44,7 +44,7 @@ class GinasiosController < ApplicationController
 
     respond_to do |format|
       if @ginasio.save
-        format.html { redirect_to @ginasio, :flash => { :success => 'Ginasio ' + @ginasio.nome + ' criado com sucesso!' } }
+        format.html { redirect_to @ginasio, :flash => { :success => 'Ginasio 	criado com sucesso!' } }
         format.json { render :json => @ginasio, :status => :created, :location => @ginasio }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class GinasiosController < ApplicationController
 
     respond_to do |format|
       if @ginasio.update_attributes(params[:ginasio])
-        format.html { redirect_to @ginasio, :flash => { :success => 'Dados do ginasio ' + @ginasio.nome + ' alterados com successo!' } }
+        format.html { redirect_to @ginasio, :flash => { :success => 'Dados do ginasio alterados com successo!' } }
         format.json { head :ok }
       else
         format.html { render :action => "edit" }

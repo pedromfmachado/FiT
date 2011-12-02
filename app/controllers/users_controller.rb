@@ -82,9 +82,9 @@ class UsersController < ApplicationController
     @user.promote
 
     if @user.staff?
-      redirect_to @user, :flash => { :success => "Utilizador \"" + @user.nome + "\" promovido a \"Staff\" com sucesso." }
+      redirect_to @user, :flash => { :success => "Utilizador " + @user.nome + " promovido a Staff com sucesso." }
     elsif @user.admin?
-      redirect_to @user, :flash => { :success => "Utilizador \"" + @user.nome + "\" promovido a \"Administrador\" com sucesso." }
+      redirect_to @user, :flash => { :success => "Utilizador " + @user.nome + " promovido a Administrador com sucesso." }
     end
      
   end
@@ -94,9 +94,9 @@ class UsersController < ApplicationController
     @user.demote
 
     if @user.staff?
-      redirect_to @user, :flash => { :success => "Utilizador \"" + @user.nome + "\" relegado a \"Staff\" com sucesso." }
+      redirect_to @user, :flash => { :success => "Utilizador " + @user.nome + " relegado a Staff com sucesso." }
     elsif @user.normal?
-      redirect_to @user, :flash => { :success => "Utilizador \"" + @user.nome + "\" relegado a \"Utilizador\" com successo." }
+      redirect_to @user, :flash => { :success => "Utilizador " + @user.nome + " relegado a Utilizador com successo." }
     end
   end
 
