@@ -29,7 +29,7 @@
       <% end %>
 
       <td>
-        <% if (user.admin? || user.staff?) && user.admin? %>
+        <% if (user.normal? || user.staff?) && current_user.admin? %>
         <%= link_to 'Apagar', user, :confirm => 'Tem a certeza que deseja apagar este utilizador?', :method => :delete %>
         <% end %>
       </td>
