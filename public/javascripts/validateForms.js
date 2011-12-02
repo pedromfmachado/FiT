@@ -48,7 +48,7 @@ function validateForm(selector) {
       "user[password]": {
          required: true,
          //passwordValidation: true,
-         rangelength: [8,16]
+         rangelength: [6,16]
       },
       "user[password_confirmation]": {
         required: true,
@@ -63,7 +63,7 @@ function validateForm(selector) {
       "user[email]": "Introduza um email válido (ex: exemplo@sapo.pt)",
       "user[telefone]": "Introduza o seu contacto",
       "user[morada]": "Introduza uma morada válida",
-      "user[password]": "A sua password deve ter entre 8 a 16 caracteres e incluir dígitos, minúsculas e maiúsculas",
+      "user[password]": "A sua password deve ter entre 6 a 16 caracteres",
       "user[password_confirmation]": "Passwords não iguais: repita a password"
     },
 
