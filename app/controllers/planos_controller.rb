@@ -59,7 +59,7 @@ class PlanosController < ApplicationController
 
     respond_to do |format|
       if @plano.save
-        format.html { redirect_to(user_planos_path(@user), :notice => 'Plano was successfully created.') }
+        format.html { redirect_to(user_planos_path(@user), :flash => { :success => "Plano de treinos criado com sucesso!" }) }
         format.xml  { render :xml => @plano, :status => :created, :location => @plano }
       else
         format.html { render :action => "new" }
@@ -88,7 +88,7 @@ class PlanosController < ApplicationController
 
     respond_to do |format|
       if @plano.update_attributes(params[:plano])
-        format.html { redirect_to(user_planos_path(@user), :notice => 'Plano was successfully updated.') }
+        format.html { redirect_to(user_planos_path(@user), :flash => { :success => "Plano de treinos alterado com sucesso." }) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -109,5 +109,5 @@ class PlanosController < ApplicationController
       format.xml  { head :ok }
     end
   end
-
 end
+

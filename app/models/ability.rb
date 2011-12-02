@@ -28,7 +28,7 @@ class Ability
       can :read, Notificacao
       can :read, Plano, :user_id => user.id
       can :show, User, :id => user.id
-      can :edit, User, :id => user.id
+      can :update, User, :id => user.id
     else
       can :manage, Session    
     end

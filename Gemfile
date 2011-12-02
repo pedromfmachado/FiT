@@ -21,6 +21,7 @@ gem "cancan"
 
 gem "uuidtools"
 
+gem "geocoder"
 
 gem "flickraw"
 

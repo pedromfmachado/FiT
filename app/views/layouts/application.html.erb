@@ -4,7 +4,7 @@
   <title>Fit</title>
   <%= stylesheet_link_tag "bootstrap", "screen" %>
   <%= stylesheet_link_tag "mobile" if mobile_device? %>
-  <%= javascript_include_tag "application.js", "controls.js", "dragdrop.js", "effects.js", "prototype.js", "jquery.js", "rails.js", "utils.js", "menu.js", "login.js" %>
+  <%= javascript_include_tag "application.js", "controls.js", "dragdrop.js", "effects.js", "prototype.js", "jquery.js", "rails.js", "utils.js", "login.js" %>
   <%= javascript_include_tag "bootstrap-dropdown.js", "bootstrap-alerts.js", "jquery.validate.js", "validateForms.js" %>
   <%= csrf_meta_tag %>
 </head>
@@ -14,7 +14,7 @@
 <div class="topbar">
   <div class="fill">
     <div class="container">
-      <a class="brand" href="#">FiT</a>
+      <a class="brand" href="#"><%= image_tag "brand.png" %></a>
 
       <% if current_user %>
         <ul class="nav secondary-nav">
@@ -42,53 +42,84 @@
   </div>
 </div> <!-- endof .topbar -->
 
-<div id="page">
-  <!-- Alertas (para ja ficam aqui por uma questão de feedback) -->
-  
-  <div class="row">
-     <% flash.each do |name, msg| %>
-      <%= content_tag :div, msg, :id => "flash_#{name}" %>
-    <% end %>
+<!-- le container section -->
+<div class="container-fluid topSpacing1">
+
+  <% if current_user %>
+  <!-- le sidebar menu -->
+  <div class="sidebar">
+    <div class="sidebar2">
+      <ul class="top-level">
+
+        <li class="more">
+          <a href="#">Principal</a>
+          <ul class="sub-level">
+            <li><%= link_to root_url do %> Home <% end %></li>
+            <li><%= link_to notificacaos_path do %> Notificações <% end %></li>
+            <li><%= link_to ginasios_path do %> Ginásios <% end %></li>
+          </ul>
+        </li>
+
+        <li class="more">
+          <a href="#">Aulas</a>
+          <ul class="sub-level">
+            <li><a href="#">Horários</a></li>
+            <li><a href="#">Modalidades</a></li>
+          </ul>
+        </li>
+
+        <li class="more">
+          <a href="#">A minha Conta</a>
+          <ul class="sub-level">
+            <% if current_user %>
+              <li><%= link_to "Perfil", current_user %></li>
+
+              <% if current_user.normal? %>
+                <li><%= link_to "Planos de Treino", user_planos_path(current_user) %></li>
+              <% end %>
+            <% end %>
+          </ul>
+        </li>
+
+        <% if current_user && (current_user.admin? || current_user.staff?) %>
+        <li class="more">
+          <a href="#">Administração</a>
+          <ul class="sub-level">
+            <li><%= link_to "Utilizadores", users_path %></li>
+            <li><%= link_to "Exercicios", exercicios_path %></li>
+          </ul>
+        </li>
+        <% end %>
+
+      </ul>
+    </div>
   </div>
+  <% end %>
 
-  <div id="content">
-    <ul id="menu">
-      <%= link_to root_url do %> <li class="parent">Home</li> <%end%>
-      <%= link_to notificacaos_path do %><li class="parent">Notificações</li><%end%>
-      <a href="#"><li class="parent">Ginásios</li></a>
-      <a href="#"><li class="parent">Aulas</li></a>
+  <!-- le contents -->
+  <div class="content">
 
-      <ul>
-        <li class="child"><a href="">Horários</a></li>
-        <li class="child"><a href="">Modalidades</a></li>
-      </ul>
-
-      <a href="#"><li class="parent">Conta Pessoal</li></a>
-
-      <ul>
-        <%if current_user %>
-        <li class="child"><%= link_to "Perfil", current_user %></li>
+    <!-- le flash messages section -->
+    <div class="row">
+      <div class="span16">
+        <% flash.each do |name, msg| %>
+        <div class="alert-message <%= name %> fade in">
+          <a href="#" class="close">x</a>
+          <p><%= msg %></p>
+        </div>
         <% end %>
+      </div>
+    </div>
 
-        <%if current_user && current_user.normal? %>
-        <li class="child"><%= link_to "Planos de treinos", user_planos_path(current_user) %></li>
-        <% end %>
-      </ul>
+    <!-- the actual contents -->
+    <div class="row">
+      <%= yield %>
+    </div>
 
-      <% if current_user && (current_user.admin? || current_user.staff?) %>
-      <a href="#"><li class="parent">Administração</li></a>
-      <ul>
-        <li class="child"><%= link_to "Utilizadores", users_path %></li>
-        <li class="child"><%= link_to "Exercicios", exercicios_path %></li>
-      </ul>
-      <% end %>
-    </ul>
+  </div> <!-- endof content -->
+</div>
 
-    <div id="content-text"> <%= yield %> </div>
-
-  </div> <!-- endof #content -->
-</div> <!-- endof #page -->
-
+<!-- le footer -->
 <div id="footer">
   <div id="footer-info">
     <ul>

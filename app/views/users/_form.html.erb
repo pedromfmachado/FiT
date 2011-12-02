@@ -48,6 +48,13 @@
   </div>
 
   <div class="clearfix">
+    <%= f.label(:ginasio_id, 'Ginasio') %>
+    <div class="input">
+      <%= collection_select("user", "ginasio_id", Ginasio.all, :id, :nome, {}, {  :class => "span6 no-resize" }) %>
+    </div>
+  </div>
+
+  <div class="clearfix">
     <%= f.label :password %>
     <div class="input">
       <%= f.password_field :password %>
@@ -70,7 +77,7 @@
 
   <div class="actions topSpacing0">
     <%= f.submit :class => "btn success" %>
-    <%= link_to 'Cancelar', users_path, :class => "btn danger" %>
+    <%= link_to 'Cancelar', users_path, :class => "btn danger", :confirm => "Rejeitar alterações?" %>
   </div>
 <% end %>
 

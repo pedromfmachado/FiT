@@ -1,0 +1,30 @@
+<%= form_for(@ginasio) do |f| %>
+  <% if @ginasio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ginasio.errors.count, "error") %> prohibited this ginasio from being saved:</h2>
+
+      <ul>
+      <% @ginasio.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="clearfix">
+    <%= f.label :nome %>
+    <div class="input">
+      <%= f.text_field :nome, :class => "span4" %>
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <%= f.label :morada %>
+    <div class="input">
+      <%= f.text_field :morada %>
+    </div>
+  </div>
+
+  <div class="actions topSpacing1">
+    <%= f.submit "Guardar", :class => "btn success" %>
+<% end %>

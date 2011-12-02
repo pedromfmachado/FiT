@@ -1,6 +1,8 @@
 // All related to form validation here
 
 $(document).ready(function() {
+  $(".topbar").dropdown();
+
   $(".alert-message").alert();
 
   jQuery.validator.addMethod("exactLength", function(value, element, param) {
@@ -45,7 +47,7 @@ function validateForm(selector) {
       },
       "user[password]": {
          required: true,
-         passwordValidation: true,
+         //passwordValidation: true,
          rangelength: [8,16]
       },
       "user[password_confirmation]": {

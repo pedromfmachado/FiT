@@ -4,7 +4,9 @@ class User < ActiveRecord::Base
   has_many :staffs
   has_many :planos
 
-  attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento, :url_foto
+  belongs_to :ginasio
+
+  attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento, :url_foto, :ginasio_id
 
   attr_accessor :password
   before_save :encrypt_password
@@ -17,6 +19,7 @@ class User < ActiveRecord::Base
   validates :morada, :presence => true
   validates :telefone, :presence => true
   validates :email, :uniqueness => true, :presence => true, :on => :create
+  validates :ginasio_id, :presence => true
   
   def self.authenticate(email, password)
     user = find_by_email(email)

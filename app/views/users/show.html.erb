@@ -1,22 +1,27 @@
+<div class="span16">
+  <h1>Perfil</h1>
 
-<div id="profile">
-<h1>Perfil</h1>
-<div id="info">
-
-  <div class="row">
+  <!-- profile content -->
+  <div class="row spaced-lines">
     <div class="span9">
+
       <div class="row">
         <div class="span3 right-align"><strong>Nome:</strong></div>
-	      <div class="span6"><%= @user.nome %></div>
-      </div>
-  
-      <div class="row">
-        <div class="span3 right-align"><strong>Email:</strong></div>
-	      <div class="span6"><%= @user.email %></div>
+        <div class="span6"><%= @user.nome %></div>
       </div>
 
       <div class="row">
-        <div class="span3 right-align"><strong>Data Nasc.:</strong></div>
+        <div class="span3 right-align"><strong>Ginásio:</strong></div>
+        <div class="span6"><%= Ginasio.find(@user.ginasio_id).nome unless @user.ginasio_id == nil%></div>
+      </div>
+
+      <div class="row">
+        <div class="span3 right-align"><strong>Email:</strong></div>
+        <div class="span6"><%= @user.email %></div>
+      </div>
+
+      <div class="row">
+        <div class="span3 right-align"><strong>Data de Nascimento:</strong></div>
         <div class="span6"><%= @user.datanascimento %></div>
       </div>
 
@@ -39,14 +44,14 @@
 
     <div class="span3">
       <% if @user.url_foto %>
-        <%= image_tag @user.get_foto, :width => "150", :height => "150" %>
+        <%= image_tag @user.get_foto, :id => "profile-photo" %>
       <% else %>
-        <%= image_tag "missing.png", :width => "150", :height => "150" %>
+        <%= image_tag "missing.png", :id => "profile-photo" %>
       <% end %>
     </div>
   </div>
 
-  <!-- action buttons -->
+  <!-- le action buttons -->
   <div class="actions topSpacing0">
     <% if current_user.admin? && current_user.id != @user.id %>
       <% if !@user.admin? %>
@@ -65,6 +70,5 @@
     <%= link_to "Editar Perfil", edit_user_path(@user), :class => "btn primary" %>
     <%= link_to "Voltar", users_path, :class => "btn" %>
   </div>
-</div>
 </div>
 

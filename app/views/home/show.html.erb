@@ -1,2 +1,17 @@
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at nisl quis nulla luctus luctus. Nullam ut dui nec felis tempus varius bibendum quis eros. Aenean eu est in odio bibendum iaculis. Suspendisse ultrices ornare nunc non condimentum. Cras quis eleifend magna. Nullam est sem, tincidunt id interdum ac, sagittis sit amet metus. Morbi malesuada tristique magna ut bibendum. Duis sodales pharetra ultricies. Vestibulum porttitor, lacus nec tristique pellentesque, sapien neque tristique dui, in pellentesque tortor nibh eu tellus. Vestibulum tempor risus nec urna tincidunt congue. Aenean mattis, nisl vel cursus pellentesque, magna arcu mollis velit, at pellentesque dolor purus vitae lectus. Vivamus eget risus ligula. Nam cursus, tellus varius suscipit viverra, erat erat egestas erat, sed semper nulla magna eu augue. Fusce nunc sem, facilisis at viverra sed, dignissim pellentesque diam. Sed euismod quam sit amet sem varius quis faucibus felis semper. Fusce tincidunt, justo eget porta placerat, lorem nulla dapibus enim, vel tincidunt sapien velit vitae enim. Suspendisse non augue a lectus molestie feugiat. Aenean vehicula ultricies nisi ac ultrices. Suspendisse adipiscing dapibus est eget tempor. Pellentesque ut quam in nisi consequat hendrerit. Donec eu auctor nulla. Nullam condimentum vestibulum nisl, vitae ornare velit consequat gravida. Nam quis felis est, vel vehicula est. Sed rhoncus sapien eu nunc pulvinar quis consequat nisi fermentum. Donec mi dui, condimentum vel bibendum ut, pellentesque eu tellus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum tincidunt dui vel ante sodales sit amet tristique odio vehicula. Integer accumsan, lorem vel porta fermentum, nisl enim vestibulum erat, in sollicitudin eros leo iaculis tellus. Aenean tortor enim, egestas nec sagittis sit amet, fermentum at lectus. Vestibulum a tempus erat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus neque lorem, varius at scelerisque id, elementum non risus. Fusce porttitor aliquam ipsum, eget luctus ligula imperdiet ut. Sed condimentum fermentum enim, vitae tincidunt ipsum rhoncus sit amet. Proin dignissim dictum libero sit amet luctus.
+<% if not current_user %>
+<div id="lorem-ipsum">
+
+	<div id="logo"> 
+      <%= link_to image_tag("logo.png"), root_url %>
+    </div>
+
+</div>
+
+<% else %>
+    
+	<div id="logo"> 
+      <%= link_to image_tag("logo.png"), root_url %>
+    </div>
+
+<% end %>
 

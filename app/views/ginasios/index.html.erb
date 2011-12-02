@@ -1,0 +1,22 @@
+<div class="span14">
+  <h1>Lista de Ginásios</h1>
+
+  <table>
+    <tr>
+      <th>Nome</th>
+    </tr>
+
+    <% @ginasios.each do |ginasio| %>
+    <tr>
+      <td><%= link_to ginasio.nome, ginasio %></td>
+      <td><%= link_to 'Apagar', ginasio, :confirm => 'Tem a certeza que deseja apagar este ginásio?', :method => :delete %></td>
+    </tr>
+    <% end %>
+  </table>
+
+  <div class="actions topSpacing2">
+    <%= link_to 'Criar novo Ginásio', new_ginasio_path, :class => "btn primary" %>
+  </div>
+
+</div>
+

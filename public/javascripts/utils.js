@@ -37,7 +37,7 @@ function imprime_exercicios(elemento,nome,maquina,peso,series,repeticoes){
 }
 
 $(document).ready(function(){
-	
+
 	if($("#exercicios_listbox_").val() != undefined){
 		var xml = new XMLHttpRequest();
 		xml.open("GET","/api/exercicios.xml", false);

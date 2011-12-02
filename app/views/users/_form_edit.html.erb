@@ -1,6 +1,6 @@
 <%= form_for @user, :html => { :id => "edit_user", :multipart => true } do |f| %>
 
-  <!-- le error messages header -->
+  <!-- le error messages header TODO -->
   <% if @user.errors.any? %>
     <div class="alert-message error">
       <a href="#" class="close">x</a>
@@ -45,10 +45,17 @@
     </div>
   </div>
 
-  <div class="field">
-    <%= label_tag :filename  %>
+  <div class="clearfix">
+    <%= f.label :ginasio_id, 'Ginasio' %>
     <div class="input">
-      <%= file_field_tag :filename %>
+      <%= collection_select("user", "ginasio_id", Ginasio.all, :id, :nome, {}, {  :class => "span6 no-resize" }) %>
+    </div>
+  </div>
+
+  <div class="field">
+    <%= label_tag "Fotografia"  %>
+    <div class="input">
+      <%= file_field_tag :filename, :accept => 'image/png,image/gif,image/jpeg' %>
     </div>
   </div>
 

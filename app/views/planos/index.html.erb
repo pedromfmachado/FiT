@@ -1,36 +1,39 @@
-<% if current_user && @planos.count > 0 %>
+<div class="span16">
+  <% if current_user && @planos.count > 0 %>
+  <h1>Planos</h1>
 
-<h1>Planos</h1>
+  <table>
+    <tr>
+      <th>Data</th>
+      <th>Altura</th>
+      <th>Peso</th>
+    </tr>
 
+    <% @planos.each do |plano| %>
+    <tr>
+      <td><%= plano.data %></td>
+      <td><%= plano.altura %></td>
+      <td><%= plano.peso %></td>
+      <td><%= link_to 'Ver', user_plano_path(@user,plano) %></td>
 
-<table>
-  <tr>
-    <th>Data</th>
-    <th>Altura</th>
-    <th>Peso</th>
+      <% if can? :update, Plano %>
+      <td><%= link_to 'Editar', edit_user_plano_path(@user,plano) %></td>
+      <% end %>
 
-  </tr>
+      <% if can? :destroy, Plano %>
+      <td><%= link_to 'Apagar', user_plano_path(@user,plano),:confirm => 'Are you sure?', :method => :delete %></td>
+      <% end %>
+    </tr>
+    <% end %>
 
-<% @planos.each do |plano| %>
-  
-  <tr>
-    <td><%= plano.data %></td>
-    <td><%= plano.altura %></td>
-    <td><%= plano.peso %></td>
-    <td><%= link_to 'Ver', user_plano_path(@user,plano) %></td>
-    <% if can? :update, Plano %>
-    <td><%= link_to 'Editar', edit_user_plano_path(@user,plano) %></td>
-    <%end%>
-    <% if can? :destroy, Plano %>
-    <td><%= link_to 'Apagar', user_plano_path(@user,plano),:confirm => 'Are you sure?', :method => :delete %></td>
-    <%end%>
-  </tr>
+  </table>
   <% end %>
-<% end %>
-</table>
 
+  <% if can? :create, Plano %>
+  <div class="actions topSpacing0">
+    <%= link_to 'Criar Novo Plano', new_user_plano_path(params[:user_id]), :class => "btn primary" %>
+  </div>
+  <% end %>
 
-<br />
-<% if can? :create, Plano %>
-<%= link_to 'Novo Plano', new_user_plano_path(params[:user_id]) %>
-<% end %>
+</div>
+

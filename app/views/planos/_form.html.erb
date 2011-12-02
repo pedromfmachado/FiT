@@ -21,6 +21,12 @@
   <% end %>
 
   <!-- le form fields -->
+  <div class="row topSpacing2">
+    <div class="span4">
+      <h3>Dados plano</h3>
+    </div>
+  </div>
+
   <div class="row">
     <div class="span4">
       <div class="clearfix">
@@ -46,9 +52,9 @@
   </div>
 
   <!-- le seccao exercicios -->
-  <div class="row">
+  <div class="row topSpacing2">
     <!-- le adicionar exercicios -->
-    <div class="span12">
+    <div class="span14">
       <h3>Adicionar Exercicio</h3>
 
       <div class="row">
@@ -73,18 +79,18 @@
           </div>        
         </div>
 
-        <div class="span3">
+        <div class="span4">
           <div class="clearfix">
             <%= label_tag('Repetições', nil, :id => "ex_repeticoes", :class => "span2") %>
             <%= text_field_tag('exercicio_repeticoes', nil, { :class => "span1 small-lborder" }) %>
           </div>        
         </div>
-     </div>
 
-     <!-- adicionar exercicio -->
-     <div class="clearfix">
-        <p><%= link_to_function "Associar exercicio", "adicionaExercicio(#{@plano.exercicios.to_json}, #{Exercicio.all.to_json})", :class => "btn primary"%></p>
-        <span id="jsalert"></span>
+       <!-- botao adicionar exercicio -->
+       <div class="clearfix">
+          <%= link_to_function "Associar exercicio", "adicionaExercicio(#{@plano.exercicios.to_json}, #{Exercicio.all.to_json})", :class => "btn small primary"%>
+          <span id="jsalert"></span>
+       </div>
      </div>
 
       <%= hidden_field_tag "selected_exercicios", "" %>
@@ -94,7 +100,7 @@
   </div>
 
   <!-- le listar exercicios -->
-  <div class="row">
+  <div class="row topSpacing2">
     <div class="span12">
       <div id="exercicios">
         <h3>Lista de Exercicios</h3>

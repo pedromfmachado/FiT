@@ -51,7 +51,7 @@ class NotificacaosController < ApplicationController
 
     respond_to do |format|
       if @notificacao.save
-        format.html { redirect_to @notificacao, :notice => 'Notificacao was successfully created.' }
+        format.html { redirect_to @notificacao, :flash => { :success => "Notificação \"" + @notificacao.titulo + "\" criada com sucesso." } }
         format.json { render :json => @notificacao, :status => :created, :location => @notificacao }
       else
         format.html { render :action => "new" }
@@ -67,7 +67,7 @@ class NotificacaosController < ApplicationController
 
     respond_to do |format|
       if @notificacao.update_attributes(params[:notificacao])
-        format.html { redirect_to @notificacao, :notice => 'Notificacao was successfully updated.' }
+        format.html { redirect_to @notificacao, :flash => { :success => "Notificação \"" + @notificacao.titulo + "\" alterada com sucesso." } }
         format.json { head :ok }
       else
         format.html { render :action => "edit" }
@@ -88,3 +88,4 @@ class NotificacaosController < ApplicationController
     end
   end
 end
+

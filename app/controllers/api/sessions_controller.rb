@@ -1,21 +1,22 @@
 class Api::SessionsController < ApiController
 
-	require 'builder'
+  require 'builder'
 
-	def new
-		User.new
-	end
+  def new
+    User.new
+  end
 
-	def create
-		user = User.authenticate(params[:email], params[:password])
-		if user
-			session[:token] = user.token
+  def create
+    user = User.authenticate(params[:email], params[:password])
 
-			render :xml => session
-		else
-			render :xml => { :error => 'User not autenticated' }, :status =>  149
-		end
-	end
+    if user
+      session[:token] = user.token
+      render :xml => session
+    else
+      render :xml => { :error => 'User not autenticated' }, :status =>  149
+    end
+  end
 
-	skip_before_filter :verify_authenticity_token
+  skip_before_filter :verify_authenticity_token
 end
+

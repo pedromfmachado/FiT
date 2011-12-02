@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111121142200) do
+ActiveRecord::Schema.define(:version => 20111129161724) do
 
   create_table "admins", :force => true do |t|
     t.integer  "user_id"
@@ -36,6 +36,20 @@ ActiveRecord::Schema.define(:version => 20111121142200) do
     t.integer  "exercicio_id"
   end
 
+  create_table "ginasio_notificacao", :force => true do |t|
+    t.integer "ginasio_id"
+    t.integer "notificacao_id"
+  end
+
+  create_table "ginasios", :force => true do |t|
+    t.string   "nome"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "morada"
+  end
+
   create_table "notificacaos", :force => true do |t|
     t.date     "data"
     t.string   "titulo"
@@ -43,6 +57,7 @@ ActiveRecord::Schema.define(:version => 20111121142200) do
     t.integer  "admin_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "ginasio_id"
   end
 
   create_table "planos", :force => true do |t|
@@ -73,6 +88,7 @@ ActiveRecord::Schema.define(:version => 20111121142200) do
     t.datetime "updated_at"
     t.string   "token"
     t.string   "url_foto"
+    t.integer  "ginasio_id"
   end
 
 end

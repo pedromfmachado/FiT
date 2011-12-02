@@ -1,0 +1,25 @@
+<div class="span14">
+  <h1><%=@ginasio.nome%></h1>
+
+  <div class="row">
+    <div class="span6">
+      <p>
+        <strong> Morada:</strong>
+        <%= @ginasio.morada %>
+      </p>
+
+      <p>
+        <!-- {@ginasio.latitude},#{@ginasio.longitude} -->
+        <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@ginasio.latitude},#{@ginasio.longitude}&zoom=15&size=400x300\
+&markers=color:blue%7C#{@ginasio.latitude},#{@ginasio.longitude}&sensor=false" %>
+      </p>
+    </div>
+  </div>
+
+  <div class="actions topSpacing2">
+    <%= link_to 'Editar Dados', edit_ginasio_path(@ginasio), :class => "btn success" %>
+    <%= link_to 'Ver membros do Ginásio', ginasio_users_path(@ginasio), :class => "btn primary" %>
+    <%= link_to 'Ver Ginásios', ginasios_path, :class => "btn danger" %>
+  </div>
+</div>
+

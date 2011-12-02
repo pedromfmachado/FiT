@@ -2,9 +2,12 @@ class UsersController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @users = User.all
+    if params[:ginasio_id]
+      @users = User.where(:ginasio_id => params[:ginasio_id])
+    else
+      @users = User.all
+    end
   end
-
 
   def new
     @user = User.new
@@ -20,7 +23,7 @@ class UsersController < ApplicationController
         url_foto = @user.upload_foto(params[:filename])
         @user.update_attributes(:url_foto => url_foto)
       end 
-      redirect_to @user, :notice => "Utilizador Registado"
+      redirect_to @user, :flash => { :success => "Utilizador registado com sucesso!" }
     else
       render "new"
     end  
@@ -41,7 +44,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.update_attributes(params[:user])
-        format.html { redirect_to(@user, :notice => 'Dados do utilizador actualizados.') }
+        format.html { redirect_to(@user, :flash => { :success => "Dados actualizados com sucesso!" }) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -76,25 +79,26 @@ class UsersController < ApplicationController
 
   def promote
     @user = User.find(params[:id])
-	  @user.promote
+    @user.promote
 
     if @user.staff?
-      redirect_to @user, :notice => "User promoted to staff"
+      redirect_to @user, :flash => { :success => "Utilizador \"" + @user.nome + "\" promovido a \"Staff\" com sucesso." }
     elsif @user.admin?
-      redirect_to @user, :notice => "User promoted to administrator"
+      redirect_to @user, :flash => { :success => "Utilizador \"" + @user.nome + "\" promovido a \"Administrador\" com sucesso." }
     end
      
   end
 
   def demote
     @user = User.find(params[:id])
-	  @user.demote
+    @user.demote
 
     if @user.staff?
-      redirect_to @user, :notice => "User demoted to Staff"
+      redirect_to @user, :flash => { :success => "Utilizador \"" + @user.nome + "\" relegado a \"Staff\" com sucesso." }
     elsif @user.normal?
-      redirect_to @user, :notice => "User demoted to normal"
+      redirect_to @user, :flash => { :success => "Utilizador \"" + @user.nome + "\" relegado a \"Utilizador\" com successo." }
     end
   end
 
 end
+

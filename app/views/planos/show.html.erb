@@ -1,53 +1,79 @@
-<div id="profile">
-<h1>Plano</h1>
-<div id="info">
-  <b>Data:</b>
-  <%= @plano.data %><br />
+<div class="span16">
+  <h1>Plano</h1>
 
-  <b>Altura:</b>
-  <%= @plano.altura %><br />
+  <div class="row spaced-lines">
+    <div class="span9">
+      <div class="row">
+        <div class="span3">
+          <strong>Data:</strong>
+          <%= @plano.data %>
+        </div>
 
-  <b>Peso:</b>
-  <%= @plano.peso %><br />
+        <div class="span3">
+          <strong>Altura:</strong>
+          <%= @plano.altura %> cm
+        </div>
 
-  <h3>Exercícios</h3>
-  <h4>Aeróbicos</h4>
-  <table>
-    <tr>
-      <th>Nome</th>
-      <th>Máquina</th>
-      <th>Nível</th>
-      <th>Tempo</th>
-    </tr>
-    <% @plano.exercicios.where(:tipo => "Aeróbico").each do |ex| %>
-      <% @dados = ExerciciosPlanos.where(:plano_id => @plano.id, :exercicio_id => ex.id).first %>
+        <div class="span3">
+          <strong>Peso:</strong>
+          <%= @plano.peso %> Kg
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row topSpacing2">
+    <div class="span14">
+      <h3>Exercícios</h3>
+      <h4>Aeróbicos</h4>
+
+      <table>
         <tr>
-          <td><%= ex.nome %></td> <td><%= ex.maquina %></td>
-          <td><%= @dados.peso %></td><td><%= @dados.series %></td>
+          <th>Nome</th>
+          <th>Máquina</th>
+          <th>Nível</th>
+          <th>Tempo</th>
         </tr>
-    <% end %>
-  </table>
 
-  <h4>Musculação</h4>
-  <table>
-    <tr>
-      <th>Nome</th>
-      <th>Máquina</th>
-      <th>Peso</th>
-      <th>Séries</th>
-      <th>Repetições</th>
-    </tr>
-    <% @plano.exercicios.where(:tipo => "Musculação").each do |ex| %>
-      <% @dados = ExerciciosPlanos.where(:plano_id => @plano.id, :exercicio_id => ex.id).first %>
+        <% @plano.exercicios.where(:tipo => "Aeróbico").each do |ex| %>
+          <% @dados = ExerciciosPlanos.where(:plano_id => @plano.id, :exercicio_id => ex.id).first %>
+          <tr>
+            <td><%= ex.nome %></td> <td><%= ex.maquina %></td>
+            <td><%= @dados.peso %></td><td><%= @dados.series %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+
+  <div class="row topSpacing2">
+    <div class="span14">
+      <h4>Musculação</h4>
+
+      <table>
         <tr>
-          <td><%= ex.nome %></td> <td><%= ex.maquina %></td>
-          <td><%= @dados.peso %></td><td><%= @dados.series %></td><td><%= @dados.repeticoes %></td>
+          <th>Nome</th>
+          <th>Máquina</th>
+          <th>Peso</th>
+          <th>Séries</th>
+          <th>Repetições</th>
         </tr>
-    <% end %>
-  </table>
 
+        <% @plano.exercicios.where(:tipo => "Musculação").each do |ex| %>
+          <% @dados = ExerciciosPlanos.where(:plano_id => @plano.id, :exercicio_id => ex.id).first %>
+          <tr>
+            <td><%= ex.nome %></td> <td><%= ex.maquina %></td>
+            <td><%= @dados.peso %></td><td><%= @dados.series %></td><td><%= @dados.repeticoes %></td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
 
-<%= link_to 'Editar', edit_user_plano_path(params[:user_id],@plano) %> |
-<%= link_to 'Listar Planos', user_planos_path(params[:user_id]) %>
+  <!-- le action buttons -->
+  <div class="actions topSpacing2">
+      <%= link_to 'Editar', edit_user_plano_path(params[:user_id],@plano), :class => "btn primary" %>
+      <%= link_to 'Listar Planos', user_planos_path(params[:user_id]), :class => "btn" %>
+  </div>
 </div>
-</div>
+

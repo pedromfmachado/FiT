@@ -1,6 +1,10 @@
-<h1>Editar Exercício</h1>
+<div class="span14">
+  <h1>Editar Exercício</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-<%= link_to 'Ver Exercício', @exercicio %> |
-<%= link_to 'Listar Exercícios', exercicios_path %>
+    <%= link_to 'Cancelar', @exercicio, :class => "btn danger" %>
+    <%= link_to 'Listar Exercícios', exercicios_path, :class => "btn primary" %>
+  </div>
+</div>
+
