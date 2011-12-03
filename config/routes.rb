@@ -1,5 +1,7 @@
 Fit::Application.routes.draw do
   
+  get "cidade/index"
+
   get "log_out" => "sessions#destroy", :as => "log_out"
   get "sign_up" => "users#new", :as => "sign_up"
   get "perfil/:id" => "users#show", :as => "perfil"
