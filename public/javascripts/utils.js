@@ -36,7 +36,34 @@ function imprime_exercicios(elemento,nome,maquina,peso,series,repeticoes){
                                 + peso + "</td><td>" + series + "</td><td>" + repeticoes + "</td></tr>");
 }
 
+function getGinasios(){
+
+  
+    var xml = new XMLHttpRequest();
+		xml.open("GET","/ginasiosperto.xml?cidade="+$("#_cidade option:selected").text() + "&km=" + $("#distancia").val(), false);
+		xml.send();
+    console.log(xml.responseXML);
+		ginasios = xml.responseXML.documentElement.getElementsByTagName("ginasio");
+
+    $("#ginasios").html("");
+    $("#ginasios").append("<tr><th>Nome</th></tr>");
+
+    for(i = 0; i < ginasios.length; i++){
+
+      var id = ginasios[i].getElementsByTagName("id")[0].firstChild.nodeValue;
+      var nome = ginasios[i].getElementsByTagName("nome")[0].firstChild.nodeValue;
+      
+
+      $("#ginasios").append("<tr><td><a href=\"/ginasios/" + id + "\">" + nome + "</a></td><td><a rel=\"nofollow\" data-method=\"delete\" data-confirm=\"Tem a certeza que deseja apagar este ginásio?\" href=\"/ginasios/" + id + "\">Apagar</a></td>");
+      
+    }
+}
+
 $(document).ready(function(){
+
+
+  $("#_cidade").change(function(){getGinasios()});
+  $("#distancia").change(function(){getGinasios()});
 
 	if($("#exercicios_listbox_").val() != undefined){
 		var xml = new XMLHttpRequest();

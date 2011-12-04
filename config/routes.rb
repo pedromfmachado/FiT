@@ -8,6 +8,7 @@ Fit::Application.routes.draw do
 
   match 'promote' => 'users#promote', :as => "promote"
   match 'demote' => 'users#demote', :as => "demote"
+  match 'ginasiosperto' => 'ginasios#pertocidade', :as => "ginasiosperto"
   
   
   resources :users do

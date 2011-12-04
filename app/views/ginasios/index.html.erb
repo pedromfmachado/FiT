@@ -1,11 +1,22 @@
 <div class="span14">
   <h1>Lista de Ginásios</h1>
 
-  <table>
+    <%= label_tag :cidade, 'Cidade' %>
+    <div class="input">
+      <%= collection_select("", "cidade", Cidade.all, :id, :nome, {}, {  :class => "span3 no-resize" }) %>
+    </div>
+
+    <%= label_tag :distancia, 'Distancia' %>
+    <div class="input">
+      <%= text_field_tag :distancia, '50', :class => "span1 no-resize" %>km
+    </div>
+
+  
+
+  <table id="ginasios">
     <tr>
       <th>Nome</th>
     </tr>
-
     <% @ginasios.each do |ginasio| %>
     <tr>
       <td><%= link_to ginasio.nome, ginasio %></td>
