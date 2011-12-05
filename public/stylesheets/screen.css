@@ -1,5 +1,6 @@
 body {
   padding-top: 40px; /* used to fix bootstrap topbar */
+  padding-bottom: 40px; /* used to fix bottombar */
 }
 
 .right-align {
@@ -47,6 +48,48 @@ input.small-lborder, select.small-lborder {
   width: 150px;
   height: 150px;
   margin-bottom: 20px;
+}
+
+/********************************/
+footer {
+  width: 100%;
+  background-color: #676767;
+  overflow: hidden;
+  padding: 10px 0 10px 0;
+}
+
+#footer-info {
+  float: left;
+}
+
+#footer-social {
+  float: right;
+}
+
+footer[class="bottombar"] ul {
+  margin: 0px;
+}
+
+footer[class="bottombar"] li {
+  display: inline;
+  padding-left: 20px;
+  padding-right: 20px;
+	
+  font-family: Century Gothic, sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+footer[class="bottombar"] li a {
+  color: #CCC;
+  text-decoration: none;
+  /*text-shadow: 1px 1px 0px #C0C0C0;	*/
+}
+
+footer[class="bottombar"] li a:hover {
+  color: #D3D3D3;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px #808080;	
 }
 
 /* ******************************************************** */
@@ -142,46 +185,5 @@ ul.sub-level li {
   float: left;
   padding: 20px 5px 15px;
   margin: 0px 0 20px;
-}
-		
-footer {
-  width: 100%;
-  background-color: #BBB;
-  overflow: hidden;
-  padding: 20px 0 20px 0;
-}
-
-#footer-info {
-  float: left;
-}
-
-#footer-social {
-  float: right;
-}
-
-footer ul {
-  margin: 0px;
-}
-
-footer li {
-  display: inline;
-  padding-left: 20px;
-  padding-right: 20px;
-	
-  font-family: Century Gothic, sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-}
-
-footer li a {
-  color: #696969;
-  text-decoration: none;
-  text-shadow: 1px 1px 0px #C0C0C0;	
-}
-
-footer li a:hover {
-  color: #D3D3D3;
-  text-decoration: none;
-  text-shadow: 1px 1px 0px #808080;	
 }
 

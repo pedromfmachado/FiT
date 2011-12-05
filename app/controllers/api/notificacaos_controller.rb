@@ -13,7 +13,7 @@ class Api::NotificacaosController < ApiController
   end
 
   def show
-	respond_with Notificacao.find(params[:id])
+		respond_with Notificacao.find(params[:id])
   end
 end
 
