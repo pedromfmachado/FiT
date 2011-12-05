@@ -27,12 +27,7 @@
     <tr>
       <th>Nome</th>
     </tr>
-    <% @ginasios.each do |ginasio| %>
-    <tr>
-      <td><%= link_to ginasio.nome, ginasio %></td>
-      <td><%= link_to 'Apagar', ginasio, :confirm => 'Tem a certeza que deseja apagar este ginásio?', :method => :delete %></td>
-    </tr>
-    <% end %>
+   
   </table>
 
   <div class="actions topSpacing2">

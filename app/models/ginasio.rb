@@ -4,7 +4,7 @@ class Ginasio < ActiveRecord::Base
 	has_many :ginasio_notificacaos
 	has_many :notificacaos, :through => :ginasio_notificacaos
 
-	attr_accessible :nome,:morada
+	attr_accessible :nome,:morada, :telefone
 
 	geocoded_by :morada
 	after_validation :geocode

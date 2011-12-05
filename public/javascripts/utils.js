@@ -61,7 +61,7 @@ function getGinasios(){
 
 $(document).ready(function(){
 
-	//getGinasios();
+	
 
 	if($("#todos:checked").length == 1)
 		$("#ginasios_select").attr('disabled','true');
@@ -76,6 +76,9 @@ $(document).ready(function(){
 			
 			
 	});
+
+	if($("#distancia").val())
+		getGinasios();
 
   $("#_cidade").change(function(){getGinasios()});
   $("#distancia").change(function(){getGinasios()});
