@@ -26,7 +26,7 @@
 
   <table>
     <% @notificacaos.each do |notificacao| %>
-      <% if (((current_user.admin? || current_user.staff?) && notificacao.ginasio_id != nil) || notificacao.ginasio_id == current_user.ginasio_id) %>
+      <% if (((current_user.admin? || current_user.staff?) && notificacao.ginasio_id != nil) || (current_user.normal? && notificacao.ginasio_id == current_user.ginasio_id)) %>
       <tr>
         <td><%= link_to notificacao.titulo, notificacao %>
  	
