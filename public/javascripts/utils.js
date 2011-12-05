@@ -61,6 +61,7 @@ function getGinasios(){
 
 $(document).ready(function(){
 
+	getGinasios();
 
 	if($("#todos:checked").length == 1)
 		$("#ginasios_select").attr('disabled','true');
