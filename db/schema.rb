@@ -10,38 +10,38 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111205134719) do
+ActiveRecord::Schema.define(:version => 20111205170250) do
 
   create_table "admins", :force => true do |t|
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer   "user_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "cidades", :force => true do |t|
-    t.string   "nome"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.float    "latitude"
-    t.float    "longitude"
+    t.string    "nome"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.float     "latitude"
+    t.float     "longitude"
   end
 
   create_table "exercicios", :force => true do |t|
-    t.string   "nome"
-    t.string   "maquina"
-    t.string   "tipo"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "nome"
+    t.string    "maquina"
+    t.string    "tipo"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "exercicios_planos", :id => false, :force => true do |t|
-    t.integer  "peso"
-    t.integer  "series"
-    t.integer  "repeticoes"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "plano_id"
-    t.integer  "exercicio_id"
+    t.integer   "peso"
+    t.integer   "series"
+    t.integer   "repeticoes"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "plano_id"
+    t.integer   "exercicio_id"
   end
 
   create_table "ginasio_notificacao", :force => true do |t|
@@ -50,58 +50,59 @@ ActiveRecord::Schema.define(:version => 20111205134719) do
   end
 
   create_table "ginasio_notificacaos", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "ginasios", :force => true do |t|
-    t.string   "nome"
-    t.float    "latitude"
-    t.float    "longitude"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "morada"
+    t.string    "nome"
+    t.float     "latitude"
+    t.float     "longitude"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "morada"
+    t.string    "telefone"
   end
 
   create_table "notificacaos", :force => true do |t|
-    t.date     "data"
-    t.string   "titulo"
-    t.text     "texto"
-    t.integer  "admin_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "ginasio_id"
+    t.date      "data"
+    t.string    "titulo"
+    t.text      "texto"
+    t.integer   "admin_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "ginasio_id"
   end
 
   create_table "planos", :force => true do |t|
-    t.integer  "altura"
-    t.integer  "peso"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
-    t.integer  "admin_id"
-    t.date     "data"
+    t.integer   "altura"
+    t.integer   "peso"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "user_id"
+    t.integer   "admin_id"
+    t.date      "data"
   end
 
   create_table "staffs", :force => true do |t|
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer   "user_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email"
-    t.string   "password_hash"
-    t.string   "password_salt"
-    t.string   "nome"
-    t.string   "datanascimento"
-    t.string   "telefone"
-    t.string   "morada"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "token"
-    t.string   "url_foto"
-    t.integer  "ginasio_id"
+    t.string    "email"
+    t.string    "password_hash"
+    t.string    "password_salt"
+    t.string    "nome"
+    t.string    "datanascimento"
+    t.string    "telefone"
+    t.string    "morada"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "token"
+    t.string    "url_foto"
+    t.integer   "ginasio_id"
   end
 
 end

@@ -95,6 +95,13 @@ footer[class="bottombar"] li a:hover {
 /* ******************************************************** */
 /* parte do miller                                          */
 
+#logo {
+  width: 970px;
+  float: left;
+  padding: 20px 5px 15px;
+  margin: 0px 0 20px;
+}
+
 /* menu */
 .sidebar2 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -178,12 +185,5 @@ ul.sub-level li {
 .sidebar2 ul.sub-level li a {
   color: #cccccc;
   text-shadow: 0px 2px 3px #555;
-}
-
-#logo {
-  width: 970px;
-  float: left;
-  padding: 20px 5px 15px;
-  margin: 0px 0 20px;
 }
 
