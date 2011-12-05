@@ -1,0 +1,25 @@
+<%= form_for([@ginasio,@estudio]) do |f| %>
+  <% if @estudio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@estudio.errors.count, "error") %> prohibited this estudio from being saved:</h2>
+
+      <ul>
+      <% @estudio.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :lotacao %><br />
+    <%= f.number_field :lotacao %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

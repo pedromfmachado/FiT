@@ -1,8 +1,7 @@
 class Ginasio < ActiveRecord::Base
 
 	has_many :users
-	has_many :ginasio_notificacaos
-	has_many :notificacaos, :through => :ginasio_notificacaos
+ 	has_many :estudios
 
 	attr_accessible :nome,:morada, :telefone
 

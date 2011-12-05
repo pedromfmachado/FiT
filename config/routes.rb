@@ -1,5 +1,7 @@
 Fit::Application.routes.draw do
   
+  
+
   get "cidade/index"
 
   get "log_out" => "sessions#destroy", :as => "log_out"
@@ -19,6 +21,7 @@ Fit::Application.routes.draw do
   resources :notificacaos
   resources :ginasios do
     resources :users
+    resources :estudios
   end
 
 

@@ -132,7 +132,7 @@ ul.top-level {
   line-height: 25px;
   text-indent: 10px;
   text-decoration:none;
-  width:100%;
+/*  width:100%;*/
   padding: 10px 0px 10px 20px;
   text-shadow: 0px -1px 3px #ddd;
 }
