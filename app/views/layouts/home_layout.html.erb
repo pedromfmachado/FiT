@@ -121,7 +121,8 @@
 </div> <!-- endof container-fluid -->
 
 <!-- le footer -->
-<div id="footer" class="topSpacing1">
+<footer class="topSpacing1">
+<div class="container">
   <div id="footer-info">
     <ul>
       <li> <%= link_to "About", root_path %> </li>
@@ -130,7 +131,7 @@
       <li> <%= link_to "Help", root_path %> </li>
 
       <% if !mobile_device? %>
-        <li ><%= link_to "Mobile Site", :mobile => 1 %></li>
+      <li ><%= link_to "Mobile Site", :mobile => 1 %></li>
       <% end %>
     </ul>
   </div>
@@ -141,7 +142,9 @@
       <li> <%= link_to "Twitter", root_path %> </li>
     </ul>
   </div>
-</div><!-- endof #footer -->
+</div>
+</footer> <!-- endof #footer -->
+
 </body>
 </html>
 

@@ -62,6 +62,20 @@ function getGinasios(){
 $(document).ready(function(){
 
 
+	if($("#todos:checked").length == 1)
+		$("#ginasios_select").attr('disabled','true');
+	
+  $("#todos").change(function(){
+
+			if($("#todos:checked").length == 1)
+				$("#ginasios_select").attr('disabled','true');
+			
+			else
+				$("#ginasios_select").removeAttr('disabled');
+			
+			
+	});
+
   $("#_cidade").change(function(){getGinasios()});
   $("#distancia").change(function(){getGinasios()});
 

@@ -43,11 +43,17 @@ class NotificacaosController < ApplicationController
   # POST /notificacaos
   # POST /notificacaos.json
   def create
-	if current_user.admin?
-		params[:notificacao][:admin_id] = current_user.id
-	end
-	params[:notificacao][:data] = Date.today
+		
+		if current_user.admin?
+			params[:notificacao][:admin_id] = current_user.id
+		end
+		params[:notificacao][:data] = Date.today
+		if params[:todos]
+			params[:notificacao][:ginasio_id] = nil
+    end
     @notificacao = Notificacao.new(params[:notificacao])
+
+    
 
     respond_to do |format|
       if @notificacao.save
@@ -63,6 +69,11 @@ class NotificacaosController < ApplicationController
   # PUT /notificacaos/1
   # PUT /notificacaos/1.json
   def update
+	
+    if params[:todos]
+	params[:notificacao][:ginasio_id] = nil
+    end
+
     @notificacao = Notificacao.find(params[:id])
 
     respond_to do |format|

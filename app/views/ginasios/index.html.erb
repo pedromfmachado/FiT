@@ -1,17 +1,27 @@
 <div class="span14">
   <h1>Lista de Ginásios</h1>
 
-    <%= label_tag :cidade, 'Cidade' %>
-    <div class="input">
-      <%= collection_select("", "cidade", Cidade.all, :id, :nome, {}, {  :class => "span3 no-resize" }) %>
-    </div>
+  <div class="row spaced-lines">
+    <div class="span9">
+      <div class="row">
+        <div class="span3 right-align">
+          <strong>Cidade</strong>
+        </div>
+        <div class="span6">
+          <%= collection_select("", "cidade", Cidade.all, :id, :nome, {}, { :class => "span3 no-resize" }) %>
+        </div>
+      </div>
 
-    <%= label_tag :distancia, 'Distancia' %>
-    <div class="input">
-      <%= text_field_tag :distancia, '50', :class => "span1 no-resize" %>km
+      <div class="row">
+        <div class="span3 right-align">
+          <strong>Distancia</strong>
+        </div>
+        <div class="span6">
+          <%= text_field_tag :distancia, '50', :class => "span1 no-resize" %> km
+       </div>
+      </div>
     </div>
-
-  
+  </div>
 
   <table id="ginasios">
     <tr>

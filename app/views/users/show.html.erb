@@ -68,7 +68,7 @@
     <% end %>
 
     <%= link_to "Editar Perfil", edit_user_path(@user), :class => "btn primary" %>
-    <%= link_to "Voltar", users_path, :class => "btn" %>
+    <%= link_to "Listar utilizadores", users_path, :class => "btn" unless current_user.normal?%>
   </div>
 </div>
 

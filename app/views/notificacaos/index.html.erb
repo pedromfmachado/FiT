@@ -1,11 +1,11 @@
 <div class="span14">
-  <h1>Lista de notificações</h1>
+  <h1>Notificações gerais</h1>
 
   <table>
     <% @notificacaos.each do |notificacao| %>
       <% if notificacao.ginasio_id == nil %>
       <tr>
-        <td><%= link_to notificacao.titulo, notificacao %>
+        <td class="span10"><%= link_to notificacao.titulo, notificacao %>
         <td>por <%= link_to User.find(notificacao.admin_id).nome, user_path(notificacao.admin_id) %> em <%= notificacao.data %></td>
 
         <% if can? :delete, Notificacao %></td>
@@ -16,8 +16,27 @@
     <% end %>
   </table>
 
+  <h1>Notificações do seu ginásio</h1>
+
+	
+
+  <table>
+    <% @notificacaos.each do |notificacao| %>
+      <% if notificacao.ginasio_id == current_user.ginasio_id || (((current_user.admin? || current_user.staff?) && notificacao.ginasio_id != nil)) %>
+      <tr>
+        <td class="span10"><%= link_to notificacao.titulo, notificacao %>
+        <td>por <%= link_to User.find(notificacao.admin_id).nome, user_path(notificacao.admin_id) %> em <%= notificacao.data %></td>
+
+        <% if can? :delete, Notificacao %></td>
+        <td><%= link_to 'Apagar', notificacao, :confirm => 'Tem a certeza que deseja apagar esta notificação?', :method => :delete %></td>
+        <% end %>
+      </tr>
+      <% end %>
+    <%end%>
+  </table>
+
   <div class="actions topSpacing0">
-    <%= link_to 'Criar Notificação', new_notificacao_path, :class => "btn primary" %>
+    <%= link_to 'Criar Notificação', new_notificacao_path, :class => "btn primary" unless !current_user.admin? %>
   </div>
 
 </div>

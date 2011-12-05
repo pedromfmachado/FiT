@@ -10,18 +10,45 @@
       </ul>
     </div>
   <% end %>
+  
+  <div class = "row">
+    <div class ="span3">
+      <div class="clearfix">
+        <%= f.label :data %>
+        <div class="input">
+          <%= f.text_field :data , :disabled => true, :class => "span3" %>
+        </div>
+      </div>
 
-  <div class="clearfix">
-    <%= f.label :data %>
-    <div class="input">
-      <%= f.text_field :data , :disabled => true %>
+			
+
+      <div class="clearfix">
+        <%= label_tag :cidade, 'Cidade' %>
+        <div class="input">
+          <%= collection_select("notificacao", "ginasio_id", Ginasio.all, :id, :nome, {}, { :id => "ginasios_select", :class => "span3" }) %>
+        </div>
+      </div>
+
+			<div class="clearfix">
+	      <div class="input">
+					<label class ="add-on">
+						<%= check_box_tag :todos, 'Todos os ginásios' %>
+	        	Todos os ginásios
+						<div id="exp"> </div>
+					</label>
+	      </div>
+	    </div>
+
+
+
+      <div class="clearfix">
+        <%= f.label :titulo %>
+        <div class="input">
+          <%= f.text_field :titulo, :class => "span3" %>
+        </div>
+      </div>
     </div>
-  </div>
-
-  <div class="clearfix">
-    <%= f.label :titulo %>
-    <div class="input">
-      <%= f.text_field :titulo %>
+    <div class ="span6">
     </div>
   </div>
 

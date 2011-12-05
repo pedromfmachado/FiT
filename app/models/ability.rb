@@ -25,7 +25,7 @@ class Ability
 	u.admin? || u.staff?
       end
     elsif user.normal?
-      can :read, Notificacao
+      can :read, Notificacao, :ginasio_id => user.ginasio_id
       can :read, Plano, :user_id => user.id
       can :show, User, :id => user.id
       can :update, User, :id => user.id
