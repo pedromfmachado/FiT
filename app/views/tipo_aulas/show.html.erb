@@ -1,0 +1,17 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Tipo:</b>
+  <%= @tipo_aula.tipo %>
+</p>
+
+
+<p>
+  <b>Descricao:</b>
+  <%= @tipo_aula.descricao %>
+</p>
+
+<%= link_to 'Editar', edit_tipo_aula_path(@tipo_aula) %> |
+<%= link_to 'Apagar', @tipo_aula, :confirm => 'Are you sure?', :method => :delete %> |
+<%= link_to 'Voltar a modalidades', tipo_aulas_path %>
+

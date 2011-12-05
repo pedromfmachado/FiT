@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  tipo: 
+  descricaoCurta: MyString
+  descricao: MyText
+
+two:
+  tipo: 
+  descricaoCurta: MyString
+  descricao: MyText

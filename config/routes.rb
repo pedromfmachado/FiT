@@ -2,6 +2,8 @@ Fit::Application.routes.draw do
   
   
 
+  resources :tipo_aulas
+
   get "cidade/index"
 
   get "log_out" => "sessions#destroy", :as => "log_out"

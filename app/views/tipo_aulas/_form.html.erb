@@ -1,0 +1,25 @@
+<%= form_for(@tipo_aula) do |f| %>
+  <% if @tipo_aula.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@tipo_aula.errors.count, "error") %> prohibited this tipo_aula from being saved:</h2>
+
+      <ul>
+      <% @tipo_aula.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tipo %><br />
+    <%= f.text_field :tipo %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao %><br />
+    <%= f.text_area :descricao %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
