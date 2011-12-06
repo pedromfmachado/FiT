@@ -10,13 +10,29 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111205223947) do
+ActiveRecord::Schema.define(:version => 20111206092353) do
 
   create_table "admins", :force => true do |t|
     t.integer   "user_id"
     t.timestamp "created_at"
     t.timestamp "updated_at"
   end
+
+  create_table "aulas", :force => true do |t|
+    t.integer  "turno_id"
+    t.integer  "staff_id"
+    t.integer  "estudio_id"
+    t.integer  "tipo_aula_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "diaSemana"
+    t.integer  "ginasio_id"
+  end
+
+  add_index "aulas", ["estudio_id"], :name => "index_aulas_on_estudio_id"
+  add_index "aulas", ["staff_id"], :name => "index_aulas_on_staff_id"
+  add_index "aulas", ["tipo_aula_id"], :name => "index_aulas_on_tipo_aula_id"
+  add_index "aulas", ["turno_id"], :name => "index_aulas_on_turno_id"
 
   create_table "cidades", :force => true do |t|
     t.string    "nome"
@@ -101,6 +117,12 @@ ActiveRecord::Schema.define(:version => 20111205223947) do
   create_table "tipo_aulas", :force => true do |t|
     t.string   "tipo"
     t.text     "descricao"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "turnos", :force => true do |t|
+    t.time     "hora"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

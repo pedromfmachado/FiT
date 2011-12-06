@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  turno: 
+  staff: 
+  estudio: 
+  tipo_aula: 
+
+two:
+  turno: 
+  staff: 
+  estudio: 
+  tipo_aula: 

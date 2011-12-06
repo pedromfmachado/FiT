@@ -1,0 +1,62 @@
+<%= form_for ([@ginasio,@aula]) do |f| %>
+
+  <!-- le error messages header TODO -->
+  <% if @aula.errors.any? %>
+    <div class="alert-message error">
+      <a href="#" class="close">x</a>
+      <p><strong>Oh snap!</strong> Alguns campos do formulário estão incorrectos.</p>
+    </div>
+
+    <div class="error_messages">
+      <ul>
+        <% for message in @aula.errors.full_messages %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- le form fields -->
+
+
+  <div class="clearfix">
+    <%= f.label :Staff_id, 'Professor' %>
+    <div class="input">
+      <%= collection_select("aula", "staff_id", User.joins(:staffs).where(:ginasio_id => @ginasio.id), :id, :nome, {}, {  :class => "span6 no-resize" }) %>
+    </div>
+  </div>
+
+	<div class="clearfix">
+    <%= f.label :diaSemana, 'dia' %>
+    <div class="input">
+      <%= select("aula", "diaSemana", ["Segunda", "Terca", "Quarta", "Quinta", "Sexta", "Sabado", "Domingo"], {}, {  :class => "span6 no-resize" }) %>
+    </div>
+  </div>
+
+	<div class="clearfix">
+    <%= f.label :turno_id, 'Hora' %>
+    <div class="input">
+      <%= collection_select("aula", "turno_id", Turno.all, :id, :horaFormatada, {}, {  :class => "span6 no-resize" }) %>
+    </div>
+  </div>
+
+	<div class="clearfix">
+    <%= f.label :tipo_aula_id, 'Modalidade' %>
+    <div class="input">
+      <%= collection_select("aula", "tipo_aula_id", TipoAula.all, :id, :tipo, {}, {  :class => "span6 no-resize" }) %>
+    </div>
+  </div>
+
+	<div class="clearfix">
+    <%= f.label :estudio_id, 'Sala' %>
+    <div class="input">
+      <%= collection_select("aula", "estudio_id", Estudio.where(:ginasio_id => @ginasio.id), :id, :nome, {}, {  :class => "span6 no-resize" }) %>
+    </div>
+  </div>
+
+
+  <div class="actions topSpacing0">
+    <%= f.submit 'Guardar alterações', :class => "btn success" %>
+  </div>
+<% end %>
+

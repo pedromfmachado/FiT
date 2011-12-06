@@ -1,0 +1,15 @@
+<h1>Aulas</h1>
+<table>
+<% @aulas.each do |aula| %>
+  <tr>
+    <td><%= TipoAula.find(aula.tipo_aula_id).tipo %></td>
+		<td><%= aula.diaSemana %> às <%= Turno.find(aula.turno_id).horaFormatada %></td>
+		<td><%= Estudio.find(aula.estudio_id).nome %></td>
+		<td><%= User.find(aula.staff_id).nome %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Acrescentar aula', new_ginasio_aula_path, :class => "btn primary"%>

@@ -2,6 +2,10 @@ Fit::Application.routes.draw do
   
   
 
+  get "aulas/new"
+
+  get "aulas/index"
+
   resources :tipo_aulas
 
   get "cidade/index"
@@ -24,6 +28,7 @@ Fit::Application.routes.draw do
   resources :ginasios do
     resources :users
     resources :estudios
+    resources :aulas
   end
 
 
