@@ -5,7 +5,7 @@ class Api::AulasController < ApiController
     @user = User.find_by_token(params[:token])
     @ginasio = Ginasio.find(@user.ginasio_id)
 
-    respond_with @ginasio.aulas.order('diaSemana')
+    respond_with @ginasio.aulas.order('dia_semana')
 
   end
 
