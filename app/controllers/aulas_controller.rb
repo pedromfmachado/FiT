@@ -1,7 +1,7 @@
 class AulasController < ApplicationController
 
   def index
-    @aulas = Aula.where(:ginasio_id => params[:ginasio_id]).order(:diaSemana)
+    @aulas = Aula.where(:ginasio_id => params[:ginasio_id])
     @ginasio = Ginasio.find(params[:ginasio_id])
 
     respond_to do |format|
