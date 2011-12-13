@@ -1,7 +1,7 @@
 class Api::PlanosController < ApiController
   def index
-    @user = User.find_by_token(params[:token]).order('data DESC')
-    render :xml => @user.planos
+    @user = User.find_by_token(params[:token])
+    render :xml => @user.planos.order('data DESC')
   end
 
   def show
