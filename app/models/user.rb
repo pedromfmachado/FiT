@@ -126,6 +126,7 @@ class User < ActiveRecord::Base
 		    xml.telefone telefone
 		    xml.morada morada
 		    xml.email email
+		    xml.ginasio ginasio_id
 		    xml.token token
 		    if url_foto
 				xml.foto get_foto

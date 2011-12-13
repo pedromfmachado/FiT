@@ -2,6 +2,7 @@ class Ginasio < ActiveRecord::Base
 
 	has_many :users
  	has_many :estudios
+	has_many :aulas
 
 	attr_accessible :nome,:morada, :telefone
 

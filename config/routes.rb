@@ -2,6 +2,8 @@ Fit::Application.routes.draw do
   
   
 
+  get "reserve_aula/new"
+
   get "aulas/new"
 
   get "aulas/index"
@@ -41,6 +43,7 @@ Fit::Application.routes.draw do
     resources :sessions
     resources :notificacaos
     resources :ginasios
+    resources :aulas
     match 'users/edit' => 'users#edit', :as => "users/edit"
   end
 
