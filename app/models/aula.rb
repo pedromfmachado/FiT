@@ -17,9 +17,11 @@ class Aula < ActiveRecord::Base
 
 	def diaFormatado
 
-		@dias = [ "Segunda" , "Terca", "Quarta", "Quinta", "Sexta", "Sabado", "Domingo" ]
+		@dias =  [ 'Segunda' , 'Terca', 'Quarta', 'Quinta', 'Sexta', 'Sabado', 'Domingo' ]
 
-		return @dias[dia]
+    if dia != nil
+		  @dias[dia]
+    end
 
 	end
 
