@@ -25,6 +25,8 @@ gem "geocoder"
 
 gem "flickraw"
 
+gem "tlsmail"
+
 
 # Use unicorn as the web server
 # gem 'unicorn'

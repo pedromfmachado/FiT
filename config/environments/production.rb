@@ -35,7 +35,22 @@ Fit::Application.configure do
   # config.action_controller.asset_host = "http://assets.example.com"
 
   # Disable delivery errors, bad email addresses will be ignored
-  # config.action_mailer.raise_delivery_errors = false
+  require 'tlsmail'
+  Net::SMTP.enable_tls(OpenSSL::SSL::VERIFY_NONE)
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { :host => 'http://fitec.heroku.com' }
+  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.smtp_settings = {
+    :enable_starttls_auto => true,
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => 'gmail.com',
+    :user_name            => 'geral.fit@gmail.com',
+    :password             => 'FiT#12345',
+    :authentication       => 'plain',
+  }
 
   # Enable threaded mode
   # config.threadsafe!

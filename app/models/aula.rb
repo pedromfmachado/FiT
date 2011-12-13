@@ -9,17 +9,17 @@ class Aula < ActiveRecord::Base
   validates :estudio_id, :presence => true
   validates :staff_id, :presence => true
   validates :tipo_aula_id, :presence => true
-  validates :diaSemana, :presence => true
+  validates :dia, :presence => true
   validates :ginasio_id, :presence => true
 
-  validates_uniqueness_of :staff_id, :scope => [:turno_id, :diaSemana]
-  validates_uniqueness_of :estudio_id, :scope => [:turno_id, :diaSemana]
+  validates_uniqueness_of :staff_id, :scope => [:turno_id, :dia]
+  validates_uniqueness_of :estudio_id, :scope => [:turno_id, :dia]
 
 	def diaFormatado
 
 		@dias = [ "Segunda" , "Terca", "Quarta", "Quinta", "Sexta", "Sabado", "Domingo" ]
 
-		return @dias[diaSemana]
+		return @dias[dia]
 
 	end
 
