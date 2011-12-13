@@ -1,15 +1,27 @@
-<h1>Aulas</h1>
-<table>
-<% @aulas.each do |aula| %>
-  <tr>
-    <td><%= TipoAula.find(aula.tipo_aula_id).tipo %></td>
-		<td><%= aula.diaSemana %> às <%= Turno.find(aula.turno_id).horaFormatada %></td>
-		<td><%= Estudio.find(aula.estudio_id).nome %></td>
-		<td><%= User.find(aula.staff_id).nome %></td>
-  </tr>
-<% end %>
-</table>
+<div class="span14">
 
-<br />
+  <h1>Aulas de <%= @ginasio.nome %></h1>
 
-<%= link_to 'Acrescentar aula', new_ginasio_aula_path, :class => "btn primary"%>
+  <table class="zebra-striped">
+    <tr>
+      <th>Tipo de Aula</th>
+      <th>Dia</th>
+      <th>Estúdio</th>
+      <th>Professor</th>
+    </tr>
+
+    <% @aulas.each do |aula| %>
+    <tr>
+      <td><%= TipoAula.find(aula.tipo_aula_id).tipo %></td>
+      <td><%= aula.diaSemana %> às <%= Turno.find(aula.turno_id).horaFormatada %></td>
+      <td><%= Estudio.find(aula.estudio_id).nome %></td>
+      <td><%= User.find(aula.staff_id).nome %></td>
+    </tr>
+    <% end %>
+  </table>
+
+  <div class="actions topSpacing1">
+    <%= link_to 'Acrescentar aula', new_ginasio_aula_path, :class => "btn success" %>
+    <%= link_to 'Ver Ginásio', ginasio_path(@ginasio.id), :class => "btn primary"%>
+  </div>
+</div>

@@ -1,17 +1,15 @@
 <% if not current_user %>
-<div id="lorem-ipsum">
 
-	<div id="logo"> 
-      <%= link_to image_tag("logo.png"), root_url %>
-    </div>
-
+<div id="logo"> 
+  <%= link_to image_tag("logo.png"), root_url %>
 </div>
 
 <% else %>
     
-	<div id="logo"> 
-      <%= link_to image_tag("logo.png"), root_url %>
-    </div>
+<div id="logo"> 
+  <!-- <%= link_to image_tag("logo.png"), root_url %> -->
+  <img src="http://chzgifs.files.wordpress.com/2011/11/funny-gifs-oh-god.gif"/>
+</div>
 
 <% end %>
 

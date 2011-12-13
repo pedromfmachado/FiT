@@ -1,9 +1,6 @@
 // All related to form validation here
 
 $(document).ready(function() {
-  $(".topbar").dropdown();
-
-  $(".alert-message").alert();
 
   jQuery.validator.addMethod("exactLength", function(value, element, param) {
     return this.optional(element) || value.length == param;

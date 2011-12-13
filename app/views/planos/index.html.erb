@@ -2,7 +2,7 @@
   <% if current_user && @planos.count > 0 %>
   <h1>Planos</h1>
 
-  <table>
+  <table class="zebra-striped">
     <tr>
       <th>Data</th>
       <th>Altura</th>
@@ -29,11 +29,15 @@
   </table>
   <% end %>
 
+	<div class="actions topSpacing0">
   <% if can? :create, Plano %>
-  <div class="actions topSpacing0">
     <%= link_to 'Criar Novo Plano', new_user_plano_path(params[:user_id]), :class => "btn primary" %>
-  </div>
   <% end %>
+	
+	<% if can? :requisitar_plano, Plano %>
+    <%= link_to 'Pedir novo plano', requisitarplano_path, :class => "btn primary" %>
+  <% end %>
+  </div>
 
 </div>
 

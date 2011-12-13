@@ -109,5 +109,21 @@ class PlanosController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def requisitar_plano
+
+    @user = User.find(params[:user_id])
+		
+
+		respond_to do |format|
+			if UserMailer.pedirplano(@user).deliver
+				format.html { redirect_to(user_planos_url(@user), :flash => { :success => "Foi feito o pedido para um novo plano de treinos"}) }
+			else
+				format.html { redirect_to(user_planos_url(@user), :flash => { :error => "Erro ao fazer o pedido"}) }
+			end
+			
+		end
+
+  end
 end
 

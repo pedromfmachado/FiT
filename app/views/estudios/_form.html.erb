@@ -11,15 +11,21 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
+  <div class="clearfix">
+    <%= f.label :nome %>
+    <div class="input">
+      <%= f.text_field :nome, :class => "span4" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :lotacao %><br />
-    <%= f.number_field :lotacao %>
+
+  <div class="clearfix">
+    <%= f.label :lotacao, "Lotação" %>
+    <div class="input">
+      <%= f.number_field :lotacao, :class => "span2" %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+
+  <div class="actions topSpacing1">
+    <%= f.submit "Guardar", :class => "btn success" %>
 <% end %>
+

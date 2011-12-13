@@ -1,5 +1,7 @@
-<h1>New estudio</h1>
+<div class="span14">
+  <h1>Criar novo Estúdio</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', ginasio_estudios_path(params[:ginasio_id]) %>
+    <%= render 'form' %>
+    <%= link_to 'Cancelar', ginasio_estudios_path(params[:ginasio_id]), :class => "btn danger" %>
+  </div>
+</div>

@@ -17,6 +17,7 @@ Fit::Application.routes.draw do
   match 'promote' => 'users#promote', :as => "promote"
   match 'demote' => 'users#demote', :as => "demote"
   match 'ginasiosperto' => 'ginasios#pertocidade', :as => "ginasiosperto"
+  match '/users/:user_id/planos/requisitarplano' => 'planos#requisitar_plano', :as => "requisitarplano"
   
   
   resources :users do

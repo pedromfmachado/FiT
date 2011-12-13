@@ -1,17 +1,18 @@
-<p id="notice"><%= notice %></p>
+<div class="span14">
 
-<p>
-  <b>Tipo:</b>
-  <%= @tipo_aula.tipo %>
-</p>
+  <p id="notice"><%= notice %></p>
 
+  <h1>Modalidade</h1>
+  <h3> <%= @tipo_aula.tipo %> </h3>
 
-<p>
-  <b>Descricao:</b>
-  <%= @tipo_aula.descricao %>
-</p>
+  <br/>
 
-<%= link_to 'Editar', edit_tipo_aula_path(@tipo_aula) %> |
-<%= link_to 'Apagar', @tipo_aula, :confirm => 'Are you sure?', :method => :delete %> |
-<%= link_to 'Voltar a modalidades', tipo_aulas_path %>
+  <p> <strong>Descrição:</strong> </p>
+  <p> <%= @tipo_aula.descricao %> </p>
 
+  <div class="actions topSpacing1">
+    <%= link_to 'Editar', edit_tipo_aula_path(@tipo_aula), :class => "btn success" %>
+    <%= link_to 'Apagar', @tipo_aula, :confirm => 'Tem a certeza?', :method => :delete, :class => "btn danger" %>
+    <%= link_to 'Voltar a modalidades', tipo_aulas_path, :class => "btn primary" %>
+  </div>
+</div>

@@ -3,6 +3,7 @@ class EstudiosController < ApplicationController
   # GET /estudios.json
   def index
     @estudios = Estudio.where(:ginasio_id => params[:ginasio_id])
+    @ginasio = Ginasio.find(params[:ginasio_id])
 
     respond_to do |format|
       format.html # index.html.erb

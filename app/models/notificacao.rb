@@ -5,5 +5,6 @@ class Notificacao < ActiveRecord::Base
 	#validacoes
 	validates :titulo, :presence => true
 	validates :texto, :presence => true
+	validates :admin_id, :presence => true
 
 end

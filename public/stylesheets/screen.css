@@ -151,7 +151,7 @@ ul.top-level {
 }
 
 .sidebar2 li.more:hover {
-  background-image: url('./images/SpryMenuBarRightHover.gif');
+  background-image: url('../images/SpryMenuBarRightHover.gif');
   background-repeat: no-repeat;
   background-position: 95% 50%;
 }

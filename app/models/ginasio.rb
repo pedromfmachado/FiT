@@ -11,4 +11,5 @@ class Ginasio < ActiveRecord::Base
 	# validacoes
 	validates :morada, :presence => true
 	validates :nome, :presence => true
+	validates :telefone, :presence => true
 end

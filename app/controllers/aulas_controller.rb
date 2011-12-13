@@ -1,11 +1,9 @@
 class AulasController < ApplicationController
 
-
-
   def index
-
     @aulas = Aula.where(:ginasio_id => params[:ginasio_id]).order(:diaSemana)
-    
+    @ginasio = Ginasio.find(params[:ginasio_id])
+
     respond_to do |format|
       format.html #index.html.erb
     end
@@ -30,7 +28,7 @@ class AulasController < ApplicationController
     end
   end
 
-	# POST /estudios
+  # POST /estudios
   # POST /estudios.json
   def create
     params[:aula][:ginasio_id] = params[:ginasio_id]

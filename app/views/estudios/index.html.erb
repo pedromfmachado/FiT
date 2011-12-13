@@ -1,25 +1,28 @@
-<h1>Listing estudios</h1>
+<div class="span14">
+  <h1>Ver Estúdios de <%= @ginasio.nome %> </h1>
 
-<table>
-  <tr>
-    <th>Nome</th>
-    <th>Lotacao</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <table class="zebra-striped">
+    <tr>
+      <th>Nome</th>
+      <th>Lotacao</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
 
-<% @estudios.each do |estudio| %>
-  <tr>
-    <td><%= estudio.nome %></td>
-    <td><%= estudio.lotacao %></td>
-    <td><%= link_to 'Show', ginasio_estudio_path(params[:ginasio_id],estudio) %></td>
-    <td><%= link_to 'Edit', edit_ginasio_estudio_path(params[:ginasio_id],estudio) %></td>
-    <td><%= link_to 'Destroy', ginasio_estudio_path(params[:ginasio_id],estudio), :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+  <% @estudios.each do |estudio| %>
+    <tr>
+      <td><%= estudio.nome %></td>
+      <td><%= estudio.lotacao %></td>
+      <td><%= link_to 'Ver Estúdio', ginasio_estudio_path(params[:ginasio_id],estudio) %></td>
+      <td><%= link_to 'Editar', edit_ginasio_estudio_path(params[:ginasio_id],estudio) %></td>
+      <td><%= link_to 'Apagar', ginasio_estudio_path(params[:ginasio_id],estudio), :confirm => 'Tem a certeza?', :method => :delete %></td>
+    </tr>
+  <% end %>
+  </table>
 
-<br />
-
-<%= link_to 'New Estudio', new_ginasio_estudio_path %>
+  <div class="actions topSpacing1">
+    <%= link_to 'Criar novo Estúdio', new_ginasio_estudio_path, :class => "btn success" %>
+    <%= link_to "Ver Ginásio", ginasio_path(@ginasio.id), :class => "btn primary" %>
+  </div>
+</div>

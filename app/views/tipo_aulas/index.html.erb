@@ -1,17 +1,21 @@
-<h1>Modalidades</h1>
+<div class="span16">
+  <h1>Modalidades</h1>
 
-<table>
-  <tr>
-    <th>Nome</th>
-  </tr>
+  <table class="zebra-striped">
+    <tr>
+      <th>Nome</th>
+    </tr>
 
-<% @tipo_aulas.each do |tipo_aula| %>
-  <tr>
-    <td><%= link_to tipo_aula.tipo, tipo_aula %></td>
-  </tr>
-<% end %>
-</table>
+  <% @tipo_aulas.each do |tipo_aula| %>
+    <tr>
+      <td><%= link_to tipo_aula.tipo, tipo_aula %></td>
+    </tr>
+  <% end %>
+  </table>
 
-<br />
-
-<%= link_to 'Nova modalidade', new_tipo_aula_path, :class => "btn primary" %>
+  <% if can? :write, User %>
+  <div class="actions topSpacing2">
+    <%= link_to 'Nova modalidade', new_tipo_aula_path, :class => "btn primary" %>
+  </div>
+  <% end %>
+</div>
