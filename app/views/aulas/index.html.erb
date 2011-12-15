@@ -2,35 +2,6 @@
 
   <h1>Aulas de <%= @ginasio.nome %></h1>
 
-  <table class="zebra-striped">
-    <tr>
-      <th>Tipo de Aula</th>
-      <th>Dia</th>
-      <th>Estúdio</th>
-      <th>Professor</th>
-    </tr>
-
-    <% @aulas.each do |aula| %>
-    <tr>
-      <td><%= TipoAula.find(aula.tipo_aula_id).tipo %></td>
-      <td><%= Aula.getDia(aula.dia) %> às <%= Turno.find(aula.turno_id).horaFormatada %></td>
-      <td><%= Estudio.find(aula.estudio_id).nome %></td>
-      <td><%= User.find(aula.staff_id).nome %></td>
-
-      <% if can?(:create,ReservaAula) && Date.today.wday-1 == aula.dia %>
-
-        <% if ReservaAula.jaMarcada(current_user.id, aula.id, Date.today)%>
-          <td><%= link_to 'Cancelar', reserva_aula_path(ReservaAula.getReserva(current_user.id, aula.id, Date.today).id), :action => :destroy, :method => :delete %></td>
-        <% else %>
-          <td><%= link_to 'Marcar', reserva_aulas_path(:aula_id => aula.id, :user_id => current_user.id, :dia => Date.today), :action => :create, :method => :post %></td>
-        <% end %>
-      <% end %>
-
-    </tr>
-    <% end %>
-
-  </table>
-
   <!-- le schedule fixe -->
   <div class="span14">
 
@@ -43,21 +14,20 @@
         <% @aulas_sorted[d].each do |aula| %>
           <tr>
             <td><%= TipoAula.find(aula.tipo_aula_id).tipo %></td>
-            <td><%= Turno.find(aula.turno_id).horaFormatada %></td>
             <td><%= Estudio.find(aula.estudio_id).nome %></td>
+            <td>às <%= aula.inicio.to_s(:time) %></td>
+            <td><%= aula.duracao %> minutos</td>
             <td><%= User.find(aula.staff_id).nome %></td>
+            <td><%= link_to 'Ver marcacoes', ginasio_aula_reserva_aulas_path(params[:ginasio_id],aula.id)%> </td>
 
-            <% if can?(:create,ReservaAula) && Date.today.wday-1 == aula.dia %>
-              <% if ReservaAula.jaMarcada(current_user.id, aula.id, Date.today) %>
-                <td><%= link_to 'Cancelar', reserva_aula_path(ReservaAula.getReserva(current_user.id, aula.id, Date.today).id), :action => :destroy, :method => :delete %></td>
-              <% else %>
-                <td><%= link_to 'Marcar', reserva_aulas_path(:aula_id => aula.id, :user_id => current_user.id, :dia => Date.today), :action => :create, :method => :post %></td>
-              <% end %>
-            <% end %>
+            
           </tr>
         <% end %>
         </table>
 
+      </div>
+
+      <div class="topSpacing2">
       </div>
     <% end %>
   </div>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111215130554) do
+ActiveRecord::Schema.define(:version => 20111215205030) do
 
   create_table "admins", :force => true do |t|
     t.integer   "user_id"
@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(:version => 20111215130554) do
   end
 
   create_table "aulas", :force => true do |t|
-    t.integer  "turno_id"
     t.integer  "staff_id"
     t.integer  "estudio_id"
     t.integer  "tipo_aula_id"
@@ -27,12 +26,13 @@ ActiveRecord::Schema.define(:version => 20111215130554) do
     t.datetime "updated_at"
     t.integer  "ginasio_id"
     t.integer  "dia"
+    t.integer  "duracao"
+    t.time     "inicio"
   end
 
   add_index "aulas", ["estudio_id"], :name => "index_aulas_on_estudio_id"
   add_index "aulas", ["staff_id"], :name => "index_aulas_on_staff_id"
   add_index "aulas", ["tipo_aula_id"], :name => "index_aulas_on_tipo_aula_id"
-  add_index "aulas", ["turno_id"], :name => "index_aulas_on_turno_id"
 
   create_table "cidades", :force => true do |t|
     t.string    "nome"
@@ -133,12 +133,6 @@ ActiveRecord::Schema.define(:version => 20111215130554) do
   create_table "tipo_aulas", :force => true do |t|
     t.string   "tipo"
     t.text     "descricao"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "turnos", :force => true do |t|
-    t.time     "hora"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

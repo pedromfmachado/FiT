@@ -23,6 +23,7 @@ Fit::Application.routes.draw do
 
   resources :users do
     resources :planos
+    resources :reserva_aulas
   end
 
   resources :exercicios
@@ -34,8 +35,14 @@ Fit::Application.routes.draw do
   resources :ginasios do
     resources :users
     resources :estudios
-    resources :aulas
+    resources :aulas do
+
+      resources :reserva_aulas
+
+    end
   end
+
+
 
   namespace :api do
     resources :users

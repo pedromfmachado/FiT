@@ -1,6 +1,17 @@
 class ReservaAulasController < ApplicationController
   load_and_authorize_resource
 
+  	def index
+  		
+  		if params[:aula_id]
+  			@reservas = ReservaAula.where(:aula_id => params[:aula_id])
+  		elsif params[:user_id]
+  			@reservas = ReservaAula.where(:user_id => params[:user_id])
+  		else
+  			@reservas = ReservaAula.all
+  		end
+  	end
+
 	def create
 		@aula = Aula.find(params[:aula_id])
 		@ginasio = Ginasio.find(@aula.ginasio_id)
@@ -8,9 +19,9 @@ class ReservaAulasController < ApplicationController
 
 		respond_to do |format|
 			if @reserva.save
-				format.html { redirect_to ginasio_aulas_path(@ginasio), :flash => { :success => 'Aula marcada!' } }
+				format.html { redirect_to ginasio_aula_reserva_aulas_path(@ginasio,@aula), :flash => { :success => 'Aula marcada!' } }
 			else
-				format.html { redirect_to ginasio_aulas_path(@ginasio), :flash => { :error => 'Marcacao ja efectuada!' } }
+				format.html { redirect_to ginasio_aula_reserva_aulas_path(@ginasio,@aula), :flash => { :error => 'Marcacao ja efectuada!' } }
 			end
 		end
 	end
@@ -24,7 +35,7 @@ class ReservaAulasController < ApplicationController
 		@reserva.destroy
 
     respond_to do |format|
-      format.html { redirect_to ginasio_aulas_path(@ginasio), :flash => { :success => 'Aula cancelada!' } }
+      format.html { redirect_to ginasio_aula_reserva_aulas_path(@ginasio,@aula), :flash => { :success => 'Aula cancelada!' } }
     end
   end
 

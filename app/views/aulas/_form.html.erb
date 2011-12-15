@@ -33,9 +33,16 @@
   </div>
 
   <div class="clearfix">
-    <%= f.label :turno_id, 'Hora' %>
+    <%= f.label :inicio,  'Hora de Inicio' %>
     <div class="input">
-      <%= collection_select("aula", "turno_id", Turno.all, :id, :horaFormatada, {}, { :class => "span2 no-resize" }) %>
+      <%= f.text_field :inicio, :class => "span2" %>
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <%= f.label :duracao,  'Duracao' %>
+    <div class="input">
+      <%= f.text_field :duracao, :class => "span2" %> minutos
     </div>
   </div>
 
