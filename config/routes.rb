@@ -1,6 +1,5 @@
 Fit::Application.routes.draw do
-  
-  
+
 
   get "reserve_aula/new"
 
@@ -21,20 +20,22 @@ Fit::Application.routes.draw do
   match 'ginasiosperto' => 'ginasios#pertocidade', :as => "ginasiosperto"
   match '/users/:user_id/planos/mudarpassword' => 'users#edit_password', :as => "mudarpassword"
   match '/users/:user_id/planos/requisitarplano' => 'planos#requisitar_plano', :as => "requisitarplano"
-  
-  
+
   resources :users do
     resources :planos
   end
+
   resources :exercicios
   resources :sessions
   resources :notificacaos
+  resources :reserva_aulas
+  resources :pedido_planos
+
   resources :ginasios do
     resources :users
     resources :estudios
     resources :aulas
   end
-
 
   namespace :api do
     resources :users

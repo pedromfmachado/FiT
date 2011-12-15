@@ -4,6 +4,8 @@ class Aula < ActiveRecord::Base
   belongs_to :estudio
   belongs_to :tipo_aula
 	belongs_to :ginasio
+	
+	has_many :reserva_aulas
 
   validates :turno_id, :presence => true
   validates :estudio_id, :presence => true
@@ -25,7 +27,7 @@ class Aula < ActiveRecord::Base
 
 	end
 
-	 require 'builder'
+ 	require 'builder'
 	def to_xml(options ={})
 		if options[:builder]
 			build_xml(options[:builder])

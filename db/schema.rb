@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111213161735) do
+ActiveRecord::Schema.define(:version => 20111215130554) do
 
   create_table "admins", :force => true do |t|
     t.integer   "user_id"
@@ -96,6 +96,14 @@ ActiveRecord::Schema.define(:version => 20111213161735) do
     t.timestamp "created_at"
     t.timestamp "updated_at"
     t.integer   "ginasio_id"
+  end
+
+  create_table "pedido_planos", :id => false, :force => true do |t|
+    t.integer  "user_id"
+    t.datetime "data_pedido"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "ginasio_id"
   end
 
   create_table "planos", :force => true do |t|

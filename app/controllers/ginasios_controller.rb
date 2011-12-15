@@ -60,7 +60,7 @@ class GinasiosController < ApplicationController
         format.json { render :json => @ginasio.errors, :status => :unprocessable_entity }
       end
     end
-  end
+  end	
 
   # PUT /ginasios/1
   # PUT /ginasios/1.json

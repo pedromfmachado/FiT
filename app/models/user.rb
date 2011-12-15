@@ -3,8 +3,10 @@ class User < ActiveRecord::Base
   has_many :admins
   has_many :staffs
   has_many :planos
+	has_many :reserva_planos
 
   belongs_to :ginasio
+  has_one :pedido_plano
 
   attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento, :url_foto, :ginasio_id
 

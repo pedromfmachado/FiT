@@ -10,7 +10,6 @@ class ExerciciosController < ApplicationController
       format.html # index.html.erb
       format.xml  { render :xml => @exercicios }
       format.json  { render :json => @exercicios }
-
     end
   end
 
