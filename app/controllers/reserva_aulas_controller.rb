@@ -10,7 +10,7 @@ class ReservaAulasController < ApplicationController
 			if @reserva.save
 				format.html { redirect_to ginasio_aulas_path(@ginasio), :flash => { :success => 'Aula marcada!' } }
 			else
-				format.html { redirect_to ginasio_aulas_path(@ginasio), :flash => { :error => 'Marcaçao ja efectuada!' } }
+				format.html { redirect_to ginasio_aulas_path(@ginasio), :flash => { :error => 'Marcacao ja efectuada!' } }
 			end
 		end
 	end
