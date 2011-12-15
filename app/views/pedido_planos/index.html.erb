@@ -11,7 +11,7 @@
 
   <% @pedidos.each do |pedido| %>
 
-    <% if current_user.staff? && current_user.id == pedido.ginasio_id %>
+    <% if (current_user.staff? || current_user.admin?) && current_user.ginasio_id == pedido.ginasio_id %>
       <tr>
         <td><%= pedido.user.nome %></td>
         <td><%= pedido.data_pedido.strftime("%Y/%m/%d") %></td>
@@ -19,6 +19,7 @@
         <td><a href="#">Apagar</a></td>
       </tr>
     <% end %>
+
   <% end %>
   </table>
 

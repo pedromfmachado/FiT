@@ -46,54 +46,7 @@
 <div class="container-fluid topSpacing1">
 
   <% if current_user %>
-  <!-- le sidebar menu -->
-  <div class="sidebar">
-    <div class="sidebar2">
-      <ul class="top-level">
-
-        <li class="more">
-          <a href="#">Principal</a>
-          <ul class="sub-level">
-            <li><%= link_to root_url do %> Home <% end %></li>
-            <li><%= link_to notificacaos_path do %> Notificações <% end %></li>
-            <li><%= link_to ginasios_path do %> Ginásios <% end %></li>
-          </ul>
-        </li>
-
-        <li class="more">
-          <a href="#">Aulas</a>
-          <ul class="sub-level">
-            <li><a href="#">Horários</a></li>
-            <li><%= link_to tipo_aulas_path do %> Modalidades <% end %></li>
-          </ul>
-        </li>
-
-        <li class="more">
-          <a href="#">A minha Conta</a>
-          <ul class="sub-level">
-            <% if current_user %>
-              <li><%= link_to "Perfil", current_user %></li>
-
-              <% if current_user.normal? %>
-                <li><%= link_to "Planos de Treino", user_planos_path(current_user) %></li>
-              <% end %>
-            <% end %>
-          </ul>
-        </li>
-
-        <% if current_user && (current_user.admin? || current_user.staff?) %>
-        <li class="more">
-          <a href="#">Administração</a>
-          <ul class="sub-level">
-            <li><%= link_to "Utilizadores", users_path %></li>
-            <li><%= link_to "Exercicios", exercicios_path %></li>
-          </ul>
-        </li>
-        <% end %>
-
-      </ul>
-    </div>
-  </div>
+    <%= render :file => 'layouts/menu.html' %>
   <% end %>
 
   <!-- le contents -->

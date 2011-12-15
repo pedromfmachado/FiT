@@ -1,40 +1,52 @@
 <div class="span14">
 
-<h1>Aulas de <%= @ginasio.nome %></h1>
+  <h1>Aulas de <%= @ginasio.nome %></h1>
 
-	<table class="zebra-striped">
-		<tr>
-			<th>Tipo de Aula</th>
-			<th>Dia</th>
-			<th>Estúdio</th>
-			<th>Professor</th>
-		</tr>
+  <table class="zebra-striped">
+    <tr>
+      <th>Tipo de Aula</th>
+      <th>Dia</th>
+      <th>Estúdio</th>
+      <th>Professor</th>
+    </tr>
 
-		<% @aulas.each do |aula| %>
-		<tr>
-			<td><%= TipoAula.find(aula.tipo_aula_id).tipo %></td>
-			<td><%= aula.diaFormatado %> às <%= Turno.find(aula.turno_id).horaFormatada %></td>
-			<td><%= Estudio.find(aula.estudio_id).nome %></td>
-			<td><%= User.find(aula.staff_id).nome %></td>
+    <% @aulas.each do |aula| %>
+    <tr>
+      <td><%= TipoAula.find(aula.tipo_aula_id).tipo %></td>
+      <td><%= aula.diaFormatado %> às <%= Turno.find(aula.turno_id).horaFormatada %></td>
+      <td><%= Estudio.find(aula.estudio_id).nome %></td>
+      <td><%= User.find(aula.staff_id).nome %></td>
 
+      <% if can?(:create,ReservaAula) && Date.today.wday-1 == aula.dia %>
 
-			<% if Date.today.wday-1 == aula.dia %>
+        <% if ReservaAula.jaMarcada(current_user.id, aula.id, Date.today)%>
+          <td><%= link_to 'Cancelar', reserva_aula_path(ReservaAula.getReserva(current_user.id, aula.id, Date.today).id), :action => :destroy, :method => :delete %></td>
+        <% else %>
+          <td><%= link_to 'Marcar', reserva_aulas_path(:aula_id => aula.id, :user_id => current_user.id, :dia => Date.today), :action => :create, :method => :post %></td>
+        <% end %>
+      <% end %>
 
-				<% if ReservaAula.jaMarcada(current_user.id, aula.id, Date.today)%>
-					<td><%= link_to 'Cancelar', reserva_aula_path(ReservaAula.getReserva(current_user.id, aula.id, Date.today).id), :action => :destroy, :method => :delete %></td>
+    </tr>
+    <% end %>
 
-				<% else %>
-				
-					<td><%= link_to 'Marcar', reserva_aulas_path(:aula_id => aula.id, :user_id => current_user.id,
-																									 :dia => Date.today), :action => :create, :method => :post %></td>
-				<% end %>
-			<% end %>
-		</tr>
-		<% end %>
-	</table>
+  </table>
 
-	<div class="actions topSpacing1">
-		<%= link_to 'Acrescentar aula', new_ginasio_aula_path, :class => "btn success" %>
-		<%= link_to 'Ver Ginásio', ginasio_path(@ginasio.id), :class => "btn primary"%>
-	</div>
+  <!-- le schedule fixe -->
+  <div class="span14">
+
+    <% ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabado", "Domingo"].each do |dia| %>
+      <h3><%= dia %></h3>
+
+      <div class="row">
+        <% @aulas.where do |aula|%>
+          
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="actions topSpacing1">
+    <%= link_to 'Acrescentar aula', new_ginasio_aula_path, :class => "btn success" %>
+    <%= link_to 'Ver Ginásio', ginasio_path(@ginasio.id), :class => "btn primary"%>
+  </div>
 </div>

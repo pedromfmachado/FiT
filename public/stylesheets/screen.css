@@ -172,7 +172,7 @@ li:hover .sub-level {
 ul.sub-level li {
   border: none;
   float:left;
-  width:150px;
+  width:200px;
   border-bottom: #fff solid;
   border-width: 1px;
 }

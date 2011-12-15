@@ -1,5 +1,5 @@
 class ReservaAulasController < ApplicationController
-  
+  load_and_authorize_resource
 
 	def create
 		@aula = Aula.find(params[:aula_id])
@@ -17,7 +17,6 @@ class ReservaAulasController < ApplicationController
 
 
 	def destroy
-
 		@reserva = ReservaAula.find(params[:id])
 		@aula = Aula.find(@reserva.aula_id)
 		@ginasio = Ginasio.find(@aula.ginasio_id)

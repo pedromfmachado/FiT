@@ -14,7 +14,9 @@ class Ability
       cannot :destroy, User do |u|
 	u.admin?
       end
+      cannot :create, ReservaAula
     elsif user.staff?
+      can :read, Aula
       can :read, Notificacao
       can :manage, Plano
       can :manage, Exercicio
@@ -29,6 +31,7 @@ class Ability
 	u.admin? || u.staff?
       end
     elsif user.normal?
+      can :read, Aula
       can :read, Notificacao, :ginasio_id => user.ginasio_id
       can :read, TipoAula
       can :read, Aula
