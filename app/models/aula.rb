@@ -17,14 +17,12 @@ class Aula < ActiveRecord::Base
 	validates_uniqueness_of :staff_id, :scope => [:turno_id, :dia]
 	validates_uniqueness_of :estudio_id, :scope => [:turno_id, :dia]
 
-	def diaFormatado
+	def self.getDia(d)
+		dias = [ 'Segunda' , 'Terca', 'Quarta', 'Quinta', 'Sexta', 'Sabado', 'Domingo' ]
 
-		@dias =  [ 'Segunda' , 'Terca', 'Quarta', 'Quinta', 'Sexta', 'Sabado', 'Domingo' ]
-
-		if dia != nil
-			@dias[dia]
+		if d != nil
+			dias[d]
 		end
-
 	end
 
 	require 'builder'

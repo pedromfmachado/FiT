@@ -15,15 +15,17 @@ class Ability
 	u.admin?
       end
       cannot :create, ReservaAula
+      cannot :create, PedidoPlano
     elsif user.staff?
-      can :read, Aula
       can :read, Notificacao
+      can :read, Ginasio
       can :manage, Plano
       can :manage, Exercicio
       can :manage, User
       can :manage, Aula
       can :manage, TipoAula
-      cannot :requisitar_plano, Plano
+      can :destroy, PedidoPlano
+      cannot :create, ReservaAula
       cannot :update, User do |u|
 	(u.admin? || u.staff?) && user.id != u.id
       end
@@ -31,11 +33,14 @@ class Ability
 	u.admin? || u.staff?
       end
     elsif user.normal?
-      can :read, Aula
       can :read, Notificacao, :ginasio_id => user.ginasio_id
+      can :read, Estudio
       can :read, TipoAula
       can :read, Aula
-      can :requisitar_plano, Plano
+      can :manage, ReservaAula
+      can :read, Ginasio
+      can :pertocidade, Ginasio
+      can :create, PedidoPlano
       can :read, Plano, :user_id => user.id
       can :show, User, :id => user.id
       can :update, User, :id => user.id

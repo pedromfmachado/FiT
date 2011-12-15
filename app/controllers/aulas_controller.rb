@@ -4,6 +4,8 @@ load_and_authorize_resource
     @aulas = Aula.where(:ginasio_id => params[:ginasio_id]).order('dia')
     @ginasio = Ginasio.find(params[:ginasio_id])
 
+    @aulas_sorted = Aula.where(:ginasio_id => params[:ginasio_id]).group_by(&:dia)
+    @dias_sorted = @aulas_sorted.keys.sort
 
     respond_to do |format|
       format.html #index.html.erb

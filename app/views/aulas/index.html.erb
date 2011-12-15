@@ -13,7 +13,7 @@
     <% @aulas.each do |aula| %>
     <tr>
       <td><%= TipoAula.find(aula.tipo_aula_id).tipo %></td>
-      <td><%= aula.diaFormatado %> às <%= Turno.find(aula.turno_id).horaFormatada %></td>
+      <td><%= Aula.getDia(aula.dia) %> às <%= Turno.find(aula.turno_id).horaFormatada %></td>
       <td><%= Estudio.find(aula.estudio_id).nome %></td>
       <td><%= User.find(aula.staff_id).nome %></td>
 
@@ -34,13 +34,30 @@
   <!-- le schedule fixe -->
   <div class="span14">
 
-    <% ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sabado", "Domingo"].each do |dia| %>
-      <h3><%= dia %></h3>
+    <% @dias_sorted.each do |d| %>
 
+      <h3><%= Aula.getDia(d) %></h3>
       <div class="row">
-        <% @aulas.where do |aula|%>
-          
+
+        <table class="zebra-striped">
+        <% @aulas_sorted[d].each do |aula| %>
+          <tr>
+            <td><%= TipoAula.find(aula.tipo_aula_id).tipo %></td>
+            <td><%= Turno.find(aula.turno_id).horaFormatada %></td>
+            <td><%= Estudio.find(aula.estudio_id).nome %></td>
+            <td><%= User.find(aula.staff_id).nome %></td>
+
+            <% if can?(:create,ReservaAula) && Date.today.wday-1 == aula.dia %>
+              <% if ReservaAula.jaMarcada(current_user.id, aula.id, Date.today) %>
+                <td><%= link_to 'Cancelar', reserva_aula_path(ReservaAula.getReserva(current_user.id, aula.id, Date.today).id), :action => :destroy, :method => :delete %></td>
+              <% else %>
+                <td><%= link_to 'Marcar', reserva_aulas_path(:aula_id => aula.id, :user_id => current_user.id, :dia => Date.today), :action => :create, :method => :post %></td>
+              <% end %>
+            <% end %>
+          </tr>
         <% end %>
+        </table>
+
       </div>
     <% end %>
   </div>

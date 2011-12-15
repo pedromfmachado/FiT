@@ -1,4 +1,6 @@
 class EstudiosController < ApplicationController
+	load_and_authorize_resource 
+
   # GET /estudios
   # GET /estudios.json
   def index

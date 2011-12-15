@@ -1,4 +1,6 @@
 class GinasiosController < ApplicationController
+	load_and_authorize_resource 
+
   # GET /ginasios
   # GET /ginasios.json
   def index

@@ -45,6 +45,7 @@ Fit::Application.routes.draw do
     resources :notificacaos
     resources :ginasios
     resources :aulas
+    resources :reserva_aulas
     match 'users/edit' => 'users#edit', :as => "users/edit"
   end
 
