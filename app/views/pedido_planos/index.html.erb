@@ -10,12 +10,15 @@
     </tr>
 
   <% @pedidos.each do |pedido| %>
-    <tr>
-      <td><%= pedido.user.nome %></td>
-      <td><%= pedido.data_pedido.strftime("%Y/%m/%d") %></td>
-      <td><a href="#">Criar novo Plano</a></td>
-      <td><a href="#">Apagar</a></td>
-    </tr>
+
+    <% if current_user.staff? && current_user.id == pedido.ginasio_id %>
+      <tr>
+        <td><%= pedido.user.nome %></td>
+        <td><%= pedido.data_pedido.strftime("%Y/%m/%d") %></td>
+        <td><a href="#">Criar novo Plano</a></td>
+        <td><a href="#">Apagar</a></td>
+      </tr>
+    <% end %>
   <% end %>
   </table>
 

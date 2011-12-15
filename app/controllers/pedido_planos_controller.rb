@@ -24,7 +24,7 @@ class PedidoPlanosController < ApplicationController
         format.html { redirect_to(@user, :flash => { :success => 'Pedido submetido com sucesso. Aguarde pelo nosso contacto.' }) }
         #format.xml  { render :xml => @pedido, :status => :created, :location => @exercicio }
       else
-        format.html { redirect_to(@user, :flash => { :error => 'O seu pedido está a ser tratado. Aguarde pelo nosso contacto.' }) }
+        format.html { redirect_to(@user, :flash => { :error => 'O seu pedido esta a ser tratado. Aguarde pelo nosso contacto.' }) }
         #format.xml
       end
     end
