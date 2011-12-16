@@ -72,6 +72,7 @@ class Aula < ActiveRecord::Base
 	def build_xml(xml)
 
 		xml.aula do
+			xml.id id
 			xml.data Time.now
 			xml.dia dia
 			xml.hora inicio.to_s(:time)
