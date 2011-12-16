@@ -31,7 +31,7 @@
 
   <div class="actions topSpacing1">
     <% if can?(:create,ReservaAula) %>
-      <% if ReservaAula.jaMarcada(current_user.id, aula.id, Date.today) %>
+      <% if ReservaAula.jaMarcada(current_user.id, aula.id) %>
         <%= link_to 'Cancelar', reserva_aula_path(ReservaAula.getReserva(current_user.id, aula.id, Date.today).id), :action => :destroy, :method => :delete, :class => "btn danger" %>
       <% else %>
         <%= link_to 'Marcar', reserva_aulas_path(:aula_id => aula.id, :user_id => current_user.id, :dia => Date.today), :action => :create, :method => :post , :class => "btn success"%>

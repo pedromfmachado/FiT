@@ -6,6 +6,14 @@ class Api::ReservaAulasController < ApiController
 
   end
 
+  def get_info
+
+    user = User.find_by_token(params[:token])
+
+    render :xml => ReservaAula.info(user.id, params[:aula_id])
+
+  end
+
 	def create
 
 		@user = User.find_by_token(params[:token])

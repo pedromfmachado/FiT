@@ -38,8 +38,8 @@ class Ability
       can :read, TipoAula
       can :read, Aula
       can :manage, ReservaAula do |r|
-
-            r.user_id == user.id
+      
+            (r.user_id == user.id || r.user_id == nil) && (r.aula_id == nil || Aula.find(r.aula_id).ginasio_id == user.ginasio_id)
 
       end
       can :read, Ginasio

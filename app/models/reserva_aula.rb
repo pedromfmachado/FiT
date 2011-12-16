@@ -12,9 +12,9 @@ class ReservaAula < ActiveRecord::Base
 
 	validate :checkLotacao
 
-	def self.jaMarcada(uid,aid,d)
+	def self.jaMarcada(uid,aid)
 
-		ReservaAula.where(:user_id => uid, :aula_id => aid, :dia => d).count > 0
+		ReservaAula.where(:user_id => uid, :aula_id => aid, :dia => Date.today).count > 0
 
 	end
 
@@ -44,5 +44,28 @@ class ReservaAula < ActiveRecord::Base
 		end
 		# verificar se a lotacao ja foi ultrapassada
 	end
+
+	require 'builder'
+	def self.info(uid, aid)
+
+		aula = Aula.find(aid)
+		estudio = Estudio.find(aula.estudio_id)
+
+		xml = ::Builder::XmlMarkup.new
+		xml.instruct!
+		xml.reserva do
+
+			xml.lugares ReservaAula.lugaresDisponiveis(aula.id)
+			xml.lotacao estudio.lotacao
+			if(ReservaAula.jaMarcada(uid,aula.id))
+				xml.tem_reserva "sim"
+			else
+				xml.tem_reserva "nao"
+			end
+
+		end
+
+	end
+
 
 end
