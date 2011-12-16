@@ -39,7 +39,7 @@ class Ability
       can :read, Aula
       can :manage, ReservaAula do |r|
 
-            r.user_id == user.id && r.dia == Date.today
+            r.user_id == user.id
 
       end
       can :read, Ginasio

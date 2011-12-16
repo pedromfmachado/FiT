@@ -34,7 +34,7 @@ class Api::ReservaAulasController < ApiController
     xml = Builder::XmlMarkup.new(:indent=>2)
     xml.instruct!
 
-    xml.edit do
+    xml.reserva do
         xml.message msg
     end
   end
