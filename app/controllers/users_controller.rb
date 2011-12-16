@@ -34,22 +34,38 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+   # GET /exercicios/1/edit
+  def edit_password
+    @user = User.find(params[:id])
+  end
+
   def update
     @user = User.find(params[:id])
 
     if params[:filename] && params[:filename] != ""
       @user.flickr_auth
       params[:user][:url_foto] = @user.upload_foto(params[:filename])
-    end 
+    end
 
     respond_to do |format|
-      if @user.update_attributes(params[:user])
-        format.html { redirect_to(@user, :flash => { :success => "Dados actualizados com sucesso!" }) }
-        format.xml  { head :ok }
+
+      if params[:password_antiga]
+
+        if !User.authenticate(@user.email,params[:password_antiga])
+          format.html { render :action => "edit_password", :flash => { :error => "Password antiga nao esta correta" } }
+        elsif @user.update_attributes(params[:user])
+          format.html { redirect_to(@user, :flash => { :success => "Password alterada!" }) }
+        else
+          format.html { render :action => "edit_password", :flash => { :error => "Erro ao mudar a password" } }
+        end
       else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @exercicio.errors, :status => :unprocessable_entity }
-      end
+        if @user.update_attributes(params[:user])
+          format.html { redirect_to(@user, :flash => { :success => "Dados actualizados com sucesso!" }) }
+        else
+          format.html { render :action => "edit" }
+        end
+
+      end      
     end
   end
 

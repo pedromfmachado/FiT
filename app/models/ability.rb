@@ -48,6 +48,7 @@ class Ability
       can :read, Plano, :user_id => user.id
       can :show, User, :id => user.id
       can :update, User, :id => user.id
+      can :edit_password, User, :id => user.id
     end
   end
 end
