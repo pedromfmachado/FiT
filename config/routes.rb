@@ -7,7 +7,7 @@ Fit::Application.routes.draw do
 
   get "aulas/index"
 
-  resources :tipo_aulas
+  
 
   get "cidade/index"
 
@@ -26,6 +26,7 @@ Fit::Application.routes.draw do
     resources :reserva_aulas
   end
 
+  resources :tipo_aulas
   resources :exercicios
   resources :sessions
   resources :notificacaos
@@ -53,6 +54,7 @@ Fit::Application.routes.draw do
     resources :ginasios
     resources :aulas
     resources :reserva_aulas
+    resources :pedido_planos
     match 'users/edit' => 'users#edit', :as => "users/edit"
     match 'getinfo' => 'reserva_aulas#get_info', :as => "getinfo"
   end

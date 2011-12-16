@@ -42,7 +42,6 @@ class ReservaAula < ActiveRecord::Base
 		if ReservaAula.lugaresDisponiveis(aula_id) < 0
 			errors.add(:lotacao , "A aula ja esta completa")
 		end
-		# verificar se a lotacao ja foi ultrapassada
 	end
 
 	require 'builder'

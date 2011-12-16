@@ -11,12 +11,12 @@
 
   <% @pedidos.each do |pedido| %>
 
-    <% if (current_user.staff? || current_user.admin?) && current_user.ginasio_id == pedido.ginasio_id %>
+    <% if (current_user.staff? || current_user.admin?) && current_user.ginasio_id == pedido.user.ginasio_id %>
       <tr>
         <td><%= pedido.user.nome %></td>
         <td><%= pedido.data_pedido.strftime("%Y/%m/%d") %></td>
         <td><a href="#">Criar novo Plano</a></td>
-        <td><a href="#">Apagar</a></td>
+        <td><%= link_to 'Cancelar', pedido_plano_path(pedido.user_id), :action => :destroy, :method => :delete, :class => "btn danger" %></td>
       </tr>
     <% end %>
 

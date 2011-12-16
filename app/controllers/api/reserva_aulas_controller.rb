@@ -19,17 +19,24 @@ class Api::ReservaAulasController < ApiController
 		@user = User.find_by_token(params[:token])
 		@reserva = ReservaAula.new(:aula_id => params[:aula_id], :user_id => @user.id, :dia => Date.today)
 
+    if Date.today.wday-1 == @reserva.aula.dia 
+
 		  if @reserva.save
 		    render :xml => message("success")
 		  else
 		    render :xml => message("fail")
 		  end
 
+    else
+      render :xml => message("fail")
+    end
+
 	end
 
 
   def destroy
-    @reserva = ReservaAula.find(params[:reserva_id])
+    @user = User.find_by_token(params[:token])
+    @reserva = ReservaAula.where(:aula_id => params[:aula_id], :user_id => @user.id, :dia => Date.today).first
     
     if @reserva.destroy
       render :xml => message("success")

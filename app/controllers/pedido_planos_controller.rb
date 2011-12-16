@@ -1,4 +1,5 @@
 class PedidoPlanosController < ApplicationController
+  load_and_authorize_resource
   def index
     
     @pedidos = PedidoPlano.all
@@ -12,7 +13,6 @@ class PedidoPlanosController < ApplicationController
 
   def create
     @pedido = PedidoPlano.new do |p|
-      p.ginasio_id = params[:ginasio_id]
       p.user_id = params[:user_id]
       p.data_pedido = Time.now
     end
@@ -33,8 +33,8 @@ class PedidoPlanosController < ApplicationController
 
 
   def destroy
-    @pedido = PedidoPlano.find(:user_id => params[:user_id], :ginasio_id => params[:ginasio_id])
-    @pedido.destroy
+
+    PedidoPlano.delete_all(:user_id => params[:id])
 
     respond_to do |format|
       format.html { redirect_to(pedido_planos_url) }

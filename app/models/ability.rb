@@ -7,7 +7,6 @@ class Ability
 
     if user.admin?
       can :manage, :all
-      cannot :requisitar_plano, Plano
       cannot :update, User do |u|
 	u.admin? && user.id != u.id
       end

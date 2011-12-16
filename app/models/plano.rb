@@ -8,6 +8,17 @@ class Plano < ActiveRecord::Base
 	validates :peso, :presence => true
 	validates :altura, :presence => true
 
+	def apagarPedido(uid)
+
+		pedido = PedidoPlano.find_by_user_id(uid).destroy
+		if pedido != nil
+
+			pedido.destroy
+
+		end
+
+	end
+
 	require 'builder'
 	def xml_plano()
 		xml = ::Builder::XmlMarkup.new(:indent=>2)
