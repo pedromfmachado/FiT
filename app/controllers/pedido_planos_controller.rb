@@ -34,10 +34,11 @@ class PedidoPlanosController < ApplicationController
 
   def destroy
 
-    PedidoPlano.delete_all(:user_id => params[:id])
+    pedidos = PedidoPlano.where(:user_id => params[:user_id])
+    pedidos.delete_all
 
     respond_to do |format|
-      format.html { redirect_to(pedido_planos_url) }
+      format.html { redirect_to(pedido_planos_path) }
       format.xml  { head :ok }
     end
   end

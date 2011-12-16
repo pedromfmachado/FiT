@@ -16,7 +16,7 @@
         <td><%= pedido.user.nome %></td>
         <td><%= pedido.data_pedido.strftime("%Y/%m/%d") %></td>
         <td><a href="#">Criar novo Plano</a></td>
-        <td><%= link_to 'Cancelar', pedido_plano_path(pedido.user_id), :action => :destroy, :method => :delete, :class => "btn danger" %></td>
+        <td><%= link_to 'Cancelar', apagarpedido_path(:user_id => pedido.user.id), :action => :destroy, :method => :delete, :class => "btn danger" %></td>
       </tr>
     <% end %>
 

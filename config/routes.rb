@@ -20,6 +20,7 @@ Fit::Application.routes.draw do
   match 'ginasiosperto' => 'ginasios#pertocidade', :as => "ginasiosperto"
   match '/users/:id/mudarpassword' => 'users#edit_password', :as => "mudarpassword"
   match '/users/:user_id/planos/requisitarplano' => 'planos#requisitar_plano', :as => "requisitarplano"
+  match 'apagarpedido' => 'pedido_planos#destroy', :as => "apagarpedido"
 
   resources :users do
     resources :planos
