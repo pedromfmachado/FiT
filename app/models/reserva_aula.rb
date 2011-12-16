@@ -39,8 +39,9 @@ class ReservaAula < ActiveRecord::Base
 
 	def checkLotacao
 
-		ReservaAula.lugaresDisponiveis(aula_id) >= 0
-
+		if ReservaAula.lugaresDisponiveis(aula_id) < 0
+			errors.add(:lotacao , "A aula ja esta completa")
+		end
 		# verificar se a lotacao ja foi ultrapassada
 	end
 

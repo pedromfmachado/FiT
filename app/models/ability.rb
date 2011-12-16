@@ -37,7 +37,11 @@ class Ability
       can :read, Estudio
       can :read, TipoAula
       can :read, Aula
-      can :manage, ReservaAula
+      can :manage, ReservaAula do |r|
+
+            r.user_id == user.id && r.dia == Date.today
+
+      end
       can :read, Ginasio
       can :pertocidade, Ginasio
       can :create, PedidoPlano

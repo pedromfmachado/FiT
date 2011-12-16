@@ -13,12 +13,16 @@
         <table class="zebra-striped">
         <% @aulas_sorted[d].each do |aula| %>
           <tr>
-            <td><%= TipoAula.find(aula.tipo_aula_id).tipo %></td>
+            <% if Date.today.wday-1 == aula.dia %>
+              <td><%= link_to TipoAula.find(aula.tipo_aula_id).tipo, ginasio_aula_reserva_aulas_path(params[:ginasio_id],aula.id)%> </td>
+            <%else%>
+              <td><%= TipoAula.find(aula.tipo_aula_id).tipo %></td>
+            <% end %>
             <td><%= Estudio.find(aula.estudio_id).nome %></td>
             <td>às <%= aula.inicio.to_s(:time) %></td>
             <td><%= aula.duracao %> minutos</td>
             <td><%= User.find(aula.staff_id).nome %></td>
-            <td><%= link_to 'Ver marcacoes', ginasio_aula_reserva_aulas_path(params[:ginasio_id],aula.id)%> </td>
+            
 
             
           </tr>

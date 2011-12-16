@@ -20,20 +20,19 @@
 
     <% @reservas.each do |reserva| %>
     
-
-      <tr>
-        <td><%= User.find(reserva.user_id).nome %></td>
-        <td><%= reserva.dia %></td>
-        <td><%= link_to 'Cancelar', reserva_aula_path(ReservaAula.getReserva(reserva.user_id, aula.id, Date.today).id), 
-                        :action => :destroy, :method => :delete %></td>
-      </tr>
+      <% if reserva.dia == Date.today %>
+        <tr>
+          <td><%= User.find(reserva.user_id).nome %></td>
+          <td><%= reserva.dia %></td>
+        </tr>
+      <% end %>
     <% end %>
   </table>
 
   <div class="actions topSpacing1">
-    <% if can?(:create,ReservaAula) && Date.today.wday-1 == aula.dia %>
+    <% if can?(:create,ReservaAula) %>
       <% if ReservaAula.jaMarcada(current_user.id, aula.id, Date.today) %>
-        <%= link_to 'Cancelar', reserva_aula_path(ReservaAula.getReserva(current_user.id, aula.id, Date.today).id), :action => :destroy, :method => :delete, :class => "btn success" %>
+        <%= link_to 'Cancelar', reserva_aula_path(ReservaAula.getReserva(current_user.id, aula.id, Date.today).id), :action => :destroy, :method => :delete, :class => "btn danger" %>
       <% else %>
         <%= link_to 'Marcar', reserva_aulas_path(:aula_id => aula.id, :user_id => current_user.id, :dia => Date.today), :action => :create, :method => :post , :class => "btn success"%>
       <% end %>
