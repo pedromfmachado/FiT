@@ -21,14 +21,15 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email, :on => :create, :message => "ja existente na base de dados. Introduza outro email."
   validates_format_of :email, :on => :create, :unless => Proc.new { |user| (user.email.nil? || user.email.blank?) },
     :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create,
-    :message => "inválido. Introduza o seu email (ex: exemplo@sapo.pt)"
+    :message => "invalido. Introduza o seu email (ex: exemplo@sapo.pt)"
 
   validates_presence_of :telefone, :message => "em branco."
   validates_format_of :telefone, :unless => Proc.new { |user| (user.telefone.nil? || user.telefone.blank?) },
     :with => /^(\+351|00351|351)?(2\d{1}|(9(3|6|2|1)))\d{7}$/, :message => "invalido."
 
-  validates :morada, :presence => { :message => "A morada esta em branco." }
-  validates :ginasio_id, :presence => true
+  validates_presence_of :morada, :message => "esta em branco."
+  validates_presence_of :ginasio_id
+
   validates :password, :presence => true, :length => { :in => 6..20 }, :on => :create
   validates_confirmation_of :password
   
