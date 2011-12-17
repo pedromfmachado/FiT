@@ -16,6 +16,14 @@
       return re.test(value) == param;
     }, "Your password must include uppercase, lowercase and digit characters");
 
+    jQuery.validator.addMethod("ptTelephone", function(value, element, param) {
+      if (this.optional(element))
+        return true;
+
+      var re = /^((\+351|00351|351)(\s{1})?)?(2\d{1}|(9(3|6|2|1)))\d{7}$/;
+      return re.test(value) == param;
+    }, "Not a portuguese telephone number");
+
     validateUserForm("#new_user");
   });
 </script>

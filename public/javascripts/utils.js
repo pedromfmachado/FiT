@@ -1,9 +1,9 @@
 // JavaScript Document
 
-function dar_feedback(token, aula_id, valor){
+function dar_feedback(url, token, aula_id, valor){
     
-    conteudo = "token="+token+"&aula_id="+aula_id+"&valor="+valor
-    jQuery.post("api/feedbacks.xml", conteudo);
+    var conteudo = "token="+token+"&aula_id="+aula_id+"&valor="+valor;
+    jQuery.post(url+"api/feedbacks.xml", conteudo);
 }
 
 function alterar_campos(exercicios){

@@ -15,7 +15,9 @@ class User < ActiveRecord::Base
   before_create :set_token
 
   validates :nome, :presence => { :message => "esta em branco." }
-  validates :datanascimento, :presence => { :message => "invalida." }
+  validates_presence_of :datanascimento, :message => "em branco."
+  validates_format_of :datanascimento, :message => "invalida. (yyyy/mm/dd)",
+    :with => /^(19\d\d|2\d\d\d)([- \/.])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])$/
 
   validates_presence_of :email, :on => :create, :message => "em branco. Introduza o seu email (ex: exemplo@sapo.pt)"
   validates_uniqueness_of :email, :on => :create, :message => "ja existente na base de dados. Introduza outro email."
@@ -26,16 +28,17 @@ class User < ActiveRecord::Base
 
   validates_presence_of :telefone, :message => "em branco."
   validates_format_of :telefone, :unless => Proc.new { |user| (user.telefone.nil? || user.telefone.blank?) },
-    :with => /^(\+351|00351|351)?(2\d{1}|(9(3|6|2|1)))\d{7}$/, :message => "invalido."
+    :with => /^((\+351|00351|351)(\s{1})?)?(2\d{1}|(9(3|6|2|1)))\d{7}$/, :message => "invalido."
 
   validates_presence_of :morada, :message => "em branco."
   validates_presence_of :ginasio_id
 
   validates_presence_of :password, :message => "em branco."
   validates_length_of :password, :in => 6..20, :on => :create,
+    :unless => Proc.new { |user| (user.password.nil? || user.password.blank?) },
     :too_long => "demasiado grande. Tem de ter entre 6 a 20 caracteres",
     :too_short => "demasiado pequena. Tem de ter entre 6 a caracteres"
-  validates_confirmation_of :password
+  validates_confirmation_of :password, :message => "diferente."
   
   def self.authenticate(email, password)
     user = find_by_email(email)

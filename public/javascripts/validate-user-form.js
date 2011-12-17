@@ -16,8 +16,7 @@ function validateUserForm(selector) {
       },
       "user[telefone]": {
         required: true,
-        digits: true,
-        exactLength: 9
+        ptTelephone: true,
       },
       "user[morada]": {
         required: true,
