@@ -56,6 +56,7 @@ Fit::Application.routes.draw do
     resources :aulas
     resources :reserva_aulas
     resources :pedido_planos
+    resources :feedbacks
     match 'desmarcar' => 'reserva_aulas#destroy', :as => "desmarcar"
     match 'users/edit' => 'users#edit', :as => "users/edit"
     match 'getinfo' => 'reserva_aulas#get_info', :as => "getinfo"

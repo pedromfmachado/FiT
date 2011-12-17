@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   has_many :admins
   has_many :staffs
   has_many :planos
-	has_many :reserva_planos
+  has_many :reserva_planos
 
   belongs_to :ginasio
   has_one :pedido_plano
@@ -14,14 +14,20 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
   before_create :set_token
 
-  validates_confirmation_of :password
-  validates :password, :presence => true, :length => { :in => 6..20 }, :on => :create
-  validates :nome, :presence => true
-  validates :datanascimento, :presence => true
-  validates :morada, :presence => true
-  validates :telefone, :presence => true
-  validates :email, :uniqueness => true, :presence => true, :on => :create
+  validates :nome, :presence => { :message => "está em branco." }
+  validates :datanascimento, :presence => { :message => "inválida." }
+
+  validates_presence_of :email, :on => :create, :message => "em branco. Introduza o seu email (ex: exemplo@sapo.pt)"
+  validates_uniqueness_of :email, :on => :create, :message => "já existente na base de dados. Introduza outro email."
+  validates_format_of :email, :unless => Proc.new { |user| (user.email.nil? || user.email.blank?) },
+    :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create,
+    :message => "inválido. Introduza o seu email (ex: exemplo@sapo.pt)"
+
+  validates :telefone, :length => { :is => 9, :wrong_length => "Número de telefone inválido ou em branco." }
+  validates :morada, :presence => { :message => "A morada está em branco." }
   validates :ginasio_id, :presence => true
+  validates :password, :presence => true, :length => { :in => 6..20 }, :on => :create
+  validates_confirmation_of :password
   
   def self.authenticate(email, password)
     user = find_by_email(email)
@@ -117,25 +123,27 @@ class User < ActiveRecord::Base
     return FlickRaw.url_m(info)
   end
 
-	require 'builder'
-	def to_xml(options ={})
-		xml = ::Builder::XmlMarkup.new(:indent=>2)
-		xml.instruct!
+  require 'builder'
+  def to_xml(options ={})
+    xml = ::Builder::XmlMarkup.new(:indent=>2)
+    xml.instruct!
 
-		xml.user do
-		    xml.nome nome
-		    xml.datanascimento datanascimento
-		    xml.telefone telefone
-		    xml.morada morada
-		    xml.email email
-		    xml.ginasio ginasio_id
-		    xml.token token
-		    if url_foto
-				xml.foto get_foto
-			else
-				xml.foto "http://fitec.heroku.com/images/missing.png"
-			end
-		end
-	end
+    xml.user do
+      xml.nome nome
+      xml.datanascimento datanascimento
+      xml.telefone telefone
+      xml.morada morada
+      xml.email email
+      xml.ginasio ginasio_id
+      xml.token token
+
+      if url_foto
+        xml.foto get_foto
+      else
+        xml.foto "http://fitec.heroku.com/images/missing.png"
+      end
+    end
+  end
 
 end
+

@@ -31,6 +31,7 @@
 </script>
 <% end %>
 
+<!-- TODO: validar campos "Associar Exercicio" -->
 <%= form_for([@user,@plano], :html => { :id => "form_planotreino" }) do |f| %>
 
   <!-- le errors header -->
@@ -60,19 +61,28 @@
     </div>
   </div>
 
-  <div class="clearfix">
-    <%= f.label :data, :class => "span1" %>
-    <%= f.text_field :data, :value => @plano.data, :disabled => true, :class => "span2 small-lborder" %>
-  </div>
+  <div class="row">
+    <div class="span4">
+      <div class="clearfix">
+        <%= f.label :data, :class => "span1" %>
+        <!-- div class="input" -->
+        <%= f.text_field :data, :value => @plano.data, :disabled => true, :class => "span2 small-lborder" %>
+      </div>
+    </div>
 
-  <div class="clearfix">
-    <%= f.label :altura, :class => "span1" %>
-    <%= f.text_field :altura, :class => "span1 small-lborder" %>
-  </div>
+    <div class="span2">
+      <div class="clearfix">
+        <%= f.label :altura, :class => "span1" %>
+        <%= f.text_field :altura, :class => "span1 small-lborder" %>
+      </div>
+    </div>
 
-  <div class="clearfix">
-    <%= f.label :peso, :class => "span1" %>
-    <%= f.text_field :peso, :class => "span1 small-lborder" %>
+    <div class="span3">
+      <div class="clearfix">
+        <%= f.label :peso, :class => "span1" %>
+        <%= f.text_field :peso, :class => "span1 small-lborder" %>
+      </div>
+    </div>
   </div>
 
   <!-- le seccao exercicios -->

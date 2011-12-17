@@ -13,6 +13,13 @@ load_and_authorize_resource
 
   end
 
+  def show
+
+    @aula = Aula.find(params[:id])
+    @reservas = ReservaAula.where(:aula_id => params[:id], :dia => Date.today)
+
+  end
+
   def edit
     @aula = Aula.find(params[:id])
     @ginasio = Ginasio.find(params[:ginasio_id])

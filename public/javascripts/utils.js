@@ -1,5 +1,11 @@
 // JavaScript Document
 
+function dar_feedback(token, aula_id, valor){
+    
+    conteudo = "token="+token+"&aula_id="+aula_id+"&valor="+valor
+    jQuery.post("api/feedbacks.xml", conteudo);
+}
+
 function alterar_campos(exercicios){
 	
 	var valor_ex = $("#exercicios_listbox_").val();
