@@ -1,5 +1,5 @@
 class EstudiosController < ApplicationController
-	load_and_authorize_resource 
+  load_and_authorize_resource 
 
   # GET /estudios
   # GET /estudios.json
@@ -48,15 +48,18 @@ class EstudiosController < ApplicationController
     params[:estudio][:ginasio_id] = params[:ginasio_id]
     @estudio = Estudio.new(params[:estudio])
 
-    respond_to do |format|
-      if @estudio.save
-        format.html { redirect_to ginasio_estudio_path(params[:ginasio_id],@estudio), :notice => 'Estudio criado com sucesso.' }
+    if @estudio.save
+      respond_to do |format|
+        format.html { redirect_to ginasio_estudio_path(params[:ginasio_id], @estudio), :notice => 'Estudio criado com sucesso' }
         format.json { render :json => @estudio, :status => :created, :location => @estudio }
-      else
-        format.html { render :action => "new" }
+      end
+    else
+      respond_to do |format|
+        format.html { render :new }
         format.json { render :json => @estudio.errors, :status => :unprocessable_entity }
       end
     end
+
   end
 
   # PUT /estudios/1
