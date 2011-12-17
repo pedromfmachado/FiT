@@ -1,5 +1,4 @@
 <div class="span14">
-
   <h1>Aulas de <%= @ginasio.nome %></h1>
 
   <!-- le schedule fixe -->
@@ -22,9 +21,7 @@
             <td>às <%= aula.inicio.to_s(:time) %></td>
             <td><%= aula.duracao %> minutos</td>
             <td><%= User.find(aula.staff_id).nome %></td>
-            
 
-            
           </tr>
         <% end %>
         </table>

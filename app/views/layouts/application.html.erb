@@ -5,7 +5,8 @@
   <%= stylesheet_link_tag "bootstrap", "screen", "bootstrap-extension" %>
   <%= stylesheet_link_tag "mobile" if mobile_device? %>
   <%= javascript_include_tag "application.js", "controls.js", "dragdrop.js", "effects.js", "prototype.js", "jquery.js", "rails.js", "utils.js", "login.js" %>
-  <%= javascript_include_tag "bootstrap-dropdown.js", "bootstrap-alerts.js", "jquery.validate.js", "validateForms.js", "onLoad.js" %>
+  <%= javascript_include_tag "bootstrap-dropdown.js", "bootstrap-alerts.js", "jquery.validate.js", "onLoad.js" %>
+  <%= yield :head %>
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -35,7 +36,7 @@
 
       <!-- render <form> written in separate file -->    
       <% else %> 
-        <%= render :partial => '/sessions/form' %>
+        <%= render '/sessions/form' %>
       <% end %> 
 
     </div>
@@ -46,7 +47,7 @@
 <div class="container-fluid topSpacing1">
 
   <% if current_user %>
-    <%= render :file => 'layouts/menu.html' %>
+    <%= render 'layouts/menu' %>
   <% end %>
 
   <!-- le contents -->

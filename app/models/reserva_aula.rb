@@ -10,7 +10,7 @@ class ReservaAula < ActiveRecord::Base
 
 	validates_uniqueness_of :user_id, :scope => [:aula_id, :dia]
 
-	validate :checkLotacao
+	validate :checkLotacao, :checkDia
 
 	def self.jaMarcada(uid,aid)
 
@@ -44,6 +44,22 @@ class ReservaAula < ActiveRecord::Base
 		end
 	end
 
+	def checkHora
+
+		if aula.inicio < Time.now
+			errors.add(:hora , "A hora da aula ja passou")
+		end
+
+	end
+
+	def checkDia
+
+		if Date.today.wday-1 == aula.dia
+			errors.add(:hora , "A aula ja comecou")
+		end
+
+	end
+
 	require 'builder'
 	def self.info(uid, aid)
 
@@ -54,9 +70,10 @@ class ReservaAula < ActiveRecord::Base
 		xml.instruct!
 		xml.reserva do
 
+			xml.data Time.now.strftime("%Y/%m/%d")
 			xml.lugares ReservaAula.lugaresDisponiveis(aula.id)
 			xml.lotacao estudio.lotacao
-			if(ReservaAula.jaMarcada(uid,aula.id))
+			if ReservaAula.jaMarcada(uid,aula.id)
 				xml.tem_reserva "sim"
 			else
 				xml.tem_reserva "nao"

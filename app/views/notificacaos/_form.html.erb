@@ -1,4 +1,37 @@
-<%= form_for(@notificacao) do |f| %>
+<% content_for :head do %>
+<script type="text/javascript">
+$(document).ready(function() {
+  $("#form_notificacao").validate( {
+    rules: {
+      "notificacao[titulo]": {
+        required: true,
+        minlength: 2
+      },
+      "notificacao[texto]": {
+        required: true,
+        minlength: 2
+      }
+    },
+    messages: {
+      "notificacao[titulo]": "O titulo não pode estar em branco",
+      "notificacao[texto]": "O conteúdo da notificação está em branco"
+    },
+
+    // add/remove bootstrap error classes
+    highlight: function (element, errorClass, validClass) {
+      $(element).parents("div[class='clearfix']").addClass("error");
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).parents(".error").removeClass("error");
+    },
+    errorElement: 'p'
+  });
+
+});
+</script>
+<% end %>
+
+<%= form_for(@notificacao, :html => {:id => "form_notificacao"}) do |f| %>
   <% if @notificacao.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@notificacao.errors.count, "error") %> prohibited this notificacao from being saved:</h2>
@@ -11,44 +44,37 @@
     </div>
   <% end %>
   
-  <div class = "row">
-    <div class ="span3">
-      <div class="clearfix">
-        <%= f.label :data %>
-        <div class="input">
-          <%= f.text_field :data , :disabled => true, :class => "span3" %>
-        </div>
-      </div>
-
-			
-
-      <div class="clearfix">
-        <%= label_tag :cidade, 'Cidade' %>
-        <div class="input">
-          <%= collection_select("notificacao", "ginasio_id", Ginasio.all, :id, :nome, {}, { :id => "ginasios_select", :class => "span3" }) %>
-        </div>
-      </div>
-
-			<div class="clearfix">
-	      <div class="input">
-					<label class ="add-on">
-						<%= check_box_tag :todos, 'Todos os ginásios' %>
-	        	Todos os ginásios
-						<div id="exp"> </div>
-					</label>
-	      </div>
-	    </div>
-
-
-
-      <div class="clearfix">
-        <%= f.label :titulo %>
-        <div class="input">
-          <%= f.text_field :titulo, :class => "span3" %>
-        </div>
-      </div>
+  <div class="clearfix">
+    <%= f.label :data %>
+    <div class="input">
+      <%= f.text_field :data , :disabled => true, :class => "span3" %>
     </div>
-    <div class ="span6">
+  </div>	
+
+  <div class="clearfix">
+    <%= label_tag :cidade, 'Cidade' %>
+    <div class="input">
+      <%= collection_select("notificacao", "ginasio_id", Ginasio.all, :id, :nome, {}, { :id => "ginasios_select", :class => "span3" }) %>
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <div class="input">
+    <ul class="inputs-list">
+      <li>
+        <label>
+          <%= check_box_tag :todos, 'Todos os ginásios' %>
+          <span>Todos os ginásios</span>
+        </label>
+      </li>
+    </ul>
+    </div>
+  </div>
+
+  <div class="clearfix">
+    <%= f.label :titulo %>
+    <div class="input">
+      <%= f.text_field :titulo, :class => "span9" %>
     </div>
   </div>
 
@@ -63,3 +89,4 @@
     <%= f.submit 'Guardar', :class => "btn success" %>
     <!-- closed outside on new.html and edit.html -->
 <% end %>
+

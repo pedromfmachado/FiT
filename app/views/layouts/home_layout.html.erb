@@ -4,7 +4,7 @@
   <title>Fit</title>
   <%= stylesheet_link_tag "bootstrap", "screen", "bootstrap-extension" %>
   <%= javascript_include_tag "application.js", "controls.js", "dragdrop.js", "effects.js", "prototype.js", "jquery.js", "rails.js", "utils.js", "login.js" %>
-  <%= javascript_include_tag "bootstrap-dropdown.js", "bootstrap-alerts.js", "jquery.validate.js", "validateForms.js", "onLoad.js", "sideMenu.js" %>
+  <%= javascript_include_tag "bootstrap-dropdown.js", "bootstrap-alerts.js", "jquery.validate.js", "onLoad.js", "sideMenu.js" %>
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -47,7 +47,7 @@
 <div class="container-fluid topSpacing1">
 
   <% if current_user %>
-    <%= render :file => 'layouts/menu.html' %>
+    <%= render 'layouts/menu' %>
   <% end %>
 
   <!-- le contents -->

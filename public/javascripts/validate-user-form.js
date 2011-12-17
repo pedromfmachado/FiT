@@ -1,24 +1,4 @@
-// All related to form validation here
-
-$(document).ready(function() {
-
-  jQuery.validator.addMethod("exactLength", function(value, element, param) {
-    return this.optional(element) || value.length == param;
-  }, jQuery.format("Please enter exactly {0} characters."));
-  
-  jQuery.validator.addMethod("passwordValidation", function(value, element, param) {
-    if (this.optional(element))
-	  return true;
-
-    var re = /^\w*(?=\w*\d)(?=\w*[a-z])(?=\w*[A-Z])\w*$/;
-    return re.test(value) == param;
-  }, "Your password must include uppercase, lowercase and digit characters");
-
-  validateForm("#edit_user");
-  validateForm("#new_user");
-});
-
-function validateForm(selector) {
+function validateUserForm(selector) {
   $(selector).validate( {
     // rules for each field
     rules: {
@@ -74,3 +54,4 @@ function validateForm(selector) {
     errorElement: 'p'
   });
 }
+
