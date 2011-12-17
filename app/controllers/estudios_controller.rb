@@ -50,7 +50,7 @@ class EstudiosController < ApplicationController
 
     respond_to do |format|
       if @estudio.save
-        format.html { redirect_to ginasio_estudio_path(params[:ginasio_id],@estudio), :notice => 'Estudio was successfully created.' }
+        format.html { redirect_to ginasio_estudio_path(params[:ginasio_id],@estudio), :notice => 'Estudio criado com sucesso.' }
         format.json { render :json => @estudio, :status => :created, :location => @estudio }
       else
         format.html { render :action => "new" }

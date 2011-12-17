@@ -10,8 +10,8 @@ class Api::ReservaAulasController < ApiController
 
     user = User.find_by_token(params[:token])
 
-    
-    render :xml => ReservaAula.info(user.id, params[:aula_id])
+    if user
+      render :xml => ReservaAula.info(user.id, params[:aula_id])
 
   end
 

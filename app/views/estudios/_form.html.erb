@@ -30,8 +30,8 @@ $(document).ready(function() {
 
 <%= form_for([@ginasio,@estudio], :html => { :id => "form_estudio" }) do |f| %>
   <% if @estudio.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@estudio.errors.count, "error") %> prohibited this estudio from being saved:</h2>
+    <div class="alert-message block-message error">
+      <p><strong>Oh snap!</strong> Alguns campos do formulário estão incorrectos.</p>
 
       <ul>
       <% @estudio.errors.full_messages.each do |msg| %>

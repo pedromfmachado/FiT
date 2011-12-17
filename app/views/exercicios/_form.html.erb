@@ -28,8 +28,8 @@
 <%= form_for(@exercicio, :html => { :id => "form_exercicio" }) do |f| %>
 
   <% if @exercicio.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@exercicio.errors.count, "error") %> prohibited this exercicio from being saved:</h2>
+    <div class="alert-message block-message error">
+      <p><strong>Oh snap!</strong> Alguns campos do formulário estão incorrectos.</p>
 
       <ul>
       <% @exercicio.errors.full_messages.each do |msg| %>

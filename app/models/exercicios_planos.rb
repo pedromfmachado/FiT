@@ -2,8 +2,9 @@ class ExerciciosPlanos < ActiveRecord::Base
   belongs_to :plano
   belongs_to :exercicio
 
-  validates :plano_id, :presence => true
-  validates :exercicio_id, :presence => true
-  validates :peso, :presence => true
-  validates :series, :presence => true
+  validates_presence_of :plano_id, :message => "em branco."
+  validates_presence_of :exercicio_id, :message => "em branco."
+  validates_presence_of :peso, :message => "em branco."
+  validates_presence_of :series, :message => "em branco."
 end
+
