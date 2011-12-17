@@ -14,17 +14,20 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
   before_create :set_token
 
-  validates :nome, :presence => { :message => "está em branco." }
-  validates :datanascimento, :presence => { :message => "inválida." }
+  validates :nome, :presence => { :message => "esta em branco." }
+  validates :datanascimento, :presence => { :message => "invalida." }
 
   validates_presence_of :email, :on => :create, :message => "em branco. Introduza o seu email (ex: exemplo@sapo.pt)"
-  validates_uniqueness_of :email, :on => :create, :message => "já existente na base de dados. Introduza outro email."
-  validates_format_of :email, :unless => Proc.new { |user| (user.email.nil? || user.email.blank?) },
+  validates_uniqueness_of :email, :on => :create, :message => "ja existente na base de dados. Introduza outro email."
+  validates_format_of :email, :on => :create, :unless => Proc.new { |user| (user.email.nil? || user.email.blank?) },
     :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create,
     :message => "inválido. Introduza o seu email (ex: exemplo@sapo.pt)"
 
-  validates :telefone, :length => { :is => 9, :wrong_length => "Número de telefone inválido ou em branco." }
-  validates :morada, :presence => { :message => "A morada está em branco." }
+  validates_presence_of :telefone, :message => "em branco."
+  validates_format_of :telefone, :unless => Proc.new { |user| (user.telefone.nil? || user.telefone.blank?) },
+    :with => /^(\+351|00351|351)?(2\d{1}|(9(3|6|2|1)))\d{7}$/, :message => "invalido."
+
+  validates :morada, :presence => { :message => "A morada esta em branco." }
   validates :ginasio_id, :presence => true
   validates :password, :presence => true, :length => { :in => 6..20 }, :on => :create
   validates_confirmation_of :password
