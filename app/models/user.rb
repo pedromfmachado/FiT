@@ -20,9 +20,8 @@ class User < ActiveRecord::Base
     :with => /^(19\d\d|2\d\d\d)([- \/.])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])$/,
     :unless => Proc.new { |user|
       (user.datanascimento.nil?
-      || user.datanascimento.blank?
-      || !Date.strptime(user.datanascimento.gsub(/\//, '-').future?
-  }
+      || user.datanascimento.blank?)
+    }
 
   validates_presence_of :email, :on => :create, :message => "em branco. Introduza o seu email (ex: exemplo@sapo.pt)"
   validates_uniqueness_of :email, :on => :create, :message => "ja existente na base de dados. Introduza outro email."

@@ -1,5 +1,6 @@
 class Feedback < ActiveRecord::Base
   belongs_to :aula
+  belongs_to :user
 
   validates :aula_id, :presence => true
   validates :valor, :presence => true
