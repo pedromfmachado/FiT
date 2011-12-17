@@ -31,13 +31,7 @@ class Feedback < ActiveRecord::Base
 
   def self.getFeedbackAula(aid)
 
-    feedback = Feedback.where(:aula_id => aid).average(:valor)
-  
-    if feedback
-      0.0
-    else
-      "%0.1f" % feedback.to_f
-    end
+    "%0.1f" Feedback.where(:aula_id => aid).average(:valor).to_f
 
   end
 

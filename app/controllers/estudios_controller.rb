@@ -47,6 +47,7 @@ class EstudiosController < ApplicationController
   def create
     params[:estudio][:ginasio_id] = params[:ginasio_id]
     @estudio = Estudio.new(params[:estudio])
+    @ginasio = Ginasio.find(params[:ginasio_id])
 
     if @estudio.save
       respond_to do |format|
@@ -55,7 +56,7 @@ class EstudiosController < ApplicationController
       end
     else
       respond_to do |format|
-        format.html { render :new }
+        format.html { render :action => "new" }
         format.json { render :json => @estudio.errors, :status => :unprocessable_entity }
       end
     end

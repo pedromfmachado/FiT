@@ -52,7 +52,7 @@ load_and_authorize_resource
 
   def create
     params[:aula][:ginasio_id] = params[:ginasio_id]
-		@ginasio = Ginasio.find(params[:ginasio_id])
+    @ginasio = Ginasio.find(params[:ginasio_id])
     @aula = Aula.new(params[:aula])
 
     respond_to do |format|
