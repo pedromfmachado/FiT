@@ -12,7 +12,7 @@ class Api::ReservaAulasController < ApiController
 
     if user
       render :xml => ReservaAula.info(user.id, params[:aula_id])
-
+    end
   end
 
 	def create
