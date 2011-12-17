@@ -59,7 +59,7 @@ class ReservaAula < ActiveRecord::Base
       xml.dia Time.now.wday-1
       xml.data Time.now.strftime("%Y/%m/%d")
       xml.hora Time.now.hour.to_s + ':' + Time.now.min.to_s
-      #xml.lugares ReservaAula.lugaresDisponiveis(aula.id)
+      xml.lugares ReservaAula.lugaresDisponiveis(aula.id)
       xml.lotacao estudio.lotacao
 
       if feedback 
