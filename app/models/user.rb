@@ -18,17 +18,17 @@ class User < ActiveRecord::Base
   validates_presence_of :datanascimento, :message => "em branco."
   validates_format_of :datanascimento, :message => "invalida. (yyyy/mm/dd)",
     :with => /^(19\d\d|2\d\d\d)([- \/.])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])$/,
-    :unless => Proc.new { |user| (user.datanascimento.nil? || user.datanascimento.blank?) }
+    :unless => Proc.new { |user| user.datanascimento.blank? }
 
   validates_presence_of :email, :on => :create, :message => "em branco. Introduza o seu email (ex: exemplo@sapo.pt)"
   validates_uniqueness_of :email, :on => :create, :message => "ja existente na base de dados. Introduza outro email."
   validates_format_of :email, :on => :create,
-    :unless => Proc.new { |user| (user.email.nil? || user.email.blank?) },
+    :unless => Proc.new { |user| user.email.blank? },
     :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create,
     :message => "invalido. Introduza o seu email (ex: exemplo@sapo.pt)"
 
   validates_presence_of :telefone, :message => "em branco."
-  validates_format_of :telefone, :unless => Proc.new { |user| (user.telefone.nil? || user.telefone.blank?) },
+  validates_format_of :telefone, :unless => Proc.new { |user| user.telefone.blank? },
     :with => /^((\+351|00351|351)(\s{1})?)?(2\d{1}|(9(3|6|2|1)))\d{7}$/, :message => "invalido."
 
   validates_presence_of :morada, :message => "em branco."
@@ -36,7 +36,7 @@ class User < ActiveRecord::Base
 
   validates_presence_of :password, :message => "em branco."
   validates_length_of :password, :in => 6..20, :on => :create,
-    :unless => Proc.new { |user| (user.password.nil? || user.password.blank?) },
+    :unless => Proc.new { |user| user.password.blank? },
     :too_long => "demasiado grande. Tem de ter entre 6 a 20 caracteres",
     :too_short => "demasiado pequena. Tem de ter entre 6 a caracteres"
   validates_confirmation_of :password, :message => "diferente."

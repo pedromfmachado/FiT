@@ -33,13 +33,15 @@ $(document).ready(function() {
 
 <%= form_for(@notificacao, :html => {:id => "form_notificacao"}) do |f| %>
   <% if @notificacao.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@notificacao.errors.count, "error") %> prohibited this notificacao from being saved:</h2>
-
+    <div class="alert-message block-message error">
+      <p>
+        <strong>Oh snap! O formulário tem alguns erros.</strong>
+        Veja aquilo que tem de mudar:
+      </p>
       <ul>
-      <% @notificacao.errors.full_messages.each do |msg| %>
+        <% @notificacao.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
-      <% end %>
+        <% end %>
       </ul>
     </div>
   <% end %>

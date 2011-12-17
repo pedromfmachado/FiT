@@ -30,9 +30,11 @@
 
 <%= form_for(@tipo_aula, :html => { :id => "form_modalidade" }) do |f| %>
   <% if @tipo_aula.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@tipo_aula.errors.count, "error") %> prohibited this tipo_aula from being saved:</h2>
-
+    <div class="alert-message block-message error">
+      <p>
+        <strong>Oh snap! O formulário tem alguns erros.</strong>
+        Veja aquilo que tem de mudar:
+      </p>
       <ul>
       <% @tipo_aula.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>

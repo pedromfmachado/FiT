@@ -47,15 +47,12 @@
 <%= form_for ([@ginasio,@aula], :html => { :id => "form_aula" }) do |f| %>
 
   <% if @aula.errors.any? %>
-    <div class="alert-message error">
-      <a href="#" class="close">x</a>
+    <div class="alert-message block-message error">
       <p><strong>Oh snap!</strong> Alguns campos do formulário estão incorrectos.</p>
-    </div>
-
-    <div class="error_messages">
+ 
       <ul>
-        <% for message in @aula.errors.full_messages %>
-          <li><%= message %></li>
+        <% @aula.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
         <% end %>
       </ul>
     </div>
