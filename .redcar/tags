@@ -1,0 +1,499 @@
+1323874946
+Ability	C:/Sites/fit/app/models/ability.rb	class Ability
+AddAvatarToUser	C:/Sites/fit/db/migrate/20111119153716_add_avatar_to_user.rb	class AddAvatarToUser 
+AddDiaSemanaToAula	C:/Sites/fit/db/migrate/20111213141508_add_dia_semana_to_aula.rb	class AddDiaSemanaToAula 
+AddDiaToAula	C:/Sites/fit/db/migrate/20111205232632_add_dia_to_aula.rb	class AddDiaToAula 
+AddGinasioIdToAula	C:/Sites/fit/db/migrate/20111206092353_add_ginasio_id_to_aula.rb	class AddGinasioIdToAula 
+AddGinasioIdToEstudio	C:/Sites/fit/db/migrate/20111205180510_add_ginasio_id_to_estudio.rb	class AddGinasioIdToEstudio 
+AddGinasioToNotificacaos	C:/Sites/fit/db/migrate/20111129161129_add_ginasio_to_notificacaos.rb	class AddGinasioToNotificacaos 
+AddGinasioToUser	C:/Sites/fit/db/migrate/20111129133623_add_ginasio_to_user.rb	class AddGinasioToUser 
+AddLatitudeLongitudeToCidade	C:/Sites/fit/db/migrate/20111203220621_add_latitude_longitude_to_cidade.rb	class AddLatitudeLongitudeToCidade 
+AddMoradaToGinasio	C:/Sites/fit/db/migrate/20111129143900_add_morada_to_ginasio.rb	class AddMoradaToGinasio 
+AddTelefoneToGinasio	C:/Sites/fit/db/migrate/20111205170250_add_telefone_to_ginasio.rb	class AddTelefoneToGinasio 
+AddTokenToUsers	C:/Sites/fit/db/migrate/20111115151546_add_token_to_users.rb	class AddTokenToUsers 
+AddUserIdToPlanos	C:/Sites/fit/db/migrate/20111101173433_add_user_id_to_planos.rb	class AddUserIdToPlanos 
+Admin	C:/Sites/fit/app/models/admin.rb	class Admin 
+AdminTest	C:/Sites/fit/test/unit/admin_test.rb	class AdminTest 
+ApiController	C:/Sites/fit/app/controllers/api_controller.rb	class ApiController 
+Application	C:/Sites/fit/config/application.rb	  class Application 
+ApplicationController	C:/Sites/fit/app/controllers/application_controller.rb	class ApplicationController 
+ApplicationHelper	C:/Sites/fit/app/helpers/application_helper.rb	module ApplicationHelper
+Aula	C:/Sites/fit/app/models/aula.rb	class Aula 
+AulaTest	C:/Sites/fit/test/unit/aula_test.rb	class AulaTest 
+AulasController	C:/Sites/fit/app/controllers/api/aulas_controller.rb	class Api::AulasController 
+AulasController	C:/Sites/fit/app/controllers/aulas_controller.rb	class AulasController 
+AulasControllerTest	C:/Sites/fit/test/functional/aulas_controller_test.rb	class AulasControllerTest 
+AulasHelper	C:/Sites/fit/app/helpers/aulas_helper.rb	module AulasHelper
+AulasHelperTest	C:/Sites/fit/test/unit/helpers/aulas_helper_test.rb	class AulasHelperTest 
+BrowsingTest	C:/Sites/fit/test/performance/browsing_test.rb	class BrowsingTest 
+ChangeDiaSemanaToDia	C:/Sites/fit/db/migrate/20111213161735_change_dia_semana_to_dia.rb	class ChangeDiaSemanaToDia 
+Cidade	C:/Sites/fit/app/models/cidade.rb	class Cidade 
+CidadeControllerTest	C:/Sites/fit/test/functional/cidade_controller_test.rb	class CidadeControllerTest 
+CidadeHelper	C:/Sites/fit/app/helpers/cidade_helper.rb	module CidadeHelper
+CidadeHelperTest	C:/Sites/fit/test/unit/helpers/cidade_helper_test.rb	class CidadeHelperTest 
+CidadeTest	C:/Sites/fit/test/unit/cidade_test.rb	class CidadeTest 
+CreateAdmins	C:/Sites/fit/db/migrate/20111101130429_create_admins.rb	class CreateAdmins 
+CreateAulas	C:/Sites/fit/db/migrate/20111205232442_create_aulas.rb	class CreateAulas 
+CreateCidades	C:/Sites/fit/db/migrate/20111203214101_create_cidades.rb	class CreateCidades 
+CreateEstudios	C:/Sites/fit/db/migrate/20111205180351_create_estudios.rb	class CreateEstudios 
+CreateExercicios	C:/Sites/fit/db/migrate/20111022144451_create_exercicios.rb	class CreateExercicios 
+CreateExerciciosPlanos	C:/Sites/fit/db/migrate/20111022144502_create_exercicios_planos.rb	class CreateExerciciosPlanos 
+CreateGinasios	C:/Sites/fit/db/migrate/20111129132149_create_ginasios.rb	class CreateGinasios 
+CreateNotificacaos	C:/Sites/fit/db/migrate/20111119110548_create_notificacaos.rb	class CreateNotificacaos 
+CreatePlanos	C:/Sites/fit/db/migrate/20111022144440_create_planos.rb	class CreatePlanos 
+CreateReservaAulas	C:/Sites/fit/db/migrate/20111213154059_create_reserva_aulas.rb	class CreateReservaAulas 
+CreateStaffs	C:/Sites/fit/db/migrate/20111102143014_create_staffs.rb	class CreateStaffs 
+CreateTipoAulas	C:/Sites/fit/db/migrate/20111205223510_create_tipo_aulas.rb	class CreateTipoAulas 
+CreateTurnos	C:/Sites/fit/db/migrate/20111205232347_create_turnos.rb	class CreateTurnos 
+CreateUsers	C:/Sites/fit/db/migrate/20111101122156_create_users.rb	class CreateUsers 
+DropTableGinasioNotificacao	C:/Sites/fit/db/migrate/20111205134719_drop_table_ginasio_notificacao.rb	class DropTableGinasioNotificacao 
+Estudio	C:/Sites/fit/app/models/estudio.rb	class Estudio 
+EstudioTest	C:/Sites/fit/test/unit/estudio_test.rb	class EstudioTest 
+EstudiosController	C:/Sites/fit/app/controllers/estudios_controller.rb	class EstudiosController 
+EstudiosControllerTest	C:/Sites/fit/test/functional/estudios_controller_test.rb	class EstudiosControllerTest 
+EstudiosHelper	C:/Sites/fit/app/helpers/estudios_helper.rb	module EstudiosHelper
+EstudiosHelperTest	C:/Sites/fit/test/unit/helpers/estudios_helper_test.rb	class EstudiosHelperTest 
+Exercicio	C:/Sites/fit/app/models/exercicio.rb	class Exercicio 
+ExercicioTest	C:/Sites/fit/test/unit/exercicio_test.rb	class ExercicioTest 
+ExerciciosController	C:/Sites/fit/app/controllers/api/exercicios_controller.rb	class Api::ExerciciosController 
+ExerciciosController	C:/Sites/fit/app/controllers/exercicios_controller.rb	class ExerciciosController 
+ExerciciosControllerTest	C:/Sites/fit/test/functional/exercicios_controller_test.rb	class ExerciciosControllerTest 
+ExerciciosHelper	C:/Sites/fit/app/helpers/exercicios_helper.rb	module ExerciciosHelper
+ExerciciosHelperTest	C:/Sites/fit/test/unit/helpers/exercicios_helper_test.rb	class ExerciciosHelperTest 
+ExerciciosPlanos	C:/Sites/fit/app/models/exercicios_planos.rb	class ExerciciosPlanos 
+ExerciciosPlanosTest	C:/Sites/fit/test/unit/exercicios_planos_test.rb	class ExerciciosPlanosTest 
+Fit	C:/Sites/fit/config/application.rb	module Fit
+FitMailer	C:/Sites/fit/app/mailers/fit_mailer.rb	class FitMailer 
+FitMailerTest	C:/Sites/fit/test/functional/fit_mailer_test.rb	class FitMailerTest 
+Ginasio	C:/Sites/fit/app/models/ginasio.rb	class Ginasio 
+GinasioNotificacaoTest	C:/Sites/fit/test/unit/ginasio_notificacao_test.rb	class GinasioNotificacaoTest 
+GinasioTest	C:/Sites/fit/test/unit/ginasio_test.rb	class GinasioTest 
+GinasiosController	C:/Sites/fit/app/controllers/api/ginasios_controller.rb	class Api::GinasiosController 
+GinasiosController	C:/Sites/fit/app/controllers/ginasios_controller.rb	class GinasiosController 
+GinasiosControllerTest	C:/Sites/fit/test/functional/ginasios_controller_test.rb	class GinasiosControllerTest 
+GinasiosHelper	C:/Sites/fit/app/helpers/ginasios_helper.rb	module GinasiosHelper
+GinasiosHelperTest	C:/Sites/fit/test/unit/helpers/ginasios_helper_test.rb	class GinasiosHelperTest 
+HomeController	C:/Sites/fit/app/controllers/home_controller.rb	class HomeController 
+Notificacao	C:/Sites/fit/app/models/notificacao.rb	class Notificacao 
+NotificacaoTest	C:/Sites/fit/test/unit/notificacao_test.rb	class NotificacaoTest 
+NotificacaosController	C:/Sites/fit/app/controllers/api/notificacaos_controller.rb	class Api::NotificacaosController 
+NotificacaosController	C:/Sites/fit/app/controllers/notificacaos_controller.rb	class NotificacaosController 
+NotificacaosControllerTest	C:/Sites/fit/test/functional/notificacaos_controller_test.rb	class NotificacaosControllerTest 
+NotificacaosHelper	C:/Sites/fit/app/helpers/notificacaos_helper.rb	module NotificacaosHelper
+NotificacaosHelperTest	C:/Sites/fit/test/unit/helpers/notificacaos_helper_test.rb	class NotificacaosHelperTest 
+Plano	C:/Sites/fit/app/models/plano.rb	class Plano 
+PlanoTest	C:/Sites/fit/test/unit/plano_test.rb	class PlanoTest 
+PlanosController	C:/Sites/fit/app/controllers/api/planos_controller.rb	class Api::PlanosController 
+PlanosController	C:/Sites/fit/app/controllers/planos_controller.rb	class PlanosController 
+PlanosControllerTest	C:/Sites/fit/test/functional/planos_controller_test.rb	class PlanosControllerTest 
+PlanosHelper	C:/Sites/fit/app/helpers/planos_helper.rb	module PlanosHelper
+PlanosHelperTest	C:/Sites/fit/test/unit/helpers/planos_helper_test.rb	class PlanosHelperTest 
+RemoveAvatarFromUser	C:/Sites/fit/db/migrate/20111120170837_remove_avatar_from_user.rb	class RemoveAvatarFromUser 
+RemoveDescricaoCurtaFromTipoAula	C:/Sites/fit/db/migrate/20111205223947_remove_descricao_curta_from_tipo_aula.rb	class RemoveDescricaoCurtaFromTipoAula 
+RemoveIdFromExerciciosPlanos	C:/Sites/fit/db/migrate/20111121142200_remove_id_from_exercicios_planos.rb	class RemoveIdFromExerciciosPlanos 
+ReservaAula	C:/Sites/fit/app/models/reserva_aula.rb	class ReservaAula 
+ReservaAulaTest	C:/Sites/fit/test/unit/reserva_aula_test.rb	class ReservaAulaTest 
+ReserveAulaController	C:/Sites/fit/app/controllers/reserve_aula_controller.rb	class ReserveAulaController 
+ReserveAulaControllerTest	C:/Sites/fit/test/functional/reserve_aula_controller_test.rb	class ReserveAulaControllerTest 
+ReserveAulaHelper	C:/Sites/fit/app/helpers/reserve_aula_helper.rb	module ReserveAulaHelper
+ReserveAulaHelperTest	C:/Sites/fit/test/unit/helpers/reserve_aula_helper_test.rb	class ReserveAulaHelperTest 
+SessionsController	C:/Sites/fit/app/controllers/api/sessions_controller.rb	class Api::SessionsController 
+SessionsController	C:/Sites/fit/app/controllers/sessions_controller.rb	class SessionsController 
+SessionsControllerTest	C:/Sites/fit/test/functional/sessions_controller_test.rb	class SessionsControllerTest 
+SessionsHelper	C:/Sites/fit/app/helpers/sessions_helper.rb	module SessionsHelper
+SessionsHelperTest	C:/Sites/fit/test/unit/helpers/sessions_helper_test.rb	class SessionsHelperTest 
+Staff	C:/Sites/fit/app/models/staff.rb	class Staff 
+StaffTest	C:/Sites/fit/test/unit/staff_test.rb	class StaffTest 
+Str	C:/Sites/fit/public/javascripts/prototype.js	function Str(key, holder, stack)
+TestCase	C:/Sites/fit/test/test_helper.rb	class ActiveSupport::TestCase
+TipoAula	C:/Sites/fit/app/models/tipo_aula.rb	class TipoAula 
+TipoAulaTest	C:/Sites/fit/test/unit/tipo_aula_test.rb	class TipoAulaTest 
+TipoAulasController	C:/Sites/fit/app/controllers/tipo_aulas_controller.rb	class TipoAulasController 
+TipoAulasControllerTest	C:/Sites/fit/test/functional/tipo_aulas_controller_test.rb	class TipoAulasControllerTest 
+TipoAulasHelper	C:/Sites/fit/app/helpers/tipo_aulas_helper.rb	module TipoAulasHelper
+TipoAulasHelperTest	C:/Sites/fit/test/unit/helpers/tipo_aulas_helper_test.rb	class TipoAulasHelperTest 
+Turno	C:/Sites/fit/app/models/turno.rb	class Turno 
+TurnoTest	C:/Sites/fit/test/unit/turno_test.rb	class TurnoTest 
+Type	C:/Sites/fit/public/javascripts/prototype.js	function Type(o)
+User	C:/Sites/fit/app/models/user.rb	class User 
+UserMailerTest	C:/Sites/fit/test/functional/user_mailer_test.rb	class UserMailerTest 
+UserTest	C:/Sites/fit/test/unit/user_test.rb	class UserTest 
+UsersController	C:/Sites/fit/app/controllers/api/users_controller.rb	class Api::UsersController 
+UsersController	C:/Sites/fit/app/controllers/users_controller.rb	class UsersController 
+UsersControllerTest	C:/Sites/fit/test/functional/users_controller_test.rb	class UsersControllerTest 
+UsersHelper	C:/Sites/fit/app/helpers/users_helper.rb	module UsersHelper
+UsersHelperTest	C:/Sites/fit/test/unit/helpers/users_helper_test.rb	class UsersHelperTest 
+abs	C:/Sites/fit/public/javascripts/prototype.js	function abs()
+absolutize	C:/Sites/fit/public/javascripts/prototype.js	function absolutize(element)
+addMethods	C:/Sites/fit/public/javascripts/prototype.js	function addMethods(source)
+addText	C:/Sites/fit/public/javascripts/controls.js	function addText(mode, condition)
+addToPrefiltersOrTransports	C:/Sites/fit/public/javascripts/jquery.js	function addToPrefiltersOrTransports( structure )
+adicionaExercicio	C:/Sites/fit/public/javascripts/utils.js	function adicionaExercicio(exercicios_arr, all_arr)
+admin?	C:/Sites/fit/app/models/user.rb	  def admin?
+ajaxConvert	C:/Sites/fit/public/javascripts/jquery.js	function ajaxConvert( s, response )
+ajaxExtend	C:/Sites/fit/public/javascripts/jquery.js	function ajaxExtend( target, src )
+ajaxHandleResponses	C:/Sites/fit/public/javascripts/jquery.js	function ajaxHandleResponses( s, jqXHR, responses )
+all	C:/Sites/fit/public/javascripts/prototype.js	function all(iterator, context)
+alterar_campos	C:/Sites/fit/public/javascripts/utils.js	function alterar_campos(exercicios)
+any	C:/Sites/fit/public/javascripts/prototype.js	function any(iterator, context)
+argumentNames	C:/Sites/fit/public/javascripts/prototype.js	function argumentNames()
+authenticate	C:/Sites/fit/app/models/user.rb	  def self.authenticate(email, password)
+bind	C:/Sites/fit/public/javascripts/prototype.js	function bind(context)
+bindAsEventListener	C:/Sites/fit/public/javascripts/prototype.js	function bindAsEventListener(context)
+blank	C:/Sites/fit/public/javascripts/prototype.js	function blank()
+buildParams	C:/Sites/fit/public/javascripts/jquery.js	function buildParams( prefix, obj, traditional, add )
+build_xml	C:/Sites/fit/app/models/aula.rb		def build_xml(xml)
+camelize	C:/Sites/fit/public/javascripts/prototype.js	function camelize()
+capitalize	C:/Sites/fit/public/javascripts/prototype.js	function capitalize()
+ceil	C:/Sites/fit/public/javascripts/prototype.js	function ceil()
+change	C:/Sites/fit/db/migrate/20111119110548_create_notificacaos.rb	  def change
+change	C:/Sites/fit/db/migrate/20111119153716_add_avatar_to_user.rb	  def change
+change	C:/Sites/fit/db/migrate/20111120170837_remove_avatar_from_user.rb	  def change
+change	C:/Sites/fit/db/migrate/20111121142200_remove_id_from_exercicios_planos.rb	  def change
+change	C:/Sites/fit/db/migrate/20111129132149_create_ginasios.rb	  def change
+change	C:/Sites/fit/db/migrate/20111129133623_add_ginasio_to_user.rb	  def change
+change	C:/Sites/fit/db/migrate/20111129143900_add_morada_to_ginasio.rb	  def change
+change	C:/Sites/fit/db/migrate/20111129161129_add_ginasio_to_notificacaos.rb	  def change
+change	C:/Sites/fit/db/migrate/20111203214101_create_cidades.rb	  def change
+change	C:/Sites/fit/db/migrate/20111203220621_add_latitude_longitude_to_cidade.rb	  def change
+change	C:/Sites/fit/db/migrate/20111205170250_add_telefone_to_ginasio.rb	  def change
+change	C:/Sites/fit/db/migrate/20111205180351_create_estudios.rb	  def change
+change	C:/Sites/fit/db/migrate/20111205180510_add_ginasio_id_to_estudio.rb	  def change
+change	C:/Sites/fit/db/migrate/20111205223510_create_tipo_aulas.rb	  def change
+change	C:/Sites/fit/db/migrate/20111205223947_remove_descricao_curta_from_tipo_aula.rb	  def change
+change	C:/Sites/fit/db/migrate/20111205232347_create_turnos.rb	  def change
+change	C:/Sites/fit/db/migrate/20111205232442_create_aulas.rb	  def change
+change	C:/Sites/fit/db/migrate/20111205232632_add_dia_to_aula.rb	  def change
+change	C:/Sites/fit/db/migrate/20111206092353_add_ginasio_id_to_aula.rb	  def change
+change	C:/Sites/fit/db/migrate/20111213141508_add_dia_semana_to_aula.rb	  def change
+change	C:/Sites/fit/db/migrate/20111213154059_create_reserva_aulas.rb	  def change
+change	C:/Sites/fit/db/migrate/20111213161735_change_dia_semana_to_dia.rb	  def change
+checkDeficiency	C:/Sites/fit/public/javascripts/prototype.js	function checkDeficiency(tagName)
+checkReadyState	C:/Sites/fit/public/javascripts/prototype.js	function checkReadyState()
+clear	C:/Sites/fit/public/javascripts/prototype.js	function clear()
+clearFxNow	C:/Sites/fit/public/javascripts/jquery.js	function clearFxNow()
+clearMenus	C:/Sites/fit/public/javascripts/bootstrap-dropdown.js	function clearMenus()
+clone	C:/Sites/fit/public/javascripts/prototype.js	function clone()
+clone	C:/Sites/fit/public/javascripts/prototype.js	function clone()
+clone	C:/Sites/fit/public/javascripts/prototype.js	function clone(object)
+cloneCopyEvent	C:/Sites/fit/public/javascripts/jquery.js	function cloneCopyEvent( src, dest )
+cloneFixAttributes	C:/Sites/fit/public/javascripts/jquery.js	function cloneFixAttributes( src, dest )
+collect	C:/Sites/fit/public/javascripts/prototype.js	function collect(iterator, context)
+compact	C:/Sites/fit/public/javascripts/prototype.js	function compact()
+concat	C:/Sites/fit/public/javascripts/prototype.js	function concat()
+copy	C:/Sites/fit/public/javascripts/prototype.js	function copy(methods, destination, onlyIfAbsent)
+create	C:/Sites/fit/app/controllers/api/sessions_controller.rb	  def create
+create	C:/Sites/fit/app/controllers/aulas_controller.rb	  def create
+create	C:/Sites/fit/app/controllers/estudios_controller.rb	  def create
+create	C:/Sites/fit/app/controllers/exercicios_controller.rb	  def create
+create	C:/Sites/fit/app/controllers/ginasios_controller.rb	  def create
+create	C:/Sites/fit/app/controllers/notificacaos_controller.rb	  def create
+create	C:/Sites/fit/app/controllers/planos_controller.rb	  def create
+create	C:/Sites/fit/app/controllers/sessions_controller.rb	  def create
+create	C:/Sites/fit/app/controllers/tipo_aulas_controller.rb	  def create
+create	C:/Sites/fit/app/controllers/users_controller.rb	  def create
+create	C:/Sites/fit/public/javascripts/prototype.js	function create()
+createActiveXHR	C:/Sites/fit/public/javascripts/jquery.js	function createActiveXHR()
+createFxNow	C:/Sites/fit/public/javascripts/jquery.js	function createFxNow()
+createStandardXHR	C:/Sites/fit/public/javascripts/jquery.js	function createStandardXHR()
+cssNameFor	C:/Sites/fit/public/javascripts/prototype.js	function cssNameFor(key)
+cumulativeOffset	C:/Sites/fit/public/javascripts/prototype.js	function cumulativeOffset(element)
+cumulativeScrollOffset	C:/Sites/fit/public/javascripts/prototype.js	function cumulativeScrollOffset(element)
+current_user	C:/Sites/fit/app/controllers/application_controller.rb	  def current_user
+curry	C:/Sites/fit/public/javascripts/prototype.js	function curry()
+dasherize	C:/Sites/fit/public/javascripts/prototype.js	function dasherize()
+dataAttr	C:/Sites/fit/public/javascripts/jquery.js	function dataAttr( elem, key, data )
+defaultDisplay	C:/Sites/fit/public/javascripts/jquery.js	function defaultDisplay( nodeName )
+defer	C:/Sites/fit/public/javascripts/prototype.js	function defer()
+define	C:/Sites/fit/public/javascripts/prototype.js	function define(D)
+delay	C:/Sites/fit/public/javascripts/prototype.js	function delay(timeout)
+delegate	C:/Sites/fit/public/javascripts/jquery.validate.js	function delegate(event)
+demote	C:/Sites/fit/app/controllers/users_controller.rb	  def demote
+demote	C:/Sites/fit/app/models/user.rb	  def demote
+destroy	C:/Sites/fit/app/controllers/estudios_controller.rb	  def destroy
+destroy	C:/Sites/fit/app/controllers/exercicios_controller.rb	  def destroy
+destroy	C:/Sites/fit/app/controllers/ginasios_controller.rb	  def destroy
+destroy	C:/Sites/fit/app/controllers/notificacaos_controller.rb	  def destroy
+destroy	C:/Sites/fit/app/controllers/planos_controller.rb	  def destroy
+destroy	C:/Sites/fit/app/controllers/sessions_controller.rb	  def destroy
+destroy	C:/Sites/fit/app/controllers/tipo_aulas_controller.rb	  def destroy
+destroy	C:/Sites/fit/app/controllers/users_controller.rb	  def destroy
+detect	C:/Sites/fit/public/javascripts/prototype.js	function detect(iterator, context)
+diaFormatado	C:/Sites/fit/app/models/aula.rb		def diaFormatado
+dirCheck	C:/Sites/fit/public/javascripts/jquery.js	function dirCheck( dir, cur, doneName, checkSet, nodeCheck, isXML )
+dirCheck	C:/Sites/fit/public/javascripts/prototype.js	function dirCheck( dir, cur, doneName, checkSet, nodeCheck, isXML )
+dirNodeCheck	C:/Sites/fit/public/javascripts/jquery.js	function dirNodeCheck( dir, cur, doneName, checkSet, nodeCheck, isXML )
+dirNodeCheck	C:/Sites/fit/public/javascripts/prototype.js	function dirNodeCheck( dir, cur, doneName, checkSet, nodeCheck, isXML )
+dispatch	C:/Sites/fit/public/javascripts/effects.js	function dispatch(effect, eventName)
+doScrollCheck	C:/Sites/fit/public/javascripts/jquery.js	function doScrollCheck()
+done	C:/Sites/fit/public/javascripts/jquery.js	function done( status, nativeStatusText, responses, headers )
+down	C:/Sites/fit/db/migrate/20111022144440_create_planos.rb	  def self.down
+down	C:/Sites/fit/db/migrate/20111022144451_create_exercicios.rb	  def self.down
+down	C:/Sites/fit/db/migrate/20111022144502_create_exercicios_planos.rb	  def self.down
+down	C:/Sites/fit/db/migrate/20111101122156_create_users.rb	  def self.down
+down	C:/Sites/fit/db/migrate/20111101130429_create_admins.rb	  def self.down
+down	C:/Sites/fit/db/migrate/20111101173433_add_user_id_to_planos.rb	  def self.down
+down	C:/Sites/fit/db/migrate/20111102143014_create_staffs.rb	  def self.down
+down	C:/Sites/fit/db/migrate/20111115151546_add_token_to_users.rb	  def self.down
+down	C:/Sites/fit/db/migrate/20111205134719_drop_table_ginasio_notificacao.rb	  def down
+each	C:/Sites/fit/public/javascripts/prototype.js	function each(iterator)
+each	C:/Sites/fit/public/javascripts/prototype.js	function each(iterator, context)
+eachSlice	C:/Sites/fit/public/javascripts/prototype.js	function eachSlice(number, iterator, context)
+edit	C:/Sites/fit/app/controllers/api/users_controller.rb	  def edit
+edit	C:/Sites/fit/app/controllers/aulas_controller.rb	  def edit
+edit	C:/Sites/fit/app/controllers/estudios_controller.rb	  def edit
+edit	C:/Sites/fit/app/controllers/exercicios_controller.rb	  def edit
+edit	C:/Sites/fit/app/controllers/ginasios_controller.rb	  def edit
+edit	C:/Sites/fit/app/controllers/notificacaos_controller.rb	  def edit
+edit	C:/Sites/fit/app/controllers/planos_controller.rb	  def edit
+edit	C:/Sites/fit/app/controllers/tipo_aulas_controller.rb	  def edit
+edit	C:/Sites/fit/app/controllers/users_controller.rb	  def edit
+element	C:/Sites/fit/public/javascripts/prototype.js	function element(event)
+empty	C:/Sites/fit/public/javascripts/prototype.js	function empty()
+encrypt_password	C:/Sites/fit/app/models/user.rb	  def encrypt_password
+endsWith	C:/Sites/fit/public/javascripts/prototype.js	function endsWith(pattern)
+escapeHTML	C:/Sites/fit/public/javascripts/prototype.js	function escapeHTML()
+evalJSON	C:/Sites/fit/public/javascripts/prototype.js	function evalJSON(sanitize)
+evalScript	C:/Sites/fit/public/javascripts/jquery.js	function evalScript( i, elem )
+evalScripts	C:/Sites/fit/public/javascripts/prototype.js	function evalScripts()
+extend	C:/Sites/fit/public/javascripts/prototype.js	function extend(destination, source)
+extend	C:/Sites/fit/public/javascripts/prototype.js	function extend(tagName)
+extendElementWith	C:/Sites/fit/public/javascripts/prototype.js	function extendElementWith(element, methods)
+extendElements	C:/Sites/fit/public/javascripts/prototype.js	function extendElements(elements)
+extractScripts	C:/Sites/fit/public/javascripts/prototype.js	function extractScripts()
+fallback	C:/Sites/fit/public/javascripts/controls.js	function fallback(name, expr)
+find	C:/Sites/fit/public/javascripts/prototype.js	function find(elements, expression, index)
+findAll	C:/Sites/fit/public/javascripts/prototype.js	function findAll(iterator, context)
+findDOMClass	C:/Sites/fit/public/javascripts/prototype.js	function findDOMClass(tagName)
+findElement	C:/Sites/fit/public/javascripts/prototype.js	function findElement(event, expression)
+findInputs	C:/Sites/fit/public/javascripts/jquery.js	function findInputs( elem )
+fire	C:/Sites/fit/public/javascripts/prototype.js	function fire(element, eventName, memo, bubble)
+fireContentLoadedEvent	C:/Sites/fit/public/javascripts/prototype.js	function fireContentLoadedEvent()
+first	C:/Sites/fit/public/javascripts/prototype.js	function first()
+fixDefaultChecked	C:/Sites/fit/public/javascripts/jquery.js	function fixDefaultChecked( elem )
+flatten	C:/Sites/fit/public/javascripts/prototype.js	function flatten()
+flickr_auth	C:/Sites/fit/app/models/user.rb	  def flickr_auth
+floor	C:/Sites/fit/public/javascripts/prototype.js	function floor()
+genFx	C:/Sites/fit/public/javascripts/jquery.js	function genFx( type, num )
+get	C:/Sites/fit/public/javascripts/prototype.js	function get(key)
+getAll	C:/Sites/fit/public/javascripts/jquery.js	function getAll( elem )
+getDimensions	C:/Sites/fit/public/javascripts/prototype.js	function getDimensions(element)
+getGinasios	C:/Sites/fit/public/javascripts/utils.js	function getGinasios()
+getLayout	C:/Sites/fit/public/javascripts/prototype.js	function getLayout(element, preCompute)
+getObjects	C:/Sites/fit/public/javascripts/utils.js	function getObjects(obj, key, val)
+getOffsetParent	C:/Sites/fit/public/javascripts/prototype.js	function getOffsetParent(element)
+getPixelValue	C:/Sites/fit/public/javascripts/prototype.js	function getPixelValue(value, property)
+getRootElement	C:/Sites/fit/public/javascripts/prototype.js	function getRootElement()
+getWH	C:/Sites/fit/public/javascripts/jquery.js	function getWH( elem, name, extra )
+getWindow	C:/Sites/fit/public/javascripts/jquery.js	function getWindow( elem )
+get_foto	C:/Sites/fit/app/models/user.rb	  def get_foto
+grep	C:/Sites/fit/public/javascripts/prototype.js	function grep(filter, iterator, context)
+gsub	C:/Sites/fit/public/javascripts/prototype.js	function gsub(pattern, replacement)
+handle	C:/Sites/fit/public/javascripts/jquery.validate.js	function handle()
+handleQueueMarkDefer	C:/Sites/fit/public/javascripts/jquery.js	function handleQueueMarkDefer( elem, type, src )
+handler	C:/Sites/fit/public/javascripts/jquery.js	function handler( donor )
+handler	C:/Sites/fit/public/javascripts/jquery.validate.js	function handler(e)
+horaFormatada	C:/Sites/fit/app/models/turno.rb		def horaFormatada
+imprime_exercicios	C:/Sites/fit/public/javascripts/utils.js	function imprime_exercicios(elemento,nome,maquina,peso,series,repeticoes)
+inGroupsOf	C:/Sites/fit/public/javascripts/prototype.js	function inGroupsOf(number, fillWith)
+include	C:/Sites/fit/public/javascripts/prototype.js	function include(object)
+include	C:/Sites/fit/public/javascripts/prototype.js	function include(pattern)
+include	C:/Sites/fit/public/javascripts/prototype.js	function include(value)
+index	C:/Sites/fit/app/controllers/api/aulas_controller.rb	  def index
+index	C:/Sites/fit/app/controllers/api/exercicios_controller.rb	  def index
+index	C:/Sites/fit/app/controllers/api/ginasios_controller.rb	  def index
+index	C:/Sites/fit/app/controllers/api/notificacaos_controller.rb	  def index
+index	C:/Sites/fit/app/controllers/api/planos_controller.rb	  def index
+index	C:/Sites/fit/app/controllers/api/users_controller.rb	  def index
+index	C:/Sites/fit/app/controllers/aulas_controller.rb	  def index
+index	C:/Sites/fit/app/controllers/estudios_controller.rb	  def index
+index	C:/Sites/fit/app/controllers/exercicios_controller.rb	  def index
+index	C:/Sites/fit/app/controllers/ginasios_controller.rb	  def index
+index	C:/Sites/fit/app/controllers/notificacaos_controller.rb	  def index
+index	C:/Sites/fit/app/controllers/planos_controller.rb	  def index
+index	C:/Sites/fit/app/controllers/tipo_aulas_controller.rb	  def index
+index	C:/Sites/fit/app/controllers/users_controller.rb	  def index
+index	C:/Sites/fit/public/javascripts/prototype.js	function index(value)
+indexOf	C:/Sites/fit/public/javascripts/prototype.js	function indexOf(item, i)
+init	C:/Sites/fit/public/javascripts/jquery.js	function init( selector, context )
+initialize	C:/Sites/fit/app/models/ability.rb	  def initialize(user)
+initialize	C:/Sites/fit/public/javascripts/prototype.js	function initialize(object)
+initialize	C:/Sites/fit/public/javascripts/prototype.js	function initialize(start, end, exclusive)
+inject	C:/Sites/fit/public/javascripts/prototype.js	function inject(memo, iterator, context)
+inspect	C:/Sites/fit/public/javascripts/prototype.js	function inspect()
+inspect	C:/Sites/fit/public/javascripts/prototype.js	function inspect()
+inspect	C:/Sites/fit/public/javascripts/prototype.js	function inspect()
+inspect	C:/Sites/fit/public/javascripts/prototype.js	function inspect(object)
+inspect	C:/Sites/fit/public/javascripts/prototype.js	function inspect(useDoubleQuotes)
+interpolate	C:/Sites/fit/public/javascripts/prototype.js	function interpolate(object, pattern)
+intersect	C:/Sites/fit/public/javascripts/prototype.js	function intersect(array)
+invoke	C:/Sites/fit/public/javascripts/prototype.js	function invoke(method)
+isArray	C:/Sites/fit/public/javascripts/prototype.js	function isArray(object)
+isBody	C:/Sites/fit/public/javascripts/prototype.js	function isBody(element)
+isDetached	C:/Sites/fit/public/javascripts/prototype.js	function isDetached(element)
+isDisconnected	C:/Sites/fit/public/javascripts/jquery.js	function isDisconnected( node )
+isDisplayed	C:/Sites/fit/public/javascripts/prototype.js	function isDisplayed(element)
+isElement	C:/Sites/fit/public/javascripts/prototype.js	function isElement(object)
+isEmptyDataObject	C:/Sites/fit/public/javascripts/jquery.js	function isEmptyDataObject( obj )
+isFunction	C:/Sites/fit/public/javascripts/prototype.js	function isFunction(object)
+isHash	C:/Sites/fit/public/javascripts/prototype.js	function isHash(object)
+isJSON	C:/Sites/fit/public/javascripts/prototype.js	function isJSON()
+isLeftClick	C:/Sites/fit/public/javascripts/prototype.js	function isLeftClick(event)   { return _isButton(event, 0)
+isMiddleClick	C:/Sites/fit/public/javascripts/prototype.js	function isMiddleClick(event) { return _isButton(event, 1)
+isNumber	C:/Sites/fit/public/javascripts/prototype.js	function isNumber(object)
+isRightClick	C:/Sites/fit/public/javascripts/prototype.js	function isRightClick(event)  { return _isButton(event, 2)
+isString	C:/Sites/fit/public/javascripts/prototype.js	function isString(object)
+isUndefined	C:/Sites/fit/public/javascripts/prototype.js	function isUndefined(object)
+iter	C:/Sites/fit/public/javascripts/prototype.js	function iter(name)
+jQuerySub	C:/Sites/fit/public/javascripts/jquery.js	function jQuerySub( selector, context )
+keys	C:/Sites/fit/public/javascripts/prototype.js	function keys()
+keys	C:/Sites/fit/public/javascripts/prototype.js	function keys(object)
+klass	C:/Sites/fit/public/javascripts/prototype.js	function klass()
+last	C:/Sites/fit/public/javascripts/prototype.js	function last()
+lastIndexOf	C:/Sites/fit/public/javascripts/prototype.js	function lastIndexOf(item, i)
+liveConvert	C:/Sites/fit/public/javascripts/jquery.js	function liveConvert( type, selector )
+liveHandler	C:/Sites/fit/public/javascripts/jquery.js	function liveHandler( event )
+match	C:/Sites/fit/public/javascripts/prototype.js	function match()
+match	C:/Sites/fit/public/javascripts/prototype.js	function match(element, selector)
+max	C:/Sites/fit/public/javascripts/prototype.js	function max(iterator, context)
+measure	C:/Sites/fit/public/javascripts/prototype.js	function measure(element, property)
+merge	C:/Sites/fit/public/javascripts/prototype.js	function merge(array, args)
+merge	C:/Sites/fit/public/javascripts/prototype.js	function merge(object)
+message	C:/Sites/fit/app/controllers/api/users_controller.rb	  def message(msg)
+methodize	C:/Sites/fit/public/javascripts/prototype.js	function methodize()
+min	C:/Sites/fit/public/javascripts/prototype.js	function min(iterator, context)
+mobile_device?	C:/Sites/fit/app/controllers/application_controller.rb	  def mobile_device?
+new	C:/Sites/fit/app/controllers/api/sessions_controller.rb	  def new
+new	C:/Sites/fit/app/controllers/aulas_controller.rb	  def new
+new	C:/Sites/fit/app/controllers/estudios_controller.rb	  def new
+new	C:/Sites/fit/app/controllers/exercicios_controller.rb	  def new
+new	C:/Sites/fit/app/controllers/ginasios_controller.rb	  def new
+new	C:/Sites/fit/app/controllers/notificacaos_controller.rb	  def new
+new	C:/Sites/fit/app/controllers/planos_controller.rb	  def new
+new	C:/Sites/fit/app/controllers/reserve_aula_controller.rb	  def new
+new	C:/Sites/fit/app/controllers/sessions_controller.rb	  def new
+new	C:/Sites/fit/app/controllers/tipo_aulas_controller.rb	  def new
+new	C:/Sites/fit/app/controllers/users_controller.rb	  def new
+normal?	C:/Sites/fit/app/models/user.rb	  def normal?
+observe	C:/Sites/fit/public/javascripts/prototype.js	function observe(element, eventName, handler)
+on	C:/Sites/fit/public/javascripts/prototype.js	function on(element, eventName, selector, callback)
+parseColor	C:/Sites/fit/public/javascripts/effects.js	function parseColor(color)
+parseJSON	C:/Sites/fit/public/javascripts/prototype.js	function parseJSON()
+partition	C:/Sites/fit/public/javascripts/prototype.js	function partition(iterator, context)
+password	C:/Sites/fit/app/models/user.rb	  attr_accessor :password
+pedir_plano	C:/Sites/fit/app/mailers/fit_mailer.rb	  def pedir_plano(user)
+pertocidade	C:/Sites/fit/app/controllers/ginasios_controller.rb	  def pertocidade
+pluck	C:/Sites/fit/public/javascripts/prototype.js	function pluck(property)
+pointer	C:/Sites/fit/public/javascripts/prototype.js	function pointer(event)
+pointerX	C:/Sites/fit/public/javascripts/prototype.js	function pointerX(event)
+pointerY	C:/Sites/fit/public/javascripts/prototype.js	function pointerY(event)
+pollDoScroll	C:/Sites/fit/public/javascripts/prototype.js	function pollDoScroll()
+positionedOffset	C:/Sites/fit/public/javascripts/prototype.js	function positionedOffset(element)
+prepareReplacement	C:/Sites/fit/public/javascripts/prototype.js	function prepareReplacement(replacement)
+prepare_for_mobile	C:/Sites/fit/app/controllers/application_controller.rb	  def prepare_for_mobile
+promote	C:/Sites/fit/app/controllers/users_controller.rb	  def promote
+promote	C:/Sites/fit/app/models/user.rb	  def promote
+purgeElement	C:/Sites/fit/public/javascripts/prototype.js	function purgeElement(element)
+reject	C:/Sites/fit/public/javascripts/prototype.js	function reject(iterator, context)
+relativize	C:/Sites/fit/public/javascripts/prototype.js	function relativize(element)
+requisitar_plano	C:/Sites/fit/app/controllers/planos_controller.rb	  def requisitar_plano
+resolve	C:/Sites/fit/public/javascripts/jquery.js	function resolve()
+resolveFunc	C:/Sites/fit/public/javascripts/jquery.js	function resolveFunc( i )
+returnFalse	C:/Sites/fit/public/javascripts/jquery.js	function returnFalse()
+returnTrue	C:/Sites/fit/public/javascripts/jquery.js	function returnTrue()
+reverse	C:/Sites/fit/public/javascripts/prototype.js	function reverse(inline)
+root	C:/Sites/fit/public/javascripts/jquery.js	function root( elem, cur )
+round	C:/Sites/fit/public/javascripts/prototype.js	function round()
+scan	C:/Sites/fit/public/javascripts/prototype.js	function scan(pattern, iterator)
+select	C:/Sites/fit/public/javascripts/prototype.js	function select()
+select	C:/Sites/fit/public/javascripts/prototype.js	function select(selector, scope)
+set	C:/Sites/fit/public/javascripts/prototype.js	function set(key, value)
+set_token	C:/Sites/fit/app/models/user.rb	  def set_token
+show	C:/Sites/fit/app/controllers/api/exercicios_controller.rb	  def show
+show	C:/Sites/fit/app/controllers/api/ginasios_controller.rb	  def show
+show	C:/Sites/fit/app/controllers/api/notificacaos_controller.rb	  def show
+show	C:/Sites/fit/app/controllers/api/planos_controller.rb	  def show
+show	C:/Sites/fit/app/controllers/estudios_controller.rb	  def show
+show	C:/Sites/fit/app/controllers/exercicios_controller.rb	  def show
+show	C:/Sites/fit/app/controllers/ginasios_controller.rb	  def show
+show	C:/Sites/fit/app/controllers/home_controller.rb	  def show
+show	C:/Sites/fit/app/controllers/notificacaos_controller.rb	  def show
+show	C:/Sites/fit/app/controllers/planos_controller.rb	  def show
+show	C:/Sites/fit/app/controllers/tipo_aulas_controller.rb	  def show
+show	C:/Sites/fit/app/controllers/users_controller.rb	  def show
+size	C:/Sites/fit/public/javascripts/prototype.js	function size()
+size	C:/Sites/fit/public/javascripts/prototype.js	function size()
+sortBy	C:/Sites/fit/public/javascripts/prototype.js	function sortBy(iterator, context)
+staff?	C:/Sites/fit/app/models/user.rb	  def staff?
+startsWith	C:/Sites/fit/public/javascripts/prototype.js	function startsWith(pattern)
+stop	C:/Sites/fit/public/javascripts/prototype.js	function stop(event)
+stopObserving	C:/Sites/fit/public/javascripts/prototype.js	function stopObserving(element, eventName, handler)
+stringify	C:/Sites/fit/public/javascripts/prototype.js	function stringify(object)
+strip	C:/Sites/fit/public/javascripts/prototype.js	function strip()
+stripAlpha	C:/Sites/fit/public/javascripts/prototype.js	function stripAlpha(filter)
+stripScripts	C:/Sites/fit/public/javascripts/prototype.js	function stripScripts()
+stripTags	C:/Sites/fit/public/javascripts/prototype.js	function stripTags()
+sub	C:/Sites/fit/public/javascripts/prototype.js	function sub(pattern, replacement, count)
+subclass	C:/Sites/fit/public/javascripts/prototype.js	function subclass()
+succ	C:/Sites/fit/public/javascripts/prototype.js	function succ()
+succ	C:/Sites/fit/public/javascripts/prototype.js	function succ()
+t	C:/Sites/fit/public/javascripts/jquery.js	function t( gotoEnd )
+testChange	C:/Sites/fit/public/javascripts/jquery.js	function testChange( e )
+test_homepage	C:/Sites/fit/test/performance/browsing_test.rb	  def test_homepage
+times	C:/Sites/fit/public/javascripts/prototype.js	function times(count)
+times	C:/Sites/fit/public/javascripts/prototype.js	function times(iterator, context)
+toArray	C:/Sites/fit/public/javascripts/prototype.js	function toArray()
+toArray	C:/Sites/fit/public/javascripts/prototype.js	function toArray()
+toCSSPixels	C:/Sites/fit/public/javascripts/prototype.js	function toCSSPixels(number)
+toColorPart	C:/Sites/fit/public/javascripts/prototype.js	function toColorPart()
+toDecimal	C:/Sites/fit/public/javascripts/prototype.js	function toDecimal(pctString)
+toHTML	C:/Sites/fit/public/javascripts/prototype.js	function toHTML(object)
+toISOString	C:/Sites/fit/public/javascripts/prototype.js	function toISOString()
+toJSON	C:/Sites/fit/public/javascripts/prototype.js	function toJSON()
+toJSON	C:/Sites/fit/public/javascripts/prototype.js	function toJSON(value)
+toObject	C:/Sites/fit/public/javascripts/prototype.js	function toObject()
+toPaddedString	C:/Sites/fit/public/javascripts/prototype.js	function toPaddedString(length, radix)
+toQueryPair	C:/Sites/fit/public/javascripts/prototype.js	function toQueryPair(key, value)
+toQueryParams	C:/Sites/fit/public/javascripts/prototype.js	function toQueryParams(separator)
+toQueryString	C:/Sites/fit/public/javascripts/prototype.js	function toQueryString()
+toQueryString	C:/Sites/fit/public/javascripts/prototype.js	function toQueryString(object)
+to_xml	C:/Sites/fit/app/models/aula.rb		def to_xml(options ={})
+to_xml	C:/Sites/fit/app/models/user.rb		def to_xml(options ={})
+trigger	C:/Sites/fit/public/javascripts/jquery.js	function trigger( type, elem, args )
+truncate	C:/Sites/fit/public/javascripts/prototype.js	function truncate(length, truncation)
+underscore	C:/Sites/fit/public/javascripts/prototype.js	function underscore()
+unescapeHTML	C:/Sites/fit/public/javascripts/prototype.js	function unescapeHTML()
+unfilterJSON	C:/Sites/fit/public/javascripts/prototype.js	function unfilterJSON(filter)
+uniq	C:/Sites/fit/public/javascripts/prototype.js	function uniq(sorted)
+unset	C:/Sites/fit/public/javascripts/prototype.js	function unset(key)
+up	C:/Sites/fit/db/migrate/20111022144440_create_planos.rb	  def up
+up	C:/Sites/fit/db/migrate/20111022144451_create_exercicios.rb	  def self.up
+up	C:/Sites/fit/db/migrate/20111022144502_create_exercicios_planos.rb	  def self.up
+up	C:/Sites/fit/db/migrate/20111101122156_create_users.rb	  def self.up
+up	C:/Sites/fit/db/migrate/20111101130429_create_admins.rb	  def self.up
+up	C:/Sites/fit/db/migrate/20111101173433_add_user_id_to_planos.rb	  def self.up
+up	C:/Sites/fit/db/migrate/20111102143014_create_staffs.rb	  def self.up
+up	C:/Sites/fit/db/migrate/20111115151546_add_token_to_users.rb	  def self.up
+up	C:/Sites/fit/db/migrate/20111205134719_drop_table_ginasio_notificacao.rb	  def up
+update	C:/Sites/fit/app/controllers/aulas_controller.rb	  def update
+update	C:/Sites/fit/app/controllers/estudios_controller.rb	  def update
+update	C:/Sites/fit/app/controllers/exercicios_controller.rb	  def update
+update	C:/Sites/fit/app/controllers/ginasios_controller.rb	  def update
+update	C:/Sites/fit/app/controllers/notificacaos_controller.rb	  def update
+update	C:/Sites/fit/app/controllers/planos_controller.rb	  def update
+update	C:/Sites/fit/app/controllers/tipo_aulas_controller.rb	  def update
+update	C:/Sites/fit/app/controllers/users_controller.rb	  def update
+update	C:/Sites/fit/public/javascripts/prototype.js	function update(array, args)
+update	C:/Sites/fit/public/javascripts/prototype.js	function update(element, content)
+update	C:/Sites/fit/public/javascripts/prototype.js	function update(object)
+upload_foto	C:/Sites/fit/app/models/user.rb	  def upload_foto(file)
+validateForm	C:/Sites/fit/public/javascripts/validateForms.js	function validateForm(selector)
+values	C:/Sites/fit/public/javascripts/prototype.js	function values()
+values	C:/Sites/fit/public/javascripts/prototype.js	function values(object)
+viewportOffset	C:/Sites/fit/public/javascripts/prototype.js	function viewportOffset(forElement)
+welcome_email	C:/Sites/fit/app/mailers/fit_mailer.rb	  def welcome_email(user)
+winnow	C:/Sites/fit/public/javascripts/jquery.js	function winnow( elements, qualifier, keep )
+without	C:/Sites/fit/public/javascripts/prototype.js	function without()
+wrap	C:/Sites/fit/public/javascripts/prototype.js	function wrap(wrapper)
+xml_plano	C:/Sites/fit/app/models/plano.rb		def xml_plano()
+zip	C:/Sites/fit/public/javascripts/prototype.js	function zip()

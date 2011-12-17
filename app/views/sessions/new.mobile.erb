@@ -1,12 +1,24 @@
-<% if !current_user %>
-  <h1>Login</h1>
-
-  <%=image_tag "logo3.png"%>
+﻿<% if !current_user %>
   <%= render 'form' %>
 <% else %>
 
-  <ul>
-    <li class ="arrow"><%= link_to "Ver Perfil", user_path(current_user)%> </li>
+  <div class="mobile-menu"> <h5> Principal </h5></div>
+  <ul class="mobile-submenu">
+	<%= link_to root_url do %><li class ="mobile-menulink"> Home </li><% end %>
+	<%= link_to notificacaos_path do %><li class ="mobile-menulink"> Notificações </li><% end %>
+	<%= link_to ginasios_path do %><li class ="mobile-menulink"> Ginásios </li><% end %>
+  </ul>
+  
+  <div class="mobile-menu"><h5> Aulas </h5></div>
+  <ul class="mobile-submenu">
+    <a href="#"><li class ="mobile-menulink">Horários</li></a>
+	<%= link_to tipo_aulas_path do %><li class ="mobile-menulink"> Modalidades </li><% end %>
   </ul>
 
+  <div class="mobile-menu"><h5> A Minha Conta </h5></div>
+  <ul class="mobile-submenu">
+    <%= link_to user_path(current_user) do %><li class ="mobile-menulink"> Perfil </li><% end %>
+	<%= link_to user_planos_path(current_user) do %><li class ="mobile-menulink"> Planos de Treino </li><% end %>
+  </ul>
+  
 <% end %>

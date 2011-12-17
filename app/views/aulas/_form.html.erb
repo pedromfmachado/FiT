@@ -1,6 +1,51 @@
-<%= form_for ([@ginasio,@aula]) do |f| %>
+<% content_for :head do %>
 
-  <!-- le error messages header TODO -->
+<script type="text/javascript">
+  $(document).ready(function() {
+   
+    jQuery.validator.addMethod("exactLength", function(value, element, param) {
+      return this.optional(element) || value.length == param;
+    }, jQuery.format("Please enter exactly {0} characters."));
+
+    jQuery.validator.addMethod("hourFormat", function(value, element, param) {
+      if (this.optional(element))
+        return true;
+
+      var re = /^([01]?\d|2[0-3]):([0-5]\d)$/;
+      return re.test(value) == param;
+    }, "Enter the correct time.");
+
+    $("#form_aula").validate( {
+      rules: {
+        "aula[inicio]": {
+          required: true,
+          hourFormat: true
+        },
+        "aula[duracao]": {
+          required: true,
+          range: [0,720]
+        }
+      },
+      messages: {
+        "aula[inicio]": "Introduza uma hora válida.",
+        "aula[duracao]": "Introduza uma duração válida."
+      },
+
+      // add/remove bootstrap error classes
+      highlight: function (element, errorClass, validClass) {
+        $(element).parents("div[class='clearfix']").addClass("error");
+      },
+      unhighlight: function (element, errorClass, validClass) {
+        $(element).parents(".error").removeClass("error");
+      },
+      errorElement: 'p'
+    });
+  });
+</script>
+<% end %>
+
+<%= form_for ([@ginasio,@aula], :html => { :id => "form_aula" }) do |f| %>
+
   <% if @aula.errors.any? %>
     <div class="alert-message error">
       <a href="#" class="close">x</a>
@@ -28,21 +73,21 @@
     <%= f.label :dia, 'Dia' %>
     <div class="input">
       <%= select("aula", "dia", [["Segunda",0], ["Terca",1], ["Quarta",2], ["Quinta", 3],
-			 ["Sexta",4], ["Sabado", 5], ["Domingo",6]], {}, { :class => "span2 no-resize" }) %>
+            ["Sexta",4], ["Sabado", 5], ["Domingo",6]], {}, { :class => "span2 no-resize" }) %>
     </div>
   </div>
 
   <div class="clearfix">
-    <%= f.label :inicio,  'Hora de Inicio' %>
+    <%= f.label :inicio, 'Hora de Início' %>
     <div class="input">
       <%= f.text_field :inicio, :class => "span2" %>
     </div>
   </div>
 
   <div class="clearfix">
-    <%= f.label :duracao,  'Duracao' %>
+    <%= f.label :duracao, 'Duração (minutos)' %>
     <div class="input">
-      <%= f.text_field :duracao, :class => "span2" %> minutos
+      <%= f.text_field :duracao, :class => "span1" %>
     </div>
   </div>
 

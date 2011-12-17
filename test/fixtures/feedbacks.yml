@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  aula: 
+  valor: 1
+
+two:
+  aula: 
+  valor: 1

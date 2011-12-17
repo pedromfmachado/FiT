@@ -26,9 +26,13 @@ class Aula < ActiveRecord::Base
 
 		Aula.all.each do |aula|
 
-			if (aula.inicio + aula.duracao*60)> self.inicio && aula.estudio_id == self.estudio_id && aula.dia == dia
+			if (aula.inicio + aula.duracao*60) > self.inicio && fim > aula.inicio && aula.estudio_id == self.estudio_id && aula.dia == dia && aula.id != self.id
 
 				errors.add(:sala, "A sala ja esta ocupada nesta hora")
+
+                        elsif (self.inicio + self.duracao*60)> aula.inicio && fim < aula.inicio && aula.estudio_id == self.estudio_id && aula.dia == dia && aula.id != self.id
+                                
+                                errors.add(:sala, "A sala ja esta ocupada nesta hora2")
 
 			end
 
@@ -40,15 +44,26 @@ class Aula < ActiveRecord::Base
 
 		Aula.all.each do |aula|
 
-			if (aula.inicio + aula.duracao*60)> self.inicio && aula.staff_id == self.staff_id && aula.dia == dia
+			if (aula.inicio + aula.duracao*60)> self.inicio && fim > aula.inicio && aula.staff_id == self.staff_id && aula.dia == dia && aula.id != self.id
 
 				errors.add(:professor, "O professor ja esta ocupado nesta hora")
-
+                        
+                        elsif (self.inicio + self.duracao*60)> aula.inicio && fim < aula.inicio && aula.staff_id == self.staff_id && aula.dia == dia && aula.id != self.id
+                                
+                                errors.add(:professor, "O professor ja esta ocupado nesta hora2")
+        
 			end
 
 		end
 
 	end
+
+        def fim
+
+                inicio + duracao*60
+
+        end
+
 
 	def self.getDia(d)
 		dias = [ 'Segunda' , 'Terca', 'Quarta', 'Quinta', 'Sexta', 'Sabado', 'Domingo' ]

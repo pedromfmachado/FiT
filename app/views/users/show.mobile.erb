@@ -1,36 +1,19 @@
-<p id="notice"><%= notice %></p>
+<div class="mobile-content">
+	<% if @user.url_foto %>
+		<%= image_tag @user.get_foto, :id => "profile-photo", :class => "mobile-image" %>
+	<% else %>
+		<%= image_tag "missing.png", :id => "profile-photo", :class => "mobile-image" %>
+	<% end %>
 
-<ul class = "rounded">
-<li><p class = "normal">
-  <b>Nome:</b>
-  <%= @user.nome %>
-</p></li>
+	<ul class = "rounded">
+	<li><p class = "normal"> <b>Nome:</b> <%= @user.nome %></p></li>
+	<li><p class = "normal"> <b>Ginásio:</b> <%= Ginasio.find(@user.ginasio_id).nome %></p></li>
+	<li><p class = "normal"> <b>Email:</b> <%= @user.email %></p></li>
+	<li><p class = "normal"> <b>Data de Nascimento:</b> <%= @user.datanascimento %></p></li>
+	<li><p class = "normal"> <b>Telefone:</b> <%= @user.telefone %></p></li>
+	<li><p class = "normal"> <b>Morada:</b> <%= @user.morada %></p></li>
+	</ul>
+</div>
 
-<li><p class = "normal">
-  <b>Ginásio:</b>
-  <%= Ginasio.find(@user.ginasio_id).nome %>
-</p></li>
-
-<li><p class = "normal">
-  <b>Email:</b>
-  <%= @user.email %>
-</p></li>
-
-<li><p class = "normal">
-  <b>Data de Nascimento:</b>
-  <%= @user.datanascimento %>
-</p></li>
-
-<li><p class = "normal">
-  <b>Telefone:</b>
-  <%= @user.telefone %>
-</p></li>
-
-<li><p class = "normal">
-  <b>Morada:</b>
-  <%= @user.morada %>
-</p></li>
-</ul>
-
-<ul><li class="arrow"><%= link_to "Planos", user_planos_path(@user) %></li></ul>
-
+<%= link_to 'Voltar', new_session_path, :class => "btn primary" %>
+<%= link_to 'Planos', user_planos_path(@user), :class=> "btn success" %>

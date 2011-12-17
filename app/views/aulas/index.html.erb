@@ -2,39 +2,41 @@
   <h1>Aulas de <%= @ginasio.nome %></h1>
 
   <!-- le schedule fixe -->
-  <div class="span14">
+  <% @dias_sorted.each do |d| %>
 
-    <% @dias_sorted.each do |d| %>
+    <h3><%= Aula.getDia(d) %></h3>
 
-      <h3><%= Aula.getDia(d) %></h3>
-      <div class="row">
-
-        <table class="zebra-striped">
-        <% @aulas_sorted[d].each do |aula| %>
-          <tr>
-            <% if Date.today.wday-1 == aula.dia && !aula.jaPassou %>
-              <td><%= link_to TipoAula.find(aula.tipo_aula_id).tipo, ginasio_aula_reserva_aulas_path(params[:ginasio_id],aula.id)%> </td>
-            <%else%>
-              <td><%= TipoAula.find(aula.tipo_aula_id).tipo %></td>
-            <% end %>
-            <td><%= Estudio.find(aula.estudio_id).nome %></td>
-            <td>às <%= aula.inicio.to_s(:time) %></td>
-            <td><%= aula.duracao %> minutos</td>
-            <td><%= User.find(aula.staff_id).nome %></td>
-
-          </tr>
+    <table class="zebra-striped">
+    <% @aulas_sorted[d].each do |aula| %>
+      <tr>
+        <% if Date.today.wday-1 == aula.dia && !aula.jaPassou %>
+          <td><%= link_to TipoAula.find(aula.tipo_aula_id).tipo, ginasio_aula_reserva_aulas_path(params[:ginasio_id],aula.id)%> </td>
+        <% else %>
+          <td><%= TipoAula.find(aula.tipo_aula_id).tipo %></td>
         <% end %>
-        </table>
+        <td><%= Estudio.find(aula.estudio_id).nome %></td>
+        <td>às <%= aula.inicio.to_s(:time) %></td>
+        <td><%= aula.duracao %> minutos</td>
+        <td><%= User.find(aula.staff_id).nome %></td>
 
-      </div>
+        <% if can? :update, Aula %>
+          <td><%= link_to 'Editar', edit_ginasio_aula_path(@ginasio, aula) %></td>
+        <% end %>
+        <% if can? :destroy, Aula %>
+          <td><%= link_to 'Apagar', ginasio_aula_path(@ginasio,aula), :confirm => 'Tem a certeza?', :method => :delete %></td>
+        <% end %>
 
-      <div class="topSpacing2">
-      </div>
+      </tr>
     <% end %>
-  </div>
+    </table>
+
+    <div class="topSpacing2">
+    </div>
+  <% end %>
 
   <div class="actions topSpacing1">
     <%= link_to 'Acrescentar aula', new_ginasio_aula_path, :class => "btn success" %>
     <%= link_to 'Ver Ginásio', ginasio_path(@ginasio.id), :class => "btn primary"%>
   </div>
 </div>
+

@@ -1,4 +1,34 @@
-<%= form_for([@ginasio,@estudio]) do |f| %>
+<% content_for :head do %>
+<script type="text/javascript">
+$(document).ready(function() {
+  $("#form_estudio").validate( {
+    rules: {
+      "estudio[nome]": "required",
+      "estudio[lotacao]": {
+        required: true,
+        digits: true,
+      }
+    },
+    messages: {
+      "estudio[nome]": "Introduza um nome válido",
+      "estudio[lotacao]": "Introduza a lotação do estúdio"
+    },
+
+    // add/remove bootstrap error classes
+    highlight: function (element, errorClass, validClass) {
+      $(element).parents("div[class='clearfix']").addClass("error");
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).parents(".error").removeClass("error");
+    },
+    errorElement: 'p'
+  });
+
+});
+</script>
+<% end %>
+
+<%= form_for([@ginasio,@estudio], :html => { :id => "form_estudio" }) do |f| %>
   <% if @estudio.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@estudio.errors.count, "error") %> prohibited this estudio from being saved:</h2>

@@ -1,4 +1,31 @@
-<%= form_for(@exercicio) do |f| %>
+<% content_for :head do %>
+<script type="text/javascript">
+  $(document).ready(function() {
+   
+    $("#form_exercicio").validate( {
+      rules: {
+        "exercicio[nome]": "required",
+        "exercicio[maquina]": "required",
+      },
+      messages: {
+        "exercicio[nome]": "Introduza um nome válido (abdominais, bicicleta, etc.)",
+        "exercicio[maquina]": "Introduza o nome da máquina."
+      },
+
+      // add/remove bootstrap error classes
+      highlight: function (element, errorClass, validClass) {
+        $(element).parents("div[class='clearfix']").addClass("error");
+      },
+      unhighlight: function (element, errorClass, validClass) {
+        $(element).parents(".error").removeClass("error");
+      },
+      errorElement: 'p'
+    });
+  });
+</script>
+<% end %>
+
+<%= form_for(@exercicio, :html => { :id => "form_exercicio" }) do |f| %>
 
   <% if @exercicio.errors.any? %>
     <div id="error_explanation">

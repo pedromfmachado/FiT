@@ -1,4 +1,37 @@
-<%= form_for([@user,@plano]) do |f| %>
+<% content_for :head do %>
+<script type="text/javascript">
+  $(document).ready(function() {
+   
+    $("#form_planotreino").validate( {
+      rules: {
+        "plano[altura]": {
+          required: true,
+          range: [100, 230]
+        },
+        "plano[peso]": {
+          required: true,
+          range: [30, 200]
+        }
+      },
+      messages: {
+        "plano[altura]": "Altura inválida.",
+        "plano[peso]": "Peso inválido."
+      },
+
+      // add/remove bootstrap error classes
+      highlight: function (element, errorClass, validClass) {
+        $(element).parents("div[class='clearfix']").addClass("error");
+      },
+      unhighlight: function (element, errorClass, validClass) {
+        $(element).parents(".error").removeClass("error");
+      },
+      errorElement: 'p'
+    });
+  });
+</script>
+<% end %>
+
+<%= form_for([@user,@plano], :html => { :id => "form_planotreino" }) do |f| %>
 
   <!-- le errors header -->
   <% if @plano.errors.any? %>
@@ -27,28 +60,19 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="span4">
-      <div class="clearfix">
-        <%= f.label :data, :class => "span1" %>
-        <!-- div class="input" -->
-        <%= f.text_field :data, :value => @plano.data, :disabled => true, :class => "span2 small-lborder" %>
-      </div>
-    </div>
+  <div class="clearfix">
+    <%= f.label :data, :class => "span1" %>
+    <%= f.text_field :data, :value => @plano.data, :disabled => true, :class => "span2 small-lborder" %>
+  </div>
 
-    <div class="span2">
-      <div class="clearfix">
-        <%= f.label :altura, :class => "span1" %>
-        <%= f.text_field :altura, :class => "span1 small-lborder" %>
-      </div>
-    </div>
+  <div class="clearfix">
+    <%= f.label :altura, :class => "span1" %>
+    <%= f.text_field :altura, :class => "span1 small-lborder" %>
+  </div>
 
-    <div class="span3">
-      <div class="clearfix">
-        <%= f.label :peso, :class => "span1" %>
-        <%= f.text_field :peso, :class => "span1 small-lborder" %>
-      </div>
-    </div>
+  <div class="clearfix">
+    <%= f.label :peso, :class => "span1" %>
+    <%= f.text_field :peso, :class => "span1 small-lborder" %>
   </div>
 
   <!-- le seccao exercicios -->

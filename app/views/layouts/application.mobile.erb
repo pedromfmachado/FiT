@@ -2,37 +2,47 @@
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html>
   <head>
-    <title><%= h(yield(:title) || "Untitled") %></title>
-    <%= stylesheet_link_tag "/jqtouch/jqtouch.css", "/jqtouch/themes/apple/theme.css" %>
-    <%= yield(:head) %>
+    <title>FiT Mobile</title>
+	<%= stylesheet_link_tag "bootstrap", "bootstrap-extension", "mobile"%>
+	<%= javascript_include_tag "jquery.js"%>
+	<%= javascript_include_tag "bootstrap-dropdown.js", "bootstrap-alerts.js", "onLoad.js"%>
+	<%= csrf_meta_tag %>
   </head>
+  
   <body>
+  
+  
+  <div class="mobile-topbar">
+	<a class="brand" href="<%= root_url %>"> <%= image_tag "brand_mobile.png" %></a>
+	
+	<div class="mobile-topbar-buttons">
+		<%= link_to "Full Site", root_url(:mobile => 0), :class => "btn success"%>
+		
+		<% if current_user %>
+			<%= link_to "Log out", log_out_path, :class =>"btn danger"%>
+		<% end %>
+	</div>
+  </div>
+  
+  
     <div class="current">
-      <div class="toolbar">
-        <h1>FiT!</h1>
-        <%= link_to "Full Site", root_url(:mobile => 0)%>
-        <%= yield(:toolbar) %>
-      </div>
-      
+	  
       <% unless flash.empty? %>
         <div class="info">
         <%- flash.each do |name, msg| -%>
-          <%= content_tag :div, msg, :id => "flash_#{name}" %>
+		  <div class="alert-message <%= name %> fade in">
+          <a href="#" class="close">x</a>
+          <p><%= msg %></p>
+        </div>
         <%- end -%>
         </div>
       <% end %>
+	  
       <% if !current_user || (current_user && current_user.normal?) %>
         <%= yield %>
       <% else %>
-        A versão movél do site está apenas disponível para utilizadores não administrativos!
-      <% end %>
-      <% if current_user %>
-      <ul>
-        <li><%= link_to "Log out", log_out_path %></li>
-      </ul>
+        A versão movel do site está apenas disponível para utilizadores não administrativos!
       <% end %>
     </div>
   </body>
 </html>
-
-

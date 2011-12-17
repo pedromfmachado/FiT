@@ -14,12 +14,24 @@ load_and_authorize_resource
   end
 
   def edit
-    @aula = Aula.find(params[:aula_id])
+    @aula = Aula.find(params[:id])
     @ginasio = Ginasio.find(params[:ginasio_id])
+
+    @aula.inicio = @aula.inicio.to_s(:time)
   end
 
   def update
 
+    @aula = Aula.find(params[:id])
+    @ginasio = Ginasio.find(params[:ginasio_id])
+
+    respond_to do |format|
+      if @aula.update_attributes(params[:aula])
+        format.html { redirect_to ginasio_aulas_path(@ginasio), :flash => { :success => "Aula alterada com sucesso." } }
+      else
+        format.html { render :action => "edit" }
+      end
+    end
   end
 
   def new
@@ -31,8 +43,6 @@ load_and_authorize_resource
     end
   end
 
-  # POST /estudios
-  # POST /estudios.json
   def create
     params[:aula][:ginasio_id] = params[:ginasio_id]
 		@ginasio = Ginasio.find(params[:ginasio_id])
@@ -44,6 +54,18 @@ load_and_authorize_resource
       else
         format.html { render :action => "new" }
       end
+    end
+  end
+  
+  def destroy
+    aula = Aula.find(params[:id])
+    ginasio = Ginasio.find(params[:ginasio_id])
+
+    aula.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(ginasio_aulas_path(ginasio)) }
+      format.xml  { head :ok }
     end
   end
 

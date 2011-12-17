@@ -1,0 +1,17 @@
+<h1>Notificação</h1>
+<h3><%= @notificacao.titulo %></h3>
+
+<p>
+    <% @notificacao.texto.split("\r\n").each do |line| %>
+    <%= line %> <br/>
+    <% end %>
+</p>
+
+<p>
+        <em>Criado por </em>
+        <strong><%= link_to User.find(@notificacao.admin_id).nome, user_path(@notificacao.admin_id) %></strong>
+        <em>em <%= @notificacao.data %> </em>
+</p>
+
+<%= link_to 'Voltar', notificacaos_path, :class => "btn primary" %>
+

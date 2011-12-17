@@ -22,5 +22,7 @@ class Api::PedidoPlanosController < ApiController
     end
   end
   
+  skip_before_filter :verify_authenticity_token
+
 end
 

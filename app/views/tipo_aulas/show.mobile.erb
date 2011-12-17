@@ -1,0 +1,11 @@
+  <p id="notice"><%= notice %></p>
+
+  <h1>Modalidade</h1>
+  <h3> <%= @tipo_aula.tipo %> </h3>
+
+  <br/>
+
+  <p> <strong>Descrição:</strong> </p>
+  <p> <%= @tipo_aula.descricao %> </p>
+
+  <%= link_to 'Voltar', tipo_aulas_path, :class => "btn primary" %>
