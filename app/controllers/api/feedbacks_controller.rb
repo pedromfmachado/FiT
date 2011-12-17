@@ -11,7 +11,7 @@ class Api::FeedbacksController < ApiController
       end
 
       if feedback.save
-        render :xml => message(Feedback.getFeedbackAula(params[:aula_id]))
+        render :xml => message("success")
       else
         render :xml => message("fail")
       end

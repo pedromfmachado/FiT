@@ -77,6 +77,7 @@ class ReservaAula < ActiveRecord::Base
 			xml.hora Time.now.hour.to_s + ':' + Time.now.min.to_s
 			xml.lugares ReservaAula.lugaresDisponiveis(aula.id)
 			xml.lotacao estudio.lotacao
+            xml.feedback Feedback.getFeedbackAula(aid)
 			if ReservaAula.jaMarcada(uid,aula.id)
 				xml.tem_reserva "sim"
 			else
