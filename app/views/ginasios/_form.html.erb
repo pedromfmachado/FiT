@@ -41,8 +41,8 @@
 
 <%= form_for(@ginasio, :html => { :id => "form_ginasio" }) do |f| %>
   <% if @ginasio.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@ginasio.errors.count, "error") %> prohibited this ginasio from being saved:</h2>
+    <div class="alert-message block-message error">
+      <p><strong>Oh snap!</strong> Alguns campos do formulário estão incorrectos.</p>
 
       <ul>
       <% @ginasio.errors.full_messages.each do |msg| %>

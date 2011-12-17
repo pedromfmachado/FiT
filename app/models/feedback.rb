@@ -23,17 +23,7 @@ class Feedback < ActiveRecord::Base
 
     if ReservaAula.where(:aula_id => aula.id, :user_id => user.id).count == 0
 
-      errors.add(:tipo , "Apenas os membros nao administrativos podem votar")
-
-    end
-
-  end
-
-  def check_member
-
-    if !user.normal?
-
-      errors.add(:tipo , "Apenas os membros nao administrativos podem votar")
+      errors.add(:tipo , "Deve ter frequentado a aula para poder votar")
 
     end
 
@@ -46,7 +36,7 @@ class Feedback < ActiveRecord::Base
     if feedback
       0
     else
-      "%0.1f" % feedback
+      "%0.1f" % feedback.to_f
     end
 
   end
