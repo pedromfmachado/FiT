@@ -13,7 +13,7 @@ class Api::FeedbacksController < ApiController
       if feedback.save
         render :xml => message("success")
       else
-        render :xml => message("fail")
+        render :xml => message(feedback.errors.first[1])
       end
   end
 
