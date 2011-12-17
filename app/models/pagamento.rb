@@ -3,23 +3,22 @@ class Pagamento < ActiveRecord::Base
 
   def update_mensal
 
-    pagamento = Pagamento.new do |p|
+    #if Pagamento.all.max(:month) >= Time.now.
+    User.all.each do |u|
 
-      p.user_id = 5
-      p.pago = true
-      p.mes = 11
+      if u.normal?
+
+        Pagamento.new do |p|
+
+          p.user_id = u.id
+          p.pago = false
+          p.mes = Time.now.month
+
+        end
+
+      end
 
     end
-
-    pagamento.save
-
-    self.delay.update_mensal
-
-  end
-
-  def self.start
-
-    new.update_mensal
 
   end
 end
