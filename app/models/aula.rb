@@ -9,20 +9,20 @@ class Aula < ActiveRecord::Base
   validates_presence_of :staff_id, :message => "em branco. Selecione um professor."
   validates_presence_of :dia, :message => "em branco. Selecione um dia da semana."
 
-  validates_presence_of :inicio, :message => "da aula em branco. Introduza uma hora valida."
+  validates_presence_of :inicio, :message => "da aula em branco. Introduza uma hora valida. (ex: 9:00)"
   validates_format_of :inicio, :message => "da aula invalido. Introduza uma hora valida.",
     :with => /^([01]?\d|2[0-3]):([0-5]\d)$/,
     :unless => Proc.new { |aula| aula.inicio.blank? }
 
-  validates_presence_of :duracao, :message => "da aula em branco. Introduza uma duração valida (em minutos)."
-  validates_numericality_of :duracao, :message => "da aula invalida. Introduza uma duração valida (em minutos).",
+  validates_presence_of :duracao, :message => "da aula em branco. Introduza uma duracao valida (em minutos)."
+  validates_numericality_of :duracao, :message => "da aula invalida. Introduza uma duracao valida (em minutos).",
     :only_integer => true,
     :greater_than_or_equal_to => 0,
     :less_than_or_equal_to => 720,
     :unless => Proc.new { |aula| aula.duracao.blank? }
 
   validates_presence_of :tipo_aula_id, :message => "em branco."
-  validates_presence_of :estudio_id, :message => "em branco. Selecione um estudio."
+  validates_presence_of :estudio_id, :message => "/sala em branco. Selecione uma sala."
   validates_presence_of :ginasio_id, :message => "em branco."
 
   validate :professor_so_da_uma_aula, :sala_so_tem_uma_aula
