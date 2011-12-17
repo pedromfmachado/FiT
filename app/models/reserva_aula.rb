@@ -51,7 +51,6 @@ class ReservaAula < ActiveRecord::Base
   def self.info(uid, aid)
     aula = Aula.find(aid)
     estudio = Estudio.find(aula.estudio_id)
-    feedback = Feedback.getFeedbackAula(aid)
 
     xml = ::Builder::XmlMarkup.new
     xml.instruct!
@@ -62,11 +61,7 @@ class ReservaAula < ActiveRecord::Base
       xml.lugares ReservaAula.lugaresDisponiveis(aula.id)
       xml.lotacao estudio.lotacao
 
-      if feedback 
-        xml.feedback 0
-      else
-        xml.feedback "%0.1f" % feedback
-      end
+      xml.feedback Feedback.getFeedbackAula(aid)
 
       if ReservaAula.jaMarcada(uid,aula.id)
         xml.tem_reserva "sim"
