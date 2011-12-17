@@ -12,7 +12,7 @@
         <table class="zebra-striped">
         <% @aulas_sorted[d].each do |aula| %>
           <tr>
-            <% if Date.today.wday-1 == aula.dia %>
+            <% if Date.today.wday-1 == aula.dia && !aula.jaPassou %>
               <td><%= link_to TipoAula.find(aula.tipo_aula_id).tipo, ginasio_aula_reserva_aulas_path(params[:ginasio_id],aula.id)%> </td>
             <%else%>
               <td><%= TipoAula.find(aula.tipo_aula_id).tipo %></td>

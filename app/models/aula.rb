@@ -58,6 +58,25 @@ class Aula < ActiveRecord::Base
 		end
 	end
 
+	def jaPassou
+		
+		if inicio.hour < Time.now.hour
+			return true
+		
+		elsif inicio.hour == Time.now.hour
+			if inicio.min < Time.now.min
+
+				return true
+
+			else
+				return false
+			end
+		else
+			return false
+		end
+
+	end
+
 	require 'builder'
 	def to_xml(options ={})
 		if options[:builder]
