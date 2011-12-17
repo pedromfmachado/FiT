@@ -3,7 +3,13 @@
 function dar_feedback(url, token, aula_id, valor){
     
     var conteudo = "token="+token+"&aula_id="+aula_id+"&valor="+valor;
-    jQuery.post(url+"api/feedbacks.xml", conteudo);
+    jQuery.post(url+"api/feedbacks.xml", conteudo,
+
+    function(data){    
+
+        $("#resposta").text(data);
+
+    });
 }
 
 function alterar_campos(exercicios){

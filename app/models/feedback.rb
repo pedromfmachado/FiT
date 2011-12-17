@@ -2,20 +2,46 @@ class Feedback < ActiveRecord::Base
   belongs_to :aula
   belongs_to :user
 
-  validates :aula_id, :presence => true
-  validates :valor, :presence => true
+  validates_presence_of :aula_id
+  validates_presence_of :valor
   validates_inclusion_of :valor, :in => 1..5
   validates_uniqueness_of :user_id, :scope => :aula_id
 
+  validate :check_membro, :check_presenca
+
+  def check_membro
+
+    if !user.normal?
+
+      errors.add(:tipo , "Apenas os membros nao administrativos podem votar")
+
+    end
+
+  end
+
+  def check_presenca
+
+    if ReservaAula.where(:aula_id => aula.id, :user_id => user.id).count == 0
+
+      errors.add(:tipo , "Apenas os membros nao administrativos podem votar")
+
+    end
+
+  end
+
+  def check_member
+
+    if !user.normal?
+
+      errors.add(:tipo , "Apenas os membros nao administrativos podem votar")
+
+    end
+
+  end
+
   def self.getFeedbackAula(aid)
 
-    feedbacks = Feedback.where(:aula_id => aid)
-    
-    if feedbacks.count > 0
-        "%0.10f" % (feedbacks.sum(:valor).to_f/feedbacks.count.to_f)
-    else
-        0
-    end
+    "%0.1f" %  Feedback.where(:aula_id => aid).average(:valor)
 
   end
 
@@ -36,7 +62,7 @@ class Feedback < ActiveRecord::Base
     end
 
     if count > 0
-        "%0.10f" % (total.to_f/count.to_f)
+        "%0.1f" % (total.to_f/count.to_f)
     else
         0
     end
@@ -59,7 +85,7 @@ class Feedback < ActiveRecord::Base
     end
 
     if count > 0
-        "%0.10f" % (total.to_f/count.to_f)
+        "%0.1f" %(total.to_f/count.to_f)
     else
         0
     end

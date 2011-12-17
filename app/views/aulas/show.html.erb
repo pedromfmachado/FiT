@@ -10,17 +10,17 @@
 
  
 
-  <h2>Avaliações</h2>
+  <h2>Avaliações</h2><p id="resposta"> </p>
 
    <% for i in 1..5 do %>
 
-    <%= link_to_function image_tag("star.png"), "dar_feedback(\"#{root_url}\",\"#{current_user.token}\", #{@aula.id}, #{i})" %>
+    <%= link_to_function image_tag("star.png"), "dar_feedback(\"#{root_url}\",\"#{current_user.token}\", #{@aula.id}, #{i})", :alt => i %>
 
   <% end %>
 
-  </br>Aula - <%= Feedback.getFeedbackAula(@aula.id) %>
-  </br>Professor - <%= Feedback.getFeedbackProf(@aula.staff_id) %>
-  </br>Modalidade - <%= Feedback.getFeedbackModalidade(@aula.tipo_aula_id) %>
+  </br>Aula : <%= Feedback.getFeedbackAula(@aula.id) %>
+  </br>Professor : <%= Feedback.getFeedbackProf(@aula.staff_id) %>
+  </br>Modalidade : <%= Feedback.getFeedbackModalidade(@aula.tipo_aula_id) %>
 
   <% if Date.today.wday-1 == @aula.dia && !@aula.jaPassou %>
   <h3>

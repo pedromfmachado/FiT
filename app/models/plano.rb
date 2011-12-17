@@ -1,48 +1,46 @@
 class Plano < ActiveRecord::Base
 
-	has_many :exercicios_planoss
-	has_many :exercicios, :through => :exercicios_planoss
-	belongs_to :user
+  has_many :exercicios_planoss
+  has_many :exercicios, :through => :exercicios_planoss
+  belongs_to :user
 
-	validates :data, :presence => true
-	validates :peso, :presence => true
-	validates :altura, :presence => true
+  validates_presence_of :data, :message => "em branco."
+  validates_presence_of :peso, :message => "em branco."
+  validates_presence_of :altura, :message => "em branco."
 
-	def apagarPedido(uid)
+  def apagarPedido(uid)
+    pedido = PedidoPlano.find_by_user_id(uid).destroy
+    if pedido != nil
+      pedido.destroy
+    end
+  end
 
-		pedido = PedidoPlano.find_by_user_id(uid).destroy
-		if pedido != nil
+  require 'builder'
+  def xml_plano()
+    xml = ::Builder::XmlMarkup.new(:indent=>2)
+    xml.instruct!
 
-			pedido.destroy
+    xml.plano do
+      xml.data data
+      xml.altura altura
+      xml.peso peso
 
-		end
+      xml.exercicios do
+        exercicios.each do |ex|
+          dados = ExerciciosPlanos.where(:plano_id => id, :exercicio_id => ex.id).first
 
-	end
-
-	require 'builder'
-	def xml_plano()
-		xml = ::Builder::XmlMarkup.new(:indent=>2)
-		xml.instruct!
-
-		xml.plano do
-			xml.data data
-			xml.altura altura
-			xml.peso peso
-			xml.exercicios do
-				exercicios.each do |ex|
-					dados = ExerciciosPlanos.where(:plano_id => id, :exercicio_id => ex.id).first
-					xml.exercicio do
-						xml.nome ex.nome
-						xml.maquina ex.maquina
-						xml.tipo ex.tipo
-						xml.peso dados.peso
-						xml.series dados.series
-						xml.repeticoes dados.repeticoes
-					end
-				end
-			end
-		end
-	end
-
+          xml.exercicio do
+            xml.nome ex.nome
+            xml.maquina ex.maquina
+            xml.tipo ex.tipo
+            xml.peso dados.peso
+            xml.series dados.series
+            xml.repeticoes dados.repeticoes
+          end
+        end
+      end
+    end
+  end
 
 end
+

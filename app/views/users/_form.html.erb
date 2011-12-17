@@ -38,8 +38,8 @@
         Veja aquilo que tem de mudar:
       </p>
       <ul>
-        <% for message in @user.errors.full_messages %>
-        <li><%= message %></li>
+        <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
         <% end %>
       </ul>
     </div>
