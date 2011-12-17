@@ -36,16 +36,14 @@
 
   <!-- le errors header -->
   <% if @plano.errors.any? %>
-  <div class="row">
-    <div class="alert-message block-message error">
-      <p><strong>Oh snap!</strong> Alguns campos do formulário estão incorrectos.</p>
+  <div class="alert-message block-message error">
+    <p><strong>Oh snap!</strong> Alguns campos do formulário estão incorrectos.</p>
 
-      <ul>
-      <% @plano.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
+    <ul>
+    <% @plano.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
   </div>
   <% end %>
 
