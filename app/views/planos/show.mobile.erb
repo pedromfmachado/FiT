@@ -1,27 +1,48 @@
+﻿<div class="mobile-content">
+<h3> Plano de Treino </h3> </br>
 
-<ul class ="rounded">
-
-<li><p class="normal">
-  <b>Data:</b>
-  <%= @plano.data %>
-</p></li>
-
-<li><p class="normal">
-  <b>Altura:</b>
-  <%= @plano.altura %>
-</p></li>
-
-<li><p class="normal">
-  <b>Peso:</b>
-  <%= @plano.peso %>
-</p></li>
-
+<ul class = "mobile-list">
+<li><p> <b>Data:</b> <%= @plano.data %> </p></li>
+<li><p> <b>Altura:</b> <%= @plano.altura %> </p></li>
+<li><p> <b>Peso:</b> <%= @plano.peso %> </p></li>
 </ul>
 
+<h3> Exercícios </h3> </br>
+<h4> Aeróbicos </h4>
 
-<b> Exercicios: </b><br />
-<ul class="rounded">
-<% @plano.exercicios.each do |ex| %>
-  <li><p class="normal"><%= ex.nome %> - <%= ex.maquina %> - <%= ex.tipo %></p></li>
+<table class="zebra-striped">
+<tr>
+    <th>Nome</th>
+	<th>Máquina</th>
+    <th>Nivel</th>
+    <th>min.</th>
+</tr>
+<% @plano.exercicios.where(:tipo => "Aeróbico").each do |ex| %>
+<% @dados = ExerciciosPlanos.where(:plano_id => @plano.id, :exercicio_id => ex.id).first %>
+<tr>
+	<td><%= ex.nome %></td> <td><%= ex.maquina %></td>
+    <td><%= @dados.peso %></td><td><%= @dados.series %></td>
+</tr>
 <% end %>
-</ul>
+</table>
+
+<h4> Musculação </h4>
+
+<table class="zebra-striped">
+<tr>
+    <th>Nome</th>
+    <th>Máquina</th>
+    <th>Peso</th>
+    <th>Qtd</th>
+</tr>
+<% @plano.exercicios.where(:tipo => "Musculação").each do |ex| %>
+<% @dados = ExerciciosPlanos.where(:plano_id => @plano.id, :exercicio_id => ex.id).first %>
+<tr>
+    <td><%= ex.nome %></td> <td><%= ex.maquina %></td>
+    <td><%= @dados.peso %></td><td><%= @dados.series %>x(<%= @dados.repeticoes %>)</td>
+</tr>
+<% end %>
+</table>
+
+
+<%= link_to 'Voltar', user_planos_path(current_user), :class => "btn primary" %>

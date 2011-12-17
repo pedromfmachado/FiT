@@ -6,7 +6,7 @@ class Aula < ActiveRecord::Base
 
   has_many :reserva_aulas
 
-  validates_presence_of :staff_id, :message => "em branco. Selecione um professor."
+  validates_presence_of :staff_id, :message => "(professor) em branco. Selecione um professor."
   validates_presence_of :dia, :message => "em branco. Selecione um dia da semana."
 
   validates_presence_of :inicio, :message => "da aula em branco. Introduza uma hora valida. (ex: 9:00)"
@@ -22,7 +22,7 @@ class Aula < ActiveRecord::Base
     :unless => Proc.new { |aula| aula.duracao.blank? }
 
   validates_presence_of :tipo_aula_id, :message => "em branco."
-  validates_presence_of :estudio_id, :message => "/sala em branco. Selecione uma sala."
+  validates_presence_of :estudio_id, :message => "(sala) em branco. Selecione uma sala."
   validates_presence_of :ginasio_id, :message => "em branco."
 
   validate :professor_so_da_uma_aula, :sala_so_tem_uma_aula

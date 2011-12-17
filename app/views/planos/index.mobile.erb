@@ -1,9 +1,19 @@
-<h1>Planos</h1>
+<div class="mobile-content">
 
-<ul>
+<h3>Planos</h3>
+
+<table class="zebra-striped">
 <% @planos.each do |plano| %>
-    <li class="arrow"><%= link_to plano.data, user_plano_path(@user,plano) %></li>
+
+<tr>
+	<td class="mobile">
+		<%= link_to user_plano_path(@user,plano) do %> <div class="mobile-cell"><%= plano.data %></div><% end %>
+	</td>
+</tr>
+
 <% end %>
-</ul>
+</table>
 
 <%= link_to 'Voltar', new_session_path, :class => "btn primary" %>
+
+</div>

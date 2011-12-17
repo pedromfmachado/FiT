@@ -34,7 +34,7 @@ class Feedback < ActiveRecord::Base
     feedback = Feedback.where(:aula_id => aid).average(:valor)
   
     if feedback
-      0
+      0.0
     else
       "%0.1f" % feedback.to_f
     end
@@ -60,7 +60,7 @@ class Feedback < ActiveRecord::Base
     if count > 0
         "%0.1f" % (total.to_f/count.to_f)
     else
-        0
+        0.0
     end
 
   end
@@ -83,7 +83,7 @@ class Feedback < ActiveRecord::Base
     if count > 0
         "%0.1f" %(total.to_f/count.to_f)
     else
-        0
+        0.0
     end
 
 

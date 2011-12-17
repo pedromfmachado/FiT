@@ -11,38 +11,49 @@
   
   <body>
   
-  
-  <div class="mobile-topbar">
-	<a class="brand" href="<%= root_url %>"> <%= image_tag "brand_mobile.png" %></a>
+  <div id="container">
+   
+	<div class="mobile-topbar">
+		<a class="brand" href="<%= root_url %>"> <%= image_tag "brand_mobile.png" %></a>
 	
-	<div class="mobile-topbar-buttons">
-		<%= link_to "Full Site", root_url(:mobile => 0), :class => "btn success"%>
+		<div class="mobile-topbar-buttons">
+		<!--<%= link_to "Full Site", root_url(:mobile => 0), :class => "btn success"%>-->
 		
 		<% if current_user %>
 			<%= link_to "Log out", log_out_path, :class =>"btn danger"%>
+			<!--<a class="exit_btn" href="<%= log_out_path %>"> <%= image_tag "power.png" %></a>-->
 		<% end %>
+		</div>
 	</div>
-  </div>
-  
-  
-    <div class="current">
-	  
-      <% unless flash.empty? %>
+
+   
+   <div id="body"> 
+		<% unless flash.empty? %>
         <div class="info">
         <%- flash.each do |name, msg| -%>
-		  <div class="alert-message <%= name %> fade in">
-          <a href="#" class="close">x</a>
-          <p><%= msg %></p>
-        </div>
+			<div class="alert-message <%= name %> fade in">
+			<a href="#" class="close">x</a>
+			<p><%= msg %></p>
+			</div>
         <%- end -%>
-        </div>
-      <% end %>
+		</div>
+		<% end %>
 	  
-      <% if !current_user || (current_user && current_user.normal?) %>
+		<% if !current_user || (current_user && current_user.normal?) %>
         <%= yield %>
-      <% else %>
-        A versão movel do site está apenas disponível para utilizadores não administrativos!
-      <% end %>
-    </div>
+		<% else %>
+		A versão movel do site está apenas disponível para utilizadores não administrativos!
+		<% end %>
+		</div>
+	</div>
+   
+
+	<div class="mobile-footer">
+		<!-- <%= button_to "Back", :back %> -->
+		<p>© Copyright 2011 </p>
+	</div>
+   
+  </div>
+	
   </body>
 </html>

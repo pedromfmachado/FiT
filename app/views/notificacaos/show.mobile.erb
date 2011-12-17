@@ -1,5 +1,7 @@
-<h1>Notificação</h1>
-<h3><%= @notificacao.titulo %></h3>
+<div class="mobile-content">
+
+<h3>Notificação</h3>
+<h4><%= @notificacao.titulo %></h4>
 
 <p>
     <% @notificacao.texto.split("\r\n").each do |line| %>
@@ -7,7 +9,7 @@
     <% end %>
 </p>
 
-<p>
+<p class="mobile-description">
         <em>Criado por </em>
         <strong><%= link_to User.find(@notificacao.admin_id).nome, user_path(@notificacao.admin_id) %></strong>
         <em>em <%= @notificacao.data %> </em>
@@ -15,3 +17,4 @@
 
 <%= link_to 'Voltar', notificacaos_path, :class => "btn primary" %>
 
+</div>
