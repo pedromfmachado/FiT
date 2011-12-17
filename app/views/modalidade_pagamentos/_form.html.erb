@@ -1,0 +1,17 @@
+<%= form_for(@modalidade_pagamento) do |f| %>
+  <% if @modalidade_pagamento.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@modalidade_pagamento.errors.count, "error") %> prohibited this modalidade_pagamento from being saved:</h2>
+
+      <ul>
+      <% @modalidade_pagamento.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

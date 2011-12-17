@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111217154412) do
+ActiveRecord::Schema.define(:version => 20111217231639) do
 
   create_table "admins", :force => true do |t|
     t.integer   "user_id"
@@ -19,15 +19,15 @@ ActiveRecord::Schema.define(:version => 20111217154412) do
   end
 
   create_table "aulas", :force => true do |t|
-    t.integer  "staff_id"
-    t.integer  "estudio_id"
-    t.integer  "tipo_aula_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "ginasio_id"
-    t.integer  "dia"
-    t.integer  "duracao"
-    t.time     "inicio"
+    t.integer   "staff_id"
+    t.integer   "estudio_id"
+    t.integer   "tipo_aula_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "ginasio_id"
+    t.integer   "dia"
+    t.integer   "duracao"
+    t.time      "inicio"
   end
 
   add_index "aulas", ["estudio_id"], :name => "index_aulas_on_estudio_id"
@@ -43,11 +43,11 @@ ActiveRecord::Schema.define(:version => 20111217154412) do
   end
 
   create_table "estudios", :force => true do |t|
-    t.string   "nome"
-    t.integer  "lotacao"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "ginasio_id"
+    t.string    "nome"
+    t.integer   "lotacao"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "ginasio_id"
   end
 
   create_table "exercicios", :force => true do |t|
@@ -69,11 +69,11 @@ ActiveRecord::Schema.define(:version => 20111217154412) do
   end
 
   create_table "feedbacks", :force => true do |t|
-    t.integer  "aula_id"
-    t.integer  "valor"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
+    t.integer   "aula_id"
+    t.integer   "valor"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "user_id"
   end
 
   add_index "feedbacks", ["aula_id"], :name => "index_feedbacks_on_aula_id"
@@ -98,6 +98,13 @@ ActiveRecord::Schema.define(:version => 20111217154412) do
     t.string    "telefone"
   end
 
+  create_table "modalidade_pagamentos", :force => true do |t|
+    t.string   "nome"
+    t.float    "preco"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "notificacaos", :force => true do |t|
     t.date      "data"
     t.string    "titulo"
@@ -108,11 +115,21 @@ ActiveRecord::Schema.define(:version => 20111217154412) do
     t.integer   "ginasio_id"
   end
 
-  create_table "pedido_planos", :id => false, :force => true do |t|
-    t.datetime "data_pedido"
+  create_table "pagamentos", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "mes"
+    t.boolean  "pago"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
+  end
+
+  add_index "pagamentos", ["user_id"], :name => "index_pagamentos_on_user_id"
+
+  create_table "pedido_planos", :id => false, :force => true do |t|
+    t.timestamp "data_pedido"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "user_id"
   end
 
   create_table "planos", :force => true do |t|
@@ -126,11 +143,11 @@ ActiveRecord::Schema.define(:version => 20111217154412) do
   end
 
   create_table "reserva_aulas", :id => false, :force => true do |t|
-    t.integer  "aula_id"
-    t.integer  "user_id"
-    t.date     "dia"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer   "aula_id"
+    t.integer   "user_id"
+    t.date      "dia"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "staffs", :force => true do |t|
@@ -140,10 +157,16 @@ ActiveRecord::Schema.define(:version => 20111217154412) do
   end
 
   create_table "tipo_aulas", :force => true do |t|
-    t.string   "tipo"
-    t.text     "descricao"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "tipo"
+    t.text      "descricao"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+  end
+
+  create_table "turnos", :force => true do |t|
+    t.time      "hora"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "users", :force => true do |t|

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: 
+  mes: 1
+  pago: false
+
+two:
+  user: 
+  mes: 1
+  pago: false

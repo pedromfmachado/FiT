@@ -1,0 +1,21 @@
+<h1>Listing modalidade_pagamentos</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @modalidade_pagamentos.each do |modalidade_pagamento| %>
+  <tr>
+    <td><%= link_to 'Show', modalidade_pagamento %></td>
+    <td><%= link_to 'Edit', edit_modalidade_pagamento_path(modalidade_pagamento) %></td>
+    <td><%= link_to 'Destroy', modalidade_pagamento, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Modalidade pagamento', new_modalidade_pagamento_path %>

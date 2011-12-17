@@ -1,6 +1,8 @@
 Fit::Application.routes.draw do
 
 
+  resources :modalidade_pagamentos
+
   get "reserve_aula/new"
 
   get "aulas/new"

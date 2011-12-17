@@ -8,10 +8,4 @@ class FitMailer < ActionMailer::Base
     mail(:to => user.email, :subject => "Bem vindo ao melhor ginasio de sempre!")
   end
 
-  def pedir_plano(user)
-    @user = user
-    @url = root_url
-    mail(:to => user.email, :subject => "Pedido de novo Plano")
-  end
-
 end
