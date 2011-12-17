@@ -17,8 +17,12 @@ class User < ActiveRecord::Base
   validates :nome, :presence => { :message => "esta em branco." }
   validates_presence_of :datanascimento, :message => "em branco."
   validates_format_of :datanascimento, :message => "invalida. (yyyy/mm/dd)",
-    :with => /^(19\d\d|2\d\d\d)([- \/.])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])$/
-
+    :with => /^(19\d\d|2\d\d\d)([- \/.])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])$/,
+    :unless => Proc.new { |user|
+      (user.datanascimento.nil?
+      || user.datanascimento.blank?
+      || !Date.strptime(user.datanascimento.gsub(/\//, '-').future?
+  }
 
   validates_presence_of :email, :on => :create, :message => "em branco. Introduza o seu email (ex: exemplo@sapo.pt)"
   validates_uniqueness_of :email, :on => :create, :message => "ja existente na base de dados. Introduza outro email."

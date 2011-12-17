@@ -11,7 +11,7 @@ class Feedback < ActiveRecord::Base
     feedbacks = Feedback.where(:aula_id => aid)
     
     if feedbacks.count > 0
-        feedbacks.sum(:valor).to_f/feedbacks.count.to_f
+        "%0.10f" % (feedbacks.sum(:valor).to_f/feedbacks.count.to_f)
     else
         0
     end
@@ -35,7 +35,7 @@ class Feedback < ActiveRecord::Base
     end
 
     if count > 0
-        total.to_f/count.to_f
+        "%0.10f" % (total.to_f/count.to_f)
     else
         0
     end
@@ -58,7 +58,7 @@ class Feedback < ActiveRecord::Base
     end
 
     if count > 0
-        total.to_f/count.to_f
+        "%0.10f" % (total.to_f/count.to_f)
     else
         0
     end
