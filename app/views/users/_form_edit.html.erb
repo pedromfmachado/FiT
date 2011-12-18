@@ -84,7 +84,7 @@
 
   <% if @user.normal? %>
     <div class="clearfix">
-      <%= f.label :ginasio_id, 'Ginasio' %>
+      <%= f.label :modalidade_pagamento_id, 'Frequencia' %>
       <div class="input">
         <%= collection_select("user", "modalidade_pagamento_id", ModalidadePagamento.all, :id, :nome, {}, {  :class => "span6 no-resize" }) %>
       </div>

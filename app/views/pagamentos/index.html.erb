@@ -25,9 +25,10 @@
 			<td><%= pagamento.preco %></td>
 			<% if pagamento.pago %>
 				<td>Sim</td>
+				<td><%= link_to "Cancelar", cancelarpagamento_path(:pagamento_id => pagamento.id), :class => "btn danger" %></td>
 			<% else %>
 				<td> Não </td>
-				<td><%= link_to "Confirmar", confirmarpagamento_path(:pagamento_id => pagamento.id) %></td>
+				<td><%= link_to "Confirmar", confirmarpagamento_path(:pagamento_id => pagamento.id), :class => "btn success" %></td>
 			<% end %>
 
 		</tr>

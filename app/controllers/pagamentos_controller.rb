@@ -35,4 +35,19 @@ class PagamentosController < ApplicationController
 
   end
 
+  def cancelar
+
+    pagamento = Pagamento.find(params[:pagamento_id])
+
+    respond_to do |format|
+
+      if pagamento.update_attributes(:pago => false)
+          format.html {redirect_to pagamentos_path(:mes => pagamento.mes, :ano => pagamento.ano), :flash => {:success => "Confirmado pagamento"}}
+        else
+          format.html {redirect_to pagamentos_path(:mes => pagamento.mes, :ano => pagamento.ano), :flash => {:error => "Problema ao confirmar pagamento"}}
+        end
+    end
+
+  end
+
 end

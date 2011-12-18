@@ -5,7 +5,7 @@ class UsersController < ApplicationController
     if params[:ginasio_id]
       @users = User.where(:ginasio_id => params[:ginasio_id])
     else
-      @users = User.all
+      @users = User.find(:all, :order => 'id')
     end
   end
 
