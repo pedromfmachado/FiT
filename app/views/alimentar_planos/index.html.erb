@@ -1,0 +1,35 @@
+<h1>Listing alimentar_planos</h1>
+
+<table>
+  <tr>
+    <th>Data</th>
+    <th>Pequenoalmoco</th>
+    <th>Manha</th>
+    <th>Almoco</th>
+    <th>Tarde</th>
+    <th>Jantar</th>
+    <th>Ceia</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @alimentar_planos.each do |alimentar_plano| %>
+  <tr>
+    <td><%= alimentar_plano.data %></td>
+    <td><%= alimentar_plano.pequenoalmoco %></td>
+    <td><%= alimentar_plano.manha %></td>
+    <td><%= alimentar_plano.almoco %></td>
+    <td><%= alimentar_plano.tarde %></td>
+    <td><%= alimentar_plano.jantar %></td>
+    <td><%= alimentar_plano.ceia %></td>
+    <td><%= link_to 'Show', user_alimentar_plano_path(@user,alimentar_plano) %></td>
+    <td><%= link_to 'Edit', edit_user_alimentar_plano_path(@user,alimentar_plano) %></td>
+    <td><%= link_to 'Destroy', user_alimentar_plano_path(@user,alimentar_plano), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Alimentar plano', new_user_alimentar_plano_path %>

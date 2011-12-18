@@ -34,7 +34,7 @@ class Feedback < ActiveRecord::Base
     feedback = Feedback.where(:user_id => uid, :aula_id => aid)
 
     if feedback.count > 0
-        feedback.first.valor
+        "%0.1f" % feedback.first.valor
     else
         0.0
     end

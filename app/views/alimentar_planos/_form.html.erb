@@ -1,0 +1,45 @@
+<%= form_for([@user,@alimentar_plano]) do |f| %>
+  <% if @alimentar_plano.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@alimentar_plano.errors.count, "error") %> prohibited this alimentar_plano from being saved:</h2>
+
+      <ul>
+      <% @alimentar_plano.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :data %><br />
+    <%= f.date_select :data %>
+  </div>
+  <div class="field">
+    <%= f.label :pequenoalmoco %><br />
+    <%= f.text_area :pequenoalmoco %>
+  </div>
+  <div class="field">
+    <%= f.label :manha %><br />
+    <%= f.text_area :manha %>
+  </div>
+  <div class="field">
+    <%= f.label :almoco %><br />
+    <%= f.text_area :almoco %>
+  </div>
+  <div class="field">
+    <%= f.label :tarde %><br />
+    <%= f.text_area :tarde %>
+  </div>
+  <div class="field">
+    <%= f.label :jantar %><br />
+    <%= f.text_area :jantar %>
+  </div>
+  <div class="field">
+    <%= f.label :ceia %><br />
+    <%= f.text_area :ceia %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

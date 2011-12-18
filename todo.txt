@@ -2,6 +2,9 @@
 - (DONE) Fazer nested dos pagamentos nos utilizadores
 - (DONE) Cancelar pagamento
 - (DONE) Ver redirecionamento do controlador de pagamentos (nested)
+- Formatar CRUD planos alimentares
+- (DONE) Enviar planos alimentares api
+- (DONE) Nested Planos Alimentares
 - Rever permissões
 - Fazer verificação da hora da aula no feedback
 - Retirar ids de tabelas onde não são necessários
@@ -11,4 +14,4 @@
 
 Módulos em falta:
 - Estatisticas
-- Planos alimentares
+- (DONE) Planos alimentares

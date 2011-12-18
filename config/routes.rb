@@ -1,19 +1,16 @@
 Fit::Application.routes.draw do
 
 
+
   get "pagamento/index"
 
   get "pagamento/confirmar"
-
-  
 
   get "reserve_aula/new"
 
   get "aulas/new"
 
   get "aulas/index"
-
-  
 
   get "cidade/index"
 
@@ -34,6 +31,7 @@ Fit::Application.routes.draw do
     resources :planos
     resources :reserva_aulas
     resources :pagamentos
+    resources :alimentar_planos
   end
 
   resources :tipo_aulas
@@ -69,6 +67,7 @@ Fit::Application.routes.draw do
     resources :pedido_planos
     resources :feedbacks
     resources :pagamentos
+    resources :alimentar_planos
     match 'desmarcar' => 'reserva_aulas#destroy', :as => "desmarcar"
     match 'users/edit' => 'users#edit', :as => "users/edit"
     match 'getinfo' => 'reserva_aulas#get_info', :as => "getinfo"
