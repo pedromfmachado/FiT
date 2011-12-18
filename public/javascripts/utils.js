@@ -7,9 +7,9 @@ function dar_feedback(url, token, aula_id, valor){
 
     function(data){    
 
-        xml.responseXML.documentElement.getElementsByTagName("feedback");
+        feedback = data.getElementsByTagName("feedback");
 
-        alert(data)
+        alert(feedback[0].getElementsByTagName("message")[0].firstChild.nodeValue);
 
     });
 }
@@ -56,7 +56,6 @@ function getGinasios(){
     var xml = new XMLHttpRequest();
 		xml.open("GET","/ginasiosperto.xml?cidade="+$("#_cidade option:selected").text() + "&km=" + $("#distancia").val(), false);
 		xml.send();
-    console.log(xml.responseXML);
 		ginasios = xml.responseXML.documentElement.getElementsByTagName("ginasio");
 
     $("#ginasios").html("");

@@ -2,6 +2,8 @@
   <h1>Plano Alimentar nº <%= @alimentar_plano.id %></h1>
 
   <div class="row spaced-lines">
+
+    <!-- le dados importantes, para usabilidade -->
     <div class="row">
       <div class="span3 right-align"><strong>Utilizador:</strong></div>
       <div class="span8"><%= @user.nome %></div>
@@ -11,46 +13,50 @@
       <div class="span3 right-align"><strong>Ginásio:</strong></div>
       <div class="span8"><%= @user.ginasio.nome %></div>
     </div>
+
+    <div class="row">
+      <div class="span3 right-align"><strong>Data do Plano Alimentar:</strong></div>
+      <div class="span8"><%= @alimentar_plano.data %></div>
+    </div>
+
   </div>
 
-  <p>
-    <b>Data:</b>
-    <%= @alimentar_plano.data %>
-  </p>
+  <div class="row spaced-lines topSpacing2">
+    <!-- le campos do plano -->
+    <div class="plano-item">
+      <p><strong>Pequeno Almoço:</strong></p>
+      <p><%= @alimentar_plano.pequenoalmoco %> </p>
+    </div>
 
-  <p>
-    <b>Pequenoalmoco:</b>
-    <%= @alimentar_plano.pequenoalmoco %>
-  </p>
+    <div class="plano-item">
+      <p><strong>Manhã:</strong></p>
+      <p> <%= @alimentar_plano.manha %> </p>
+    </div>
 
-  <p>
-    <b>Manha:</b>
-    <%= @alimentar_plano.manha %>
-  </p>
+    <div class="plano-item">
+      <p><strong>Almoço:</strong></p>
+      <p> <%= @alimentar_plano.almoco %> </p>
+    </div>
 
-  <p>
-    <b>Almoco:</b>
-    <%= @alimentar_plano.almoco %>
-  </p>
+    <div class="plano-item">
+      <p><strong>Tarde:</strong></p>
+      <p> <%= @alimentar_plano.tarde %> </p>
+    </div>
 
-  <p>
-    <b>Tarde:</b>
-    <%= @alimentar_plano.tarde %>
-  </p>
+    <div class="plano-item">
+      <p><strong>Jantar:</strong></p>
+      <p> <%= @alimentar_plano.jantar %> </p>
+    </div>
 
-  <p>
-    <b>Jantar:</b>
-    <%= @alimentar_plano.jantar %>
-  </p>
-
-  <p>
-    <b>Ceia:</b>
-    <%= @alimentar_plano.ceia %>
-  </p>
+    <div class="plano-item">
+      <p><strong>Ceia:</strong></p>
+      <p> <%= @alimentar_plano.ceia %> </p>
+    </div>
+  </div>
 
   <div class="actions topSpacing1">
-    <%= link_to 'Edit', edit_user_alimentar_plano_path(@user,@alimentar_plano) %>
-    <%= link_to 'Back', user_alimentar_planos_path(@user) %>
+    <%= link_to 'Editar Plano Alimentar', edit_user_alimentar_plano_path(@user,@alimentar_plano), :class => "btn success" %>
+    <%= link_to 'Voltar a Lista de Planos', user_alimentar_planos_path(@user), :class => "btn primary" %>
   </div>
 </div>
 

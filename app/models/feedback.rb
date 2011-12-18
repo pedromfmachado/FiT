@@ -3,25 +3,19 @@ class Feedback < ActiveRecord::Base
   belongs_to :user
 
   validates_presence_of :aula_id
-  validates_presence_of :valor
-  validates_inclusion_of :valor, :in => 1..5
-  validates_uniqueness_of :user_id, :scope => :aula_id
+  validates_presence_of :valor, :message => "Deve enviar um valor"
+  validates_inclusion_of :valor, :in => 1..5, :message => "O valor deve ser entre 1 e 5"
+  validates_uniqueness_of :user_id, :scope => :aula_id, :message => "Já deu o seu feedback para esta aula"
 
-  validate :check_membro, :check_presenca
+  validate :check_membro
 
   def check_membro
 
-    if !user.normal?
+    if User.find(user_id).normal?
 
       errors.add(:tipo , "Apenas os membros nao administrativos podem votar")
 
-    end
-
-  end
-
-  def check_presenca
-
-    if ReservaAula.where(:aula_id => aula.id, :user_id => user.id).count == 0
+    elsif ReservaAula.where(:aula_id => aula.id, :user_id => user.id).count == 0
 
       errors.add(:tipo , "Deve ter frequentado a aula para poder votar")
 

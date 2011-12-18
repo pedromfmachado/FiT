@@ -6,13 +6,12 @@
 - (DONE) Enviar planos alimentares api
 - (DONE) Nested Planos Alimentares
 - (DONE) Rever permissões
-- Apresentar popup quando é dado feedback (com informação)
-- Apagar pedido de plano quando é criado o plano (verificar se já é feito)
-- Tirar if da verificação de feedback (ver isso com o andré)
+- (DONE) Apresentar popup quando é dado feedback (com informação)
+- (DONE) Apagar pedido de plano quando é criado o plano (verificar se já é feito)
+- (DONE) Tirar if da verificação de feedback (ver isso com o andré)
 - Fazer verificação da hora da aula no feedback
 - Retirar ids de tabelas onde não são necessários
 - Tratar das verificações dos pagamentos e modalidades de pagamento
-- Editar planos
 - Gerar password e enviar mail a informar
 
 Módulos em falta:

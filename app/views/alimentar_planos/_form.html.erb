@@ -1,7 +1,25 @@
-<%= form_for([@user,@alimentar_plano]) do |f| %>
+<% content_for :head do %>
+<%= javascript_include_tag "validate-user-form.js" %>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+
+    jQuery.validator.addMethod("exactLength", function(value, element, param) {
+      return this.optional(element) || value.length == param;
+    }, jQuery.format("Please enter exactly {0} characters."));
+
+
+  });
+</script>
+<% end %>
+
+<%= form_for([@user,@alimentar_plano], :html => { :id => "form_planoalimentar"} ) do |f| %>
   <% if @alimentar_plano.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@alimentar_plano.errors.count, "error") %> prohibited this alimentar_plano from being saved:</h2>
+    <div class="alert-message block-message error">
+      <p>
+        <strong>Oh snap! O formulário tem alguns erros.</strong>
+        Veja aquilo que tem de mudar:
+      </p>
 
       <ul>
       <% @alimentar_plano.errors.full_messages.each do |msg| %>
@@ -11,35 +29,57 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :data %><br />
-    <%= f.date_select :data %>
+  <div class="clearfix">
+    <%= f.label :data %>
+    <div class="input">
+      <%= f.text_field :data, :class => "span2" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :pequenoalmoco %><br />
-    <%= f.text_area :pequenoalmoco %>
+
+  <div class="clearfix">
+    <%= f.label "Pequeno Almoço" %>
+    <div class="input">
+      <%= f.text_area :pequenoalmoco %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :manha %><br />
-    <%= f.text_area :manha %>
+
+  <div class="clearfix">
+    <%= f.label "Manhã" %>
+    <div class="input">
+      <%= f.text_area :manha %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :almoco %><br />
-    <%= f.text_area :almoco %>
+
+  <div class="clearfix">
+    <%= f.label "Almoço" %>
+    <div class="input">
+      <%= f.text_area :almoco %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :tarde %><br />
-    <%= f.text_area :tarde %>
+
+  <div class="clearfix">
+    <%= f.label :tarde %>
+    <div class="input">
+      <%= f.text_area :tarde %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :jantar %><br />
-    <%= f.text_area :jantar %>
+
+  <div class="clearfix">
+    <%= f.label :jantar %>
+    <div class="input">
+      <%= f.text_area :jantar %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :ceia %><br />
-    <%= f.text_area :ceia %>
+
+  <div class="clearfix">
+    <%= f.label :ceia %>
+    <div class="input">
+      <%= f.text_area :ceia %>
+    </div>
   </div>
+
+
   <div class="actions">
-    <%= f.submit %>
-  </div>
+    <%= f.submit "Guardar", :class => "btn success" %>
+
 <% end %>

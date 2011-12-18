@@ -20,7 +20,7 @@ class Api::ReservaAulasController < ApiController
 		@user = User.find_by_token(params[:token])
 		@reserva = ReservaAula.new(:aula_id => params[:aula_id], :user_id => @user.id, :dia => Date.today)
 
-    if Date.today.wday-1 == @reserva.aula.dia 
+    if Date.today.wday == @reserva.aula.dia 
 
 		  if @reserva.save
 		    render :xml => message("success")

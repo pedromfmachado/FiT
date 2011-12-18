@@ -25,7 +25,7 @@ bob:
 <% salt = BCrypt::Engine.generate_salt %>
 <% password = BCrypt::Engine.hash_secret("penadeacucar", salt) %>
 charlie:
-  email: pedro.machado@fe.up.pt
+  email: machado.pedro@fe.up.pt
   password_hash: <%= password %>
   password_salt: <%= salt %>
   nome: Charlie Carroll

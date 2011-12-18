@@ -3,13 +3,8 @@ body {
   padding-bottom: 40px; /* used to fix bottombar */
 }
 
-.right-align {
-  text-align: right;
-}
-
-.center-align {
-  text-align: center;
-}
+.right-align  { text-align: right; }
+.center-align { text-align: center;}
 
 .row address {
   margin-top: 8px;
@@ -53,6 +48,13 @@ input.small-lborder, select.small-lborder {
   height: 150px;
   margin-bottom: 20px;
 }
+
+/********************************/
+.plano-item {
+  margin-left: 40px;
+  margin-bottom: 20px;
+}
+
 
 /********************************/
 footer {

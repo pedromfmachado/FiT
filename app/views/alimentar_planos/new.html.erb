@@ -1,5 +1,22 @@
-<h1>New alimentar_plano</h1>
+<div class="span16">
+  <h1>Novo Plano Alimentar</h1>
 
-<%= render 'form' %>
+  <div class="row spaced-lines">
+    <div class="row">
+      <div class="span3 right-align"><strong>Utilizador:</strong></div>
+      <div class="span8"><%= @user.nome %></div>
+    </div>
 
-<%= link_to 'Back', user_alimentar_planos_path(@user) %>
+    <div class="row">
+      <div class="span3 right-align"><strong>Ginásio:</strong></div>
+      <div class="span8"><%= @user.ginasio.nome %></div>
+    </div>
+  </div>
+
+  <div class="row topSpacing1">
+    <%= render 'form' %>
+      <%= link_to 'Cancelar', user_alimentar_planos_path(@user), :class => "btn danger" %>
+    </div>
+  </div>
+
+</div>

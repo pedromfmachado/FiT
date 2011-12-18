@@ -59,7 +59,7 @@ class PlanosController < ApplicationController
 
     respond_to do |format|
       if @plano.save
-	PedidoPlano.delete_all(:user_id => @plano.user.id)
+	    PedidoPlano.delete_all(:user_id => @plano.user.id)
         format.html { redirect_to(user_planos_path(@user), :flash => { :success => "Plano de treinos criado com sucesso!" }) }
         format.xml  { render :xml => @plano, :status => :created, :location => @plano }
       else
