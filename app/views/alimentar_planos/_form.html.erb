@@ -32,49 +32,49 @@
   <div class="clearfix">
     <%= f.label :data %>
     <div class="input">
-      <%= f.text_field :data, :class => "span2" %>
+      <%= f.text_field :data, :class => "span2", :disabled => true %>
     </div>
   </div>
 
   <div class="clearfix">
     <%= f.label "Pequeno Almoço" %>
     <div class="input">
-      <%= f.text_area :pequenoalmoco %>
+      <%= f.text_area :pequenoalmoco, { :rows => 6, :class => "span10 no-resize" } %>
     </div>
   </div>
 
   <div class="clearfix">
     <%= f.label "Manhã" %>
     <div class="input">
-      <%= f.text_area :manha %>
+      <%= f.text_area :manha, { :rows => 6, :class => "span10 no-resize" } %>
     </div>
   </div>
 
   <div class="clearfix">
     <%= f.label "Almoço" %>
     <div class="input">
-      <%= f.text_area :almoco %>
+      <%= f.text_area :almoco, { :rows => 6, :class => "span10 no-resize" } %>
     </div>
   </div>
 
   <div class="clearfix">
     <%= f.label :tarde %>
     <div class="input">
-      <%= f.text_area :tarde %>
+      <%= f.text_area :tarde, { :rows => 6, :class => "span10 no-resize" } %>
     </div>
   </div>
 
   <div class="clearfix">
     <%= f.label :jantar %>
     <div class="input">
-      <%= f.text_area :jantar %>
+      <%= f.text_area :jantar, { :rows => 6, :class => "span10 no-resize" } %>
     </div>
   </div>
 
   <div class="clearfix">
     <%= f.label :ceia %>
     <div class="input">
-      <%= f.text_area :ceia %>
+      <%= f.text_area :ceia, { :rows => 6, :class => "span10 no-resize" } %>
     </div>
   </div>
 

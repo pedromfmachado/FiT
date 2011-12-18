@@ -5,7 +5,7 @@ class Feedback < ActiveRecord::Base
   validates_presence_of :aula_id
   validates_presence_of :valor, :message => "Deve enviar um valor"
   validates_inclusion_of :valor, :in => 1..5, :message => "O valor deve ser entre 1 e 5"
-  validates_uniqueness_of :user_id, :scope => :aula_id, :message => "Já deu o seu feedback para esta aula"
+  validates_uniqueness_of :user_id, :scope => :aula_id, :message => "Ja deu o seu feedback para esta aula"
 
   validate :check_membro
 
