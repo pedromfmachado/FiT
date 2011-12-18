@@ -37,9 +37,8 @@ class Api::ReservaAulasController < ApiController
 
   def destroy
     @user = User.find_by_token(params[:token])
-    @reserva = ReservaAula.where(:aula_id => params[:aula_id], :user_id => @user.id, :dia => Date.today).first
     
-    if @reserva.destroy
+    if ReservaAula.delete_all(:aula_id => params[:aula_id], :user_id => @user.id, :dia => Date.today)
       render :xml => message("success")
     else
       render :xml => message("fail")
