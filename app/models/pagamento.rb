@@ -3,16 +3,19 @@ class Pagamento < ActiveRecord::Base
 
   def update_mensal
 
-    #if Pagamento.all.max(:month) >= Time.now.
-    User.all.each do |u|
+    if Pagamento.maximum(:ano) <= Time.now.year &&  Pagamento.maximum(:mes) < Time.now.month
+      User.all.each do |u|
 
-      if u.normal?
+        if u.normal?
 
-        Pagamento.new do |p|
+          Pagamento.new do |p|
 
-          p.user_id = u.id
-          p.pago = false
-          p.mes = Time.now.month
+            p.user_id = u.id
+            p.pago = false
+            p.mes = Time.now.month
+            p.ano = Time.now.year
+
+          end
 
         end
 
@@ -21,4 +24,5 @@ class Pagamento < ActiveRecord::Base
     end
 
   end
+  
 end

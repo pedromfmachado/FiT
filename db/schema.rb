@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111217231639) do
+ActiveRecord::Schema.define(:version => 20111218000736) do
 
   create_table "admins", :force => true do |t|
     t.integer   "user_id"
@@ -121,6 +121,7 @@ ActiveRecord::Schema.define(:version => 20111217231639) do
     t.boolean  "pago"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "ano"
   end
 
   add_index "pagamentos", ["user_id"], :name => "index_pagamentos_on_user_id"
@@ -182,6 +183,7 @@ ActiveRecord::Schema.define(:version => 20111217231639) do
     t.string    "token"
     t.string    "url_foto"
     t.integer   "ginasio_id"
+    t.integer   "modalidade_pagamento_id"
   end
 
 end
