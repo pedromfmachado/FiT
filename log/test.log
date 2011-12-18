@@ -4554,3 +4554,57 @@ test/unit/user_test.rb:1
   [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "estudios"
   [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "estudios" ("created_at", "updated_at", "lotacao", "nome", "id") VALUES ('2011-12-18 19:20:13', '2011-12-18 19:20:13', 1, 'MyString', 298486374)[0m
   [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "estudios" ("created_at", "updated_at", "lotacao", "nome", "id") VALUES ('2011-12-18 19:20:13', '2011-12-18 19:20:13', 1, 'MyString', 980190962)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tipo_aulas"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 19:30:08', '2011-12-18 19:30:08', 298486374, 'MyText')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 19:30:08', '2011-12-18 19:30:08', 980190962, 'MyText')[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "pedido_planos"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 19:30:08', '2011-12-18 19:30:08', '2011-12-15 11:20:49', 1)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 19:30:08', '2011-12-18 19:30:08', '2011-12-15 11:20:49', 1)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "notificacaos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 19:30:08', NULL, '2011-12-18 19:30:08', NULL, NULL, 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 19:30:08', NULL, '2011-12-18 19:30:08', NULL, NULL, 980190962)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "staffs"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 19:30:08', '2011-12-18 19:30:08', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 19:30:08', '2011-12-18 19:30:08', 980190962)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "pagamentos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 19:30:08', '2011-12-18 19:30:08', 298486374, 'f', 1)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 19:30:08', '2011-12-18 19:30:08', 980190962, 'f', 1)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "exercicios_planos"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "exercicios_planos" ("plano_id", "repeticoes", "series", "exercicio_id", "peso") VALUES (NULL, 1, 1, NULL, 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercicios_planos" ("plano_id", "repeticoes", "series", "exercicio_id", "peso") VALUES (NULL, 1, 1, NULL, 1)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "ginasio_notificacaos"[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "ginasios"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "ginasios" ("created_at", "latitude", "updated_at", "nome", "id", "longitude") VALUES ('2011-12-18 19:30:08', 1.5, '2011-12-18 19:30:08', 'MyString', 298486374, 1.5)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "ginasios" ("created_at", "latitude", "updated_at", "nome", "id", "longitude") VALUES ('2011-12-18 19:30:08', 1.5, '2011-12-18 19:30:08', 'MyString', 980190962, 1.5)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 19:30:09', 934567890, '2011-12-18 19:30:09', '1983-07-30', 'David Vanilla', 127326141, '$2a$10$unhoakrTmdnli03/CirrV.', 'Largo Chelas\n1900-159\nLISBOA', '$2a$10$unhoakrTmdnli03/CirrV.Ste/j5XEy8Numw1qEgKVNsn99iecHXy', 'ei08119@fe.up.pt')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 19:30:09', '00351 220001002', '2011-12-18 19:30:09', '1985-01-01', 'Alice Jenkins-Stokes', 663665735, '$2a$10$mdMxBWJ2Lb2TwVsrSYxMTu', 'Rua do Bonjardim,\nnº300\n4000-114\nPORTO', '$2a$10$mdMxBWJ2Lb2TwVsrSYxMTughJZo7G0mUvI0cMTxjDQXIXj8AyL3CC', 'valter.pinho0@gmail.com')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 19:30:09', 351913777888, '2011-12-18 19:30:09', '1973-05-26', 'Charlie Carroll', 786122151, '$2a$10$BhsGKDal7n2MQNfvPRIPJu', 'Rua André de Resende,\nnº111\n4150-069\nPORTO', '$2a$10$BhsGKDal7n2MQNfvPRIPJu6yDD8l5aIvoWp.MNGXlNkgdk.2pLDOe', 'machado.pedro@fe.up.pt')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 19:30:09', 961101106, '2011-12-18 19:30:09', '1990-12-25', 'Bob Thomas Hamilton', 902541635, '$2a$10$9GQ78MR2fam8b/bq3VlXw.', 'Rua 1º de Dezembro,\n4425-601\nMAIA', '$2a$10$9GQ78MR2fam8b/bq3VlXw.cCDrMQLRndVKDoIy1vu2gZfGCrXsHFy', 'ei08139@fe.up.pt')[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "modalidade_pagamentos"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "modalidade_pagamentos" ("created_at", "updated_at", "id") VALUES ('2011-12-18 19:30:09', '2011-12-18 19:30:09', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "modalidade_pagamentos" ("created_at", "updated_at", "id") VALUES ('2011-12-18 19:30:09', '2011-12-18 19:30:09', 980190962)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "reserva_aulas"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "reserva_aulas" ("created_at", "updated_at", "dia", "user_id", "aula_id") VALUES ('2011-12-18 19:30:09', '2011-12-18 19:30:09', '2011-12-13', 1, 1)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "reserva_aulas" ("created_at", "updated_at", "dia", "user_id", "aula_id") VALUES ('2011-12-18 19:30:09', '2011-12-18 19:30:09', '2011-12-13', 1, 1)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "exercicios"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "exercicios" ("tipo", "created_at", "updated_at", "nome", "maquina", "id") VALUES ('MyString', '2011-12-18 19:30:09', '2011-12-18 19:30:09', 'MyString', 'MyString', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "exercicios" ("tipo", "created_at", "updated_at", "nome", "maquina", "id") VALUES ('MyString', '2011-12-18 19:30:09', '2011-12-18 19:30:09', 'MyString', 'MyString', 980190962)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "cidades"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "cidades" ("created_at", "updated_at", "nome", "id") VALUES ('2011-12-18 19:30:09', '2011-12-18 19:30:09', 'MyString', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "cidades" ("created_at", "updated_at", "nome", "id") VALUES ('2011-12-18 19:30:09', '2011-12-18 19:30:09', 'MyString', 980190962)[0m
+  [1m[35mFixture Delete (0.3ms)[0m  DELETE FROM "aulas"
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "admins"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "admins" ("created_at", "updated_at", "id", "user_id") VALUES ('2011-12-18 19:30:09', '2011-12-18 19:30:09', 976369075, 902541635)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "planos"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "planos" ("created_at", "data", "updated_at", "id", "altura", "peso") VALUES ('2011-12-18 19:30:09', 'MyString', '2011-12-18 19:30:09', 298486374, 1, 1)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "planos" ("created_at", "data", "updated_at", "id", "altura", "peso") VALUES ('2011-12-18 19:30:09', 'MyString', '2011-12-18 19:30:09', 980190962, 1, 1)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "alimentar_planos"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "alimentar_planos" ("created_at", "manha", "data", "updated_at", "jantar", "almoco", "ceia", "id", "tarde", "pequenoalmoco") VALUES ('2011-12-18 19:30:09', 'MyText', '2011-12-18', '2011-12-18 19:30:09', 'MyText', 'MyText', 'MyText', 298486374, 'MyText', 'MyText')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "alimentar_planos" ("created_at", "manha", "data", "updated_at", "jantar", "almoco", "ceia", "id", "tarde", "pequenoalmoco") VALUES ('2011-12-18 19:30:09', 'MyText', '2011-12-18', '2011-12-18 19:30:09', 'MyText', 'MyText', 'MyText', 980190962, 'MyText', 'MyText')
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "feedbacks"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "feedbacks" ("created_at", "updated_at", "valor", "id") VALUES ('2011-12-18 19:30:09', '2011-12-18 19:30:09', 1, 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "updated_at", "valor", "id") VALUES ('2011-12-18 19:30:09', '2011-12-18 19:30:09', 1, 980190962)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "estudios"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "estudios" ("created_at", "updated_at", "lotacao", "nome", "id") VALUES ('2011-12-18 19:30:09', '2011-12-18 19:30:09', 1, 'MyString', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "estudios" ("created_at", "updated_at", "lotacao", "nome", "id") VALUES ('2011-12-18 19:30:09', '2011-12-18 19:30:09', 1, 'MyString', 980190962)

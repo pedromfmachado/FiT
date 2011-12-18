@@ -11,10 +11,10 @@ class FitMailerTest < ActionMailer::TestCase
   end
 
   def teardown
-    @time = nil
-    @user = nil
+    @time     = nil
+    @user     = nil
     @password = nil
-    @mail = nil
+    @mail     = nil
   end
 
   test "welcome_email" do

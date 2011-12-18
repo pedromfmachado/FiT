@@ -26,7 +26,7 @@
     <% @pagamentos.each do |pagamento| %>
       <tr>
         <td><%= link_to pagamento.user.nome, pagamento.user %></td>
-        <td><%= pagamento.modalidade_pagamento.nome %></td>
+        <td><%= pagamento.modalidade_pagamento.nome if pagamento.modalidade_pagamento_id%></td>
         <td><%= pagamento.preco %></td>
 
         <% if pagamento.pago && !current_user.normal? %>
