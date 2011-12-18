@@ -1,6 +1,8 @@
-<h1>Editing modalidade_pagamento</h1>
+<div class="span14">
+  <h1>Editar Modalidade de Pagamento</h1>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @modalidade_pagamento %> |
-<%= link_to 'Back', modalidade_pagamentos_path %>
+  <%= render 'form' %>
+    <%= link_to 'Cancelar', @modalidade_pagamento, :class => "btn danger" %>
+    <%= link_to 'Ver Modalidades de Pagamento', modalidade_pagamentos_path, :class => "btn primary" %>
+    </div>
+</div>

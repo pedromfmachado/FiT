@@ -44,7 +44,7 @@ class TipoAulasController < ApplicationController
 
     respond_to do |format|
       if @tipo_aula.save
-        format.html { redirect_to @tipo_aula, :notice => 'Tipo aula was successfully created.' }
+        format.html { redirect_to @tipo_aula, :flash => { :success => 'Tipo de aula (modalidade) criado com sucesso.' } }
         format.json { render :json => @tipo_aula, :status => :created, :location => @tipo_aula }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class TipoAulasController < ApplicationController
 
     respond_to do |format|
       if @tipo_aula.update_attributes(params[:tipo_aula])
-        format.html { redirect_to @tipo_aula, :notice => 'Tipo aula was successfully updated.' }
+        format.html { redirect_to @tipo_aula, :flash => { :success => 'Tipo de aula (modalidade) alterado com sucesso.' } }
         format.json { head :ok }
       else
         format.html { render :action => "edit" }

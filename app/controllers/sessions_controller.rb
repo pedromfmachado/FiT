@@ -24,7 +24,7 @@ class SessionsController < ApplicationController
   def destroy
     session[:user_id] = nil
     respond_to do |format|
-        format.html {redirect_to(root_url, :flash => {:info => "Log out efectuado com sucesso."} )}
+        format.html {redirect_to(root_url, :flash => { :info => "Log out efectuado com sucesso."} )}
         format.mobile {redirect_to(new_session_path, :flash => {:info => "Log out efectuado com sucesso."})}
     end
   end

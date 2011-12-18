@@ -44,7 +44,7 @@ class ModalidadePagamentosController < ApplicationController
 
     respond_to do |format|
       if @modalidade_pagamento.save
-        format.html { redirect_to @modalidade_pagamento, :notice => 'Modalidade pagamento was successfully created.' }
+        format.html { redirect_to @modalidade_pagamento, :flash => { :success => 'Modalidade de pagamento criada com sucesso.'} }
         format.json { render :json => @modalidade_pagamento, :status => :created, :location => @modalidade_pagamento }
       else
         format.html { render :action => "new" }
@@ -60,7 +60,7 @@ class ModalidadePagamentosController < ApplicationController
 
     respond_to do |format|
       if @modalidade_pagamento.update_attributes(params[:modalidade_pagamento])
-        format.html { redirect_to @modalidade_pagamento, :notice => 'Modalidade pagamento was successfully updated.' }
+        format.html { redirect_to @modalidade_pagamento, :flash => { :success => 'Modalidade de pagamento alterada com sucesso.'} }
         format.json { head :ok }
       else
         format.html { render :action => "edit" }

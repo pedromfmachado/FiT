@@ -1,8 +1,50 @@
-<%= form_for(@modalidade_pagamento) do |f| %>
-  <% if @modalidade_pagamento.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@modalidade_pagamento.errors.count, "error") %> prohibited this modalidade_pagamento from being saved:</h2>
+<% content_for :head do %>
 
+<script type="text/javascript">
+  $(document).ready(function() {
+
+    jQuery.validator.addMethod("floatNumber", function(value, element, param) {
+      if (this.optional(element))
+        return true;
+
+      var re = /^\d+.\d$/;
+      return re.test(value) == param;
+    }, "Invalid float number.");
+
+
+  $("#form_modalpagamento").validate( {
+    rules: {
+      "modalidade_pagamento[nome]": "required",
+      "modalidade_pagamento[preco]": {
+        required: true,
+        floatNumber: true,
+      }
+    },
+    messages: {
+      "modalidade_pagamento[nome]": "Introduza um nome válido",
+      "modalidade_pagamento[preco]": "Introduza o preço correspondente (ex: 30.00 euros)"
+    },
+
+    // add/remove bootstrap error classes
+    highlight: function (element, errorClass, validClass) {
+      $(element).parents("div[class='clearfix']").addClass("error");
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).parents(".error").removeClass("error");
+    },
+    errorElement: 'p'
+  });
+  });
+</script>
+<% end %>
+
+<%= form_for(@modalidade_pagamento, :html => {:id => "form_modalpagamento"}) do |f| %>
+  <% if @modalidade_pagamento.errors.any? %>
+    <div class="alert-message block-message error">
+      <p>
+        <strong>Oh snap! O formulário tem alguns erros.</strong>
+        Veja aquilo que tem de mudar:
+      </p>
       <ul>
       <% @modalidade_pagamento.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -11,7 +53,20 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="clearfix">
+    <%= f.label :nome %>
+    <div class="input">
+      <%= f.text_field :nome, :class => "span4" %>
+    </div>
   </div>
+
+  <div class="clearfix">
+    <%= f.label "Preço (euros)" %>
+    <div class="input">
+      <%= f.text_field :preco, :class => "span2" %>
+    </div>
+  </div>
+
+  <div class="actions topSpacing1">
+    <%= f.submit "Guardar Modalidade", :class => "btn success" %>
 <% end %>

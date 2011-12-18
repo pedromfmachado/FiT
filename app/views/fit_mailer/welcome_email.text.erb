@@ -2,7 +2,11 @@ Bem vindo ao FiT, <%= @user.nome %>
 ===============================================
  
 Foi registado com sucesso no melhor ginásio de sempre.
-Comece a usar todo o potencial deste ginásio aqui: <a href="<%=@url%>"> <%= @url %> </a>.
+Tem aqui as suas credenciais de acesso:
+  -> Email: <%= @user.email %>
+  -> Password: <%= @password %>
+
+Comece a usar todo o potencial deste ginásio aqui: <%= @url %>.
  
 Tenha um bom dia!
 

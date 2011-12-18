@@ -6,9 +6,10 @@ class User < ActiveRecord::Base
   has_many :reserva_planos
 
   belongs_to :ginasio
+  belongs_to :modalidade_pagamento
   has_one :pedido_plano
 
-  attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento, :url_foto, :ginasio_id
+  attr_accessible :email, :password, :password_confirmation, :nome, :morada, :telefone, :datanascimento, :url_foto, :ginasio_id, :modalidade_pagamento_id
 
   attr_accessor :password
   before_save :encrypt_password
@@ -34,7 +35,7 @@ class User < ActiveRecord::Base
   validates_presence_of :morada, :message => "em branco."
   validates_presence_of :ginasio_id
 
-  validates_presence_of :password, :message => "em branco."
+  validates_presence_of :password, :on => :create, :message => "em branco."
   validates_length_of :password, :in => 6..20, :on => :create,
     :unless => Proc.new { |user| user.password.blank? },
     :too_long => "demasiado grande. Tem de ter entre 6 a 20 caracteres",

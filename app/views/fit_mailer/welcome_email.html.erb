@@ -6,8 +6,18 @@
   <body>
     <h1>Bem vindo ao FiT, <%= @user.nome %></h1>
     <p>
-      Foi registado com sucesso no melhor ginásio de sempre.
+      Foi registado com sucesso no melhor ginásio de sempre. Tem aqui as suas credenciais de acesso:
     </p>
+
+    <ul>
+      <li>
+        <strong>Email:</strong> <%= @user.email %>
+      </li>
+      <li>
+        <strong>Password:</strong> <%= @password %>
+      </li>
+    </ul>
+
     <p>
       Comece a usar todo o potencial deste ginásio aqui: <a href="<%=@url%>"> <%= @url %> </a>.
     </p>

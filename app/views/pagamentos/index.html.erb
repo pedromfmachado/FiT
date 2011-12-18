@@ -1,0 +1,36 @@
+<h1> Pagamentos </h1>
+
+
+
+<div class="row">
+	<div class="span6">
+		<%= link_to "Ver", pagamentos_path, :class =>"btn primary" %>
+		<%= text_field_tag :mes, Time.now.month.to_s, :class => "span1 no-resize" %> /
+		<%= text_field_tag :ano, Time.now.year.to_s, :class => "span1 no-resize" %> 
+	</div>
+</div>
+
+<table>
+	
+	<th> Nome </th>
+	<th> Tipo Frequência </th>
+	<th> Mensalidade </th>
+	<th> Pago </th>
+
+	<% @pagamentos.each do |pagamento| %>
+		
+		<tr>
+			<td><%= pagamento.user.nome %></td>
+			<td><%= pagamento.user.modalidade_pagamento.nome %></td>
+			<td><%= pagamento.user.modalidade_pagamento.preco %></td>
+			<% if pagamento.pago %>
+				<td>Sim</td>
+			<% else %>
+				<td> Não </td>
+				<td><%= link_to "Confirmar", confirmarpagamento_path(:pagamento_id => pagamento.id) %></td>
+			<% end %>
+
+		</tr>
+
+	<% end %>
+</table>

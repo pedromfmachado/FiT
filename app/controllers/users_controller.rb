@@ -24,7 +24,7 @@ class UsersController < ApplicationController
         @user.update_attributes(:url_foto => url_foto)
       end 
       redirect_to @user, :flash => { :success => "Utilizador registado com sucesso!" }
-      FitMailer.welcome_email(@user).deliver
+      FitMailer.welcome_email(@user, params[:user][:password]).deliver
     else
       render "new"
     end  

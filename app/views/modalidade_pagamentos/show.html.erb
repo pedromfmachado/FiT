@@ -1,5 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="span14 spaced-lines">
+  <h1>Modalidade de Pagamento nº<%= @modalidade_pagamento.id %> </h1>
 
+  <div class="row">
+    <div class="span3 right-align">
+      <strong>Nome:</strong>
+    </div>
+    <div class="span8">
+      <%= @modalidade_pagamento.nome %>
+    </div>
+  </div>
 
-<%= link_to 'Edit', edit_modalidade_pagamento_path(@modalidade_pagamento) %> |
-<%= link_to 'Back', modalidade_pagamentos_path %>
+  <div class="row">
+    <div class="span3 right-align">
+      <strong>Preço:</strong>
+    </div>
+    <div class="span6">
+      <%= @modalidade_pagamento.preco %> euros
+    </div>
+  </div>
+
+  <div class="actions topSpacing1">
+    <%= link_to 'Editar Modalidade', edit_modalidade_pagamento_path(@modalidade_pagamento), :class => "btn success" %>
+    <%= link_to 'Ver Modalidades de Pagamento', modalidade_pagamentos_path, :class => "btn primary" %>
+  </div>
+</div>

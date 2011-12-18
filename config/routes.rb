@@ -1,7 +1,11 @@
 Fit::Application.routes.draw do
 
 
-  resources :modalidade_pagamentos
+  get "pagamento/index"
+
+  get "pagamento/confirmar"
+
+  
 
   get "reserve_aula/new"
 
@@ -23,6 +27,7 @@ Fit::Application.routes.draw do
   match '/users/:id/mudarpassword' => 'users#edit_password', :as => "mudarpassword"
   match '/users/:user_id/planos/requisitarplano' => 'planos#requisitar_plano', :as => "requisitarplano"
   match 'apagarpedido' => 'pedido_planos#destroy', :as => "apagarpedido"
+  match 'confirmarpagamento' => 'pagamentos#confirmar', :as => "confirmarpagamento"
 
   resources :users do
     resources :planos
@@ -35,6 +40,8 @@ Fit::Application.routes.draw do
   resources :notificacaos
   resources :reserva_aulas
   resources :pedido_planos
+  resources :modalidade_pagamentos
+  resources :pagamentos
 
   resources :ginasios do
     resources :users
@@ -59,6 +66,7 @@ Fit::Application.routes.draw do
     resources :reserva_aulas
     resources :pedido_planos
     resources :feedbacks
+    resources :pagamentos
     match 'desmarcar' => 'reserva_aulas#destroy', :as => "desmarcar"
     match 'users/edit' => 'users#edit', :as => "users/edit"
     match 'getinfo' => 'reserva_aulas#get_info', :as => "getinfo"
