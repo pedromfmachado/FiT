@@ -1,2 +1,27 @@
-Eu gosto de cavalos.
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content=\\\"text/html; charset=UTF-8\\\" http-equiv=\\\"Content-Type\\\" />
+  </head>
+  <body>
+    <h1>Bem vindo ao FiT, David Vanilla</h1>
+    <p>
+      Foi registado com sucesso no melhor ginásio de sempre. Tem aqui as suas credenciais de acesso:
+    </p>
+
+    <ul>
+      <li>
+        <strong>Email:</strong> ei08119@fe.up.pt
+      </li>
+      <li>
+        <strong>Password:</strong> cachodebaratas
+      </li>
+    </ul>
+
+    <p>
+      Comece a usar todo o potencial deste ginásio aqui: <a href\\\="http://192.168.55.224\\\">http://192.168.55.224</a>.
+    </p>
+    <p>Tenha um bom dia!</p>
+  </body>
+</html>
 

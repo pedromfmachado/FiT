@@ -11,7 +11,7 @@ class Aula < ActiveRecord::Base
 
   validates_presence_of :inicio, :message => "da aula em branco. Introduza uma hora valida. (ex: 9:00)"
   validates_format_of :inicio, :message => "da aula invalido. Introduza uma hora valida.",
-    :with => /^([01]?\d|2[0-3]):([0-5]\d)$/,
+    :with => /([01]?\d|2[0-3]):([0-5]\d)/,
     :unless => Proc.new { |aula| aula.inicio.blank? }
 
   validates_presence_of :duracao, :message => "da aula em branco. Introduza uma duracao valida (em minutos)."
@@ -64,7 +64,7 @@ class Aula < ActiveRecord::Base
   end
 
   def self.getDia(d)
-    dias = [ 'Segunda' , 'Terca', 'Quarta', 'Quinta', 'Sexta', 'Sabado', 'Domingo' ]
+    dias = [ 'Domingo', 'Segunda' , 'Terca', 'Quarta', 'Quinta', 'Sexta', 'Sabado' ]
     if d != nil
       dias[d]
     end

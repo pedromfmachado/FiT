@@ -5,7 +5,7 @@ class ModalidadePagamento < ActiveRecord::Base
 
   validates_presence_of :preco, :message => "da modalidade em branco. Introduza o preco (ex: 30.00 euros)."
   validates_format_of :preco, :message => "introduzido e invalido. Introduza o preco (ex: 30.00 euros).",
-    :with => /^(\d)+[.]\d$/,
+    :with => /(\d)+.\d/,
     :unless => Proc.new { |modalidade| modalidade.preco.blank? }
 
 end

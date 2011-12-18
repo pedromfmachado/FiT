@@ -1,12 +1,13 @@
 - (DONE) Acrescentar preco ao pagamento (para diferenciar pagamentos com planos diferentes)
 - (DONE) Fazer nested dos pagamentos nos utilizadores
 - (DONE) Cancelar pagamento
-- Ver redirecionamento do controlador de pagamentos (nested)
+- (DONE) Ver redirecionamento do controlador de pagamentos (nested)
 - Rever permissões
 - Fazer verificação da hora da aula no feedback
 - Retirar ids de tabelas onde não são necessários
-- Tratar das verirficações dos pagamentos e modalidades de uso
+- Tratar das verificações dos pagamentos e modalidades de pagamento
 - Editar planos
+- Gerar password e enviar mail a informar
 
 Módulos em falta:
 - Estatisticas

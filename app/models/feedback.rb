@@ -29,6 +29,18 @@ class Feedback < ActiveRecord::Base
 
   end
 
+  def self.getFeedbackUser(uid,aid)
+
+    feedback = Feedback.where(:user_id => uid, :aula_id => aid)
+
+    if feedback.count > 0
+        feedback.first.valor
+    else
+        0.0
+    end
+
+  end
+
   def self.getFeedbackAula(aid)
 
     "%0.1f" % Feedback.where(:aula_id => aid).average(:valor).to_f

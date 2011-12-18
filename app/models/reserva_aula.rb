@@ -42,7 +42,7 @@ class ReservaAula < ActiveRecord::Base
   end
 
   def checkDia
-    if Date.today.wday-1 != aula.dia
+    if Date.today.wday != aula.dia
       errors.add(:hora , "Esta aula nao existe hoje")
     end
   end
@@ -55,13 +55,14 @@ class ReservaAula < ActiveRecord::Base
     xml = ::Builder::XmlMarkup.new
     xml.instruct!
     xml.reserva do
-      xml.dia Time.now.wday-1
+      xml.dia Time.now.wday
       xml.data Time.now.strftime("%Y/%m/%d")
       xml.hora Time.now.hour.to_s + ':' + Time.now.min.to_s
       xml.lugares ReservaAula.lugaresDisponiveis(aula.id)
       xml.lotacao estudio.lotacao
 
       xml.feedback Feedback.getFeedbackAula(aid)
+      xml.feedback Feedback.getFeedbackUser(uid,aid)
 
       if ReservaAula.jaMarcada(uid,aula.id)
         xml.tem_reserva "sim"
