@@ -42,16 +42,19 @@ localizada:
 
 pilates:
   tipo: Pilates
-  descricao:
+  descricao: "Objectivos: corrigir a postura, eliminar o stress e desenvolver o equilíbrio body/mind/heart/spirit.\r\nÉ um dos métodos mais seguros e eficazes de core-training. Realizado de forma sistemática, torna-se um verdadeiro \"vicio\" saudável."
 
 rpm:
   tipo: RPM
+  descricao: "Objectivos: perder peso e aumentar a resistência cardio-respiratória.\r\nAula de ciclismo indoor, altamente estimulante."
 
 rpmexpress:
   tipo: RPM Express
+  descricao: "Objectivos: perder peso e aumentar a resistência cardio-respiratória.\r\nAula de ciclismo indoor, altamente estimulante."
 
 step:
   tipo: Step
+  descricao: "Objectivos: perder peso, tonificar a musculatura dos glúteos/pernas e aumentar a resistência aeróbica.\r\nÉ uma aula coreografada, realizada numa plataforma rectangular e caracterizada pelo ritmo/animação que proporciona aos clientes. Combina movimentos atléticos, aeróbicos e de força."
 
 taichi:
   tipo: Tai Chi

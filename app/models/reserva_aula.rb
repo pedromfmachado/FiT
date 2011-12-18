@@ -77,7 +77,7 @@ class ReservaAula < ActiveRecord::Base
   def self.numerosPorModalidade
 
     titulos = []
-    dados   = []  
+    dados   = []
 
     TipoAula.all.each do |t|
     
@@ -85,7 +85,7 @@ class ReservaAula < ActiveRecord::Base
         count = 0
         ReservaAula.all.each do |r|
 
-            if r.aula.tipo_aula_id == t.id
+            if r.aula.tipo_aula_id == t.id && r.dia <= Date.today && r.aula.jaPassou
 
                 count += 1
 
@@ -95,8 +95,8 @@ class ReservaAula < ActiveRecord::Base
         dados << count
     end
 
-    ::Gchart.pie_3d(:title => 'ruby_fu', :size => '400x200',
-              :data => dados, :labels => titulos )
+    ::Gchart.bar(:title => 'Modalidades', :size => '500x300', :bar_width_and_spacing => '50,20',
+              :axis_with_labels => 'x,y', :data => dados, :axis_labels => [titulos,dados.invert] )
 
   end
 

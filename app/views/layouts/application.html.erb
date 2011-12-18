@@ -23,7 +23,7 @@
             <a href="#" class="menu">Ligado como <%= current_user.nome %>.</a>
             <ul class="menu-dropdown">
 
-              <% if current_user.admin? %>
+              <% if !current_user.normal? %>
               <li><%= link_to "Registar Novo Utilizador", sign_up_path %></li>
               <li class="divider"></li>
               <% end %>

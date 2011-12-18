@@ -34,12 +34,13 @@ class Ability
       can :read, Ginasio
       can :read, ModalidadePagamento
       can :read, Notificacao
-      can :manage, Pagamentos
-      can :destroy, PedidoPlano
+      can :manage, Pagamento
+      can :manage, PedidoPlano
       can :manage, Plano
       can :manage, User      
       can :read, ReservaAula
       can :manage, TipoAula
+      cannot :create, PedidoPlano
       cannot :create, Plano do |p|
 
         !p.user.normal?

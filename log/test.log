@@ -5987,3 +5987,590 @@ LISBOA', '$2a$10$UqUrTw.R/OsHPg61CCY.2e.80WCDqZ37YdoM1FXGRRiANvUs.ejOi', 'ei0810
   [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "estudios"[0m
   [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "estudios" ("created_at", "updated_at", "lotacao", "nome", "id") VALUES ('2011-12-18 21:41:48', '2011-12-18 21:41:48', 1, 'MyString', 298486374)
   [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "estudios" ("created_at", "updated_at", "lotacao", "nome", "id") VALUES ('2011-12-18 21:41:48', '2011-12-18 21:41:48', 1, 'MyString', 980190962)[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tipo_aulas"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES ('Pilates', '2011-12-18 21:57:48', '2011-12-18 21:57:48', 64562181, 'Objectivos: corrigir a postura, eliminar o stress e desenvolver o equilíbrio body/mind/heart/spirit.
+É um dos métodos mais seguros e eficazes de core-training. Realizado de forma sistemática, torna-se um verdadeiro "vicio" saudável.')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES ('Step', '2011-12-18 21:57:48', '2011-12-18 21:57:48', 62520893, 'Objectivos: perder peso, tonificar a musculatura dos glúteos/pernas e aumentar a resistência aeróbica.
+É uma aula coreografada, realizada numa plataforma rectangular e caracterizada pelo ritmo/animação que proporciona aos clientes. Combina movimentos atléticos, aeróbicos e de força.')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES ('Body Pump', '2011-12-18 21:57:48', '2011-12-18 21:57:48', 350676385, 'Objectivos: perder peso, tonificar e delinear o corpo.
+Aula simples e divertida com pesos.')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES ('Localizada', '2011-12-18 21:57:48', '2011-12-18 21:57:48', 92923500, 'Objectivos: tonificar e delinear o corpo. É uma aula de grupo, ritmada, divertida e que visa o desenvolvimento harmonioso de todos os grupos musculares.')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES ('Body Combat', '2011-12-18 21:57:48', '2011-12-18 21:57:48', 612404174, 'Objectivos: perder peso e eliminar o stress.
+Aula que combina movimentos de várias artes marciais, de uma forma energética e altamente motivante.')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES ('RPM Express', '2011-12-18 21:57:48', '2011-12-18 21:57:48', 794962978, 'Objectivos: perder peso e aumentar a resistência cardio-respiratória.
+Aula de ciclismo indoor, altamente estimulante.')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES ('Body Step', '2011-12-18 21:57:48', '2011-12-18 21:57:48', 256420467, 'Objectivos e Benefícios: melhora a capacidade cardio-respiratória, queima gordura, aumenta a força e a resistência muscular, melhora a coordenação e agilidade, melhora a densidade mineral óssea, nelhora a estabilidade postural.
+ É um trabalho energizante, que visa o treino e desafios constantes, que o faz sentir vivo e livre. Utiliza o step com altura ajustável e movimentos simples em cima, por cima e à volta do step. Consegue-se UMA MOTIVAÇÃO GIGANTE ao som das musicas conhecidas e ao ser-se guiado por instrutores acessíveis. Permite uma queima de calorias até níveis elevados seguidos por modelação e tonificação corporal. As posturas são um factor preponderante no BodyStep, por serem atléticas e com uma melhoria da percepção corporal.')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES ('RPM', '2011-12-18 21:57:48', '2011-12-18 21:57:48', 872939841, 'Objectivos: perder peso e aumentar a resistência cardio-respiratória.
+Aula de ciclismo indoor, altamente estimulante.')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES ('Yoga', '2011-12-18 21:57:48', '2011-12-18 21:57:48', 619778234, 'Objectivos: corrigir a postura, eliminar o stress e desenvolver o equilíbrio body/mind/heart/spirit.
+Actividade ancestral, que consiste na realização de posturas terapêuticas e na sua sincronização adequada com a respiração. Na sua essência, a palavra Yoga significa UNIÃO.')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES ('Hip Hop', '2011-12-18 21:57:48', '2011-12-18 21:57:48', 517735929, 'Objectivos: melhorar a auto-estima e aumentar a resistência aeróbica.
+Actividade aeróbica, praticada através de movimentos descontraídos e cool, ao ritmo das últimas tendências musicais do RAP & HIP HOP. É conhecida, habitualmente, como a "dança de rua" dos EUA.')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES ('Hidroginástica', '2011-12-18 21:57:48', '2011-12-18 21:57:48', 207901632, 'Objectivos: tonificar o corpo, melhorar a flexibilidade e aumentar a resistência cardio-respiratória.
+Trabalho de condicionamento físico geral, muito motivante, realizado no meio aquático com elevados níveis de segurança.')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES ('Body Vive', '2011-12-18 21:57:48', '2011-12-18 21:57:48', 542822171, 'Objectivo: Aula de baixo impacto que integra exercícios cardiovasculares e de força.
+Aula baseada em movimentos integrados ao nivel da estabilidade, flexibilidade e mobilidade articular.')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES ('Body Balance', '2011-12-18 21:57:48', '2011-12-18 21:57:48', 14375806, 'Objectivos: corrigir a postura, eliminar o stress e desenvolver o equilíbrio body/mind/heart/spirit.
+Aula baseada em movimentos e posturas ancestrais de Tai-chi, Pilates e Yoga.')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES ('Tai Chi', '2011-12-18 21:57:48', '2011-12-18 21:57:48', 282477866, 'Objectivos: corrigir a postura, eliminar o stress e desenvolver o equilíbrio body/mind/heart/spirit.
+É uma actividade oriental, que se caracteriza pela combinação de movimentos delicados/circulares, com uma respiração adequada, que visam proporcionar um estado de tranquilidade e harmonia.')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES ('Body Pump Express', '2011-12-18 21:57:48', '2011-12-18 21:57:48', 984370152, 'Objectivos: perder peso, tonificar e delinear o corpo.
+Aula simples e divertida com pesos.')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES ('Aeróbica', '2011-12-18 21:57:48', '2011-12-18 21:57:48', 522843862, 'Objectivos: perder peso, aumentar a resistência aeróbica, desenvolver a coordenação motora.
+É uma actividade coreografada, divertida e energética, realizada ao som de música entusiasmante.')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "pedido_planos"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 21:57:49', '2011-12-18 21:57:49', '2011-12-15 11:20:49', 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 21:57:49', '2011-12-18 21:57:49', '2011-12-15 11:20:49', 1)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "notificacaos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 21:57:49', NULL, '2011-12-18 21:57:49', NULL, NULL, 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 21:57:49', NULL, '2011-12-18 21:57:49', NULL, NULL, 980190962)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "staffs"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "staffs" ("created_at", "updated_at", "id", "user_id") VALUES ('2011-12-18 21:57:49', '2011-12-18 21:57:49', 496988974, 941520943)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "staffs" ("created_at", "updated_at", "id", "user_id") VALUES ('2011-12-18 21:57:49', '2011-12-18 21:57:49', 76948118, 207754824)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "pagamentos"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 21:57:49', '2011-12-18 21:57:49', 298486374, 'f', 1)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 21:57:49', '2011-12-18 21:57:49', 980190962, 'f', 1)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "exercicios_planos"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "exercicios_planos" ("plano_id", "repeticoes", "series", "exercicio_id", "peso") VALUES (NULL, 1, 1, NULL, 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercicios_planos" ("plano_id", "repeticoes", "series", "exercicio_id", "peso") VALUES (NULL, 1, 1, NULL, 1)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "ginasio_notificacaos"[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "ginasios"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "ginasios" ("created_at", "telefone", "latitude", "updated_at", "nome", "id", "morada", "longitude") VALUES ('2011-12-18 21:57:49', 223741470, NULL, '2011-12-18 21:57:49', 'Solinca Gaia', 2764946, 'Rua Fernão de Magalhães
+4400 Gaia', NULL)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "ginasios" ("created_at", "telefone", "latitude", "updated_at", "nome", "id", "morada", "longitude") VALUES ('2011-12-18 21:57:49', 218922870, 1.5, '2011-12-18 21:57:49', 'Solinca Vasco da Gama', 464788336, 'C. Vasco da Gama,
+Av.ª D. João II,
+Lote 1.05.02
+1990-094 LISBOA', 1.5)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "ginasios" ("created_at", "telefone", "latitude", "updated_at", "nome", "id", "morada", "longitude") VALUES ('2011-12-18 21:57:49', 258800330, NULL, '2011-12-18 21:57:49', 'Solinca Viana de Castelo', 343845218, 'Parque Emp. Praia Norte
+Av.ª Cabo Verde Monserate
+4900 VIANA DO CASTELO', NULL)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "ginasios" ("created_at", "telefone", "latitude", "updated_at", "nome", "id", "morada", "longitude") VALUES ('2011-12-18 21:57:49', 210129670, 1.5, '2011-12-18 21:57:49', 'Solinca Colombo', 735994895, 'C. Colombo Loja A 201,
+Avenida Lusiada
+1500-392 LISBOA', 1.5)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "ginasios" ("created_at", "telefone", "latitude", "updated_at", "nome", "id", "morada", "longitude") VALUES ('2011-12-18 21:57:49', 282780150, NULL, '2011-12-18 21:57:49', 'Solinca Aqualuz', 556703304, 'Aparthotel Aqualuz,
+R. Sacadura Cabral,
+n.º 8
+86000 LAGOS', NULL)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "ginasios" ("created_at", "telefone", "latitude", "updated_at", "nome", "id", "morada", "longitude") VALUES ('2011-12-18 21:57:49', 253305620, NULL, '2011-12-18 21:57:49', 'Solinca Braga', 1039840928, 'C. Empresarial de Braga
+Largo da Misericórdia,
+Pav W2/W3
+4700 BRAGA', NULL)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "ginasios" ("created_at", "telefone", "latitude", "updated_at", "nome", "id", "morada", "longitude") VALUES ('2011-12-18 21:57:49', 225574700, NULL, '2011-12-18 21:57:49', 'Solinca Dragão', 240923823, 'Estádio do Dragão
+(Frente ao Metro Parque 1)
+4350-415 PORTO', NULL)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "ginasios" ("created_at", "telefone", "latitude", "updated_at", "nome", "id", "morada", "longitude") VALUES ('2011-12-18 21:57:49', 214694130, NULL, '2011-12-18 21:57:49', 'Solinca Oeiras', 1023646408, 'Estrada da Medrosa
+Rua Raul Lino Lote 11
+2780-180 OEIRAS', NULL)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "ginasios" ("created_at", "telefone", "latitude", "updated_at", "nome", "id", "morada", "longitude") VALUES ('2011-12-18 21:57:49', 220160250, NULL, '2011-12-18 21:57:49', 'Solinca Norteshopping', 819479167, 'Rua Sara Afonso, 105-117,
+Senhora da Hora
+4460-481 MATOSINHOS', NULL)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "ginasios" ("created_at", "telefone", "latitude", "updated_at", "nome", "id", "morada", "longitude") VALUES ('2011-12-18 21:57:49', 226091553, 1.5, '2011-12-18 21:57:49', 'Solinca Porto Palácio', 431001518, 'Avenida da Boavista,
+nº 1269
+4100-130 PORTO', 1.5)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "users"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "users" ("created_at", "telefone", "ginasio_id", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 21:57:49', 351913777888, 240923823, '2011-12-18 21:57:49', '1973-05-26', 'Pedro Machado', 1020400804, '$2a$10$fAY6w7UkvKs.QYwfZwemiu', 'Rua André de Resende,
+nº111
+4150-069
+PORTO', '$2a$10$fAY6w7UkvKs.QYwfZwemiuDGboUQpEC/FtOyJORLV9boG6NOflwy6', 'machado.pedro@fe.up.pt')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "telefone", "ginasio_id", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 21:57:49', '00351 220001002', 819479167, '2011-12-18 21:57:49', '1985-01-01', 'Valter Pinho', 207754824, '$2a$10$OZpfyvLDcnLv28oljMDrR.', 'Rua do Bonjardim,
+nº300,
+4000-114,
+PORTO', '$2a$10$OZpfyvLDcnLv28oljMDrR.7PiQgEoFL1Np/O3wpLO8h.jtLfqKde2', 'valter.pinho0@gmail.com')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("created_at", "telefone", "ginasio_id", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 21:57:49', 922333444, 819479167, '2011-12-18 21:57:49', '1995-03-30', 'André Alves', 705162804, '$2a$10$gAH5Qq96Jia.mRkCBFZX3u', 'Rua Agra de Ramalde
+nº307
+4250-018
+PORTO', '$2a$10$gAH5Qq96Jia.mRkCBFZX3ul.hXsJemhd7S.sitsvyw/BJZTt.ZzWe', 'ei08119@fe.up.pt')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "telefone", "ginasio_id", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 21:57:49', 961101106, 819479167, '2011-12-18 21:57:49', '1990-12-25', 'Gonçalo Filipe', 941520943, '$2a$10$QRpogIW5RTFcGjS/1vonFO', 'Rua 1º de Dezembro,
+4425-601
+MAIA', '$2a$10$QRpogIW5RTFcGjS/1vonFOiF.CTQpdMgRjQgKR.AAzU6BGJV/WUGq', 'ei08139@fe.up.pt')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("created_at", "telefone", "ginasio_id", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 21:57:49', 934567890, 819479167, '2011-12-18 21:57:49', '1983-07-30', 'André Marinho', 195358306, '$2a$10$wFMXmPS0rheIEWwxD5WNFe', 'Largo Chelas
+1900-159
+LISBOA', '$2a$10$wFMXmPS0rheIEWwxD5WNFeGQtQ5ayb5Z8OhCxEM./kZikbSfOzvJq', 'ei08106@fe.up.pt')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "modalidade_pagamentos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "modalidade_pagamentos" ("created_at", "updated_at", "id") VALUES ('2011-12-18 21:57:49', '2011-12-18 21:57:49', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "modalidade_pagamentos" ("created_at", "updated_at", "id") VALUES ('2011-12-18 21:57:49', '2011-12-18 21:57:49', 980190962)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "reserva_aulas"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "reserva_aulas" ("created_at", "updated_at", "dia", "user_id", "aula_id") VALUES ('2011-12-18 21:57:49', '2011-12-18 21:57:49', '2011-12-13', 1, 1)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "reserva_aulas" ("created_at", "updated_at", "dia", "user_id", "aula_id") VALUES ('2011-12-18 21:57:49', '2011-12-18 21:57:49', '2011-12-13', 1, 1)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "exercicios"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "exercicios" ("tipo", "created_at", "updated_at", "nome", "maquina", "id") VALUES ('MyString', '2011-12-18 21:57:49', '2011-12-18 21:57:49', 'MyString', 'MyString', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "exercicios" ("tipo", "created_at", "updated_at", "nome", "maquina", "id") VALUES ('MyString', '2011-12-18 21:57:49', '2011-12-18 21:57:49', 'MyString', 'MyString', 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "cidades"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "cidades" ("created_at", "updated_at", "nome", "id") VALUES ('2011-12-18 21:57:49', '2011-12-18 21:57:49', 'MyString', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "cidades" ("created_at", "updated_at", "nome", "id") VALUES ('2011-12-18 21:57:49', '2011-12-18 21:57:49', 'MyString', 980190962)
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "aulas"[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "admins"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "admins" ("created_at", "updated_at", "id", "user_id") VALUES ('2011-12-18 21:57:49', '2011-12-18 21:57:49', 976369075, 1020400804)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "planos"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "planos" ("created_at", "data", "updated_at", "id", "altura", "peso") VALUES ('2011-12-18 21:57:49', 'MyString', '2011-12-18 21:57:49', 298486374, 1, 1)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "planos" ("created_at", "data", "updated_at", "id", "altura", "peso") VALUES ('2011-12-18 21:57:49', 'MyString', '2011-12-18 21:57:49', 980190962, 1, 1)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "alimentar_planos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "alimentar_planos" ("created_at", "manha", "data", "updated_at", "jantar", "almoco", "ceia", "id", "tarde", "pequenoalmoco") VALUES ('2011-12-18 21:57:49', 'MyText', '2011-12-18', '2011-12-18 21:57:49', 'MyText', 'MyText', 'MyText', 298486374, 'MyText', 'MyText')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "alimentar_planos" ("created_at", "manha", "data", "updated_at", "jantar", "almoco", "ceia", "id", "tarde", "pequenoalmoco") VALUES ('2011-12-18 21:57:49', 'MyText', '2011-12-18', '2011-12-18 21:57:49', 'MyText', 'MyText', 'MyText', 980190962, 'MyText', 'MyText')[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "feedbacks"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "updated_at", "valor", "id") VALUES ('2011-12-18 21:57:49', '2011-12-18 21:57:49', 1, 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "feedbacks" ("created_at", "updated_at", "valor", "id") VALUES ('2011-12-18 21:57:49', '2011-12-18 21:57:49', 1, 980190962)
+  [1m[36mFixture Delete (0.2ms)[0m  [1mDELETE FROM "estudios"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "estudios" ("created_at", "updated_at", "lotacao", "nome", "id") VALUES ('2011-12-18 21:57:50', '2011-12-18 21:57:50', 1, 'MyString', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "estudios" ("created_at", "updated_at", "lotacao", "nome", "id") VALUES ('2011-12-18 21:57:50', '2011-12-18 21:57:50', 1, 'MyString', 980190962)[0m
+
+
+Started GET "/" for 192.168.108.45 at Sun Dec 18 21:59:27 +0000 2011
+  Processing by HomeController#show as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 7]]
+Rendered home/show.html.erb within layouts/home_layout (21.8ms)
+Completed 500 Internal Server Error in 34ms
+
+
+Started GET "/" for 192.168.108.45 at Sun Dec 18 21:59:37 +0000 2011
+  Processing by HomeController#show as HTML
+Rendered home/show.html.erb within layouts/home_layout (1.6ms)
+Rendered sessions/_form.html.erb (1.6ms)
+Completed 200 OK in 27ms (Views: 26.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 192.168.108.45 at Sun Dec 18 21:59:57 +0000 2011
+  Processing by SessionsController#create as HTML
+  Parameters: {"button"=>"", "utf8"=>"✓", "password"=>"[FILTERED]", "email"=>"ei08139@fe.up.pt"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."email" = 'ei08139@fe.up.pt' LIMIT 1
+Redirected to http://192.168.55.224:3000/
+Completed 302 Found in 111ms
+
+
+Started GET "/" for 192.168.108.45 at Sun Dec 18 21:59:57 +0000 2011
+  Processing by HomeController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+Rendered home/show.html.erb within layouts/home_layout (2.7ms)
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mStaff Load (0.2ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+Rendered layouts/_menu.html.erb (10.7ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/tipo_aulas" for 192.168.108.45 at Sun Dec 18 22:00:04 +0000 2011
+  Processing by TipoAulasController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.2ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+Completed 500 Internal Server Error in 23ms
+
+
+Started GET "/users" for 192.168.108.45 at Sun Dec 18 22:00:22 +0000 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 941520943]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+Completed 500 Internal Server Error in 9ms
+
+
+Started GET "/users" for 192.168.108.45 at Sun Dec 18 22:00:41 +0000 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+Completed 500 Internal Server Error in 21ms
+
+
+Started GET "/users" for 192.168.108.45 at Sun Dec 18 22:02:19 +0000 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+Completed 500 Internal Server Error in 42ms
+
+
+Started GET "/" for 192.168.108.45 at Sun Dec 18 22:02:23 +0000 2011
+  Processing by HomeController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 941520943]]
+Rendered home/show.html.erb within layouts/home_layout (3.9ms)
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.4ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+Rendered layouts/_menu.html.erb (155.8ms)
+Completed 200 OK in 184ms (Views: 182.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 192.168.108.45 at Sun Dec 18 22:06:52 +0000 2011
+  Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 941520943]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+Completed 500 Internal Server Error in 10ms
+
+
+Started GET "/users" for 192.168.108.45 at Sun Dec 18 22:06:56 +0000 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+Completed 500 Internal Server Error in 10ms
+
+
+Started GET "/exercicios" for 192.168.108.45 at Sun Dec 18 22:06:59 +0000 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 941520943]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mStaff Load (0.2ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+Completed 500 Internal Server Error in 11ms
+
+
+Started GET "/pedido_planos" for 192.168.108.45 at Sun Dec 18 22:07:03 +0000 2011
+  Processing by PedidoPlanosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+Completed 500 Internal Server Error in 12ms
+
+
+Started GET "/modalidade_pagamentos" for 192.168.108.45 at Sun Dec 18 22:07:05 +0000 2011
+  Processing by ModalidadePagamentosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 941520943]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+Completed 500 Internal Server Error in 11ms
+
+
+Started GET "/users" for 192.168.108.45 at Sun Dec 18 22:10:51 +0000 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+Completed 500 Internal Server Error in 9ms
+
+
+Started GET "/users/941520943" for 192.168.108.45 at Sun Dec 18 22:12:36 +0000 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"941520943"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "941520943"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+Completed 500 Internal Server Error in 12ms
+
+
+Started GET "/notificacaos" for 192.168.108.45 at Sun Dec 18 22:12:51 +0000 2011
+  Processing by NotificacaosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 941520943]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+Completed 500 Internal Server Error in 10ms
+
+
+Started GET "/notificacaos" for 192.168.108.45 at Sun Dec 18 22:13:59 +0000 2011
+  Processing by NotificacaosController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.2ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mNotificacao Load (0.2ms)[0m  SELECT "notificacaos".* FROM "notificacaos" 
+Rendered notificacaos/index.html.erb within layouts/application (11.8ms)
+Completed 500 Internal Server Error in 72ms
+
+
+Started GET "/users" for 192.168.108.45 at Sun Dec 18 22:14:04 +0000 2011
+  Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" ORDER BY id
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 195358306 LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 195358306 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 195358306 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 195358306 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 207754824 LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 207754824 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 207754824 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 207754824 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 207754824 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 705162804 LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 705162804 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 705162804 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 705162804 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 1020400804 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 1020400804 LIMIT 1
+  [1m[36mStaff Load (0.2ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 1020400804 LIMIT 1[0m
+Rendered users/index.html.erb within layouts/application (30.6ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+Rendered layouts/_menu.html.erb (9.3ms)
+Completed 200 OK in 202ms (Views: 57.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/exercicios" for 192.168.108.45 at Sun Dec 18 22:14:08 +0000 2011
+  Processing by ExerciciosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.2ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mExercicio Load (0.2ms)[0m  SELECT "exercicios".* FROM "exercicios" 
+Rendered exercicios/index.html.erb within layouts/application (9.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+Rendered layouts/_menu.html.erb (9.1ms)
+Completed 200 OK in 181ms (Views: 167.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/pedido_planos" for 192.168.108.45 at Sun Dec 18 22:14:11 +0000 2011
+  Processing by PedidoPlanosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 941520943]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+Redirected to http://192.168.55.224:3000/
+Completed 302 Found in 14ms
+
+
+Started GET "/" for 192.168.108.45 at Sun Dec 18 22:14:11 +0000 2011
+  Processing by HomeController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+Rendered home/show.html.erb within layouts/home_layout (3.1ms)
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mStaff Load (0.2ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+Rendered layouts/_menu.html.erb (132.3ms)
+Completed 200 OK in 154ms (Views: 152.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pedido_planos" for 192.168.108.45 at Sun Dec 18 22:14:16 +0000 2011
+  Processing by PedidoPlanosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+Redirected to http://192.168.55.224:3000/
+Completed 302 Found in 13ms
+
+
+Started GET "/" for 192.168.108.45 at Sun Dec 18 22:14:16 +0000 2011
+  Processing by HomeController#show as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 941520943]]
+Rendered home/show.html.erb within layouts/home_layout (2.8ms)
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.2ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+Rendered layouts/_menu.html.erb (7.2ms)
+Completed 200 OK in 19ms (Views: 18.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/pedido_planos" for 192.168.108.45 at Sun Dec 18 22:15:20 +0000 2011
+  Processing by PedidoPlanosController#index as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mPedidoPlano Load (0.2ms)[0m  SELECT "pedido_planos".* FROM "pedido_planos" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered pedido_planos/index.html.erb within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 77ms
+
+
+Started GET "/pedido_planos" for 192.168.108.45 at Sun Dec 18 22:15:28 +0000 2011
+  Processing by PedidoPlanosController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mPedidoPlano Load (0.2ms)[0m  SELECT "pedido_planos".* FROM "pedido_planos" 
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered pedido_planos/index.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 19ms
+
+
+Started GET "/users/941520943" for 192.168.108.45 at Sun Dec 18 22:15:46 +0000 2011
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"941520943"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "941520943"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 941520943]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m
+  [1m[35mGinasio Load (0.2ms)[0m  SELECT "ginasios".* FROM "ginasios" WHERE "ginasios"."id" = 819479167 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (25.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+Rendered layouts/_menu.html.erb (8.1ms)
+Completed 200 OK in 64ms (Views: 51.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/sign_up" for 192.168.108.45 at Sun Dec 18 22:17:00 +0000 2011
+  Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mGinasio Load (0.3ms)[0m  SELECT "ginasios".* FROM "ginasios" 
+  [1m[36mModalidadePagamento Load (0.2ms)[0m  [1mSELECT "modalidade_pagamentos".* FROM "modalidade_pagamentos" [0m
+Rendered users/_form.html.erb (19.2ms)
+Rendered users/new.html.erb within layouts/application (21.2ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+Rendered layouts/_menu.html.erb (7.2ms)
+Completed 200 OK in 49ms (Views: 37.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/sign_up" for 192.168.108.45 at Sun Dec 18 22:18:39 +0000 2011
+  Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mGinasio Load (0.4ms)[0m  SELECT "ginasios".* FROM "ginasios" 
+  [1m[36mModalidadePagamento Load (0.2ms)[0m  [1mSELECT "modalidade_pagamentos".* FROM "modalidade_pagamentos" [0m
+Rendered users/_form.html.erb (10.6ms)
+Rendered users/new.html.erb within layouts/application (11.3ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+Rendered layouts/_menu.html.erb (7.7ms)
+Completed 200 OK in 159ms (Views: 27.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 192.168.108.45 at Sun Dec 18 22:19:03 +0000 2011
+  Processing by HomeController#show as HTML
+  [1m[36mUser Load (3.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+Rendered home/show.html.erb within layouts/home_layout (20.4ms)
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+Rendered layouts/_menu.html.erb (138.1ms)
+Completed 200 OK in 201ms (Views: 194.8ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/sign_up" for 192.168.108.45 at Sun Dec 18 22:19:53 +0000 2011
+  Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 941520943]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mGinasio Load (0.3ms)[0m  [1mSELECT "ginasios".* FROM "ginasios" [0m
+  [1m[35mModalidadePagamento Load (0.2ms)[0m  SELECT "modalidade_pagamentos".* FROM "modalidade_pagamentos" 
+Rendered users/_form.html.erb (25.2ms)
+Rendered users/new.html.erb within layouts/application (27.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+Rendered layouts/_menu.html.erb (6.1ms)
+Completed 200 OK in 61ms (Views: 49.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 192.168.108.45 at Sun Dec 18 22:19:59 +0000 2011
+  Processing by HomeController#show as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+Rendered home/show.html.erb within layouts/home_layout (3.0ms)
+  [1m[35mAdmin Load (0.3ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+Rendered layouts/_menu.html.erb (7.3ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/notificacaos" for 192.168.108.45 at Sun Dec 18 22:20:01 +0000 2011
+  Processing by NotificacaosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 941520943]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mNotificacao Load (0.2ms)[0m  [1mSELECT "notificacaos".* FROM "notificacaos" [0m
+Rendered notificacaos/index.html.erb within layouts/application (12.3ms)
+Completed 500 Internal Server Error in 36ms
+
+
+Started GET "/ginasios" for 192.168.108.45 at Sun Dec 18 22:20:12 +0000 2011
+  Processing by GinasiosController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 941520943]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mGinasio Load (0.3ms)[0m  [1mSELECT "ginasios".* FROM "ginasios" [0m
+  [1m[35mCidade Load (0.2ms)[0m  SELECT "cidades".* FROM "cidades" 
+Rendered ginasios/index.html.erb within layouts/application (20.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+Rendered layouts/_menu.html.erb (17.2ms)
+Completed 200 OK in 108ms (Views: 73.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/ginasiosperto.xml?cidade=MyString&km=50" for 192.168.108.45 at Sun Dec 18 22:20:13 +0000 2011
+  Processing by GinasiosController#pertocidade as XML
+  Parameters: {"km"=>"50", "cidade"=>"MyString"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+Completed 422 Unprocessable Entity in 15ms (Views: 1.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ginasiosperto.xml?cidade=MyString&km=0" for 192.168.108.45 at Sun Dec 18 22:21:08 +0000 2011
+  Processing by GinasiosController#pertocidade as XML
+  Parameters: {"km"=>"0", "cidade"=>"MyString"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 941520943]]
+  [1m[36mAdmin Load (0.3ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+Completed 422 Unprocessable Entity in 13ms (Views: 0.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/ginasiosperto.xml?cidade=MyString&km=0" for 192.168.108.45 at Sun Dec 18 22:21:09 +0000 2011
+  Processing by GinasiosController#pertocidade as XML
+  Parameters: {"km"=>"0", "cidade"=>"MyString"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 941520943]]
+  [1m[35mAdmin Load (0.2ms)[0m  SELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1
+  [1m[36mStaff Load (0.1ms)[0m  [1mSELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1[0m
+Completed 422 Unprocessable Entity in 12ms (Views: 0.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/ginasiosperto.xml?cidade=MyString&km=0" for 192.168.108.45 at Sun Dec 18 22:21:10 +0000 2011
+  Processing by GinasiosController#pertocidade as XML
+  Parameters: {"km"=>"0", "cidade"=>"MyString"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 941520943]]
+  [1m[36mAdmin Load (0.2ms)[0m  [1mSELECT "admins".* FROM "admins" WHERE "admins"."user_id" = 941520943 LIMIT 1[0m
+  [1m[35mStaff Load (0.1ms)[0m  SELECT "staffs".* FROM "staffs" WHERE "staffs"."user_id" = 941520943 LIMIT 1
+Completed 422 Unprocessable Entity in 12ms (Views: 0.7ms | ActiveRecord: 0.5ms)
