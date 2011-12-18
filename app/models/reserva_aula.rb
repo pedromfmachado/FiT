@@ -73,5 +73,32 @@ class ReservaAula < ActiveRecord::Base
     end
   end
 
+  require 'gchart'
+  def self.numerosPorModalidade
+
+    titulos = []
+    dados   = []  
+
+    TipoAula.all.each do |t|
+    
+        titulos << t.tipo
+        count = 0
+        ReservaAula.all.each do |r|
+
+            if r.aula.tipo_aula_id == t.id
+
+                count += 1
+
+            end
+
+        end
+        dados << count
+    end
+
+    ::Gchart.pie_3d(:title => 'ruby_fu', :size => '400x200',
+              :data => dados, :labels => titulos )
+
+  end
+
 end
 

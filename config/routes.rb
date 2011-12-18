@@ -1,6 +1,6 @@
 Fit::Application.routes.draw do
 
-
+  root :to => "home#show"
 
   get "pagamento/index"
 
@@ -75,6 +75,6 @@ Fit::Application.routes.draw do
   end
 
   
-  root :to => "home#show"
+  
 
 end

@@ -1,11 +1,74 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  nome: MyString
+portopalacio:
+  nome: Solinca Porto Palácio
   latitude: 1.5
   longitude: 1.5
+  morada: "Avenida da Boavista,\r\nnº 1269\r\n4100-130 PORTO"
+  telefone: 226091553
 
-two:
-  nome: MyString
+colombo:
+  nome: Solinca Colombo
   latitude: 1.5
   longitude: 1.5
+  morada: "C. Colombo Loja A 201,\r\nAvenida Lusiada\r\n1500-392 LISBOA"
+  telefone: 210129670
+
+vascodagama:
+  nome: Solinca Vasco da Gama
+  latitude: 1.5
+  longitude: 1.5
+  morada: "C. Vasco da Gama,\r\nAv.ª D. João II,\r\nLote 1.05.02\r\n1990-094 LISBOA"
+  telefone: 218922870
+
+oeiras:
+  nome: Solinca Oeiras
+  latitude:
+  longitude:
+  morada: "Estrada da Medrosa\r\nRua Raul Lino Lote 11\r\n2780-180 OEIRAS"
+  telefone: 214694130
+
+dragao:
+  nome: Solinca Dragão
+  latitude:
+  longitude:
+  morada: "Estádio do Dragão\r\n(Frente ao Metro Parque 1)\r\n4350-415 PORTO"
+  telefone: 225574700
+
+braga:
+  nome: Solinca Braga
+  latitude:
+  longitude:
+  morada: "C. Empresarial de Braga\r\nLargo da Misericórdia,\r\nPav W2/W3\r\n4700 BRAGA"
+  telefone: 253305620
+
+vianacastelo:
+  nome: Solinca Viana de Castelo
+  latitude:
+  longitude:
+  morada: "Parque Emp. Praia Norte\r\nAv.ª Cabo Verde Monserate\r\n4900 VIANA DO CASTELO"
+  telefone: 258800330
+
+norteshopping:
+  nome: Solinca Norteshopping
+  latitude:
+  longitude:
+  morada: "Rua Sara Afonso, 105-117,\r\nSenhora da Hora\r\n4460-481 MATOSINHOS"
+  telefone: 220160250
+
+gaia:
+  nome: Solinca Gaia
+  latitude:
+  longitude:
+  morada: "Rua Fernão de Magalhães\r\n4400 Gaia"
+  telefone: 223741470
+
+aqualuz:
+  nome: Solinca Aqualuz
+  latitude:
+  longitude:
+  morada: "Aparthotel Aqualuz,\r\nR. Sacadura Cabral,\r\nn.º 8\r\n86000 LAGOS"
+  telefone: 282780150
+
+#malaga:
+

@@ -1,9 +1,63 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  tipo: 
-  descricao: MyText
+aerobica:
+  tipo: Aeróbica
+  descricao: "Objectivos: perder peso, aumentar a resistência aeróbica, desenvolver a coordenação motora.\r\nÉ uma actividade coreografada, divertida e energética, realizada ao som de música entusiasmante."
 
-two:
-  tipo: 
-  descricao: MyText
+bodybalance:
+  tipo: Body Balance
+  descricao: "Objectivos: corrigir a postura, eliminar o stress e desenvolver o equilíbrio body/mind/heart/spirit.\r\nAula baseada em movimentos e posturas ancestrais de Tai-chi, Pilates e Yoga."
+
+bodycombat:
+  tipo: Body Combat
+  descricao: "Objectivos: perder peso e eliminar o stress.\r\nAula que combina movimentos de várias artes marciais, de uma forma energética e altamente motivante."
+
+bodypump:
+  tipo: Body Pump
+  descricao: "Objectivos: perder peso, tonificar e delinear o corpo.\r\nAula simples e divertida com pesos."
+
+bodypumpexpress:
+  tipo: Body Pump Express
+  descricao: "Objectivos: perder peso, tonificar e delinear o corpo.\r\nAula simples e divertida com pesos."
+
+bodystep:
+  tipo: Body Step
+  descricao: "Objectivos e Benefícios: melhora a capacidade cardio-respiratória, queima gordura, aumenta a força e a resistência muscular, melhora a coordenação e agilidade, melhora a densidade mineral óssea, nelhora a estabilidade postural.\r\n É um trabalho energizante, que visa o treino e desafios constantes, que o faz sentir vivo e livre. Utiliza o step com altura ajustável e movimentos simples em cima, por cima e à volta do step. Consegue-se UMA MOTIVAÇÃO GIGANTE ao som das musicas conhecidas e ao ser-se guiado por instrutores acessíveis. Permite uma queima de calorias até níveis elevados seguidos por modelação e tonificação corporal. As posturas são um factor preponderante no BodyStep, por serem atléticas e com uma melhoria da percepção corporal."
+
+bodyvive:
+  tipo: Body Vive
+  descricao: "Objectivo: Aula de baixo impacto que integra exercícios cardiovasculares e de força.\r\nAula baseada em movimentos integrados ao nivel da estabilidade, flexibilidade e mobilidade articular."
+
+hidroginastica:
+  tipo: Hidroginástica
+  descricao: "Objectivos: tonificar o corpo, melhorar a flexibilidade e aumentar a resistência cardio-respiratória.\r\nTrabalho de condicionamento físico geral, muito motivante, realizado no meio aquático com elevados níveis de segurança."
+
+hiphop:
+  tipo: Hip Hop
+  descricao: "Objectivos: melhorar a auto-estima e aumentar a resistência aeróbica.\r\nActividade aeróbica, praticada através de movimentos descontraídos e cool, ao ritmo das últimas tendências musicais do RAP & HIP HOP. É conhecida, habitualmente, como a \"dança de rua\" dos EUA."
+
+localizada:
+  tipo: Localizada
+  descricao: "Objectivos: tonificar e delinear o corpo. É uma aula de grupo, ritmada, divertida e que visa o desenvolvimento harmonioso de todos os grupos musculares."
+
+pilates:
+  tipo: Pilates
+  descricao:
+
+rpm:
+  tipo: RPM
+
+rpmexpress:
+  tipo: RPM Express
+
+step:
+  tipo: Step
+
+taichi:
+  tipo: Tai Chi
+  descricao: "Objectivos: corrigir a postura, eliminar o stress e desenvolver o equilíbrio body/mind/heart/spirit.\r\nÉ uma actividade oriental, que se caracteriza pela combinação de movimentos delicados/circulares, com uma respiração adequada, que visam proporcionar um estado de tranquilidade e harmonia."
+
+yoga:
+  tipo: Yoga
+  descricao: "Objectivos: corrigir a postura, eliminar o stress e desenvolver o equilíbrio body/mind/heart/spirit.\r\nActividade ancestral, que consiste na realização de posturas terapêuticas e na sua sincronização adequada com a respiração. Na sua essência, a palavra Yoga significa UNIÃO."
+

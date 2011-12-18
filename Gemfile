@@ -27,6 +27,8 @@ gem "flickraw"
 
 gem "tlsmail"
 
+gem "googlecharts"
+
 
 # Use unicorn as the web server
 # gem 'unicorn'

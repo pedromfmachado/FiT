@@ -13,6 +13,7 @@
 - Retirar ids de tabelas onde não são necessários
 - Tratar das verificações dos pagamentos e modalidades de pagamento
 - Gerar password e enviar mail a informar
+- Fazer paginas auxiliares (about, faq, etc)
 
 Módulos em falta:
 - Estatisticas

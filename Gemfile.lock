@@ -36,6 +36,7 @@ GEM
     erubis (2.7.0)
     flickraw (0.9.5)
     geocoder (1.1.0)
+    googlecharts (1.6.8)
     hike (1.2.1)
     i18n (0.6.0)
     json (1.6.3)
@@ -101,6 +102,7 @@ DEPENDENCIES
   cancan
   flickraw
   geocoder
+  googlecharts
   pg
   rails (= 3.1.1)
   sqlite3-ruby
