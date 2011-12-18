@@ -34,3 +34,246 @@ Unable to load exercicios_plano, underlying cause No such file to load -- exerci
 /usr/lib/ruby/gems/1.8/gems/rake-0.9.2/lib/rake/rake_test_loader.rb:9
 /usr/lib/ruby/gems/1.8/gems/rake-0.9.2/lib/rake/rake_test_loader.rb:5:in `each'
 /usr/lib/ruby/gems/1.8/gems/rake-0.9.2/lib/rake/rake_test_loader.rb:5
+Unable to load exercicios_plano, underlying cause No such file to load -- exercicios_plano 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/unit/user_test.rb:1:in `require'
+test/unit/user_test.rb:1
+Unable to load ginasio_notificacao, underlying cause No such file to load -- ginasio_notificacao 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/unit/user_test.rb:1:in `require'
+test/unit/user_test.rb:1
+Unable to load turno, underlying cause No such file to load -- turno 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/unit/user_test.rb:1:in `require'
+test/unit/user_test.rb:1
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tipo_aulas"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricaoCurta", "descricao") VALUES (NULL, '2011-12-18 03:04:36', '2011-12-18 03:04:36', 298486374, 'MyString', 'MyText')
+SQLite3::SQLException: table tipo_aulas has no column named descricaoCurta: INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricaoCurta", "descricao") VALUES (NULL, '2011-12-18 03:04:36', '2011-12-18 03:04:36', 298486374, 'MyString', 'MyText')
+Unable to load exercicios_plano, underlying cause No such file to load -- exercicios_plano 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/unit/user_test.rb:1:in `require'
+test/unit/user_test.rb:1
+Unable to load ginasio_notificacao, underlying cause No such file to load -- ginasio_notificacao 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/unit/user_test.rb:1:in `require'
+test/unit/user_test.rb:1
+Unable to load turno, underlying cause No such file to load -- turno 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/unit/user_test.rb:1:in `require'
+test/unit/user_test.rb:1
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tipo_aulas"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricaoCurta", "descricao") VALUES (NULL, '2011-12-18 03:05:21', '2011-12-18 03:05:21', 298486374, 'MyString', 'MyText')
+SQLite3::SQLException: table tipo_aulas has no column named descricaoCurta: INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricaoCurta", "descricao") VALUES (NULL, '2011-12-18 03:05:21', '2011-12-18 03:05:21', 298486374, 'MyString', 'MyText')
+Unable to load exercicios_plano, underlying cause No such file to load -- exercicios_plano 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/unit/user_test.rb:1:in `require'
+test/unit/user_test.rb:1
+Unable to load ginasio_notificacao, underlying cause No such file to load -- ginasio_notificacao 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/unit/user_test.rb:1:in `require'
+test/unit/user_test.rb:1
+Unable to load turno, underlying cause No such file to load -- turno 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/unit/user_test.rb:1:in `require'
+test/unit/user_test.rb:1
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "tipo_aulas"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 03:07:42', '2011-12-18 03:07:42', 298486374, 'MyText')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 03:07:42', '2011-12-18 03:07:42', 980190962, 'MyText')[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "pedido_planos"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 03:07:42', '2011-12-18 03:07:42', '2011-12-15 11:20:49', 1)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 03:07:42', '2011-12-18 03:07:42', '2011-12-15 11:20:49', 1)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "notificacaos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 03:07:42', NULL, '2011-12-18 03:07:42', NULL, NULL, 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 03:07:42', NULL, '2011-12-18 03:07:42', NULL, NULL, 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "staffs"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 03:07:42', '2011-12-18 03:07:42', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 03:07:42', '2011-12-18 03:07:42', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "pagamentos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 03:07:42', '2011-12-18 03:07:42', 298486374, 'f', 1)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 03:07:42', '2011-12-18 03:07:42', 980190962, 'f', 1)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "exercicios_planos"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "exercicios_planos" ("repeticoes", "series", "exercicio", "peso", "plano") VALUES (1, 1, NULL, 1, NULL)[0m
+SQLite3::SQLException: table exercicios_planos has no column named exercicio: INSERT INTO "exercicios_planos" ("repeticoes", "series", "exercicio", "peso", "plano") VALUES (1, 1, NULL, 1, NULL)
+Unable to load exercicios_plano, underlying cause No such file to load -- exercicios_plano 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/unit/user_test.rb:1:in `require'
+test/unit/user_test.rb:1
+Unable to load ginasio_notificacao, underlying cause No such file to load -- ginasio_notificacao 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/unit/user_test.rb:1:in `require'
+test/unit/user_test.rb:1
+Unable to load turno, underlying cause No such file to load -- turno 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/unit/user_test.rb:1:in `require'
+test/unit/user_test.rb:1
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tipo_aulas"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 03:11:07', '2011-12-18 03:11:07', 298486374, 'MyText')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 03:11:07', '2011-12-18 03:11:07', 980190962, 'MyText')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "pedido_planos"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 03:11:07', '2011-12-18 03:11:07', '2011-12-15 11:20:49', 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 03:11:07', '2011-12-18 03:11:07', '2011-12-15 11:20:49', 1)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "notificacaos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 03:11:07', NULL, '2011-12-18 03:11:07', NULL, NULL, 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 03:11:07', NULL, '2011-12-18 03:11:07', NULL, NULL, 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "staffs"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 03:11:07', '2011-12-18 03:11:07', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 03:11:07', '2011-12-18 03:11:07', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "pagamentos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 03:11:07', '2011-12-18 03:11:07', 298486374, 'f', 1)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 03:11:07', '2011-12-18 03:11:07', 980190962, 'f', 1)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "exercicios_planos"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "exercicios_planos" ("repeticoes", "series", "exercicio_id", "peso", "plano") VALUES (1, 1, NULL, 1, NULL)[0m
+SQLite3::SQLException: table exercicios_planos has no column named plano: INSERT INTO "exercicios_planos" ("repeticoes", "series", "exercicio_id", "peso", "plano") VALUES (1, 1, NULL, 1, NULL)
+Unable to load exercicios_plano, underlying cause No such file to load -- exercicios_plano 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/unit/user_test.rb:1:in `require'
+test/unit/user_test.rb:1
+Unable to load ginasio_notificacao, underlying cause No such file to load -- ginasio_notificacao 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/unit/user_test.rb:1:in `require'
+test/unit/user_test.rb:1
+Unable to load turno, underlying cause No such file to load -- turno 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/unit/user_test.rb:1:in `require'
+test/unit/user_test.rb:1
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tipo_aulas"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 03:11:24', '2011-12-18 03:11:24', 298486374, 'MyText')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 03:11:24', '2011-12-18 03:11:24', 980190962, 'MyText')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "pedido_planos"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 03:11:24', '2011-12-18 03:11:24', '2011-12-15 11:20:49', 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 03:11:24', '2011-12-18 03:11:24', '2011-12-15 11:20:49', 1)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "notificacaos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 03:11:24', NULL, '2011-12-18 03:11:24', NULL, NULL, 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 03:11:24', NULL, '2011-12-18 03:11:24', NULL, NULL, 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "staffs"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 03:11:24', '2011-12-18 03:11:24', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 03:11:24', '2011-12-18 03:11:24', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "pagamentos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 03:11:24', '2011-12-18 03:11:24', 298486374, 'f', 1)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 03:11:24', '2011-12-18 03:11:24', 980190962, 'f', 1)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "exercicios_planos"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "exercicios_planos" ("plano_id", "repeticoes", "series", "exercicio_id", "peso") VALUES (NULL, 1, 1, NULL, 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercicios_planos" ("plano_id", "repeticoes", "series", "exercicio_id", "peso") VALUES (NULL, 1, 1, NULL, 1)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "ginasio_notificacaos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "ginasio_notificacaos" () VALUES ()
+SQLite3::SQLException: near ")": syntax error: INSERT INTO "ginasio_notificacaos" () VALUES ()

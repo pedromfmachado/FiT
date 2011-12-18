@@ -88,12 +88,14 @@
     </div>
   </div>
 
-  <div class="clearfix">
-    <%= f.label :ginasio_id, 'Ginasio' %>
-    <div class="input">
-      <%= collection_select("user", "modalidade_pagamento_id", ModalidadePagamento.all, :id, :nome, {}, {  :class => "span6 no-resize" }) %>
+  <% if @user.normal? %>
+    <div class="clearfix">
+      <%= f.label :ginasio_id, 'Ginasio' %>
+      <div class="input">
+        <%= collection_select("user", "modalidade_pagamento_id", ModalidadePagamento.all, :id, :nome, {}, {  :class => "span6 no-resize" }) %>
+      </div>
     </div>
-  </div>
+  <% end %>
 
   <div class="clearfix">
     <%= f.label :password %>

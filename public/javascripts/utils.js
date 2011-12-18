@@ -73,12 +73,30 @@ function getGinasios(){
 
 $(document).ready(function(){
 
+
+	$("#mes").change(function(){
+		
+
+		var mes = $("#mes").val();
+		var ano = $("#ano").val();
+		$("#link_ver").attr("href","/pagamentos?mes="+mes+"&ano="+ano);
+
+	});
+
+	$("#ano").change(function(){
+		
+
+		var mes = $("#mes").val();
+		var ano = $("#ano").val();
+		$("#link_ver").attr("href","/pagamentos?mes="+mes+"&ano="+ano);
+
+	});
 	
 
 	if($("#todos:checked").length == 1)
 		$("#ginasios_select").attr('disabled','true');
 	
-  $("#todos").change(function(){
+  	$("#todos").change(function(){
 
 			if($("#todos:checked").length == 1)
 				$("#ginasios_select").attr('disabled','true');

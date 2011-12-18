@@ -4,9 +4,9 @@
 
 <div class="row">
 	<div class="span6">
-		<%= link_to "Ver", pagamentos_path, :class =>"btn primary" %>
-		<%= text_field_tag :mes, Time.now.month.to_s, :class => "span1 no-resize" %> /
-		<%= text_field_tag :ano, Time.now.year.to_s, :class => "span1 no-resize" %> 
+		<%= link_to "Ver", pagamentos_path, :id => "link_ver", :class =>"btn primary" %>
+		<%= text_field_tag :mes, params[:mes], :id => "mes", :class => "span1 no-resize" %> /
+		<%= text_field_tag :ano, params[:ano], :id => "ano", :class => "span1 no-resize" %> 
 	</div>
 </div>
 
@@ -21,8 +21,8 @@
 		
 		<tr>
 			<td><%= pagamento.user.nome %></td>
-			<td><%= pagamento.user.modalidade_pagamento.nome %></td>
-			<td><%= pagamento.user.modalidade_pagamento.preco %></td>
+			<td><%= pagamento.modalidade_pagamento.nome %></td>
+			<td><%= pagamento.preco %></td>
 			<% if pagamento.pago %>
 				<td>Sim</td>
 			<% else %>

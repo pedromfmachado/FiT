@@ -1,30 +1,10 @@
 class Pagamento < ActiveRecord::Base
   belongs_to :user
+  belongs_to :modalidade_pagamento
 
   def self.update_mensal
 
-    if (Pagamento.maximum(:ano).to_i <= Time.now.year &&  Pagamento.maximum(:mes).to_i < Time.now.month) ||
-      Pagamento.maximum(:ano) == nil
-      User.all.each do |u|
-
-        if u.normal?
-
-          pagamento = Pagamento.new do |p|
-
-            p.user_id = u.id
-            p.pago = false
-            p.mes = Time.now.month
-            p.ano = Time.now.year
-
-          end
-
-          pagamento.save
-
-        end
-
-      end
-
-    else
+    
 
       User.all.each do |u|
 
@@ -36,6 +16,8 @@ class Pagamento < ActiveRecord::Base
             p.pago = false
             p.mes = Time.now.month
             p.ano = Time.now.year
+            p.preco = p.user.modalidade_pagamento.preco
+            p.modalidade_pagamento_id = p.user.modalidade_pagamento_id
 
           end
 
@@ -44,8 +26,6 @@ class Pagamento < ActiveRecord::Base
         end
 
       end
-
-    end
 
   end
 
@@ -62,7 +42,8 @@ class Pagamento < ActiveRecord::Base
 
   def build_xml(xml)
     xml.aula do
-      xml.preco self.user.modalidade_pagamento.preco
+      xml.preco self.preco
+      xml.modalidade self.modalidade_pagamento.nome
       xml.pago self.pago
       xml.mes self.mes
       xml.ano self.ano

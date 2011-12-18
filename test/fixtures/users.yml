@@ -1,19 +1,46 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  email: MyString
-  password_hash: MyString
-  password_salt: MyString
-  nome: MyString
-  datanascimento: MyString
-  telefone: MyString
-  morada: MyString
+<% salt = BCrypt::Engine.generate_salt %>
+<% password = BCrypt::Engine.hash_secret("gotadepera", salt) %>
+alice:
+  email: valter.pinho0@gmail.com
+  password_hash: <%= password %>
+  password_salt: <%= salt %>
+  nome: Alice Jenkins-Stokes
+  datanascimento: 1985-01-01
+  telefone: 00351 220001002
+  morada: Rua do Bonjardim,\nnº300\n4000-114\nPORTO
 
-two:
-  email: MyString
-  password_hash: MyString
-  password_salt: MyString
-  nome: MyString
-  datanascimento: MyString
-  telefone: MyString
-  morada: MyString
+<% salt = BCrypt::Engine.generate_salt %>
+<% password = BCrypt::Engine.hash_secret("sapodechocolate", salt) %>
+bob:
+  email: ei08139@fe.up.pt
+  password_hash: <%= password %>
+  password_salt: <%= salt %>
+  nome: Bob Thomas Hamilton
+  datanascimento: 1990-12-25
+  telefone: 961101106
+  morada: Rua 1º de Dezembro,\n4425-601\nMAIA
+
+<% salt = BCrypt::Engine.generate_salt %>
+<% password = BCrypt::Engine.hash_secret("penadeacucar", salt) %>
+charlie:
+  email: pedro.machado@fe.up.pt
+  password_hash: <%= password %>
+  password_salt: <%= salt %>
+  nome: Charlie Carroll
+  datanascimento: 1973-05-26
+  telefone: +351913777888
+  morada: Rua André de Resende,\nnº111\n4150-069\nPORTO
+
+<% salt = BCrypt::Engine.generate_salt %>
+<% password = BCrypt::Engine.hash_secret("cachodebaratas", salt) %>
+david:
+  email: ei08119@fe.up.pt
+  password_hash: <%= password %>
+  password_salt: <%= salt %>
+  nome: David Vanilla
+  datanascimento: 1983-07-30
+  telefone: 934567890
+  morada: Largo Chelas\n1900-159\nLISBOA
+

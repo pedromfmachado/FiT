@@ -41,6 +41,8 @@ class User < ActiveRecord::Base
     :too_long => "demasiado grande. Tem de ter entre 6 a 20 caracteres",
     :too_short => "demasiado pequena. Tem de ter entre 6 a caracteres"
   validates_confirmation_of :password, :message => "diferente."
+
+  validates_presence_of :modalidade_pagamento_id, :unless => Proc.new { |user| user.admin? || user.staff? }
   
   def self.authenticate(email, password)
     user = find_by_email(email)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111218000736) do
+ActiveRecord::Schema.define(:version => 20111218112854) do
 
   create_table "admins", :force => true do |t|
     t.integer   "user_id"
@@ -122,6 +122,8 @@ ActiveRecord::Schema.define(:version => 20111218000736) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "ano"
+    t.float    "preco"
+    t.integer  "modalidade_pagamento_id"
   end
 
   add_index "pagamentos", ["user_id"], :name => "index_pagamentos_on_user_id"

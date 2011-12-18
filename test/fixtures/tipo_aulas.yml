@@ -2,10 +2,8 @@
 
 one:
   tipo: 
-  descricaoCurta: MyString
   descricao: MyText
 
 two:
   tipo: 
-  descricaoCurta: MyString
   descricao: MyText
