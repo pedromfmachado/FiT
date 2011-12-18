@@ -57,7 +57,7 @@ load_and_authorize_resource
 
     respond_to do |format|
       if @aula.save
-        format.html { redirect_to ginasio_aulas_path(params[:ginasio_id]), :notice => 'Aula criada com sucesso.' }
+        format.html { redirect_to ginasio_aulas_path(params[:ginasio_id]), :flash => { :success => 'Aula criada com sucesso.' } }
       else
         format.html { render :action => "new" }
       end

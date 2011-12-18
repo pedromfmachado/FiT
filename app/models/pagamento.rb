@@ -64,6 +64,8 @@ class Pagamento < ActiveRecord::Base
     xml.aula do
       xml.preco self.user.modalidade_pagamento.preco
       xml.pago self.pago
+      xml.mes self.mes
+      xml.ano self.ano
     end
   end 
     

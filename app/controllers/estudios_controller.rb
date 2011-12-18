@@ -51,7 +51,7 @@ class EstudiosController < ApplicationController
 
     if @estudio.save
       respond_to do |format|
-        format.html { redirect_to ginasio_estudio_path(params[:ginasio_id], @estudio), :notice => 'Estudio criado com sucesso' }
+        format.html { redirect_to ginasio_estudio_path(params[:ginasio_id], @estudio), :flash => { :success => 'Estudio criado com sucesso.' } }
         format.json { render :json => @estudio, :status => :created, :location => @estudio }
       end
     else
@@ -70,7 +70,7 @@ class EstudiosController < ApplicationController
     @ginasio = Ginasio.find(params[:ginasio_id])
     respond_to do |format|
       if @estudio.update_attributes(params[:estudio])
-        format.html { redirect_to ginasio_estudio_path(@ginasio, @estudio), :notice => 'Estudio was successfully updated.' }
+        format.html { redirect_to ginasio_estudio_path(@ginasio, @estudio), :flash => { :success => 'Estudio alterado sem problemas.' } }
         format.json { head :ok }
       else
         format.html { render :action => "edit" }
