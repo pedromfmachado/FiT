@@ -61,7 +61,7 @@ class ReservaAula < ActiveRecord::Base
       xml.lugares ReservaAula.lugaresDisponiveis(aula.id)
       xml.lotacao estudio.lotacao
 
-      xml.feedback Feedback.getFeedbackAula(aid)
+      xml.media Feedback.getFeedbackAula(aid)
       xml.feedback Feedback.getFeedbackUser(uid,aid)
 
       if ReservaAula.jaMarcada(uid,aula.id)

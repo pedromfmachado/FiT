@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta content=\\\"text/html; charset=UTF-8\\\" http-equiv=\\\"Content-Type\\\" />
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
     <h1>Bem vindo ao FiT, David Vanilla</h1>
@@ -19,7 +19,7 @@
     </ul>
 
     <p>
-      Comece a usar todo o potencial deste ginásio aqui: <a href\\\="http://192.168.55.224\\\">http://192.168.55.224</a>.
+      Comece a usar todo o potencial deste ginásio aqui: <a href="http://192.168.55.224">http://192.168.55.224</a>.
     </p>
     <p>Tenha um bom dia!</p>
   </body>
