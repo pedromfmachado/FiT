@@ -6,3 +6,4 @@ class AdminTest < ActiveSupport::TestCase
     assert true
   end
 end
+

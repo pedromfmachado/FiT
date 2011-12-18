@@ -18,7 +18,7 @@
       <% if @user.normal? %>
         <div class="row">
           <div class="span3 right-align"><strong>Frequencia:</strong></div>
-          <div class="span6"><%= @user.modalidade_pagamento.nome unless @user.ginasio_id == nil%></div>
+          <div class="span6"><%= @user.modalidade_pagamento.nome unless @user.modalidade_pagamento_id == nil%></div>
         </div>
       <% end %>
 

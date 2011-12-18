@@ -87,15 +87,13 @@
       <%= collection_select("user", "ginasio_id", Ginasio.all, :id, :nome, {}, {  :class => "span6 no-resize" }) %>
     </div>
   </div>
-
-  <% if @user.normal? %>
-    <div class="clearfix">
-      <%= f.label :modalidade_pagamento_id, 'Frequencia' %>
-      <div class="input">
-        <%= collection_select("user", "modalidade_pagamento_id", ModalidadePagamento.all, :id, :nome, {}, {  :class => "span6 no-resize" }) %>
-      </div>
+    
+  <div class="clearfix">
+    <%= f.label :modalidade_pagamento_id, 'Frequencia' %>
+    <div class="input">
+      <%= collection_select("user", "modalidade_pagamento_id", ModalidadePagamento.all, :id, :nome, {}, {  :class => "span6 no-resize" }) %>
     </div>
-  <% end %>
+  </div>
 
   <div class="clearfix">
     <%= f.label :password %>

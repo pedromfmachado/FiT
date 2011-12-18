@@ -1,56 +1,97 @@
-<div class="span14">
+<div class="span16">
   <h1>Plano Alimentar nº <%= @alimentar_plano.id %></h1>
 
   <div class="row spaced-lines">
 
     <!-- le dados importantes, para usabilidade -->
     <div class="row">
-      <div class="span3 right-align"><strong>Utilizador:</strong></div>
+      <div class="span4 right-align"><strong>Utilizador:</strong></div>
       <div class="span8"><%= @user.nome %></div>
     </div>
 
     <div class="row">
-      <div class="span3 right-align"><strong>Ginásio:</strong></div>
+      <div class="span4 right-align"><strong>Ginásio:</strong></div>
       <div class="span8"><%= @user.ginasio.nome %></div>
     </div>
 
     <div class="row">
-      <div class="span3 right-align"><strong>Data do Plano Alimentar:</strong></div>
+      <div class="span4 right-align"><strong>Data do Plano Alimentar:</strong></div>
       <div class="span8"><%= @alimentar_plano.data %></div>
     </div>
 
   </div>
 
-  <div class="row spaced-lines topSpacing2">
+  <div class="row topSpacing1">
     <!-- le campos do plano -->
-    <div class="plano-item">
-      <p><strong>Pequeno Almoço:</strong></p>
-      <p><%= @alimentar_plano.pequenoalmoco %> </p>
+    <div class="span8">
+      <strong>Pequeno Almoço:</strong>
+      <div class="plano-item">
+        <p>
+          <% @alimentar_plano.pequenoalmoco.split("\r\n").each do |line| %>
+          <%= line %><br/>
+          <% end %>
+        </p>
+      </div>
     </div>
 
-    <div class="plano-item">
-      <p><strong>Manhã:</strong></p>
-      <p> <%= @alimentar_plano.manha %> </p>
+    <div class="span8">
+      <strong>Manhã:</strong>
+      <div class="plano-item">
+        <p>
+          <% @alimentar_plano.manha.split("\r\n").each do |line| %>
+          <%= line %><br/>
+          <% end %>
+        </p>
+      </div>
     </div>
 
-    <div class="plano-item">
-      <p><strong>Almoço:</strong></p>
-      <p> <%= @alimentar_plano.almoco %> </p>
+  </div>
+
+  <div class="row topSpacing2">
+    <div class="span8">
+      <strong>Almoço:</strong>
+      <div class="plano-item">
+        <p>
+          <% @alimentar_plano.almoco.split("\r\n").each do |line| %>
+          <%= line %><br/>
+          <% end %>
+        </p>
+      </div>
     </div>
 
-    <div class="plano-item">
-      <p><strong>Tarde:</strong></p>
-      <p> <%= @alimentar_plano.tarde %> </p>
+    <div class="span8">
+      <strong>Tarde:</strong>
+      <div class="plano-item">
+        <p>
+          <% @alimentar_plano.tarde.split("\r\n").each do |line| %>
+          <%= line %><br/>
+          <% end %>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row topSpacing2">
+    <div class="span8">
+      <strong>Jantar:</strong>
+      <div class="plano-item">
+        <p>
+          <% @alimentar_plano.jantar.split("\r\n").each do |line| %>
+          <%= line %><br/>
+          <% end %>
+        </p>
+      </div>
     </div>
 
-    <div class="plano-item">
-      <p><strong>Jantar:</strong></p>
-      <p> <%= @alimentar_plano.jantar %> </p>
-    </div>
-
-    <div class="plano-item">
-      <p><strong>Ceia:</strong></p>
-      <p> <%= @alimentar_plano.ceia %> </p>
+    <div class="span8">
+      <strong>Ceia:</strong>
+      <div class="plano-item">
+        <p>
+          <% @alimentar_plano.ceia.split("\r\n").each do |line| %>
+          <%= line %><br/>
+          <% end %>
+        </p>
+      </div>
     </div>
   </div>
 

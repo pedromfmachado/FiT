@@ -47,7 +47,7 @@ class AlimentarPlanosController < ApplicationController
     
     respond_to do |format|
       if @alimentar_plano.save
-        format.html { redirect_to user_alimentar_plano_path(@user,@alimentar_plano), :notice => 'Alimentar plano was successfully created.' }
+        format.html { redirect_to user_alimentar_plano_path(@user,@alimentar_plano), :flash => { :success => 'Novo plano alimentar criado.' } }
       else
         format.html { render :action => "new" }
       end
@@ -62,7 +62,7 @@ class AlimentarPlanosController < ApplicationController
 
     respond_to do |format|
       if @alimentar_plano.update_attributes(params[:alimentar_plano])
-        format.html { redirect_to user_alimentar_plano_path(@user,@alimentar_plano), :notice => 'Alimentar plano was successfully updated.' }
+        format.html { redirect_to user_alimentar_plano_path(@user,@alimentar_plano), :flash => { :success => 'Plano alterado com sucesso.' } }
       else
         format.html { render :action => "edit" }
       end
@@ -81,3 +81,4 @@ class AlimentarPlanosController < ApplicationController
     end
   end
 end
+
