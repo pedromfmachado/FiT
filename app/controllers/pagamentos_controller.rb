@@ -32,9 +32,17 @@ class PagamentosController < ApplicationController
   	respond_to do |format|
 
   		if pagamento.update_attributes(:pago => true)
-      		format.html {redirect_to pagamentos_path(:mes => pagamento.mes, :ano => pagamento.ano), :flash => {:success => "Confirmado pagamento"}}
+            if params[:user_id]
+                format.html {redirect_to user_pagamentos_path(pagamento.user_id, :ano => pagamento.ano), :flash => {:success => "Confirmado pagamento"}}
+            else
+      		    format.html {redirect_to pagamentos_path(:mes => pagamento.mes, :ano => pagamento.ano), :flash => {:success => "Confirmado pagamento"}}
+            end
       	else
-      		format.html {redirect_to pagamentos_path(:mes => pagamento.mes, :ano => pagamento.ano), :flash => {:error => "Problema ao confirmar pagamento"}}
+      		if params[:user_id]
+                format.html {redirect_to user_pagamentos_path(pagamento.user_id, :ano => pagamento.ano), :flash => {:success => "Problema ao confirmar pagamento"}}
+            else
+      		    format.html {redirect_to pagamentos_path(:mes => pagamento.mes, :ano => pagamento.ano), :flash => {:success => "Problema ao confirmar pagamento"}}
+            end
       	end
     end
 
@@ -46,11 +54,19 @@ class PagamentosController < ApplicationController
 
     respond_to do |format|
 
-      if pagamento.update_attributes(:pago => false)
-          format.html {redirect_to pagamentos_path(:mes => pagamento.mes, :ano => pagamento.ano), :flash => {:success => "Confirmado pagamento"}}
-        else
-          format.html {redirect_to pagamentos_path(:mes => pagamento.mes, :ano => pagamento.ano), :flash => {:error => "Problema ao confirmar pagamento"}}
-        end
+        if pagamento.update_attributes(:pago => false)
+            if params[:user_id]
+                format.html {redirect_to user_pagamentos_path(pagamento.user_id, :ano => pagamento.ano), :flash => {:success => "Pagamento anulado"}}
+            else
+      		    format.html {redirect_to pagamentos_path(:mes => pagamento.mes, :ano => pagamento.ano), :flash => {:success => "Pagamento anulado"}}
+            end
+      	else
+      		if params[:user_id]
+                format.html {redirect_to user_pagamentos_path(pagamento.user_id, :ano => pagamento.ano), :flash => {:success => "Problema ao anular pagamento"}}
+            else
+      		    format.html {redirect_to pagamentos_path(:mes => pagamento.mes, :ano => pagamento.ano), :flash => {:success => "Problema ao anular pagamento"}}
+            end
+      	end
     end
 
   end

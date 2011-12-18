@@ -1,0 +1,29 @@
+Loaded suite test/functional/fit_mailer_test
+Started
+F
+Finished in 0.520785 seconds.
+
+  1) Failure:
+test_welcome_email(FitMailerTest) [test/functional/fit_mailer_test.rb:22]:
+<#<Mail::Body:0x7f282927a760
+ @boundary=nil,
+ @charset="US-ASCII",
+ @encoding="7bit",
+ @epilogue=nil,
+ @part_sort_order=["text/plain", "text/enriched", "text/html"],
+ @parts=[],
+ @preamble=nil,
+ @raw_source="Eu gosto de cavalos.\n\n">> expected but was
+<#<Mail::Body:0x7f2829258548
+ @boundary="--==_mimepart_4eedf1537eb91_26f03f94177e59b02038",
+ @charset="US-ASCII",
+ @encoding="7bit",
+ @epilogue=nil,
+ @part_sort_order=["text/plain", "text/enriched", "text/html"],
+ @parts=
+  [#<Mail::Part:69905232583160, Multipart: false, Headers: <Content-Type: text/plain>>,
+   #<Mail::Part:69905232612920, Multipart: false, Headers: <Content-Type: text/html>>],
+ @preamble=nil,
+ @raw_source="">>.
+
+1 tests, 1 assertions, 1 failures, 0 errors

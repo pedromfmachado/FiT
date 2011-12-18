@@ -6,7 +6,7 @@
 	<div class="span6">
 		<%= link_to "Ver", pagamentos_path, :id => "link_ver", :class =>"btn primary" %>
 		
-		<% if params[:id] %>
+		<% if !params[:user_id] %>
 			<%= text_field_tag :mes, params[:mes], :id => "mes", :class => "span1 no-resize" %> /
 		<% end %>
 		<%= text_field_tag :ano, params[:ano], :id => "ano", :class => "span1 no-resize" %> 
@@ -23,15 +23,15 @@
 	<% @pagamentos.each do |pagamento| %>
 		
 		<tr>
-			<td><%= pagamento.user.nome %></td>
+			<td><%= link_to pagamento.user.nome, pagamento.user %></td>
 			<td><%= pagamento.modalidade_pagamento.nome %></td>
 			<td><%= pagamento.preco %></td>
 			<% if pagamento.pago && !current_user.normal? %>
 				<td>Sim</td>
-				<td><%= link_to "Cancelar", cancelarpagamento_path(:pagamento_id => pagamento.id), :class => "btn danger" %></td>
+				<td><%= link_to "Anular", cancelarpagamento_path(:user_id => params[:user_id],:pagamento_id => pagamento.id), :class => "btn danger" %></td>
 			<% elsif !current_user.normal? %>
 				<td> Não </td>
-				<td><%= link_to "Confirmar", confirmarpagamento_path(:pagamento_id => pagamento.id), :class => "btn success" %></td>
+				<td><%= link_to "Confirmar", confirmarpagamento_path(:user_id => params[:user_id],:pagamento_id => pagamento.id), :class => "btn success" %></td>
 			<% end %>
 
 		</tr>

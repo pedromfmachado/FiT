@@ -277,3 +277,551 @@ test/unit/user_test.rb:1
   [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "ginasio_notificacaos"[0m
   [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "ginasio_notificacaos" () VALUES ()
 SQLite3::SQLException: near ")": syntax error: INSERT INTO "ginasio_notificacaos" () VALUES ()
+Unable to load exercicios_plano, underlying cause No such file to load -- exercicios_plano 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+Unable to load ginasio_notificacao, underlying cause No such file to load -- ginasio_notificacao 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+Unable to load turno, underlying cause No such file to load -- turno 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+Unable to load exercicios_plano, underlying cause No such file to load -- exercicios_plano 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+Unable to load ginasio_notificacao, underlying cause No such file to load -- ginasio_notificacao 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+Unable to load turno, underlying cause No such file to load -- turno 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tipo_aulas"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 13:32:06', '2011-12-18 13:32:06', 298486374, 'MyText')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 13:32:06', '2011-12-18 13:32:06', 980190962, 'MyText')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "pedido_planos"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 13:32:06', '2011-12-18 13:32:06', '2011-12-15 11:20:49', 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 13:32:06', '2011-12-18 13:32:06', '2011-12-15 11:20:49', 1)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "notificacaos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 13:32:06', NULL, '2011-12-18 13:32:06', NULL, NULL, 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 13:32:06', NULL, '2011-12-18 13:32:06', NULL, NULL, 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "staffs"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:32:06', '2011-12-18 13:32:06', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:32:06', '2011-12-18 13:32:06', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "pagamentos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 13:32:06', '2011-12-18 13:32:06', 298486374, 'f', 1)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 13:32:06', '2011-12-18 13:32:06', 980190962, 'f', 1)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "exercicios_planos"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercicios_planos" ("plano_id", "repeticoes", "series", "exercicio_id", "peso") VALUES (NULL, 1, 1, NULL, 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercicios_planos" ("plano_id", "repeticoes", "series", "exercicio_id", "peso") VALUES (NULL, 1, 1, NULL, 1)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "ginasio_notificacaos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "ginasio_notificacaos" () VALUES ()
+SQLite3::SQLException: near ")": syntax error: INSERT INTO "ginasio_notificacaos" () VALUES ()
+Unable to load exercicios_plano, underlying cause No such file to load -- exercicios_plano 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+Unable to load ginasio_notificacao, underlying cause No such file to load -- ginasio_notificacao 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+Unable to load turno, underlying cause No such file to load -- turno 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "tipo_aulas"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 13:49:46', '2011-12-18 13:49:46', 298486374, 'MyText')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 13:49:46', '2011-12-18 13:49:46', 980190962, 'MyText')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "pedido_planos"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 13:49:46', '2011-12-18 13:49:46', '2011-12-15 11:20:49', 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 13:49:46', '2011-12-18 13:49:46', '2011-12-15 11:20:49', 1)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "notificacaos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 13:49:46', NULL, '2011-12-18 13:49:46', NULL, NULL, 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 13:49:46', NULL, '2011-12-18 13:49:46', NULL, NULL, 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "staffs"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:49:46', '2011-12-18 13:49:46', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:49:46', '2011-12-18 13:49:46', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "pagamentos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 13:49:46', '2011-12-18 13:49:46', 298486374, 'f', 1)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 13:49:46', '2011-12-18 13:49:46', 980190962, 'f', 1)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "exercicios_planos"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercicios_planos" ("plano_id", "repeticoes", "series", "exercicio_id", "peso") VALUES (NULL, 1, 1, NULL, 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercicios_planos" ("plano_id", "repeticoes", "series", "exercicio_id", "peso") VALUES (NULL, 1, 1, NULL, 1)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "ginasio_notificacaos"[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "ginasios"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "ginasios" ("created_at", "latitude", "updated_at", "nome", "id", "longitude") VALUES ('2011-12-18 13:49:46', 1.5, '2011-12-18 13:49:46', 'MyString', 298486374, 1.5)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "ginasios" ("created_at", "latitude", "updated_at", "nome", "id", "longitude") VALUES ('2011-12-18 13:49:46', 1.5, '2011-12-18 13:49:46', 'MyString', 980190962, 1.5)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "turnos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "turnos" ("hora") VALUES ('2011-12-05 23:23:47')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "turnos" ("hora") VALUES ('2011-12-05 23:23:47')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:49:46', 934567890, '2011-12-18 13:49:46', '1983-07-30', 'David Vanilla', 127326141, '$2a$10$s9ZtnjdKwYtZ4PBWMU19HO', 'Largo Chelas\n1900-159\nLISBOA', '$2a$10$s9ZtnjdKwYtZ4PBWMU19HOpOm.IzUnVXGoq/XvM4rCDpbYNKudz7m', 'ei08119@fe.up.pt')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:49:46', '00351 220001002', '2011-12-18 13:49:46', '1985-01-01', 'Alice Jenkins-Stokes', 663665735, '$2a$10$sQpp65pKFid.osgrMsiW7O', 'Rua do Bonjardim,\nnº300\n4000-114\nPORTO', '$2a$10$sQpp65pKFid.osgrMsiW7ObKqB0l1ILW3ilWgUyDLVnNHpcj3Jkdi', 'valter.pinho0@gmail.com')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:49:46', 351913777888, '2011-12-18 13:49:46', '1973-05-26', 'Charlie Carroll', 786122151, '$2a$10$H9kLE2J5uFKCFfjOLp994u', 'Rua André de Resende,\nnº111\n4150-069\nPORTO', '$2a$10$H9kLE2J5uFKCFfjOLp994u2uNtqhn58gt2mGmyqbosPvvD0S7LRye', 'pedro.machado@fe.up.pt')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:49:46', 961101106, '2011-12-18 13:49:46', '1990-12-25', 'Bob Thomas Hamilton', 902541635, '$2a$10$A3UWE6sk/WMmO73XPj2/Q.', 'Rua 1º de Dezembro,\n4425-601\nMAIA', '$2a$10$A3UWE6sk/WMmO73XPj2/Q.8So87dH.m0fP4iH7I6/pSQOX3rw4FeS', 'ei08139@fe.up.pt')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "modalidade_pagamentos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "modalidade_pagamentos" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:49:46', '2011-12-18 13:49:46', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "modalidade_pagamentos" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:49:46', '2011-12-18 13:49:46', 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "reserva_aulas"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "reserva_aulas" ("created_at", "updated_at", "dia", "user_id", "aula_id") VALUES ('2011-12-18 13:49:46', '2011-12-18 13:49:46', '2011-12-13', 1, 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "reserva_aulas" ("created_at", "updated_at", "dia", "user_id", "aula_id") VALUES ('2011-12-18 13:49:46', '2011-12-18 13:49:46', '2011-12-13', 1, 1)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "exercicios"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "exercicios" ("tipo", "created_at", "updated_at", "nome", "maquina", "id") VALUES ('MyString', '2011-12-18 13:49:46', '2011-12-18 13:49:46', 'MyString', 'MyString', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "exercicios" ("tipo", "created_at", "updated_at", "nome", "maquina", "id") VALUES ('MyString', '2011-12-18 13:49:46', '2011-12-18 13:49:46', 'MyString', 'MyString', 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "cidades"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "cidades" ("created_at", "updated_at", "nome", "id") VALUES ('2011-12-18 13:49:46', '2011-12-18 13:49:46', 'MyString', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "cidades" ("created_at", "updated_at", "nome", "id") VALUES ('2011-12-18 13:49:46', '2011-12-18 13:49:46', 'MyString', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "aulas"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "aulas" ("created_at", "updated_at", "id", "turno") VALUES ('2011-12-18 13:49:46', '2011-12-18 13:49:46', 298486374, NULL)
+SQLite3::SQLException: table aulas has no column named turno: INSERT INTO "aulas" ("created_at", "updated_at", "id", "turno") VALUES ('2011-12-18 13:49:46', '2011-12-18 13:49:46', 298486374, NULL)
+Unable to load exercicios_plano, underlying cause No such file to load -- exercicios_plano 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+Unable to load ginasio_notificacao, underlying cause No such file to load -- ginasio_notificacao 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+Unable to load turno, underlying cause No such file to load -- turno 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tipo_aulas"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 13:52:46', '2011-12-18 13:52:46', 298486374, 'MyText')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 13:52:46', '2011-12-18 13:52:46', 980190962, 'MyText')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "pedido_planos"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 13:52:46', '2011-12-18 13:52:46', '2011-12-15 11:20:49', 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 13:52:46', '2011-12-18 13:52:46', '2011-12-15 11:20:49', 1)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "notificacaos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 13:52:46', NULL, '2011-12-18 13:52:46', NULL, NULL, 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 13:52:46', NULL, '2011-12-18 13:52:46', NULL, NULL, 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "staffs"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:52:46', '2011-12-18 13:52:46', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:52:46', '2011-12-18 13:52:46', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "pagamentos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 13:52:46', '2011-12-18 13:52:46', 298486374, 'f', 1)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 13:52:46', '2011-12-18 13:52:46', 980190962, 'f', 1)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "exercicios_planos"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "exercicios_planos" ("plano_id", "repeticoes", "series", "exercicio_id", "peso") VALUES (NULL, 1, 1, NULL, 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercicios_planos" ("plano_id", "repeticoes", "series", "exercicio_id", "peso") VALUES (NULL, 1, 1, NULL, 1)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "ginasio_notificacaos"[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "ginasios"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "ginasios" ("created_at", "latitude", "updated_at", "nome", "id", "longitude") VALUES ('2011-12-18 13:52:46', 1.5, '2011-12-18 13:52:46', 'MyString', 298486374, 1.5)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "ginasios" ("created_at", "latitude", "updated_at", "nome", "id", "longitude") VALUES ('2011-12-18 13:52:46', 1.5, '2011-12-18 13:52:46', 'MyString', 980190962, 1.5)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "turnos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "turnos" ("hora") VALUES ('2011-12-05 23:23:47')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "turnos" ("hora") VALUES ('2011-12-05 23:23:47')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:52:46', 934567890, '2011-12-18 13:52:46', '1983-07-30', 'David Vanilla', 127326141, '$2a$10$dPYTW.ukoViSjYJ/TStpEO', 'Largo Chelas\n1900-159\nLISBOA', '$2a$10$dPYTW.ukoViSjYJ/TStpEOg23ClYg3QHzHiTyQIfONhqA.HZRpYE.', 'ei08119@fe.up.pt')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:52:46', '00351 220001002', '2011-12-18 13:52:46', '1985-01-01', 'Alice Jenkins-Stokes', 663665735, '$2a$10$ad82xKMBDVSg/JlptyiUne', 'Rua do Bonjardim,\nnº300\n4000-114\nPORTO', '$2a$10$ad82xKMBDVSg/JlptyiUneCT1jwx74kSqsDgsruEhh5GLZHTj35x2', 'valter.pinho0@gmail.com')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:52:46', 351913777888, '2011-12-18 13:52:46', '1973-05-26', 'Charlie Carroll', 786122151, '$2a$10$g./RiM1LdjwdopB5dCXryO', 'Rua André de Resende,\nnº111\n4150-069\nPORTO', '$2a$10$g./RiM1LdjwdopB5dCXryOw0cv7P9xUnMLcYYiiT8LazrA9H.e6eu', 'pedro.machado@fe.up.pt')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:52:46', 961101106, '2011-12-18 13:52:46', '1990-12-25', 'Bob Thomas Hamilton', 902541635, '$2a$10$S9y/mEIgzfNqU7KznHDdP.', 'Rua 1º de Dezembro,\n4425-601\nMAIA', '$2a$10$S9y/mEIgzfNqU7KznHDdP.uqidX2/g4yXr5eCmPADBWvvrJD43Flu', 'ei08139@fe.up.pt')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "modalidade_pagamentos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "modalidade_pagamentos" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:52:46', '2011-12-18 13:52:46', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "modalidade_pagamentos" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:52:46', '2011-12-18 13:52:46', 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "reserva_aulas"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "reserva_aulas" ("created_at", "updated_at", "dia", "user_id", "aula_id") VALUES ('2011-12-18 13:52:46', '2011-12-18 13:52:46', '2011-12-13', 1, 1)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "reserva_aulas" ("created_at", "updated_at", "dia", "user_id", "aula_id") VALUES ('2011-12-18 13:52:46', '2011-12-18 13:52:46', '2011-12-13', 1, 1)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "exercicios"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "exercicios" ("tipo", "created_at", "updated_at", "nome", "maquina", "id") VALUES ('MyString', '2011-12-18 13:52:46', '2011-12-18 13:52:46', 'MyString', 'MyString', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "exercicios" ("tipo", "created_at", "updated_at", "nome", "maquina", "id") VALUES ('MyString', '2011-12-18 13:52:46', '2011-12-18 13:52:46', 'MyString', 'MyString', 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "cidades"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "cidades" ("created_at", "updated_at", "nome", "id") VALUES ('2011-12-18 13:52:46', '2011-12-18 13:52:46', 'MyString', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "cidades" ("created_at", "updated_at", "nome", "id") VALUES ('2011-12-18 13:52:46', '2011-12-18 13:52:46', 'MyString', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "aulas"[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "admins"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "admins" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:52:46', '2011-12-18 13:52:46', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "admins" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:52:46', '2011-12-18 13:52:46', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "planos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "planos" ("created_at", "data", "updated_at", "id", "altura", "peso") VALUES ('2011-12-18 13:52:46', 'MyString', '2011-12-18 13:52:46', 298486374, 1, 1)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "planos" ("created_at", "data", "updated_at", "id", "altura", "peso") VALUES ('2011-12-18 13:52:46', 'MyString', '2011-12-18 13:52:46', 980190962, 1, 1)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "feedbacks"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "updated_at", "valor", "id") VALUES ('2011-12-18 13:52:46', '2011-12-18 13:52:46', 1, 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "feedbacks" ("created_at", "updated_at", "valor", "id") VALUES ('2011-12-18 13:52:46', '2011-12-18 13:52:46', 1, 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "estudios"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "estudios" ("created_at", "updated_at", "lotacao", "nome", "id") VALUES ('2011-12-18 13:52:46', '2011-12-18 13:52:46', 1, 'MyString', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "estudios" ("created_at", "updated_at", "lotacao", "nome", "id") VALUES ('2011-12-18 13:52:46', '2011-12-18 13:52:46', 1, 'MyString', 980190962)[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 127326141]]
+Unable to load exercicios_plano, underlying cause No such file to load -- exercicios_plano 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+Unable to load ginasio_notificacao, underlying cause No such file to load -- ginasio_notificacao 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+Unable to load turno, underlying cause No such file to load -- turno 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tipo_aulas"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 13:53:52', '2011-12-18 13:53:52', 298486374, 'MyText')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 13:53:52', '2011-12-18 13:53:52', 980190962, 'MyText')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "pedido_planos"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 13:53:52', '2011-12-18 13:53:52', '2011-12-15 11:20:49', 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 13:53:52', '2011-12-18 13:53:52', '2011-12-15 11:20:49', 1)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "notificacaos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 13:53:52', NULL, '2011-12-18 13:53:52', NULL, NULL, 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 13:53:52', NULL, '2011-12-18 13:53:52', NULL, NULL, 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "staffs"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:53:52', '2011-12-18 13:53:52', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:53:52', '2011-12-18 13:53:52', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "pagamentos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 13:53:52', '2011-12-18 13:53:52', 298486374, 'f', 1)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 13:53:52', '2011-12-18 13:53:52', 980190962, 'f', 1)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "exercicios_planos"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "exercicios_planos" ("plano_id", "repeticoes", "series", "exercicio_id", "peso") VALUES (NULL, 1, 1, NULL, 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercicios_planos" ("plano_id", "repeticoes", "series", "exercicio_id", "peso") VALUES (NULL, 1, 1, NULL, 1)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "ginasio_notificacaos"[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "ginasios"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "ginasios" ("created_at", "latitude", "updated_at", "nome", "id", "longitude") VALUES ('2011-12-18 13:53:52', 1.5, '2011-12-18 13:53:52', 'MyString', 298486374, 1.5)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "ginasios" ("created_at", "latitude", "updated_at", "nome", "id", "longitude") VALUES ('2011-12-18 13:53:52', 1.5, '2011-12-18 13:53:52', 'MyString', 980190962, 1.5)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "turnos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "turnos" ("hora") VALUES ('2011-12-05 23:23:47')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "turnos" ("hora") VALUES ('2011-12-05 23:23:47')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:53:52', 934567890, '2011-12-18 13:53:52', '1983-07-30', 'David Vanilla', 127326141, '$2a$10$O7Qo7lqT.rhWWyoeBScR2O', 'Largo Chelas\n1900-159\nLISBOA', '$2a$10$O7Qo7lqT.rhWWyoeBScR2OvODBYeuBPW0MLUebCvNRF2otcWTmd/K', 'ei08119@fe.up.pt')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:53:52', '00351 220001002', '2011-12-18 13:53:52', '1985-01-01', 'Alice Jenkins-Stokes', 663665735, '$2a$10$OQ/QRCYmwzSucMd8IZhQ9e', 'Rua do Bonjardim,\nnº300\n4000-114\nPORTO', '$2a$10$OQ/QRCYmwzSucMd8IZhQ9eqRsq2bZtgi2rGLaKtKTY1jj/Y3Uybsu', 'valter.pinho0@gmail.com')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:53:52', 351913777888, '2011-12-18 13:53:52', '1973-05-26', 'Charlie Carroll', 786122151, '$2a$10$hL77XKJswAQrQgefxf.hCu', 'Rua André de Resende,\nnº111\n4150-069\nPORTO', '$2a$10$hL77XKJswAQrQgefxf.hCu2cDTWJ6SQsqiUbLR/4FENYvtIL5b3mO', 'pedro.machado@fe.up.pt')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:53:52', 961101106, '2011-12-18 13:53:52', '1990-12-25', 'Bob Thomas Hamilton', 902541635, '$2a$10$8/OmEaeQ.V4skpPNdXHz6.', 'Rua 1º de Dezembro,\n4425-601\nMAIA', '$2a$10$8/OmEaeQ.V4skpPNdXHz6.IdsKAPEb.uK12jKxyOKlteHo1UhKkZK', 'ei08139@fe.up.pt')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "modalidade_pagamentos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "modalidade_pagamentos" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:53:52', '2011-12-18 13:53:52', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "modalidade_pagamentos" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:53:52', '2011-12-18 13:53:52', 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "reserva_aulas"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "reserva_aulas" ("created_at", "updated_at", "dia", "user_id", "aula_id") VALUES ('2011-12-18 13:53:52', '2011-12-18 13:53:52', '2011-12-13', 1, 1)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "reserva_aulas" ("created_at", "updated_at", "dia", "user_id", "aula_id") VALUES ('2011-12-18 13:53:52', '2011-12-18 13:53:52', '2011-12-13', 1, 1)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "exercicios"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "exercicios" ("tipo", "created_at", "updated_at", "nome", "maquina", "id") VALUES ('MyString', '2011-12-18 13:53:52', '2011-12-18 13:53:52', 'MyString', 'MyString', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "exercicios" ("tipo", "created_at", "updated_at", "nome", "maquina", "id") VALUES ('MyString', '2011-12-18 13:53:52', '2011-12-18 13:53:52', 'MyString', 'MyString', 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "cidades"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "cidades" ("created_at", "updated_at", "nome", "id") VALUES ('2011-12-18 13:53:52', '2011-12-18 13:53:52', 'MyString', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "cidades" ("created_at", "updated_at", "nome", "id") VALUES ('2011-12-18 13:53:52', '2011-12-18 13:53:52', 'MyString', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "aulas"[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "admins"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "admins" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:53:52', '2011-12-18 13:53:52', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "admins" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:53:52', '2011-12-18 13:53:52', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "planos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "planos" ("created_at", "data", "updated_at", "id", "altura", "peso") VALUES ('2011-12-18 13:53:52', 'MyString', '2011-12-18 13:53:52', 298486374, 1, 1)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "planos" ("created_at", "data", "updated_at", "id", "altura", "peso") VALUES ('2011-12-18 13:53:52', 'MyString', '2011-12-18 13:53:52', 980190962, 1, 1)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "feedbacks"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "updated_at", "valor", "id") VALUES ('2011-12-18 13:53:52', '2011-12-18 13:53:52', 1, 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "feedbacks" ("created_at", "updated_at", "valor", "id") VALUES ('2011-12-18 13:53:52', '2011-12-18 13:53:52', 1, 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "estudios"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "estudios" ("created_at", "updated_at", "lotacao", "nome", "id") VALUES ('2011-12-18 13:53:52', '2011-12-18 13:53:52', 1, 'MyString', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "estudios" ("created_at", "updated_at", "lotacao", "nome", "id") VALUES ('2011-12-18 13:53:52', '2011-12-18 13:53:52', 1, 'MyString', 980190962)[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 127326141]]
+Rendered fit_mailer/welcome_email.html.erb (1.4ms)
+Rendered fit_mailer/welcome_email.text.erb (0.4ms)
+Unable to load exercicios_plano, underlying cause No such file to load -- exercicios_plano 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+Unable to load ginasio_notificacao, underlying cause No such file to load -- ginasio_notificacao 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+Unable to load turno, underlying cause No such file to load -- turno 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tipo_aulas"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 13:54:20', '2011-12-18 13:54:20', 298486374, 'MyText')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 13:54:20', '2011-12-18 13:54:20', 980190962, 'MyText')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "pedido_planos"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 13:54:20', '2011-12-18 13:54:20', '2011-12-15 11:20:49', 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 13:54:20', '2011-12-18 13:54:20', '2011-12-15 11:20:49', 1)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "notificacaos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 13:54:20', NULL, '2011-12-18 13:54:20', NULL, NULL, 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 13:54:20', NULL, '2011-12-18 13:54:20', NULL, NULL, 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "staffs"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:54:20', '2011-12-18 13:54:20', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:54:20', '2011-12-18 13:54:20', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "pagamentos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 13:54:20', '2011-12-18 13:54:20', 298486374, 'f', 1)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 13:54:20', '2011-12-18 13:54:20', 980190962, 'f', 1)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "exercicios_planos"
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "exercicios_planos" ("plano_id", "repeticoes", "series", "exercicio_id", "peso") VALUES (NULL, 1, 1, NULL, 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercicios_planos" ("plano_id", "repeticoes", "series", "exercicio_id", "peso") VALUES (NULL, 1, 1, NULL, 1)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "ginasio_notificacaos"[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "ginasios"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "ginasios" ("created_at", "latitude", "updated_at", "nome", "id", "longitude") VALUES ('2011-12-18 13:54:20', 1.5, '2011-12-18 13:54:20', 'MyString', 298486374, 1.5)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "ginasios" ("created_at", "latitude", "updated_at", "nome", "id", "longitude") VALUES ('2011-12-18 13:54:20', 1.5, '2011-12-18 13:54:20', 'MyString', 980190962, 1.5)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "turnos"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "turnos" ("hora") VALUES ('2011-12-05 23:23:47')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "turnos" ("hora") VALUES ('2011-12-05 23:23:47')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:54:20', 934567890, '2011-12-18 13:54:20', '1983-07-30', 'David Vanilla', 127326141, '$2a$10$4Dq34eMnYFaPpa.2d//eae', 'Largo Chelas\n1900-159\nLISBOA', '$2a$10$4Dq34eMnYFaPpa.2d//eaersxb0EtyLR8njyFArkSAVJZWLpifErq', 'ei08119@fe.up.pt')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:54:20', '00351 220001002', '2011-12-18 13:54:20', '1985-01-01', 'Alice Jenkins-Stokes', 663665735, '$2a$10$MvK8McwVxAJOn66DldISCO', 'Rua do Bonjardim,\nnº300\n4000-114\nPORTO', '$2a$10$MvK8McwVxAJOn66DldISCOQzlpC30EQNAcWMIXo3ueZqay3w4miCW', 'valter.pinho0@gmail.com')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:54:20', 351913777888, '2011-12-18 13:54:20', '1973-05-26', 'Charlie Carroll', 786122151, '$2a$10$IufB27uyQr4yumnI1JBsuu', 'Rua André de Resende,\nnº111\n4150-069\nPORTO', '$2a$10$IufB27uyQr4yumnI1JBsuuYVT722JPJ2mUO4HqKzKK5OdUzzoFomG', 'pedro.machado@fe.up.pt')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:54:20', 961101106, '2011-12-18 13:54:20', '1990-12-25', 'Bob Thomas Hamilton', 902541635, '$2a$10$mqD3ZVtb9KpxQE/H7B0Vhe', 'Rua 1º de Dezembro,\n4425-601\nMAIA', '$2a$10$mqD3ZVtb9KpxQE/H7B0VhejXsfBnAgfg94E0SwWirLc2ycsKvmpW.', 'ei08139@fe.up.pt')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "modalidade_pagamentos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "modalidade_pagamentos" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:54:20', '2011-12-18 13:54:20', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "modalidade_pagamentos" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:54:20', '2011-12-18 13:54:20', 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "reserva_aulas"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "reserva_aulas" ("created_at", "updated_at", "dia", "user_id", "aula_id") VALUES ('2011-12-18 13:54:20', '2011-12-18 13:54:20', '2011-12-13', 1, 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "reserva_aulas" ("created_at", "updated_at", "dia", "user_id", "aula_id") VALUES ('2011-12-18 13:54:20', '2011-12-18 13:54:20', '2011-12-13', 1, 1)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "exercicios"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "exercicios" ("tipo", "created_at", "updated_at", "nome", "maquina", "id") VALUES ('MyString', '2011-12-18 13:54:20', '2011-12-18 13:54:20', 'MyString', 'MyString', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "exercicios" ("tipo", "created_at", "updated_at", "nome", "maquina", "id") VALUES ('MyString', '2011-12-18 13:54:20', '2011-12-18 13:54:20', 'MyString', 'MyString', 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "cidades"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "cidades" ("created_at", "updated_at", "nome", "id") VALUES ('2011-12-18 13:54:20', '2011-12-18 13:54:20', 'MyString', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "cidades" ("created_at", "updated_at", "nome", "id") VALUES ('2011-12-18 13:54:20', '2011-12-18 13:54:20', 'MyString', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "aulas"[0m
+  [1m[35mFixture Delete (0.0ms)[0m  DELETE FROM "admins"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "admins" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:54:20', '2011-12-18 13:54:20', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "admins" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:54:20', '2011-12-18 13:54:20', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "planos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "planos" ("created_at", "data", "updated_at", "id", "altura", "peso") VALUES ('2011-12-18 13:54:20', 'MyString', '2011-12-18 13:54:20', 298486374, 1, 1)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "planos" ("created_at", "data", "updated_at", "id", "altura", "peso") VALUES ('2011-12-18 13:54:20', 'MyString', '2011-12-18 13:54:20', 980190962, 1, 1)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "feedbacks"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "updated_at", "valor", "id") VALUES ('2011-12-18 13:54:20', '2011-12-18 13:54:20', 1, 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "feedbacks" ("created_at", "updated_at", "valor", "id") VALUES ('2011-12-18 13:54:20', '2011-12-18 13:54:20', 1, 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "estudios"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "estudios" ("created_at", "updated_at", "lotacao", "nome", "id") VALUES ('2011-12-18 13:54:20', '2011-12-18 13:54:20', 1, 'MyString', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "estudios" ("created_at", "updated_at", "lotacao", "nome", "id") VALUES ('2011-12-18 13:54:20', '2011-12-18 13:54:20', 1, 'MyString', 980190962)[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 127326141]]
+Rendered fit_mailer/welcome_email.html.erb (1.3ms)
+Rendered fit_mailer/welcome_email.text.erb (0.4ms)
+Unable to load exercicios_plano, underlying cause No such file to load -- exercicios_plano 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+Unable to load ginasio_notificacao, underlying cause No such file to load -- ginasio_notificacao 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+Unable to load turno, underlying cause No such file to load -- turno 
+
+ /usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:306:in `depend_on'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.1.1/lib/active_support/dependencies.rb:214:in `require_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:809:in `try_to_load_dependency'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:824:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `each'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:821:in `require_fixture_classes'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.1.1/lib/active_record/fixtures.rb:804:in `fixtures'
+./test/test_helper.rb:10
+test/functional/fit_mailer_test.rb:1:in `require'
+test/functional/fit_mailer_test.rb:1
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "tipo_aulas"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 13:57:39', '2011-12-18 13:57:39', 298486374, 'MyText')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "tipo_aulas" ("tipo", "created_at", "updated_at", "id", "descricao") VALUES (NULL, '2011-12-18 13:57:39', '2011-12-18 13:57:39', 980190962, 'MyText')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "pedido_planos"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 13:57:39', '2011-12-18 13:57:39', '2011-12-15 11:20:49', 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "pedido_planos" ("created_at", "updated_at", "data_pedido", "user_id") VALUES ('2011-12-18 13:57:39', '2011-12-18 13:57:39', '2011-12-15 11:20:49', 1)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "notificacaos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 13:57:39', NULL, '2011-12-18 13:57:39', NULL, NULL, 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "notificacaos" ("created_at", "data", "updated_at", "titulo", "texto", "id") VALUES ('2011-12-18 13:57:39', NULL, '2011-12-18 13:57:39', NULL, NULL, 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "staffs"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:57:39', '2011-12-18 13:57:39', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "staffs" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:57:39', '2011-12-18 13:57:39', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "pagamentos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 13:57:39', '2011-12-18 13:57:39', 298486374, 'f', 1)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "pagamentos" ("created_at", "updated_at", "id", "pago", "mes") VALUES ('2011-12-18 13:57:39', '2011-12-18 13:57:39', 980190962, 'f', 1)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "exercicios_planos"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "exercicios_planos" ("plano_id", "repeticoes", "series", "exercicio_id", "peso") VALUES (NULL, 1, 1, NULL, 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "exercicios_planos" ("plano_id", "repeticoes", "series", "exercicio_id", "peso") VALUES (NULL, 1, 1, NULL, 1)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "ginasio_notificacaos"[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "ginasios"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "ginasios" ("created_at", "latitude", "updated_at", "nome", "id", "longitude") VALUES ('2011-12-18 13:57:39', 1.5, '2011-12-18 13:57:39', 'MyString', 298486374, 1.5)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "ginasios" ("created_at", "latitude", "updated_at", "nome", "id", "longitude") VALUES ('2011-12-18 13:57:39', 1.5, '2011-12-18 13:57:39', 'MyString', 980190962, 1.5)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "turnos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "turnos" ("hora") VALUES ('2011-12-05 23:23:47')
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "turnos" ("hora") VALUES ('2011-12-05 23:23:47')[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:57:39', 934567890, '2011-12-18 13:57:39', '1983-07-30', 'David Vanilla', 127326141, '$2a$10$6xj2YfSYDNnZnBkw6Ck1ue', 'Largo Chelas\n1900-159\nLISBOA', '$2a$10$6xj2YfSYDNnZnBkw6Ck1uee/yg8H3R8QOyW04Mv3iJQW7xiOdvjYS', 'ei08119@fe.up.pt')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:57:39', '00351 220001002', '2011-12-18 13:57:39', '1985-01-01', 'Alice Jenkins-Stokes', 663665735, '$2a$10$B6FBGVaFk8l7.O766wCaKe', 'Rua do Bonjardim,\nnº300\n4000-114\nPORTO', '$2a$10$B6FBGVaFk8l7.O766wCaKe1WBrqDBxsYC7cawT7MqOD6vGGmt/8yC', 'valter.pinho0@gmail.com')
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:57:39', 351913777888, '2011-12-18 13:57:39', '1973-05-26', 'Charlie Carroll', 786122151, '$2a$10$H9a9mGQII4tFKA00swQ4Lu', 'Rua André de Resende,\nnº111\n4150-069\nPORTO', '$2a$10$H9a9mGQII4tFKA00swQ4Luz3JHwEkdwMi7gpBe5nYoDaO6VhFtO6.', 'pedro.machado@fe.up.pt')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "users" ("created_at", "telefone", "updated_at", "datanascimento", "nome", "id", "password_salt", "morada", "password_hash", "email") VALUES ('2011-12-18 13:57:39', 961101106, '2011-12-18 13:57:39', '1990-12-25', 'Bob Thomas Hamilton', 902541635, '$2a$10$9gacFMnL2R8zM3bu5cuAi.', 'Rua 1º de Dezembro,\n4425-601\nMAIA', '$2a$10$9gacFMnL2R8zM3bu5cuAi.O7pcgCEgmlDQSG473I3qaEX8oCyu7d2', 'ei08139@fe.up.pt')
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "modalidade_pagamentos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "modalidade_pagamentos" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:57:39', '2011-12-18 13:57:39', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "modalidade_pagamentos" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:57:39', '2011-12-18 13:57:39', 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "reserva_aulas"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "reserva_aulas" ("created_at", "updated_at", "dia", "user_id", "aula_id") VALUES ('2011-12-18 13:57:39', '2011-12-18 13:57:39', '2011-12-13', 1, 1)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "reserva_aulas" ("created_at", "updated_at", "dia", "user_id", "aula_id") VALUES ('2011-12-18 13:57:39', '2011-12-18 13:57:39', '2011-12-13', 1, 1)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "exercicios"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "exercicios" ("tipo", "created_at", "updated_at", "nome", "maquina", "id") VALUES ('MyString', '2011-12-18 13:57:39', '2011-12-18 13:57:39', 'MyString', 'MyString', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "exercicios" ("tipo", "created_at", "updated_at", "nome", "maquina", "id") VALUES ('MyString', '2011-12-18 13:57:39', '2011-12-18 13:57:39', 'MyString', 'MyString', 980190962)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "cidades"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "cidades" ("created_at", "updated_at", "nome", "id") VALUES ('2011-12-18 13:57:39', '2011-12-18 13:57:39', 'MyString', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "cidades" ("created_at", "updated_at", "nome", "id") VALUES ('2011-12-18 13:57:39', '2011-12-18 13:57:39', 'MyString', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "aulas"[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "admins"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "admins" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:57:39', '2011-12-18 13:57:39', 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "admins" ("created_at", "updated_at", "id") VALUES ('2011-12-18 13:57:39', '2011-12-18 13:57:39', 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "planos"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "planos" ("created_at", "data", "updated_at", "id", "altura", "peso") VALUES ('2011-12-18 13:57:39', 'MyString', '2011-12-18 13:57:39', 298486374, 1, 1)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "planos" ("created_at", "data", "updated_at", "id", "altura", "peso") VALUES ('2011-12-18 13:57:39', 'MyString', '2011-12-18 13:57:39', 980190962, 1, 1)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "feedbacks"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "feedbacks" ("created_at", "updated_at", "valor", "id") VALUES ('2011-12-18 13:57:39', '2011-12-18 13:57:39', 1, 298486374)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "feedbacks" ("created_at", "updated_at", "valor", "id") VALUES ('2011-12-18 13:57:39', '2011-12-18 13:57:39', 1, 980190962)
+  [1m[36mFixture Delete (0.1ms)[0m  [1mDELETE FROM "estudios"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "estudios" ("created_at", "updated_at", "lotacao", "nome", "id") VALUES ('2011-12-18 13:57:39', '2011-12-18 13:57:39', 1, 'MyString', 298486374)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "estudios" ("created_at", "updated_at", "lotacao", "nome", "id") VALUES ('2011-12-18 13:57:39', '2011-12-18 13:57:39', 1, 'MyString', 980190962)[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 127326141]]
+Rendered fit_mailer/welcome_email.html.erb (1.4ms)
+Rendered fit_mailer/welcome_email.text.erb (0.4ms)
