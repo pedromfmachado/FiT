@@ -1,7 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  nome: MyString
+porto:
+  nome: Porto
+  
 
-two:
-  nome: MyString
+lisboa:
+  nome: Lisboa
+
+

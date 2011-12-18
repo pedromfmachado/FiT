@@ -96,7 +96,33 @@ class ReservaAula < ActiveRecord::Base
     end
 
     ::Gchart.bar(:title => 'Modalidades', :size => '500x300', :bar_width_and_spacing => '50,20',
-              :axis_with_labels => 'x,y', :data => dados, :axis_labels => [titulos,dados.invert] )
+              :axis_with_labels => 'x,y', :data => dados, :axis_labels => [titulos,dados.reverse] )
+
+  end
+
+  def self.numerosPorDiaSemana(taid)
+
+    titulos = []
+    dados   = []
+
+    TipoAula.all.each do |t|
+    
+        titulos << t.tipo
+        count = 0
+        ReservaAula.all.each do |r|
+
+            if r.aula.tipo_aula_id == t.id && r.dia <= Date.today && r.aula.jaPassou
+
+                count += 1
+
+            end
+
+        end
+        dados << count
+    end
+
+    ::Gchart.bar(:title => 'Modalidades', :size => '500x300', :bar_width_and_spacing => '50,20',
+              :axis_with_labels => 'x,y', :data => dados, :axis_labels => [titulos,dados.reverse] )
 
   end
 

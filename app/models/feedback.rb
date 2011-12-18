@@ -11,7 +11,7 @@ class Feedback < ActiveRecord::Base
 
   def check_membro
 
-    if User.find(user_id).normal?
+    if !User.find(user_id).normal?
 
       errors.add(:tipo , "Apenas os membros nao administrativos podem votar")
 
