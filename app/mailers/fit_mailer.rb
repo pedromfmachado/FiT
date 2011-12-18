@@ -1,8 +1,8 @@
 require 'digest/sha2'
 class FitMailer < ActionMailer::Base
 
-  default :from => "FiT Staff <geral.fit@gmail.com>"
-          #"#{Digest::SHA2.hexdigest(:date.to_i.to_s)}@fitec.com"
+  default :from => "FiT Staff <geral.fit@gmail.com>",
+          :charset => "UTF-8"
 
   def welcome_email(user, password, sent_at = Time.now)
     @user = user
@@ -15,3 +15,4 @@ class FitMailer < ActionMailer::Base
   end
 
 end
+

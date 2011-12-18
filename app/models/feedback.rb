@@ -7,7 +7,7 @@ class Feedback < ActiveRecord::Base
   validates_inclusion_of :valor, :in => 1..5
   validates_uniqueness_of :user_id, :scope => :aula_id
 
-  validate :check_membro#, :check_presenca
+  validate :check_membro, :check_presenca
 
   def check_membro
 

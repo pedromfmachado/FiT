@@ -1,40 +1,56 @@
-<p id="notice"><%= notice %></p>
+<div class="span14">
+  <h1>Plano Alimentar nº <%= @alimentar_plano.id %></h1>
 
-<p>
-  <b>Data:</b>
-  <%= @alimentar_plano.data %>
-</p>
+  <div class="row spaced-lines">
+    <div class="row">
+      <div class="span3 right-align"><strong>Utilizador:</strong></div>
+      <div class="span8"><%= @user.nome %></div>
+    </div>
 
-<p>
-  <b>Pequenoalmoco:</b>
-  <%= @alimentar_plano.pequenoalmoco %>
-</p>
+    <div class="row">
+      <div class="span3 right-align"><strong>Ginásio:</strong></div>
+      <div class="span8"><%= @user.ginasio.nome %></div>
+    </div>
+  </div>
 
-<p>
-  <b>Manha:</b>
-  <%= @alimentar_plano.manha %>
-</p>
+  <p>
+    <b>Data:</b>
+    <%= @alimentar_plano.data %>
+  </p>
 
-<p>
-  <b>Almoco:</b>
-  <%= @alimentar_plano.almoco %>
-</p>
+  <p>
+    <b>Pequenoalmoco:</b>
+    <%= @alimentar_plano.pequenoalmoco %>
+  </p>
 
-<p>
-  <b>Tarde:</b>
-  <%= @alimentar_plano.tarde %>
-</p>
+  <p>
+    <b>Manha:</b>
+    <%= @alimentar_plano.manha %>
+  </p>
 
-<p>
-  <b>Jantar:</b>
-  <%= @alimentar_plano.jantar %>
-</p>
+  <p>
+    <b>Almoco:</b>
+    <%= @alimentar_plano.almoco %>
+  </p>
 
-<p>
-  <b>Ceia:</b>
-  <%= @alimentar_plano.ceia %>
-</p>
+  <p>
+    <b>Tarde:</b>
+    <%= @alimentar_plano.tarde %>
+  </p>
 
+  <p>
+    <b>Jantar:</b>
+    <%= @alimentar_plano.jantar %>
+  </p>
 
-<%= link_to 'Edit', edit_user_alimentar_plano_path(@user,@alimentar_plano) %> |
-<%= link_to 'Back', user_alimentar_planos_path(@user) %>
+  <p>
+    <b>Ceia:</b>
+    <%= @alimentar_plano.ceia %>
+  </p>
+
+  <div class="actions topSpacing1">
+    <%= link_to 'Edit', edit_user_alimentar_plano_path(@user,@alimentar_plano) %>
+    <%= link_to 'Back', user_alimentar_planos_path(@user) %>
+  </div>
+</div>
+

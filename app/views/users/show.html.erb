@@ -60,24 +60,25 @@
 
   <!-- le action buttons -->
   <div class="actions topSpacing0">
-    <% if current_user.admin? && current_user.id != @user.id %>
-      <% if !@user.admin? %>
-        <%= link_to "Promover", { :controller => "users" , :action => "promote", :id => @user}, :class => "btn success" %>
-      <% end %>
+    
+    <div class ="row">
+        <%= link_to "Ver Planos", user_planos_path(@user), :class => "btn" if @user.normal? %>   
+        <%= link_to "Ver pagamentos", user_pagamentos_path(@user, :ano => Time.now.year), :class => "btn" if @user.normal?%>
+        <%= link_to "Ver Planos Alimentares", user_alimentar_planos_path(@user), :class => "btn" if @user.normal?%> 
+    </div>
+    </br>
+    <div class ="row">
+        <%= link_to "Editar Perfil", edit_user_path(@user), :class => "btn primary" %>
+        <%= link_to "Alterar password", mudarpassword_path(@user), :class => "btn primary" %>
+        
+    </div>
+    </br>
+    <div class ="row">
+        <%= link_to "Promover", { :controller => "users" , :action => "promote", :id => @user}, :class => "btn success" if current_user.admin? && current_user.id != @user.id && !@user.admin? %>
+        <%= link_to "Despromover", { :controller => "users" , :action => "demote", :id => @user}, :class => "btn danger" unless @user.normal? %>
+        <%= link_to "Listar utilizadores", users_path, :class => "btn" unless current_user.normal?%>
+    </div>    
 
-      <% if !@user.normal? %>
-        <%= link_to "Despromover", { :controller => "users" , :action => "demote", :id => @user}, :class => "btn danger" %>
-      <% end %>
-    <% end %>
-
-    <% if @user.normal? %>
-      <%= link_to "Ver Planos", user_planos_path(@user), :class => "btn" %>
-    <% end %>
-
-    <%= link_to "Editar Perfil", edit_user_path(@user), :class => "btn primary" %>
-    <%= link_to "Alterar password", mudarpassword_path(@user), :class => "btn primary" %>
-    <%= link_to "Ver pagamentos", user_pagamentos_path(@user, :ano => Time.now.year), :class => "btn" if @user.normal?%>
-    <%= link_to "Listar utilizadores", users_path, :class => "btn" unless current_user.normal?%>
   </div>
 </div>
 

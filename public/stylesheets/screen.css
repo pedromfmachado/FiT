@@ -7,6 +7,10 @@ body {
   text-align: right;
 }
 
+.center-align {
+  text-align: center;
+}
+
 .row address {
   margin-top: 8px;
 }

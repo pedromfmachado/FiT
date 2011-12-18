@@ -2,10 +2,13 @@
 - (DONE) Fazer nested dos pagamentos nos utilizadores
 - (DONE) Cancelar pagamento
 - (DONE) Ver redirecionamento do controlador de pagamentos (nested)
-- Formatar CRUD planos alimentares
+- (DONE) Formatar CRUD planos alimentares
 - (DONE) Enviar planos alimentares api
 - (DONE) Nested Planos Alimentares
-- Rever permissões
+- (DONE) Rever permissões
+- Apresentar popup quando é dado feedback (com informação)
+- Apagar pedido de plano quando é criado o plano (verificar se já é feito)
+- Tirar if da verificação de feedback (ver isso com o andré)
 - Fazer verificação da hora da aula no feedback
 - Retirar ids de tabelas onde não são necessários
 - Tratar das verificações dos pagamentos e modalidades de pagamento

@@ -1,35 +1,57 @@
-<h1>Listing alimentar_planos</h1>
+<div class="span14">
+  <h1>Planos Alimentares</h1>
 
-<table>
-  <tr>
-    <th>Data</th>
-    <th>Pequenoalmoco</th>
-    <th>Manha</th>
-    <th>Almoco</th>
-    <th>Tarde</th>
-    <th>Jantar</th>
-    <th>Ceia</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+  <div class="row spaced-lines">
+    <div class="row">
+      <div class="span3 right-align"><strong>Utilizador:</strong></div>
+      <div class="span8"><%= @user.nome %></div>
+    </div>
 
-<% @alimentar_planos.each do |alimentar_plano| %>
-  <tr>
-    <td><%= alimentar_plano.data %></td>
-    <td><%= alimentar_plano.pequenoalmoco %></td>
-    <td><%= alimentar_plano.manha %></td>
-    <td><%= alimentar_plano.almoco %></td>
-    <td><%= alimentar_plano.tarde %></td>
-    <td><%= alimentar_plano.jantar %></td>
-    <td><%= alimentar_plano.ceia %></td>
-    <td><%= link_to 'Show', user_alimentar_plano_path(@user,alimentar_plano) %></td>
-    <td><%= link_to 'Edit', edit_user_alimentar_plano_path(@user,alimentar_plano) %></td>
-    <td><%= link_to 'Destroy', user_alimentar_plano_path(@user,alimentar_plano), :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+    <div class="row">
+      <div class="span3 right-align"><strong>Ginásio:</strong></div>
+      <div class="span8"><%= @user.ginasio.nome %></div>
+    </div>
+  </div>
 
-<br />
+  <table class="zebra-striped topSpacing1">
+    <tr>
+      <th>Data</th>
+      <th>Pequeno Almoço</th>
+      <th>Manha</th>
+      <th>Almoço</th>
+      <th>Tarde</th>
+      <th>Jantar</th>
+      <th>Ceia</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
 
-<%= link_to 'New Alimentar plano', new_user_alimentar_plano_path %>
+    <% if @alimentar_planos.empty? %>
+      <tr>
+        <td colspan="10">&lt;Utilizador não tem planos alimentares.&gt;</td>
+      </tr>
+    <% else %>
+      <% @alimentar_planos.each do |alimentar_plano| %>
+      <tr>
+        <td><%= alimentar_plano.data %></td>
+        <td><%= alimentar_plano.pequenoalmoco %></td>
+        <td><%= alimentar_plano.manha %></td>
+        <td><%= alimentar_plano.almoco %></td>
+        <td><%= alimentar_plano.tarde %></td>
+        <td><%= alimentar_plano.jantar %></td>
+        <td><%= alimentar_plano.ceia %></td>
+        <td><%= link_to 'Ver', user_alimentar_plano_path(@user,alimentar_plano) %></td>
+        <td><%= link_to 'Editar', edit_user_alimentar_plano_path(@user,alimentar_plano) %></td>
+        <td><%= link_to 'Apagar', user_alimentar_plano_path(@user,alimentar_plano), :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
+      <% end %>
+    <% end %>
+
+  </table>
+
+  <div class="actions topSpacing0">
+    <%= link_to 'Novo Plano Alimentar', new_user_alimentar_plano_path, :class => "btn success" %>
+  </div>
+</div>
+

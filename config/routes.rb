@@ -26,6 +26,7 @@ Fit::Application.routes.draw do
   match 'apagarpedido' => 'pedido_planos#destroy', :as => "apagarpedido"
   match 'confirmarpagamento' => 'pagamentos#confirmar', :as => "confirmarpagamento"
   match 'cancelarpagamento' => 'pagamentos#cancelar', :as => "cancelarpagamento"
+  match 'cancelarmarcacao' => 'reserva_aulas#destroy', :as => "cancelarmarcacao"
 
   resources :users do
     resources :planos

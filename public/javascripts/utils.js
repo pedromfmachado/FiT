@@ -7,7 +7,9 @@ function dar_feedback(url, token, aula_id, valor){
 
     function(data){    
 
-        $("#resposta").text(data);
+        xml.responseXML.documentElement.getElementsByTagName("feedback");
+
+        alert(data)
 
     });
 }

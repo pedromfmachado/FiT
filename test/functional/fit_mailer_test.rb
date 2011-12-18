@@ -24,6 +24,7 @@ class FitMailerTest < ActionMailer::TestCase
     @expected.body       = read_fixture('welcome_email')
     @expected.date       = @time
     @expected.message_id = "#{Digest::SHA2.hexdigest(@time.to_i.to_s)}@fitec.com"
+    @expected.content_type = "text/html; charset=UTF-8"
     
 
     assert_equal @expected.from, @mail.from
@@ -32,6 +33,8 @@ class FitMailerTest < ActionMailer::TestCase
     assert_equal @expected.body.raw_source, @mail.body.raw_source
     assert_equal @expected.date, @mail.date
     assert_equal @expected.message_id, @mail.message_id
+    assert_equal @expected.content_type, @mail.content_type
+
     assert_equal @expected.encoded, @mail.encoded
   end
 end

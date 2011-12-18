@@ -1,4 +1,6 @@
 class TipoAulasController < ApplicationController
+  load_and_authorize_resource
+
   # GET /tipo_aulas
   # GET /tipo_aulas.json
   def index

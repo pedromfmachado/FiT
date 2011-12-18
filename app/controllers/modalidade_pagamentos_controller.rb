@@ -1,4 +1,5 @@
 class ModalidadePagamentosController < ApplicationController
+  load_and_authorize_resource
   # GET /modalidade_pagamentos
   # GET /modalidade_pagamentos.json
   def index

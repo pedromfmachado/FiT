@@ -24,7 +24,7 @@ class AlimentarPlanosController < ApplicationController
   # GET /alimentar_planos/new
   # GET /alimentar_planos/new.json
   def new
-    @alimentar_plano = AlimentarPlano.new(:user_id => params[:user_id])
+    @alimentar_plano = AlimentarPlano.new(:data => Date.today)
     @user = User.find(params[:user_id])
     respond_to do |format|
       format.html # new.html.erb
@@ -41,6 +41,7 @@ class AlimentarPlanosController < ApplicationController
   # POST /alimentar_planos.json
   def create
     params[:alimentar_plano][:user_id] = params[:user_id]
+    params[:alimentar_plano][:data] = Date.today
     @alimentar_plano = AlimentarPlano.new(params[:alimentar_plano])
     @user = User.find(params[:user_id])
     
