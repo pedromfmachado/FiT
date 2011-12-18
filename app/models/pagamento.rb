@@ -4,8 +4,6 @@ class Pagamento < ActiveRecord::Base
 
   def self.update_mensal
 
-    
-
       User.all.each do |u|
 
         if Pagamento.where(:user_id => u.id, :mes => Time.now.month, :ano => Time.now.year).count == 0 && u.normal?

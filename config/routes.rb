@@ -33,6 +33,7 @@ Fit::Application.routes.draw do
   resources :users do
     resources :planos
     resources :reserva_aulas
+    resources :pagamentos
   end
 
   resources :tipo_aulas

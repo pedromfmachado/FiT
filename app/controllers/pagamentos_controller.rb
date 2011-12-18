@@ -3,7 +3,12 @@ class PagamentosController < ApplicationController
 
   def index
 
-    if params[:mes] && params[:ano]
+    if params[:user_id] && params[:ano]
+
+      Pagamento.update_mensal
+      @pagamentos = Pagamento.where(:ano => params[:ano], :user_id => params[:user_id])
+
+    elsif params[:mes] && params[:ano]
 
       Pagamento.update_mensal
       @pagamentos = Pagamento.where(:ano => params[:ano], :mes => params[:mes])
