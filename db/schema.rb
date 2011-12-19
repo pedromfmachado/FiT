@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111218155652) do
+ActiveRecord::Schema.define(:version => 20111219181534) do
 
   create_table "admins", :force => true do |t|
     t.integer   "user_id"
@@ -46,14 +46,6 @@ ActiveRecord::Schema.define(:version => 20111218155652) do
   add_index "aulas", ["estudio_id"], :name => "index_aulas_on_estudio_id"
   add_index "aulas", ["staff_id"], :name => "index_aulas_on_staff_id"
   add_index "aulas", ["tipo_aula_id"], :name => "index_aulas_on_tipo_aula_id"
-
-  create_table "cidades", :force => true do |t|
-    t.string    "nome"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.float     "latitude"
-    t.float     "longitude"
-  end
 
   create_table "estudios", :force => true do |t|
     t.string    "nome"

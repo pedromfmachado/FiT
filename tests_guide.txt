@@ -7,16 +7,20 @@ Dados de teste:
 - (FEITO) estudios
 - (FEITO) modalidade_pagamentos
 - (FEITO) exercicios
-- plano alimentar
-- aulas
+- alimentar_plano
 - exercicios_planos
 - feedbacks
 - notificacaos
 - pagamentos
 - pedido_planos
 - planos
-- reserva_aulas
 - tipo_aulas
+
+(ter mais testes nestes era fixe, mas...)
+- (FEITO) aulas
+- (FEITO) reserva_aulas
+
+################################
 
 Testes unitários:
   - (FEITO) mailer

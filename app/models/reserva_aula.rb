@@ -5,8 +5,9 @@ class ReservaAula < ActiveRecord::Base
 
   validates_presence_of :aula_id, :message => "em branco."
   validates_presence_of :user_id, :message => "em branco."
-  validates_presence_of :dia, :message => "em branco."
   validates_uniqueness_of :user_id, :scope => [:aula_id, :dia]
+
+  validates_presence_of :dia, :message => "em branco."
 
   validate :checkLotacao, :checkHora, :checkDia
 
@@ -30,18 +31,30 @@ class ReservaAula < ActiveRecord::Base
   end
 
   def checkLotacao
+    if self.aula_id.blank?
+      return
+    end
+
     if ReservaAula.lugaresDisponiveis(aula_id) < 0
       errors.add(:lotacao , "A aula ja esta completa")
     end
   end
 
   def checkHora
+    if self.aula_id.blank?
+      return
+    end
+
     if aula.jaPassou
       errors.add(:hora , "A hora da aula ja passou")
     end
   end
 
   def checkDia
+    if self.aula_id.blank?
+      return
+    end
+
     if Date.today.wday != aula.dia
       errors.add(:hora , "Esta aula nao existe hoje")
     end
@@ -72,9 +85,6 @@ class ReservaAula < ActiveRecord::Base
 
     end
   end
-
-  
-
 
 end
 

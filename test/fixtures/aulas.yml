@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 aula1:
-  staff: staff1
+  staff: valter
   estudio: estudio_1
   tipo_aula: bodybalance 
   ginasio: dragao

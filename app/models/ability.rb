@@ -91,7 +91,11 @@ class Ability
 
       end
       can :read, TipoAula
-      can :show, User, :id => user.id
+      can :show, User do |u|
+
+          u.admin? || u.staff? || u.id == user.id
+
+      end
       can :update, User, :id => user.id
       can :edit_password, User, :id => user.id
     end

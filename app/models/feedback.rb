@@ -3,14 +3,20 @@ class Feedback < ActiveRecord::Base
   belongs_to :user
 
   validates_presence_of :aula_id
+
   validates_presence_of :valor, :message => "Deve enviar um valor"
-  validates_presence_of :user_id, :message => "Deve indicar um userID"
   validates_inclusion_of :valor, :in => 1..5, :message => "O valor deve ser entre 1 e 5"
+
+  validates_presence_of :user_id, :message => "Deve indicar um userID"
   validates_uniqueness_of :user_id, :scope => :aula_id, :message => "Ja deu o seu feedback para esta aula"
 
   validate :check_membro
 
   def check_membro
+    if self.user_id.blank? || self.aula_id.blank?
+      return
+    end
+
     if !User.find(user_id).normal?
       errors.add(:tipo , "Apenas os membros nao administrativos podem votar")
     elsif ReservaAula.where(:aula_id => aula.id, :user_id => user.id).count == 0
@@ -23,9 +29,9 @@ class Feedback < ActiveRecord::Base
     feedback = Feedback.where(:user_id => uid, :aula_id => aid)
 
     if feedback.count > 0
-        "%0.1f" % feedback.first.valor
+      "%0.1f" % feedback.first.valor
     else
-        0.0
+      0.0
     end
   end
 

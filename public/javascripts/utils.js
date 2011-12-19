@@ -135,7 +135,7 @@ function imprime_exercicios(elemento,nome,maquina,peso,series,repeticoes){
 function getGinasios(){
 
     var xml = new XMLHttpRequest();
-    xml.open("GET","/ginasiosperto.xml?cidade="+$("#_cidade option:selected").text() + "&km=" + $("#distancia").val(), false);
+    xml.open("GET","/ginasiosperto.xml?cidade="+$("#_cidade").val() + "&km=" + $("#distancia").val(), false);
     xml.send();
     ginasios = xml.responseXML.documentElement.getElementsByTagName("ginasio");
 

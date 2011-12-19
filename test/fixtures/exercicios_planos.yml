@@ -1,15 +1,3 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  plano_id: 
-  exercicio_id: 
-  peso: 1
-  series: 1
-  repeticoes: 1
 
-two:
-  plano_id: 
-  exercicio_id: 
-  peso: 1
-  series: 1
-  repeticoes: 1

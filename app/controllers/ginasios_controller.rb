@@ -13,8 +13,8 @@ class GinasiosController < ApplicationController
   end
 
   def pertocidade
-    @cidade = Cidade.find_by_nome(params[:cidade])
-    @ginasios = Ginasio.near([@cidade.latitude,@cidade.longitude],params[:km].to_f*0.62)
+    results = Geocoder.search(params[:cidade])
+    @ginasios = Ginasio.near([results[0].latitude,results[0].longitude],params[:km].to_f*0.62)
     respond_to do |format|
       format.xml { render :xml => @ginasios }
     end

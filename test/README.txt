@@ -6,3 +6,7 @@ comandos:
 
   - rake db:test:purge                        ----> apagar schema
 
+
+############################
+# notas sobre os fixtures:
+  - todas as tabelas onde apareça staff_id ou admin_id, é para colocar o USER_ID, da tabela USERS

@@ -11,15 +11,18 @@
 - (DONE) Tirar if da verificação de feedback (ver isso com o andré)
 - (DONE) Tratar das verificações dos pagamentos e modalidades de pagamento
 - (DONE) Formatar pagina estatisticas
-- ExerciciosPlano.destroy nos testes a dar merda
+- (DONE) ExerciciosPlano.destroy nos testes a dar merda
+- (DONE) Retirar ids de tabelas onde não são necessários
+- (DONE) Ginásio com pesquisa por cidade (textbox -> GEOCODER)
+- Drop da tabela de cidades
 - Tratar da condição "jaPassou"
 - Fazer verificação da hora da aula no feedback
-- Retirar ids de tabelas onde não são necessários
-- Ginásio com pesquisa por cidade (textbox -> GEOCODER)
 - Gerar password e enviar mail a informar
+- Videos Youtube nas modalidades
+- Link para percurso google maps
 - Fazer paginas auxiliares (about, faq, etc)
 
 Módulos em falta:
 - (DONE) Estatisticas
 - (DONE) Planos alimentares
-- SITE MOBILE!!!
+- (DONE) SITE MOBILE!!!

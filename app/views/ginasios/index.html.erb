@@ -8,7 +8,13 @@
           <strong>Cidade</strong>
         </div>
         <div class="span6">
-          <%= collection_select("", "cidade", Cidade.all, :id, :nome, {}, { :class => "span3 no-resize" }) %>
+          <div class="clearfix">
+            <%= label_tag :Cidade %>
+            <div class="input">
+              <%= text_field_tag :cidade, 'Porto', { :rows => 5, :class => "span6 no-resize", :id => "_cidade" } %>
+            </div>
+          </div>
+
         </div>
       </div>
 
