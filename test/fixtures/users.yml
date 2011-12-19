@@ -60,3 +60,35 @@ andre_alves:
   morada: "Rua Agra de Ramalde nº307 4250-018 PORTO"
   ginasio: norteshopping
 
+
+############################
+# RANDOMLY GENERATED USERS
+
+<% count = rand(10) %>
+<% (0..count).each do |i| %>
+<% num = (rand * 1000000).to_i %>
+rand_user_<%= num %>:
+  email: aleatorio_<%=num%>@gmail.com
+  password_hash:
+  password_salt:
+  nome: User<%= i %>
+  datanascimento: 1990-01-01
+  telefone: 213213213
+  morada: "Rua 14 de Agosto 4200 Porto"
+  ginasio: colombo
+<% end %>
+
+<% count = rand(10) %>
+<% (0..count).each do |i| %>
+<% num = (rand * 1000000).to_i %>
+rand_user_<%= num %>:
+  email: aleatorio_<%=num%>@gmail.com
+  password_hash:
+  password_salt:
+  nome: User<%= i %>
+  datanascimento: 1990-01-01
+  telefone: 213213213
+  morada: "Rua 14 de Agosto 4200 Porto"
+  ginasio: norteshopping
+<% end %>
+

@@ -1,11 +1,82 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  nome: MyString
-  maquina: MyString
-  tipo: MyString
-
-two:
-  nome: MyString
-  maquina: MyString
-  tipo: MyString
+exercicio1:
+  nome: Corrida
+  maquina: Passadeira
+  tipo: Aeróbico
+	
+exercicio2:
+  nome: Bicicleta
+  maquina: Bicicleta Vertical
+  tipo: Aeróbico
+	
+exercicio3:
+  nome: Bicicleta
+  maquina: Bicicleta Reclinada
+  tipo: Aeróbico
+	
+exercicio4:
+  nome: Bicicleta
+  maquina: Eliptica
+  tipo: Aeróbico
+	
+exercicio5:
+  nome: Remo
+  maquina: Remo
+  tipo: Aeróbico
+	
+exercicio6:
+  nome: Abdominal
+  maquina: 1
+  tipo: Musculação
+	
+exercicio7:
+  nome: Leg Curl
+  maquina: 2
+  tipo: Musculação
+	
+exercicio8:
+  nome: Leg Extension
+  maquina: 3
+  tipo: Musculação
+	
+exercicio9:
+  nome: Leg Press
+  maquina: 4
+  tipo: Musculação
+	
+exercicio10:
+  nome: Low Back - Abdominal
+  maquina: 5
+  tipo: Musculação
+	
+exercicio11:
+  nome: Shoulder Press
+  maquina: 6
+  tipo: Musculação
+	
+exercicio12:
+  nome: Arm Curl
+  maquina: 7
+  tipo: Musculação
+	
+exercicio13:
+  nome: Biceps Curl Pulley
+  maquina: 8
+  tipo: Musculação
+	
+exercicio14:
+  nome: Arm Curl
+  maquina: 9
+  tipo: Musculação
+	
+exercicio15:
+  nome: Supine Press
+  maquina: 10
+  tipo: Musculação
+	
+exercicio16:
+  nome: Pesos Livres
+  maquina: Halteres
+  tipo: Musculação
+	

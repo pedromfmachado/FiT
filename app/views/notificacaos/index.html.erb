@@ -2,6 +2,11 @@
   <h1>Notificações gerais</h1>
 
   <table class="zebra-striped">
+    <% if @notificacaos.empty? %>
+      <tr>
+        <td colspan="2"> &lt;Não existem notificações.&gt;</td>
+      </tr>
+    <% else %>
     <% @notificacaos.each do |notificacao| %>
       <% if notificacao.ginasio_id == nil %>
       <tr>
@@ -14,17 +19,21 @@
       </tr>
       <% end %>
     <% end %>
+    <% end %>
   </table>
 
   <%if current_user.admin? || current_user.staff?%>
-  	<h1>Notificações de ginásios</h1>
+    <h1>Notificações de ginásios</h1>
   <%else%>
-	<h1>Notificações do seu ginásio</h1>
+    <h1>Notificações do seu ginásio</h1>
   <%end%>
 
-	
-
   <table>
+    <% if @notificacaos.empty? %>
+      <tr>
+        <td>&lt;Não existem notificações.&gt; </td>
+      </tr>
+    <% else %>
     <% @notificacaos.each do |notificacao| %>
       <% if (((current_user.admin? || current_user.staff?) && notificacao.ginasio_id != nil) || (current_user.normal? && notificacao.ginasio_id == current_user.ginasio_id)) %>
       <tr>
@@ -40,7 +49,8 @@
 	
       </tr>
       <% end %>
-    <%end%>
+    <% end %>
+    <% end %>
   </table>
 
   <div class="actions topSpacing0">

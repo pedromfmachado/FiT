@@ -1,5 +1,35 @@
 // JavaScript Document
 
+function get_estatisticas(){
+
+    var mes = $("#mes").val();
+    var ano = $("#ano").val();
+    var taid = $("#taid").val();
+    var conteudo = "taid="+1+"&ano="+ano+"&mes="+12;
+    jQuery.get("estatisticasmodalidadesemana.xml?", conteudo,
+
+    function(data){    
+
+        grafico = data.getElementsByTagName("estatistica");
+        var imagem = "<img src=\""+grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue+"\">";
+
+        $("#modalidade").html(imagem);
+
+    });
+
+    jQuery.get("estatisticasmodalidade.xml?", conteudo,
+
+    function(data){    
+
+        grafico = data.getElementsByTagName("estatistica");
+        var imagem = "<img src=\""+grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue+"\">";
+
+        $("#modalidade_semana").html(imagem);
+
+    });
+
+}
+
 function dar_feedback(url, token, aula_id, valor){
     
     var conteudo = "token="+token+"&aula_id="+aula_id+"&valor="+valor;
@@ -70,16 +100,23 @@ function getGinasios(){
 }
 
 $(document).ready(function(){
-    
-    if($("#mes").val() != undefined){
-	    $("#mes").change(function(){
+
+    if($("#estatisticas")){
+        
+        get_estatisticas();
+
+    }
+    else{
+        if($("#mes").val() != undefined){
+	        $("#mes").change(function(){
 		
 
-		    var mes = $("#mes").val();
-		    var ano = $("#ano").val();
-		    $("#link_ver").attr("href","/pagamentos?mes="+mes+"&ano="+ano);
+		        var mes = $("#mes").val();
+		        var ano = $("#ano").val();
+		        $("#link_ver").attr("href","/pagamentos?mes="+mes+"&ano="+ano);
 
-	    });
+	        });
+        }
     }
 
 

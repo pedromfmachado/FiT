@@ -7,9 +7,23 @@ estudio_<%= i %>:
   ginasio: dragao
 <% end %>
 
-<% (20..39).each do |i| %>
+<% (100..119).each do |i| %>
 estudio_<%= i %>:
   nome: <%= "Estudio " + i.to_s %>
   lotacao: <%= 10 + rand(100) %>
   ginasio: braga
+<% end %>
+
+<% (50..79).each do |i| %>
+estudio_<%= i %>:
+  nome: <%= "Estudio " + i.to_s %>
+  lotacao: <%= 10 + rand(50) %>
+  ginasio: norteshopping
+<% end %>
+
+<% (200..219).each do |i| %>
+estudio_<%= i %>:
+  nome: <%= "Estudio " + i.to_s %>
+  lotacao: <%= 10 + rand(50) %>
+  ginasio: colombo
 <% end %>

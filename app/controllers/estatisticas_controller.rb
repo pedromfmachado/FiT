@@ -10,14 +10,14 @@ class EstatisticasController < ApplicationController
 
   def modalidade_semana
     respond_to do |format|
-      format.xml { render :xml => message(ReservaAula.numerosPorDiaSemana(params[:taid].to_i,params[:mes].to_i,params[:ano].to_i))}
+      format.xml { render :xml => message(ReservaAula.numerosPorDiaSemana(params[:ginasio_id].to_i,params[:taid].to_i,params[:mes].to_i,params[:ano].to_i))}
     end
   end
 
   def modalidade
 
     respond_to do |format|
-      format.xml { render :xml => message(ReservaAula.numerosPorModalidade(params[:mes].to_i,params[:ano].to_i))}
+      format.xml { render :xml => message(ReservaAula.numerosPorModalidade(params[:ginasio_id].to_i,params[:mes].to_i,params[:ano].to_i))}
     end
   end
 

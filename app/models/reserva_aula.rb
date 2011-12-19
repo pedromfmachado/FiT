@@ -74,7 +74,7 @@ class ReservaAula < ActiveRecord::Base
   end
 
   require 'gchart'
-  def self.numerosPorModalidade(mes, ano)
+  def self.numerosPorModalidade(gid, mes, ano)
 
     titulos = []
     dados   = []
@@ -87,7 +87,7 @@ class ReservaAula < ActiveRecord::Base
         ReservaAula.all.each do |r|
 
             if r.aula.tipo_aula_id == t.id && r.dia <= Date.today && r.dia.year == ano &&
-                r.dia.month == mes
+                r.dia.month == mes && r.aula.ginasio_id == gid
 
                 count += 1
 
@@ -106,7 +106,7 @@ class ReservaAula < ActiveRecord::Base
 
   end
 
-  def self.numerosPorDiaSemana(taid, mes, ano)
+  def self.numerosPorDiaSemana(taid, gid, mes, ano)
 
     dias = ['Domingo','Segunda','Terca','Quarta','Quinta','Sexta','Sabado']
     titulos = []
@@ -118,7 +118,7 @@ class ReservaAula < ActiveRecord::Base
         ReservaAula.all.each do |r|
 
             if r.aula.tipo_aula_id == taid && r.aula.dia == i && r.dia.year == ano &&
-                 r.dia <= Date.today  && r.dia.month == mes
+                 r.dia <= Date.today  && r.dia.month == mes && r.aula.ginasio_id == gid
 
                 count += 1
 

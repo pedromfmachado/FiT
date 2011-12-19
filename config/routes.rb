@@ -27,8 +27,9 @@ Fit::Application.routes.draw do
   match 'confirmarpagamento' => 'pagamentos#confirmar', :as => "confirmarpagamento"
   match 'cancelarpagamento' => 'pagamentos#cancelar', :as => "cancelarpagamento"
   match 'cancelarmarcacao' => 'reserva_aulas#destroy', :as => "cancelarmarcacao"
-  match 'estatisticasmodalidade' => 'estatisticas#modalidade', :as => "estatisticasmodalidade"
-  match 'estatisticasmodalidadesemana' => 'estatisticas#modalidade_semana', :as => "estatisticasmodalidadesemana"
+  match '/ginasios/:ginasio_id/estatisticasmodalidade' => 'estatisticas#modalidade', :as => "estatisticasmodalidade"
+  match '/ginasios/:ginasio_id/estatisticasmodalidadesemana' => 'estatisticas#modalidade_semana', :as => "estatisticasmodalidadesemana"
+  
 
   resources :users do
     resources :planos
@@ -47,9 +48,11 @@ Fit::Application.routes.draw do
   resources :pagamentos
   resources :estatisticas
 
+
   resources :ginasios do
     resources :users
     resources :estudios
+    resources :estatisticas
     resources :aulas do
 
       resources :reserva_aulas

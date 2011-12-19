@@ -13,7 +13,6 @@
       </p>
 
       <p>
-        <!-- {@ginasio.latitude},#{@ginasio.longitude} -->
         <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@ginasio.latitude},#{@ginasio.longitude}&zoom=15&size=400x300\
 &markers=color:blue%7C#{@ginasio.latitude},#{@ginasio.longitude}&sensor=false" %>
       </p>
@@ -21,11 +20,17 @@
   </div>
 
   <div class="actions topSpacing2">
-    <%= link_to 'Editar Dados', edit_ginasio_path(@ginasio), :class => "btn success" %>
-    <%= link_to 'Ver Utilizadores do Ginásio', ginasio_users_path(@ginasio), :class => "btn primary" %>
-    <%= link_to 'Ver Aulas', ginasio_aulas_path(@ginasio), :class => "btn primary" %>
-    <%= link_to 'Ver Estúdios', ginasio_estudios_path(@ginasio), :class => "btn primary" %>
-    <%= link_to 'Ver Ginásios', ginasios_path, :class => "btn danger" %>
+    <div class = "row">
+        <%= link_to 'Editar Dados', edit_ginasio_path(@ginasio), :class => "btn success" %>
+        <%= link_to 'Ver Estatisticas', ginasio_estatisticas_path(@ginasio, :taid => TipoAula.all.first.id, :mes => Date.today.month, :ano => Date.today.year), :class => "btn success" %>
+        <%= link_to 'Ver Utilizadores do Ginásio', ginasio_users_path(@ginasio), :class => "btn primary" %>
+    </div>
+    </br>
+    <div class = "row">
+        <%= link_to 'Ver Aulas', ginasio_aulas_path(@ginasio), :class => "btn primary" %>
+        <%= link_to 'Ver Estúdios', ginasio_estudios_path(@ginasio), :class => "btn primary" %>
+        <%= link_to 'Ver Ginásios', ginasios_path, :class => "btn danger" %>
+    </div>
   </div>
 </div>
 

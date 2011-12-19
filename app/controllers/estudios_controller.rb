@@ -16,6 +16,7 @@ class EstudiosController < ApplicationController
   # GET /estudios/1
   # GET /estudios/1.json
   def show
+    @ginasio = Ginasio.find(params[:ginasio_id])
     @estudio = Estudio.find(params[:id])
 
     respond_to do |format|
@@ -92,3 +93,4 @@ class EstudiosController < ApplicationController
     end
   end
 end
+

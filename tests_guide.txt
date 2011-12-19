@@ -1,27 +1,40 @@
-Dados:
-- admins
+Dados de teste:
+- (FEITO) ginasios
+- (FEITO) admins
+- (FEITO) staffs
+- (FEITO) users
+- (FEITO) cidades
+- (FEITO) estudios
+- (FEITO) modalidade_pagamentos
+- (FEITO) exercicios
 - plano alimentar
 - aulas
-- cidades
-- estudios
-- exercicios
 - exercicios_planos
 - feedbacks
-- ginasio_notificacaos
-- ginasios
-- modalidade_pagamentos
 - notificacaos
 - pagamentos
 - pedido_planos
 - planos
 - reserva_aulas
-- staffs
 - tipo_aulas
-- users
 
 Testes unitários:
   - (FEITO) mailer
-  - (TODO) resto
+  - ginasio
+  - (TODO) estudio
+  - admin, staff, user
+  - exercicios_planos
+  - exercicio_test
+  - feedback
+  - modalidade_pagamento
+  - notificacao
+  - pagamento
+  - pedido_plano
+  - plano
+  - reserva_aula
+  - staff
+  - tipo_aula (modalidade)
+  - plano alimentar
 
 Testes funcionais (controladores):
   - (TODO) tudo
