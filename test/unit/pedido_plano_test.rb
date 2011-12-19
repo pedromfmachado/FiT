@@ -10,7 +10,7 @@ class PedidoPlanoTest < ActiveSupport::TestCase
   end
 
   def teardown
-    PedidoPlano.destroy_all(["data_pedido = ? AND user_id = ?", @date_now, users(:andre_marinho).id])
+    PedidoPlano.where(:user_id => users(:andre_marinho).id).delete_all
   end
 
   test "pedido plano create" do

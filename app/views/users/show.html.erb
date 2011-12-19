@@ -70,14 +70,11 @@
     </br>
     <div class ="row">
         <%= link_to "Editar Perfil", edit_user_path(@user), :class => "btn primary" %>
-        <%= link_to "Alterar password", mudarpassword_path(@user), :class => "btn primary" %>
+        <%= link_to "Alterar password", mudarpassword_path(@user), :class => "btn primary" if can? :edit_password, User %>
         
-    </div>
-    </br>
-    <div class ="row">
-        <%= link_to "Promover", { :controller => "users" , :action => "promote", :id => @user}, :class => "btn success" if current_user.admin? && current_user.id != @user.id && !@user.admin? %>
-        <%= link_to "Despromover", { :controller => "users" , :action => "demote", :id => @user}, :class => "btn danger" unless @user.normal? %>
-        <%= link_to "Listar utilizadores", users_path, :class => "btn" unless current_user.normal?%>
+        <%= link_to "Promover", { :controller => "users" , :action => "promote", :id => @user}, :class => "btn success" if can?(:promote, User) && !@user.admin? %>
+        <%= link_to "Despromover", { :controller => "users" , :action => "demote", :id => @user}, :class => "btn danger" if can?(:demote, User) && !@user.normal? %>
+        <%= link_to "Listar utilizadores", users_path, :class => "btn danger"%>
     </div>    
 
   </div>

@@ -3,24 +3,23 @@ require 'test_helper'
 class ExerciciosPlanosTest < ActiveSupport::TestCase
 
   def setup
-    @exercicio1 = ExerciciosPlanos.new(:peso=>75, :series=>15, :repeticoes=>15, :plano_id=>planos(:plano1).id, :exercicio_id=>exercicios(:exercicio2).id)
-    @exercicio2 = ExerciciosPlanos.new(:series=>15, :repeticoes=>15, :plano_id=>planos(:plano1).id, :exercicio_id=>exercicios(:exercicio2).id)
-    @exercicio3 = ExerciciosPlanos.new(:peso=>75, :repeticoes=>15, :plano_id=>planos(:plano1).id, :exercicio_id=>exercicios(:exercicio2).id)
-    @exercicio4 = ExerciciosPlanos.new(:peso=>75, :series=>15, :repeticoes=>15, :exercicio_id=>exercicios(:exercicio2).id)
-    @exercicio5 = ExerciciosPlanos.new(:peso=>75, :series=>15, :repeticoes=>15, :plano_id=>planos(:plano1).id)
-    @exercicio6 = ExerciciosPlanos.new(:peso=>75, :series=>15, :plano_id=>planos(:plano1).id, :exercicio_id=>exercicios(:exercicio2).id)
+    @exercicio1 = ExerciciosPlanos.new(:peso => 75, :series => 15, :repeticoes => 15, :plano_id => planos(:plano1).id, :exercicio_id => exercicios(:exercicio2).id)
+    @exercicio2 = ExerciciosPlanos.new(:series => 15, :repeticoes => 15, :plano_id => planos(:plano1).id, :exercicio_id => exercicios(:exercicio2).id)
+    @exercicio3 = ExerciciosPlanos.new(:peso => 75, :repeticoes => 15, :plano_id => planos(:plano1).id, :exercicio_id => exercicios(:exercicio2).id)
+    @exercicio4 = ExerciciosPlanos.new(:peso => 75, :series => 15, :repeticoes => 15, :exercicio_id => exercicios(:exercicio2).id)
+    @exercicio5 = ExerciciosPlanos.new(:peso => 75, :series => 15, :repeticoes => 15, :plano_id => planos(:plano1).id)
+    @exercicio6 = ExerciciosPlanos.new(:peso => 75, :series => 15, :plano_id => planos(:plano1).id, :exercicio_id => exercicios(:exercicio2).id)
   end
 
   def teardown
-    #@exercicio1.destroy unless @exercicio1.nil?
-    #@exercicio2.destroy unless @exercicio2.nil?
-    #@exercicio3.destroy unless @exercicio3.nil?
-    #@exercicio4.destroy unless @exercicio4.nil?
-    #@exercicio5.destroy unless @exercicio5.nil?
-    #@exercicio6.destroy unless @exercicio6.nil?
+    ExerciciosPlanos.where(:plano_id => planos(:plano1).id).where(:exercicio_id => exercicios(:exercicio2).id).delete_all unless @exercicio1.nil?
+
+    # test samples 2..5 will fail on insertion, no need to remove them
+
+    ExerciciosPlanos.where(:plano_id => planos(:plano1).id).where(:exercicio_id => exercicios(:exercicio2).id).delete_all unless @exercicio6.nil?
   end
 
-  test "TipoAula create" do
+  test "exercicios planos create" do
     assert_equal 75, @exercicio1.peso
     assert_equal 15, @exercicio1.series
     assert_equal 15, @exercicio1.repeticoes
@@ -58,13 +57,13 @@ class ExerciciosPlanosTest < ActiveSupport::TestCase
     assert !@exercicio6.exercicio_id.blank?
   end
 
-  test "TipoAula save" do
+  test "exercicios planos save" do
     assert @exercicio1.save
     assert !@exercicio2.save
     assert !@exercicio3.save
     assert !@exercicio4.save
     assert !@exercicio5.save
-    assert @exercicio6.save
+    assert !@exercicio6.save
   end
 
 end

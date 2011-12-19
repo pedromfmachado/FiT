@@ -1,23 +1,25 @@
 
 <h1>Estatisticas - <%= @ginasio.nome %> </h1>
 
-<div class = "span14 offset2">
-	<div class="row">
-		<%= text_field_tag :mes, Date.today.month, :id => "mes", :class => "span1" %>
+<table>
 
-		<%= text_field_tag :ano, Date.today.year, :id => "ano", :class => "span1" %>
+	<tr>
+		<th>Mes: <%= text_field_tag :mes, Date.today.month, :id => "mes", :class => "span1" %></th>
 
-		<%= collection_select("", "taid", TipoAula.all, :id, :tipo, {}, {  :class => "span4 no-resize" }) %>
+		<th>Ano: <%= text_field_tag :ano, Date.today.year, :id => "ano", :class => "span1" %></th>
 
+		<th>Modalidade: 
+		<%= collection_select("", "taid", TipoAula.all, :id, :tipo, {}, {  :class => "span4 no-resize" }) %></th>
+
+		<th>Tipo de Estatistica
 		<%= select_tag(:tipo, options_for_select([['Modalidade/Dia da Semana',0],['Reservas/Modalidade',1],
 												['Reservas/Professor(por Modalidade)',2],
 												['Aulas/Professor (por modalidade)',3],
 												['Reservas/Mes',4]]), :id => "tipo_estatistica",
-												:class =>"span5 no-resize") %>
-	</div>
-</div>
-
-</br></br></br></br>
+												:class =>"span5 no-resize") %></th>
+	</tr>
+									
+</table>
 
 <div id = "estatisticas" class ="topSpacing2">
 

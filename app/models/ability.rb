@@ -8,6 +8,7 @@ class Ability
     if user.admin?
       can :manage, :all
 
+      
       cannot :create, PedidoPlano
       cannot :create, Plano do |p|
 
@@ -25,7 +26,14 @@ class Ability
         u.admin?
       
       end
+      cannot :edit_password, User do |u|
+
+        u.id != user.id
+
+      end
+      cannot :promote, User, :id => user.id
       
+      cannot :demote, User, :id => user.id
       
     elsif user.staff?
       can :manage, AlimentarPlano
@@ -53,10 +61,11 @@ class Ability
         (u.admin? || u.staff?) && user.id != u.id
       
       end
-      cannot :destroy, User do |u|
-	    
-        u.admin? || u.staff?
-    
+      cannot :destroy, User
+      cannot :edit_password, User do |u|
+
+        u.id != user.id
+
       end
 
     elsif user.normal?

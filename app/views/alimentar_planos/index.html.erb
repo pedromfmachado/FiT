@@ -28,8 +28,8 @@
       <% @alimentar_planos.each do |alimentar_plano| %>
       <tr>
         <td><%= link_to alimentar_plano.data, user_alimentar_plano_path(@user,alimentar_plano) %></td>
-        <td><%= link_to 'Editar', edit_user_alimentar_plano_path(@user,alimentar_plano) %></td>
-        <td><%= link_to 'Apagar', user_alimentar_plano_path(@user,alimentar_plano), :confirm => 'Are you sure?', :method => :delete %></td>
+        <td><%= link_to 'Editar', edit_user_alimentar_plano_path(@user,alimentar_plano) if can? :update, AlimentarPlano %></td>
+        <td><%= link_to 'Apagar', user_alimentar_plano_path(@user,alimentar_plano), :confirm => 'Are you sure?', :method => :delete if can? :destroy, AlimentarPlano %></td>
       </tr>
       <% end %>
     <% end %>

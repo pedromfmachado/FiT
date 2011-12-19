@@ -20,7 +20,7 @@ class FeedbackTest < ActiveSupport::TestCase
     @feedback5.destroy unless @feedback3.nil?
   end
 
-  test "Feedback create" do
+  test "feedback create" do
      assert_equal aulas(:aula1).id, @feedback1.aula_id
      assert_equal 3, @feedback1.valor
      assert_equal users(:andre_alves).id, @feedback1.user_id
@@ -43,7 +43,7 @@ class FeedbackTest < ActiveSupport::TestCase
 
   end
 
-  test "Feedback save" do
+  test "feedback save" do
       assert @feedback1.save
       assert !@feedback2.save
       assert !@feedback3.save

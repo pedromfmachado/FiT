@@ -19,16 +19,16 @@ ActiveRecord::Schema.define(:version => 20111218155652) do
   end
 
   create_table "alimentar_planos", :force => true do |t|
-    t.date     "data"
-    t.text     "pequenoalmoco"
-    t.text     "manha"
-    t.text     "almoco"
-    t.text     "tarde"
-    t.text     "jantar"
-    t.text     "ceia"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
+    t.date      "data"
+    t.text      "pequenoalmoco"
+    t.text      "manha"
+    t.text      "almoco"
+    t.text      "tarde"
+    t.text      "jantar"
+    t.text      "ceia"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "user_id"
   end
 
   create_table "aulas", :force => true do |t|
@@ -112,10 +112,10 @@ ActiveRecord::Schema.define(:version => 20111218155652) do
   end
 
   create_table "modalidade_pagamentos", :force => true do |t|
-    t.string   "nome"
-    t.float    "preco"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "nome"
+    t.float     "preco"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "notificacaos", :force => true do |t|
@@ -129,14 +129,14 @@ ActiveRecord::Schema.define(:version => 20111218155652) do
   end
 
   create_table "pagamentos", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "mes"
-    t.boolean  "pago"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "ano"
-    t.float    "preco"
-    t.integer  "modalidade_pagamento_id"
+    t.integer   "user_id"
+    t.integer   "mes"
+    t.boolean   "pago"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "ano"
+    t.float     "preco"
+    t.integer   "modalidade_pagamento_id"
   end
 
   add_index "pagamentos", ["user_id"], :name => "index_pagamentos_on_user_id"

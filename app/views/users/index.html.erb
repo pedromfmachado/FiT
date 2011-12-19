@@ -24,10 +24,6 @@
 
       <td><%= link_to 'Ver', user %></td>
 
-      <% if can? :edit, User %>
-      <td><%= link_to 'Editar', edit_user_path(user) %></td>
-      <% end %>
-
       <td>
         <% if (user.normal? || user.staff?) && current_user.admin? %>
         <%= link_to 'Apagar', user, :confirm => 'Tem a certeza que deseja apagar este utilizador?', :method => :delete %>

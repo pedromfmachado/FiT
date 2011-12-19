@@ -19,8 +19,8 @@ Dados de teste:
 - tipo_aulas
 
 Testes unitários:
-  - (IGNORAR) pedido_plano
   - (FEITO) mailer
+  - (FEITO) pedido_plano
   - (FEITO) ginasio
   - (FEITO) estudio
   - (FEITO) exercicio
