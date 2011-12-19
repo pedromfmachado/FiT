@@ -1,20 +1,19 @@
 <div class="row">
-  <%= text_field_tag :mes, Date.today.month, :id => "mes", :class => "span1" %> /
+  <%= text_field_tag :mes, Date.today.month, :id => "mes", :class => "span1" %>
 
   <%= text_field_tag :ano, Date.today.year, :id => "ano", :class => "span1" %>
 
   <%= collection_select("", "taid", TipoAula.all, :id, :tipo, {}, {  :class => "span6 no-resize" }) %>
+
+  <%= select_tag(:tipo, options_for_select([['Modalidade/Dia da Semana',0],['Reservas/Modalidade',1],['Professor/Modalidade',2],
+                                            ['Aulas/Professor (por modalidade)',3],['Reservas/Mes',4]]), :id => "tipo_estatistica") %>
 </div>
 
 
 
 
 <div id = "estatisticas">
-<%= image_tag "http://placehold.it/330x230", :id => "modalidade" %>
-<%= image_tag "http://placehold.it/330x230", :id => "modalidade_semana" %>
-<%= image_tag "http://placehold.it/330x230", :id => "modalidade_professor" %>
-<%= image_tag "http://placehold.it/330x230", :id => "aulas_professor" %>
-<%= image_tag "http://placehold.it/330x230", :id => "total_ginasio" %>
+    <%= image_tag "http://placehold.it/330x230", :id => "imagem_estatistica" %>
 </br></br></br></br></br>
 
 

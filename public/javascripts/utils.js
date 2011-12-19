@@ -6,60 +6,79 @@ function get_estatisticas(){
     var ano = $("#ano").val();
     var taid = $("#_taid option:selected").val();
     var conteudo = "taid="+taid+"&ano="+ano+"&mes="+mes;
-    jQuery.get("estatisticasmodalidadesemana.xml?", conteudo,
+    var estatistica = parseInt($("#tipo_estatistica option:selected").val());
 
-    function(data){    
+    
 
-        grafico = data.getElementsByTagName("estatistica");
-        var imagem = grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue;
+    switch(estatistica){
 
-        $("#modalidade").attr("src",imagem);
+        case 0:
+            jQuery.get("estatisticasmodalidadesemana.xml?", conteudo,
 
-    });
+            function(data){    
 
-    jQuery.get("estatisticasmodalidade.xml?", conteudo,
+                grafico = data.getElementsByTagName("estatistica");
+                var imagem = grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue;
 
-    function(data){    
+                $("#imagem_estatistica").attr("src",imagem);
 
-        grafico = data.getElementsByTagName("estatistica");
-        var imagem = grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue;
+            });
+            break;
+        
+        case 1:
+            jQuery.get("estatisticasmodalidade.xml?", conteudo,
 
-        $("#modalidade_semana").attr("src",imagem);
+            function(data){    
 
-    });
+                grafico = data.getElementsByTagName("estatistica");
+                var imagem = grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue;
 
-    jQuery.get("estatisticasmodalidadeprofessor.xml?", conteudo,
+                $("#imagem_estatistica").attr("src",imagem);
 
-    function(data){    
+            });
+            break;
+        
+        case 2:
+            jQuery.get("estatisticasmodalidadeprofessor.xml?", conteudo,
 
-        grafico = data.getElementsByTagName("estatistica");
-        var imagem = grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue;
+            function(data){    
 
-        $("#modalidade_professor").attr("src",imagem);
+                grafico = data.getElementsByTagName("estatistica");
+                var imagem = grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue;
 
-    });
+                $("#imagem_estatistica").attr("src",imagem);
 
-    jQuery.get("estatisticasaulasprofessor.xml?", conteudo,
+            });
+            break;
+        
+        case 3:
+            jQuery.get("estatisticasaulasprofessor.xml?", conteudo,
 
-    function(data){    
+            function(data){    
 
-        grafico = data.getElementsByTagName("estatistica");
-        var imagem = grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue;
+                grafico = data.getElementsByTagName("estatistica");
+                var imagem = grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue;
 
-        $("#aulas_professor").attr("src",imagem);
+                $("#imagem_estatistica").attr("src",imagem);
 
-    });
+            });
+            break;
+        
+        case 4:
+            jQuery.get("totalginasio.xml?", conteudo,
 
-    jQuery.get("totalginasio.xml?", conteudo,
+            function(data){    
 
-    function(data){    
+                grafico = data.getElementsByTagName("estatistica");
+                var imagem = grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue;
 
-        grafico = data.getElementsByTagName("estatistica");
-        var imagem = grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue;
+                $("#imagem_estatistica").attr("src",imagem);
 
-        $("#total_ginasio").attr("src",imagem);
-
-    });
+            });
+            break;
+        default:
+            break;
+    }
 
 }
 
@@ -140,7 +159,7 @@ $(document).ready(function(){
         $("#mes").change(function(){get_estatisticas();});
         $("#ano").change(function(){get_estatisticas();});
         $("#_taid").change(function(){get_estatisticas();});
-        
+        $("#tipo_estatistica").change(function(){get_estatisticas();});
 
     }
     else{

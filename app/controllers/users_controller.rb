@@ -16,8 +16,8 @@ class UsersController < ApplicationController
   def create
     params[:user][:email] = params[:user][:email].downcase
     @user = User.new(params[:user])
-    if @user.save
 
+    if @user.save
       if params[:filename] && params[:filename] != ""
         @user.flickr_auth
         url_foto = @user.upload_foto(params[:filename])

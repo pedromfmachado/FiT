@@ -2,6 +2,12 @@ class Pagamento < ActiveRecord::Base
   belongs_to :user
   belongs_to :modalidade_pagamento
 
+  validates_presence_of :user_id, :message => "tem de ter um utilizador associado."
+  validates_presence_of :mes, :message => "tem de ter um mes correspondente."
+  validates_presence_of :ano, :message => "tem de ter um ano correspondente."
+  validates_presence_of :preco, :message => "tem de ter um preco associado"
+  validates_presence_of :modalidade_pagamento_id, :message => "tem de ter uma modalidade associada."
+
   def self.update_mensal
 
       User.all.each do |u|
@@ -23,9 +29,7 @@ class Pagamento < ActiveRecord::Base
           pagamento.save
 
         end
-
       end
-
   end
 
   require 'builder'

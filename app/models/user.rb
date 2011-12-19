@@ -15,7 +15,8 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
   before_create :set_token
 
-  validates :nome, :presence => { :message => "esta em branco." }
+  validates_presence_of :nome, :message => "esta em branco."
+
   validates_presence_of :datanascimento, :message => "em branco."
   validates_format_of :datanascimento, :message => "invalida. (yyyy/mm/dd)",
     :with => /^(19\d\d|2\d\d\d)([- \/.])(0[1-9]|1[012])\2(0[1-9]|[12][0-9]|3[01])$/,
@@ -25,7 +26,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email, :on => :create, :message => "ja existente na base de dados. Introduza outro email."
   validates_format_of :email, :on => :create,
     :unless => Proc.new { |user| user.email.blank? },
-    :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i, :on => :create,
+    :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i,
     :message => "invalido. Introduza o seu email (ex: exemplo@sapo.pt)"
 
   validates_presence_of :telefone, :message => "em branco."
@@ -36,7 +37,7 @@ class User < ActiveRecord::Base
   validates_presence_of :ginasio_id
 
   validates_presence_of :password, :on => :create, :message => "em branco."
-  validates_length_of :password, :in => 6..20, :on => :create,
+  validates_length_of :password, :on => :create, :in => 6..20,
     :unless => Proc.new { |user| user.password.blank? },
     :too_long => "demasiado grande. Tem de ter entre 6 a 20 caracteres",
     :too_short => "demasiado pequena. Tem de ter entre 6 a caracteres"
@@ -64,6 +65,7 @@ class User < ActiveRecord::Base
     self.token = UUIDTools::UUID.timestamp_create.to_s
   end
 
+  # Admins and staff
   def admin?
     if(Admin.find_by_user_id(id) != nil) 
       return true
@@ -84,8 +86,8 @@ class User < ActiveRecord::Base
     !admin? && !staff? && id != nil
   end
 
+  # Promotions and Relegations
   def promote
-
     if normal?
       Staff.create(:user_id => id)
     elsif staff?
@@ -96,7 +98,6 @@ class User < ActiveRecord::Base
   end
 
   def demote
-
     if admin?
       Staff.create(:user_id => id)
       Admin.find_by_user_id(id).destroy
@@ -105,8 +106,7 @@ class User < ActiveRecord::Base
     end
   end
 
-  
-
+  # Profile photo
   require 'flickraw'
   def flickr_auth
     FlickRaw.api_key="755298909a3867da9092eb921e173531"
@@ -115,12 +115,9 @@ class User < ActiveRecord::Base
     flickr.access_secret = "85c3c8966a036c44"
 
     login = flickr.test.login
-
   end
 
   def upload_foto(file)
-
-
     login = flickr.test.login
 
     directory = "tmp"

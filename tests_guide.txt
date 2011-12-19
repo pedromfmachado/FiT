@@ -28,10 +28,10 @@ Testes unitários:
   - (FEITO) tipo_aula (modalidade)
   - (FEITO) plano_alimentar
   - (FEITO) modalidade_pagamento
+  - (FEITO) pagamento
   - admin, staff, user
   - exercicios_planos
   - feedback
-  - (TODO) pagamento
   - plano
   - reserva_aula
 
