@@ -19,22 +19,21 @@ Dados de teste:
 - tipo_aulas
 
 Testes unitários:
+  - (IGNORAR) pedido_plano
   - (FEITO) mailer
-  - ginasio
-  - (TODO) estudio
+  - (FEITO) ginasio
+  - (FEITO) estudio
+  - (FEITO) exercicio
+  - (FEITO) notificacao
+  - (FEITO) tipo_aula (modalidade)
   - admin, staff, user
   - exercicios_planos
-  - exercicio_test
   - feedback
   - modalidade_pagamento
-  - notificacao
   - pagamento
-  - pedido_plano
   - plano
   - reserva_aula
-  - staff
-  - tipo_aula (modalidade)
-  - plano alimentar
+  - (TODO) plano alimentar
 
 Testes funcionais (controladores):
   - (TODO) tudo

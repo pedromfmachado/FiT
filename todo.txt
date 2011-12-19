@@ -18,5 +18,6 @@
 - Fazer paginas auxiliares (about, faq, etc)
 
 Módulos em falta:
-- (ALMOST DONE) Estatisticas
+- (DONE) Estatisticas
 - (DONE) Planos alimentares
+- SITE MOBILE!!!

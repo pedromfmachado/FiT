@@ -4,16 +4,16 @@ function get_estatisticas(){
 
     var mes = $("#mes").val();
     var ano = $("#ano").val();
-    var taid = $("#taid").val();
-    var conteudo = "taid="+1+"&ano="+ano+"&mes="+12;
+    var taid = $("#_taid option:selected").val();
+    var conteudo = "taid="+taid+"&ano="+ano+"&mes="+mes;
     jQuery.get("estatisticasmodalidadesemana.xml?", conteudo,
 
     function(data){    
 
         grafico = data.getElementsByTagName("estatistica");
-        var imagem = "<img src=\""+grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue+"\">";
+        var imagem = grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue;
 
-        $("#modalidade").html(imagem);
+        $("#modalidade").attr("src",imagem);
 
     });
 
@@ -22,9 +22,42 @@ function get_estatisticas(){
     function(data){    
 
         grafico = data.getElementsByTagName("estatistica");
-        var imagem = "<img src=\""+grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue+"\">";
+        var imagem = grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue;
 
-        $("#modalidade_semana").html(imagem);
+        $("#modalidade_semana").attr("src",imagem);
+
+    });
+
+    jQuery.get("estatisticasmodalidadeprofessor.xml?", conteudo,
+
+    function(data){    
+
+        grafico = data.getElementsByTagName("estatistica");
+        var imagem = grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue;
+
+        $("#modalidade_professor").attr("src",imagem);
+
+    });
+
+    jQuery.get("estatisticasaulasprofessor.xml?", conteudo,
+
+    function(data){    
+
+        grafico = data.getElementsByTagName("estatistica");
+        var imagem = grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue;
+
+        $("#aulas_professor").attr("src",imagem);
+
+    });
+
+    jQuery.get("totalginasio.xml?", conteudo,
+
+    function(data){    
+
+        grafico = data.getElementsByTagName("estatistica");
+        var imagem = grafico[0].getElementsByTagName("message")[0].firstChild.nodeValue;
+
+        $("#total_ginasio").attr("src",imagem);
 
     });
 
@@ -104,6 +137,10 @@ $(document).ready(function(){
     if($("#estatisticas")){
         
         get_estatisticas();
+        $("#mes").change(function(){get_estatisticas();});
+        $("#ano").change(function(){get_estatisticas();});
+        $("#_taid").change(function(){get_estatisticas();});
+        
 
     }
     else{

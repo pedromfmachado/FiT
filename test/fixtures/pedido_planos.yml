@@ -1,9 +1,2 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  user_id: 1
-  data_pedido: 2011-12-15 11:20:49
-
-two:
-  user_id: 1
-  data_pedido: 2011-12-15 11:20:49

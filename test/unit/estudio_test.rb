@@ -18,7 +18,9 @@ class EstudioTest < ActiveSupport::TestCase
   test "estudio save" do
      size = Estudio.all.size
      assert @estudio.save
-     assert_equal size+1, Estudio.all.size
+
+     after = size + 1
+     assert_equal after, Estudio.all.size
      assert Estudio.find(@estudio.id)
   end
 
@@ -28,7 +30,8 @@ class EstudioTest < ActiveSupport::TestCase
     id = @estudio.id
 
     @estudio.destroy
-    assert_equal size-1, Estudio.all.size
+    after = size - 1
+    assert_equal after, Estudio.all.size
     assert_raise(ActiveRecord::RecordNotFound) { Estudio.find(id) }
   end
 end

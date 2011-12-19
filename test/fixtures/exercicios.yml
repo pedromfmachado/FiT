@@ -3,80 +3,80 @@
 exercicio1:
   nome: Corrida
   maquina: Passadeira
-  tipo: Aeróbico
+  tipo: Aerobico
 	
 exercicio2:
   nome: Bicicleta
   maquina: Bicicleta Vertical
-  tipo: Aeróbico
+  tipo: Aerobico
 	
 exercicio3:
   nome: Bicicleta
   maquina: Bicicleta Reclinada
-  tipo: Aeróbico
+  tipo: Aerobico
 	
 exercicio4:
   nome: Bicicleta
   maquina: Eliptica
-  tipo: Aeróbico
+  tipo: Aerobico
 	
 exercicio5:
   nome: Remo
   maquina: Remo
-  tipo: Aeróbico
+  tipo: Aerobico
 	
 exercicio6:
   nome: Abdominal
   maquina: 1
-  tipo: Musculação
+  tipo: Musculacao
 	
 exercicio7:
   nome: Leg Curl
   maquina: 2
-  tipo: Musculação
+  tipo: Musculacao
 	
 exercicio8:
   nome: Leg Extension
   maquina: 3
-  tipo: Musculação
+  tipo: Musculacao
 	
 exercicio9:
   nome: Leg Press
   maquina: 4
-  tipo: Musculação
+  tipo: Musculacao
 	
 exercicio10:
   nome: Low Back - Abdominal
   maquina: 5
-  tipo: Musculação
+  tipo: Musculacao
 	
 exercicio11:
   nome: Shoulder Press
   maquina: 6
-  tipo: Musculação
+  tipo: Musculacao
 	
 exercicio12:
   nome: Arm Curl
   maquina: 7
-  tipo: Musculação
+  tipo: Musculacao
 	
 exercicio13:
   nome: Biceps Curl Pulley
   maquina: 8
-  tipo: Musculação
+  tipo: Musculacao
 	
 exercicio14:
   nome: Arm Curl
   maquina: 9
-  tipo: Musculação
+  tipo: Musculacao
 	
 exercicio15:
   nome: Supine Press
   maquina: 10
-  tipo: Musculação
+  tipo: Musculacao
 	
 exercicio16:
   nome: Pesos Livres
   maquina: Halteres
-  tipo: Musculação
+  tipo: Musculacao
 	
