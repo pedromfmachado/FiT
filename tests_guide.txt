@@ -26,14 +26,14 @@ Testes unitários:
   - (FEITO) exercicio
   - (FEITO) notificacao
   - (FEITO) tipo_aula (modalidade)
+  - (FEITO) plano_alimentar
+  - (FEITO) modalidade_pagamento
   - admin, staff, user
   - exercicios_planos
   - feedback
-  - modalidade_pagamento
-  - pagamento
+  - (TODO) pagamento
   - plano
   - reserva_aula
-  - (TODO) plano alimentar
 
 Testes funcionais (controladores):
   - (TODO) tudo

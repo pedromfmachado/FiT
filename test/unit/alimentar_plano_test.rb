@@ -24,19 +24,72 @@ class AlimentarPlanoTest < ActiveSupport::TestCase
 	end
 
 	test "AlimentarPlano create" do
-		assert_equal "Cycle", @tipoaula1.tipo
-		assert_equal "Aula de grupo, indoor, em que os participantes estao a ouvir musica e sao coordenados por um membro do staff.", @tipoaula1.descricao
-		assert @tipoaula2.descricao.blank?
-		assert_equal "Localizada", @tipoaula2.tipo
-		assert_equal "Aulas que se focam em exercicitar partes especificas do corpo", @tipoaula3.descricao
-		assert @tipoaula3.tipo.blank?
+		assert_equal "Copo de leite", @plano1.pequenoalmoco
+		assert_equal "Fruta", @plano1.manha
+		assert_equal "Sardinhas", @plano1.almoco
+		assert_equal "Fruta", @plano1.tarde
+		assert_equal "Bacalhau", @plano1.jantar
+		assert_equal "3 bolachas", @plano1.ceia
+
+		assert @plano2.pequenoalmoco.blank?
+		assert_equal "Fruta", @plano2.manha
+		assert_equal "Sardinhas", @plano2.almoco
+		assert_equal "Fruta", @plano2.tarde
+		assert_equal "Bacalhau", @plano2.jantar
+		assert_equal "3 bolachas", @plano2.ceia
+
+		assert_equal "Copo de leite", @plano3.pequenoalmoco
+		assert @plano3.manha.blank?
+		assert_equal "Sardinhas", @plano3.almoco
+		assert_equal "Fruta", @plano3.tarde
+		assert_equal "Bacalhau", @plano3.jantar
+		assert_equal "3 bolachas", @plano3.ceia
+
+		assert_equal "Copo de leite", @plano4.pequenoalmoco
+		assert_equal "Fruta", @plano4.manha
+		assert @plano4.almoco.blank?
+		assert_equal "Fruta", @plano4.tarde
+		assert_equal "Bacalhau", @plano4.jantar
+		assert_equal "3 bolachas", @plano4.ceia
+
+		assert_equal "Copo de leite", @plano5.pequenoalmoco
+		assert_equal "Fruta", @plano5.manha
+		assert_equal "Sardinhas", @plano5.almoco
+		assert @plano5.tarde.blank?
+		assert_equal "Bacalhau", @plano5.jantar
+		assert_equal "3 bolachas", @plano5.ceia
+
+		assert_equal "Copo de leite", @plano6.pequenoalmoco
+		assert_equal "Fruta", @plano6.manha
+		assert_equal "Sardinhas", @plano6.almoco
+		assert_equal "Fruta", @plano6.tarde
+		assert @plano6.jantar.blank?
+		assert_equal "3 bolachas", @plano6.ceia
+
+		assert_equal "Copo de leite", @plano7.pequenoalmoco
+		assert_equal "Fruta", @plano7.manha
+		assert_equal "Sardinhas", @plano7.almoco
+		assert_equal "Fruta", @plano7.tarde
+		assert_equal "Bacalhau", @plano7.jantar
+		assert @plano7.ceia.blank?
+
+		assert_equal "Copo de leite", @plano8.pequenoalmoco
+		assert_equal "Fruta", @plano8.manha
+		assert_equal "Sardinhas", @plano8.almoco
+		assert_equal "Fruta", @plano8.tarde
+		assert_equal "Bacalhau", @plano8.jantar
+		assert_equal "3 bolachas", @plano8.ceia
+		assert @plano8.user_id.blank?
 	end
 
 	test "AlimentarPlano save" do
 		assert @plano1.save
 		assert !@plano2.save
 		assert !@plano3.save
-		assert !@plano2.save
-		assert !@plano2.save
+		assert !@plano4.save
+		assert !@plano5.save
+		assert !@plano6.save
+		assert !@plano7.save
+		assert !@plano8.save
 	end
 end

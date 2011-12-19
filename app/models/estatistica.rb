@@ -119,7 +119,7 @@ require 'gchart'
 
     end
 
-    ::Gchart.pie_3d(:title => TipoAula.find(taid).tipo, :size => '500x300', 
+    ::Gchart.pie_3d(:title => TipoAula.find(taid).tipo, :size => '600x300', 
                     :bar_width_and_spacing => '50,50', :data => dados, :labels => titulos )
 
   end
