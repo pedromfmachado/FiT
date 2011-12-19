@@ -24,7 +24,7 @@ class PedidoPlanoTest < ActiveSupport::TestCase
     assert @pedido3.user_id, users(:andre_alves).id
   end
 
-  test "pedido plano create" do
+  test "pedido plano save" do
     assert @pedido1.save
 
     # missing parameters
