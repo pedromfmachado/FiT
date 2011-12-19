@@ -36,12 +36,12 @@
         <td><%= pagamento.modalidade_pagamento.nome if pagamento.modalidade_pagamento_id%></td>
         <td><%= pagamento.preco %></td>
 
-        <% if pagamento.pago && !current_user.normal? %>
+        <% if pagamento.pago %>
           <td>Sim</td>
-          <td><%= link_to "Anular", cancelarpagamento_path(:user_id => params[:user_id],:pagamento_id => pagamento.id), :class => "btn danger span2 center-align" %></td>
-        <% elsif !current_user.normal? %>
+          <td><%= link_to "Anular", cancelarpagamento_path(:user_id => params[:user_id],:pagamento_id => pagamento.id), :class => "btn danger span2 center-align" if can?(:create, Pagamento) %></td>
+        <% else%>
           <td> Não </td>
-          <td><%= link_to "Confirmar", confirmarpagamento_path(:user_id => params[:user_id],:pagamento_id => pagamento.id), :class => "btn success span2 center-align" %></td>
+          <td><%= link_to "Confirmar", confirmarpagamento_path(:user_id => params[:user_id],:pagamento_id => pagamento.id), :class => "btn success span2 center-align" if can?(:create, Pagamento) %></td>
         <% end %>
       </tr>
       <% end %>

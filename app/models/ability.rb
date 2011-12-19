@@ -28,6 +28,7 @@ class Ability
       
       
     elsif user.staff?
+      can :manage, AlimentarPlano
       can :manage, Aula
       can :read, Estudio
       can :manage, Exercicio
@@ -59,6 +60,7 @@ class Ability
       end
 
     elsif user.normal?
+      can :read, AlimentarPlano, :user_id => user.id
       can :read, Aula
       can :read, Estudio
       can :read, Ginasio
@@ -69,6 +71,7 @@ class Ability
          n.ginasio_id == user.ginasio_id || n.ginasio_id == nil
       
       end
+      can :read, Pagamento, :user_id => user.id
       can :create, PedidoPlano
       can :read, Plano, :user_id => user.id
       can :manage, ReservaAula do |r|

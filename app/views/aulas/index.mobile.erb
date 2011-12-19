@@ -1,0 +1,34 @@
+<div class="mobile-content">
+<h3>Aulas de <%= @ginasio.nome %></h3>
+
+  <!-- le schedule fixe -->
+  <% @dias_sorted.each do |d| %>
+  
+    <h4><%= Aula.getDia(d) %></h4>
+
+    <table class="zebra-striped">
+    <% @aulas_sorted[d].each do |aula| %>
+      <tr>
+	  <td class="mobile">
+		<%= link_to ginasio_aula_path(@ginasio,aula) do %>
+		<div class="mobile-cell">
+			<%= aula.inicio.to_s(:time) %> - <%= TipoAula.find(aula.tipo_aula_id).tipo %>
+			
+			<p class="mobile-description">
+			<%= Estudio.find(aula.estudio_id).nome %> - 
+			<%= aula.duracao %> min - 
+			<%= User.find(aula.staff_id).nome %>
+			</p>
+		</div>
+		<% end %>
+	  </td>
+      </tr>
+    <% end %>
+    </table>
+
+  <% end %>
+
+  <%= link_to 'Voltar', new_session_path, :class => "btn primary" %>
+  <%= link_to 'Ver Ginásio', ginasio_path(@ginasio.id), :class => "btn primary"%>
+
+</div>

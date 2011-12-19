@@ -4,8 +4,10 @@
   <head>
     <title>FiT Mobile</title>
 	<%= stylesheet_link_tag "bootstrap", "bootstrap-extension", "mobile"%>
+	<%= stylesheet_link_tag "mobile", :media => "handheld"%>
 	<%= javascript_include_tag "jquery.js"%>
-	<%= javascript_include_tag "bootstrap-dropdown.js", "bootstrap-alerts.js", "onLoad.js"%>
+	<%= javascript_include_tag "bootstrap-dropdown.js", "bootstrap-alerts.js", "onLoad.js", "utils.js"%>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0'" />
 	<%= csrf_meta_tag %>
   </head>
   

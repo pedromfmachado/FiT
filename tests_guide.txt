@@ -29,11 +29,11 @@ Testes unitários:
   - (FEITO) plano_alimentar
   - (FEITO) modalidade_pagamento
   - (FEITO) pagamento
-  - admin, staff, user
-  - exercicios_planos
-  - feedback
-  - plano
-  - reserva_aula
+  - (FEITO) admin, staff, user
+  - (FEITO) exercicios_planos
+  - (FEITO) plano
+  - (TODO-falta colocar user na aula no caso de teste) feedback
+  - (TODO) reserva_aula
 
 Testes funcionais (controladores):
   - (TODO) tudo

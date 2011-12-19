@@ -10,6 +10,8 @@
 - (DONE) Apagar pedido de plano quando é criado o plano (verificar se já é feito)
 - (DONE) Tirar if da verificação de feedback (ver isso com o andré)
 - (DONE) Tratar das verificações dos pagamentos e modalidades de pagamento
+- ExerciciosPlano.destroy nos testes a dar merda
+- Formatar pagina estatisticas
 - Tratar da condição "jaPassou"
 - Fazer verificação da hora da aula no feedback
 - Retirar ids de tabelas onde não são necessários

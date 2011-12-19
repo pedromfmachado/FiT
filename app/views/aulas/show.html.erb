@@ -23,30 +23,33 @@
   </br>Modalidade : <%= Feedback.getFeedbackModalidade(@aula.tipo_aula_id) %>
 
   <% if Date.today.wday == @aula.dia && !@aula.jaPassou %>
-  <h3>
-    <% estudio = Estudio.find(@aula.estudio_id) %>
-    <%= estudio.nome %> - <%= estudio.lotacao %> lugares
-    ( <%= ReservaAula.lugaresDisponiveis(@aula.id) %> disponíveis )
-  </h3>
-  <table class="zebra-striped">
-    <tr>
-      <th>Nome</th>
-      <th>Data</th>
-    </tr>
+    <h3>
+      <% estudio = Estudio.find(@aula.estudio_id) %>
+      <%= estudio.nome %> - <%= estudio.lotacao %> lugares
+      ( <%= ReservaAula.lugaresDisponiveis(@aula.id) %> disponíveis )
+    </h3>
+    <table class="zebra-striped">
+      <tr>
+        <th>Nome</th>
+        <th>Data</th>
+      </tr>
 
-    <% @reservas.each do |reserva| %>
-    
-      <% if reserva.dia == Date.today %>
-        <tr>
-          <td><%= User.find(reserva.user_id).nome %></td>
-          <td><%= reserva.dia %></td>
-        </tr>
+      <% @reservas.each do |reserva| %>
+      
+        <% if reserva.dia == Date.today %>
+          <tr>
+            <td><%= User.find(reserva.user_id).nome %></td>
+            <td><%= reserva.dia %></td>
+          </tr>
+        <% end %>
       <% end %>
-    <% end %>
-  </table>
+    </table>
+
+  <% end %>
 
   <div class="actions topSpacing1">
-    <% if can?(:create,ReservaAula) %>
+    <%= link_to 'Voltar ao horario', ginasio_aulas_path(@aula.ginasio), :class => "btn danger" %>
+    <% if can?(:create,ReservaAula) && Date.today.wday == @aula.dia && !@aula.jaPassou  %>
       <% if ReservaAula.jaMarcada(current_user.id, @aula.id) %>
         <%= link_to 'Cancelar', cancelarmarcacao_path(:user_id => current_user.id, :aula_id => @aula.id), :action => :destroy, :method => :delete, :class => "btn danger" %>
       <% else %>
@@ -55,7 +58,6 @@
     <% end %>
   </div>
 
-  <% end %>
 
 </div>
 

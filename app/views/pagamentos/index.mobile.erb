@@ -1,0 +1,36 @@
+<div class="mobile-content">
+  <h3>Pagamentos</h3>
+
+  <table class="zebra-striped topSpacing1">
+    <tr>
+      <th> Nome </th>
+      <th> Tipo Frequência </th>
+      <th> Mensalidade </th>
+      <th> Pago </th>
+    </tr>
+
+    <% if @pagamentos.empty? %>
+    <tr>
+      <td colspan="10"> &lt; Sem pagamentos para mostrar. &gt; </td>
+    </tr>
+    <% else %>
+      <% @pagamentos.each do |pagamento| %>
+      <tr>
+        <td><%= link_to pagamento.user.nome, pagamento.user %></td>
+        <td><%= pagamento.modalidade_pagamento.nome if pagamento.modalidade_pagamento_id%></td>
+        <td><%= pagamento.preco %></td>
+
+        <% if pagamento.pago%>
+          <td>Sim</td>
+        <% else %>
+          <td> Não </td>
+        <% end %>
+      </tr>
+      <% end %>
+    <% end %>
+  </table>
+  
+  <%= link_to 'Voltar', :back, :class => "btn primary" %>
+  
+</div>
+

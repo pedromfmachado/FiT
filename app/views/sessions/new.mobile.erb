@@ -4,21 +4,52 @@
 
   <div class="mobile-menu"> <h5> Principal </h5></div>
   <ul class="mobile-submenu">
-	<%= link_to root_url do %><li class ="mobile-menulink"> Home </li><% end %>
-	<%= link_to notificacaos_path do %><li class ="mobile-menulink"> Notificações </li><% end %>
-	<%= link_to ginasios_path do %><li class ="mobile-menulink"> Ginásios </li><% end %>
+	
+	<%= link_to root_url do %><li class ="mobile-menulink">
+		<span class="mobile-image-list"> <%= image_tag "Home.png", :class => "mobile-icon" %> </span>
+		<span class="mobile-text-list"> Home </span>
+	</li><% end %>
+	
+	<%= link_to notificacaos_path do %><li class ="mobile-menulink">
+		<span class="mobile-image-list"><%= image_tag "Notificacoes.png", :class => "mobile-icon" %></span>
+		<span class="mobile-text-list"> Notificações </span>
+	</li><% end %>
+	
+	<%= link_to ginasios_path do %><li class ="mobile-menulink">
+		<span class="mobile-image-list"><%= image_tag "Ginasios.png", :class => "mobile-icon" %></span>
+		<span class="mobile-text-list"> Ginásios </span>
+	</li><% end %>
+	
   </ul>
   
   <div class="mobile-menu"><h5> Aulas </h5></div>
   <ul class="mobile-submenu">
-    <a href="#"><li class ="mobile-menulink">Horários</li></a>
-	<%= link_to tipo_aulas_path do %><li class ="mobile-menulink"> Modalidades </li><% end %>
+    
+	<%= link_to ginasio_aulas_path(current_user.ginasio_id) do %><li class ="mobile-menulink">
+		<span class="mobile-image-list"><%= image_tag "Horarios.png", :class => "mobile-icon" %></span>
+		<span class="mobile-text-list"> Horários </span>
+	</li><% end %>
+	
+	<%= link_to tipo_aulas_path do %><li class ="mobile-menulink">
+		<span class="mobile-image-list"><%= image_tag "Modalidades.png", :class => "mobile-icon" %></span>
+		<span class="mobile-text-list"> Modalidades </span>
+	</li><% end %>
+	
   </ul>
 
   <div class="mobile-menu"><h5> A Minha Conta </h5></div>
   <ul class="mobile-submenu">
-    <%= link_to user_path(current_user) do %><li class ="mobile-menulink"> Perfil </li><% end %>
-	<%= link_to user_planos_path(current_user) do %><li class ="mobile-menulink"> Planos de Treino </li><% end %>
+  
+    <%= link_to user_path(current_user) do %><li class ="mobile-menulink">
+		<span class="mobile-image-list"><%= image_tag "Perfil.png", :class => "mobile-icon" %></span>
+		<span class="mobile-text-list"> Perfil </span>
+	</li><% end %>
+	
+	<%= link_to user_planos_path(current_user) do %><li class ="mobile-menulink">
+		<span class="mobile-image-list"><%= image_tag "Planos.png", :class => "mobile-icon" %></span>
+		<span class="mobile-text-list"> Planos de Treino </span>
+	</li><% end %>
+	
   </ul>
   
 <% end %>

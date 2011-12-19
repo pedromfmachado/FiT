@@ -1,13 +1,10 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-#one:
-#  turno: 
-#  staff: 
-#  estudio: 
-#  tipo_aula: 
-
-#two:
-#  turno: 
-#  staff: 
-#  estudio: 
-#  tipo_aula:
+aula1:
+  staff: staff1
+  estudio: estudio_1
+  tipo_aula: bodybalance 
+  ginasio: dragao
+  dia: 1
+  duracao: 50
+  inicio: <%= Time.now %>

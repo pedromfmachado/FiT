@@ -1,11 +1,10 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-one:
-  data: MyString
-  altura: 1
-  peso: 1
+plano1:
+  altura: 180
+  peso: 80
+  user: andre_alves
+  admin_id: admin1.id
+  data: <%= Date.today %>
 
-two:
-  data: MyString
-  altura: 1
-  peso: 1
+

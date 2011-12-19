@@ -26,7 +26,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :email, :on => :create, :message => "ja existente na base de dados. Introduza outro email."
   validates_format_of :email, :on => :create,
     :unless => Proc.new { |user| user.email.blank? },
-    :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/i,
+    :with => /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\Z/,
     :message => "invalido. Introduza o seu email (ex: exemplo@sapo.pt)"
 
   validates_presence_of :telefone, :message => "em branco."

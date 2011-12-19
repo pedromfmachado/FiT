@@ -1,7 +1,7 @@
 class AulasController < ApplicationController
 load_and_authorize_resource
   def index
-    @aulas = Aula.where(:ginasio_id => params[:ginasio_id]).order('dia')
+    @aulas = Aula.where(:ginasio_id => params[:ginasio_id]).order('inicio')
     @ginasio = Ginasio.find(params[:ginasio_id])
 
     @aulas_sorted = Aula.where(:ginasio_id => params[:ginasio_id]).group_by(&:dia)

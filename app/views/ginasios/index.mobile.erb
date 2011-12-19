@@ -1,17 +1,20 @@
-  <h1>Lista de Ginásios</h1>
+<div class="mobile-content">
+<h3>Ginásios</h3>
 
-  <strong>Cidade</strong>
-  <div class="span6">
-	<%= collection_select("", "cidade", Cidade.all, :id, :nome, {}, { :class => "span3 no-resize" }) %>
-  </div>
-  
-  <strong>Distancia</strong>
-  <%= text_field_tag :distancia, '50', :class => "span1 no-resize" %> km
-
-  <table id="ginasios">
-    <tr>
-      <th>Nome</th>
-    </tr>
-  </table>
+<table class="zebra-striped">
+	<% @ginasios.each do |ginasio| %>
+      <tr>
+        <td class="mobile">
+		<%= link_to ginasio do %>
+		<div class="mobile-cell">
+			<%= ginasio.nome %>
+		</div>
+		<% end %>
+		</td>
+      </tr>
+      <% end %>
+</table>
 
 <%= link_to 'Voltar', new_session_path, :class => "btn primary" %>
+
+</div>

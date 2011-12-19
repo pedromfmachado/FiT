@@ -5,6 +5,7 @@ body {
    padding:0;
    height:100%;
    background-color: #DDDDDD;
+   width: 100%;
 }
 
 #container {
@@ -131,6 +132,11 @@ height: 100px;
 margin: 15px 0 15px 0;
 }
 
+.mobile-map{
+width: 100%;
+margin: 15px 0 15px 0;
+}
+
 .mobile-list{
 list-style: none;
 margin:0 0 25px 0;
@@ -139,6 +145,7 @@ margin:0 0 25px 0;
 .mobile-description{
 font-size: 10px;
 margin:0;
+color: #000;
 }
 
 td.mobile{
@@ -156,4 +163,26 @@ border-bottom: 1px solid #DDD;
 #exit_btn{
 	background-image: url('../images/power.png');
 	background-repeat: no-repeat;
+}
+
+.mobile-image-thumb {
+	vertical-align:middle;
+}
+
+.mobile-image-list {
+	width:28px;
+}
+
+.mobile-text-list {
+	vertical-align:middle;
+}
+
+.cenas {
+	line-height: 30px;
+	margin:0;
+	padding:0;
+}
+
+.zebra-striped {
+width:100%;
 }

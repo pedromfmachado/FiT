@@ -16,13 +16,6 @@
   <table class="zebra-striped topSpacing1">
     <tr>
       <th>Data</th>
-      <th>Pequeno Almoço</th>
-      <th>Manha</th>
-      <th>Almoço</th>
-      <th>Tarde</th>
-      <th>Jantar</th>
-      <th>Ceia</th>
-      <th></th>
       <th></th>
       <th></th>
     </tr>
@@ -34,14 +27,7 @@
     <% else %>
       <% @alimentar_planos.each do |alimentar_plano| %>
       <tr>
-        <td><%= alimentar_plano.data %></td>
-        <td><%= alimentar_plano.pequenoalmoco %></td>
-        <td><%= alimentar_plano.manha %></td>
-        <td><%= alimentar_plano.almoco %></td>
-        <td><%= alimentar_plano.tarde %></td>
-        <td><%= alimentar_plano.jantar %></td>
-        <td><%= alimentar_plano.ceia %></td>
-        <td><%= link_to 'Ver', user_alimentar_plano_path(@user,alimentar_plano) %></td>
+        <td><%= link_to alimentar_plano.data, user_alimentar_plano_path(@user,alimentar_plano) %></td>
         <td><%= link_to 'Editar', edit_user_alimentar_plano_path(@user,alimentar_plano) %></td>
         <td><%= link_to 'Apagar', user_alimentar_plano_path(@user,alimentar_plano), :confirm => 'Are you sure?', :method => :delete %></td>
       </tr>

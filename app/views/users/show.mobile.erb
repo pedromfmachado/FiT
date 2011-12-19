@@ -18,7 +18,9 @@
 	</ul>
 	
 	<%= link_to 'Voltar', new_session_path, :class => "btn primary" %>
-	<%= link_to 'Planos', user_planos_path(@user), :class=> "btn success" %>
+	<%= link_to 'Planos de Treino', user_planos_path(@user), :class=> "btn success" %>
+	<%= link_to 'Planos Alimentares', user_alimentar_planos_path(@user), :class => "btn success"%> 
+	<%= link_to 'Pagamentos', user_pagamentos_path(@user, :ano => Time.now.year), :class => "btn danger"%>
 	
 </div>
 

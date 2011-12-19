@@ -8,8 +8,8 @@
         <td class="mobile">
 		<%= link_to notificacao do %>
 		<div class="mobile-cell">
-			<p><%= notificacao.titulo %></p>
-			<p class="mobile-description">por <%= link_to User.find(notificacao.admin_id).nome, user_path(notificacao.admin_id) %> em <%= notificacao.data %></p>
+			<%= notificacao.titulo %>
+			<p class="mobile-description"> <%= User.find(notificacao.admin_id).nome %> em <%= notificacao.data %> </p>	
 		</div>
 		<% end %>
 		</td>
@@ -27,9 +27,8 @@
         <td class="mobile">
 		<%= link_to notificacao do %>
         <div class="mobile-cell">
-			<p><%= notificacao.titulo %>
-				<p class="mobile-description"> por <%= link_to User.find(notificacao.admin_id).nome, user_path(notificacao.admin_id) %> em <%= notificacao.data %></p>
-			</p>
+			<%= notificacao.titulo %>
+			<p class="mobile-description"> <%= User.find(notificacao.admin_id).nome %> em <%= notificacao.data %></p>
 		</div>
 		<% end %>
 		</td>

@@ -1,0 +1,18 @@
+<div class="mobile-content">
+
+	<h3>Ginásio</h3>
+	<h4><%=@ginasio.nome%></h4>
+
+
+      <p> <strong> Morada:</strong> <%= @ginasio.morada %> </p>
+      <p> <strong> Telefone:</strong> <%= @ginasio.telefone %> </p>
+
+      <p>
+        <!-- {@ginasio.latitude},#{@ginasio.longitude} -->
+        <%= image_tag "http://maps.googleapis.com/maps/api/staticmap?center=#{@ginasio.latitude},#{@ginasio.longitude}&zoom=15&size=400x300\&markers=color:blue%7C#{@ginasio.latitude},#{@ginasio.longitude}&sensor=false", :class => "mobile-map" %>
+      </p>
+
+	<%= link_to "Voltar", ginasios_path, :class => "btn primary" %>
+    <%= link_to "Aulas" , ginasio_aulas_path(@ginasio), :class => "btn primary" %>
+</div>
+
