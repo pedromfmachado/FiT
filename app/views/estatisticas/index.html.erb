@@ -1,4 +1,5 @@
 
+<% if current_user.admin? %>
 <h1>Estatisticas - <%= @ginasio.nome %> </h1>
 
 <table>
@@ -30,3 +31,6 @@
 <div class="actions topSpacing1">
     <%= link_to 'Voltar ao ginasio', ginasio_aulas_path(params[:ginasio_id]), :class => "btn danger" %>
 </div>
+<% else %>
+<h1> Não tem acesso a esta página </h1>
+<% end %>

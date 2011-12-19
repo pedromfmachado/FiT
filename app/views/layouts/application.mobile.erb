@@ -19,8 +19,6 @@
 		<a class="brand" href="<%= root_url %>"> <%= image_tag "brand_mobile.png" %></a>
 	
 		<div class="mobile-topbar-buttons">
-		<!--<%= link_to "Full Site", root_url(:mobile => 0), :class => "btn success"%>-->
-		
 		<% if current_user %>
 			<%= link_to " ", new_session_path, :class => "btn success", :id => "home_btn" %>
 			<%= link_to " ", log_out_path, :class =>"btn danger", :id => "logout_btn" %>
@@ -51,8 +49,8 @@
    
 
 	<div class="mobile-footer">
-		<!-- <%= button_to "Back", :back %> -->
 		<p>© Copyright 2011 </p>
+		<p> <%= link_to "Full Site", root_url(:mobile => 0)%> </p>
 	</div>
    
   </div>

@@ -21,9 +21,9 @@
 
   <div class="actions topSpacing2">
     <div class = "row">
-        <%= link_to 'Editar Dados', edit_ginasio_path(@ginasio), :class => "btn success" %>
-        <%= link_to 'Ver Estatisticas', ginasio_estatisticas_path(@ginasio), :class => "btn success" %>
-        <%= link_to 'Ver Utilizadores do Ginásio', ginasio_users_path(@ginasio), :class => "btn primary" %>
+        <%= link_to 'Editar Dados', edit_ginasio_path(@ginasio), :class => "btn success" if can? :update, Ginasio %>
+        <%= link_to 'Ver Estatisticas', ginasio_estatisticas_path(@ginasio), :class => "btn success" if current_user.admin?%>
+        <%= link_to 'Ver Utilizadores do Ginásio', ginasio_users_path(@ginasio), :class => "btn primary" if can? :read, User %>
     </div>
     </br>
     <div class = "row">

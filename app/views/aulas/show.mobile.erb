@@ -28,7 +28,7 @@
   <h4>Vagas</h4>
 
   <p><strong> Próxima aula: </strong>
-    <% if (@aula.dia < Date.today.wday) %>
+    <% if (@aula.dia < Date.today.wday || (Date.today.wday == @aula.dia && !@aula.jaPassou)) %>
 		<%= Date.today + (@aula.dia - Date.today.wday) + 7 %>
 	<% else %>
 		<%= Date.today + (@aula.dia - Date.today.wday) %>
