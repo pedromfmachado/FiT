@@ -3,9 +3,9 @@
 
   <table class="zebra-striped topSpacing1">
     <tr>
-      <th> Nome </th>
-      <th> Tipo Frequência </th>
       <th> Mensalidade </th>
+      <th> Tipo Frequência </th>
+      <th> Valor </th>
       <th> Pago </th>
     </tr>
 
@@ -16,9 +16,10 @@
     <% else %>
       <% @pagamentos.each do |pagamento| %>
       <tr>
-        <td><%= link_to pagamento.user.nome, pagamento.user %></td>
+        <td><%= ["","Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho",
+		"Julho", "Agosto","Setembro", "Outubro", "Novembro", "Dezembro"][pagamento.mes]%> <%= pagamento.ano %></td>
         <td><%= pagamento.modalidade_pagamento.nome if pagamento.modalidade_pagamento_id%></td>
-        <td><%= pagamento.preco %></td>
+        <td><%= pagamento.preco %> €</td>
 
         <% if pagamento.pago%>
           <td>Sim</td>

@@ -3,7 +3,11 @@
 
   <div class="row topSpacing2">
     <div class="span2">
-      Data (mm/yyyy):
+      <%if params[:user_id]%>
+        Ano (yyyy):
+      <%else%>
+        Data (mm/yyyy):
+      <%end%>
     </div>
 
     <div class="span3">
@@ -12,14 +16,17 @@
       <% end %>
 
       <%= text_field_tag :ano, params[:ano], :id => "ano", :class => "span1" %> 
-    </div>
-
-    <%= link_to "Ver Pagamentos", pagamentos_path, :id => "link_ver", :class =>"btn primary" %>
+      </div>
+    <%= link_to "Ver Pagamentos", pagamentos_path(:ano => params[:ano], :mes => params[:mes]), :id => "link_ver", :class =>"btn primary" unless params[:user_id]%>
+    <%= link_to "Ver Pagamentos", user_pagamentos_path(params[:user_id], :ano => params[:ano]), :id => "link_ver", :class =>"btn primary" if params[:user_id]%>
   </div>
 
   <table class="zebra-striped topSpacing1">
     <tr>
-      <th> Nome </th>
+
+      <% if !params[:user_id] %>
+        <th> Nome </th>
+      <% end %>
       <th> Tipo Frequência </th>
       <th> Mensalidade </th>
       <th> Pago </th>
@@ -32,7 +39,6 @@
     <% else %>
       <% @pagamentos.each do |pagamento| %>
       <tr>
-        <td><%= link_to pagamento.user.nome, pagamento.user %></td>
         <td><%= pagamento.modalidade_pagamento.nome if pagamento.modalidade_pagamento_id%></td>
         <td><%= pagamento.preco %></td>
 
@@ -47,5 +53,10 @@
       <% end %>
     <% end %>
   </table>
+
+  <div class="actions topSpacing1">
+    <%= link_to 'Voltar ao perfil', users_path(params[:user_id]), :class => "btn danger" if params[:user_id]%>
+    <%= link_to 'Voltar aos pagamentos', pagamentos_path, :class => "btn danger" unless params[:user_id]%>
+  </div>
 </div>
 

@@ -2,6 +2,8 @@ class EstatisticasController < ApplicationController
 
   def index
     
+    @ginasio = Ginasio.find(params[:ginasio_id])
+
     respond_to do |format|
       format.html
     end

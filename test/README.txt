@@ -1,11 +1,8 @@
-debug na consola correr com:
+comandos:
   - rake db:test:load                         ----> load do schema
   - rake db:fixtures:load RAILS_ENV=test      ----> load das fixtures
-  - rails console test                        ----> correr na consola (opcional)
+  - rails console test                        ----> correr na consola
+  - rails server -e test                      ----> correr o servidor
 
-iniciar o servidor:
-  - rails server -e test
-
-limpar com:
-  - rake db:test:purge
+  - rake db:test:purge                        ----> apagar schema
 

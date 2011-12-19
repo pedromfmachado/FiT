@@ -3,6 +3,13 @@ body {
   padding-bottom: 40px; /* used to fix bottombar */
 }
 
+.centered-image{
+  
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .right-align  { text-align: right; }
 .center-align { text-align: center;}
 

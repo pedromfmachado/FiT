@@ -162,30 +162,40 @@ $(document).ready(function(){
         $("#tipo_estatistica").change(function(){get_estatisticas();});
 
     }
-    else{
         if($("#mes").val() != undefined){
 	        $("#mes").change(function(){
 		
 
 		        var mes = $("#mes").val();
 		        var ano = $("#ano").val();
-		        $("#link_ver").attr("href","/pagamentos?mes="+mes+"&ano="+ano);
+                var query = "/pagamentos/?mes="+mes+"&ano="+ano;
+		        $("#link_ver").attr("href",query);
 
 	        });
         }
-    }
+    
 
 
-    if($("#ano").val() != undefined){
-	    $("#ano").change(function(){
-		
+        if($("#ano").val() != undefined){
+    	    $("#ano").change(function(){
+    		
+                
+    		    var mes = $("#mes").val();
+    		    var ano = $("#ano").val();
+    		    var query = "";
+                if(mes != undefined)
+                    query += "/pagamentos?ano="+ano+"&mes="+mes;
+                else{
+                    var link = $("#link_ver").attr("href");
+                    var id = link.split('/')[2];
 
-		    var mes = $("#mes").val();
-		    var ano = $("#ano").val();
-		    $("#link_ver").attr("href","/pagamentos?mes="+mes+"&ano="+ano);
+                    query += "/users/"+id+"/pagamentos?ano="+ano;
+                }
+                
+                $("#link_ver").attr("href",query);
 
-	    });
-    }
+    	    });
+        }
 	
 
 	if($("#todos:checked").length == 1)

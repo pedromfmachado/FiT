@@ -28,7 +28,7 @@ require 'gchart'
         titulos << t.tipo + " (" + count.to_s + ")"
     end
 
-    ::Gchart.bar(:title => 'Modalidades', :size => '330x320', :bar_width_and_spacing => '50,20',
+    ::Gchart.bar(:title => 'Modalidades', :size => '500x300', :bar_width_and_spacing => '50,20',
               :axis_with_labels => 'x,y', :data => dados, :axis_labels => [titulos,[0,max]] )
 
   end

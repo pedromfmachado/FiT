@@ -6,16 +6,16 @@ class PagamentosController < ApplicationController
     if params[:user_id] && params[:ano]
 
       Pagamento.update_mensal
-      @pagamentos = Pagamento.where(:ano => params[:ano], :user_id => params[:user_id])
+      @pagamentos = Pagamento.where(:ano => params[:ano], :user_id => params[:user_id]).order('mes DESC').order('ano DESC')
 
     elsif params[:mes] && params[:ano]
 
       Pagamento.update_mensal
-      @pagamentos = Pagamento.where(:ano => params[:ano], :mes => params[:mes])
+      @pagamentos = Pagamento.where(:ano => params[:ano], :mes => params[:mes]).order('mes DESC').order('ano DESC')
     else
 
   	   Pagamento.update_mensal
-  	   @pagamentos = Pagamento.where(:ano => Time.now.year, :mes => Time.now.month)
+  	   @pagamentos = Pagamento.where(:ano => Time.now.year, :mes => Time.now.month).order('mes DESC').order('ano DESC')
 
     end
 

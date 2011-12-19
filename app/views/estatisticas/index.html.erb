@@ -1,24 +1,30 @@
 
-<div class = "span14">
+<h1>Estatisticas - <%= @ginasio.nome %> </h1>
+
+<div class = "span14 offset2">
 	<div class="row">
 		<%= text_field_tag :mes, Date.today.month, :id => "mes", :class => "span1" %>
 
 		<%= text_field_tag :ano, Date.today.year, :id => "ano", :class => "span1" %>
 
-		<%= collection_select("", "taid", TipoAula.all, :id, :tipo, {}, {  :class => "span6 no-resize" }) %>
+		<%= collection_select("", "taid", TipoAula.all, :id, :tipo, {}, {  :class => "span4 no-resize" }) %>
 
 		<%= select_tag(:tipo, options_for_select([['Modalidade/Dia da Semana',0],['Reservas/Modalidade',1],
-												['Professor/Modalidade',2],['Aulas/Professor (por modalidade)',3],
-												['Reservas/Mes',4]]), :id => "tipo_estatistica") %>
+												['Reservas/Professor(por Modalidade)',2],
+												['Aulas/Professor (por modalidade)',3],
+												['Reservas/Mes',4]]), :id => "tipo_estatistica",
+												:class =>"span5 no-resize") %>
 	</div>
+</div>
 
+</br></br></br></br>
 
+<div id = "estatisticas" class ="topSpacing2">
 
+    <%= image_tag "http://placehold.it/330x230", :class => "centered-image", :id => "imagem_estatistica" %>
 
-	<div id = "estatisticas">
-	    <%= image_tag "http://placehold.it/330x230", :id => "imagem_estatistica" %>
+</div>
 
-	</div>
-
-
+<div class="actions topSpacing1">
+    <%= link_to 'Voltar ao horario', ginasio_aulas_path(@aula.ginasio), :class => "btn danger" %>
 </div>
