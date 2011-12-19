@@ -17,7 +17,7 @@
 - (DONE) Drop da tabela de cidades
 - (DONE) Gerar password e enviar mail a informar
 - (DONE) Tratar da condição "jaPassou"
-- Fazer verificação da hora da aula no feedback
+- (DONE) Fazer verificação da hora da aula no feedback
 - Meter codigo javascript nas paginas certas (funções ficam no utils)
 - Videos Youtube nas modalidades
 - Link para percurso google maps

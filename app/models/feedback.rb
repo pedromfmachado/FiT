@@ -10,7 +10,23 @@ class Feedback < ActiveRecord::Base
   validates_presence_of :user_id, :message => "Deve indicar um userID"
   validates_uniqueness_of :user_id, :scope => :aula_id, :message => "Ja deu o seu feedback para esta aula"
 
-  validate :check_membro
+  validate :check_membro, :check_aula_terminada
+
+  def check_aula_terminada
+
+    ReservaAula.where(:aula_id => aula.id, :user_id => user.id).each do |r|
+
+      if r.dia < Date.today
+        return
+      elsif r.dia == Date.today && aula.jaPassou
+        return
+      end
+
+    end
+
+    errors.add(:frequencia , "Deve ter frequentado a aula para poder votar")
+
+  end
 
   def check_membro
     if self.user_id.blank? || self.aula_id.blank?
@@ -19,8 +35,6 @@ class Feedback < ActiveRecord::Base
 
     if !User.find(user_id).normal?
       errors.add(:tipo , "Apenas os membros nao administrativos podem votar")
-    elsif ReservaAula.where(:aula_id => aula.id, :user_id => user.id).count == 0
-      errors.add(:tipo , "Deve ter frequentado a aula para poder votar")
     end
   end
 
