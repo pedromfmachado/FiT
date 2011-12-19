@@ -10,7 +10,7 @@
     <p> <%= @tipo_aula.descricao %> </p>
     
     <% if !@tipo_aula.video_id.blank? %>
-      <iframe width="425" height="349" src="http://www.youtube.com/embed/<%=@tipo_aula.video_id%>" frameborder="0" allowfullscreen>
+      <iframe class ="centered-image" width="425" height="349" src="http://www.youtube.com/embed/<%=@tipo_aula.video_id%>" frameborder="0" allowfullscreen>
       </iframe>
     <% end %>
   </div>
