@@ -58,7 +58,7 @@ require 'gchart'
             max = count
         end
         dados << count
-        titulos << i.to_s + " (" + count.to_s + ")"
+        titulos << dias[i] + " (" + count.to_s + ")"
     end
 
     ::Gchart.bar(:title => TipoAula.find(taid).tipo, :size => '500x300', :bar_width_and_spacing => '50,20',
