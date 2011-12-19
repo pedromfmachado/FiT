@@ -7,7 +7,7 @@ class UserTest < ActiveSupport::TestCase
     @user1 = User.new(:email => "fluffy@example.com", :nome => "Josefina Allon", :password => "gaivota", :datanascimento => "2001-01-01",
         :telefone => "910555000", :ginasio_id => ginasios(:dragao).id, :modalidade_pagamento_id => modalidade_pagamentos(:modalidade1).id)
 
-    #same email, others are valid
+    #same email
     @user2 = User.new(:email => "fluffy@example.com", :nome => "Fail Allon", :password => "gaivota", :datanascimento => "2001-01-01",
         :telefone => "910555000", :ginasio_id => ginasios(:dragao).id, :modalidade_pagamento_id => modalidade_pagamentos(:modalidade1).id)
 
@@ -39,7 +39,9 @@ class UserTest < ActiveSupport::TestCase
     assert_equal ginasios(:dragao).id, @user1.ginasio_id
     assert_equal modalidade_pagamentos(:modalidade1).id, @user1.modalidade_pagamento_id
 
-    assert_equal "novo@example.com", :password
+    assert_equal "
+
+    assert_equal "novo@example.com", @user3.email
 
 
 
