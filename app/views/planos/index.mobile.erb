@@ -3,8 +3,10 @@
 <h3>Planos</h3>
 
 <table class="zebra-striped">
+<tr>
+   <th>Data</th>
+</tr>
 <% @planos.each do |plano| %>
-
 <tr>
 	<td class="mobile">
 		<%= link_to user_plano_path(@user,plano) do %> <div class="mobile-cell"><%= plano.data %></div><% end %>
@@ -14,6 +16,6 @@
 <% end %>
 </table>
 
-<%= link_to 'Voltar', new_session_path, :class => "btn primary" %>
+<%= link_to 'Voltar', user_path(current_user), :class => "btn primary" %>
 
 </div>

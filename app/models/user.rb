@@ -53,6 +53,14 @@ class User < ActiveRecord::Base
       nil
     end
   end
+
+  def generate_password
+
+    generated = Digest::SHA1.hexdigest("--#{Time.now.to_s}--#{nome}--")[0,6]
+    self.password = generated
+    self.password_confirmation = generated
+    return generated
+  end
   
   def encrypt_password
     if password.present?

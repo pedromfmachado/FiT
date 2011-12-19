@@ -5,11 +5,6 @@
   <div class="mobile-menu"> <h5> Principal </h5></div>
   <ul class="mobile-submenu">
 	
-	<%= link_to root_url do %><li class ="mobile-menulink">
-		<span class="mobile-image-list"> <%= image_tag "Home.png", :class => "mobile-icon" %> </span>
-		<span class="mobile-text-list"> Home </span>
-	</li><% end %>
-	
 	<%= link_to notificacaos_path do %><li class ="mobile-menulink">
 		<span class="mobile-image-list"><%= image_tag "Notificacoes.png", :class => "mobile-icon" %></span>
 		<span class="mobile-text-list"> Notificações </span>
@@ -48,6 +43,16 @@
 	<%= link_to user_planos_path(current_user) do %><li class ="mobile-menulink">
 		<span class="mobile-image-list"><%= image_tag "Planos.png", :class => "mobile-icon" %></span>
 		<span class="mobile-text-list"> Planos de Treino </span>
+	</li><% end %>
+	
+	<%= link_to user_alimentar_planos_path(current_user) do %><li class ="mobile-menulink">
+		<span class="mobile-image-list"><%= image_tag "Alimentar.png", :class => "mobile-icon" %></span>
+		<span class="mobile-text-list"> Planos Alimentares </span>
+	</li><% end %>
+	
+	<%= link_to user_pagamentos_path(current_user, :ano => Time.now.year) do %><li class ="mobile-menulink">
+		<span class="mobile-image-list"><%= image_tag "Pagamentos.png", :class => "mobile-icon" %></span>
+		<span class="mobile-text-list"> Pagamentos </span>
 	</li><% end %>
 	
   </ul>

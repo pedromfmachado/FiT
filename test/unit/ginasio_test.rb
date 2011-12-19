@@ -59,15 +59,15 @@ class GinasioTest < ActiveSupport::TestCase
 
 
   test "ginasio pertocidade" do
-    city = cidades(:porto_cidade)
+    city = Geocoder.search("Porto, Portugal")
 
     # search in a 3km radius
-    result = Ginasio.near([city.latitude, city.longitude], "3".to_f * 0.62).map(&:id)
+    result = Ginasio.near([city[0].latitude, city[0].longitude], "3".to_f * 0.62).map(&:id)
     size = ([ginasios(:dragao).id, ginasios(:norteshopping).id] - result).size
     assert_equal 0, size
 
     # search now in a 10km radius
-    result = Ginasio.near([city.latitude, city.longitude], "10".to_f * 0.62).map(&:id)
+    result = Ginasio.near([city[0].latitude, city[0].longitude], "10".to_f * 0.62).map(&:id)
     size = ([ginasios(:dragao).id, ginasios(:gaia).id, ginasios(:norteshopping).id, ginasios(:portopalacio).id] - result).size
     assert_equal 0, size
   end

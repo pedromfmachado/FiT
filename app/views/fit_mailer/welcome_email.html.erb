@@ -4,6 +4,7 @@
     <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
   </head>
   <body>
+    <img src = "<%=@url%>images/email.png" />
     <h1>Bem vindo ao FiT, <%= @user.nome %></h1>
     <p>
       Foi registado com sucesso no melhor ginásio de sempre. Tem aqui as suas credenciais de acesso:
@@ -20,6 +21,7 @@
 
     <p>
       Comece a usar todo o potencial deste ginásio aqui: <a href="<%=@url%>"> <%= @url %> </a>.
+      Por favor efetue login, diriga-se ao seu perfil e mude a sua password para uma à sua escolha clicando em "Mudar password". 
     </p>
     <p>Tenha um bom dia!</p>
   </body>

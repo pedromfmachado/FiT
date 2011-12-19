@@ -6,7 +6,7 @@
 	<%= stylesheet_link_tag "bootstrap", "bootstrap-extension", "mobile"%>
 	<%= stylesheet_link_tag "mobile", :media => "handheld"%>
 	<%= javascript_include_tag "jquery.js"%>
-	<%= javascript_include_tag "bootstrap-dropdown.js", "bootstrap-alerts.js", "onLoad.js", "utils.js"%>
+	<%= javascript_include_tag "bootstrap-dropdown.js", "bootstrap-alerts.js", "onLoad.js"%>
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0'" />
 	<%= csrf_meta_tag %>
   </head>
@@ -22,8 +22,8 @@
 		<!--<%= link_to "Full Site", root_url(:mobile => 0), :class => "btn success"%>-->
 		
 		<% if current_user %>
-			<%= link_to "Log out", log_out_path, :class =>"btn danger"%>
-			<!--<a class="exit_btn" href="<%= log_out_path %>"> <%= image_tag "power.png" %></a>-->
+			<%= link_to " ", new_session_path, :class => "btn success", :id => "home_btn" %>
+			<%= link_to " ", log_out_path, :class =>"btn danger", :id => "logout_btn" %>
 		<% end %>
 		</div>
 	</div>

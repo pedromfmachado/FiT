@@ -27,3 +27,8 @@ estudio_<%= i %>:
   lotacao: <%= 10 + rand(50) %>
   ginasio: colombo
 <% end %>
+
+estudio_pequeno:
+  nome: Estudio Microscopico
+  lotacao: 1
+  ginasio: dragao

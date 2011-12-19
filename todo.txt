@@ -14,10 +14,11 @@
 - (DONE) ExerciciosPlano.destroy nos testes a dar merda
 - (DONE) Retirar ids de tabelas onde não são necessários
 - (DONE) Ginásio com pesquisa por cidade (textbox -> GEOCODER)
-- Drop da tabela de cidades
+- (DONE) Drop da tabela de cidades
+- (DONE) Gerar password e enviar mail a informar
 - Tratar da condição "jaPassou"
 - Fazer verificação da hora da aula no feedback
-- Gerar password e enviar mail a informar
+- Meter codigo javascript nas paginas certas (funções ficam no utils)
 - Videos Youtube nas modalidades
 - Link para percurso google maps
 - Fazer paginas auxiliares (about, faq, etc)

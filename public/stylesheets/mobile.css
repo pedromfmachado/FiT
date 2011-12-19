@@ -160,11 +160,6 @@ table td{
 border-bottom: 1px solid #DDD;
 }
 
-#exit_btn{
-	background-image: url('../images/power.png');
-	background-repeat: no-repeat;
-}
-
 .mobile-image-thumb {
 	vertical-align:middle;
 }
@@ -185,4 +180,22 @@ border-bottom: 1px solid #DDD;
 
 .zebra-striped {
 width:100%;
+}
+
+#logout_btn {
+	background-image: url('../images/Power.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+
+	width: 30px;
+	height: 19px;
+}
+
+#home_btn {
+	background-image: url('../images/Home.png');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+
+	width: 30px;
+	height: 19px;
 }

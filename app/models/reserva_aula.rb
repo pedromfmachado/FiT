@@ -5,7 +5,10 @@ class ReservaAula < ActiveRecord::Base
 
   validates_presence_of :aula_id, :message => "em branco."
   validates_presence_of :user_id, :message => "em branco."
-  validates_uniqueness_of :user_id, :scope => [:aula_id, :dia]
+
+  validates_uniqueness_of :user_id, :scope => [:aula_id, :dia],
+      :unless => Proc.new { |reserva| (reserva.aula_id.blank? || reserva.user_id.blank?) },
+      :message => "erro no trio user_id { aula_id, dia }"
 
   validates_presence_of :dia, :message => "em branco."
 
@@ -31,9 +34,9 @@ class ReservaAula < ActiveRecord::Base
   end
 
   def checkLotacao
-    if self.aula_id.blank?
-      return
-    end
+#    if self.aula_id.blank?
+#      return
+#    end
 
     if ReservaAula.lugaresDisponiveis(aula_id) < 0
       errors.add(:lotacao , "A aula ja esta completa")
@@ -41,20 +44,12 @@ class ReservaAula < ActiveRecord::Base
   end
 
   def checkHora
-    if self.aula_id.blank?
-      return
-    end
-
     if aula.jaPassou
       errors.add(:hora , "A hora da aula ja passou")
     end
   end
 
   def checkDia
-    if self.aula_id.blank?
-      return
-    end
-
     if Date.today.wday != aula.dia
       errors.add(:hora , "Esta aula nao existe hoje")
     end

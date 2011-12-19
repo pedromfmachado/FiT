@@ -15,7 +15,10 @@ class UsersController < ApplicationController
 
   def create
     params[:user][:email] = params[:user][:email].downcase
+
     @user = User.new(params[:user])
+
+    pw_gerada = @user.generate_password
 
     if @user.save
       if params[:filename] && params[:filename] != ""
@@ -24,7 +27,7 @@ class UsersController < ApplicationController
         @user.update_attributes(:url_foto => url_foto)
       end 
       redirect_to @user, :flash => { :success => "Utilizador registado com sucesso!" }
-      FitMailer.welcome_email(@user, params[:user][:password]).deliver
+      FitMailer.welcome_email(@user, pw_gerada).deliver
     else
       render "new"
     end  

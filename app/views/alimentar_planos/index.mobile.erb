@@ -1,43 +1,26 @@
 <div class="mobile-content">
-  <h3>Planos Alimentares</h3>
-
+  <h3>Meus Planos Alimentares</h3>
+  
   <table class="zebra-striped">
     <tr>
       <th>Data</th>
-      <th>Pequeno Almoço</th>
-      <th>Manha</th>
-      <th>Almoço</th>
-      <th>Tarde</th>
-      <th>Jantar</th>
-      <th>Ceia</th>
-      <th></th>
-      <th></th>
-      <th></th>
     </tr>
 
-    <% if @alimentar_planos.empty? %>
+	<% if @alimentar_planos.empty? %>
       <tr>
         <td colspan="10">&lt;Utilizador não tem planos alimentares.&gt;</td>
       </tr>
     <% else %>
       <% @alimentar_planos.each do |alimentar_plano| %>
       <tr>
-        <td><%= alimentar_plano.data %></td>
-        <td><%= alimentar_plano.pequenoalmoco %></td>
-        <td><%= alimentar_plano.manha %></td>
-        <td><%= alimentar_plano.almoco %></td>
-        <td><%= alimentar_plano.tarde %></td>
-        <td><%= alimentar_plano.jantar %></td>
-        <td><%= alimentar_plano.ceia %></td>
-        <td><%= link_to 'Ver', user_alimentar_plano_path(@user,alimentar_plano) %></td>
-        <td><%= link_to 'Editar', edit_user_alimentar_plano_path(@user,alimentar_plano) %></td>
-        <td><%= link_to 'Apagar', user_alimentar_plano_path(@user,alimentar_plano), :confirm => 'Are you sure?', :method => :delete %></td>
+		<td class="mobile">
+			<%=link_to user_alimentar_plano_path(@user,alimentar_plano) do %> <div class="mobile-cell"><%= alimentar_plano.data %></div><% end %>
+		</td>
       </tr>
       <% end %>
     <% end %>
 
   </table>
 
-  <%= link_to 'Voltar', :back, :class => "btn primary" %>
+  <%= link_to 'Voltar', user_path(current_user), :class => "btn primary" %>
 </div>
-

@@ -7,6 +7,7 @@ Dados de teste:
 - (FEITO) estudios
 - (FEITO) modalidade_pagamentos
 - (FEITO) exercicios
+- (FEITO) tipo_aulas
 - alimentar_plano
 - exercicios_planos
 - feedbacks
@@ -14,7 +15,6 @@ Dados de teste:
 - pagamentos
 - pedido_planos
 - planos
-- tipo_aulas
 
 (ter mais testes nestes era fixe, mas...)
 - (FEITO) aulas
@@ -36,8 +36,9 @@ Testes unitários:
   - (FEITO) admin, staff, user
   - (FEITO) exercicios_planos
   - (FEITO) plano
-  - (TODO-falta colocar user na aula no caso de teste) feedback
-  - (TODO) reserva_aula
+  - (FEITO) feedback
+  - (TODO) aula
+  - (TODO -> falta esperar pelos ajustes do cubano) reserva_aula
 
 Testes funcionais (controladores):
   - (TODO) tudo

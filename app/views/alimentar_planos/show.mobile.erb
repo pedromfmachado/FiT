@@ -1,0 +1,78 @@
+<div class="mobile-content">
+  <h3>Plano Alimentar nº <%= @alimentar_plano.id %></h3>
+
+  <div>
+  <p><strong>Utilizador: </strong><%= @user.nome %></p>
+  <p><strong>Ginásio: </strong><%= @user.ginasio.nome %></p>
+  <p><strong>Data: </strong><%= @alimentar_plano.data %></p>
+  </div>
+  
+  <table>
+  <tr>
+  
+	<td>
+		<strong>Pequeno Almoço:<strong></br>
+		<ul>
+			<% @alimentar_plano.pequenoalmoco.split("\r\n").each do |line| %>
+			<li><%= line %></li>
+			<% end %>
+		</ul>
+	</td>
+	
+	<td>
+		<strong>Manhã:<strong>
+		<ul>
+			<% @alimentar_plano.manha.split("\r\n").each do |line| %>
+			<li><%= line %></li>
+			<% end %>
+		</ul>
+	</td>
+	
+  </tr>
+  <tr>
+  
+	<td>
+		<strong>Almoço:<strong></br>
+		<ul>
+			<% @alimentar_plano.almoco.split("\r\n").each do |line| %>
+			<li><%= line %></li>
+			<% end %>
+		</ul>
+	</td>
+	
+	<td>
+		<strong>Tarde:<strong>
+		<ul>
+			<% @alimentar_plano.tarde.split("\r\n").each do |line| %>
+			<li><%= line %></li>
+			<% end %>
+		</ul>
+	</td>
+	
+  </tr>
+  <tr>
+  
+	<td>
+		<strong>Jantar:<strong></br>
+		<ul>
+			<% @alimentar_plano.jantar.split("\r\n").each do |line| %>
+			<li><%= line %></li>
+			<% end %>
+		</ul>
+	</td>
+	
+	<td>
+		<strong>Ceia:<strong>
+		<ul>
+			<% @alimentar_plano.ceia.split("\r\n").each do |line| %>
+			<li><%= line %></li>
+			<% end %>
+		</ul>
+	</td>
+	
+  </tr>
+  </table>
+
+  <%= link_to 'Voltar', user_alimentar_planos_path(@user), :class => "btn primary" %>
+  
+</div>

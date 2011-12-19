@@ -1,10 +1,21 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
+<% two_days_ago = (Time.now - 2.day) %>
 aula1:
   staff: valter
   estudio: estudio_1
   tipo_aula: bodybalance 
   ginasio: dragao
   dia: 1
+  inicio: <%= two_days_ago %>
   duracao: 50
-  inicio: <%= Time.now %>
+
+<% one_day_ago = Time.now %>
+aula2:
+  staff: goncalo
+  estudio: estudio_pequeno
+  tipo_aula: rpm
+  ginasio: dragao
+  dia: 2
+  inicio: <%= one_day_ago %>
+  duracao: 60
