@@ -51,6 +51,13 @@
   </div>
 
   <div class="clearfix">
+    <%= f.label :video_id, 'Video:' %>
+    <div class="input">
+      <%= f.text_field :video_id, :class => "span6" %>
+    </div>
+  </div>
+
+  <div class="clearfix">
     <%= f.label :descricao, "Descrição" %>
     <div class="input">
       <%= f.text_area :descricao, { :rows => 8, :class => "span11 no-resize" } %>

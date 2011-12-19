@@ -5,12 +5,22 @@
 
   <br/>
 
-  <p> <strong>Descrição:</strong> </p>
-  <p> <%= @tipo_aula.descricao %> </p>
+  <div class = "span14 offset1">
+    <p> <strong>Descrição:</strong> </p>
+    <p> <%= @tipo_aula.descricao %> </p>
+    
+    <% if !@tipo_aula.video_id.blank? %>
+      <iframe width="425" height="349" src="http://www.youtube.com/embed/<%=@tipo_aula.video_id%>" frameborder="0" allowfullscreen>
+      </iframe>
+    <% end %>
+  </div>
+
 
   <div class="actions topSpacing1">
     <%= link_to 'Editar', edit_tipo_aula_path(@tipo_aula), :class => "btn success" %>
     <%= link_to 'Apagar', @tipo_aula, :confirm => 'Tem a certeza?', :method => :delete, :class => "btn danger" %>
     <%= link_to 'Voltar a modalidades', tipo_aulas_path, :class => "btn primary" %>
   </div>
+
+
 </div>

@@ -42,6 +42,7 @@ class TipoAulasController < ApplicationController
   # POST /tipo_aulas
   # POST /tipo_aulas.json
   def create
+    params[:tipo_aula][:video_id] = TipoAula.getVideoId(params[:tipo_aula][:video_id])
     @tipo_aula = TipoAula.new(params[:tipo_aula])
 
     respond_to do |format|
@@ -58,6 +59,7 @@ class TipoAulasController < ApplicationController
   # PUT /tipo_aulas/1
   # PUT /tipo_aulas/1.json
   def update
+    params[:tipo_aula][:video_id] = TipoAula.getVideoId(params[:tipo_aula][:video_id])
     @tipo_aula = TipoAula.find(params[:id])
 
     respond_to do |format|

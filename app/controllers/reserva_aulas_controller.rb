@@ -19,8 +19,10 @@ class ReservaAulasController < ApplicationController
     respond_to do |format|
       if @reserva.save
         format.html { redirect_to ginasio_aula_path(@ginasio,@aula), :flash => { :success => 'Aula marcada!' } }
+        format.mobile { redirect_to ginasio_aula_path(@ginasio,@aula), :flash => { :success => 'Aula marcada!' } }
       else
         format.html { redirect_to ginasio_aula_path(@ginasio,@aula), :flash => { :error => @reserva.errors.first[1]  } }
+        format.mobile { redirect_to ginasio_aula_path(@ginasio,@aula), :flash => { :error => @reserva.errors.first[1]  } }
       end
     end
   end
@@ -34,6 +36,7 @@ class ReservaAulasController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to ginasio_aula_path(@ginasio,@aula), :flash => { :success => 'Aula cancelada!' } }
+      format.mobile { redirect_to ginasio_aula_path(@ginasio,@aula), :flash => { :success => 'Aula cancelada!' } }
     end
   end
 

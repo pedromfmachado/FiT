@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111219181534) do
+ActiveRecord::Schema.define(:version => 20111219221446) do
 
   create_table "admins", :force => true do |t|
     t.integer   "user_id"
@@ -169,6 +169,7 @@ ActiveRecord::Schema.define(:version => 20111219181534) do
     t.text      "descricao"
     t.timestamp "created_at"
     t.timestamp "updated_at"
+    t.string    "video_id"
   end
 
   create_table "turnos", :force => true do |t|
