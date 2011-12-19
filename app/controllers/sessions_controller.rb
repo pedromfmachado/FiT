@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       respond_to do |format|
-        format.html { redirect_to(notificacaos_path, :flash => { :success => "Login efectuado com sucesso!"} ) }
+        format.html { redirect_to(notificacaos_path,  :flash => { :success => "Login efectuado com sucesso!"} ) }
         format.mobile { redirect_to(new_session_path, :flash => { :success => "Login efectuado com sucesso!"} ) }
       end
     else
