@@ -40,7 +40,7 @@ class Aula < ActiveRecord::Base
       if (aula.inicio + aula.duracao*60) > self.inicio && fim > aula.inicio && aula.estudio_id == self.estudio_id && aula.dia == dia && aula.id != self.id
         errors.add(:sala, "A sala ja esta ocupada nesta hora")
       elsif (self.inicio + self.duracao*60)> aula.inicio && fim < aula.inicio && aula.estudio_id == self.estudio_id && aula.dia == dia && aula.id != self.id
-        errors.add(:sala, "A sala ja esta ocupada nesta hora2")
+        errors.add(:sala, "A sala ja esta ocupada nesta hora")
       end
     end
   end
@@ -54,7 +54,7 @@ class Aula < ActiveRecord::Base
       if (aula.inicio + aula.duracao*60)> self.inicio && fim > aula.inicio && aula.staff_id == self.staff_id && aula.dia == dia && aula.id != self.id
         errors.add(:professor, "O professor ja esta ocupado nesta hora")
       elsif (self.inicio + self.duracao*60)> aula.inicio && fim < aula.inicio && aula.staff_id == self.staff_id && aula.dia == dia && aula.id != self.id
-        errors.add(:professor, "O professor ja esta ocupado nesta hora2")
+        errors.add(:professor, "O professor ja esta ocupado nesta hora")
       end
     end
   end

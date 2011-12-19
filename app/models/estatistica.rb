@@ -13,8 +13,9 @@ require 'gchart'
         count = 0
         ReservaAula.all.each do |r|
 
-            if r.aula.tipo_aula_id == t.id && r.dia <= Date.today && r.dia.year == ano &&
-                r.dia.month == mes && r.aula.ginasio_id == gid
+            if r.aula.tipo_aula_id == t.id && r.dia.year == ano &&
+                r.dia.month == mes && r.aula.ginasio_id == gid &&
+                (r.dia < Date.today || (r.dia == Date.today && r.aula.jaPassou))
 
                 count += 1
 
@@ -45,7 +46,8 @@ require 'gchart'
         ReservaAula.all.each do |r|
 
             if r.aula.tipo_aula_id == taid && r.aula.dia == i && r.dia.year == ano &&
-                 r.dia <= Date.today  && r.dia.month == mes && r.aula.ginasio_id == gid
+                (r.dia < Date.today || (r.dia == Date.today && r.aula.jaPassou)) &&
+                r.dia.month == mes && r.aula.ginasio_id == gid
 
                 count += 1
 
@@ -76,7 +78,8 @@ require 'gchart'
         ReservaAula.all.each do |r|
 
             if r.aula.tipo_aula_id == taid && r.dia.year == ano &&
-                 r.dia <= Date.today  && r.dia.month == mes && r.aula.ginasio_id == gid && p.staff_id == r.aula.staff_id
+                 (r.dia < Date.today || (r.dia == Date.today && r.aula.jaPassou)) && 
+                 r.dia.month == mes && r.aula.ginasio_id == gid && p.staff_id == r.aula.staff_id
 
                 count += 1
 
@@ -135,7 +138,9 @@ require 'gchart'
         count = 0
         ReservaAula.all.each do |r|
 
-            if r.dia.month == i && r.dia.year == ano && r.dia <= Date.today && r.aula.ginasio_id == gid
+            if r.dia.month == i && r.dia.year == ano && 
+                (r.dia < Date.today || (r.dia == Date.today && r.aula.jaPassou)) && 
+                r.aula.ginasio_id == gid
 
                 count += 1
 

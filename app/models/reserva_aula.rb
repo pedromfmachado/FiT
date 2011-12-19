@@ -34,9 +34,6 @@ class ReservaAula < ActiveRecord::Base
   end
 
   def checkLotacao
-#    if self.aula_id.blank?
-#      return
-#    end
 
     if ReservaAula.lugaresDisponiveis(aula_id) < 0
       errors.add(:lotacao , "A aula ja esta completa")
@@ -51,7 +48,7 @@ class ReservaAula < ActiveRecord::Base
 
   def checkDia
     if Date.today.wday != aula.dia
-      errors.add(:hora , "Esta aula nao existe hoje")
+      errors.add(:dia , "Esta aula nao existe hoje")
     end
   end
 
