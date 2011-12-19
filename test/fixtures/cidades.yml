@@ -1,10 +1,36 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-porto:
+porto_cidade:
   nome: Porto
-  
+  latitude: 41.149968
+  longitude: -8.6102426
 
-lisboa:
+lisboa_cidade:
   nome: Lisboa
+  latitude: 38.70693199999999
+  longitude: -9.135632099999999
 
+braga_cidade:
+  nome: Braga
+  latitude: 41.5517605
+  longitude: -8.4229034
 
+oeiras_cidade:
+  nome: Oeiras
+  latitude: 38.6974055
+  longitude: -9.3083099
+
+viana_castelo_cidade:
+  nome: Viana do Castelo
+  latitude: 41.6945675
+  longitude: -8.8301632
+
+gaia_cidade:
+  nome: Gaia
+  latitude: 40.4067085
+  longitude: -7.328950499999999
+
+lagos_cidade:
+  nome: Lagos
+  latitude: 37.101906
+  longitude: -8.6732385

@@ -9,7 +9,7 @@ valter:
   nome: Valter Pinho
   datanascimento: 1985-01-01
   telefone: 00351 220001002
-  morada: "Rua do Bonjardim,\r\nnº300,\r\n4000-114,\r\nPORTO"
+  morada: "Rua do Bonjardim, nº300, 4000-114, PORTO"
   ginasio: norteshopping
 
 <% salt = BCrypt::Engine.generate_salt %>
@@ -21,7 +21,7 @@ goncalo:
   nome: Gonçalo Filipe
   datanascimento: 1990-12-25
   telefone: 961101106
-  morada: "Rua 1º de Dezembro,\r\n4425-601\r\nMAIA"
+  morada: "Rua 1º de Dezembro, 4425-601 MAIA"
   ginasio: norteshopping
 
 <% salt = BCrypt::Engine.generate_salt %>
@@ -33,7 +33,7 @@ pedro:
   nome: Pedro Machado
   datanascimento: 1973-05-26
   telefone: +351913777888
-  morada: "Rua André de Resende,\r\nnº111\r\n4150-069\r\nPORTO"
+  morada: "Rua André de Resende, nº111 4150-069 PORTO"
   ginasio: dragao
 
 <% salt = BCrypt::Engine.generate_salt %>
@@ -45,7 +45,7 @@ andre_marinho:
   nome: André Marinho
   datanascimento: 1983-07-30
   telefone: 934567890
-  morada: "Largo Chelas\r\n1900-159\r\nLISBOA"
+  morada: "Largo Chelas 1900-159 LISBOA"
   ginasio: norteshopping
 
 <% salt = BCrypt::Engine.generate_salt %>
@@ -57,6 +57,6 @@ andre_alves:
   nome: André Alves
   datanascimento: 1995-03-30
   telefone: 922333444
-  morada: "Rua Agra de Ramalde\r\nnº307\r\n4250-018\r\nPORTO"
+  morada: "Rua Agra de Ramalde nº307 4250-018 PORTO"
   ginasio: norteshopping
 

@@ -22,7 +22,7 @@
   </table>
 
   <div class="actions topSpacing1">
-    <%= link_to 'Criar novo Estúdio', new_ginasio_estudio_path, :class => "btn success" %>
+    <%= link_to 'Criar novo Estúdio', new_ginasio_estudio_path, :class => "btn success" if can? :create, Estudio %>
     <%= link_to "Ver Ginásio", ginasio_path(@ginasio.id), :class => "btn primary" %>
   </div>
 </div>

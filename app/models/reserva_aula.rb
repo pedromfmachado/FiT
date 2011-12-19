@@ -74,57 +74,69 @@ class ReservaAula < ActiveRecord::Base
   end
 
   require 'gchart'
-  def self.numerosPorModalidade
+  def self.numerosPorModalidade(mes, ano)
 
     titulos = []
     dados   = []
+    max     = 0
 
     TipoAula.all.each do |t|
     
-        titulos << t.tipo
+        
         count = 0
         ReservaAula.all.each do |r|
 
-            if r.aula.tipo_aula_id == t.id && r.dia <= Date.today && r.aula.jaPassou
+            if r.aula.tipo_aula_id == t.id && r.dia <= Date.today && r.dia.year == ano &&
+                r.dia.month == mes
 
                 count += 1
 
             end
 
         end
+        if count > max
+            max = count
+        end
         dados << count
+        titulos << t.tipo + " (" + count.to_s + ")"
     end
 
     ::Gchart.bar(:title => 'Modalidades', :size => '500x300', :bar_width_and_spacing => '50,20',
-              :axis_with_labels => 'x,y', :data => dados, :axis_labels => [titulos,dados.reverse] )
+              :axis_with_labels => 'x,y', :data => dados, :axis_labels => [titulos,[0,max]] )
 
   end
 
-  def self.numerosPorDiaSemana(taid)
+  def self.numerosPorDiaSemana(taid, mes, ano)
 
+    dias = ['Domingo','Segunda','Terca','Quarta','Quinta','Sexta','Sabado']
     titulos = []
     dados   = []
+    max = 0
 
-    TipoAula.all.each do |t|
-    
-        titulos << t.tipo
+    for i in 0..6
         count = 0
         ReservaAula.all.each do |r|
 
-            if r.aula.tipo_aula_id == t.id && r.dia <= Date.today && r.aula.jaPassou
+            if r.aula.tipo_aula_id == taid && r.aula.dia == i && r.dia.year == ano &&
+                 r.dia <= Date.today  && r.dia.month == mes
 
                 count += 1
 
             end
 
         end
+        if count > max
+            max = count
+        end
         dados << count
+        titulos << dias[i] + " (" + count.to_s + ")"
     end
 
-    ::Gchart.bar(:title => 'Modalidades', :size => '500x300', :bar_width_and_spacing => '50,20',
-              :axis_with_labels => 'x,y', :data => dados, :axis_labels => [titulos,dados.reverse] )
+    ::Gchart.bar(:title => TipoAula.find(taid).tipo, :size => '500x300', :bar_width_and_spacing => '50,20',
+              :axis_with_labels => 'x,y', :data => dados, :axis_labels => [titulos,[0,max]] )
 
   end
+
 
 end
 

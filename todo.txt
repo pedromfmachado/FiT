@@ -9,12 +9,14 @@
 - (DONE) Apresentar popup quando é dado feedback (com informação)
 - (DONE) Apagar pedido de plano quando é criado o plano (verificar se já é feito)
 - (DONE) Tirar if da verificação de feedback (ver isso com o andré)
+- Tratar da condição "jaPassou"
 - Fazer verificação da hora da aula no feedback
 - Retirar ids de tabelas onde não são necessários
 - Tratar das verificações dos pagamentos e modalidades de pagamento
+- Ginásio com pesquisa por cidade (textbox -> GEOCODER)
 - Gerar password e enviar mail a informar
 - Fazer paginas auxiliares (about, faq, etc)
 
 Módulos em falta:
-- Estatisticas
+- (ALMOST DONE) Estatisticas
 - (DONE) Planos alimentares

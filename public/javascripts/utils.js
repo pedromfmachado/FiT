@@ -52,46 +52,47 @@ function imprime_exercicios(elemento,nome,maquina,peso,series,repeticoes){
 
 function getGinasios(){
 
-  
     var xml = new XMLHttpRequest();
-		xml.open("GET","/ginasiosperto.xml?cidade="+$("#_cidade option:selected").text() + "&km=" + $("#distancia").val(), false);
-		xml.send();
-		ginasios = xml.responseXML.documentElement.getElementsByTagName("ginasio");
+    xml.open("GET","/ginasiosperto.xml?cidade="+$("#_cidade option:selected").text() + "&km=" + $("#distancia").val(), false);
+    xml.send();
+    ginasios = xml.responseXML.documentElement.getElementsByTagName("ginasio");
 
     $("#ginasios").html("");
     $("#ginasios").append("<tr><th>Nome</th></tr>");
 
-    for(i = 0; i < ginasios.length; i++){
+    for(i = 0; i < ginasios.length; i++)
+    {
+        var id = ginasios[i].getElementsByTagName("id")[0].firstChild.nodeValue;
+        var nome = ginasios[i].getElementsByTagName("nome")[0].firstChild.nodeValue;
 
-      var id = ginasios[i].getElementsByTagName("id")[0].firstChild.nodeValue;
-      var nome = ginasios[i].getElementsByTagName("nome")[0].firstChild.nodeValue;
-      
-
-      $("#ginasios").append("<tr><td><a href=\"/ginasios/" + id + "\">" + nome + "</a></td><td><a rel=\"nofollow\" data-method=\"delete\" data-confirm=\"Tem a certeza que deseja apagar este ginásio?\" href=\"/ginasios/" + id + "\">Apagar</a></td>");
-      
+        $("#ginasios").append("<tr><td><a href=\"/ginasios/" + id + "\">" + nome + "</a></td><td><a rel=\"nofollow\" data-method=\"delete\" data-confirm=\"Tem a certeza que deseja apagar este ginásio?\" href=\"/ginasios/" + id + "\">Apagar</a></td>");
     }
 }
 
 $(document).ready(function(){
-
-
-	$("#mes").change(function(){
+    
+    if($("#mes").val() != undefined){
+	    $("#mes").change(function(){
 		
 
-		var mes = $("#mes").val();
-		var ano = $("#ano").val();
-		$("#link_ver").attr("href","/pagamentos?mes="+mes+"&ano="+ano);
+		    var mes = $("#mes").val();
+		    var ano = $("#ano").val();
+		    $("#link_ver").attr("href","/pagamentos?mes="+mes+"&ano="+ano);
 
-	});
+	    });
+    }
 
-	$("#ano").change(function(){
+
+    if($("#ano").val() != undefined){
+	    $("#ano").change(function(){
 		
 
-		var mes = $("#mes").val();
-		var ano = $("#ano").val();
-		$("#link_ver").attr("href","/pagamentos?mes="+mes+"&ano="+ano);
+		    var mes = $("#mes").val();
+		    var ano = $("#ano").val();
+		    $("#link_ver").attr("href","/pagamentos?mes="+mes+"&ano="+ano);
 
-	});
+	    });
+    }
 	
 
 	if($("#todos:checked").length == 1)
@@ -108,47 +109,26 @@ $(document).ready(function(){
 			
 	});
 
-	if($("#distancia").val())
+	if($("#distancia").val() != undefined)
 		getGinasios();
 
-  $("#_cidade").change(function(){getGinasios()});
-  $("#distancia").change(function(){getGinasios()});
+    $("#_cidade").change(function(){getGinasios()});
+    $("#distancia").change(function(){getGinasios()});
 
-	if($("#exercicios_listbox_").val() != undefined){
-		var xml = new XMLHttpRequest();
-		xml.open("GET","/api/exercicios.xml", false);
-		xml.send();
-		exercicios = xml.responseXML.documentElement.getElementsByTagName("exercicio");
+    if($("#exercicios_listbox_").val() != undefined){
+	    var xml = new XMLHttpRequest();
+	    xml.open("GET","/api/exercicios.xml", false);
+	    xml.send();
+	    exercicios = xml.responseXML.documentElement.getElementsByTagName("exercicio");
 
-		alterar_campos(exercicios);
+	    alterar_campos(exercicios);
 
-		/*var ex_associados = $("#selected_exercicios").text().split("|");
-		console.log(ex_associados);
-		for(i = 0; i < ex_associados.length;i++){
-		
-			var ex = ex_associados[i].split(",");
-			for(j = 0; j < exercicios.length; j++){
-			
-				if(ex[0] == exercicios[i].getElementsByTagName("id")[0].firstChild.nodeValue){
-					var tipo = exercicios[i].getElementsByTagName("tipo")[0].firstChild.nodeValue;
-					var nome = exercicios[i].getElementsByTagName("nome")[0].firstChild.nodeValue;
-					var maquina = exercicios[i].getElementsByTagName("maquina")[0].firstChild.nodeValue;
-					if(tipo == "Aeróbico"){
-						imprime_exercicios("#aerobicos",nome,maquina,ex[1],ex[2],0);
-					}
-					else if(tipo == "Musculação"){
-						imprime_exercicios("#musculacao",nome,maquina,ex[1],ex[2],ex[3]);
-					}
-				}
-			}
-		}*/
+
+	    $("#exercicios_listbox_").change(function(){
 	
-
-		$("#exercicios_listbox_").change(function(){
-		
-			alterar_campos(exercicios);
-		});
-	}
+		    alterar_campos(exercicios);
+	    });
+    }
 });
 
 

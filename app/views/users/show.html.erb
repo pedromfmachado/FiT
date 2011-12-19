@@ -52,7 +52,7 @@
     <div class="span3">
       <% if @user.url_foto %>
         <%= image_tag @user.get_foto, :id => "profile-photo" %>
-        <%= image_tag ReservaAula.numerosPorModalidade %>
+
       <% else %>
         <%= image_tag "missing.png", :id => "profile-photo" %>
       <% end %>

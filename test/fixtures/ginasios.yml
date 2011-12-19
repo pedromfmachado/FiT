@@ -2,73 +2,73 @@
 
 portopalacio:
   nome: Solinca Porto Palácio
-  latitude: 1.5
-  longitude: 1.5
-  morada: "Avenida da Boavista,\r\nnº 1269\r\n4100-130 PORTO"
+  latitude: 41.1629308
+  longitude: -8.658677899999999
   telefone: 226091553
+  morada: "Avenida da Boavista, nº 1269, 4100-130 PORTO"
 
 colombo:
   nome: Solinca Colombo
-  latitude: 1.5
-  longitude: 1.5
-  morada: "C. Colombo Loja A 201,\r\nAvenida Lusiada\r\n1500-392 LISBOA"
+  latitude: 38.7511824
+  longitude: -9.184408399999999
   telefone: 210129670
+  morada: "C. Colombo Loja A 201, Avenida Lusiada, 1500-392 LISBOA"
 
 vascodagama:
   nome: Solinca Vasco da Gama
-  latitude: 1.5
-  longitude: 1.5
-  morada: "C. Vasco da Gama,\r\nAv.ª D. João II,\r\nLote 1.05.02\r\n1990-094 LISBOA"
+  latitude: 38.76750210000001
+  longitude: -9.0944355
   telefone: 218922870
+  morada: "C. Vasco da Gama, Av.ª D. João II, Lote 1.05.02, 1990-094 LISBOA"
 
 oeiras:
   nome: Solinca Oeiras
-  latitude:
-  longitude:
-  morada: "Estrada da Medrosa\r\nRua Raul Lino Lote 11\r\n2780-180 OEIRAS"
+  latitude: 38.69404129999999
+  longitude: -9.317374599999999
   telefone: 214694130
+  morada: "Estrada da Medrosa, Rua Raul Lino Lote 11, 2780-180 OEIRAS"
 
 dragao:
   nome: Solinca Dragão
   latitude: 41.1617343
   longitude: -8.5837555
-  morada: "Estádio do Dragão\r\n(Frente ao Metro Parque 1)\r\n4350-415 PORTO"
   telefone: 225574700
+  morada: "Estádio do Dragão, (Frente ao Metro Parque 1) 4350-415 PORTO"
 
 braga:
   nome: Solinca Braga
-  latitude:
-  longitude:
-  morada: "C. Empresarial de Braga\r\nLargo da Misericórdia,\r\nPav W2/W3\r\n4700 BRAGA"
+  latitude: 41.5791148
+  longitude: -8.4513272
   telefone: 253305620
+  morada: "C. Empresarial de Braga, Largo da Misericórdia, Pav W2/W3, 4700 BRAGA"
 
 vianacastelo:
-  nome: Solinca Viana de Castelo
-  latitude:
-  longitude:
-  morada: "Parque Emp. Praia Norte\r\nAv.ª Cabo Verde Monserate\r\n4900 VIANA DO CASTELO"
+  nome: Solinca Viana do Castelo
+  latitude: 41.7273915
+  longitude: -8.8473024
   telefone: 258800330
+  morada: "Parque Emp. Praia Norte, Av.ª Cabo Verde Monserate, 4900 VIANA DO CASTELO"
 
 norteshopping:
   nome: Solinca Norteshopping
-  latitude:
-  longitude:
-  morada: "Rua Sara Afonso, 105-117,\r\nSenhora da Hora\r\n4460-481 MATOSINHOS"
+  latitude: 41.1720774
+  longitude: -8.6368463
   telefone: 220160250
+  morada: "Rua Sara Afonso 105-117, Senhora da Hora, 4460-481 MATOSINHOS"
 
 gaia:
   nome: Solinca Gaia
-  latitude:
-  longitude:
-  morada: "Rua Fernão de Magalhães\r\n4400 Gaia"
+  latitude: 41.1199488
+  longitude: -8.6166559
   telefone: 223741470
+  morada: "Rua Fernão de Magalhães, 4400 Gaia"
 
 aqualuz:
   nome: Solinca Aqualuz
-  latitude:
-  longitude:
-  morada: "Aparthotel Aqualuz,\r\nR. Sacadura Cabral,\r\nn.º 8\r\n86000 LAGOS"
+  latitude: 37.101906
+  longitude: -8.6732385
   telefone: 282780150
+  morada: "Aparthotel Aqualuz, R. Sacadura Cabral n.º 8, 86000 LAGOS, Portugal"
 
 #malaga:
 

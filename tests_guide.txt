@@ -1,0 +1,31 @@
+Dados:
+- admins
+- plano alimentar
+- aulas
+- cidades
+- estudios
+- exercicios
+- exercicios_planos
+- feedbacks
+- ginasio_notificacaos
+- ginasios
+- modalidade_pagamentos
+- notificacaos
+- pagamentos
+- pedido_planos
+- planos
+- reserva_aulas
+- staffs
+- tipo_aulas
+- users
+
+Testes unitários:
+  - (FEITO) mailer
+  - (TODO) resto
+
+Testes funcionais (controladores):
+  - (TODO) tudo
+
+Testes de integração (tudo):
+  - (TODO) tudo
+

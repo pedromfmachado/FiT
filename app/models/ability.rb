@@ -32,6 +32,7 @@ class Ability
       can :read, Estudio
       can :manage, Exercicio
       can :read, Ginasio
+      can :pertocidade, Ginasio
       can :read, ModalidadePagamento
       can :read, Notificacao
       can :manage, Pagamento

@@ -1,9 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-one:
-  nome: MyString
-  lotacao: 1
+<% (0..19).each do |i| %>
+estudio_<%= i %>:
+  nome: <%= "Estudio " + i.to_s %>
+  lotacao: <%= 10 + rand(100) %>
+  ginasio: dragao
+<% end %>
 
-two:
-  nome: MyString
-  lotacao: 1
+<% (20..39).each do |i| %>
+estudio_<%= i %>:
+  nome: <%= "Estudio " + i.to_s %>
+  lotacao: <%= 10 + rand(100) %>
+  ginasio: braga
+<% end %>

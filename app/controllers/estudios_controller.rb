@@ -4,7 +4,7 @@ class EstudiosController < ApplicationController
   # GET /estudios
   # GET /estudios.json
   def index
-    @estudios = Estudio.where(:ginasio_id => params[:ginasio_id])
+    @estudios = Estudio.where(:ginasio_id => params[:ginasio_id]).order('nome ASC')
     @ginasio = Ginasio.find(params[:ginasio_id])
 
     respond_to do |format|

@@ -18,12 +18,19 @@
   </div>
 
   <table class="zebra-striped topSpacing1">
-    <th> Nome </th>
-    <th> Tipo Frequência </th>
-    <th> Mensalidade </th>
-    <th> Pago </th>
+    <tr>
+      <th> Nome </th>
+      <th> Tipo Frequência </th>
+      <th> Mensalidade </th>
+      <th> Pago </th>
+    </tr>
 
-    <% @pagamentos.each do |pagamento| %>
+    <% if @pagamentos.empty? %>
+    <tr>
+      <td colspan="4"> &lt; Sem pagamentos para mostrar. &gt; </td>
+    </tr>
+    <% else %>
+      <% @pagamentos.each do |pagamento| %>
       <tr>
         <td><%= link_to pagamento.user.nome, pagamento.user %></td>
         <td><%= pagamento.modalidade_pagamento.nome if pagamento.modalidade_pagamento_id%></td>
@@ -37,6 +44,8 @@
           <td><%= link_to "Confirmar", confirmarpagamento_path(:user_id => params[:user_id],:pagamento_id => pagamento.id), :class => "btn success span2 center-align" %></td>
         <% end %>
       </tr>
+      <% end %>
     <% end %>
   </table>
 </div>
+
