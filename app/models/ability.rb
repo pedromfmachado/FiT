@@ -50,6 +50,7 @@ class Ability
       can :manage, User      
       can :read, ReservaAula
       can :manage, TipoAula
+      cannot :index, Estatistica
       cannot :create, PedidoPlano
       cannot :create, Plano do |p|
 
@@ -98,6 +99,7 @@ class Ability
       end
       can :update, User, :id => user.id
       can :edit_password, User, :id => user.id
+      cannot :index, Estatistica
     end
   end
 end

@@ -53,7 +53,7 @@
       <% if ReservaAula.jaMarcada(current_user.id, @aula.id) %>
         <%= link_to 'Cancelar', cancelarmarcacao_path(:user_id => current_user.id, :aula_id => @aula.id), :action => :destroy, :method => :delete, :class => "btn danger" %>
       <% else %>
-        <%= link_to 'Marcar', reserva_aulas_path(:aula_id => @aula.id, :user_id => current_user.id, :dia => Date.today), :action => :create, :method => :post , :class => "btn success"%>
+        <%= link_to 'Marcar', efetuarmarcacao_path(:aula_id => @aula.id, :user_id => current_user.id, :dia => Date.today), :action => :create, :method => :post , :class => "btn success"%>
       <% end %>
     <% end %>
   </div>

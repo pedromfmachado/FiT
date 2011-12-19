@@ -18,9 +18,7 @@
 - (DONE) Gerar password e enviar mail a informar
 - (DONE) Tratar da condição "jaPassou"
 - (DONE) Fazer verificação da hora da aula no feedback
-- Meter codigo javascript nas paginas certas (funções ficam no utils)
-- Videos Youtube nas modalidades
-- Link para percurso google maps
+- (DONE) Videos Youtube nas modalidades
 - Fazer paginas auxiliares (about, faq, etc)
 
 Módulos em falta:

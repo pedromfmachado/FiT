@@ -40,6 +40,9 @@
     <% else %>
       <% @pagamentos.each do |pagamento| %>
       <tr>
+        <% if !params[:user_id] %>
+          <td> <%= pagamento.user.nome %> </td>
+        <%end%>
         <td><%= pagamento.modalidade_pagamento.nome if pagamento.modalidade_pagamento_id%></td>
         <td><%= pagamento.preco %></td>
 
