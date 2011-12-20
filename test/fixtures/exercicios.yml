@@ -1,82 +1,98 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 exercicio1:
+  id: 1
   nome: Corrida
   maquina: Passadeira
   tipo: Aerobico
-	
+
 exercicio2:
+  id: 2
   nome: Bicicleta
   maquina: Bicicleta Vertical
   tipo: Aerobico
-	
+
 exercicio3:
+  id: 3
   nome: Bicicleta
   maquina: Bicicleta Reclinada
   tipo: Aerobico
-	
+
 exercicio4:
+  id: 4
   nome: Bicicleta
   maquina: Eliptica
   tipo: Aerobico
-	
+
 exercicio5:
+  id: 5
   nome: Remo
   maquina: Remo
   tipo: Aerobico
-	
+
 exercicio6:
+  id: 6
   nome: Abdominal
   maquina: 1
   tipo: Musculacao
-	
+
 exercicio7:
+  id: 7
   nome: Leg Curl
   maquina: 2
   tipo: Musculacao
-	
+
 exercicio8:
+  id: 8
   nome: Leg Extension
   maquina: 3
   tipo: Musculacao
-	
+
 exercicio9:
+  id: 9
   nome: Leg Press
   maquina: 4
   tipo: Musculacao
-	
+
 exercicio10:
+  id: 10
   nome: Low Back - Abdominal
   maquina: 5
   tipo: Musculacao
-	
+
 exercicio11:
+  id: 11
   nome: Shoulder Press
   maquina: 6
   tipo: Musculacao
-	
+
 exercicio12:
+  id: 12
   nome: Arm Curl
   maquina: 7
   tipo: Musculacao
-	
+
 exercicio13:
+  id: 13
   nome: Biceps Curl Pulley
   maquina: 8
   tipo: Musculacao
-	
+
 exercicio14:
+  id: 14
   nome: Arm Curl
   maquina: 9
   tipo: Musculacao
-	
+
 exercicio15:
+  id: 15
   nome: Supine Press
   maquina: 10
   tipo: Musculacao
-	
+
 exercicio16:
+  id: 16
   nome: Pesos Livres
   maquina: Halteres
   tipo: Musculacao
-	
+

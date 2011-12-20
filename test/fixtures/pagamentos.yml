@@ -1,7 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 pagamento1:
-  user: andre_alves 
+  user_id: 4
   mes: 12
   pago: true
   ano: 2011
@@ -9,7 +9,7 @@ pagamento1:
   modalidade_pagamento: modalidade5
 
 pagamento2:
-  user: andre_alves 
+  user_id: 4
   mes: 11
   pago: false
   ano: 2011
@@ -17,7 +17,7 @@ pagamento2:
   modalidade_pagamento: modalidade3
 
 pagamento3:
-  user: andre_marinho 
+  user_id: 5
   mes: 12
   pago: false
   ano: 2011
@@ -25,7 +25,7 @@ pagamento3:
   modalidade_pagamento: modalidade4
 
 pagamento4:
-  user: andre_marinho 
+  user_id: 4
   mes: 11
   pago: true
   ano: 2011
@@ -33,7 +33,7 @@ pagamento4:
   modalidade_pagamento: modalidade1
 
 pagamento5:
-  user: andre_alves 
+  user_id: 5
   mes: 10
   pago: false
   ano: 2011

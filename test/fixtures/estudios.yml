@@ -4,31 +4,31 @@
 estudio_<%= i %>:
   nome: <%= "Estudio " + i.to_s %>
   lotacao: <%= 10 + rand(100) %>
-  ginasio: dragao
+  ginasio_id: 5
 <% end %>
 
 <% (100..119).each do |i| %>
 estudio_<%= i %>:
   nome: <%= "Estudio " + i.to_s %>
   lotacao: <%= 10 + rand(100) %>
-  ginasio: braga
+  ginasio_id: 6
 <% end %>
 
 <% (50..79).each do |i| %>
 estudio_<%= i %>:
   nome: <%= "Estudio " + i.to_s %>
   lotacao: <%= 10 + rand(50) %>
-  ginasio: norteshopping
+  ginasio_id: 8
 <% end %>
 
 <% (200..219).each do |i| %>
 estudio_<%= i %>:
   nome: <%= "Estudio " + i.to_s %>
   lotacao: <%= 10 + rand(50) %>
-  ginasio: colombo
+  ginasio_id: 2
 <% end %>
 
 estudio_pequeno:
   nome: Estudio Microscopico
   lotacao: 1
-  ginasio: dragao
+  ginasio_id: 5

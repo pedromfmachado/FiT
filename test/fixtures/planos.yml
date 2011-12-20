@@ -3,6 +3,7 @@
 
 <% date_before = (Date.today - 40.day) %>
 plano1:
+  id: 1
   altura: 175
   peso: 68
   user_id: 5
@@ -11,6 +12,7 @@ plano1:
 
 <% date_before = (Date.today - 33.day) %>
 plano2:
+  id: 2
   altura: 180
   peso: 80
   user_id: 5
@@ -19,6 +21,7 @@ plano2:
 
 <% date_before = (Date.today - 26.day) %>
 plano3:
+  id: 3
   altura: 179
   peso: 81
   user_id: 5
@@ -30,6 +33,7 @@ plano3:
 
 <% date_before = (Date.today - 50.day) %>
 plano4:
+  id: 4
   altura: 174
   peso: 68
   user_id: 4
@@ -38,6 +42,7 @@ plano4:
 
 <% date_before = (Date.today - 38.day) %>
 plano5:
+  id: 5
   altura: 181
   peso: 82
   user_id: 4
@@ -45,6 +50,7 @@ plano5:
   data: <%= date_before %>
   
 plano6:
+  id: 6
   altura: 174
   peso: 60
   user_id: 4
@@ -52,6 +58,7 @@ plano6:
   data: 2011-12-10
   
 plano7:
+  id: 7
   altura: 184
   peso: 65
   user_id: 4
@@ -59,6 +66,7 @@ plano7:
   data: 2011-12-10
   
 plano8:
+  id: 8
   altura: 180
   peso: 80
   user_id: 4
@@ -66,6 +74,7 @@ plano8:
   data: 2011-09-10
   
 plano9:
+  id: 9
   altura: 176
   peso: 60
   user_id: 5
@@ -73,6 +82,7 @@ plano9:
   data: 2011-05-10
   
 plano10:
+  id: 10
   altura: 168
   peso: 79
   user_id: 5
