@@ -8,7 +8,7 @@ class NotificacaosController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render :json => @notificacaos }
+      format.xml { render :xml => @notificacaos }
     end
   end
 
