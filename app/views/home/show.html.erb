@@ -5,10 +5,12 @@
 
 		  var titulo = notificacoes[i].getElementsByTagName("titulo")[0].firstChild.nodeValue;
 	      var texto = notificacoes[i].getElementsByTagName("texto")[0].firstChild.nodeValue;
+	      var id = notificacoes[i].getElementsByTagName("id")[0].firstChild.nodeValue;
 
 	      $("article h3").hide();
 		  $("article p").hide();
-		  $("article h3").html(titulo);
+		  $("article h3 a").text(titulo);
+		  $("article h3 a").attr("href","notificacaos/"+id);
 		  $("article p").html(texto);
 		  $("article h3").show('fast');
 		  $("article p").show('fast');
@@ -34,7 +36,7 @@
 					update(notificacoes,atual);
 					
 
-			    },4000);
+			    },2000);
 
         });
 
@@ -53,7 +55,7 @@
 <div id="logo" class ="row">
 	<%= image_tag 'email.png'%>
 	<article class="span6 offset6 ">
-		<h3></h3>
+		<h3><a href=""></a></h3>
 		<p></p>
 	</article>
 </div>
