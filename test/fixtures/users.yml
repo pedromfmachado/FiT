@@ -3,6 +3,7 @@
 <% salt = BCrypt::Engine.generate_salt %>
 <% password = BCrypt::Engine.hash_secret("gotadepera", salt) %>
 valter:
+  id: 1
   email: valter.pinho0@gmail.com
   password_hash: <%= password %>
   password_salt: <%= salt %>
@@ -10,11 +11,12 @@ valter:
   datanascimento: 1985-01-01
   telefone: 00351 220001002
   morada: "Rua do Bonjardim, nº300, 4000-114, PORTO"
-  ginasio: norteshopping
+  ginasio_id: 8
 
 <% salt = BCrypt::Engine.generate_salt %>
 <% password = BCrypt::Engine.hash_secret("sapodechocolate", salt) %>
 goncalo:
+  id: 2
   email: ei08139@fe.up.pt
   password_hash: <%= password %>
   password_salt: <%= salt %>
@@ -22,11 +24,12 @@ goncalo:
   datanascimento: 1990-12-25
   telefone: 961101106
   morada: "Rua 1º de Dezembro, 4425-601 MAIA"
-  ginasio: norteshopping
+  ginasio_id: 8
 
 <% salt = BCrypt::Engine.generate_salt %>
 <% password = BCrypt::Engine.hash_secret("penadeacucar", salt) %>
 pedro:
+  id: 3
   email: machado.pedro@fe.up.pt
   password_hash: <%= password %>
   password_salt: <%= salt %>
@@ -34,11 +37,12 @@ pedro:
   datanascimento: 1973-05-26
   telefone: +351913777888
   morada: "Rua André de Resende, nº111 4150-069 PORTO"
-  ginasio: dragao
+  ginasio_id: 5
 
 <% salt = BCrypt::Engine.generate_salt %>
 <% password = BCrypt::Engine.hash_secret("cachodebaratas", salt) %>
 andre_marinho:
+  id: 4
   email: ei08106@fe.up.pt
   password_hash: <%= password %>
   password_salt: <%= salt %>
@@ -46,11 +50,12 @@ andre_marinho:
   datanascimento: 1983-07-30
   telefone: 934567890
   morada: "Largo Chelas 1900-159 LISBOA"
-  ginasio: norteshopping
+  ginasio_id: 8
 
 <% salt = BCrypt::Engine.generate_salt %>
 <% password = BCrypt::Engine.hash_secret("gaivotas", salt) %>
 andre_alves:
+  id: 5
   email: ei08119@fe.up.pt
   password_hash: <%= password %>
   password_salt: <%= salt %>
@@ -58,37 +63,5 @@ andre_alves:
   datanascimento: 1995-03-30
   telefone: 922333444
   morada: "Rua Agra de Ramalde nº307 4250-018 PORTO"
-  ginasio: norteshopping
-
-
-############################
-# RANDOMLY GENERATED USERS
-
-<% count = rand(10) %>
-<% (0..count).each do |i| %>
-<% num = (rand * 1000000).to_i %>
-rand_user_<%= num %>:
-  email: aleatorio_<%=num%>@gmail.com
-  password_hash:
-  password_salt:
-  nome: User<%= i %>
-  datanascimento: 1990-01-01
-  telefone: 213213213
-  morada: "Rua 14 de Agosto 4200 Porto"
-  ginasio: colombo
-<% end %>
-
-<% count = rand(10) %>
-<% (0..count).each do |i| %>
-<% num = (rand * 1000000).to_i %>
-rand_user_<%= num %>:
-  email: aleatorio_<%=num%>@gmail.com
-  password_hash:
-  password_salt:
-  nome: User<%= i %>
-  datanascimento: 1990-01-01
-  telefone: 213213213
-  morada: "Rua 14 de Agosto 4200 Porto"
-  ginasio: norteshopping
-<% end %>
+  ginasio_id: 8
 

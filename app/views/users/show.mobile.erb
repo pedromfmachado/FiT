@@ -17,10 +17,14 @@
 	<li><p> <b>Morada:</b> <%= @user.morada %></p></li>
 	</ul>
 	
-	<%= link_to 'Voltar', new_session_path, :class => "btn primary" %>
-	<%= link_to 'Planos de Treino', user_planos_path(@user), :class=> "btn success" %>
-	<%= link_to 'Planos Alimentares', user_alimentar_planos_path(@user), :class => "btn success"%> 
-	<%= link_to 'Pagamentos', user_pagamentos_path(@user, :ano => Time.now.year), :class => "btn danger"%>
+	<ul class = "mobile-btn-list">
+		<li><p><%= link_to 'Planos de Treino', user_planos_path(@user), :class=> "btn success" %></p> </li>
+		<li><p><%= link_to 'Planos Alimentares', user_alimentar_planos_path(@user), :class => "btn success"%></p></li>
+		<li><p><%= link_to 'Pagamentos', user_pagamentos_path(@user, :ano => Time.now.year), :class => "btn danger"%></p> </li>
+	</ul>
+	
+	
+	<%= link_to 'Voltar', new_session_path, :class => "btn primary" %> 
 	
 </div>
 

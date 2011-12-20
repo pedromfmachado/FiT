@@ -1,21 +1,43 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
-
 <% two_days_ago = (Time.now - 2.day) %>
 aula1:
-  staff: valter
+  id: 1
+  staff_id: 1
   estudio: estudio_1
   tipo_aula: bodybalance 
-  ginasio: dragao
+  ginasio_id: 5
   dia: 1
   inicio: <%= two_days_ago %>
   duracao: 50
 
 <% one_day_ago = Time.now %>
 aula2:
-  staff: goncalo
+  id: 2
+  staff_id: 2
   estudio: estudio_pequeno
   tipo_aula: rpm
-  ginasio: dragao
+  ginasio_id: 5
   dia: 2
   inicio: <%= one_day_ago %>
   duracao: 60
+
+<% three_days_ago = (Time.now - 3.day) %>
+aula3:
+  id: 3
+  staff_id: 1
+  estudio: estudio_1
+  tipo_aula: hiphop
+  ginasio_id: 5
+  dia: 3
+  inicio: <%= three_days_ago %>
+  duracao: 45
+  
+<% one_day_ago = (Time.now - 1.day) %>
+aula4:
+  id: 4
+  staff_id: 2
+  estudio: estudio_pequeno
+  tipo_aula: yoga
+  ginasio_id: 5
+  dia: 4
+  inicio: <%= one_day_ago %>
+  duracao: 50

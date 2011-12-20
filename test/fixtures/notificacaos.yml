@@ -4,46 +4,46 @@
 notificacao1:
   data: <%= previous %> 
   titulo: Jantar de Natal
-  texto: Jantar de natal dos socios do ginasio no dia sete.
-  admin: pedro.id
-  ginasio: dragao.id
+  texto: Jantar de natal dos sócios do ginásio no dia sete.
+  admin_id: 3
+  ginasio_id: 5
 
 <% previous = Time.now - 40.day %>
 notificacao2:
   data: <%= previous %> 
   titulo: Novas máquinas
-  texto: Venha experimentar as novas maquinas no seu ginasio.
-  admin: pedro.id
-  ginasio_id: norteshopping.id
+  texto: Venha experimentar as novas máquinas no seu ginásio.
+  admin_id: 3
+  ginasio_id: 8
 
 <% previous = Time.now - 35.day %>
 notificacao3:
   data: <%= previous %> 
   titulo: Mensalidades
-  texto: As mensalidades sofrerao um aumento em Janeiro de 2012.
-  admin: pedro.id
-  ginasio_id: dragao.id
+  texto: As mensalidades sofrerão um aumento em Janeiro de 2012.
+  admin_id: 3
+  ginasio_id: 5
 
 <% previous = Time.now - 30.day %>
 notificacao4:
   data: <%= previous %> 
   titulo: Oculos perdidos
-  texto: Foram encontrados uns oculos no balneario masculino.
-  admin: pedro.id
-  ginasio_id: dragao.id
+  texto: Foram encontrados uns óculos no balneario masculino.
+  admin_id: 3
+  ginasio_id:
 
 <% previous = Time.now - 15.day %>
 notificacao5:
   data: <%= previous %> 
-  titulo: Piscina em manutencao
-  texto: Informamos os nossos estimados socios que a piscina se encontra em manutencao ate amanha a tarde.
-  admin: pedro.id
-  ginasio_id: braga.id
+  titulo: Piscina em manutenção
+  texto: Informamos os nossos estimados sócios que a piscina se encontra em manutenção até amanhã a tarde.
+  admin_id: 3
+  ginasio_id:
   
 notificacao6:
   data: <%= Time.now %> 
   titulo: Abertos no feriado
-  texto: O ginasio estara aberto no feriado. Apareca!
-  admin: pedro.id
-  ginasio_id: braga.id
+  texto: O ginásio estará aberto no feriado. Apareça!
+  admin_id: 3
+  ginasio_id: 6
 

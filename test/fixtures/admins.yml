@@ -1,5 +1,6 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 admin1:
-  user: pedro
+  id: 1
+  user_id: 3
 

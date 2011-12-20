@@ -139,9 +139,15 @@ width: 100%;
 margin: 15px 0 15px 0;
 }
 
-.mobile-list{
+.mobile-list, .mobile-btn-list{
 list-style: none;
 margin:0 0 25px 0;
+}
+
+.mobile-btn-list li{
+padding-bottom: 10px;
+padding-right: 20px;
+
 }
 
 .mobile-description{

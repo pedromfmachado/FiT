@@ -1,3 +1,42 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+##########################
+# Feedbacks Aula4
 
+feedback1:
+  aula_id: 4
+  valor: 5
+  user_id: 5
+  
+feedback2:
+  aula_id: 4
+  valor: 4
+  user_id: 4
+
+############################
+# Feedbacks Aula3
+
+feedback6:
+  aula_id: 3
+  valor: 3
+  user_id: 5
+  
+feedback7:
+  aula_id: 3
+  valor: 1
+  user_id: 4
+
+##########################
+# Feedbacks Aula2
+
+feedback11:
+  aula_id: 2
+  valor: 4
+  user_id: 4
+
+####################
+# Feedback Aula1 (nao existe)
+
+feedback12:
+  aula_id: 1
+  valor: 1
+  user_id: 5
 

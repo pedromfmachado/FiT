@@ -1,10 +1,82 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# TODO
 
+<% date_before = (Date.today - 40.day) %>
 plano1:
+  altura: 175
+  peso: 68
+  user_id: 5
+  admin_id: 2
+  data: <%= date_before %>
+
+<% date_before = (Date.today - 33.day) %>
+plano2:
   altura: 180
   peso: 80
-  user: andre_alves
-  admin_id: admin1.id
-  data: <%= Date.today %>
+  user_id: 5
+  admin_id: 1
+  data: <%= date_before %>
+
+<% date_before = (Date.today - 26.day) %>
+plano3:
+  altura: 179
+  peso: 81
+  user_id: 5
+  admin_id: 1
+  data: <%= date_before %>
+
+#####################
+##
+
+<% date_before = (Date.today - 50.day) %>
+plano4:
+  altura: 174
+  peso: 68
+  user_id: 4
+  admin_id: 1
+  data: <%=  date_before %>
+
+<% date_before = (Date.today - 38.day) %>
+plano5:
+  altura: 181
+  peso: 82
+  user_id: 4
+  admin_id: 2
+  data: <%= date_before %>
+  
+plano6:
+  altura: 174
+  peso: 60
+  user_id: 4
+  admin_id: 2
+  data: 2011-12-10
+  
+plano7:
+  altura: 184
+  peso: 65
+  user_id: 4
+  admin_id: 2
+  data: 2011-12-10
+  
+plano8:
+  altura: 180
+  peso: 80
+  user_id: 4
+  admin_id: 2
+  data: 2011-09-10
+  
+plano9:
+  altura: 176
+  peso: 60
+  user_id: 5
+  admin_id: 2
+  data: 2011-05-10
+  
+plano10:
+  altura: 168
+  peso: 79
+  user_id: 5
+  admin_id: 1
+  data: 2011-01-10
 
 

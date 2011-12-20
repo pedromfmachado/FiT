@@ -3,37 +3,37 @@
 
 <% dia_reserva = (Time.now - 30.day) %>
 reserva1:
-  aula: aula1
-  user: andre_alves
+  aula_id: 4
+  user_id: 5
   dia: <%= dia_reserva %>
 
 <% dia_reserva = (Time.now - 20.day) %>
 reserva2:
-  aula: aula4
-  user: andre_alves
+  aula_id: 4
+  user_id: 4
   dia: <%= dia_reserva %>
 
 <% dia_reserva = (Time.now - 1.day) %>
 reserva3:
-  aula: aula3
-  user: andre_marinho
+  aula_id: 3
+  user_id: 5
   dia: <%= dia_reserva %>
   
 <% dia_reserva = Time.now - 7.day %>
 reserva4:
-  aula: aula4
-  user: andre_marinho
+  aula_id: 3
+  user_id: 4
   dia: <%= dia_reserva %>
   
 <% dia_reserva = Time.now - 3.day %>
 reserva5:
-  aula: aula2
-  user: andre_alves
+  aula_id: 2
+  user_id: 4
   dia: <%= dia_reserva %>
   
 <% dia_reserva = Time.now - 1.day %>
 reserva6:
-  aula: aula4
-  user: andre_alves
+  aula_id: 1
+  user_id: 5
   dia: <%= dia_reserva %>
 

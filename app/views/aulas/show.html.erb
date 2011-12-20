@@ -18,7 +18,11 @@
     <%= link_to_function image_tag("star.png"), "dar_feedback(\"#{root_url}\",\"#{current_user.token}\", #{@aula.id}, #{i})", :alt => i %>
 
   <% end %>
-  <p id="resposta"> Você atribiui <%= Feedback.getFeedbackUser(current_user.id,@aula.id) %> estrelas </p>
+  <p id="resposta"> 
+    <% if Feedback.getFeedbackUser(current_user.id,@aula.id) != 0.0 %>
+      Você atribuiu <%= Feedback.getFeedbackUser(current_user.id,@aula.id) %> estrelas
+    <% end %>
+  </p>
   <p>Aula : <%= Feedback.getFeedbackAula(@aula.id) %> estrelas</p>
   <p>Professor : <%= Feedback.getFeedbackProf(@aula.staff_id) %> estrelas</p>
   <p>Modalidade : <%= Feedback.getFeedbackModalidade(@aula.tipo_aula_id) %> estrelas</p>

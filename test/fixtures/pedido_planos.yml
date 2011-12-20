@@ -1,2 +1,18 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
+pedidoPlano1:
+  data_pedido: <%= Time.now - 2.day %>
+  user_id: 5
+	
+pedidoPlano2:
+  data_pedido: <%= Time.now %>
+  user_id: 4
+	
+pedidoPlano3:
+  data_pedido: <%= Time.now - 6.day %>
+  user_id: 4
+	
+pedidoPlano4:
+  data_pedido: <%= Time.now - 4.day %>
+  user_id: 5
+

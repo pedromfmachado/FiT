@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 portopalacio:
+  id: 1
   nome: Solinca Porto Palácio
   latitude: 41.1629308
   longitude: -8.658677899999999
@@ -8,6 +9,7 @@ portopalacio:
   morada: "Avenida da Boavista, nº 1269, 4100-130 PORTO"
 
 colombo:
+  id: 2
   nome: Solinca Colombo
   latitude: 38.7511824
   longitude: -9.184408399999999
@@ -15,6 +17,7 @@ colombo:
   morada: "C. Colombo Loja A 201, Avenida Lusiada, 1500-392 LISBOA"
 
 vascodagama:
+  id: 3
   nome: Solinca Vasco da Gama
   latitude: 38.76750210000001
   longitude: -9.0944355
@@ -22,6 +25,7 @@ vascodagama:
   morada: "C. Vasco da Gama, Av.ª D. João II, Lote 1.05.02, 1990-094 LISBOA"
 
 oeiras:
+  id: 4
   nome: Solinca Oeiras
   latitude: 38.69404129999999
   longitude: -9.317374599999999
@@ -29,6 +33,7 @@ oeiras:
   morada: "Estrada da Medrosa, Rua Raul Lino Lote 11, 2780-180 OEIRAS"
 
 dragao:
+  id: 5
   nome: Solinca Dragão
   latitude: 41.1617343
   longitude: -8.5837555
@@ -36,6 +41,7 @@ dragao:
   morada: "Estádio do Dragão, (Frente ao Metro Parque 1) 4350-415 PORTO"
 
 braga:
+  id: 6
   nome: Solinca Braga
   latitude: 41.5791148
   longitude: -8.4513272
@@ -43,6 +49,7 @@ braga:
   morada: "C. Empresarial de Braga, Largo da Misericórdia, Pav W2/W3, 4700 BRAGA"
 
 vianacastelo:
+  id: 7
   nome: Solinca Viana do Castelo
   latitude: 41.7273915
   longitude: -8.8473024
@@ -50,6 +57,7 @@ vianacastelo:
   morada: "Parque Emp. Praia Norte, Av.ª Cabo Verde Monserate, 4900 VIANA DO CASTELO"
 
 norteshopping:
+  id: 8
   nome: Solinca Norteshopping
   latitude: 41.1720774
   longitude: -8.6368463
@@ -57,6 +65,7 @@ norteshopping:
   morada: "Rua Sara Afonso 105-117, Senhora da Hora, 4460-481 MATOSINHOS"
 
 gaia:
+  id: 9
   nome: Solinca Gaia
   latitude: 41.1199488
   longitude: -8.6166559
@@ -64,6 +73,7 @@ gaia:
   morada: "Rua Fernão de Magalhães, 4400 Gaia"
 
 aqualuz:
+  id: 10
   nome: Solinca Aqualuz
   latitude: 37.101906
   longitude: -8.6732385

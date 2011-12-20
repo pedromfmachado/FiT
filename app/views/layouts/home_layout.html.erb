@@ -3,6 +3,7 @@
 <head>
   <title>Fit</title>
   <%= stylesheet_link_tag "bootstrap", "screen", "bootstrap-extension" %>
+  <%= stylesheet_link_tag "http://fonts.googleapis.com/css?family=PT+Sans" %>
   <%= javascript_include_tag "application.js", "controls.js", "dragdrop.js", "effects.js", "prototype.js", "jquery.js", "rails.js", "utils.js", "login.js" %>
   <%= javascript_include_tag "bootstrap-dropdown.js", "bootstrap-alerts.js", "jquery.validate.js", "onLoad.js", "sideMenu.js" %>
   <%= csrf_meta_tag %>
@@ -81,8 +82,8 @@
     <ul>
       <li> <%= link_to "About", root_path %> </li>
       <li> <%= link_to "FAQ", root_path %> </li>
-      <li> <%= link_to "Terms of Use", root_path %> </li>
       <li> <%= link_to "Help", root_path %> </li>
+      <li> <%= link_to "Android", "FiT.apk" %> </li>
 
       <% if !mobile_device? %>
       <li ><%= link_to "Mobile Site", root_url(:mobile => 1) %></li>
