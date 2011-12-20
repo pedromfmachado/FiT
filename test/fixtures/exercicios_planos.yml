@@ -1,3 +1,115 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+# TODO
 
+exerccicioPlano1:
+  peso: 80
+  series: 3
+  repeticoes: 15
+  plano_id: plano10 
+  exercicio_id: exercicio16.id
+  
+exerccicioPlano2:
+  peso: 25
+  series: 4
+  repeticoes: 10
+  plano_id: plano10
+  exercicio_id: exercicio15.id
+  
+exerccicioPlano3:
+  peso: 60
+  series: 4
+  repeticoes: 20
+  plano_id: plano2 
+  exercicio_id: exercicio14.id
+  
+exerccicioPlano4:
+  peso: 15
+  series: 2
+  repeticoes: 30
+  plano_id: plano7 
+  exercicio_id: exercicio13.id
+
+exerccicioPlano5:
+  peso: 30
+  series: 3 
+  repeticoes: 12
+  plano_id: plano6 
+  exercicio_id: exercicio12.id
+  
+exerccicioPlano6:
+  peso: 30
+  series: 3 
+  repeticoes: 12
+  plano_id: plano5 
+  exercicio_id: exercicio11.id
+  
+exerccicioPlano7:
+  peso: 30
+  series: 3 
+  repeticoes: 12
+  plano_id: plano4 
+  exercicio_id: exercicio10.id
+  
+exerccicioPlano8:
+  peso: 30
+  series: 3 
+  repeticoes: 12
+  plano_id: plano3 
+  exercicio_id: exercicio9.id
+
+exerccicioPlano9:
+  peso: 30
+  series: 3 
+  repeticoes: 12
+  plano_id: plano2 
+  exercicio_id: exercicio8.id
+  
+exerccicioPlano10:
+  peso: 30
+  series: 3 
+  repeticoes: 12
+  plano_id: plano10 
+  exercicio_id: exercicio7.id
+  
+exerccicioPlano11:
+  peso: 30
+  series: 3 
+  repeticoes: 12
+  plano_id: plano1 
+  exercicio_id: exercicio6.id
+  
+exerccicioPlano12:
+  peso: 30
+  series: 3 
+  repeticoes: 12
+  plano_id: plano8 
+  exercicio_id: exercicio5.id
+
+exerccicioPlano13:
+  peso: 30
+  series: 3 
+  repeticoes: 12
+  plano_id: plano2 
+  exercicio_id: exercicio4.id
+  
+exerccicioPlano14:
+  peso: 30
+  series: 3 
+  repeticoes: 12
+  plano_id: plano5 
+  exercicio_id: exercicio3.id
+  
+exerccicioPlano15:
+  peso: 30
+  series: 3 
+  repeticoes: 12
+  plano_id: plano7 
+  exercicio_id: exercicio2.id
+  
+exerccicioPlano16:
+  peso: 30
+  series: 3 
+  repeticoes: 12
+  plano_id: plano2
+  exercicio_id: exercicio1.id
 

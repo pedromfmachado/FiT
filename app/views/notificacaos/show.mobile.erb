@@ -11,7 +11,7 @@
 
 <p class="mobile-description">
         <em>Criado por </em>
-        <strong><%= link_to User.find(@notificacao.admin_id).nome, user_path(@notificacao.admin_id) %></strong>
+        <strong><%= User.find(@notificacao.admin_id).nome %></strong>
         <em>em <%= @notificacao.data %> </em>
 </p>
 

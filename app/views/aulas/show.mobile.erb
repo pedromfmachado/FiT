@@ -14,30 +14,32 @@
   </br>
   <h4>Opiniões</h4>
 
-   <% for i in 1..5 do %>
+	<% for i in 1..5 do %>
     <%= link_to_function image_tag("star.png"), "dar_feedback(\"#{root_url}\",\"#{current_user.token}\", #{@aula.id}, #{i})", :alt => i %>
-   <% end %>
+	<% end %>
 
   </br>
   
-  <p><strong> Aula : </strong>  <%= Feedback.getFeedbackAula(@aula.id) %> </p>
-  <p><strong> Professor : </strong>  <%= Feedback.getFeedbackProf(@aula.staff_id) %> </p>
-  <p><strong> Modalidade : </strong>  <%= Feedback.getFeedbackModalidade(@aula.tipo_aula_id) %> </p>
+  <p><strong> Sua avaliação: </strong> <%= Feedback.getFeedbackUser(current_user.id,@aula.id) %> estrelas</p>
+  <p><strong> Aula : </strong>  <%= Feedback.getFeedbackAula(@aula.id) %> estrelas</p>
+  <p><strong> Professor : </strong>  <%= Feedback.getFeedbackProf(@aula.staff_id) %> estrelas</p>
+  <p><strong> Modalidade : </strong>  <%= Feedback.getFeedbackModalidade(@aula.tipo_aula_id) %> estrelas</p>
 
   </br>
   <h4>Vagas</h4>
 
   <p><strong> Próxima aula: </strong>
-    <% if (@aula.dia > Date.today.wday || (Date.today.wday == @aula.dia && !@aula.jaPassou)) %>
-		<%= Date.today + (@aula.dia - Date.today.wday) %>
-	<% else %>	
+    <% if (@aula.dia < Date.today.wday) %>
 		<%= Date.today + (@aula.dia - Date.today.wday) + 7 %>
+	<% else %>
+		<%= Date.today + (@aula.dia - Date.today.wday) %>
 	<% end %>
   </p>
   <p> <strong> Lotação: </strong><%= estudio.lotacao %> lugares
 								( <%= ReservaAula.lugaresDisponiveis(@aula.id) %> disponíveis )
   </p>
   
+  <% if Date.today.wday == @aula.dia && !@aula.jaPassou %>
   <table class="zebra-striped">
     <tr>
       <th>Nome</th>
@@ -59,17 +61,21 @@
 		<% end %>
 	<% end %>
   </table>
-
-  <% if can?(:create,ReservaAula) %>
+  
+    <% if can?(:create,ReservaAula) %>
     <% if ReservaAula.jaMarcada(current_user.id, @aula.id) %>
-		  <%= link_to 'Cancelar', cancelarmarcacao_path(:user_id => current_user.id, :aula_id => @aula.id), :action => :destroy, :method => :delete, :class => "btn danger" %>
+		  <%= link_to 'Desmarcar', cancelarmarcacao_path(:user_id => current_user.id, :aula_id => @aula.id), :action => :destroy, :method => :delete, :class => "btn danger" %>
     <% else %>
       <%= link_to 'Marcar',  efetuarmarcacao_path(:aula_id => @aula.id, :user_id => current_user.id, :dia => Date.today), :action => :create, :method => :post , :class => "btn success"%>
 	  <% end %>
+	<% end %>
+  
+  <% else %>
+	<em> As marcações das aulas são feitas no próprio dia. </em> </br>
   <% end %>
 
   </br></br>
-  <%= link_to 'Voltar', :back, :class => "btn primary" %>
+  <%= link_to 'Voltar', ginasio_aulas_path(current_user.ginasio_id), :class => "btn primary" %>
   
 </div>
 

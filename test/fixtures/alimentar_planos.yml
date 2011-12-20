@@ -1,3 +1,43 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+# TODO
 
+plano_alimentar1:
+  data: 2011-12-18
+  pequenoalmoco: Copo de leite simples e pao com queijo
+  manha: Peca de futa
+  almoco: Frango com salada
+  tarde: Iogurte e bolachas
+  jantar: Peixe grelhado com legumes 
+  ceia: Copo de leite com cereais
+  user_id: 4
+	
+plano_alimentar2:
+  data: 2011-07-02
+  pequenoalmoco: Iogurte e peca de fruta
+  manha: Pao com fiambre
+  almoco: Peixe com batata cozida
+  tarde: Leite simples e pao com queijo
+  jantar: Febra de porco com arroz 
+  ceia: Iogurte natural
+  user_id: 1
+	
+plano_alimentar3:
+  data: 2010-01-27
+  pequenoalmoco: Leite com cereais
+  manha: Maca
+  almoco: Peixe cozido com arros de tomate
+  tarde: Copo de leite simples e pao com manteiga
+  jantar: Frango com batata e salda
+  ceia: Iogurte e pao com fiambre
+  user_id: 3
+	
+plano_alimentar4:
+  data: 2008-11-06
+  pequenoalmoco: Iogurte simples
+  manha: Bolachas
+  almoco: Frango com salada
+  tarde: Pao com queijo e copo de leite simples
+  jantar: Salada de frango simples
+  ceia: Iogurte e bolachas
+  user_id: 2
 

@@ -1,3 +1,42 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
+pagamento1:
+  user: andre_alves 
+  mes: 12
+  pago: true
+  ano: 2011
+  preco: 35.0
+  modalidade_pagamento: modalidade5
+
+pagamento2:
+  user: andre_alves 
+  mes: 11
+  pago: false
+  ano: 2011
+  preco: 45.0
+  modalidade_pagamento: modalidade3
+
+pagamento3:
+  user: andre_marinho 
+  mes: 12
+  pago: false
+  ano: 2011
+  preco: 30.0
+  modalidade_pagamento: modalidade4
+
+pagamento4:
+  user: andre_marinho 
+  mes: 11
+  pago: true
+  ano: 2011
+  preco: 37.0
+  modalidade_pagamento: modalidade1
+
+pagamento5:
+  user: andre_alves 
+  mes: 10
+  pago: false
+  ano: 2011
+  preco: 40.0
+  modalidade_pagamento: modalidade2
 

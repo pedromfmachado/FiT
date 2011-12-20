@@ -3,12 +3,23 @@ body {
   padding-bottom: 40px; /* used to fix bottombar */
 }
 
+.punchline{
+  
+  padding-top:50px;
+  float:left;
+}
+
 .centered-image{
   
     display: block;
     z-index:-1;
     margin-left: auto;
     margin-right: auto;
+}
+
+.floated{
+  
+  float:left;
 }
 
 .right-align  { text-align: right; }

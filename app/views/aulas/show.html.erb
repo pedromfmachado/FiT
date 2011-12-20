@@ -10,17 +10,18 @@
 
  
 
-  <h2>Avaliações</h2><p id="resposta"> </p>
+  <h2>Avaliações <small>(Clique no número de estrelas que deseja atribuir)</small></h2> 
+
 
    <% for i in 1..5 do %>
 
     <%= link_to_function image_tag("star.png"), "dar_feedback(\"#{root_url}\",\"#{current_user.token}\", #{@aula.id}, #{i})", :alt => i %>
 
   <% end %>
-
-  </br>Aula : <%= Feedback.getFeedbackAula(@aula.id) %>
-  </br>Professor : <%= Feedback.getFeedbackProf(@aula.staff_id) %>
-  </br>Modalidade : <%= Feedback.getFeedbackModalidade(@aula.tipo_aula_id) %>
+  <p id="resposta"> Você atribiui <%= Feedback.getFeedbackUser(current_user.id,@aula.id) %> estrelas </p>
+  <p>Aula : <%= Feedback.getFeedbackAula(@aula.id) %> estrelas</p>
+  <p>Professor : <%= Feedback.getFeedbackProf(@aula.staff_id) %> estrelas</p>
+  <p>Modalidade : <%= Feedback.getFeedbackModalidade(@aula.tipo_aula_id) %> estrelas</p>
 
   <% if Date.today.wday == @aula.dia && !@aula.jaPassou %>
     <h3>
@@ -51,7 +52,7 @@
     <%= link_to 'Voltar ao horario', ginasio_aulas_path(@aula.ginasio), :class => "btn danger" %>
     <% if can?(:create,ReservaAula) && Date.today.wday == @aula.dia && !@aula.jaPassou  %>
       <% if ReservaAula.jaMarcada(current_user.id, @aula.id) %>
-        <%= link_to 'Cancelar', cancelarmarcacao_path(:user_id => current_user.id, :aula_id => @aula.id), :action => :destroy, :method => :delete, :class => "btn danger" %>
+        <%= link_to 'Desmarcar', cancelarmarcacao_path(:user_id => current_user.id, :aula_id => @aula.id), :action => :destroy, :method => :delete, :class => "btn danger" %>
       <% else %>
         <%= link_to 'Marcar', efetuarmarcacao_path(:aula_id => @aula.id, :user_id => current_user.id, :dia => Date.today), :action => :create, :method => :post , :class => "btn success"%>
       <% end %>

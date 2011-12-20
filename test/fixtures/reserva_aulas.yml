@@ -1,8 +1,39 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+# TODO
 
-<%= dia_reserva = Time.now - 30.day %>
+<% dia_reserva = (Time.now - 30.day) %>
 reserva1:
   aula: aula1
+  user: andre_alves
+  dia: <%= dia_reserva %>
+
+<% dia_reserva = (Time.now - 20.day) %>
+reserva2:
+  aula: aula4
+  user: andre_alves
+  dia: <%= dia_reserva %>
+
+<% dia_reserva = (Time.now - 1.day) %>
+reserva3:
+  aula: aula3
+  user: andre_marinho
+  dia: <%= dia_reserva %>
+  
+<% dia_reserva = Time.now - 7.day %>
+reserva4:
+  aula: aula4
+  user: andre_marinho
+  dia: <%= dia_reserva %>
+  
+<% dia_reserva = Time.now - 3.day %>
+reserva5:
+  aula: aula2
+  user: andre_alves
+  dia: <%= dia_reserva %>
+  
+<% dia_reserva = Time.now - 1.day %>
+reserva6:
+  aula: aula4
   user: andre_alves
   dia: <%= dia_reserva %>
 

@@ -12,11 +12,43 @@
 		  $("article h3 a").text(titulo);
 		  $("article h3 a").attr("href","notificacaos/"+id);
 		  $("article p").html(texto);
-		  $("article h3").show('fast');
-		  $("article p").show('fast');
+		  $("article h3").show();
+		  $("article p").show();
 	 
 	}
 	$(document).ready(function() {
+
+		$("#fit").hide();
+		$("#tec").hide();
+
+		$("#fit").slideToggle(2000, function(){
+
+			$("#fit").slideToggle(1000);
+			$("#tec").slideToggle(2000, function(){
+				
+				$("#fit").slideToggle(1000);
+			});
+
+
+		});
+
+		setInterval(function(){
+
+			$("#fit").slideToggle(1000);
+			$("#tec").slideToggle(1000);
+			$("#fit").slideToggle(2000, function(){
+
+				$("#fit").slideToggle(1000);
+				$("#tec").slideToggle(2000, function(){
+					
+					$("#fit").slideToggle(1000);
+				});
+
+
+			});
+
+	    },15000);
+
 
 		jQuery.get("notificacaos.xml", "",
 
@@ -36,7 +68,7 @@
 					update(notificacoes,atual);
 					
 
-			    },2000);
+			    },10000);
 
         });
 
@@ -53,12 +85,15 @@
 <%else %>
 
 <div id="logo" class ="row">
-	<%= image_tag 'email.png'%>
+	<%= image_tag 'email.png', :class => "floated"%>
+	<div class ="punchline"><h1 id="fit">We love fitness<h1>
+	<h1 id="tec">We love technology<h1></div>
+</div>
 	<article class="span6 offset6 ">
 		<h3><a href=""></a></h3>
 		<p></p>
 	</article>
-</div>
+
 
 <% end %>
 
