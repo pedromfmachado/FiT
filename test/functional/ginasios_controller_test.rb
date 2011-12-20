@@ -2,7 +2,7 @@ require 'test_helper'
 
 class GinasiosControllerTest < ActionController::TestCase
   setup do
-    @ginasio = ginasios(:one)
+    @ginasio = ginasios(:dragao)
   end
 
   test "should get index" do

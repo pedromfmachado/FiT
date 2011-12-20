@@ -35,7 +35,7 @@
           <th>Tempo</th>
         </tr>
 
-        <% @plano.exercicios.where(:tipo => "Aeróbico").each do |ex| %>
+        <% @plano.exercicios.where(:tipo => "Aerobico").each do |ex| %>
           <% @dados = ExerciciosPlanos.where(:plano_id => @plano.id, :exercicio_id => ex.id).first %>
           <tr>
             <td><%= ex.nome %></td> <td><%= ex.maquina %></td>
@@ -59,7 +59,7 @@
           <th>Repetições</th>
         </tr>
 
-        <% @plano.exercicios.where(:tipo => "Musculação").each do |ex| %>
+        <% @plano.exercicios.where(:tipo => "Musculacao").each do |ex| %>
           <% @dados = ExerciciosPlanos.where(:plano_id => @plano.id, :exercicio_id => ex.id).first %>
           <tr>
             <td><%= ex.nome %></td> <td><%= ex.maquina %></td>

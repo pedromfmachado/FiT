@@ -15,7 +15,6 @@ class PlanosController < ApplicationController
       format.html # index.html.erb
       format.xml  { render :xml => @planos }
       format.json  { render :json => @planos }
-
     end
   end
 
@@ -55,11 +54,10 @@ class PlanosController < ApplicationController
     params[:plano][:data] = Date.today
     @plano = Plano.new(params[:plano])
     @user = User.find(@plano.user_id)
-    
 
     respond_to do |format|
       if @plano.save
-	    PedidoPlano.delete_all(:user_id => @plano.user.id)
+        PedidoPlano.delete_all(:user_id => @plano.user.id)
         format.html { redirect_to(user_planos_path(@user), :flash => { :success => "Plano de treinos criado com sucesso!" }) }
         format.xml  { render :xml => @plano, :status => :created, :location => @plano }
       else
@@ -69,8 +67,8 @@ class PlanosController < ApplicationController
     end
     
     @exercicios.each do |ex|
-	    @ex_splited = ex.split("|")
-	    ExerciciosPlanos.create(:plano_id => @plano.id, :exercicio_id => @ex_splited[0], :peso => @ex_splited[1], :series => @ex_splited[2], :repeticoes => @ex_splited[3]);
+      @ex_splited = ex.split("|")
+      ExerciciosPlanos.create(:plano_id => @plano.id, :exercicio_id => @ex_splited[0], :peso => @ex_splited[1], :series => @ex_splited[2], :repeticoes => @ex_splited[3]);
     end
 
   end
