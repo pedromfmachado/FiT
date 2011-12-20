@@ -81,7 +81,7 @@ class ExerciciosController < ApplicationController
     @exercicio.destroy
 
     respond_to do |format|
-      format.html { redirect_to(exercicios_url) }
+      format.html { redirect_to(exercicios_url, :flash => { :notice => 'Exercicio apagado.' }) }
       format.xml  { head :ok }
     end
   end

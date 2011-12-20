@@ -80,7 +80,7 @@ class TipoAulasController < ApplicationController
     @tipo_aula.destroy
 
     respond_to do |format|
-      format.html { redirect_to tipo_aulas_url }
+      format.html { redirect_to tipo_aulas_url, :flash => { :notice => 'Tipo Aula apagado.' } }
       format.json { head :ok }
     end
   end

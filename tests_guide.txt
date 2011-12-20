@@ -23,7 +23,7 @@ Dados de teste:
 ################################
 
 Testes unitários:
-  - (FEITO) mailer
+  - (IGNORAR) mailer
   - (FEITO) pedido_plano
   - (FEITO) ginasio
   - (FEITO) estudio
@@ -40,9 +40,22 @@ Testes unitários:
   - (TODO) aula
   - (TODO -> falta esperar pelos ajustes do cubano) reserva_aula
 
-Testes funcionais (controladores):
-  - (TODO) tudo
+Testes funcionais (controlador):
+  - (FEITO) mailer
+  - (FEITO) ginasio
+  - (FEITO) exercicio
+  - (FEITO) tipo_aulas
+  - (FEITO) modalidade_pagamento
+  - (TODO) estudio
+  - users
+  - alimentar_plano
+  - aula
+  - notificacao
+  - pagamento
+  - pedido_plano
+  - plano
+  - reserve_aula
 
 Testes de integração (tudo):
-  - (TODO) tudo
+  - (TODO) qualquer sequencia de accoes (abrir pagina -> fazer login -> ver perfil, ...)
 

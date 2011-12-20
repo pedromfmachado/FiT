@@ -10,4 +10,10 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  def assert_user_prohibition
+    assert_response :redirect
+    assert_redirected_to root_url
+    assert_equal 'You are not authorized to access this page.', flash[:alert]
+  end
+
 end

@@ -45,7 +45,7 @@ class ModalidadePagamentosController < ApplicationController
 
     respond_to do |format|
       if @modalidade_pagamento.save
-        format.html { redirect_to @modalidade_pagamento, :flash => { :success => 'Modalidade de pagamento criada com sucesso.'} }
+        format.html { redirect_to @modalidade_pagamento, :flash => { :success => 'Modalidade Pagamento criada com sucesso.'} }
         format.json { render :json => @modalidade_pagamento, :status => :created, :location => @modalidade_pagamento }
       else
         format.html { render :action => "new" }
@@ -61,7 +61,7 @@ class ModalidadePagamentosController < ApplicationController
 
     respond_to do |format|
       if @modalidade_pagamento.update_attributes(params[:modalidade_pagamento])
-        format.html { redirect_to @modalidade_pagamento, :flash => { :success => 'Modalidade de pagamento alterada com sucesso.'} }
+        format.html { redirect_to @modalidade_pagamento, :flash => { :success => 'Modalidade Pagamento alterada com sucesso.'} }
         format.json { head :ok }
       else
         format.html { render :action => "edit" }
@@ -77,7 +77,7 @@ class ModalidadePagamentosController < ApplicationController
     @modalidade_pagamento.destroy
 
     respond_to do |format|
-      format.html { redirect_to modalidade_pagamentos_url }
+      format.html { redirect_to modalidade_pagamentos_url, :flash => { :notice => "Modalidade Pagamento apagada."} }
       format.json { head :ok }
     end
   end

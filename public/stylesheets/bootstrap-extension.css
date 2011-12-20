@@ -147,7 +147,7 @@
   font-size: 13px;
 }
 
-.bottombar ul li a {
+.bottombar ul li a, .bottombar ul li iframe {
   display: block;
   float: none;
   padding: 10px 10px 11px;
