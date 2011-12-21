@@ -37,7 +37,8 @@
   </table>
 
   <div class="actions topSpacing0">
-    <%= link_to 'Novo Plano Alimentar', new_user_alimentar_plano_path, :class => "btn success" %>
+    <%= link_to 'Novo Plano Alimentar', new_user_alimentar_plano_path(@user), :class => "btn success" %>
+    <%= link_to 'Voltar', @user, :class => "btn success" %>
   </div>
 </div>
 

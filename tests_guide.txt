@@ -23,7 +23,7 @@ Dados de teste:
 ################################
 
 Testes unitários:
-  - (IGNORAR) mailer
+  - (NAO TEM) mailer
   - (FEITO) pedido_plano
   - (FEITO) ginasio
   - (FEITO) estudio
